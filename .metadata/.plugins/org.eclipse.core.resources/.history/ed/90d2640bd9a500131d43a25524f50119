@@ -1,0 +1,51 @@
+
+public class Student3 {	
+	
+	String name;
+	int korean;
+	int english;
+	int math;
+	
+	//총점
+	public int getSum(){
+		return korean + english + math;		
+	}
+	
+	//평균
+	public int getAvg(){
+		return getSum()/3;
+	}
+	
+	//출력
+	public void gPrint(String str){
+		System.out.println(str);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		java.util.Scanner input = new java.util.Scanner(System.in);
+		
+		Student3 nStu = new Student3();
+				
+		nStu.gPrint("국어 점수를 입려갛세요 > ");
+		nStu.korean = input.nextInt();
+		
+		nStu.gPrint("영어 점수를 입려갛세요 > ");
+		nStu.english = input.nextInt();
+		
+		nStu.gPrint("수학 점수를 입려갛세요 > ");
+		nStu.math = input.nextInt();
+		
+		System.out.println();
+		nStu.gPrint("국어 점수: " + nStu.korean);
+		nStu.gPrint("수학 점수: " + nStu.math);
+		nStu.gPrint("영어 점수: " + nStu.english);		
+				
+		System.out.println();
+		nStu.gPrint("총점은 > " + nStu.getSum()); 
+		
+		System.out.println();
+		nStu.gPrint("평균은> " +nStu.getAvg());		
+	}
+}

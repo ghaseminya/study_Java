@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.input.FileInputStreamEx&apos; to &apos;FileInputStreamEx01&apos;&#x0D;&#x0A;- Original project: &apos;ch13-iostream&apos;&#x0D;&#x0A;- Original element: &apos;com.input.FileInputStreamEx&apos;&#x0D;&#x0A;- Renamed element: &apos;com.input.FileInputStreamEx01&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FileInputStreamEx&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.input{FileInputStreamEx.java[FileInputStreamEx" matchStrategy="1" name="FileInputStreamEx01" qualified="false" references="true" similarDeclarations="false" stamp="1395368971314" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.transaction.TransactionEx&apos; to &apos;TransactionEx1&apos;&#x0D;&#x0A;- Original project: &apos;ch15-jdbc&apos;&#x0D;&#x0A;- Original element: &apos;com.transaction.TransactionEx&apos;&#x0D;&#x0A;- Renamed element: &apos;com.transaction.TransactionEx1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TransactionEx&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.transaction{TransactionEx.java[TransactionEx" matchStrategy="1" name="TransactionEx1" qualified="false" references="true" similarDeclarations="true" stamp="1395889258536" textual="false" version="1.0"/>
+</session>
