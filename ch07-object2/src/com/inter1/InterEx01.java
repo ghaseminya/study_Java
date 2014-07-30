@@ -25,9 +25,5 @@ public class InterEx01 {
 		System.out.println("W = " + A1.Y);
 		System.out.println("W = " + A1.Z);
 		
-		
-		
-		
 	}
-
 }

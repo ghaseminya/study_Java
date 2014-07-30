@@ -45,8 +45,6 @@ public class InterfaceTest {
 		Z zp = new Z();
 		zp.autoPlay(new B());	// B -> I 자동 형변환
 		zp.autoPlay(new C());	// C -> I 자동 형변환
-		
-
 	}
 
 }

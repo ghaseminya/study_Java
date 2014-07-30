@@ -30,11 +30,8 @@ class B2 implements A2{
 public class InterEx02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		B2 b2b2 = new B2();
 		b2b2.getB();
 		b2b2.getC();
-
 	}
-
 }
