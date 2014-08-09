@@ -19,5 +19,4 @@ public class OperatorEx07 {
 		min = a < b ? a : b;
 		System.out.println("min : " + min);
 	}
-
 }

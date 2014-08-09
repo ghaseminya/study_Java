@@ -29,8 +29,5 @@ public class ArrayEx05 {
 		System.out.println("ÃÑÁ¡ : " + score[score.length-1]);
 		System.out.printf("Æò±Õ : %.2f", average);
 				
-		
-
 	}
-
 }

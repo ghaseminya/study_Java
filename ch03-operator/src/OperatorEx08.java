@@ -13,8 +13,5 @@ public class OperatorEx08 {
 		System.out.println("msg : " + msg);
 		System.out.println("ch : " + ch);		
 		
-		
-		
 	}
-
 }

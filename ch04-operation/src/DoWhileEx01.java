@@ -16,12 +16,12 @@ public class DoWhileEx01 {
 			nu1 ++;
 		}while(su++ < 5);
 		
+		
+		System.out.println("");
 		System.out.println("=== while 실행결과===");		
 		su = 0;
 		while(su++ < 5 ){
 			System.out.println(msg);
 		}
-
 	}
-
 }

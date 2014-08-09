@@ -4,8 +4,10 @@ public class SwitchEx02 {
 	public static void main(String[] args) {
 		// switch문에 문자 비교
 		
+		//char a = 'A';
 		//char a = 'B';
-		char a ='D';
+		char a = 'C';
+		//char a ='D';
 		
 		switch(a){	//char -> int 형변환 됨(아스키 코드로 인식됨)
 		case 'A':

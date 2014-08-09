@@ -17,10 +17,5 @@ public class ArrayEx02 {
 			System.out.print(a[i]+ "\t");
 			
 		}
-		
-		
-		
-
 	}
-
 }

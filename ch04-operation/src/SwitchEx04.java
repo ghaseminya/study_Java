@@ -52,7 +52,5 @@ public class SwitchEx04 {
 		System.out.println();//วัมู มู นูฒÞ
 		System.out.print(first + operator + second + " = " + total);
 
-
 	}
-
 }

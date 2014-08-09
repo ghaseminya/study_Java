@@ -38,7 +38,5 @@ public class SwitchEx03 {
 		System.out.println("성적 : " + score);
 		System.out.println("등급: " + grade);
 			
-
 	}
-
 }

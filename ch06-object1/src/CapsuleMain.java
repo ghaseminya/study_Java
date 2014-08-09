@@ -52,5 +52,4 @@ public class CapsuleMain {
 		cs.setA(-200);		
 		System.out.println( cs.getA() );
 	}
-
 }

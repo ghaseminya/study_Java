@@ -15,5 +15,4 @@ public class WhileEx02 {
 		System.out.println("1~100까지의 합 : " + sum);
 		
 	}
-
 }

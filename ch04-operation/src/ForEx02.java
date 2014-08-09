@@ -5,6 +5,7 @@ public class ForEx02 {
 		// 비교인자값 감소/2씩 증가시키기
 		
 		// 비교인자값 감소
+		System.out.println("비교 인자값 1씩 감소 시키기:");
 		for(int i=5; i>=1; i--){
 			System.out.print("\t"+ i);
 		}
@@ -32,5 +33,4 @@ public class ForEx02 {
 		System.out.println("\t프로그램 종료!");
 
 	}
-
 }

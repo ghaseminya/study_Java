@@ -36,8 +36,6 @@ public class OperatorEx03 {
 			System.out.println("f : " + f);
 		}
 		
-		
-		
 	}
 
 }

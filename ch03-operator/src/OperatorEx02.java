@@ -26,18 +26,5 @@ public class OperatorEx02 {
 		result = a != b;
 		System.out.println("a != b: " + result);
 		
-		
-		System.out.println("");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		System.out.println("");
 	}
-
 }

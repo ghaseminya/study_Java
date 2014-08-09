@@ -27,16 +27,9 @@ public class SwitchEx01 {
 			System.out.println("5 입력하였습니다.");
 			break;
 		default:
-			System.out.println(" 1 ~ 5 숫자중에서 입력하세요.");
+			System.out.println("1 ~ 5 숫자중에서 입력하세요.");
 			break;
 		
-		
 		}
-		
-		
-		
-		
-
 	}
-
 }

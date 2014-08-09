@@ -30,9 +30,6 @@ public class ArrayEx08 {
 			System.out.print(sum/score[i].length + "\t");
 			System.out.println();
 		
-		
 		}
-
 	}
-
 }

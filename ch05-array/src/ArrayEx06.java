@@ -59,12 +59,5 @@ public class ArrayEx06 {
 		System.out.print(average + "\t");
 		System.out.print(grade);		
 		
-
-		
-		
-		
-		
-
 	}
-
 }

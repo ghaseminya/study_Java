@@ -76,6 +76,5 @@ public class OperatorEx10 {
 		System.out.println("b : " + b);
 		System.out.println("a ^ b : " + e);
 	
-		
 	}
 }

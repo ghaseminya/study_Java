@@ -18,7 +18,5 @@ public class IfEx02 {
 		}else{	// Â¦¼ö
 			System.out.print("Â¦¼ö ÀÔ´Ï´Ù.");			
 		}	
-
 	}
-
 }

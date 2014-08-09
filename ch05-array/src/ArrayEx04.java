@@ -28,5 +28,4 @@ public class ArrayEx04 {
 		System.out.println("ÃÑÁ¡ : " + sum);
 		System.out.println("Æò±Õ : " + average2);	
 	}
-
 }

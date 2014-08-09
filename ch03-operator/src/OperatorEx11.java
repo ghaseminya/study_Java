@@ -20,5 +20,4 @@ public class OperatorEx11 {
 		System.out.println("a << 2: " + d);
 		
 	}
-
 }

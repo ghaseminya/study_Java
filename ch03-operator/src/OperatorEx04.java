@@ -18,7 +18,6 @@ public class OperatorEx04 {
 		result = ! t;	//∫Œ¡§
 		System.out.println("!t : " + result);
 		
-		
 	}
 
 }

@@ -17,6 +17,4 @@ public class OperatorEx06 {
 			
 		System.out.println("");
 	}
-	
-	
 }

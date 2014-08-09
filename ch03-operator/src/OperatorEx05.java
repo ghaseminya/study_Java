@@ -24,12 +24,5 @@ public class OperatorEx05 {
 		System.out.println("d : " + d);
 		System.out.println("e : " + e);
 		
-		
-		
-		
-		
-	
-		
 	}
-
 }

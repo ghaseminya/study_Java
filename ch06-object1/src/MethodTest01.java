@@ -19,10 +19,14 @@ public class MethodTest01 {
 	}
 	
 	
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		MethodTest01 m = new MethodTest01();
+	
+		//리턴값이 있는 메소드 호출
+		System.out.println(m.add(10, 20));
+		
+		//리턴값이 없는 메소드 호출
+		m.print();
 	}
-
 }

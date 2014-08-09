@@ -85,5 +85,4 @@ public class Score {
 		System.out.println("학점 = " + 학점);
 		
 	}
-
 }

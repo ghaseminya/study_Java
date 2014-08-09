@@ -3,7 +3,6 @@ public class OperatorEx09 {
 	
 	public static void main(String[] args){
 		
-		
 		System.out.println("=========대입 연산자=========");
 		int a = 100;
 		int b = 3;		
@@ -28,5 +27,4 @@ public class OperatorEx09 {
 		System.out.println("a %=b : " + a);
 		System.out.println("");
 	}
-
 }

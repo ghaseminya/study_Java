@@ -26,8 +26,5 @@ public class BreakEx03 {
 		
 		System.out.print("total = " + total);
 		
-		
-
 	}
-
 }

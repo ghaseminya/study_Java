@@ -21,5 +21,4 @@ public class OperatorEx01 {
 		System.out.println("감소연산자 후행 : "+ (j2--) );
 		System.out.println("j2 : " + j2);
 	}
-
 }

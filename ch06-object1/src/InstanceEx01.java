@@ -56,5 +56,4 @@ public class InstanceEx01 {
 		System.out.println("멤버 메소드 호출후 반환값 : " +  result );
 		
 	}
-
 }
