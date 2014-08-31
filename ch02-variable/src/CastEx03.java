@@ -1,5 +1,8 @@
+/*
+자동형 변환-프로모션/디모션
+*/
 
-public class CastEx {
+public class CastEx03 {
 	public static void main(String[] args){
 		
 		
