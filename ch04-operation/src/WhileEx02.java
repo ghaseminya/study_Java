@@ -1,8 +1,8 @@
-
+/*while문 - 1부터 100까지의 누적 합 구하기
+*/
 public class WhileEx02 {
 
 	public static void main(String[] args) {
-		// while문 - 1부터 100까지의 누적 합 구하기
 		
 		int sum, su;
 		sum = su = 0;	//초기식
