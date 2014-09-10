@@ -1,8 +1,10 @@
-
+/*
+한글 변수 사용, 성적처리프로그램, 데이터검증(중요), 소숫점자리 포멧지정
+*/
 public class Score {
 
 	public static void main(String[] args) {
-		// 한글 변수 사용, 성적처리프로그램, 데이터검증(중요), 소숫점자리 포멧지정
+		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int 국어 = 0, 영어 = 0, 수학 = 0, 총점 = 0;
@@ -47,9 +49,9 @@ public class Score {
 		
 		//데이터 검증 (중요)
 		//float = int / int;
-		평균1 = 총점/3;	// int -> float 형변환 (65 -> 65.0)
+		평균1 = 총점/3;			// int -> float 형변환 (65 -> 65.0)
 		평균2 = (float)총점/3.0F;	// int -> float 형변환 (65 -> 65.0)
-//		평균2 = 총점/3.0F;	// int -> float 형변환 (65 -> 65.0)		
+//		평균2 = 총점/3.0F;		// int -> float 형변환 (65 -> 65.0)		
 		
 		System.out.println();
 		System.out.println("총점 = " + 총점);
