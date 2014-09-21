@@ -1,7 +1,7 @@
 /* 가변인자 : Variable Arguements 
  * */
 
-public class MethodTest04 {
+public class MethodEx04 {
 	
 	/*일반적인 메서드는  타입과 인자의 갯수를 일치시켜야 합니다.*/
 	public void getNum(int num){
@@ -22,7 +22,7 @@ public class MethodTest04 {
 
 	public static void main(String[] args) {		
 		
-		MethodTest04 m = new MethodTest04();
+		MethodEx04 m = new MethodEx04();
 		m.getNum(50);
 
 		//전달되는 인자의 갯수 불일치

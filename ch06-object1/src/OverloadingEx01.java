@@ -2,7 +2,7 @@
  * 
  * */
 
-public class OverloadingTest {	
+public class OverloadingEx01 {	
 	//멤버변수
 	int var1;	
 	
@@ -81,7 +81,7 @@ public class OverloadingTest {
 		
 		//1000, 3.14F, "대한민국"
 		
-		OverloadingTest ot = new OverloadingTest();
+		OverloadingEx01 ot = new OverloadingEx01();
 		ot.getLength(1000);		//1000		->	"1000"
 		ot.getLength(3.14F);	//3.14F		->	"3.14"
 		ot.getLength("대한민국");	//"대한민국"	->	"대한민국"

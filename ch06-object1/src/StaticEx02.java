@@ -14,7 +14,7 @@ public class StaticEx02 {
 	public static void main(String[] args) {		
 		
 		/*Exception in thread "main" java.lang.Error: Unresolved compilation problem:	Cannot make a static reference to the non-static field s1
-		인스턴스 변수는 객체 생성 ㅎ 호출 가능*/
+		인스턴스 변수는 객체 생성  호출 가능*/
 		//System.out.println(s1);
 		
 		//Static 변수 호출

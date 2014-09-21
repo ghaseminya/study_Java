@@ -2,7 +2,6 @@
  * 
  */
 
-
 public class ThisTest2 {	
 	String name;
 	int age;

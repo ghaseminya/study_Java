@@ -9,7 +9,7 @@ public class ThisTest1 {
 	public ThisTest1(){
 		// this: 曼炼 函荐
 		// (this) 按眉 郴俊辑 唱狼 按眉 曼炼
-		System.out.println("按眉 积己\t: " + this);
+		System.out.println("按眉 积己: " + this);
 	}	
 	
 	public static void main(String[] args) {
@@ -18,6 +18,6 @@ public class ThisTest1 {
 		ThisTest1 tt1 = new ThisTest1();
 		
 		// 按眉 积己 饶 
-		System.out.println("按眉 积己 饶\t: " + tt1);
+		System.out.println("按眉 积己 饶: " + tt1);
 	}
 }

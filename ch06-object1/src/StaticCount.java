@@ -11,7 +11,7 @@ public class StaticCount {
 	int c;				//인스턴스 변수
 	
 	// 객체 생성과 관계 없음
-	// 호출하면 static영역에 만들어 진다.
+	// 호출하면 static영역(메소드 영역)에 만들어 지며 공유개념을 가지게 됩니다.
 	static int count;	//static 변수
 	
 	public StaticCount(){

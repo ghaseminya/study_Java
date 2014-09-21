@@ -2,7 +2,7 @@
  * 
  * */
 
-public class MethodTest01 {
+public class MethodEx01 {
 	//메서드 리턴형태
 	
 	//인자전달 방식: 반환하는 리턴값이 있는 메서드
@@ -21,7 +21,7 @@ public class MethodTest01 {
 	
 	public static void main(String[] args) {
 		
-		MethodTest01 m = new MethodTest01();
+		MethodEx01 m = new MethodEx01();
 	
 		//리턴값이 있는 메소드 호출
 		System.out.println(m.add(10, 20));

@@ -2,7 +2,7 @@
  * 
  * */
 
-public class MethodTest02 {
+public class MethodEx02 {
 	
 	
 	//멤버변수
@@ -18,7 +18,7 @@ public class MethodTest02 {
 		
 		//지역 변수
 		int var1 = 100;
-		MethodTest02 m = new MethodTest02();
+		MethodEx02 m = new MethodEx02();
 		
 		int var2 = m.increase(var1);
 

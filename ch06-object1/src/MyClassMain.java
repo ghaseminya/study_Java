@@ -1,7 +1,7 @@
 /* 은닉화, 캡슐화 - 클래스 분리
  * 
- * MyClass
- * MyClassMain 
+ * MyClass.java
+ * MyClassMain.java
  * */
 
 public class MyClassMain {

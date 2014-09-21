@@ -1,5 +1,5 @@
 /* 생성자 호출을 통한 초기화 
- * 
+ 
  */
 
 public class ThisTest3 {
@@ -29,7 +29,6 @@ public class ThisTest3 {
 	}	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ThisTest3 tt1 = new ThisTest3();
 		
 		System.out.println("==================");
