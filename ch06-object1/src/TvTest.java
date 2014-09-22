@@ -1,63 +1,63 @@
-/* TV Ã¤³Îº¯°æÇÏ±â - °´Ã¼ »ı¼ºÈÄ °´Ã¼ÀÇ ¸â¹ö¸Ş¼Òµå È£ÃâÀ» ÅëÇÑ ¸â¹ö º¯¼ö º¯°æ
+/* TV ì±„ë„ë³€ê²½í•˜ê¸° - ê°ì²´ ìƒì„±í›„ ê°ì²´ì˜ ë©¤ë²„ë©”ì†Œë“œ í˜¸ì¶œì„ í†µí•œ ë©¤ë²„ ë³€ìˆ˜ ë³€ê²½
  *  
  */
 
-//ÁÖ Å¬·¡½º¸¸ publicÁöÁ¤ ÇÒ ¼ö ÀÖ´Ù.
+//ì£¼ í´ë˜ìŠ¤ë§Œ publicì§€ì • í•  ìˆ˜ ìˆë‹¤.
 class Tv{	
-	//¸â¹ö º¯¼ö(¼Ó¼º)
-	String color;	//»ö»ó
-	boolean power;	//Àü¿øÀ¯¹«
-	int channel;	//Ã¤³Î
+	//ë©¤ë²„ ë³€ìˆ˜(ì†ì„±)
+	String color;	//ìƒ‰ìƒ
+	boolean power;	//ì „ì›ìœ ë¬´
+	int channel;	//ì±„ë„
 	
-	//¸â¹ö ¸Ş¼Òµå(µ¿ÀÛ)
-	//Àü¿ø À¯¹« º¯È¯ ½ÃÅ°±â
+	//ë©¤ë²„ ë©”ì†Œë“œ(ë™ì‘)
+	//ì „ì› ìœ ë¬´ ë³€í™˜ ì‹œí‚¤ê¸°
 	public void power(){
 		power = ! power;		
 	}
 	
-	//Ã¤³Î ¿Ã¸®±â
+	//ì±„ë„ ì˜¬ë¦¬ê¸°
 	public void channelUp(){
 		++channel;
 	}
 	
-	//Ã¤³Î ³»¸®±â
+	//ì±„ë„ ë‚´ë¦¬ê¸°
 	public void channelDown(){
 		--channel;
 	}
 }
 
-// ÁÖ Å¬·¡½º
+// ì£¼ í´ë˜ìŠ¤
 public class TvTest {
 	
-	//mainÀº °´Ã¼¿¡ Æ÷ÇÔµÇÁö ¾ÊÀ½.
-	//±×³É ¸ŞÀÎÇÔ¼ö·Î¸¸ Ãë±Ş
-	//Å¬·¡½º ·Î´õ°¡ mainÀ» ¸Ş¸ğ¸®¿¡ ¿Ã¸®°í 
-	//±× ´ÙÀ½ °´Ã¼¸¦ »ı¼ºÇÕ´Ï´Ù. ¸â¹ö ¸Ş¼Òµå¸¸ °´Ã¼¿¡ Æ÷ÇÔµË´Ï´Ù.
+	//mainì€ ê°ì²´ì— í¬í•¨ë˜ì§€ ì•ŠìŒ.
+	//ê·¸ëƒ¥ ë©”ì¸í•¨ìˆ˜ë¡œë§Œ ì·¨ê¸‰
+	//í´ë˜ìŠ¤ ë¡œë”ê°€ mainì„ ë©”ëª¨ë¦¬ì— ì˜¬ë¦¬ê³  
+	//ê·¸ ë‹¤ìŒ ê°ì²´ë¥¼ ìƒì„±í•©ë‹ˆë‹¤. ë©¤ë²„ ë©”ì†Œë“œë§Œ ê°ì²´ì— í¬í•¨ë©ë‹ˆë‹¤.
 	public static void main(String[] args) {
 		Tv t = new Tv();
 		
-		System.out.println("TV ½ÇÇà À¯¹« : " + t.power);
-		// Àü¿ø ÄÑ±â
+		System.out.println("TV ì‹¤í–‰ ìœ ë¬´ : " + t.power);
+		// ì „ì› ì¼œê¸°
 		t.power();
-		System.out.println("TV ½ÇÇà À¯¹« : " + t.power);		
+		System.out.println("TV ì‹¤í–‰ ìœ ë¬´ : " + t.power);		
 		
 		System.out.println();
-		System.out.println("ÇöÀç Ã¤³Î : " + t.channel);
-		//Ã¤³Î º¯°æÇÏ±â
+		System.out.println("í˜„ì¬ ì±„ë„ : " + t.channel);
+		//ì±„ë„ ë³€ê²½í•˜ê¸°
 		t.channel = 7;
-		System.out.println("º¯°æµÈ Ã¤³Î : " + t.channel);
+		System.out.println("ë³€ê²½ëœ ì±„ë„ : " + t.channel);
 				
-		//Ã¤³Î ¾÷/´Ù¿î
+		//ì±„ë„ ì—…/ë‹¤ìš´
 		t.channelDown();
-		System.out.println("º¯°æµÈ Ã¤³Î : " + t.channel);
+		System.out.println("ë³€ê²½ëœ ì±„ë„ : " + t.channel);
 		
 		t.channelUp();
-		System.out.println("º¯°æµÈ Ã¤³Î : " + t.channel);		
+		System.out.println("ë³€ê²½ëœ ì±„ë„ : " + t.channel);		
 		
 		System.out.println();
-		// TVÀü¿ø ²ô±â
+		// TVì „ì› ë„ê¸°
 		t.power();
-		System.out.println("TV ½ÇÇà À¯¹« : " + t.power);
+		System.out.println("TV ì‹¤í–‰ ìœ ë¬´ : " + t.power);
 		
 		t.color = "blue";
 	}

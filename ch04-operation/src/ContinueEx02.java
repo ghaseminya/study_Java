@@ -1,5 +1,5 @@
 /*
-3ÀÇ ¹è¼ö°¡ ¾Æ´Ï°Å³ª 7ÀÇ ¹è¼ö°¡ ¾Æ´Ï¶ó¸é Ãâ·ÂÇÏ°í Ä«¿îÆ® Áõ°¡½ÃÅ°±â
+3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆê±°ë‚˜ 7ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë¼ë©´ ì¶œë ¥í•˜ê³  ì¹´ìš´íŠ¸ ì¦ê°€ì‹œí‚¤ê¸°
 */
 
 public class ContinueEx02 {
@@ -11,9 +11,9 @@ public class ContinueEx02 {
 		
 		while((num++)<100)
 		{
-			//3À¸·Î ³ª´²¼­ 0ÀÌ ¾Æ´Ï¶ó¸é 7·Î ³ª´²¼­ 0ÀÌ ¾Æ´Ï¶ó¸é (3ÀÇ ¹è¼ö°¡ ¾Æ´Ï°Å³ª 7ÀÇ ¹è¼ö°¡ ¾Æ´Ï¶ó¸é)
+			//3ìœ¼ë¡œ ë‚˜ëˆ ì„œ 0ì´ ì•„ë‹ˆë¼ë©´ 7ë¡œ ë‚˜ëˆ ì„œ 0ì´ ì•„ë‹ˆë¼ë©´ (3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆê±°ë‚˜ 7ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë¼ë©´)
 			if(num%3!=0 || num%7!=0)
-				continue;	//ÀÌÇÏ ºÎºÐ »ý·«ÇÏ°í Á¶°Ç¹®À¸·Î ÀÌµ¿
+				continue;	//ì´í•˜ ë¶€ë¶„ ìƒëžµí•˜ê³  ì¡°ê±´ë¬¸ìœ¼ë¡œ ì´ë™
 			
 			count++;
 			System.out.println(num);

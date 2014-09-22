@@ -1,4 +1,4 @@
-/* »ı¼ºÀÚ È£ÃâÀ» ÅëÇÑ ÃÊ±âÈ­ 
+/* ìƒì„±ì í˜¸ì¶œì„ í†µí•œ ì´ˆê¸°í™” 
  
  */
 
@@ -6,15 +6,15 @@ public class ThisTest3 {
 	
 	
 	public ThisTest3(){
-		//System.out.println("ÀÎÀÚ¾ø´Â »ı¼ºÀÚ");
+		//System.out.println("ì¸ìì—†ëŠ” ìƒì„±ì");
 		
-		//»ı¼ºÀÚ³»¿¡¼­ ¶Ç ´Ù¸¥ »ı¼ºÀÚ¸¦ È£ÃâÇÏ´Â °Íµµ ÃÊ±âÈ­ ÀÛ¾÷ ÀÓ
-		//ÃÊ±âÈ­ ÀÛ¾÷ Àü¿¡ ¼öÇà¹®ÀÌ ÀÖÀ¸¸é ERROR:Constructor call must be the first statement in a constructor
-		//System.out.println("»ı¼ºÀÚ È£Ãâ Àü ¼öÇà¹® È£Ãâ(ERROR)");
+		//ìƒì„±ìë‚´ì—ì„œ ë˜ ë‹¤ë¥¸ ìƒì„±ìë¥¼ í˜¸ì¶œí•˜ëŠ” ê²ƒë„ ì´ˆê¸°í™” ì‘ì—… ì„
+		//ì´ˆê¸°í™” ì‘ì—… ì „ì— ìˆ˜í–‰ë¬¸ì´ ìˆìœ¼ë©´ ERROR:Constructor call must be the first statement in a constructor
+		//System.out.println("ìƒì„±ì í˜¸ì¶œ ì „ ìˆ˜í–‰ë¬¸ í˜¸ì¶œ(ERROR)");
 	
-		//»ı¼ºÀÚ³»¿¡¼­ ¶Ç ´Ù¸¥ »ı¼ºÀÚ È£Ãâ
-		this("ÀÎÀÚ¾ø´Â »ı¼ºÀÚ ");
-		System.out.println("»ı¼ºÀÚ È£Ãâ ÈÄ ¼öÇà¹® È£Ãâ(Á¤»ó)");
+		//ìƒì„±ìë‚´ì—ì„œ ë˜ ë‹¤ë¥¸ ìƒì„±ì í˜¸ì¶œ
+		this("ì¸ìì—†ëŠ” ìƒì„±ì ");
+		System.out.println("ìƒì„±ì í˜¸ì¶œ í›„ ìˆ˜í–‰ë¬¸ í˜¸ì¶œ(ì •ìƒ)");
 	}
 	
 	public ThisTest3(String msg){
@@ -35,6 +35,6 @@ public class ThisTest3 {
 		ThisTest3 tt2 = new ThisTest3(1000);
 		
 		System.out.println("==================");
-		ThisTest3 tt3 = new ThisTest3("´ëÇÑ¹Î±¹");
+		ThisTest3 tt3 = new ThisTest3("ëŒ€í•œë¯¼êµ­");
 	}
 }

@@ -1,6 +1,7 @@
 /*
-ºñ ¿À¹ö·Îµù ¿¹Á¦
--> OverloadingEx03 ¿À¹ö·Îµù ±¸Çö
+ë¹„ ì˜¤ë²„ë¡œë”© ì˜ˆì œ
+-> OverloadingEx03 ì˜¤ë²„ë¡œë”© êµ¬í˜„
+
 */
 public class OverloadingEx02 {
 
@@ -16,14 +17,14 @@ public class OverloadingEx02 {
 
 	public void intLength(int a){
 		String s = String.valueOf(a);
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ : " + s.length());
+		System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´ : " + s.length());
 	}
 	public void floatLength(float f){
 		String s = String.valueOf(f);
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ : " + s.length());
+		System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´ : " + s.length());
 	}
 	public void stringLength(String str){
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ : " + str.length());
+		System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´ : " + str.length());
 
 	}
 

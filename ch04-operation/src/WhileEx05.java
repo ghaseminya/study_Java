@@ -1,17 +1,18 @@
 /*
-do ~ while¹®
+do ~ whileë¬¸
+
 */
 public class WhileEx05 {
 
 	public static void main(String[] args) {
 		
-		int num=0;	//ÃÊ±â°ª
+		int num=0;	//ì´ˆê¸°ê°’
 		
 		do 
 		{
 			System.out.println("I Love JAVA - " + num);
-			num++;		//¹Ýº¹¹®À» Á¾·áÇÏ±â À§ÇÑ ±¸¹®
-		}while(num<7);	//¹Ýº¹ Á¶°Ç
+			num++;		//ë°˜ë³µë¬¸ì„ ì¢…ë£Œí•˜ê¸° ìœ„í•œ êµ¬ë¬¸
+		}while(num<7);	//ë°˜ë³µ ì¡°ê±´
 	}
 
 }

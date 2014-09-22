@@ -1,26 +1,26 @@
 /*
-Áõ°¨ ¿¬»êÀÚ
+ì¦ê° ì—°ì‚°ì
 */
 public class OperatorEx01 {
 	public static void main(String[] args){
 		
-		System.out.println("=========Áõ°¡ ¿¬»êÀÚ=========");
+		System.out.println("=========ì¦ê°€ ì—°ì‚°ì=========");
 		int i1=5;
 		int i2=5;
-		System.out.println("Áõ°¡¿¬»êÀÚ ¼±Çà : " + (++i1) );
+		System.out.println("ì¦ê°€ì—°ì‚°ì ì„ í–‰ : " + (++i1) );
 		System.out.println("i1 : " + i1);
 				
-		System.out.println("Áõ°¡¿¬»êÀÚ ÈÄÇà : "+ (i2++) );
+		System.out.println("ì¦ê°€ì—°ì‚°ì í›„í–‰ : "+ (i2++) );
 		System.out.println("i2 : " + i2);
 		
-		System.out.println("\n=========°¨¼Ò ¿¬»êÀÚ=========");
+		System.out.println("\n=========ê°ì†Œ ì—°ì‚°ì=========");
 		System.out.println("");
 		int j1 = 10;
 		int j2 = 10;
-		System.out.println("°¨¼Ò¿¬»êÀÚ ¼±Çà : "+ (--j1) );
+		System.out.println("ê°ì†Œì—°ì‚°ì ì„ í–‰ : "+ (--j1) );
 		System.out.println("j1 : " + j1);
 		
-		System.out.println("°¨¼Ò¿¬»êÀÚ ÈÄÇà : "+ (j2--) );
+		System.out.println("ê°ì†Œì—°ì‚°ì í›„í–‰ : "+ (j2--) );
 		System.out.println("j2 : " + j2);
 	}
 }

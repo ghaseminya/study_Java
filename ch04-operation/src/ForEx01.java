@@ -1,15 +1,18 @@
+/*
+for()ë¬¸ - ë¹„êµ ì¸ìê°’ ì¦ê°€
+
+*/
 
 public class ForEx01 {
 
 	public static void main(String[] args) {
-		// for()¹® - ºñ±³ ÀÎÀÚ°ª Áõ°¡
 		
 		for( int i=1; i<=5; i++){
 			System.out.print("\t"+i);
 		}
-		System.out.println();	//´Ü¼ø ÁÙ¹Ù²Ş
-		System.out.print("\n");	//´Ü¼ø ÁÙ¹Ù²Ş
-		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù!!");
+		System.out.println();	//ë‹¨ìˆœ ì¤„ë°”ê¿ˆ
+		System.out.print("\n");	//ë‹¨ìˆœ ì¤„ë°”ê¿ˆ
+		System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤!!");
 	}
 
 }

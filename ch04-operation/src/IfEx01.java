@@ -1,16 +1,18 @@
+/*
+ì¡°ê±´ë¬¸ - ë‹¨ì¼ Ifë¬¸ 
+*/
 
 public class IfEx01 {
 
 	public static void main(String[] args) {		
-		// Á¶°Ç¹® - ´ÜÀÏ If¹® 
 		
 		int n =10;
 //		int n =4;
 		
 		if( n > 5){
-			System.out.println("nÀº 5º¸´Ù Å©´Ù");
+			System.out.println("nì€ 5ë³´ë‹¤ í¬ë‹¤");
 		}
 		
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	}
 }

@@ -1,5 +1,5 @@
 /*
-ÀÚµ¿Çü º¯È¯-ÇÁ·Î¸ð¼Ç/µð¸ð¼Ç
+ìžë™í˜• ë³€í™˜-í”„ë¡œëª¨ì…˜/ë””ëª¨ì…˜
 */
 
 public class CastEx03 {
@@ -7,52 +7,52 @@ public class CastEx03 {
 		
 		
 		System.out.println("");
-		System.out.println("=========ÇÁ·Î¸ð¼Ç=========");
-		/*ÇÁ·Î¸ð¼Ç:
-		´õ Å« ÀÚ·áÇüÀ¸·Î ½Â°ÝÀÌ ÀÏ¾î³ª´Â ÇüÅÂ
-		Á¤º¸ÀÇ ¼Õ½ÇÀÌ ÀüÇô ¾øÀ¸¸ç ÀÚµ¿ÀûÀ¸·Î ¹ß»ý*/
+		System.out.println("=========í”„ë¡œëª¨ì…˜=========");
+		/*í”„ë¡œëª¨ì…˜:
+		ë” í° ìžë£Œí˜•ìœ¼ë¡œ ìŠ¹ê²©ì´ ì¼ì–´ë‚˜ëŠ” í˜•íƒœ
+		ì •ë³´ì˜ ì†ì‹¤ì´ ì „í˜€ ì—†ìœ¼ë©° ìžë™ì ìœ¼ë¡œ ë°œìƒ*/
 		byte b1 = 127;
 		byte b2 = 127;
-//		byte b3 = b1 + b2;
+//		byte b3 = b1 + b2;	//Error: cannot convert from int to byte
 		int i1 = b1 + b2;	
-		/*32bit(4byte)¹Ì¸¸ byteÇü µ¥ÀÌÅÍ ¿¬»ê½Ã 32bit intÇüÀ¸·Î ½Â°ÝµË´Ï´Ù. µ¥ÀÌÅÍ Å¸ÀÔÀÌ ´Ù¸£¹Ç·Î Áï, intÇüÀº byteÇüÀ¸·Î ÀúÀåµÇÁö ¾Ê½À´Ï´Ù.
+		/*32bit(4byte)ë¯¸ë§Œ byteí˜• ë°ì´í„° ì—°ì‚°ì‹œ 32bit intí˜•ìœ¼ë¡œ ìŠ¹ê²©ë©ë‹ˆë‹¤. ë°ì´í„° íƒ€ìž…ì´ ë‹¤ë¥´ë¯€ë¡œ ì¦‰, intí˜•ì€ byteí˜•ìœ¼ë¡œ ì €ìž¥ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 		Error: cannot convert from int to byte*/
 		System.out.println("i1= " + i1 );
-		System.out.println("b1 + b2 = " + (b1+b2) );	// ÀÚµ¿ÀûÀ¸·Î int·Î Çüº¯È¯ µË´Ï´Ù.
+		System.out.println("b1 + b2 = " + (b1+b2) );	// ìžë™ì ìœ¼ë¡œ intë¡œ í˜•ë³€í™˜ ë©ë‹ˆë‹¤.
 		
 		System.out.println("");
 		short s1 = 12345;
 		short s2 = 12345;
 		int i2 = s1 + s2;
-//		32bit(4¹ÙÀÌÆ®)¹Ì¸¸ shoreÇü µ¥ÀÌÅÍ ¿¬»ê½Ã 32bit intÇüÀ¸·Î ½Â°Ý
+//		32bit(4ë°”ì´íŠ¸)ë¯¸ë§Œ shoreí˜• ë°ì´í„° ì—°ì‚°ì‹œ 32bit intí˜•ìœ¼ë¡œ ìŠ¹ê²©
 		System.out.println("i2= " + i2 );
-		System.out.println("s1 + s2 = " + (s1+s2) );	// ÀÚµ¿ÀûÀ¸·Î int·Î Çüº¯È¯ µË´Ï´Ù.
+		System.out.println("s1 + s2 = " + (s1+s2) );	// ìžë™ì ìœ¼ë¡œ intë¡œ í˜•ë³€í™˜ ë©ë‹ˆë‹¤.
 		
 		System.out.println("");
 		int int1 = 12345;
 		long lg1 = 1234567L;
 //		long		= int		long
-		long resultL = int1 + 	lg1;	// int -> long ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
+		long resultL = int1 + 	lg1;	// int -> long ìžë™ì ìœ¼ë¡œ í˜•ë³€í™˜
 		System.out.println("resultL = " + resultL);
 		
 		System.out.println("");
 		int int2 = 12345;
 		double d1 = 100.3D;
-		double resultD= int2 + d1;	// int -> double ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
+		double resultD= int2 + d1;	// int -> double ìžë™ì ìœ¼ë¡œ í˜•ë³€í™˜
 		System.out.println("resultD = " + resultD);
 		
 		
 		System.out.println("");System.out.println("");
-		System.out.println("=========µð¸ð¼Ç=========");
-		/*µð¸ð¼Ç:
-		´õ ÀÛÀº ÀÚ·áÇüÀ¸·Î °­µî
-		ÀÚ·áÀÇ ¼Õ½ÇÀÌ ÀÖÀ» ¼ö ÀÖÀ½
-		¸í½ÃÀûÀ¸·Î Çüº¯È¯ÇØ¾ß ÇÔ*/
+		System.out.println("=========ë””ëª¨ì…˜=========");
+		/*ë””ëª¨ì…˜:
+		ë” ìž‘ì€ ìžë£Œí˜•ìœ¼ë¡œ ê°•ë“±
+		ìžë£Œì˜ ì†ì‹¤ì´ ìžˆì„ ìˆ˜ ìžˆìŒ
+		ëª…ì‹œì ìœ¼ë¡œ í˜•ë³€í™˜í•´ì•¼ í•¨*/
 		byte b4 = 125;
 		byte b5 = 125;
 		byte result_byte = (byte)(b4 + b5); 	
-		//¿¬»ê°á°ú·Î int·Î ÀÚµ¿À¸·Î Çüº¯È¯ µÇ¹Ç·Î byte·Î ÀÚ·áÇüÀ» À¯ÁöÇÏ±â À§ÇØ int -> byte·Î °­Á¦ Çüº¯È¯
-//		(byte): Ä³½ºÆ® ¿¬»êÀÚ¸¦ »ç¿ëÇÏ¿© °­Á¦ Çüº¯È¯
+		//ì—°ì‚°ê²°ê³¼ë¡œ intë¡œ ìžë™ìœ¼ë¡œ í˜•ë³€í™˜ ë˜ë¯€ë¡œ byteë¡œ ìžë£Œí˜•ì„ ìœ ì§€í•˜ê¸° ìœ„í•´ int -> byteë¡œ ê°•ì œ í˜•ë³€í™˜
+//		(byte): ìºìŠ¤íŠ¸ ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•˜ì—¬ ê°•ì œ í˜•ë³€í™˜
 		System.out.println("result_byte = " + result_byte);
 		System.out.println("b4 + b5 = " + (b4 +b5) );
 		
@@ -67,14 +67,14 @@ public class CastEx03 {
 		int int3 = 1234;
 		float f1 = 100.5F;
 //		int result_int1 = int3 + f1;
-		int result_int2 = int3 + (int)f1;	//float ->int·Î °­Á¦ Çüº¯È¯ (Àý»èµÊ)
-		System.out.println("int3 + f1 = " + (int2 + f1) );
+		int result_int2 = int3 + (int)f1;	//float ->intë¡œ ê°•ì œ í˜•ë³€í™˜ (ì ˆì‚­ë¨)
+		System.out.println("int3 + f1 = " + (int3 + f1) );
 		System.out.println("result_int2 = " + result_int2);
 		
 		System.out.println("");
 		int int4 = 1234;
 		long lg2 = 1234L;
-		int result_int3 = int4 + (int)lg2;	//long -> int·Î °­Á¦ Çüº¯È¯
+		int result_int3 = int4 + (int)lg2;	//long -> intë¡œ ê°•ì œ í˜•ë³€í™˜
 		System.out.println("int4 + lg2 = " + (int2 +lg2) );
 		System.out.println("result_int3 = " + result_int3);
 		

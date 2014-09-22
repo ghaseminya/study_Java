@@ -1,18 +1,20 @@
-/*while¹® - 1ºÎÅÍ 100±îÁöÀÇ ´©Àû ÇÕ ±¸ÇÏ±â
+/*
+whileë¬¸ - 1ë¶€í„° 100ê¹Œì§€ì˜ ëˆ„ì  í•© êµ¬í•˜ê¸°
+
 */
 public class WhileEx02 {
 
 	public static void main(String[] args) {
 		
 		int sum, su;
-		sum = su = 0;	//ÃÊ±â½Ä
+		sum = su = 0;	//ì´ˆê¸°ì‹
 		
-		while(su <= 100){	//Á¶°Ç½Ä
+		while(su <= 100){	//ì¡°ê±´ì‹
 			
 			sum += su;
-			su++;			//Áõ°¨½Ä
+			su++;			//ì¦ê°ì‹
 		}
-		System.out.println("1~100±îÁöÀÇ ÇÕ : " + sum);
+		System.out.println("1~100ê¹Œì§€ì˜ í•© : " + sum);
 		
 	}
 }

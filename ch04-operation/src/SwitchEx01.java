@@ -1,33 +1,35 @@
+/*
+switchë¬¸ì—ì„œ ì •ìˆ˜ ë¹„êµí•˜ê¸°
 
+*/
 public class SwitchEx01 {
 
 	public static void main(String[] args) {
-		// switch¹®¿¡¼­ Á¤¼ö ºñ±³ÇÏ±â
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int a;
-		System.out.print("Á¤¼öÇü ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä > ");
+		System.out.print("ì •ìˆ˜í˜• ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
 		a = input.nextInt();
 		
-		switch(a){// JDK v6: longÀ» Á¦¿ÜÇÑ Á¤¼öÇü(byte, short, int), char
+		switch(a){// JDK v6: longì„ ì œì™¸í•œ ì •ìˆ˜í˜•(byte, short, int), char
 		case 1:
-			System.out.println("1 ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("1 ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		case 2:
-			System.out.println("2 ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("2 ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		case 3:
-			System.out.println("3 ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("3 ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		case 4:
-			System.out.println("4 ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("4 ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		case 5:
-			System.out.println("5 ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("5 ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		default:
-			System.out.println("1 ~ 5 ¼ıÀÚÁß¿¡¼­ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("1 ~ 5 ìˆ«ìì¤‘ì—ì„œ ì…ë ¥í•˜ì„¸ìš”.");
 			break;
 		
 		}

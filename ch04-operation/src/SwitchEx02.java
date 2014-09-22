@@ -1,26 +1,28 @@
+/*
+switchë¬¸ì— ë¬¸ì ë¹„êµ
+*/
 
 public class SwitchEx02 {
 
 	public static void main(String[] args) {
-		// switch¹®¿¡ ¹®ÀÚ ºñ±³
 		
 		//char a = 'A';
 		//char a = 'B';
 		char a = 'C';
 		//char a ='D';
 		
-		switch(a){	//char -> int Çüº¯È¯ µÊ(¾Æ½ºÅ° ÄÚµå·Î ÀÎ½ÄµÊ)
+		switch(a){	//char -> int í˜•ë³€í™˜ ë¨(ì•„ìŠ¤í‚¤ ì½”ë“œë¡œ ì¸ì‹ë¨)
 		case 'A':
-			System.out.println("A Ãâ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("A ì¶œë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		case 'B':
-			System.out.println("B Ãâ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("B ì¶œë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		case 'C':
-			System.out.println("C Ãâ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("C ì¶œë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			break;
 		default:
-			System.out.println("A, B, C°¡ ¾Æ´Ñ ¹®ÀÚ ÀÔ´Ï´Ù.");		
+			System.out.println("A, B, Cê°€ ì•„ë‹Œ ë¬¸ì ì…ë‹ˆë‹¤.");		
 		}
 	}
 }

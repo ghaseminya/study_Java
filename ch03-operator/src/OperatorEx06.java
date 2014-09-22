@@ -1,18 +1,20 @@
-
+/*
+ì¡°ê±´(ì‚¼í•­) ì—°ì‚°ì 1 - ì ˆëŒ€ê°’ ë§Œë“¤ê¸°
+*/
 public class OperatorEx06 {
 	public static void main(String[] args){
-		System.out.println("=========Á¶°Ç(»ïÇ×) ¿¬»êÀÚ 1=========");
-		//Àı´ë°ª ¸¸µé±â
+		System.out.println("=========ì¡°ê±´(ì‚¼í•­) ì—°ì‚°ì 1=========");
+		//ì ˆëŒ€ê°’ ë§Œë“¤ê¸°
 		
-		System.out.println("Àı´ë°ª ¸¸µé±â: ");
+		System.out.println("ì ˆëŒ€ê°’ ë§Œë“¤ê¸°: ");
 		int x = 10;
 		int y = -20;
 		
-				//Á¶°Ç½Ä(true or false)	? Âü°ª : °ÅÁş°ª
+				//ì¡°ê±´ì‹(true or false)	? ì°¸ê°’ : ê±°ì§“ê°’
 		int absX = (x >=0) ? x : -x;
 		int absY = (y >=0) ? y : -y;
-		System.out.println("x=10ÀÏ ¶§, xÀÇ Àı´ë°ª: " + absX);
-		System.out.println("y=-20ÀÏ ¶§, yÀÇ Àı´ë°ª: " + absY);
+		System.out.println("x=10ì¼ ë•Œ, xì˜ ì ˆëŒ€ê°’: " + absX);
+		System.out.println("y=-20ì¼ ë•Œ, yì˜ ì ˆëŒ€ê°’: " + absY);
 			
 		System.out.println("");
 	}

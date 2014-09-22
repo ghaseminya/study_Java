@@ -1,10 +1,10 @@
-/* °´Ã¼ »ı¼º - ¸â¹ö ¸Ş¼Òµå È£Ãâ
+/* ê°ì²´ ìƒì„± - ë©¤ë²„ ë©”ì†Œë“œ í˜¸ì¶œ
  * 
  */
 
 public class Student2 {	
 	
-	//¸â¹ö º¯¼ö
+	//ë©¤ë²„ ë³€ìˆ˜
 	String name;
 	int korean;
 	int math;
@@ -12,12 +12,12 @@ public class Student2 {
 	int sum;
 	int avg;	
 
-	//ÃÑÁ¡ ¸â¹ö ¸Ş¼Òµå
+	//ì´ì  ë©¤ë²„ ë©”ì†Œë“œ
 	public int sum(int a, int b, int c){
 		return a+b+c;
 	}	
 	
-	//Æò±Õ ¸â¹ö ¸Ş¼Òµå
+	//í‰ê·  ë©¤ë²„ ë©”ì†Œë“œ
 	public float avg(int a){
 		return  a/3;
 	}
@@ -26,7 +26,7 @@ public class Student2 {
 			
 		Student2 student = new Student2();
 				
-		student.name = "±è¿¬¾Æ";
+		student.name = "ê¹€ì—°ì•„";
 		student.korean = 100;
 		student.math = 90;
 		student.english = 80;
@@ -34,12 +34,12 @@ public class Student2 {
 		student.avg = student.sum / 3;
 		
 
-		System.out.println("ÀÌ¸§" + "\t" +  
-				"±¹¾î" + "\t" + 
-				"¼öÇĞ" + "\t" + 
-				"¿µ¾î" + "\t" + 
-				"ÃÑÁ¡" + "\t" + 
-				"Æò±Õ");
+		System.out.println("ì´ë¦„" + "\t" +  
+				"êµ­ì–´" + "\t" + 
+				"ìˆ˜í•™" + "\t" + 
+				"ì˜ì–´" + "\t" + 
+				"ì´ì " + "\t" + 
+				"í‰ê· ");
 		
 		System.out.println(student.name + "\t" +  
 				student.korean + "\t" + 

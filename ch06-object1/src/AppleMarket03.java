@@ -1,28 +1,28 @@
 /*
-»ı¼ºÀÚ ÇÔ¼ö Á¤ÀÇ ¹× ÀÎ½ºÅÏ½Ã »ı¼º½Ã »ı¼ºÀÚ ÇÔ¼ö È£Ãâ
+ìƒì„±ì í•¨ìˆ˜ ì •ì˜ ë° ì¸ìŠ¤í„´ì‹œ ìƒì„±ì‹œ ìƒì„±ì í•¨ìˆ˜ í˜¸ì¶œ
 
 */
 
 public class AppleMarket03 {
 	public static void main(String[] args) {
 
-		//ÀÎ½ºÅÏ½º »ı¼º½Ã »ı¼ºÀÚ È£ÃâÇÏ¿© ÃÊ±âÈ­ ¼öÇà
+		//ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì‹œ ìƒì„±ì í˜¸ì¶œí•˜ì—¬ ì´ˆê¸°í™” ìˆ˜í–‰
 		AppleSeller seller1 = new AppleSeller(0, 20, 2500);
 		AppleSeller seller2 = new AppleSeller(0, 50, 1000);
 
 
 		AppleBuyer buyer = new AppleBuyer();
-		//¸Ş¼Òµå È£Ãâ	: ¸Ş¼Òµå È£ÃâÀ» ÅëÇØ ¸Ş½ÃÁö Àü´ŞÇÏ´Â °ÍÀ» ÀÇ¹Ì, ¸Ş¼Òµå Àü´ŞÀº µÎ °´Ã¼°£ÀÇ ´ëÈ­¹æ¹ıÀÔ´Ï´Ù.
-		buyer.buyApple(seller1, 5000);	//»çÀÚ ÆÇ¸ÅÀÚ1¿¡°Ô 5,000¿ø¾îÄ¡ »ç°ú ±¸¸Å ¿äÃ»
-		buyer.buyApple(seller2, 5000);	//»çÀÚ ÆÇ¸ÅÀÚ2¿¡°Ô 5,000¿ø¾îÄ¡ »ç°ú ±¸¸Å ¿äÃ»
+		//ë©”ì†Œë“œ í˜¸ì¶œ	: ë©”ì†Œë“œ í˜¸ì¶œì„ í†µí•´ ë©”ì‹œì§€ ì „ë‹¬í•˜ëŠ” ê²ƒì„ ì˜ë¯¸, ë©”ì†Œë“œ ì „ë‹¬ì€ ë‘ ê°ì²´ê°„ì˜ ëŒ€í™”ë°©ë²•ì…ë‹ˆë‹¤.
+		buyer.buyApple(seller1, 5000);	//ì‚¬ì íŒë§¤ì1ì—ê²Œ 5,000ì›ì–´ì¹˜ ì‚¬ê³¼ êµ¬ë§¤ ìš”ì²­
+		buyer.buyApple(seller2, 5000);	//ì‚¬ì íŒë§¤ì2ì—ê²Œ 5,000ì›ì–´ì¹˜ ì‚¬ê³¼ êµ¬ë§¤ ìš”ì²­
 
 
-		System.out.println("»ç°ú ÆÇ¸ÅÀÚ1ÀÇ ÇöÀç »óÅÂ");
+		System.out.println("ì‚¬ê³¼ íŒë§¤ì1ì˜ í˜„ì¬ ìƒíƒœ");
 		seller1.showSaleResult();
-		System.out.println("»ç°ú ÆÇ¸ÅÀÚ2ÀÇ ÇöÀç »óÅÂ");
+		System.out.println("ì‚¬ê³¼ íŒë§¤ì2ì˜ í˜„ì¬ ìƒíƒœ");
 		seller2.showSaleResult();
 
-		System.out.println("»ç°ú ±¸¸ÅÀÚÀÇ ÇöÀç »óÅÂ");
+		System.out.println("ì‚¬ê³¼ êµ¬ë§¤ìì˜ í˜„ì¬ ìƒíƒœ");
 		buyer.showBuyResult();
 	}
 
@@ -35,12 +35,12 @@ class AppleSeller{
 	final int APPLE_PRICE;
 
 
-//»ı¼ºÀÚ Æ¯Â¡(Á¶°Ç)
-//	1) »ı¼ºÀÚÀÇ ÀÌ¸§Àº Å¬·¡½º ¸í°ú °°¾Æ¾ß ÇÕ´Ï´Ù.
-//	2) return TypeÀÌ ÀüÇô Á¤ÀÇµÇÁö ¾ÊÀ¸¸ç, ¹İÈ¯ÇÏÁö ¾Ê´Â ¸Ş¼Òµå ÀÔ´Ï´Ù
-//	3) ÀÎ½ºÅÏ½º »ı¼º½Ã »ı¼ºÀÚ´Â ¹İµå½Ã È£ÃâµË´Ï´Ù.
+//ìƒì„±ì íŠ¹ì§•(ì¡°ê±´)
+//	1) ìƒì„±ìì˜ ì´ë¦„ì€ í´ë˜ìŠ¤ ëª…ê³¼ ê°™ì•„ì•¼ í•©ë‹ˆë‹¤.
+//	2) return Typeì´ ì „í˜€ ì •ì˜ë˜ì§€ ì•Šìœ¼ë©°, ë°˜í™˜í•˜ì§€ ì•ŠëŠ” ë©”ì†Œë“œ ì…ë‹ˆë‹¤
+//	3) ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì‹œ ìƒì„±ìëŠ” ë°˜ë“œì‹œ í˜¸ì¶œë©ë‹ˆë‹¤.
 	
-	//»ı¼ºÀÚ Á¤ÀÇ
+	//ìƒì„±ì ì •ì˜
 	public AppleSeller(int money, int appleNumber, int price)
 	{
 		myMoney=money;
@@ -57,8 +57,8 @@ class AppleSeller{
 	}
 	public void showSaleResult()
 	{
-		System.out.println("º¸À¯ »ç°ú: " + numOfApple);
-		System.out.println("ÆÇ¸Å ¼öÀÍ: " + myMoney);
+		System.out.println("ë³´ìœ  ì‚¬ê³¼: " + numOfApple);
+		System.out.println("íŒë§¤ ìˆ˜ìµ: " + myMoney);
 	}
 	
 }
@@ -66,8 +66,8 @@ class AppleSeller{
 
 class AppleBuyer
 {
-	int myMoney=10000;	//º¸À¯ ±İ¾×
-	int numOfApple=0;	//º¸À¯ »ç°ú ¼ö
+	int myMoney=10000;	//ë³´ìœ  ê¸ˆì•¡
+	int numOfApple=0;	//ë³´ìœ  ì‚¬ê³¼ ìˆ˜
 	
 	public void buyApple(AppleSeller seller, int money)
 	{
@@ -76,7 +76,7 @@ class AppleBuyer
 	}
 	public void showBuyResult()
 	{
-		System.out.println("º¸À¯ ±İ¾×: " + myMoney);
-		System.out.println("»ç°ú °³¼ö: " + numOfApple);		
+		System.out.println("ë³´ìœ  ê¸ˆì•¡: " + myMoney);
+		System.out.println("ì‚¬ê³¼ ê°œìˆ˜: " + numOfApple);		
 	}
 }

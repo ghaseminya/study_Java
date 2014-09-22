@@ -1,22 +1,25 @@
+/*
+ì¡°ê±´ë¬¸ - ë‹¨ì¼ if (ì •ìˆ˜í˜• ì…ë ¥ ë°›ì€ í›„ ì§ìˆ˜ í™€ìˆ˜ êµ¬ë¶„í•˜ê¸°)
+
+*/
 
 public class IfEx02 {
 
 	public static void main(String[] args) {
-		// Á¶°Ç¹® - ´ÜÀÏ if (Á¤¼öÇü ÀÔ·Â ¹ŞÀº ÈÄ Â¦¼ö È¦¼ö ±¸ºĞÇÏ±â) 
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int a;
 		
-		System.out.print("Á¤¼öÇü µ¥ÀÌÅÍ ÇÏ³ª¸¦ ÀÔ·Â > ");
+		System.out.print("ì •ìˆ˜í˜• ë°ì´í„° í•˜ë‚˜ë¥¼ ì…ë ¥ > ");
 		a = input.nextInt();
 				
 		
-		if(a%2 == 1){	//È¦¼ö Ã¼Å©
-			System.out.print("È¦¼ö ÀÔ´Ï´Ù.");
+		if(a%2 == 1){	//í™€ìˆ˜ ì²´í¬
+			System.out.print("í™€ìˆ˜ ì…ë‹ˆë‹¤.");
 			
-		}else{	// Â¦¼ö
-			System.out.print("Â¦¼ö ÀÔ´Ï´Ù.");			
+		}else{	// ì§ìˆ˜
+			System.out.print("ì§ìˆ˜ ì…ë‹ˆë‹¤.");			
 		}	
 	}
 }

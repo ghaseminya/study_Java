@@ -1,5 +1,5 @@
 /*
-±¸±¸´Ü - ÁßÃ¸ while¹®À¸·Î 
+êµ¬êµ¬ë‹¨ - ì¤‘ì²© whileë¬¸ìœ¼ë¡œ 
 */
 public class GuGuDanWhile {
 

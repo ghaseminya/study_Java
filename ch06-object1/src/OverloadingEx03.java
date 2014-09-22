@@ -1,3 +1,9 @@
+/*
+메소드오버로딩 구현
+- OverloadingEx02 비오버로딩을 오버로딩하여 구현
+
+
+*/
 
 public class OverloadingEx03 {
 
@@ -21,7 +27,7 @@ public class OverloadingEx03 {
 		getLength(s);
 	}
 	private int getLength(String str){
-		System.out.println("�Է��� ���� ���� : "+str.length());
+		System.out.println("입력한 값의 길이 : "+str.length());
 		return 0;
 
 	}

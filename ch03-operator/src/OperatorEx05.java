@@ -1,11 +1,14 @@
+/*
+ì¦ê°/ë¹„êµ/ë…¼ë¦¬ ì—°ì‚°ìž
+*/
 
 public class OperatorEx05 {
 	
 	public static void main(String[] args){
-		System.out.println("=========Áõ°¨/ºñ±³/³í¸® ¿¬»êÀÚ=========");
+		System.out.println("=========ì¦ê°/ë¹„êµ/ë…¼ë¦¬ ì—°ì‚°ìž=========");
 		
 		
-		System.out.println("³í¸® °ö:");
+		System.out.println("ë…¼ë¦¬ ê³±:");
 		int a, b;
 		a = b = 10;
 		boolean c = (a++ >= ++b) && (++a > b++);
@@ -15,7 +18,7 @@ public class OperatorEx05 {
 		
 		
 		System.out.println("");
-		System.out.println("³í¸® Èü:");
+		System.out.println("ë…¼ë¦¬ íž™:");
 		int d, e;
 		d = e = 10;
 		

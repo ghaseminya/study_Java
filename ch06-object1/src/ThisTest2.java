@@ -1,4 +1,4 @@
-/* ¸â¹öº¯¼ö¿Í Áö¿ªº¯¼ö ±¸ºĞÇÏ±â
+/* ë©¤ë²„ë³€ìˆ˜ì™€ ì§€ì—­ë³€ìˆ˜ êµ¬ë¶„í•˜ê¸°
  * 
  */
 
@@ -11,22 +11,22 @@ public class ThisTest2 {
 		age = a;		
 	}*/	
 	
-	/*¸â¹öº¯¼ö¸í°ú Áö¿ªº¯¼ö¸íÀÌ µ¿ÀÏÇÒ °æ¿ì Áö¿ªº¯¼ö°¡ ¿ì¼±
-	¸â¹öº¯¼ö¿Í Áö¿ªº¯¼ö¸¦ ±¸ºĞÇÏ±â À§ÇØ   this¸¦ »ç¿ë*/
+	/*ë©¤ë²„ë³€ìˆ˜ëª…ê³¼ ì§€ì—­ë³€ìˆ˜ëª…ì´ ë™ì¼í•  ê²½ìš° ì§€ì—­ë³€ìˆ˜ê°€ ìš°ì„ 
+	ë©¤ë²„ë³€ìˆ˜ì™€ ì§€ì—­ë³€ìˆ˜ë¥¼ êµ¬ë¶„í•˜ê¸° ìœ„í•´   thisë¥¼ ì‚¬ìš©*/
 /*	public ThisTest2(String name, int age){
 		name = name;
 		age = age;		
 	}*/
 	
 	public ThisTest2(String name, int age){
-		//¸â¹öº¯¼ö	= Áö¿ªº¯¼ö
+		//ë©¤ë²„ë³€ìˆ˜	= ì§€ì—­ë³€ìˆ˜
 		this.name 	= name;
 		this.age 	= age;		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ThisTest2 tt1 = new ThisTest2("¸¶Â¡°¡",  25);
+		ThisTest2 tt1 = new ThisTest2("ë§ˆì§•ê°€",  25);
 		System.out.println( tt1.name + " / " + tt1.age );
 	}
 }

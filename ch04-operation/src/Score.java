@@ -1,5 +1,6 @@
 /*
-ÇÑ±Û º¯¼ö »ç¿ë, ¼ºÀûÃ³¸®ÇÁ·Î±×·¥, µ¥ÀÌÅÍ°ËÁõ(Áß¿ä), ¼Ò¼ıÁ¡ÀÚ¸® Æ÷¸äÁöÁ¤
+í•œê¸€ ë³€ìˆ˜ ì‚¬ìš©, ì„±ì ì²˜ë¦¬í”„ë¡œê·¸ë¨, ë°ì´í„°ê²€ì¦(ì¤‘ìš”), ì†Œìˆ«ì ìë¦¬ í¬ë©§ì§€ì •
+
 */
 public class Score {
 
@@ -7,84 +8,84 @@ public class Score {
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		int ±¹¾î = 0, ¿µ¾î = 0, ¼öÇĞ = 0, ÃÑÁ¡ = 0;
-		char  ÇĞÁ¡;
-		float Æò±Õ1;
-		float Æò±Õ2;		
+		int êµ­ì–´ = 0, ì˜ì–´ = 0, ìˆ˜í•™ = 0, ì´ì  = 0;
+		char  í•™ì ;
+		float í‰ê· 1;
+		float í‰ê· 2;		
 		
-		//°ú¸ñ ÀüÃ¼¸¦ Ã¼Å©ÇÏ±â
+		//ê³¼ëª© ì „ì²´ë¥¼ ì²´í¬í•˜ê¸°
 		/*do{
-			System.out.print("±¹¾î : ");
-			±¹¾î = input.nextInt();
+			System.out.print("êµ­ì–´ : ");
+			êµ­ì–´ = input.nextInt();
 			
-			System.out.print("¿µ¾î : ");
-			¿µ¾î = input.nextInt();
+			System.out.print("ì˜ì–´ : ");
+			ì˜ì–´ = input.nextInt();
 			
-			System.out.print("¼öÇĞ : ");
-			¼öÇĞ = input.nextInt();
+			System.out.print("ìˆ˜í•™ : ");
+			ìˆ˜í•™ = input.nextInt();
 			
 			
-		}while(±¹¾î < 0 || ±¹¾î > 100  ||
-				¿µ¾î < 0 || ¿µ¾î > 100 ||
-				¼öÇĞ < 0 || ¼öÇĞ > 100);*/
+		}while(êµ­ì–´ < 0 || êµ­ì–´ > 100  ||
+				ì˜ì–´ < 0 || ì˜ì–´ > 100 ||
+				ìˆ˜í•™ < 0 || ìˆ˜í•™ > 100);*/
 		
 		
-		//°ú¸ñº°·Î À¯È¿ÇÑ Á¡¼ö ÀÎÁö Ã¼Å©ÇÏ±â
+		//ê³¼ëª©ë³„ë¡œ ìœ íš¨í•œ ì ìˆ˜ ì¸ì§€ ì²´í¬í•˜ê¸°
 		do{
-			System.out.print("±¹¾î : ");
-			±¹¾î = input.nextInt();
-		}while(±¹¾î < 0 || ±¹¾î > 100);
-		
-		do{
-			System.out.print("¿µ¾î : ");
-			¿µ¾î = input.nextInt();
-		}while(¿µ¾î < 0 || ¿µ¾î > 100);
+			System.out.print("êµ­ì–´ : ");
+			êµ­ì–´ = input.nextInt();
+		}while(êµ­ì–´ < 0 || êµ­ì–´ > 100);
 		
 		do{
-			System.out.print("¼öÇĞ : ");
-			¼öÇĞ = input.nextInt();
-		}while(¼öÇĞ < 0 || ¼öÇĞ > 100);				
+			System.out.print("ì˜ì–´ : ");
+			ì˜ì–´ = input.nextInt();
+		}while(ì˜ì–´ < 0 || ì˜ì–´ > 100);
 		
-		ÃÑÁ¡ = ±¹¾î + ¿µ¾î + ¼öÇĞ;
+		do{
+			System.out.print("ìˆ˜í•™ : ");
+			ìˆ˜í•™ = input.nextInt();
+		}while(ìˆ˜í•™ < 0 || ìˆ˜í•™ > 100);				
 		
-		//µ¥ÀÌÅÍ °ËÁõ (Áß¿ä)
+		ì´ì  = êµ­ì–´ + ì˜ì–´ + ìˆ˜í•™;
+		
+		//ë°ì´í„° ê²€ì¦ (ì¤‘ìš”)
 		//float = int / int;
-		Æò±Õ1 = ÃÑÁ¡/3;			// int -> float Çüº¯È¯ (65 -> 65.0)
-		Æò±Õ2 = (float)ÃÑÁ¡/3.0F;	// int -> float Çüº¯È¯ (65 -> 65.0)
-//		Æò±Õ2 = ÃÑÁ¡/3.0F;		// int -> float Çüº¯È¯ (65 -> 65.0)		
+		í‰ê· 1 = ì´ì /3;			// int -> float í˜•ë³€í™˜ (65 -> 65.0)
+		í‰ê· 2 = (float)ì´ì /3.0F;	// int -> float í˜•ë³€í™˜ (65 -> 65.0)
+//		í‰ê· 2 = ì´ì /3.0F;		// int -> float í˜•ë³€í™˜ (65 -> 65.0)		
 		
 		System.out.println();
-		System.out.println("ÃÑÁ¡ = " + ÃÑÁ¡);
-		System.out.println("Æò±Õ1 = " + Æò±Õ1);
-		System.out.println("Æò±Õ2 = " + Æò±Õ2);	//Ãâ·Â ÈÄ ÁÙ¹Ù²Ş
-		System.out.printf("Æò±Õ2 = %.2f", Æò±Õ2);	//Ãâ·ÂÇÒ µ¥ÀÌÅÍÀÇ Æ÷¸ä ÁöÁ¤, SDK ver5.0ÀÌ»ó	
+		System.out.println("ì´ì  = " + ì´ì );
+		System.out.println("í‰ê· 1 = " + í‰ê· 1);
+		System.out.println("í‰ê· 2 = " + í‰ê· 2);	//ì¶œë ¥ í›„ ì¤„ë°”ê¿ˆ
+		System.out.printf("í‰ê· 2 = %.2f", í‰ê· 2);	//ì¶œë ¥í•  ë°ì´í„°ì˜ í¬ë©§ ì§€ì •, SDK ver5.0ì´ìƒ	
 		
-		switch((int)Æò±Õ2/10){
+		switch((int)í‰ê· 2/10){
 			case 10:
 			case 9:{
-				ÇĞÁ¡ = 'A';
+				í•™ì  = 'A';
 				break;
 			}
 			
 			case 8:{
-				ÇĞÁ¡ = 'B';
+				í•™ì  = 'B';
 				break;	
 			}
 			case 7:{
-				ÇĞÁ¡ = 'C';
+				í•™ì  = 'C';
 				break;
 			}
 			case 6:{
-				ÇĞÁ¡ = 'D';
+				í•™ì  = 'D';
 				break;
 			}
 			default:{
-				ÇĞÁ¡ = 'F';
+				í•™ì  = 'F';
 				break;			
 			}
 		}
 		System.out.println();
-		System.out.println("ÇĞÁ¡ = " + ÇĞÁ¡);
+		System.out.println("í•™ì  = " + í•™ì );
 		
 	}
 }

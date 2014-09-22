@@ -1,13 +1,15 @@
+/*
+forК╛╦ - 1К╤─М└╟ 100Й╧▄Л╖─Л²≤ К┬└Л═│ М∙╘ Й╣╛М∙≤Й╦╟
+*/
 
 public class ForEx03 {
 
 	public static void main(String[] args) {
-		// for╧╝ - 1╨нем 100╠НаЖюг ╢╘юШ гу ╠╦го╠Б
 		
 		int total = 0;
 		for(int i=1; i<=100; i++){
 			total += i;
-			System.out.println("1╨нем " + i + " ╠НаЖюг гую╨ " + total + " ют╢о╢ы");
+			System.out.println("1К╤─М└╟ " + i + " Й╧▄Л╖─Л²≤ М∙╘Л²─ " + total + " Л·┘К▀┬К▀╓");
 		}
 	}
 }

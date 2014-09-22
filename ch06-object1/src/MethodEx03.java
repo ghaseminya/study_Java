@@ -1,11 +1,11 @@
-/* ÀÎÀÚ Àü´Ş ¹æ½Ä: ÂüÁ¶ È£Ãâ(call by reference)
+/* ì¸ì ì „ë‹¬ ë°©ì‹: ì°¸ì¡° í˜¸ì¶œ(call by reference)
  * 
  * */
 
 public class MethodEx03 {
 	
-	//ÀÎÀÚ Àü´Ş ¹æ½Ä: ÂüÁ¶ È£Ãâ(call by reference)
-	public void increase(int[] n){// n¿¡ ÀÎÀÚ·Î ÁÖ¼Ò°¡ ÀÔ·ÂµË´Ï´Ù.
+	//ì¸ì ì „ë‹¬ ë°©ì‹: ì°¸ì¡° í˜¸ì¶œ(call by reference)
+	public void increase(int[] n){// nì— ì¸ìë¡œ ì£¼ì†Œê°€ ì…ë ¥ë©ë‹ˆë‹¤.
 		for(int i=0; i<n.length; i++){
 			n[i]++;
 		}		
@@ -20,7 +20,7 @@ public class MethodEx03 {
 		System.out.println();
 		System.out.println("===============================");		
 		MethodEx03 m = new MethodEx03();		
-		m.increase(ref);	//ÁÖ¼Ò¸¦ ÀÎÀÚ·ÎÀü´Ş
+		m.increase(ref);	//ì£¼ì†Œë¥¼ ì¸ìë¡œì „ë‹¬
 		for(int i=0; i<ref.length; i++){
 			System.out.println(ref[i]);
 		}

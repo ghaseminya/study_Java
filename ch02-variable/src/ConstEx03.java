@@ -1,19 +1,20 @@
 /*
-Á¢¹Ì»ç¸¦ »ç¿ëÇÑ »ó¼öÇ¥Çö¹æ½Ä º¯°æ
+ì ‘ë¯¸ì‚¬ë¥¼ ì‚¬ìš©í•œ ìƒìˆ˜í‘œí˜„ë°©ì‹ ë³€ê²½
+
 */
 public class ConstEx03 {
 
 	public static void main(String[] args) {
 
 		double e1=3.14159;
-		//3.14±âº»ÀÌ doubleÇü ÀÚ·áÇüÀ» °¡Áý´Ï´Ù.
+		//3.14ê¸°ë³¸ì´ doubleí˜• ìžë£Œí˜•ì„ ê°€ì§‘ë‹ˆë‹¤.
 		float e2=3.14159F;
-		//e2°¡ floatÇü ÀÚ·áÇüÀÌ±â ¶§¹®¿¡ F¸¦ ºÙ¿© ¸í½ÃÀûÀ¸·Î floatÇüÀ¸·Î Ç¥ÇöÇØ¾ß Áà¾ß ÇÕ´Ï´Ù.
+		//e2ê°€ floatí˜• ìžë£Œí˜•ì´ê¸° ë•Œë¬¸ì— Fë¥¼ ë¶™ì—¬ ëª…ì‹œì ìœ¼ë¡œ floatí˜•ìœ¼ë¡œ í‘œí˜„í•´ì•¼ ì¤˜ì•¼ í•©ë‹ˆë‹¤.
 		
 		long n1=10000000000L;
-		//10000000000Àº intÇüÀ¸·Î Ç¥Çö ºÒ°¡´ÉÇÑ longÇü ÀÚ·áÇüÀÌÁö¸¸
-		//LÀ» ºÙÀÌÁö ¾ÊÀ¸¸é intÇüÀ¸·Î ÀÎ½ÄÇÏ¹Ç·Î longÀÚ·áÇüÀ¸·Î ¸í½ÃÀûÀ¸·Î ÀúÀåÇØ Áà¾ß ÇÕ´Ï´Ù. 
-		//¸í½ÃÀûÀ¸·Î Á¢¹Ì»çLÀ» ºÙ¿© longÇü »ó¼ö Ç¥ÇöÀ» ÀÇ¹ÌÇÏµµ·Ï ÇØÁÝ´Ï´Ù.
+		//10000000000ì€ intí˜•ìœ¼ë¡œ í‘œí˜„ ë¶ˆê°€ëŠ¥í•œ longí˜• ìžë£Œí˜•ì´ì§€ë§Œ
+		//Lì„ ë¶™ì´ì§€ ì•Šìœ¼ë©´ intí˜•ìœ¼ë¡œ ì¸ì‹í•˜ë¯€ë¡œ longìžë£Œí˜•ìœ¼ë¡œ ëª…ì‹œì ìœ¼ë¡œ ì €ìž¥í•´ ì¤˜ì•¼ í•©ë‹ˆë‹¤. 
+		//ëª…ì‹œì ìœ¼ë¡œ ì ‘ë¯¸ì‚¬Lì„ ë¶™ì—¬ longí˜• ìƒìˆ˜ í‘œí˜„ì„ ì˜ë¯¸í•˜ë„ë¡ í•´ì¤ë‹ˆë‹¤.
 		long n2=150;
 		
 		System.out.println(e1);

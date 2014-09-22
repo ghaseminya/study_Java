@@ -1,22 +1,25 @@
+/*
+íŠ¹ì • ì¡°ê±´ì¼ ë•Œ ë°˜ë³µë¬¸ íƒˆì¶œí•˜ê¸°
+*/
 
 public class BreakEx03 {
 
 	public static void main(String[] args) {
-		// break¹® - Æ¯Á¤ Á¶°ÇÀÏ ¶§ ¹İº¹¹® Å»ÃâÇÏ±â
+		// breakë¬¸ - íŠ¹ì • ì¡°ê±´ì¼ ë•Œ ë°˜ë³µë¬¸ íƒˆì¶œí•˜ê¸°
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int a =0;
 		int total = 0;
 		
-		System.out.println("0Àü±îÁö ÀÔ·Â¹ŞÀº Á¤¼ö·Î ÇÕ ±¸ÇÏ±â");
+		System.out.println("0ì „ê¹Œì§€ ì…ë ¥ë°›ì€ ì •ìˆ˜ë¡œ í•© êµ¬í•˜ê¸°");
 		
 		while(true){
 			
-			System.out.print("´©ÀûÇÒ Á¤¼ö °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä > ");
+			System.out.print("ëˆ„ì í•  ì •ìˆ˜ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” > ");
 			a = input.nextInt();
 			
-			//Æ¯Á¤ Á¶°ÇÀÏ¶§ ¹İº¹¹® Å»Ãâ
+			//íŠ¹ì • ì¡°ê±´ì¼ë•Œ ë°˜ë³µë¬¸ íƒˆì¶œ
 			if( a ==0){
 				break;
 			}else{

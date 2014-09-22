@@ -1,5 +1,5 @@
 /*
-ÀÚµ¿Çü º¯È¯À» ÅëÇØ ¹®ÀÚÀÇ À¯´ÏÄÚµå °ª Ãâ·Â
+ìë™í˜• ë³€í™˜ì„ í†µí•´ ë¬¸ìì˜ ìœ ë‹ˆì½”ë“œ ê°’ ì¶œë ¥
 */
 
 public class CastEx01 {
@@ -12,7 +12,7 @@ public class CastEx01 {
 		int num1=ch1;
 		int num2=(int)ch2;
 
-		System.out.println("¹®ÀÚ AÀÇ À¯´ÏÄÚµå °ª: "+num1);
-		System.out.println("¹®ÀÚ ZÀÇ À¯´ÏÄÚµå °ª: "+num2);	
+		System.out.println("ë¬¸ì Aì˜ ìœ ë‹ˆì½”ë“œ ê°’: "+num1);
+		System.out.println("ë¬¸ì Zì˜ ìœ ë‹ˆì½”ë“œ ê°’: "+num2);	
 	}
 }

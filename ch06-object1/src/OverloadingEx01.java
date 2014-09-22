@@ -1,16 +1,16 @@
-/* ¸Þ¼­µå ¿À¹ö·Îµù
+/* ë©”ì„œë“œ ì˜¤ë²„ë¡œë”©
  * 
  * */
 
 public class OverloadingEx01 {	
-	//¸â¹öº¯¼ö
+	//ë©¤ë²„ë³€ìˆ˜
 	int var1;	
 	
-	/*¸â¹ö¸Þ¼­µå
-	¸Þ¼­µå ¿À¹ö·Îµù: ±â´ÉÀÌ °°Àº ¸Þ¼­µå¸¦ ¿©·¯°³ ¸¸µé ¶§ »ç¿ëÇÔ
-	- ¸Þ¼­µå ¸íÀº °°°í ÀÎÀÚÀÇ Å¸ÀÔÀ» ´Ù¸£°Ô ¸í½Ã
-	- Å¸ÀÔÀÌ °°À¸¸é ÀÎÀÚÀÇ °¹¼ö¸¦ ´Ù¸£°Ô ¸í½Ã
-	- °¹¼ö°¡ °°À¸¸é ¼ø¼­¸¦ ´Ù¸£°Ô ¸í½Ã*/
+	/*ë©¤ë²„ë©”ì„œë“œ
+	ë©”ì„œë“œ ì˜¤ë²„ë¡œë”©: ê¸°ëŠ¥ì´ ê°™ì€ ë©”ì„œë“œë¥¼ ì—¬ëŸ¬ê°œ ë§Œë“¤ ë•Œ ì‚¬ìš©í•¨
+	- ë©”ì„œë“œ ëª…ì€ ê°™ê³  ì¸ìžì˜ íƒ€ìž…ì„ ë‹¤ë¥´ê²Œ ëª…ì‹œ
+	- íƒ€ìž…ì´ ê°™ìœ¼ë©´ ì¸ìžì˜ ê°¯ìˆ˜ë¥¼ ë‹¤ë¥´ê²Œ ëª…ì‹œ
+	- ê°¯ìˆ˜ê°€ ê°™ìœ¼ë©´ ìˆœì„œë¥¼ ë‹¤ë¥´ê²Œ ëª…ì‹œ*/
 	public void getLength(int n){
 					//int -> Sting
 		String s = String.valueOf(n);
@@ -18,7 +18,7 @@ public class OverloadingEx01 {
 	}
 	
 	//ERROR: Duplicate method getLength(int)in type OverloadingTest
-	// ÀÎÀÚ¸íÀº °°¾Æµµ »ó°ü¾øÀ¸³ª ÀÚ·áÇüÀÌ ´Þ¶ó¾ß ÇÑ´Ù.
+	// ì¸ìžëª…ì€ ê°™ì•„ë„ ìƒê´€ì—†ìœ¼ë‚˜ ìžë£Œí˜•ì´ ë‹¬ë¼ì•¼ í•œë‹¤.
 //	public void getLength(int a){
 //	}
 	
@@ -28,7 +28,7 @@ public class OverloadingEx01 {
 		getLength(s);
 	}
 	
-	//ÁöÁ¤ÀÚ¸¦ ´Ù¸£°Ô ÇÏ´õ¶óµµ ¸Þ¼­µå ¿À¹ö·Îµù¿¡¼­´Â ´Ù¸£°Ô ÀÎ½Ä µÇÁö ¾Ê½À´Ï´Ù.
+	//ì§€ì •ìžë¥¼ ë‹¤ë¥´ê²Œ í•˜ë”ë¼ë„ ë©”ì„œë“œ ì˜¤ë²„ë¡œë”©ì—ì„œëŠ” ë‹¤ë¥´ê²Œ ì¸ì‹ ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 	/*void getLength(float f){
 		//float -> Sting
 		String s = String.valueOf(f);
@@ -41,14 +41,14 @@ public class OverloadingEx01 {
 		getLength(s);
 	}
 	
-	//ÀÎÀÚ ¼ø¼­°¡ µå¸£¸é ´Ù¸¥ °ÍÀ¸·Î ÀÎ½ÄÇÕ´Ï´Ù.
+	//ì¸ìž ìˆœì„œê°€ ë“œë¥´ë©´ ë‹¤ë¥¸ ê²ƒìœ¼ë¡œ ì¸ì‹í•©ë‹ˆë‹¤.
 	public void getLength(int a, float f ){
 		String s = String.valueOf(f) + String.valueOf(a);
 		getLength(s);
 	}
 	
 	public void getLength(String str){		
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ: " + str.length());		
+		System.out.println("ìž…ë ¥í•œ ê°’ì˜ ê¸¸ì´: " + str.length());		
 	}
 	
 	public void getLength(String str, float f ){
@@ -68,27 +68,27 @@ public class OverloadingEx01 {
 	
 	
 	/*private void getLength(String str){		
-	System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ: " + str.length());
+	System.out.println("ìž…ë ¥í•œ ê°’ì˜ ê¸¸ì´: " + str.length());
 	}	*/
 	
 	/*public int getLength(String str){		
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ: " + str.length());
+		System.out.println("ìž…ë ¥í•œ ê°’ì˜ ê¸¸ì´: " + str.length());
 		return 0;
 	}	*/
 	
 
 	public static void main(String[] args) {		
 		
-		//1000, 3.14F, "´ëÇÑ¹Î±¹"
+		//1000, 3.14F, "ëŒ€í•œë¯¼êµ­"
 		
 		OverloadingEx01 ot = new OverloadingEx01();
 		ot.getLength(1000);		//1000		->	"1000"
 		ot.getLength(3.14F);	//3.14F		->	"3.14"
-		ot.getLength("´ëÇÑ¹Î±¹");	//"´ëÇÑ¹Î±¹"	->	"´ëÇÑ¹Î±¹"
+		ot.getLength("ëŒ€í•œë¯¼êµ­");	//"ëŒ€í•œë¯¼êµ­"	->	"ëŒ€í•œë¯¼êµ­"
 		ot.getLength(1000, 3.14F);
 		ot.getLength(3.14F, 1000);
-		ot.getLength("´ëÇÑ¹Î±¹", 3.14F);
-		ot.getLength(3.14F, "´ëÇÑ¹Î±¹");
-		ot.getLength(1000, 3.14F, "´ëÇÑ¹Î±¹");
+		ot.getLength("ëŒ€í•œë¯¼êµ­", 3.14F);
+		ot.getLength(3.14F, "ëŒ€í•œë¯¼êµ­");
+		ot.getLength(1000, 3.14F, "ëŒ€í•œë¯¼êµ­");
 	}
 }

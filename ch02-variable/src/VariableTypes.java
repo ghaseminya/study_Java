@@ -1,53 +1,56 @@
+/*
+ë³€ìˆ˜ ìë£Œí˜• í™•ì¸
+*/
 
 public class VariableTypes {
 
 	
 	public static void main(String[] args){
 		
-		System.out.println("=========³í¸®Çü ¸®ÅÍ·²=========");
+		System.out.println("=========ë…¼ë¦¬í˜• ë¦¬í„°ëŸ´=========");
 		boolean bool = true;	//true, false
 		System.out.println("bool = " + bool);
-				//bool = 20;	//boolean Å¸ÀÔ¿Ü µ¥ÀÌÅÍ ÀúÀå½Ã Error³².
+				//bool = 20;	//boolean íƒ€ì…ì™¸ ë°ì´í„° ì €ì¥ì‹œ Errorë‚¨.
 		
 		
 		System.out.println("");
-		System.out.println("=========¹®ÀÚÇü ¸®ÅÍ·²=========");
+		System.out.println("=========ë¬¸ìí˜• ë¦¬í„°ëŸ´=========");
 		
-//		¹®ÀÚÇü Å©±â: 2byte(2byte Ç¥Çö¹üÀ§: 0~65,535), ´Ù±¹¾î Ã³¸®¸¦ À§ÇÑ À¯´ÏÄÚµå(Unicode)¹æ½Ä
-		char char_a1 = 'A';		//³»ºÎÀûÀ¸·Î ¾Æ½ºÅ°ÄÚµå 65·Î ÀÎ½Ä
+//		ë¬¸ìí˜• í¬ê¸°: 2byte(2byte í‘œí˜„ë²”ìœ„: 0~65,535), ë‹¤êµ­ì–´ ì²˜ë¦¬ë¥¼ ìœ„í•œ ìœ ë‹ˆì½”ë“œ(Unicode)ë°©ì‹
+		char char_a1 = 'A';		//ë‚´ë¶€ì ìœ¼ë¡œ ì•„ìŠ¤í‚¤ì½”ë“œ 65ë¡œ ì¸ì‹
 		System.out.println("char_a1 = " + char_a1);
 		
-		char char_a2 = 65;		// A¿¡ ÇØ´çµÇ´Â ¾Æ½ºÅ°ÄÚµå 65¸¦ Á÷Á¢ ÀÔ·Â
+		char char_a2 = 65;		// Aì— í•´ë‹¹ë˜ëŠ” ì•„ìŠ¤í‚¤ì½”ë“œ 65ë¥¼ ì§ì ‘ ì…ë ¥
 		System.out.println("char_a2 = " + char_a2);
 		
-		char char_a3 = '\u0041';	//A¸¦ À¯´ÏÄÚµå·Î Ç¥Çö
+		char char_a3 = '\u0041';	//Aë¥¼ ìœ ë‹ˆì½”ë“œë¡œ í‘œí˜„
 		System.out.println("char_a3 = " + char_a3);
 				
-		char char_c1 = 'ÀÚ';
+		char char_c1 = 'ì';
 		System.out.println("char_c1 = " + char_c1);
 		
-		char char_c2 = '\uc790';	//'ÀÚ'¸¦ À¯´ÏÄÚµå·Î Ç¥Çö
+		char char_c2 = '\uc790';	//'ì'ë¥¼ ìœ ë‹ˆì½”ë“œë¡œ í‘œí˜„
 		System.out.println("char_c2 = " + char_c2);
 		
 		
 		System.out.println("");
-		System.out.println("=========Á¤¼öÇü ¸®ÅÍ·²=========");
-//		byteÅ©±â: 1byte(Ç¥Çö¹üÀ§: -128~127)
-//		byte b1=128;	//¹üÀ§ ³Ñ¾î°¡¸é error
+		System.out.println("=========ì •ìˆ˜í˜• ë¦¬í„°ëŸ´=========");
+//		byteí¬ê¸°: 1byte(í‘œí˜„ë²”ìœ„: -128~127)
+//		byte b1=128;	//ë²”ìœ„ ë„˜ì–´ê°€ë©´ error
 		byte b2=127;
 		System.out.println("b2 = " + b2);
 		
-//		short Å©±â: 2byte(Ç¥Çö¹üÀ§: -32,768 ~ 32,767)
-//		short s1 = 32768;	//¹üÀ§ ³Ñ¾î°¡¸é error
+//		short í¬ê¸°: 2byte(í‘œí˜„ë²”ìœ„: -32,768 ~ 32,767)
+//		short s1 = 32768;	//ë²”ìœ„ ë„˜ì–´ê°€ë©´ error
 		short s2 = 32767;
 		System.out.println("s2 = " + s2);
 		
-//		int Å©±â: 4byte(Ç¥Çö¹üÀ§: -214,7483,648 ~ 214,7483,647)
-//		int i1 = 2147483648;	//¹üÀ§ ³Ñ¾î°¡¸é error
-		int i2 = 123456789;		//Á¤¼ö Ç¥ÇöÀÇ ±âº»
+//		int í¬ê¸°: 4byte(í‘œí˜„ë²”ìœ„: -214,7483,648 ~ 214,7483,647)
+//		int i1 = 2147483648;	//ë²”ìœ„ ë„˜ì–´ê°€ë©´ error
+		int i2 = 123456789;		//ì •ìˆ˜ í‘œí˜„ì˜ ê¸°ë³¸
 		System.out.println("i2 = " + i2);
 		
-//		long Å©±â: 8byte;
+//		long í¬ê¸°: 8byte;
 		long lg1 = 123456;
 		long lg2 = 123456l;
 		long lg3 = 123456L;
@@ -57,12 +60,12 @@ public class VariableTypes {
 		
 		
 		System.out.println("");
-		System.out.println("=========½Ç¼öÇü ¸®ÅÍ·²=========");
-//		float Å©±â: 4byte
+		System.out.println("=========ì‹¤ìˆ˜í˜• ë¦¬í„°ëŸ´=========");
+//		float í¬ê¸°: 4byte
 		float f1 = 9.1F;
 		System.out.println("f1 = " + f1);
 		
-//		double Å©±â: 8byte (±âº»)
+//		double í¬ê¸°: 8byte (ê¸°ë³¸)
 		double d1 = 9.8;
 		double d2 = 9.8D;
 		System.out.println("d1 = " + d1);

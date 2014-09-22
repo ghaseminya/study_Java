@@ -1,23 +1,26 @@
+/*
+switch()ë¬¸ì„ ì´ìš©í•˜ì—¬ ì‚¬ì§ ì—°ì‚° ìˆ˜í–‰
+JDK ver7.0ë¶€í„°  switch()ë¬¸ì— ì¸ìê°’ìœ¼ë¡œ ë¬¸ìì—´ ì „ë‹¬ ê°€ëŠ¥
+
+*/
 
 public class SwitchEx04 {
 
 	public static void main(String[] args) {
-		// JDK ver7.0ºÎÅÍ  switch()¹®¿¡ ÀÎÀÚ°ªÀ¸·Î ¹®ÀÚ¿­ Àü´Ş °¡´É
-		// switch()¹®À» ÀÌ¿ëÇÏ¿© »çÁ÷ ¿¬»ê ¼öÇà
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int first =0, second=0, total=0;
 		String operator;
 		
-		System.out.print("Ã¹¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä > ");
+		System.out.print("ì²«ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
 		first = input.nextInt();
 		
 		
-		System.out.print("µÎ¹øÂ° ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä > ");
+		System.out.print("ë‘ë²ˆì§¸ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
 		second = input.nextInt();
 		
-		System.out.print("¼öÇàÇÒ ¿¬»êÀÚ´Â( + - * / %) > ");
+		System.out.print("ìˆ˜í–‰í•  ì—°ì‚°ìëŠ”( + - * / %) > ");
 		operator = input.next();
 		
 		switch(operator){
@@ -44,12 +47,12 @@ public class SwitchEx04 {
 			
 			}
 			default:{
-				System.out.print("Àß¸øµÈ ¿¬»êÀÚ¸¦ ÀÔ·ÂÇÏ¿´½À´Ï´Ù. ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");			
+				System.out.print("ì˜ëª»ëœ ì—°ì‚°ìë¥¼ ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤. í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");			
 				System.exit(0);
 			}
 		}
 		
-		System.out.println();//ÇÑÁÙ ÁÙ ¹Ù²Ş
+		System.out.println();//í•œì¤„ ì¤„ ë°”ê¿ˆ
 		System.out.print(first + operator + second + " = " + total);
 
 	}

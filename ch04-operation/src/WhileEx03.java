@@ -1,27 +1,30 @@
+/*
+whileë¬¸ - ì…ë ¥ê°’ ëˆ„ì í•©êµ¬í•˜ê¸° ë° 0ì…ë ¥ì‹œ í”„ë¡œê·¸ë¨ ì¢…ë£Œí•˜ê¸°
+
+*/
 
 public class WhileEx03 {
 
 	public static void main(String[] args) {
-		//while¹® - ÀÔ·Â°ª ´©ÀûÇÕ±¸ÇÏ±â ¹× 0ÀÔ·Â½Ã ÇÁ·Î±×·¥ Á¾·áÇÏ±â
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int num = 0;
 		int total = 0;
 		
-		System.out.println("0Àü±îÁö ÀÔ·Â¹ŞÀº Á¤¼ö·Î ÇÕ ±¸ÇÏ±â");
-		System.out.print("´©ÀûÇÒ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä > ");
+		System.out.println("0ì „ê¹Œì§€ ì…ë ¥ë°›ì€ ì •ìˆ˜ë¡œ í•© êµ¬í•˜ê¸°");
+		System.out.print("ëˆ„ì í•  ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
 		
 		while( (num=input.nextInt()) != 0 ){			
 			
 			total += num;
 						
-			System.out.println("´©ÀûÇÕ°è = " + total);
-			System.out.print("´©ÀûÇÒ µ¥ÀÌÅÍ¸¦  ÀÔ·Â > ");
+			System.out.println("ëˆ„ì í•©ê³„ = " + total);
+			System.out.print("ëˆ„ì í•  ë°ì´í„°ë¥¼  ì…ë ¥ > ");
 			System.out.println();			
 		}
-		//System.out.println("´©ÀûÇÕ°è = " + total);
-		System.out.println("ÇÁ·Î±×·¥ Á¾·áÇÕ´Ï´Ù");	
+		//System.out.println("ëˆ„ì í•©ê³„ = " + total);
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œí•©ë‹ˆë‹¤");	
 
 	}
 }

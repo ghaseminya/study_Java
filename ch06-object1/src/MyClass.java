@@ -1,4 +1,5 @@
-/* Àº´ĞÈ­, Ä¸½¶È­ - Å¬·¡½º ºĞ¸®
+/* 
+ * ì€ë‹‰í™”, ìº¡ìŠí™” - í´ë˜ìŠ¤ ë¶„ë¦¬
  * 
  * MyClass.java
  * MyClassMain.java
@@ -6,32 +7,32 @@
 
 public class MyClass {
 	
-	//Àº´ĞÈ­
+	//ì€ë‹‰í™”
 	private String name;
 	private int age;
 	
-	/* µğÆúÆ® »ı¼ºÀÚ: »ı¼ºÀÚ¸¦ ¸í½ÃÇÏÁö ¾ÊÀ¸¸é ÄÄÆÄÀÏ·¯°¡ default »ı¼ºÀÚ¸¦ ÀÚµ¿ »ğÀÔ
-	 * ±×·¯¹Ç·Î ÀÎÀÚ°¡ ÀÖ´Â »ı¼ºÀÚ¸¦ ¸¸µé °æ¿ì µğÆúÆ® »ı¼ºÀÚ°¡ ÇÊ¿äÇÑ °æ¿ì default »ı¼ºÀÚ¸¦ ¸í½ÃÇØ¾ß µË´Ï´Ù.
+	/* ë””í´íŠ¸ ìƒì„±ì: ìƒì„±ìë¥¼ ëª…ì‹œí•˜ì§€ ì•Šìœ¼ë©´ ì»´íŒŒì¼ëŸ¬ê°€ default ìƒì„±ìë¥¼ ìë™ ì‚½ì…
+	 * ê·¸ëŸ¬ë¯€ë¡œ ì¸ìê°€ ìˆëŠ” ìƒì„±ìë¥¼ ë§Œë“¤ ê²½ìš° ë””í´íŠ¸ ìƒì„±ìê°€ í•„ìš”í•œ ê²½ìš° default ìƒì„±ìë¥¼ ëª…ì‹œí•´ì•¼ ë©ë‹ˆë‹¤.
 	 * */
 	public MyClass(){}
 	
-	//ÀÎÀÚ°¡ Àü´ŞµÇ´Â »ı¼ºÀÚ
+	//ì¸ìê°€ ì „ë‹¬ë˜ëŠ” ìƒì„±ì
 	public MyClass(String n){
 		name =n;
 	}
 	/*Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
 		The constructor MyClass() is undefined*/
 	
-//	»ı¼ºÀÚ ¿À¹ö·Îµù: ¸Ş¼­µå ¿À¹ö·Îµù°ú µ¿ÀÏÇÑ ±ÔÄ¢À» Àû¿ëÇÏ¿© »ı¼ºÀÚ ¿À¹ö·Îµù ¼öÇà
+//	ìƒì„±ì ì˜¤ë²„ë¡œë”©: ë©”ì„œë“œ ì˜¤ë²„ë¡œë”©ê³¼ ë™ì¼í•œ ê·œì¹™ì„ ì ìš©í•˜ì—¬ ìƒì„±ì ì˜¤ë²„ë¡œë”© ìˆ˜í–‰
 //	public MyClass(String a){}
 	
 	public MyClass(String n, int a){
 		name = n;
 		age = a;
-		System.out.println("°´Ã¼°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ê°ì²´ê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}	
 	
-	//Ä¸½¶È­
+	//ìº¡ìŠí™”
 	public void setName(String n){
 		name =n;		
 	}

@@ -1,9 +1,12 @@
+/*
+ë¹„êµ(ê´€ê³„) ì—°ì‚°ì
+*/
 
 public class OperatorEx02 {
 	
 	public static void main(String[] args){
 		
-		System.out.println("=========ºñ±³(°ü°è) ¿¬»êÀÚ=========");
+		System.out.println("=========ë¹„êµ(ê´€ê³„) ì—°ì‚°ì=========");
 		int a = 10;
 		int b = 20;
 		boolean result;

@@ -1,13 +1,13 @@
-/* ÀÎÀÚ Àü´Ş ¹æ½Ä: °ª È£Ãâ(call by value)
+/* ì¸ì ì „ë‹¬ ë°©ì‹: ê°’ í˜¸ì¶œ(call by value)
  * 
  * */
 
 public class MethodEx02 {
 	
 	
-	//¸â¹öº¯¼ö
+	//ë©¤ë²„ë³€ìˆ˜
 	
-	//ÀÎÀÚ Àü´Ş ¹æ½Ä: °ª È£Ãâ(call by value)
+	//ì¸ì ì „ë‹¬ ë°©ì‹: ê°’ í˜¸ì¶œ(call by value)
 	public int increase(int n){
 		++n;
 		return n;
@@ -16,7 +16,7 @@ public class MethodEx02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//Áö¿ª º¯¼ö
+		//ì§€ì—­ ë³€ìˆ˜
 		int var1 = 100;
 		MethodEx02 m = new MethodEx02();
 		

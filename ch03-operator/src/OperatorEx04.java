@@ -1,21 +1,35 @@
+/*
+ë…¼ë¦¬ ì—°ì‚°ì
+
+ì„ ì¡°ê±´	&&	í›„ì¡°ê±´	Result
+true	&&	true	true
+true	&&	false	false
+faluse	&&			false
+
+ì„ ì¡°ê±´	||	í›„ì¡°ê±´	Result
+true	||			true
+false	||	true	true
+false	||	false	false
+
+*/
 
 public class OperatorEx04 {
 	public static void main(String[] args){
 		
-		System.out.println("=========³í¸® ¿¬»êÀÚ =========");
+		System.out.println("=========ë…¼ë¦¬ ì—°ì‚°ì =========");
 		boolean t, f, result;
 		t = true;
 		f = false;
 		
-		result = t && f;	//³í¸®°ö
+		result = t && f;	//ë…¼ë¦¬ê³±
 		System.out.println("t && f : " + result);
 		
 		System.out.println("");
-		result = t || f;	//³í¸®ÇÕ
+		result = t || f;	//ë…¼ë¦¬í•©
 		System.out.println("t || f : " + result);
 		
 		System.out.println("");
-		result = ! t;	//ºÎÁ¤
+		result = ! t;	//ë¶€ì •
 		System.out.println("!t : " + result);
 		
 	}

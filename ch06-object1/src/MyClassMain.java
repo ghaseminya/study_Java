@@ -1,4 +1,4 @@
-/* Àº´ĞÈ­, Ä¸½¶È­ - Å¬·¡½º ºĞ¸®
+/* ì€ë‹‰í™”, ìº¡ìŠí™” - í´ë˜ìŠ¤ ë¶„ë¦¬
  * 
  * MyClass.java
  * MyClassMain.java
@@ -7,22 +7,22 @@
 public class MyClassMain {
 
 	public static void main(String[] args) {
-		// »ı¼ºÀÚ
+		// ìƒì„±ì
 		
 		MyClass mc1 = new MyClass();		
 		
-		//Á¢±ÙÁöÁ¤ÀÚ°¡ privateÀÌ±â ¶§¹®¿¡ È£Ãâ ºÒ°¡´É
-		//mc1.name = "È«±æµ¿";
+		//ì ‘ê·¼ì§€ì •ìê°€ privateì´ê¸° ë•Œë¬¸ì— í˜¸ì¶œ ë¶ˆê°€ëŠ¥
+		//mc1.name = "í™ê¸¸ë™";
 		//mc1.age = 18;
 		
-		mc1.setName("È«±æµ¿");
+		mc1.setName("í™ê¸¸ë™");
 		mc1.setAge(18);
 		System.out.println(mc1.getName() + " / " + mc1.getAge());		
 		
-		MyClass mc2 = new MyClass("ÀÏÁö¸Å");
+		MyClass mc2 = new MyClass("ì¼ì§€ë§¤");
 		System.out.println(mc2.getName() + " / " + mc2.getAge());
 		
-		MyClass mc3 = new MyClass("ÅÂ±ÇºêÀÌ",  30);
+		MyClass mc3 = new MyClass("íƒœê¶Œë¸Œì´",  30);
 		System.out.println(mc3.getName() + " / " + mc3.getAge());
 
 	}

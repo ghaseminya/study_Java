@@ -1,20 +1,20 @@
-/* ÀÎÀÚÀü´Þ ¹æ½Ä: ¹ÝÈ¯ÇÏ´Â ¸®ÅÏ°ªÀÌ ÀÖ´Â ¸Þ¼­µå
+/* ì¸ìžì „ë‹¬ ë°©ì‹: ë°˜í™˜í•˜ëŠ” ë¦¬í„´ê°’ì´ ìžˆëŠ” ë©”ì„œë“œ
  * 
  * */
 
 public class MethodEx01 {
-	//¸Þ¼­µå ¸®ÅÏÇüÅÂ
+	//ë©”ì„œë“œ ë¦¬í„´í˜•íƒœ
 	
-	//ÀÎÀÚÀü´Þ ¹æ½Ä: ¹ÝÈ¯ÇÏ´Â ¸®ÅÏ°ªÀÌ ÀÖ´Â ¸Þ¼­µå
+	//ì¸ìžì „ë‹¬ ë°©ì‹: ë°˜í™˜í•˜ëŠ” ë¦¬í„´ê°’ì´ ìžˆëŠ” ë©”ì„œë“œ
 	public int add(int a, int b){
 		return a+b;
 	}
 	
-	//¹ÝÈ¯ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø´Â ¸Þ¼­µå
+	//ë°˜í™˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ëŠ” ë©”ì„œë“œ
 	public void print(){
-		System.out.println("¹ÝÈ¯ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾ø´Â ¸Þ¼­µå");
+		System.out.println("ë°˜í™˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ëŠ” ë©”ì„œë“œ");
 		
-		//¹ÝÈ¯ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾øÀ» °æ¿ì ÀÏ¹ÝÀûÀ¸·Î »ý·«
+		//ë°˜í™˜í•˜ëŠ” ë°ì´í„°ê°€ ì—†ì„ ê²½ìš° ì¼ë°˜ì ìœ¼ë¡œ ìƒëžµ
 		return;	
 	}
 	
@@ -23,10 +23,10 @@ public class MethodEx01 {
 		
 		MethodEx01 m = new MethodEx01();
 	
-		//¸®ÅÏ°ªÀÌ ÀÖ´Â ¸Þ¼Òµå È£Ãâ
+		//ë¦¬í„´ê°’ì´ ìžˆëŠ” ë©”ì†Œë“œ í˜¸ì¶œ
 		System.out.println(m.add(10, 20));
 		
-		//¸®ÅÏ°ªÀÌ ¾ø´Â ¸Þ¼Òµå È£Ãâ
+		//ë¦¬í„´ê°’ì´ ì—†ëŠ” ë©”ì†Œë“œ í˜¸ì¶œ
 		m.print();
 	}
 }

@@ -1,6 +1,6 @@
 /*
-do ~ while¹®, 
-do~while°ú while½ÇÇà°á°ú Â÷ÀÌÈ®ÀÎÇÏ±â
+do ~ whileë¬¸, 
+do~whileê³¼ whileì‹¤í–‰ê²°ê³¼ ì°¨ì´í™•ì¸í•˜ê¸°
 */
 public class DoWhileEx01 {
 
@@ -12,17 +12,17 @@ public class DoWhileEx01 {
 		
 		String msg = "Java World!";
 		
-		//do~while¹®
-		System.out.println("===do~ while ½ÇÇà°á°ú ===");
+		//do~whileë¬¸
+		System.out.println("===do~ while ì‹¤í–‰ê²°ê³¼ ===");
 		do{
 			
 			System.out.println(nu1 + " : " + msg);
 			nu1 ++;
 		}while(su++ < 5);
 		
-		//while¹®
+		//whileë¬¸
 		System.out.println("");
-		System.out.println("=== while ½ÇÇà°á°ú===");		
+		System.out.println("=== while ì‹¤í–‰ê²°ê³¼===");		
 		su = 0;
 		while(su++ < 5 ){
 			System.out.println(msg);

@@ -1,6 +1,6 @@
 /*
-ÀÚ·áÇü º¯È¯
-ÀÚ·áÇüÀÇ º¯È¯Àº Ç¥Çö¹æ¹ıÀÇ º¯È¯À» ÀÇ¹ÌÇÕ´Ï´Ù.
+ìë£Œí˜• ë³€í™˜
+ìë£Œí˜•ì˜ ë³€í™˜ì€ í‘œí˜„ë°©ë²•ì˜ ë³€í™˜ì„ ì˜ë¯¸í•©ë‹ˆë‹¤.
 */
 public class CastEx02 {
 
@@ -9,7 +9,7 @@ public class CastEx02 {
 		short num1=10;
 		short num2=20;
 		short result=(short)(num1 + num2);
-		//short to int -> ¿¬»ê -> int to short (³»ºÎÀûÀ¸·Î ÀÚµ¿À¸·Î ÀÏ¾î³²)
+		//short to int -> ì—°ì‚° -> int to short (ë‚´ë¶€ì ìœ¼ë¡œ ìë™ìœ¼ë¡œ ì¼ì–´ë‚¨)
 		
 		System.out.println(result);
 	}

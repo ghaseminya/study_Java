@@ -1,41 +1,41 @@
-/* °´Ã¼ »ı¼º
+/* ê°ì²´ ìƒì„±
  * 
  */
 
 
 public class Student1 {	
 	
-	//¸â¹ö º¯¼ö
+	//ë©¤ë²„ ë³€ìˆ˜
 	String name;
 	int age;
 	
-	//µğº¼Æ® »ı¼ºÀÚ(»ı·«°¡´É): ÄÄÆÄÀÏ·¯°¡ ÀÚµ¿À¸·Î Ã³¸®ÇÔ
+	//ë””ë³¼íŠ¸ ìƒì„±ì(ìƒëµê°€ëŠ¥): ì»´íŒŒì¼ëŸ¬ê°€ ìë™ìœ¼ë¡œ ì²˜ë¦¬í•¨
 	//public Student(){}	
 
 	public static void main(String[] args) {
 		
-		//°´Ã¼ ¼±¾ğ ¹× »ı¼º
+		//ê°ì²´ ì„ ì–¸ ë° ìƒì„±
 		Student1 student1 = new Student1();		
 		System.out.println(student1);
 		
-		//°´Ã¼°¡ »ı¼º¾ÈµÈ °æ¿ì null/0ÀÎ ±âº»°ªÀÌ Ãú·ÂµË´Ï´Ù. 
+		//ê°ì²´ê°€ ìƒì„±ì•ˆëœ ê²½ìš° null/0ì¸ ê¸°ë³¸ê°’ì´ ì¸¨ë ¥ë©ë‹ˆë‹¤. 
 		System.out.println(student1.name);
 		System.out.println(student1.age);
 		
 		System.out.println();
-		//°´Ã¼ÀÇ ¸â¹öº¯¼ö¿¡ ¿øÇÏ´Â °ªÀ» ¼³Á¤ÇÑ ÈÄ Ãâ·ÂÇÕ´Ï´Ù.
-		student1.name ="È«±æµ¿";
+		//ê°ì²´ì˜ ë©¤ë²„ë³€ìˆ˜ì— ì›í•˜ëŠ” ê°’ì„ ì„¤ì •í•œ í›„ ì¶œë ¥í•©ë‹ˆë‹¤.
+		student1.name ="í™ê¸¸ë™";
 		student1.age = 400;
 		System.out.println(student1.name);
 		System.out.println(student1.age);
 		
-		//µ¿ÀÏÇÑ Å¬·¡½º·Î ¶Ç´Ù¸¥ °´Ã¼ Ãß°¡ »ı¼º
+		//ë™ì¼í•œ í´ë˜ìŠ¤ë¡œ ë˜ë‹¤ë¥¸ ê°ì²´ ì¶”ê°€ ìƒì„±
 		System.out.println();
 		Student1 newstudent = new Student1();
 		System.out.println(newstudent);
 		
-		//°´Ã¼ÀÇ ¸â¹öº¯¼ö¿¡ ¿øÇÏ´Â °ªÀ¸·Î ¼³Á¤
-		newstudent.name = "±è¿¬¾Æ";
+		//ê°ì²´ì˜ ë©¤ë²„ë³€ìˆ˜ì— ì›í•˜ëŠ” ê°’ìœ¼ë¡œ ì„¤ì •
+		newstudent.name = "ê¹€ì—°ì•„";
 		newstudent.age = 18;
 		System.out.println(newstudent.name);
 		System.out.println(newstudent.age);

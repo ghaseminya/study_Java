@@ -1,9 +1,9 @@
 /*
-½ÃÇÁÆ® ¿¬»êÀÚ È®ÀÎ
+ì‹œí”„íŠ¸ ì—°ì‚°ìž í™•ì¸
 */
 public class OperatorEx11 {
 	public static void main(String[] args){
-		System.out.println("=========½ÃÇÁÆ® ¿¬»êÀÚ=========");
+		System.out.println("=========ì‹œí”„íŠ¸ ì—°ì‚°ìž=========");
 		System.out.println("");
 		
 		byte a = 12;
@@ -30,8 +30,6 @@ public class OperatorEx11 {
 		System.out.println("a : " + a);
 		byte f = (byte)(a >> 2);
 		System.out.println("a >> 2: " + f);
-		
-
 		
 	}
 }

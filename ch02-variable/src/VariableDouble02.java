@@ -1,11 +1,14 @@
+/*
+ì‹¤ìˆ˜ ì„ ì–¸ ë° ë©”ëª¨ë¦¬ ì €ì¥ ë° ì°¸ì¡° ë„ì‹ë„ ì˜ˆì œ
 
+*/
 public class VariableDouble02 {
 
 	public static void main(String[] args) {
 
-		//½Ç¼öÇü º¯¼ö ¼±¾ğ
+		//ì‹¤ìˆ˜í˜• ë³€ìˆ˜ ì„ ì–¸
 		double num1;
-		//º¯¼ö ÃÊ±âÈ­
+		//ë³€ìˆ˜ ì´ˆê¸°í™”
 		num1=11.0000001;
 		System.out.println(num1);
 	}

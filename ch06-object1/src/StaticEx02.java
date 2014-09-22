@@ -1,10 +1,10 @@
-/* ÀÎ½ºÅÏ½º º¯¼ö¿Í Staticº¯¼ö
+/* ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ì™€ Staticë³€ìˆ˜
  * 
  * */
 
 public class StaticEx02 {
 	
-	String s1 = "ÀÎ½ºÅÏ½º º¯¼ö";
+	String s1 = "ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜";
 	static String s2 ="STATIC";
 	
 	public static String getString(){
@@ -14,20 +14,19 @@ public class StaticEx02 {
 	public static void main(String[] args) {		
 		
 		/*Exception in thread "main" java.lang.Error: Unresolved compilation problem:	Cannot make a static reference to the non-static field s1
-		ÀÎ½ºÅÏ½º º¯¼ö´Â °´Ã¼ »ı¼º  È£Ãâ °¡´É*/
+		ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ëŠ” ê°ì²´ ìƒì„±  í˜¸ì¶œ ê°€ëŠ¥*/
 		//System.out.println(s1);
 		
-		//Static º¯¼ö È£Ãâ
+		//Static ë³€ìˆ˜ í˜¸ì¶œ
 		System.out.println(StaticEx02.s2);
 		System.out.println(s2);
 		
-		//Static ¸Ş¼Òµå È£Ãâ
+		//Static ë©”ì†Œë“œ í˜¸ì¶œ
 		System.out.println(StaticEx02.getString());
 		
 		StaticEx02 st = new StaticEx02();
 		System.out.println(st.s1);
 		
-
 	}
 
 }

@@ -1,6 +1,6 @@
-/* °´Ã¼ »ý¼º - ¸â¹ö ¸Þ¼Òµå È£Ãâ
+/* ê°ì²´ ìƒì„± - ë©¤ë²„ ë©”ì†Œë“œ í˜¸ì¶œ
  * 
- * ÀÔ·Â¹Þ¾Æ¼­ Ã³¸®ÇÏ±â
+ * ìž…ë ¥ë°›ì•„ì„œ ì²˜ë¦¬í•˜ê¸°
  * 
  */
 
@@ -11,17 +11,17 @@ public class Student3 {
 	int english;
 	int math;
 	
-	//ÃÑÁ¡
+	//ì´ì 
 	public int getSum(){
 		return korean + english + math;		
 	}
 	
-	//Æò±Õ
+	//í‰ê· 
 	public int getAvg(){
 		return getSum()/3;
 	}
 	
-	//Ãâ·Â
+	//ì¶œë ¥
 	public void gPrint(String str){
 		System.out.println(str);
 	}
@@ -33,24 +33,24 @@ public class Student3 {
 		
 		Student3 nStu = new Student3();
 				
-		nStu.gPrint("±¹¾î Á¡¼ö¸¦ ÀÔ·Á°²¼¼¿ä > ");
+		nStu.gPrint("êµ­ì–´ ì ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” > ");
 		nStu.korean = input.nextInt();
 		
-		nStu.gPrint("¿µ¾î Á¡¼ö¸¦ ÀÔ·Á°²¼¼¿ä > ");
+		nStu.gPrint("ì˜ì–´ ì ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” > ");
 		nStu.english = input.nextInt();
 		
-		nStu.gPrint("¼öÇÐ Á¡¼ö¸¦ ÀÔ·Á°²¼¼¿ä > ");
+		nStu.gPrint("ìˆ˜í•™ ì ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” > ");
 		nStu.math = input.nextInt();
 		
 		System.out.println();
-		nStu.gPrint("±¹¾î Á¡¼ö: " + nStu.korean);
-		nStu.gPrint("¼öÇÐ Á¡¼ö: " + nStu.math);
-		nStu.gPrint("¿µ¾î Á¡¼ö: " + nStu.english);		
+		nStu.gPrint("êµ­ì–´ ì ìˆ˜: " + nStu.korean);
+		nStu.gPrint("ìˆ˜í•™ ì ìˆ˜: " + nStu.math);
+		nStu.gPrint("ì˜ì–´ ì ìˆ˜: " + nStu.english);		
 				
 		System.out.println();
-		nStu.gPrint("ÃÑÁ¡Àº > " + nStu.getSum()); 
+		nStu.gPrint("ì´ì ì€ > " + nStu.getSum()); 
 		
 		System.out.println();
-		nStu.gPrint("Æò±ÕÀº> " +nStu.getAvg());		
+		nStu.gPrint("í‰ê· ì€> " +nStu.getAvg());		
 	}
 }

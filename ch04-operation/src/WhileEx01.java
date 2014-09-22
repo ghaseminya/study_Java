@@ -1,26 +1,28 @@
-/* while¹® - ÈÄÇà/¼±Çà
- * */
+/*
+whileë¬¸ - í›„í–‰/ì„ í–‰
+
+*/
 
 public class WhileEx01 {
 
 	public static void main(String[] args) {
 		
-		int i = 10;	//ÃÊ±â½Ä
+		int i = 10;	//ì´ˆê¸°ì‹
 		
-		//ÈÄÇà
-		while( i >= 0){	//Á¶°Ç½Ä
-			System.out.println(i--);	//Áõ°¨½Ä			
+		//í›„í–‰
+		while( i >= 0){	//ì¡°ê±´ì‹
+			System.out.println(i--);	//ì¦ê°ì‹			
 		}		
-		System.out.println("ÈÄÇà ÈÄ  i : " + i);
+		System.out.println("í›„í–‰ í›„  i : " + i);
 		System.out.println();
 		
 		
-		//¼±Çà
+		//ì„ í–‰
 		int j = 10;		
-		while( j >= 0){	//Á¶°Ç½Ä
-			System.out.println(--j);	//Áõ°¨½Ä			
+		while( j >= 0){	//ì¡°ê±´ì‹
+			System.out.println(--j);	//ì¦ê°ì‹			
 		}		
-		System.out.println("¼±Çà ÈÄ  j : " + j);
+		System.out.println("ì„ í–‰ í›„  j : " + j);
 		System.out.println();
 	}
 }

@@ -1,5 +1,5 @@
 /*
-º¯¼ö ¼±¾ğ / º¯¼ö ÃÊ±âÈ­ / º¯¼ö »ç¿ë
+ë³€ìˆ˜ ì„ ì–¸ / ë³€ìˆ˜ ì´ˆê¸°í™” / ë³€ìˆ˜ ì‚¬ìš©
 */
 
 public class VariableEx01 {
@@ -7,22 +7,22 @@ public class VariableEx01 {
 	public static void main(String[] args){
 		
 		
-		int num;	//º¯¼ö ¼±¾ğ
-		num = 20;	//º¯¼ö ÃÊ±âÈ­(ÃÖÃÊ µ¥ÀÌÅÍ ÀÔ·Â)
-		System.out.println(num);	//Ãâ·Â
+		int num;	//ë³€ìˆ˜ ì„ ì–¸
+		num = 20;	//ë³€ìˆ˜ ì´ˆê¸°í™”(ìµœì´ˆ ë°ì´í„° ì…ë ¥)
+		System.out.println(num);	//ì¶œë ¥
 		
 		
 		
-		int number = 30;	//º¯¼ö ¼±¾ğ°ú ÃÊ±âÈ­
-		System.out.println(number);	//Ãâ·Â
+		int number = 30;	//ë³€ìˆ˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™”
+		System.out.println(number);	//ì¶œë ¥
 
 		
 		
-		//º¯¼ö ¼±¾ğ¸¸ ÇÏ°í ÃÊ±âÈ­ ÇÏÁö ¾ÊÀº °æ¿ì(Error)
-		int no;		//¼±¾ğ
+		//ë³€ìˆ˜ ì„ ì–¸ë§Œ í•˜ê³  ì´ˆê¸°í™” í•˜ì§€ ì•Šì€ ê²½ìš°(Error)
+		int no;		//ì„ ì–¸
 //		System.out.println(no);		
-		//¼±¾ğ¸¸ ÇÑ ÈÄ Ãâ·ÂÇÏ¸é ÄÄÆÄÀÏ ¿¡·¯³²(Error: The local variable no may not have been initialized)
-		//º¯¼ö ¼±¾ğ ÈÄ ÃÊ±âÈ­ÇÏÁö ¾ÊÀ¸¸é Ãâ·Â ¶Ç´Â ¿¬»ê ÇÒ ¼ö ¾øÀ½
+		//ì„ ì–¸ë§Œ í•œ í›„ ì¶œë ¥í•˜ë©´ ì»´íŒŒì¼ ì—ëŸ¬ë‚¨(Error: The local variable no may not have been initialized)
+		//ë³€ìˆ˜ ì„ ì–¸ í›„ ì´ˆê¸°í™”í•˜ì§€ ì•Šìœ¼ë©´ ì¶œë ¥ ë˜ëŠ” ì—°ì‚° í•  ìˆ˜ ì—†ìŒ
 	}
 
 }

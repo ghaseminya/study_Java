@@ -1,21 +1,21 @@
+/*
+ë‹¨ ìž…ë ¥ ë°›ì€ í›„ êµ¬êµ¬ë‹¨ ì¶œë ¥í•˜ê¸°
+*/
 
 public class ForEx04 {
 
 	public static void main(String[] args) {
-		// ´Ü ÀÔ·Â ¹ÞÀº ÈÄ ±¸±¸´Ü Ãâ·ÂÇÏ±â
 		
 		int dan;
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		System.out.print("´Ü ÀÔ·ÂÇÏ¼¼¿ä > ");
+		System.out.print("ë‹¨ ìž…ë ¥í•˜ì„¸ìš” > ");
 		dan = input.nextInt();
 		
-		System.out.print("== " + dan + "´Ü == \n");
+		System.out.print("== " + dan + "ë‹¨ == \n");
 		
 		for(int i=1; i<10; i++){
 			System.out.println(dan + "X" + i + " = " + (dan*i));			
 		}
-
 	}
-
 }

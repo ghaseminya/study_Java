@@ -1,16 +1,19 @@
+/*
+booleanìë£Œí˜• ì¶œë ¥
 
+*/
 public class VariableBoolean01 {
 
 	public static void main(String[] args) {
 		
-		//booleanÀÚ·áÇüÀº true/false¸¸ ÀúÀå°¡´É
+		//booleanìë£Œí˜•ì€ true/falseë§Œ ì €ì¥ê°€ëŠ¥
 		boolean b1=true;
 		boolean b2=false;
 		
 		System.out.println(b1);
 		System.out.println(b2);
 		
-		//¿¬»êÀÇ °á°ú¿¡ ÀÇÇÑ true/falseÃâ·Â
+		//ì—°ì‚°ì˜ ê²°ê³¼ì— ì˜í•œ true/falseì¶œë ¥
 		System.out.println(7<10);
 		System.out.println(7>10);
 

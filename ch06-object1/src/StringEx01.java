@@ -1,5 +1,6 @@
 /*
-StringÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º »ı¼º
+Stringí´ë˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+
 */
 
 public class StringEx01 {
@@ -9,9 +10,9 @@ public class StringEx01 {
 		java.lang.String str="String instance";
 		
 		int strLength1=str.length();
-		System.out.println("str ÀÎ½ºÅÏ½º ±æÀÌ: "+strLength1);
+		System.out.println("str ì¸ìŠ¤í„´ìŠ¤ ê¸¸ì´: "+strLength1);
 		
-		int strLength2="ÇÑ±ÛÀÇ ±æÀÌ´Â ¾î¶»°Ô?".length();
-		System.out.println("¹®ÀÚ¿­ÀÇ ±æÀÌ: "+strLength2);
+		int strLength2="í•œê¸€ì˜ ê¸¸ì´ëŠ” ì–´ë–»ê²Œ?".length();
+		System.out.println("ë¬¸ìì—´ì˜ ê¸¸ì´: "+strLength2);
 	}
 }

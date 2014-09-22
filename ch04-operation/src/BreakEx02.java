@@ -1,3 +1,7 @@
+/*
+break labelì„¤ì •
+- ë‹¤ì¤‘ ë°˜ë³µë¬¸ì—ì„œ breakí•  ë•Œ ëª¨ë“  ë°˜ë³µë¬¸ì„ ì™„ì „íˆ ë¹ ì ¸ë‚˜ê°€ê²Œ í•˜ë ¤ë©´ break labelë¬¸ì„ ì‚¬ìš©í•¨.
+*/
 
 public class BreakEx02 {
 	public static void main(String[] args){
@@ -6,25 +10,24 @@ public class BreakEx02 {
 			for(int j=0; j<5; j++){
 				
 				if(j==3)
-					//break°¡ Æ÷ÇÔµÈ 
+					//breakê°€ í¬í•¨ëœ 
 					break;
 					
 				System.out.println(i + " , " + j);
 			}
-				
 		}
 		
 		
 		System.out.println("=======================");
-//		´ÙÁß ¹İº¹¹®¿¡¼­ breakÇÒ ¶§ ¸ğµç ¹İº¹¹®À» ¿ÏÀüÈ÷ ºüÁ®³ª°¡°Ô ÇÏ·Á¸é break label¹®À» »ç¿ëÇÔ.
+//		ë‹¤ì¤‘ ë°˜ë³µë¬¸ì—ì„œ breakí•  ë•Œ ëª¨ë“  ë°˜ë³µë¬¸ì„ ì™„ì „íˆ ë¹ ì ¸ë‚˜ê°€ê²Œ í•˜ë ¤ë©´ break labelë¬¸ì„ ì‚¬ìš©í•¨.
 		
-		exit_for:	//break label¼³Á¤
+		exit_for:	//break labelì„¤ì •
 		for(int i=0; i<3; i++){
 			for(int j=0; j<5; j++){
 				
 				if(j==3)
-					//break°¡ Æ÷ÇÔµÈ 
-					break exit_for;	// break labelÈ£Ãâ 
+					//breakê°€ í¬í•¨ëœ 
+					break exit_for;	// break labelí˜¸ì¶œ 
 				
 					
 				System.out.println(i + " , " + j);
@@ -32,5 +35,4 @@ public class BreakEx02 {
 				
 		}
 	}
-
 }

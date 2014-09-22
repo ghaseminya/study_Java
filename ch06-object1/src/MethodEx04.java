@@ -1,17 +1,17 @@
-/* °¡º¯ÀÎÀÚ : Variable Arguements 
+/* ê°€ë³€ì¸ì : Variable Arguements 
  * */
 
 public class MethodEx04 {
 	
-	/*ÀÏ¹İÀûÀÎ ¸Ş¼­µå´Â  Å¸ÀÔ°ú ÀÎÀÚÀÇ °¹¼ö¸¦ ÀÏÄ¡½ÃÄÑ¾ß ÇÕ´Ï´Ù.*/
+	/*ì¼ë°˜ì ì¸ ë©”ì„œë“œëŠ”  íƒ€ì…ê³¼ ì¸ìì˜ ê°¯ìˆ˜ë¥¼ ì¼ì¹˜ì‹œì¼œì•¼ í•©ë‹ˆë‹¤.*/
 	public void getNum(int num){
-		System.out.println("Àü´ŞµÈ ¼ıÀÚ = " + num);		
+		System.out.println("ì „ë‹¬ëœ ìˆ«ì = " + num);		
 	}
 	
-	/*°¡º¯ÀÎÀÚ : Variable Arguements
-	JDK v5.0ÀÌ»óºÎÅÍ »ç¿ë°¡´É*/	
-	//Å¸ÀÔÀº ÀÏÁöÇÏ°í ÀÎÀÚÀÇ °¹¼ö°¡ °¡º¯Àû
-	public void argTest(int ... n){	//ÀÎÀÚÀü´ŞÇÏ¸é ¹è¿­À» ¸¸µçÈÄ ¹è¿­¿¡ ÀúÀåÇÏ°í ±× ÁÖ¼Ò°ªÀ» nÀ¸·Î ÀÔ·Â¹Ş´Â´Ù.
+	/*ê°€ë³€ì¸ì : Variable Arguements
+	JDK v5.0ì´ìƒë¶€í„° ì‚¬ìš©ê°€ëŠ¥*/	
+	//íƒ€ì…ì€ ì¼ì§€í•˜ê³  ì¸ìì˜ ê°¯ìˆ˜ê°€ ê°€ë³€ì 
+	public void argTest(int ... n){	//ì¸ìì „ë‹¬í•˜ë©´ ë°°ì—´ì„ ë§Œë“ í›„ ë°°ì—´ì— ì €ì¥í•˜ê³  ê·¸ ì£¼ì†Œê°’ì„ nìœ¼ë¡œ ì…ë ¥ë°›ëŠ”ë‹¤.
 		
 		for(int i=0; i<n.length; i++){
 			System.out.println("n[" + i+ "] :" + n[i]);			
@@ -25,15 +25,15 @@ public class MethodEx04 {
 		MethodEx04 m = new MethodEx04();
 		m.getNum(50);
 
-		//Àü´ŞµÇ´Â ÀÎÀÚÀÇ °¹¼ö ºÒÀÏÄ¡
+		//ì „ë‹¬ë˜ëŠ” ì¸ìì˜ ê°¯ìˆ˜ ë¶ˆì¼ì¹˜
 //		m.getNum(50, 60); //Error:The method getNum(int) in the type MethodTest04 is not applicable for the arguments (int, int)
 		
-		//Àü´ŞµÇ´Â ÀÎÀÚÀÇ Å¸ÀÔÀÌ ºÒÀÏÄ¡
+		//ì „ë‹¬ë˜ëŠ” ì¸ìì˜ íƒ€ì…ì´ ë¶ˆì¼ì¹˜
 //		m.getNum(5.6);	//ERROR: The method getNum(int) in the type MethodTest04 is not applicable for the arguments (double)
 		m.getNum( (int)5.6);
 		
 		System.out.println();
-		//°¡º¯ÀÎÀÚ¸¦ »ç¿ëÇÏ´Â ¸Ş¼­µå È£Ãâ
+		//ê°€ë³€ì¸ìë¥¼ ì‚¬ìš©í•˜ëŠ” ë©”ì„œë“œ í˜¸ì¶œ
 		m.argTest(50, 60, 70);
 		m.argTest(22, 33);
 		m.argTest(11);

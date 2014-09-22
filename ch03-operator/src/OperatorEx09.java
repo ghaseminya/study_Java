@@ -1,16 +1,18 @@
-
+/*
+ëŒ€ì…ì—°ì‚°ì, ë³µí•©ëŒ€ì… ì—°ì‚°ì
+*/
 public class OperatorEx09 {
 	
 	public static void main(String[] args){
 		
-		System.out.println("=======´ëÀÔ ¿¬»êÀÚ=========");
+		System.out.println("=======ëŒ€ì… ì—°ì‚°ì=========");
 		int a = 100;
 		int b = 3;		
 		System.out.println("a : " + a);	
 		System.out.println("b : " + b);
 		
 		
-		System.out.println("\n=======º¹ÇÕ´ëÀÔ ¿¬»êÀÚ======");
+		System.out.println("\n=======ë³µí•©ëŒ€ì… ì—°ì‚°ì======");
 		a += b;
 		System.out.println("a +=b : " + a);
 		System.out.println("a : " + a);	

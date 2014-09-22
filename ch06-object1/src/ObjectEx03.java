@@ -1,6 +1,6 @@
 /*
-ÀÎÀÚ°ªÀÌ ÀÖ´Â »ı¼ºÀÚ¸¦ ÅëÇÑ ÃÊ±âÈ­
--»ı¼ºÀÚ¸¦ ÅëÇÑ ¿øÇÏ´Â °ªÀ¸·Î ÃÊ±âÈ­
+ì¸ìê°’ì´ ìˆëŠ” ìƒì„±ìë¥¼ í†µí•œ ì´ˆê¸°í™”
+-ìƒì„±ìë¥¼ í†µí•œ ì›í•˜ëŠ” ê°’ìœ¼ë¡œ ì´ˆê¸°í™”
 */
 
 
@@ -8,19 +8,19 @@ public class ObjectEx03 {
 	
 	public static void main(String[] args)
 	{
-		//ÀÎ½ºÅÏ½º »ı¼º
+		//ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Number myNumber1=new Number(10);
-		//new Number	: ÀÎ½ºÅÏ½º »ı¼º ÀÇ¹Ì
-		//Number()		: ¸Å°³º¯¼ö10À» ÀÎÀÚ·Î Àü´ŞÇÏ¿© ÃÊ±âÈ­ÇÏ´Â »ı¼ºÀÚ¸¦ È£ÃâÇÏ¿© ÀÎ½ºÅÏ½º »ı¼º
+		//new Number	: ì¸ìŠ¤í„´ìŠ¤ ìƒì„± ì˜ë¯¸
+		//Number()		: ë§¤ê°œë³€ìˆ˜10ì„ ì¸ìë¡œ ì „ë‹¬í•˜ì—¬ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ìë¥¼ í˜¸ì¶œí•˜ì—¬ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Number myNumber2=new Number(20);
 		
-		System.out.println("myNumber1 ¸Ş¼Òµå È£Ãâ Àü °ª: "+myNumber1.getNumber());
+		System.out.println("myNumber1 ë©”ì†Œë“œ í˜¸ì¶œ ì „ ê°’: "+myNumber1.getNumber());
 		instMethod(myNumber1);
-		System.out.println("myNumber1 ¸Ş¼Òµå È£Ãâ ÈÄ °ª: "+myNumber1.getNumber());	
+		System.out.println("myNumber1 ë©”ì†Œë“œ í˜¸ì¶œ í›„ ê°’: "+myNumber1.getNumber());	
 		
-		System.out.println("myNumber2 ¸Ş¼Òµå È£Ãâ Àü °ª: "+myNumber2.getNumber());
+		System.out.println("myNumber2 ë©”ì†Œë“œ í˜¸ì¶œ ì „ ê°’: "+myNumber2.getNumber());
 		instMethod(myNumber2);
-		System.out.println("myNumber2 ¸Ş¼Òµå È£Ãâ ÈÄ °ª: "+myNumber2.getNumber());
+		System.out.println("myNumber2 ë©”ì†Œë“œ í˜¸ì¶œ í›„ ê°’: "+myNumber2.getNumber());
 	}
 
 	public static void instMethod(Number number)
@@ -30,21 +30,21 @@ public class ObjectEx03 {
 	
 }
 
-//Å¬·¡½º Á¤ÀÇ(¼³°è)
+//í´ë˜ìŠ¤ ì •ì˜(ì„¤ê³„)
 class Number
 {
-	//¸â¹öº¯¼ö = ÀÎ½ºÅÏ½º º¯¼ö
+	//ë©¤ë²„ë³€ìˆ˜ = ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜
 	int num;
 	
-	//ÀÎÀÚ°ªÀÌ ÀÖ´Â »ı¼ºÀÚ Á¤ÀÇ
+	//ì¸ìê°’ì´ ìˆëŠ” ìƒì„±ì ì •ì˜
 	public Number(int number)
 	{
 		num=number;
-		System.out.println("»ı¼ºÀÚ È£ÃâµÊ!");
-		System.out.println("Àü´ŞµÈ ÀÎÀÚ°ª: "+number);
+		System.out.println("ìƒì„±ì í˜¸ì¶œë¨!");
+		System.out.println("ì „ë‹¬ëœ ì¸ìê°’: "+number);
 	}
 	
-	//¸â¹ö ¸Ş¼Òµå = ÀÎ½ºÅÏ½º ¸Ş¼Òµå
+	//ë©¤ë²„ ë©”ì†Œë“œ = ì¸ìŠ¤í„´ìŠ¤ ë©”ì†Œë“œ
 	public void addNum(int n)
 	{
 		num+=n;

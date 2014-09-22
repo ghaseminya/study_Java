@@ -1,15 +1,18 @@
+/*
+í˜• ë³€í™˜
+*/
 
 public class OperatorEx03 {
 	public static void main(String[] args){
 		
-		//Çü º¯È¯
+		//í˜• ë³€í™˜
 		
 		int a = 10;
 		float b = 10.0F;		
 		// int == float
 		if( a == b){	// int -> float (10 -> 10.0F)
 			
-			System.out.println("a¿Í b´Â °°´Ù.");
+			System.out.println("aì™€ bëŠ” ê°™ë‹¤.");
 			System.out.println("a : " + a);
 			System.out.println("b : " + b);
 		}
@@ -20,7 +23,7 @@ public class OperatorEx03 {
 		int d = 0;
 		//char != int
 		if(c != d){		//char -> int ('0' -> 48)
-			System.out.println("c¿Í d´Â °°Áö ¾Ê´Ù.");
+			System.out.println("cì™€ dëŠ” ê°™ì§€ ì•Šë‹¤.");
 			System.out.println("c : " + c);
 			System.out.println("d : " + d);			
 		}
@@ -31,7 +34,7 @@ public class OperatorEx03 {
 		char e = 'A'; 
 		int f= 65;
 		if( e == f){	//char -> int ('A' -> 65)
-			System.out.println("e¿Í d´Â °°´Ù.");
+			System.out.println("eì™€ dëŠ” ê°™ë‹¤.");
 			System.out.println("e : " + e);
 			System.out.println("f : " + f);
 		}

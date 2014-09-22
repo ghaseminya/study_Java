@@ -1,36 +1,38 @@
+/*
+ë¹„êµì¸ìê°’ ê°ì†Œ/2ì”© ì¦ê°€ì‹œí‚¤ê¸°
+*/
 
 public class ForEx02 {
 
 	public static void main(String[] args) {
-		// ºñ±³ÀÎÀÚ°ª °¨¼Ò/2¾¿ Áõ°¡½ÃÅ°±â
 		
-		// ºñ±³ÀÎÀÚ°ª °¨¼Ò
-		System.out.println("ºñ±³ ÀÎÀÚ°ª 1¾¿ °¨¼Ò ½ÃÅ°±â:");
+		// ë¹„êµì¸ìê°’ ê°ì†Œ
+		System.out.println("ë¹„êµ ì¸ìê°’ 1ì”© ê°ì†Œ ì‹œí‚¤ê¸°:");
 		for(int i=5; i>=1; i--){
 			System.out.print("\t"+ i);
 		}
 		System.out.println();
-		System.out.println("\tÇÁ·Î±×·¥ Á¾·á!");
+		System.out.println("\tí”„ë¡œê·¸ë¨ ì¢…ë£Œ!");
 		
-		// ºñ±³ÀÎÀÚ°ª 2¾¿ Áõ°¡½ÃÅ°±â
+		// ë¹„êµì¸ìê°’ 2ì”© ì¦ê°€ì‹œí‚¤ê¸°
 		System.out.println();
-		System.out.println("ºñ±³ ÀÎÀÚ°ª 2¾¿ Áõ°¡½ÃÅ°±â 1:");
+		System.out.println("ë¹„êµ ì¸ìê°’ 2ì”© ì¦ê°€ì‹œí‚¤ê¸° 1:");
 		for(int i=0; i<=10; i+=2){
 			System.out.print("\t"+ i);					
 		}
 		System.out.println();
-		System.out.println("\tÇÁ·Î±×·¥ Á¾·á!");
+		System.out.println("\tí”„ë¡œê·¸ë¨ ì¢…ë£Œ!");
 		
 		
 		System.out.println();
-		System.out.println("ºñ±³ ÀÎÀÚ°ª 2¾¿ Áõ°¡½ÃÅ°±â 2:");
+		System.out.println("ë¹„êµ ì¸ìê°’ 2ì”© ì¦ê°€ì‹œí‚¤ê¸° 2:");
 		for(int i=0; i<=10; i++){
 			if(i%2 == 0){
 				System.out.print("\t"+ i);
 				}					
 		}
 		System.out.println();
-		System.out.println("\tÇÁ·Î±×·¥ Á¾·á!");
+		System.out.println("\tí”„ë¡œê·¸ë¨ ì¢…ë£Œ!");
 
 	}
 }

@@ -1,11 +1,14 @@
+/*
+ë‹¤ì¤‘ forë¬¸ ì´ìš© êµ¬êµ¬ë‹¨ ì§œê¸°
+(ì£¼ì˜) ë¬´í•œ ë£¨í”„ 
+*/
 
 public class ForEx05 {
 
 	public static void main(String[] args) {
-		// ´ÙÁß for¹® ÀÌ¿ë ±¸±¸´Ü Â¥±â
 		
 		for( int dan = 1; dan <10; dan ++){			
-			System.out.print(dan + "´Ü:  ");
+			System.out.print(dan + "ë‹¨:  ");
 			for( int i = 1; i<10; i++){
 				System.out.print(dan + " x " + i + " = " + (dan * i) + "\t");
 			}
@@ -13,9 +16,9 @@ public class ForEx05 {
 		}
 		
 		
-		//(ÁÖÀÇ) ¹«ÇÑ ·çÇÁ 
+		//(ì£¼ì˜) ë¬´í•œ ë£¨í”„ 
 		/*for( int dan = 1; 1 <10; dan ++){			
-			System.out.print(dan + "´Ü:  ");
+			System.out.print(dan + "ë‹¨:  ");
 			for( int i = 1; i<10; i++){
 				System.out.print(dan + " x " + i + " = " + (dan * i) + "\t");
 			}

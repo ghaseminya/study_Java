@@ -1,5 +1,5 @@
 /*
-ÂüÁ¶º¯¼ö¿Í ÂüÁ¶ ¸Ş¼ÒµåÀÇ °ü°è È®ÀÎ
+ì°¸ì¡°ë³€ìˆ˜ì™€ ì°¸ì¡° ë©”ì†Œë“œì˜ ê´€ê³„ í™•ì¸
 
 */
 
@@ -8,13 +8,13 @@ public class ObjectEx01 {
 	
 	public static void main(String[] args)
 	{
-		//ÀÎ½ºÅÏ½º »ı¼º
+		//ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		Number myNumber=new Number();
-		System.out.println("¸Ş¼Òµå È£Ãâ Àü °ª: "+myNumber.getNumber());
+		System.out.println("ë©”ì†Œë“œ í˜¸ì¶œ ì „ ê°’: "+myNumber.getNumber());
 		
-		//ÀÎ½ºÅÏ½º ÂüÁ¶°ªÀ» ¸Ş¼ÒµåÀÇ ¸Å°³º¯¼ö·Î Àü´Ş
+		//ì¸ìŠ¤í„´ìŠ¤ ì°¸ì¡°ê°’ì„ ë©”ì†Œë“œì˜ ë§¤ê°œë³€ìˆ˜ë¡œ ì „ë‹¬
 		instMethod(myNumber);
-		System.out.println("¸Ş¼Òµå È£Ãâ ÈÄ °ª: "+myNumber.getNumber());	
+		System.out.println("ë©”ì†Œë“œ í˜¸ì¶œ í›„ ê°’: "+myNumber.getNumber());	
 	}
 
 	public static void instMethod(Number number)
@@ -24,13 +24,13 @@ public class ObjectEx01 {
 	
 }
 
-//Å¬·¡½º Á¤ÀÇ(¼³°è)
+//í´ë˜ìŠ¤ ì •ì˜(ì„¤ê³„)
 class Number
 {
-	//¸â¹öº¯¼ö = ÀÎ½ºÅÏ½º º¯¼ö
+	//ë©¤ë²„ë³€ìˆ˜ = ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜
 	int num=0;
 	
-	//¸â¹ö ¸Ş¼Òµå = ÀÎ½ºÅÏ½º ¸Ş¼Òµå
+	//ë©¤ë²„ ë©”ì†Œë“œ = ì¸ìŠ¤í„´ìŠ¤ ë©”ì†Œë“œ
 	public void addNum(int n)
 	{
 		num+=n;

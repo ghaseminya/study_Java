@@ -1,5 +1,5 @@
 /*
-°´Ã¼ ÀÌÇØ
+ê°ì²´ ì´í•´
 */
 
 /*
@@ -7,16 +7,16 @@ public class AppleMarket01 {
 
 	public static void main(String[] args) {
 		
-		//ÂüÁ¶º¯¼öÀÇ ¼±¾ğ = ÀÎ½ºÅÏ½º »ı¼º
+		//ì°¸ì¡°ë³€ìˆ˜ì˜ ì„ ì–¸ = ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		AppleSeller seller = new AppleSeller();
 		AppleBuyer buyer = new AppleBuyer();
-		//¸Ş¼Òµå È£Ãâ	: ¸Ş¼Òµå È£ÃâÀ» ÅëÇØ ¸Ş½ÃÁö Àü´ŞÇÏ´Â °ÍÀ» ÀÇ¹Ì, ¸Ş¼Òµå Àü´ŞÀº µÎ °´Ã¼°£ÀÇ ´ëÈ­¹æ¹ıÀÔ´Ï´Ù.
-		buyer.buyApple(seller, 2000);	//»çÀÚ ÆÇ¸ÅÀÚ¿¡°Ô 2,000¿ø¾îÄ¡ »ç°ú ±¸¸Å ¿äÃ»
+		//ë©”ì†Œë“œ í˜¸ì¶œ	: ë©”ì†Œë“œ í˜¸ì¶œì„ í†µí•´ ë©”ì‹œì§€ ì „ë‹¬í•˜ëŠ” ê²ƒì„ ì˜ë¯¸, ë©”ì†Œë“œ ì „ë‹¬ì€ ë‘ ê°ì²´ê°„ì˜ ëŒ€í™”ë°©ë²•ì…ë‹ˆë‹¤.
+		buyer.buyApple(seller, 2000);	//ì‚¬ì íŒë§¤ìì—ê²Œ 2,000ì›ì–´ì¹˜ ì‚¬ê³¼ êµ¬ë§¤ ìš”ì²­
 		
-		System.out.println("»ç°ú ÆÇ¸ÅÀÚÀÇ ÇöÀç »óÅÂ");
+		System.out.println("ì‚¬ê³¼ íŒë§¤ìì˜ í˜„ì¬ ìƒíƒœ");
 		seller.showSaleResult();
 		
-		System.out.println("»ç°ú ±¸¸ÅÀÚÀÇ ÇöÀç »óÅÂ");
+		System.out.println("ì‚¬ê³¼ êµ¬ë§¤ìì˜ í˜„ì¬ ìƒíƒœ");
 		buyer.showBuyResult();
 	}
 
@@ -26,7 +26,7 @@ class AppleSeller{
 	
 	int numOfApple=30;
 	int myMoney=0;
-	//final		: º¯¼ö -> »ó¼öÈ­
+	//final		: ë³€ìˆ˜ -> ìƒìˆ˜í™”
 	final int APPLE_PRICE=1000;
 	
 	public int saleApple(int money)
@@ -38,16 +38,16 @@ class AppleSeller{
 	}
 	public void showSaleResult()
 	{
-		System.out.println("º¸À¯ »ç°ú: " + numOfApple);
-		System.out.println("ÆÇ¸Å ¼öÀÍ: " + myMoney);
+		System.out.println("ë³´ìœ  ì‚¬ê³¼: " + numOfApple);
+		System.out.println("íŒë§¤ ìˆ˜ìµ: " + myMoney);
 	}
 }
 
 
 class AppleBuyer
 {
-	int myMoney=10000;	//º¸À¯ ±İ¾×
-	int numOfApple=0;	//º¸À¯ »ç°ú ¼ö
+	int myMoney=10000;	//ë³´ìœ  ê¸ˆì•¡
+	int numOfApple=0;	//ë³´ìœ  ì‚¬ê³¼ ìˆ˜
 	
 	public void buyApple(AppleSeller seller, int money)
 	{
@@ -56,8 +56,8 @@ class AppleBuyer
 	}
 	public void showBuyResult()
 	{
-		System.out.println("º¸À¯ ±İ¾×: " + myMoney);
-		System.out.println("»ç°ú °³¼ö: " + numOfApple);		
+		System.out.println("ë³´ìœ  ê¸ˆì•¡: " + myMoney);
+		System.out.println("ì‚¬ê³¼ ê°œìˆ˜: " + numOfApple);		
 	}
 }
 */

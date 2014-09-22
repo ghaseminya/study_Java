@@ -1,8 +1,11 @@
+/*
+ë¹„íŠ¸ ì—°ì‚°ì
+*/
 
 public class OperatorEx10 {
 	
 	public static void main(String[] args){
-		System.out.println("=========ºñÆ® ¿¬»êÀÚ=========");
+		System.out.println("=========ë¹„íŠ¸ ì—°ì‚°ì=========");
 		System.out.println("");
 		
 		byte a = 12;
@@ -13,9 +16,9 @@ public class OperatorEx10 {
 		// 128 64 32 16 8 4 2 1
 		// 0   0  0  1  0 1 0 0
 		
-		System.out.println("ºñÆ®´ÜÀ§ÀÇ  AND(&): ");
+		System.out.println("ë¹„íŠ¸ë‹¨ìœ„ì˜  AND(&): ");
 		/*
-		 °ª1	°ª2	°á°ú
+		 ê°’1	ê°’2	ê²°ê³¼
 		0	0	0
 		1	0	0
 		0	1	0
@@ -35,9 +38,9 @@ public class OperatorEx10 {
 
 		
 		System.out.println("");
-		System.out.println("ºñÆ®´ÜÀ§ÀÇ  OR(|): ");
+		System.out.println("ë¹„íŠ¸ë‹¨ìœ„ì˜  OR(|): ");
 		/*
-		 °ª1	°ª2	°á°ú
+		 ê°’1	ê°’2	ê²°ê³¼
 		0	0	0
 		1	0	1
 		0	1	1
@@ -57,9 +60,9 @@ public class OperatorEx10 {
 		
 
 		System.out.println("");
-		System.out.println("ºñÆ®´ÜÀ§ÀÇ  XOR(^): ");
+		System.out.println("ë¹„íŠ¸ë‹¨ìœ„ì˜  XOR(^): ");
 		/*
-		 °ª1	°ª2	°á°ú
+		 ê°’1	ê°’2	ê²°ê³¼
 		0	0	0
 		1	0	1
 		0	1	1

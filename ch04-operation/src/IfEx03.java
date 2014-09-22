@@ -1,15 +1,18 @@
+/*
+ì¡°ê±´ë¬¸ - ë‹¤ì¤‘ ifë¬¸ ( ì„±ì  ë“±ê¸‰ ì²˜ë¦¬)
+
+*/
 
 public class IfEx03 {
 
 	public static void main(String[] args) {
-		// Á¶°Ç¹® - ´ÙÁß if¹® ( ¼ºÀû µî±Þ Ã³¸®)
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int score;
 		char grade;
 		
-		System.out.print("¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä > ");
+		System.out.print("ì„±ì ì„ ìž…ë ¥í•˜ì„¸ìš” > ");
 		score = input.nextInt();
 		
 		if( score >= 90 && score <=100 ){
@@ -24,11 +27,11 @@ public class IfEx03 {
 			grade ='F';			
 		}else{
 			grade ='?';
-			System.out.println("¼ºÀûÀ» ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("ì„±ì ì„ ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”.");
 		}
 		
-		System.out.println("¼ºÀû : " + score);
-		System.out.println("µî±Þ: " + grade);
+		System.out.println("ì„±ì  : " + score);
+		System.out.println("ë“±ê¸‰: " + grade);
 
 	}
 }

@@ -1,6 +1,8 @@
 /*
-Áõ°¨ ¿¬»êÀÚ
+ì¦ê° ì—°ì‚°ìž ì„ í–‰/í›„í–‰ ì‹¤í–‰í›„ ê²°ê³¼ê°’ í™•ì¸
+
 */
+
 public class OperatorEx15 {
 
 	public static void main(String[] args) {
@@ -27,8 +29,8 @@ public class OperatorEx15 {
 		int result4 =0;
 		result4= n4--;
 		System.out.println("n-- : " + result3);
-		//Áõ°¨¿¬»êÀÚ ÈÄÇà¿¡¼­´Â Áõ°¡/°¨¼Ò°ªÀÌ ÇØ´ç ¿¬»ê ¼öÇà¹®¿¡¼­´Â Àû¿ëÀÌ µÇÁö ¾Ê°í
-		//´ÙÀ½ ¹®Àå ºÎÅÍ Àû¿ëÀÌ µÇ°Ô µË´Ï´Ù.
+		//ì¦ê°ì—°ì‚°ìž í›„í–‰ì—ì„œëŠ” ì¦ê°€/ê°ì†Œê°’ì´ í•´ë‹¹ ì—°ì‚° ìˆ˜í–‰ë¬¸ì—ì„œëŠ” ì ìš©ì´ ë˜ì§€ ì•Šê³ 
+		//ë‹¤ìŒ ë¬¸ìž¥ ë¶€í„° ì ìš©ì´ ë˜ê²Œ ë©ë‹ˆë‹¤.
 		
 	}
 }

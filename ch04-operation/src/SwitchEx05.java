@@ -1,5 +1,5 @@
 /*
-switch~case¹®°ú switch~case~ default·¹ÀÌºí À¯¹« µû¸¥ Ãâ·Â°á°ú È®ÀÎ
+switch~caseë¬¸ê³¼ switch~case~ defaultë ˆì´ë¸” ìœ ë¬´ ë”°ë¥¸ ì¶œë ¥ê²°ê³¼ í™•ì¸
 */
 public class SwitchEx05 {
 

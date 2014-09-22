@@ -1,5 +1,5 @@
 /*
-doubleÇü º¯¼öÀÇ ¼±¾ğ°ú È°¿ë
+doubleí˜• ë³€ìˆ˜ì˜ ì„ ì–¸ê³¼ í™œìš©
 
 */
 
@@ -7,12 +7,12 @@ public class VariableDouble01 {
 
 	public static void main(String[] args)
 	{
-		//µ¿ÀÏÇÑ ÀÚ·áÇüÀ¸·Î µÎ°³ÀÌ»óÀÇ º¯¼ö ¼±¾ğ
+		//ë™ì¼í•œ ìë£Œí˜•ìœ¼ë¡œ ë‘ê°œì´ìƒì˜ ë³€ìˆ˜ ì„ ì–¸
 		double num1, num2, result;
-		//º¯¼ö ÃÊ±âÈ­
+		//ë³€ìˆ˜ ì´ˆê¸°í™”
 		num1=11.0000001;
 		num2=22.0000002;
-		//¿¬»ê ¼öÇàÈÄ °á°ú ÀúÀå
+		//ì—°ì‚° ìˆ˜í–‰í›„ ê²°ê³¼ ì €ì¥
 		result=num1+num2;
 		
 		System.out.println(result);

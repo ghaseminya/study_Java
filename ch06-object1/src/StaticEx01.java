@@ -1,4 +1,4 @@
-/* Static º¯¼ö
+/* Static ë³€ìˆ˜
  * 
  * StaticCount.java
  * StaticEx01.java

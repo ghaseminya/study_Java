@@ -1,3 +1,7 @@
+/*
+ì€ë‹‰í™”, ìº¡ìŠí™”(í´ë˜ìŠ¤ ë¶„ë¦¬)
+*/
+
 class Capsule{
 	private int a;
 	
@@ -6,7 +10,7 @@ class Capsule{
 		if( n >= 0){
 			a = n;
 		}else{
-			System.out.println("À½¼ö´Â Çã¿ëµÇÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ìŒìˆ˜ëŠ” í—ˆìš©ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}			
 	}
 	
@@ -31,7 +35,7 @@ public class CapsuleMain {
 	public static void main(String[] args) {
 		/*CapsuleMain csm = new CapsuleMain();
 		
-		//°°Àº Å¬·¡½º¿¡¼­´Â È£Ãâ°¡´ÉÇÕ´Ï´Ù.
+		//ê°™ì€ í´ë˜ìŠ¤ì—ì„œëŠ” í˜¸ì¶œê°€ëŠ¥í•©ë‹ˆë‹¤.
 		csm.a = 10;
 		System.out.println(csm.a);
 		
@@ -39,11 +43,11 @@ public class CapsuleMain {
 		System.out.println(csm.a);*/
 		
 		
-		//Àº´ĞÈ­µÈ Å¬·¡½º Á¢±Ù
+		//ì€ë‹‰í™”ëœ í´ë˜ìŠ¤ ì ‘ê·¼
 		Capsule cs = new Capsule();
 		
 		/*ERROR: The field Capsule.a is not visible
-		Á¢±ÙÁöÁ¤ÀÚ°¡ privateÀÌ¸é °°Àº Å¬·¡½º¿¡¼­¸¸ È£Ãâ °¡´É(Àº´ĞÈ­)*/
+		ì ‘ê·¼ì§€ì •ìê°€ privateì´ë©´ ê°™ì€ í´ë˜ìŠ¤ì—ì„œë§Œ í˜¸ì¶œ ê°€ëŠ¥(ì€ë‹‰í™”)*/
 		/*cs.a = 10;
 		System.out.println(cs.a);*/
 		cs.setA(100);		
