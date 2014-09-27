@@ -2,44 +2,44 @@
 public class ArrayEx01 {
 
 	public static void main(String[] args) {
-		// ¹è¿­ ¼±¾ð ´Ü°è: ¹è¿­ ¼±¾ð/¹è¿­ »ý¼º/¹è¿­ ÃÊ±âÈ­/¹è¿­ Ãâ·Â
-		// ¹è¿­¼±¾ð ¹æ¹ý 1 2 3
+		// ë°°ì—´ ì„ ì–¸ ë‹¨ê³„: ë°°ì—´ ì„ ì–¸/ë°°ì—´ ìƒì„±/ë°°ì—´ ì´ˆê¸°í™”/ë°°ì—´ ì¶œë ¥
+		// ë°°ì—´ì„ ì–¸ ë°©ë²• 1 2 3
 		
-		//¹è¿­ ¼±¾ð
+		//ë°°ì—´ ì„ ì–¸
 		char[] ch;
 		
-		//¹è¿­ »ý¼º
+		//ë°°ì—´ ìƒì„±
 		ch = new char[4];
 		
-//		¹è¿­ ÃÊ±âÈ­
+//		ë°°ì—´ ì´ˆê¸°í™”
 		ch[0]='J';
 		ch[1]='A';
 		ch[2]='V';
 		ch[3]='A';
 		
-		//¹è¿­¸í Ãâ·Â : char¹è¿­ÀÏ¶§¸¸ ÂüÁ¶°ªÀÌ ¾Æ´Ñ ¹è¿­°ªÀ» º¸¿©ÁØ´Ù. (ÂüÁ¶°ªÀ» ¹è¿­°ªÀ¸·Î ÇÑ¹ø ´õ °¡°øÇØ¼­ º¸¿©ÁØ´Ù)
+		//ë°°ì—´ëª… ì¶œë ¥ : charë°°ì—´ì¼ë•Œë§Œ ì°¸ì¡°ê°’ì´ ì•„ë‹Œ ë°°ì—´ê°’ì„ ë³´ì—¬ì¤€ë‹¤. (ì°¸ì¡°ê°’ì„ ë°°ì—´ê°’ìœ¼ë¡œ í•œë²ˆ ë” ê°€ê³µí•´ì„œ ë³´ì—¬ì¤€ë‹¤)
 		System.out.println(ch);
 		
-		//¹è¿­ÀÇ index 0À» °³º° È£Ãâ
+		//ë°°ì—´ì˜ index 0ì„ ê°œë³„ í˜¸ì¶œ
 		System.out.println(ch[0]);
 		
-		//¹Ýº¹¹®À» ÀÌ¿ëÇØ¼­ ¹è¿­ÀÇ ³»¿ë Ãâ·Â
+		//ë°˜ë³µë¬¸ì„ ì´ìš©í•´ì„œ ë°°ì—´ì˜ ë‚´ìš© ì¶œë ¥
 		System.out.println();
 		for(int i=0; i < ch.length; i++ ){
 			
-			System.out.print("¹è¿­ " + i + "¹øÂ° µ¥ÀÌÅ¸: ");
+			System.out.print("ë°°ì—´ " + i + "ë²ˆì§¸ ë°ì´íƒ€: ");
 			System.out.println(ch[i]);			
 		}
 		
 		
-		//¹è¿­¼±¾ð ¹æ¹ý 1: ¹è¿­ ¼±¾ð ¹× »ý¼º
+		//ë°°ì—´ì„ ì–¸ ë°©ë²• 1: ë°°ì—´ ì„ ì–¸ ë° ìƒì„±
 		int i[] = new int[7];
 		
-		//¹è¿­¼±¾ð ¹æ¹ý 2: ¹è¿­ ¼±¾ð ¹× »ý¼º, ÃÊ±âÈ­ (¸í½ÃÀû ¹è¿­ »ý¼º)  
+		//ë°°ì—´ì„ ì–¸ ë°©ë²• 2: ë°°ì—´ ì„ ì–¸ ë° ìƒì„±, ì´ˆê¸°í™” (ëª…ì‹œì  ë°°ì—´ ìƒì„±)  
 		char[] ch2 = new char[]{'H','E','L','L', 'O'};
 		
-		//¹è¿­¼±¾ð ¹æ¹ý 3: ¹è¿­ ¼±¾ð ¹× »ý¼º, ÃÊ±âÈ­ (¾Ï½ÃÀû ¹è¿­ »ý¼º)
-		char[] ch3 = {'ÀÚ', '¹Ù'};
+		//ë°°ì—´ì„ ì–¸ ë°©ë²• 3: ë°°ì—´ ì„ ì–¸ ë° ìƒì„±, ì´ˆê¸°í™” (ì•”ì‹œì  ë°°ì—´ ìƒì„±)
+		char[] ch3 = {'ìž', 'ë°”'};
 		
 	}
 }

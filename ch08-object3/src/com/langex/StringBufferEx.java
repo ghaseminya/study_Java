@@ -1,11 +1,11 @@
 /* StringBuffer
  * 
- * °´Ã¼ »ı¼º
- * Æ¯Á¤ ÀÎµ¦½º¿¡ ¹®ÀÚ »ğÀÔ
- * ¹®ÀÚ¿­ ³¡¿¡ ¹®ÀÚ¿­ ºÙÀÌ±â
- * ¹®ÀÚ¿­ ´ëÃ¼
- * ¹®ÀÚ¿­ »èÁ¦
- * ¹®ÀÚ¿­ º¯°æ¿Ï·áÈÄ ½ºÆ®¸µÀ¸·Î ÀúÀåÇÏ±â
+ * ê°ì²´ ìƒì„±
+ * íŠ¹ì • ì¸ë±ìŠ¤ì— ë¬¸ì ì‚½ì…
+ * ë¬¸ìì—´ ëì— ë¬¸ìì—´ ë¶™ì´ê¸°
+ * ë¬¸ìì—´ ëŒ€ì²´
+ * ë¬¸ìì—´ ì‚­ì œ
+ * ë¬¸ìì—´ ë³€ê²½ì™„ë£Œí›„ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ì €ì¥í•˜ê¸°
  */
 
 package com.langex;
@@ -14,31 +14,31 @@ public class StringBufferEx {
 
 	public static void main(String[] args) {
 		//
-		StringBuffer sb = new StringBuffer("ÀÚ¹Ù Á¤¸» ½±´Ù!!");
-		//ÀÚ¹Ù   Á¤¸»   ½±´Ù! !
+		StringBuffer sb = new StringBuffer("ìë°” ì •ë§ ì‰½ë‹¤!!");
+		//ìë°”   ì •ë§   ì‰½ë‹¤! !
 		//0 1  2 3 4  5 6 7 8 9
 		System.out.println("1: " + sb);
 		
-		//Æ¯Á¤ ÀÎµ¦½º¿¡ ¹®ÀÚ »ğÀÔ
-		sb.insert(2, '´Â');
+		//íŠ¹ì • ì¸ë±ìŠ¤ì— ë¬¸ì ì‚½ì…
+		sb.insert(2, 'ëŠ”');
 		System.out.println("2: " +sb);
 		
-		//¹®ÀÚ¿­ ³¡¿¡ ¹®ÀÚ¿­ ºÙÀÌ±â
-		sb.append("¿À¶óÅ¬Àº");
+		//ë¬¸ìì—´ ëì— ë¬¸ìì—´ ë¶™ì´ê¸°
+		sb.append("ì˜¤ë¼í´ì€");
 		System.out.println("3: " +sb);
 				
-		sb.append(" Àç¹ÌÀÖ´Ù");
+		sb.append(" ì¬ë¯¸ìˆë‹¤");
 		System.out.println("4: " +sb);
 		
-		//¹®ÀÚ¿­ ´ëÃ¼
+		//ë¬¸ìì—´ ëŒ€ì²´
 		sb.replace(0,  3, "C#");
 		System.out.println("5: " +sb);
 		
-		//¹®ÀÚ¿­ »èÁ¦
+		//ë¬¸ìì—´ ì‚­ì œ
 		sb.delete(0, 3);
 		System.out.println("6: " +sb);
 		
-		//¹®ÀÚ¿­ º¯°æ¿Ï·áÈÄ ½ºÆ®¸µÀ¸·Î ÀúÀåÇÏ±â
+		//ë¬¸ìì—´ ë³€ê²½ì™„ë£Œí›„ ìŠ¤íŠ¸ë§ìœ¼ë¡œ ì €ì¥í•˜ê¸°
 		String str = sb.toString();
 		System.out.println("7: " +str);
 	}

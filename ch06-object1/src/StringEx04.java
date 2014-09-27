@@ -24,6 +24,7 @@ public class StringEx04 {
 //		• 동일 문자열이 존재해도 매번 새롭게 생성
 		String str3=new String(str2);
 		
+		//str1과 str2와 str3가 담고 있는 값은 같지만 가지고 있는 참조값은 다릅니다.
 		if(str1==str2)	//String은 참조값을 비교하게 됩니다. 데이터값 비교가 아닙니다.
 			System.out.println("str1과 str2는 동일 인스턴스 참조");
 		else
