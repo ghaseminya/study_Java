@@ -1,13 +1,13 @@
 package com.ext1;
 
-//±âº»ÀûÀÎ ÈŞ´ëÆù ±â´É
+//ê¸°ë³¸ì ì¸ íœ´ëŒ€í° ê¸°ëŠ¥
 public class CellPhone {
 	
-	//°°Àº ÆĞÅ°Áö¿¡¼­¸¸ È£Ãâ °¡´É / »ó¼Ó½Ã¿¡µµ È£Ãâ°¡´É
-	//º¸Åë »ó¼Ó°ü°è¿¡¼­ ÆĞÅ°Áö°¡ ´Ù¸£´õ¶óµµ È£Ãâ°¡´ÉÇÏµµ·Ï ÇÏ±â À§ÇØ protected¸¦ ÁÖ·Î »ç¿ëÇÕ´Ï´Ù.
-	protected String model;	//¸ğµ¨
-	protected String number;	//Á¦Ç°¹øÈ£
-	protected int chord;		//ÄÚµå
+	//ê°™ì€ íŒ¨í‚¤ì§€ì—ì„œë§Œ í˜¸ì¶œ ê°€ëŠ¥ / ìƒì†ì‹œì—ë„ í˜¸ì¶œê°€ëŠ¥
+	//ë³´í†µ ìƒì†ê´€ê³„ì—ì„œ íŒ¨í‚¤ì§€ê°€ ë‹¤ë¥´ë”ë¼ë„ í˜¸ì¶œê°€ëŠ¥í•˜ë„ë¡ í•˜ê¸° ìœ„í•´ protectedë¥¼ ì£¼ë¡œ ì‚¬ìš©í•©ë‹ˆë‹¤.
+	protected String model;	//ëª¨ë¸
+	protected String number;	//ì œí’ˆë²ˆí˜¸
+	protected int chord;		//ì½”ë“œ
 	
 	public String getModel(){
 		return model;

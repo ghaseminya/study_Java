@@ -2,7 +2,7 @@ package com.ext1;
 
 public class MP3Phone extends CellPhone{
 	
-	private int size;	//À½¾Ç ÀúÀå¿ë ¿ë·®
+	private int size;	//ìŒì•… ì €ì¥ìš© ìš©ëŸ‰
 	
 	public MP3Phone(String model, String number, int chord, int size){
 		this.model = model;

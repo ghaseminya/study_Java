@@ -1,20 +1,20 @@
-/* »ó¼Ó - ¸â¹ö ¸Ş¼Òµå
+/* ìƒì† - ë©¤ë²„ ë©”ì†Œë“œ
  * 
  */
 
 package com.ext1;
 
-//ºÎ¸ğ Å¬·¡½º
+//ë¶€ëª¨ í´ë˜ìŠ¤
 class A{
 	public void make(){
-		System.out.println("ºÎ¸ğ Å¬·¡½º");
+		System.out.println("ë¶€ëª¨ í´ë˜ìŠ¤");
 	}
 }
 
-//ÀÚ½Ä Å¬·¡½º -> »ó¼Ó
+//ìì‹ í´ë˜ìŠ¤ -> ìƒì†
 class B extends A{
 	public void fun(){
-		System.out.println("ÀÚ½Ä Å¬·¡½º");
+		System.out.println("ìì‹ í´ë˜ìŠ¤");
 	}
 }
 

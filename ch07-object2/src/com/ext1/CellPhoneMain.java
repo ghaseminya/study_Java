@@ -1,9 +1,9 @@
-/* »ó¼Ó
+/* ìƒì†
  * 
  * 
- * ºÎ¸ğ Å¬·¡½º¸¦ »ó¼Ó¹Ş´Â ÀÚ½ÄÅ¬·¡½º Á¤ÀÇÇÏ°í
- * Á¤ÀÇµÈ Å¬·¡½º¸¦ °´Ã¼»ı¼ºÇÑ ÈÄ 
- * ¸â¹ö¸Ş¼Òµå¸¦ È£ÃâÇÏ¿© Ãâ·Â 
+ * ë¶€ëª¨ í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” ìì‹í´ë˜ìŠ¤ ì •ì˜í•˜ê³ 
+ * ì •ì˜ëœ í´ë˜ìŠ¤ë¥¼ ê°ì²´ìƒì„±í•œ í›„ 
+ * ë©¤ë²„ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ ì¶œë ¥ 
  *  */
 
 package com.ext1;
@@ -11,13 +11,12 @@ package com.ext1;
 public class CellPhoneMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		DicaPhone dp = new DicaPhone("A1001", "N1001", 1001, "800¸¸");
+		DicaPhone dp = new DicaPhone("A1001", "N1001", 1001, "800ë§Œ");
 		
 		MP3Phone mp = new MP3Phone("B1001", "M1001", 2001, 1024);
 		
-		System.out.println("¸ğµ¨\t ¹øÈ£\t ÄÚµå\t ¿É¼Ç(È­¼Ò¼ö/»çÀÌÁî)");
+		System.out.println("ëª¨ë¸\t ë²ˆí˜¸\t ì½”ë“œ\t ì˜µì…˜(í™”ì†Œìˆ˜/ì‚¬ì´ì¦ˆ)");
 		System.out.print(dp.getModel()+"\t");
 		System.out.print(dp.getNumber()+"\t");
 		System.out.print(dp.getChord()+"\t");
@@ -29,9 +28,6 @@ public class CellPhoneMain {
 		System.out.print(mp.getChord()+"\t");
 		System.out.println(mp.getSize()+"\t");
 		
-				
-		
-
 	}
 
 }
