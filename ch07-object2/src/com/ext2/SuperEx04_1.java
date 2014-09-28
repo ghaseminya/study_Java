@@ -1,11 +1,11 @@
-/* super() ¿¬½À - Ã³¸® ÈÄ
+/* super() ì—°ìŠµ - ì²˜ë¦¬ í›„
  * 
  * 
  * */
 
 package com.ext2;
 
-//ºÎ¸ğ Å¬·¡½º
+//ë¶€ëª¨ í´ë˜ìŠ¤
 class Point_{
 	int x;
 	int y;
@@ -21,12 +21,12 @@ class Point_{
 }
 
 
-//ÀÚ½Ä Å¬·¡½º
+//ìì‹ í´ë˜ìŠ¤
 class Point3D_ extends Point_{		
 
 	
 Point3D_(int x, int y, int z){		
-		//ÃÊ±âÈ­ ¼ø¼­°¡ ÀÖÀ¸¹Ç·Î ¼ø¼­¸¦ Á¤È®È÷ ÇØÁà¾ß ÇÑ´Ù.
+		//ì´ˆê¸°í™” ìˆœì„œê°€ ìˆìœ¼ë¯€ë¡œ ìˆœì„œë¥¼ ì •í™•íˆ í•´ì¤˜ì•¼ í•œë‹¤.
 		/*this.z = z;
 		super(x, y);*/	
 	
@@ -37,7 +37,7 @@ Point3D_(int x, int y, int z){
 	
 	int z;
 	
-	@Override	//¸Ş¼Òµå ÀçÁ¤ÀÇ
+	@Override	//ë©”ì†Œë“œ ì¬ì •ì˜
 	public String getLocation(){
 		return "x: " + x + ", y: " + y + ", z: " + z;
 	}	
