@@ -2,32 +2,32 @@
 public class ArrayEx05 {
 
 	public static void main(String[] args) {
-		// ÀÔ·ÂÀ» ¹ŞÀº ÈÄ ¹è¿­¿¡ ÀúÀåÈù ´ÙÀ½ ¼ºÀû Ã³¸®ÇÏ±â
+		// ì…ë ¥ì„ ë°›ì€ í›„ ë°°ì—´ì— ì €ì¥íŒ ë‹¤ìŒ ì„±ì  ì²˜ë¦¬í•˜ê¸°
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		String[] subname = {"±¹¾î","¿µ¾î","¼öÇĞ","°úÇĞ"};
+		String[] subname = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™","ê³¼í•™"};
 		
-		//¹è¿­ÀÇ ¸¶Áö¸·¿¡ ÃÑÁ¡À» ÀÔ·ÂÇÏ±â À§ÇØ +1
+		//ë°°ì—´ì˜ ë§ˆì§€ë§‰ì— ì´ì ì„ ì…ë ¥í•˜ê¸° ìœ„í•´ +1
 		int[]	score = new int[subname.length + 1];
 		float average = 0.0F;
 			
 		
 		for( int i=0; i< subname.length; i++){
 			do{
-				System.out.print(subname[i] + " Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä > ");
+				System.out.print(subname[i] + " ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
 				score[i] = input.nextInt();
 							
 			}while(score[i] < 0 || score[i] >100);
 			
-			//ÃÑÁ¡
+			//ì´ì 
 			score[score.length-1] += score[i];	
 		}		
 		
 		average = (float)(score[score.length-1]) / score.length;
 		
-		System.out.println("ÃÑÁ¡ : " + score[score.length-1]);
-		System.out.printf("Æò±Õ : %.2f", average);
+		System.out.println("ì´ì  : " + score[score.length-1]);
+		System.out.printf("í‰ê·  : %.2f", average);
 				
 	}
 }

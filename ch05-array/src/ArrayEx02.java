@@ -2,17 +2,17 @@
 public class ArrayEx02 {
 
 	public static void main(String[] args) {
-		// ¹è¿­ ¼±¾ğ, »ı¼º, ÃÊ±âÈ­(¾Ï½ÃÀûÀ¸·Î ¹è¿­ »ı¼º)
+		// ë°°ì—´ ì„ ì–¸, ìƒì„±, ì´ˆê¸°í™”(ì•”ì‹œì ìœ¼ë¡œ ë°°ì—´ ìƒì„±)
 		
-		//¾Ï½ÃÀû ¹è¿­ »ı¼º
+		//ì•”ì‹œì  ë°°ì—´ ìƒì„±
 		int[] a = {10, 20, 30, 40, 50, 60, 70};
 		
-		System.out.print("¹è¿­¸í Ãâ·Â :");	//16Áø¼ö À¯´ÏÅ©ÇÑ ÂüÁ¶°ª(¸Ş·Î¸® °ªÀÌ ¾Æ´Ñ °¡°øµÈ ÂüÁ¶°ª)
+		System.out.print("ë°°ì—´ëª… ì¶œë ¥ :");	//16ì§„ìˆ˜ ìœ ë‹ˆí¬í•œ ì°¸ì¡°ê°’(ë©”ë¡œë¦¬ ê°’ì´ ì•„ë‹Œ ê°€ê³µëœ ì°¸ì¡°ê°’)
 		System.out.println(a);
 		
 		
 		System.out.println();
-		System.out.println("¹è¿­ Ãâ·Â :");
+		System.out.println("ë°°ì—´ ì¶œë ¥ :");
 		for(int i=0; i<a.length; i++){
 			System.out.print(a[i]+ "\t");
 			

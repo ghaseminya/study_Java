@@ -2,12 +2,12 @@
 public class ArrayEx04 {
 
 	public static void main(String[] args) {
-		// ÇÑ¸í¿¡ ´ëÇÑ ¼ºÀûÃ³¸® ÇÁ·Î±×·¥ (1Â÷¿ø ¹è¿­)
+		// í•œëª…ì— ëŒ€í•œ ì„±ì ì²˜ë¦¬ í”„ë¡œê·¸ë¨ (1ì°¨ì› ë°°ì—´)
 		
-		//ÃÑÁ¡
+		//ì´ì 
 		int sum=0;
 		
-		//Æò±Õ
+		//í‰ê· 
 		float average1 = 0.0F;
 		float average2 = 0.0F;
 		
@@ -25,7 +25,7 @@ public class ArrayEx04 {
 		System.out.println("average2 : " + average2);
 		
 		System.out.println();
-		System.out.println("ÃÑÁ¡ : " + sum);
-		System.out.println("Æò±Õ : " + average2);	
+		System.out.println("ì´ì  : " + sum);
+		System.out.println("í‰ê·  : " + average2);	
 	}
 }

@@ -2,34 +2,34 @@
 public class ArrayEx06 {
 
 	public static void main(String[] args) {
-		// ¼ºÀûÃ³¸®ÇÏ±â		
-	/*	1) ¼ºÀûÀÔ·Â
-		2) ±¹¾î, ¿µ¾î, ¼öÇĞ, °úÇĞ
-		3) ÃÑÁ¡, Æò±Õ, ÇĞÁ¡
-		4) Ãâ·Â
-			±¹¾î	¿µ¾î	¼öÇĞ	°úÇĞ	ÃÑÁ¡	Æò±Õ	ÇĞÁ¡*/
+		// ì„±ì ì²˜ë¦¬í•˜ê¸°		
+	/*	1) ì„±ì ì…ë ¥
+		2) êµ­ì–´, ì˜ì–´, ìˆ˜í•™, ê³¼í•™
+		3) ì´ì , í‰ê· , í•™ì 
+		4) ì¶œë ¥
+			êµ­ì–´	ì˜ì–´	ìˆ˜í•™	ê³¼í•™	ì´ì 	í‰ê· 	í•™ì */
 		
 		
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		
-		String[] subname = {"±¹¾î","¿µ¾î","¼öÇĞ","°úÇĞ", "ÃÑÁ¡"};	//°ú¸ñ¸í
-		int[] score = new int[subname.length];	//°ú¸ñº° Á¡¼ö¿Í ÃÑÁ¡
-		float average = 0.0F;	//Æò±Õ	
-		char grade = '?';	//ÇĞÁ¡
+		String[] subname = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™","ê³¼í•™", "ì´ì "};	//ê³¼ëª©ëª…
+		int[] score = new int[subname.length];	//ê³¼ëª©ë³„ ì ìˆ˜ì™€ ì´ì 
+		float average = 0.0F;	//í‰ê· 	
+		char grade = '?';	//í•™ì 
 		
 		for(int i=0; i < score.length-1 ; i++){
 			do{
 				
-				System.out.print(subname[i] + " Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä > ");
+				System.out.print(subname[i] + " ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” > ");
 				score[i] = input.nextInt();
 				score[score.length-1] += score[i];
 				
 			}while(score[i] <0 || score[i] > 100);			
 		}
 		
-		//ÇĞÁ¡
+		//í•™ì 
 		switch((int)average/10){
 		case 10:
 		case 9:
@@ -49,8 +49,8 @@ public class ArrayEx06 {
 		for(int i=0; i < score.length ; i++){
 			System.out.print(subname[i] + "\t");					
 		}
-		System.out.print("Æò±Õ \t");
-		System.out.print("ÇĞÁ¡");		
+		System.out.print("í‰ê·  \t");
+		System.out.print("í•™ì ");		
 		
 		System.out.println();
 		for(int i=0; i < score.length ; i++){

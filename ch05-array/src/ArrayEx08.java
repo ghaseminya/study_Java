@@ -1,10 +1,13 @@
+/*
+2ì°¨ì› ë°°ì—´ ì„±ì ì²˜ë¦¬
 
+*/
 public class ArrayEx08 {
 
 	public static void main(String[] args) {
-		// 2Â÷¿ø ¹è¿­ ¼ºÀûÃ³¸®
+		// 2ì°¨ì› ë°°ì—´ ì„±ì ì²˜ë¦¬
 		
-		//2Â÷¿ø ¹è¿­ ¼±¾ğ/»ı¼º/ÃÊ±âÈ®
+		//2ì°¨ì› ë°°ì—´ ì„ ì–¸/ìƒì„±/ì´ˆê¸°í™•
 		int[][] score = {
 				{99,99,99},
 				{20,20,20},
@@ -13,15 +16,15 @@ public class ArrayEx08 {
 				{50,50,50}
 		};
 		
-		System.out.println("¹øÈ£\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ë²ˆí˜¸\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		System.out.println("==========================================");
 		
-		//¹è¿­ Ãâ·Â
+		//ë°°ì—´ ì¶œë ¥
 		for(int i=0; i < score.length; i++){
 			
 			int sum=0;
 			
-			System.out.print( (i+1) + "¹ø\t");
+			System.out.print( (i+1) + "ë²ˆ\t");
 			for(int j=0; j <score[i].length; j++){
 				System.out.print( score[i][j] + "\t");		
 				sum += score[i][j];				
