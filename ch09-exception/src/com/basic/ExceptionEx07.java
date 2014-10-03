@@ -1,16 +1,16 @@
-/* ¿¹¿ÜÃ³¸® - »ç¿ëÀÚ Á¤ÀÇ ¿¹¿Ü Ã³¸®
+/* ì˜ˆì™¸ì²˜ë¦¬ - ì‚¬ìš©ìž ì •ì˜ ì˜ˆì™¸ ì²˜ë¦¬
  * 
  * 
- * ¾ç¼ö¸¸ ÀÔ·ÂµÇ°Ô ÇÏ°í
- * À½¼ö ÀÔ·Â½Ã ¿¹¿ÜÃ³¸®ÇÏ±â
+ * ì–‘ìˆ˜ë§Œ ìž…ë ¥ë˜ê²Œ í•˜ê³ 
+ * ìŒìˆ˜ ìž…ë ¥ì‹œ ì˜ˆì™¸ì²˜ë¦¬í•˜ê¸°
  * 
  * 
- * »ç¿ëÀÚ Á¤ÀÇ ¿¹¿Ü Å¬·¡½º ÀÛ¼º: ¿¹¿Ü¹®±¸¸¸ ¹Þ¾Æ¼­ Ã³¸®ÇÏ±â À§ÇØ »ç¿ë
+ * ì‚¬ìš©ìž ì •ì˜ ì˜ˆì™¸ í´ëž˜ìŠ¤ ìž‘ì„±: ì˜ˆì™¸ë¬¸êµ¬ë§Œ ë°›ì•„ì„œ ì²˜ë¦¬í•˜ê¸° ìœ„í•´ ì‚¬ìš©
  */
 
 package com.basic;
 
-//»ç¿ëÀÚ Á¤ÀÇ ¿¹¿Ü Å¬·¡½º
+//ì‚¬ìš©ìž ì •ì˜ ì˜ˆì™¸ í´ëž˜ìŠ¤
 class UserException extends Exception{
 	public UserException(String str){
 		super(str);
@@ -26,9 +26,9 @@ public class ExceptionEx07 {
 		try{
 			int a = -11;
 			if( a <=0 ){
-				//»ç¿ëÀÚ°¡ Á¤ÀÇÇÑ ¿¹¿Ü¸¦ ÀÎÀ§ÀûÀ¸·Î ¹ß»ý½ÃÅ´
-				//¿¹¿Ü ¹ß»ý½Ã UserException°´Ã¼°¡ »ý¼ºµÇ°í ÇØ´ç ¸Þ½ÃÁö°¡ Àü´ÞµÊ
-				throw new UserException("¾ç¼ö°¡ ¾Æ´Õ´Ï´Ù");				
+				//ì‚¬ìš©ìžê°€ ì •ì˜í•œ ì˜ˆì™¸ë¥¼ ì¸ìœ„ì ìœ¼ë¡œ ë°œìƒì‹œí‚´
+				//ì˜ˆì™¸ ë°œìƒì‹œ UserExceptionê°ì²´ê°€ ìƒì„±ë˜ê³  í•´ë‹¹ ë©”ì‹œì§€ê°€ ì „ë‹¬ë¨
+				throw new UserException("ì–‘ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤");				
 			}			
 		}catch(UserException e){
 			System.out.println(e.getMessage());

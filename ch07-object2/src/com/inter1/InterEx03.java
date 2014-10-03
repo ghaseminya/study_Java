@@ -1,11 +1,11 @@
-/* ÀÎÅÍÆäÀÌ½º - ´ÙÁß »ó¼Ó
+/* ì¸í„°í˜ì´ìŠ¤ - ë‹¤ì¤‘ ìƒì†
  * 
- * ÀÎÅÍÆäÀÌ½º »ı¼º
- * ÀÎÅÍÆäÀÌ½º ³¢¸® »ó¼Ó
- * Å¬·¡½º¿¡¼­ ÀÎÅÍÆäÀÌ½º ±¸Çö
- * Å¬·¡½ºÀÇ °´Ã¼ »ı¼ºÈÄ ÀÎÅÍÆäÀÌ½º È£Ãâ
- * ÀÎÅÍÆäÀÌ½º Ãß°¡ »ı¼º
- * Å¬·¡½º¿¡ ´ÙÁß ±¸Çö
+ * ì¸í„°í˜ì´ìŠ¤ ìƒì„±
+ * ì¸í„°í˜ì´ìŠ¤ ë¼ë¦¬ ìƒì†
+ * í´ë˜ìŠ¤ì—ì„œ ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„
+ * í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„±í›„ ì¸í„°í˜ì´ìŠ¤ í˜¸ì¶œ
+ * ì¸í„°í˜ì´ìŠ¤ ì¶”ê°€ ìƒì„±
+ * í´ë˜ìŠ¤ì— ë‹¤ì¤‘ êµ¬í˜„
  * */
 
 
@@ -13,16 +13,17 @@ package com.inter1;
 
 
 interface Inter1{	
-	//Ãß»ó ¸Ş¼Òµå
+	//ì¶”ìƒ ë©”ì†Œë“œ
 	public int getA();
 }
 
 interface Inter2{
-	//Ãß»ó ¸Ş¼Òµå
+	//ì¶”ìƒ ë©”ì†Œë“œ
 	public abstract int getB();
 }
 
-//ÀÎÅÍÆäÀÌ½º ´ÙÁß »ó¼Ó
+//ì¸í„°í˜ì´ìŠ¤ ë‹¤ì¤‘ ìƒì†
+//ì¸í„°í˜ì´ìŠ¤ ê°„ ìƒì† ê°€ëŠ¥ ë‹¨ ì´ ë•ŒëŠ” implementsê°€ ì•„ë‹Œ extendsë¥¼ ì‚¬ìš©í•œë‹¤.
 interface Inter3 extends Inter1, Inter2{
 	public int getData();
 }
@@ -33,9 +34,10 @@ interface Inter4{
 	
 }
 
-// Å¬·¡½º¿¡¼­ ´ÙÁß ±¸Çö
+// í´ë˜ìŠ¤ì—ì„œ ë‹¤ì¤‘ êµ¬í˜„
+//ì¸í„°í˜ì´ìŠ¤ëŠ” ë‘˜ ì´ìƒì„ ë™ì‹œì— êµ¬í˜„ ê°€ëŠ¥ 	ì¸í„°í˜ì´ìŠ¤ì˜ ìƒì†(êµ¬í˜„)ì€ extendsê°€ ì•„ë‹Œ implementsë¥¼ ì‚¬ìš©í•œë‹¤
 public class InterEx03 implements Inter3, Inter4{
-	
+
 	@Override
 	public int getA(){
 		return 100;
@@ -57,7 +59,7 @@ public class InterEx03 implements Inter3, Inter4{
 
 	public static void main(String[] args) {
 		
-		//Å¬·¡½º °´Ã¼ »ı¼º
+		//í´ë˜ìŠ¤ ê°ì²´ ìƒì„±
 		InterEx03 in3 = new InterEx03();
 		System.out.println(in3.getA());
 		System.out.println(in3.getB());

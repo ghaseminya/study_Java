@@ -1,25 +1,25 @@
-/* ÀÎÅÍÆäÀÌ½º - ÀÎÅÍÆäÀÌ½ºÀÇ »ó¼ö È£Ãâ
+/* ì¸í„°í˜ì´ìŠ¤ - ì¸í„°í˜ì´ìŠ¤ì˜ ìƒìˆ˜ í˜¸ì¶œ
  * */
 
 package com.inter1;
 
 interface A1{
-	//»ó¼ö
-	public static final int W = 10;	// Çü½Ä ¿øÇü
-	int X =20;						//¿øÇüÀº public static final int X=20;ÀÎµ¥ public static final»ı·«µÈ °ÍÀÓ
-	static int Y = 30;				//public static final»ı·«µÈ °ÍÀÓ
-	final int Z = 40;				//public static final»ı·«µÈ °ÍÀÓ
+	//ìƒìˆ˜
+	public static final int W = 10;	// í˜•ì‹ ì›í˜•
+	int X =20;						//ì›í˜•ì€ public static final int X=20;ì¸ë° public static finalìƒëµëœ ê²ƒì„
+	static int Y = 30;				//public static finalìƒëµëœ ê²ƒì„
+	final int Z = 40;				//public static finalìƒëµëœ ê²ƒì„
 }
 
 
 public class InterEx01 {
 
 	public static void main(String[] args) {
-		// ÀÎÅÍÆäÀÌ½º °´Ã¼»ı¼º ºÒ°¡
+		// ì¸í„°í˜ì´ìŠ¤ ê°ì²´ìƒì„± ë¶ˆê°€
 		//A1 aa1 = new A1();	//ERROR: Cannot instantiate the type A1
 		
-		//publicÇÏ°í staticÇÑ »ó¼öÀÌ¹Ç·Î
-		//ÀÎÅÍÆäÀÌ½º¸í¿¡ dot¿¬»êÀÚ¸¦ ÅëÇØ È£Ãâ
+		//publicí•˜ê³  staticí•œ ìƒìˆ˜ì´ë¯€ë¡œ
+		//ì¸í„°í˜ì´ìŠ¤ëª…ì— dotì—°ì‚°ìë¥¼ í†µí•´ í˜¸ì¶œ
 		System.out.println("W = " + A1.W);
 		System.out.println("W = " + A1.X);
 		System.out.println("W = " + A1.Y);

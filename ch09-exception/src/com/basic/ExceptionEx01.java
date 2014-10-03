@@ -1,6 +1,6 @@
-/* ¿¹¿Ü¹ß»ı
+/* ì˜ˆì™¸ë°œìƒ
  * 
- * ¹è¿­ÀÇ ÀÎµ¦½º ¹üÀ§¸¦ ³Ñ¾î°¡¼­ ¿¹¿Ü¹ß»ı
+ * ë°°ì—´ì˜ ì¸ë±ìŠ¤ ë²”ìœ„ë¥¼ ë„˜ì–´ê°€ì„œ ì˜ˆì™¸ë°œìƒ
  */
 package com.basic;
 
@@ -16,6 +16,6 @@ public class ExceptionEx01 {
 			/*Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
 			at com.basic.ExceptionEx01.main(ExceptionEx01.java:11)*/
 		}
-		System.out.println("ÇÁ·Î±×·¥ ³¡!!");		
+		System.out.println("í”„ë¡œê·¸ë¨ ë!!");		
 	}
 }

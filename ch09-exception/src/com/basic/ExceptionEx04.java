@@ -1,15 +1,15 @@
-/* ¿¹¿ÜÃ³¸® - throws
+/* ì˜ˆì™¸ì²˜ë¦¬ - throws
  * 
- * °ü·Ã Å¬·¡½º import
- * ERROR: Unhandled exception type IOException	//¹Ýµå½Ã ¿¹¿ÜÃ³¸®ÇØ¾ß µÊÀ» ÄÄÆÄÀÏ·¯°¡ ¾Ë·ÁÁÜ(ºÓÀº ¹ØÁÙ)
- * throws¹® »ðÀÔ -> main¿¡¼­ try~catch¹® »ðÀÔ
- * °´Ã¼ »ý¼º 
- * try~catch¹®¿¡¼­ °´Ã¼¸¦ ÅëÇØ ¿¹¿ÜÃ³¸® 
- * dan Á¤»ó Ãâ·Â
- * ¹®ÀÚÀÔ·ÂÀ¸·Î ¿¹¿ÜÃ³¸® ¹ß»ý
+ * ê´€ë ¨ í´ëž˜ìŠ¤ import
+ * ERROR: Unhandled exception type IOException	//ë°˜ë“œì‹œ ì˜ˆì™¸ì²˜ë¦¬í•´ì•¼ ë¨ì„ ì»´íŒŒì¼ëŸ¬ê°€ ì•Œë ¤ì¤Œ(ë¶‰ì€ ë°‘ì¤„)
+ * throwsë¬¸ ì‚½ìž… -> mainì—ì„œ try~catchë¬¸ ì‚½ìž…
+ * ê°ì²´ ìƒì„± 
+ * try~catchë¬¸ì—ì„œ ê°ì²´ë¥¼ í†µí•´ ì˜ˆì™¸ì²˜ë¦¬ 
+ * dan ì •ìƒ ì¶œë ¥
+ * ë¬¸ìžìž…ë ¥ìœ¼ë¡œ ì˜ˆì™¸ì²˜ë¦¬ ë°œìƒ
  * 
- * throws ¿¹¿ÜÃ³¸®½Ã ÀÌÁ¡:
- * ¸Þ¼Òµå¸¶´Ù try~catchÇÒ ÇÊ¿ä¾ø¾î À¯¿ë  
+ * throws ì˜ˆì™¸ì²˜ë¦¬ì‹œ ì´ì :
+ * ë©”ì†Œë“œë§ˆë‹¤ try~catchí•  í•„ìš”ì—†ì–´ ìœ ìš©  
  */
 
 package com.basic;
@@ -20,14 +20,14 @@ import java.io.IOException;
 
 public class ExceptionEx04 {
 	
-	//°°Àº Å¬·¡½º ³»¿¡¼­¸¸ È£Ãâ°¡´É ¸Þ¼Òµç
+	//ê°™ì€ í´ëž˜ìŠ¤ ë‚´ì—ì„œë§Œ í˜¸ì¶œê°€ëŠ¥ ë©”ì†Œë“ 
 	private void printData() throws IOException, NumberFormatException{
 		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
-		System.out.print("´Ü ÀÔ·Â> ");
+		System.out.print("ë‹¨ ìž…ë ¥> ");
 		//String -> int 
 		int dan = Integer.parseInt(br.readLine());
 		
-		System.out.println(dan + "´Ü");
+		System.out.println(dan + "ë‹¨");
 		System.out.println("=============================");
 		for(int i=1; i<=9; i++){
 			System.out.println(dan + "*" + i + "=" + dan*i);
@@ -38,12 +38,12 @@ public class ExceptionEx04 {
 		
 		ExceptionEx04 ex = new ExceptionEx04();
 		
-		// throwsÁ¤ÀÇÇÑ ¸Þ¼Òµå¿¡¼­ ¿¹¿Ü¹ß»ý°¡´É¹®¿¡ ¿¹¿ÜÃ³¸® 
+		// throwsì •ì˜í•œ ë©”ì†Œë“œì—ì„œ ì˜ˆì™¸ë°œìƒê°€ëŠ¥ë¬¸ì— ì˜ˆì™¸ì²˜ë¦¬ 
 		try{
 			ex.printData();
 			
 		}catch(Exception e){
-			System.out.println("¿À·ù°¡ ¹ß»ýÇß½À´Ï´Ù.");
+			System.out.println("ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
 		}	
 	}
 }

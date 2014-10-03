@@ -1,8 +1,8 @@
-/* Static ³»ºÎ Å¬·¡½º
+/* Static ë‚´ë¶€ í´ë˜ìŠ¤
  * 
  * 
- * ÀÏ¹İ¸â¹ö Å¬·¡½º´Â staticÇÑ º¯¼ö¸¦ ¾²Áö ¸øÇÏ¸ç //ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
- * staticº¯¼ö¸¦ Æ÷ÇÔÇÑ ³»ºÎ Å¬·¡½º´Â static Å¬·¡½º¿©¾ß ÇÕ´Ï´Ù.
+ * ì¼ë°˜ë©¤ë²„ í´ë˜ìŠ¤ëŠ” staticí•œ ë³€ìˆ˜ë¥¼ ì“°ì§€ ëª»í•˜ë©° //ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
+ * staticë³€ìˆ˜ë¥¼ í¬í•¨í•œ ë‚´ë¶€ í´ë˜ìŠ¤ëŠ” static í´ë˜ìŠ¤ì—¬ì•¼ í•©ë‹ˆë‹¤.
  * 
  */
 
@@ -11,23 +11,25 @@ package com.inner3;
 
 public class StaticEx01 {
 	
-	//static ³»ºÎ Å¬·¡½º
+	//static ë‚´ë¶€ í´ë˜ìŠ¤
+	//ì¼ë°˜ë©¤ë²„ í´ë˜ìŠ¤ëŠ” staticí•œ ë³€ìˆ˜ë¥¼ ì“°ì§€ ëª»í•˜ë©° //ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
+	//staticë³€ìˆ˜ë¥¼ í¬í•¨í•œ ë‚´ë¶€ í´ë˜ìŠ¤ëŠ” static í´ë˜ìŠ¤ì—¬ì•¼ í•©ë‹ˆë‹¤.
 	public static class StaticInner{
 		int iv = 200;
-		static int cv = 300;	
+		static int cv = 300;	//staticë³€ìˆ˜
 	}
 	
 	
 	
 	public static void main(String[] args){
 		
-		//static ³»ºÎ Å¬·¡½º¸¦ °´Ã¼ »ı¼º, Outer¿¡ ÀÖ´Â StaticEx01À» °´Ã¼»ı¼ºÇÏÁö ¾ÊÀ½
+		//static ë‚´ë¶€ í´ë˜ìŠ¤ë¥¼ ê°ì²´ ìƒì„±, Outerì— ìˆëŠ” StaticEx01ì„ ê°ì²´ìƒì„±í•˜ì§€ ì•ŠìŒ
 		StaticEx01.StaticInner i = new StaticEx01.StaticInner();
 		
-		//ÀÎ½ºÅÏ½º º¯¼ö È£Ãâ
+		//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ í˜¸ì¶œ
 		System.out.println(i.iv);		
 		
-		//staticº¯¼ö È£Ãâ
+		//staticë³€ìˆ˜ í˜¸ì¶œ
 		System.out.println(StaticEx01.StaticInner.cv);
 	}
 	

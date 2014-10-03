@@ -1,46 +1,46 @@
-/* Annonymous ³»ºÎ Å¬·¡½º·Î º¯°æ Àü - Á¤ÀÇºÎ, ±¸ÇöºÎ¸¦ ÅëÇØ ³»ºÎ Å¬·¡½º ±¸Çö
+/* Annonymous ë‚´ë¶€ í´ë˜ìŠ¤ë¡œ ë³€ê²½ ì „ - ì •ì˜ë¶€, êµ¬í˜„ë¶€ë¥¼ í†µí•´ ë‚´ë¶€ í´ë˜ìŠ¤ êµ¬í˜„
  * 
  * 
- * ºÎ¸ğÅ¬·¡½ºÀÇ disp() Ãâ·Â
- * ºÎ¸ğÅ¬·¡ÀÇ disp() Àç Á¤ÀÇÈÄ Ãâ·Â
+ * ë¶€ëª¨í´ë˜ìŠ¤ì˜ disp() ì¶œë ¥
+ * ë¶€ëª¨í´ë˜ìŠ¤ì˜ disp() ì¬ ì •ì˜í›„ ì¶œë ¥
  * 
- * Á¤ÀÇºÎ, ±¸ÇöºÎ ÅëÇØ ³»ºÎ Å¬·¡½º ±¸Çö
+ * ì •ì˜ë¶€, êµ¬í˜„ë¶€ í†µí•´ ë‚´ë¶€ í´ë˜ìŠ¤ êµ¬í˜„
  * 
  * ----------------------------------------
- * InnerÅ¬·¡½º ºÎ¸ğ Å¬·¡½º¸¦ »ó¼Ó¹Ş¾Æ »ç¿ë
+ * Innerí´ë˜ìŠ¤ëŠ” ë¶€ëª¨ í´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì•„ ì‚¬ìš© 
  * 
- * ÀÌ°ÍÀ» ´ÙÀ½ ´Ü°è¿¡¼­ AnonymousÅ¬·¡½º·Î º¯°æÇØ º¸°Ú½À´Ï´Ù.(AnonymousEx02/AnonymousEx03) 
+ * ì´ê²ƒì„ ë‹¤ìŒ ë‹¨ê³„ì—ì„œ Anonymousí´ë˜ìŠ¤ë¡œ ë³€ê²½í•´ ë³´ê² ìŠµë‹ˆë‹¤.(AnonymousEx02/AnonymousEx03) 
  * 
- * Á¤ÀÇºÎ	class Inner{}
- * ±¸ÇöºÎ	new Inner();
+ * ì •ì˜ë¶€	class Inner extends Inner1{}
+ * êµ¬í˜„ë¶€	new Inner();
  */
 
 
 package com.inner4;
 
 //
-class Inner4{
+class Inner1{
 	//
 	public void disp(){
-		System.out.println("ºÎ¸ğÅ¬·¡½ºÀÇ disp");
+		System.out.println("ë¶€ëª¨í´ë˜ìŠ¤ì˜ disp");
 	}
 }
 
 public class AnnoymousEx01 {
 
-	// ÀÌ¸§ÀÌ ¾ø´Â ³»ºÎ Å¬·¡½º »ı¼ºÇÏ´Âµ¥ ºÎ¸ğÀÌ¸§À» ¾²°Å³ª ÀÎÅÍÆäÀÌ½º¸íÀ» ¾´´Ù.
-	// ¹İµå½Ã °´Ã¼»ı¼ºÀ» ¹Ù·Î ÇØÁÖ¾î¾ß ÇÑ´Ù.
+	// ì´ë¦„ì´ ì—†ëŠ” ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„±í•˜ëŠ”ë° ë¶€ëª¨ì´ë¦„ì„ ì“°ê±°ë‚˜ ì¸í„°í˜ì´ìŠ¤ëª…ì„ ì“´ë‹¤.
+	// ë°˜ë“œì‹œ ê°ì²´ìƒì„±ì„ ë°”ë¡œ í•´ì£¼ì–´ì•¼ í•œë‹¤.
 	public void innerTest(){
 
-		//Á¤ÀÇºÎ	class Inner{}
-		//±¸ÇöºÎ	new Inner4();
-		class Inner extends Inner4{
-			//disp ÀçÁ¤ÀÇ
+		//ì •ì˜ë¶€	class Inner extends Inner1{}
+		class Inner extends Inner1{
+			//disp ì¬ì •ì˜
 			@Override
 			public void disp(){
-				System.out.println("ÀçÁ¤ÀÇµÈ disp");
+				System.out.println("ì¬ì •ì˜ëœ disp");
 			}		
 		}
+		//êµ¬í˜„ë¶€	new Inner4();
 		Inner i = new Inner();
 		i.disp();
 	}

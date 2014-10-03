@@ -1,8 +1,8 @@
-/* ·ÎÄÃ ³»ºÎ Å¬·¡½º
+/* ë¡œì»¬ ë‚´ë¶€ í´ë˜ìŠ¤
  * 
  * 
  * ------------------------------
- * ¸Ş¼Òµå¾È¿¡ Å¬·¡½º »ı¼ºÇÏ´Â ÇüÅÂ 
+ * ë©”ì†Œë“œì•ˆì— í´ë˜ìŠ¤ ìƒì„±í•˜ëŠ” í˜•íƒœ 
  * 
  */
 
@@ -14,14 +14,14 @@ public class LocalEx01 {
 	
 	public void innerTest(){
 		
-		//·ÎÄÃ ³»ºÎ Å¬·¡½º
+		//ë¡œì»¬ ë‚´ë¶€ í´ë˜ìŠ¤
 		class Inner{
 			
 			public void getData(){
-				System.out.println("Local ³»ºÎ Å¬·¡½º");
+				System.out.println("Local ë‚´ë¶€ í´ë˜ìŠ¤");
 			}			
 		}
-		//°´Ã¼ »ı¼ºÀ» À§ÇØ ¸í½ÃÀûÀ¸·Î °´Ã¼ »ı¼º
+		//ê°ì²´ ìƒì„±ì„ ìœ„í•´ ëª…ì‹œì ìœ¼ë¡œ ê°ì²´ ìƒì„±
 		Inner i = new Inner();
 		i.getData();		
 	}
@@ -37,7 +37,6 @@ public class LocalEx01 {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub		
 		LocalEx01 le = new LocalEx01();
 		le.innerTest();
 	}

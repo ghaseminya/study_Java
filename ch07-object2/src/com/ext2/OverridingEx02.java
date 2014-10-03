@@ -37,6 +37,7 @@ public class OverridingEx02 {
 		AClass ref1=new CClass();		
 		BClass ref2=new CClass();
 		CClass ref3=new CClass();
+		//컴파일 완료된 후 문장이 끝난후 참조변수에 대한 자료형 정보를 가지고 있지만 실제로 뭘 참조하는 지는(new CClass()) 지워지게 됩니다.
 		
 		ref1.rideMethod();
 		ref2.rideMethod();

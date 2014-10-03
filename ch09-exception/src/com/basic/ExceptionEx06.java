@@ -1,11 +1,11 @@
-/* ¿¹¿ÜÃ³¸® - finally 
+/* ì˜ˆì™¸ì²˜ë¦¬ - finally 
  * 
- * ¿¹¿Ü°¡ ¹ß»ıÇÏÁö ¾ÊÀº °æ¿ì
- * ¿¹¿Ü°¡ ¹ß»ı°¡ ¹ß»ıÇÑ °æ¿ì
+ * ì˜ˆì™¸ê°€ ë°œìƒí•˜ì§€ ì•Šì€ ê²½ìš°
+ * ì˜ˆì™¸ê°€ ë°œìƒê°€ ë°œìƒí•œ ê²½ìš°
  * 
- * finallyºí·°Àº ¿¹¿Ü°¡ ¹ß»ıÇÏ°Ç ¹ß»ıÇÏÁö ¾Ê°Ç°£¿¡ Ç×»ó ¼öÇàµÇ¾îÁ®¾ß ÇÒ ÄÚµå¸¦ ¸í½Ã
- * °´Ã¼ÀÇ ¼Ò¸êÀº ÇÁ·Î±×·¥°¡ ÄÁÆ®·Ñ ÇÒ ¼ö ¾øÁö¸¸
- * IO¿Í DBÀÇ »ç¿ëÈÆ °ü°è¸¦ ²÷´Â ¿ëµµ·Î »ç¿ëÇÕ´Ï´Ù. 
+ * finallyë¸”ëŸ­ì€ ì˜ˆì™¸ê°€ ë°œìƒí•˜ê±´ ë°œìƒí•˜ì§€ ì•Šê±´ê°„ì— í•­ìƒ ìˆ˜í–‰ë˜ì–´ì ¸ì•¼ í•  ì½”ë“œë¥¼ ëª…ì‹œ
+ * ê°ì²´ì˜ ì†Œë©¸ì€ í”„ë¡œê·¸ë¨ê°€ ì»¨íŠ¸ë¡¤ í•  ìˆ˜ ì—†ì§€ë§Œ
+ * IOì™€ DBì˜ ì‚¬ìš©í›ˆ ê´€ê³„ë¥¼ ëŠëŠ” ìš©ë„ë¡œ ì‚¬ìš©í•©ë‹ˆë‹¤. 
  * 
  */
 
@@ -15,31 +15,31 @@ public class ExceptionEx06 {
 	
 	
 	public static void main(String[] args) {
-		// ¿¹¿Ü°¡ ¹ß»ıÇÏÁö ¾ÊÀº °æ¿ì
-		System.out.println("ÇÁ·Î±×·¥ ½ÇÇà!");
+		// ì˜ˆì™¸ê°€ ë°œìƒí•˜ì§€ ì•Šì€ ê²½ìš°
+		System.out.println("í”„ë¡œê·¸ë¨ ì‹¤í–‰!");
 		try{
 			System.out.println("1");
 			
 		}catch(Exception e){
 			System.out.println("2");
 		}finally{
-			System.out.println("Áß¿ä¸Ş½ÃÁö");
+			System.out.println("ì¤‘ìš”ë©”ì‹œì§€");
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á!");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ!");
 		
 		System.out.println("\n=============== \n");
-		// ¿¹¿Ü°¡ ¹ß»ı°¡ ¹ß»ıÇÑ °æ¿ì
-		System.out.println("ÇÁ·Î±×·¥ ½ÇÇà!");
+		// ì˜ˆì™¸ê°€ ë°œìƒê°€ ë°œìƒí•œ ê²½ìš°
+		System.out.println("í”„ë¡œê·¸ë¨ ì‹¤í–‰!");
 		try{
 			System.out.println("1");
-			System.out.println(50/0);	//¿¹¿Ü¹ß»ı
+			System.out.println(50/0);	//ì˜ˆì™¸ë°œìƒ
 			System.out.println("2");
 			
 		}catch(Exception e){
-			System.out.println("3");	//¿¹¿ÜÃ³¸®
-		}finally{
-			System.out.println("Áß¿ä¸Ş½ÃÁö");
+			System.out.println("3");	//ì˜ˆì™¸ì²˜ë¦¬
+		}finally{	//ë¬´ì¡°ê±´ ì‹¤í–‰
+			System.out.println("ì¤‘ìš”ë©”ì‹œì§€");
 		}
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á!");		
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ!");		
 	}
 }

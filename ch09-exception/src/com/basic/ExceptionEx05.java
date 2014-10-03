@@ -1,19 +1,19 @@
-/* ¿¹¿ÜÃ³¸® - ¿¹¿Ü °­Á¦ ¹ß»ý
+/* ì˜ˆì™¸ì²˜ë¦¬ - ì˜ˆì™¸ ê°•ì œ ë°œìƒ
  * 
- * ÇÁ·Î±×·¥ ½ÇÇà½Ã ¹®ÀÚ¿­ ¹è¿­À» ¹Þ¾Æ¼­ 
- * Àü´ÞÇÏ°í 
- * Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥ ÀÛ¼º
+ * í”„ë¡œê·¸ëž¨ ì‹¤í–‰ì‹œ ë¬¸ìžì—´ ë°°ì—´ì„ ë°›ì•„ì„œ 
+ * ì „ë‹¬í•˜ê³  
+ * ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ ìž‘ì„±
  * 
  * 
- * ¿¹¿Ü¸¦ °­Á¦·Î ¹ß»ý½ÃÄÑ »ç¿ëÀÚ¿¡°Ô ¿Ö ¿¹¿Ü°¡ ¹ß»ýÇß´ÂÁö ¾È³»ÇÏ´Â ¿ªÇÒ
- * »ç¿ëÀÚ°¡ Àß¸øµÈ µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ´Â °æ¿ì ÁÖ·Î »ç¿ë
+ * ì˜ˆì™¸ë¥¼ ê°•ì œë¡œ ë°œìƒì‹œì¼œ ì‚¬ìš©ìžì—ê²Œ ì™œ ì˜ˆì™¸ê°€ ë°œìƒí–ˆëŠ”ì§€ ì•ˆë‚´í•˜ëŠ” ì—­í• 
+ * ì‚¬ìš©ìžê°€ ìž˜ëª»ëœ ë°ì´í„°ë¥¼ ìž…ë ¥í•˜ëŠ” ê²½ìš° ì£¼ë¡œ ì‚¬ìš©
  */
 
 
 package com.basic;
 
 public class ExceptionEx05 {
-	// ¿¹¿Ü¸¦ °­Á¦·Î ¹ß»ý½ÃÅ´
+	// ì˜ˆì™¸ë¥¼ ê°•ì œë¡œ ë°œìƒì‹œí‚´
 	
 	public void methodA(String[] n) throws Exception{
 		if(n.length > 0){
@@ -21,10 +21,10 @@ public class ExceptionEx05 {
 				System.out.println("n[" + i + "]: " + n[i]);
 			}			
 		}else{
-			//¿¹¿Ü¸¦ °­Á¦·Î ¹ß»ý½ÃÅ´, »ç¿ëÀÚ¿¡°Ô ¿Ö ¿¹¿Ü°¡ ¹ß»ýÇß´ÂÁö ¾È³»ÇÏ´Â ¿ªÇÒ
-			throw new Exception("ÀÔ·ÂÇÑ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù");
-			//ÀÌ°ÍÀ» ¿¡·¯½Ã Ãâ·ÂÇÏµµ·Ï ÇÔ
-			//System.out.println("ÀÔ·ÂÇÑ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù");
+			//ì˜ˆì™¸ë¥¼ ê°•ì œë¡œ ë°œìƒì‹œí‚´, ì‚¬ìš©ìžì—ê²Œ ì™œ ì˜ˆì™¸ê°€ ë°œìƒí–ˆëŠ”ì§€ ì•ˆë‚´í•˜ëŠ” ì—­í• 
+			throw new Exception("ìž…ë ¥í•œ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤");
+			//ì´ê²ƒì„ ì—ëŸ¬ì‹œ ì¶œë ¥í•˜ë„ë¡ í•¨
+			//System.out.println("ìž…ë ¥í•œ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤");
 		}
 	}
 	

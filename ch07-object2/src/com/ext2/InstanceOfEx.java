@@ -40,6 +40,8 @@ public class InstanceOfEx {
 		Box box1=new Box();
 		PaperBox box2=new PaperBox();
 		GoldPaperBox box3=new GoldPaperBox();
+		//컴파일 완료된 후 문장이 끝난후 참조변수에 대한 자료형 정보를 가지고 있지만 
+		//실제로 뭘 참조하는 지는(new Box(), new PaperBox(), new GoldPaperBox()) 지워지게 됩니다.
 		
 		wrapBox(box1);
 		wrapBox(box2);

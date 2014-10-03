@@ -1,9 +1,11 @@
-/* ÀÎÅÍÆäÀÌ½º - ÀÚ·áÇüÀ¸·Î »ç¿ë
- * 
- * ÀÎÅÍÆäÀÌ½º »ı¼º
- * Å¬·¡½ºÅ¸ÀÔ -> ÀÎÅÍÆäÀÌ½ºÅ¸ÀÔÀ¸·Î ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
- * ÀÎÅÍÆäÀÌ½ºÅ¸ÀÔ -> Å¬·¡½º Å¸ÀÔ ¸í½ÃÀû Çüº¯È¯
- * 
+/* 
+ì¸í„°í˜ì´ìŠ¤ - ìë£Œí˜•ìœ¼ë¡œ ì‚¬ìš©
+ 
+ê°•ì˜ë‚´ìš©
+	â€¢ ì¸í„°í˜ì´ìŠ¤ ìƒì„±
+	â€¢ í´ë˜ìŠ¤íƒ€ì… -> ì¸í„°í˜ì´ìŠ¤íƒ€ì…ìœ¼ë¡œ ìë™ì ìœ¼ë¡œ í˜•ë³€í™˜
+	â€¢ ì¸í„°í˜ì´ìŠ¤íƒ€ì… -> í´ë˜ìŠ¤ íƒ€ì… ëª…ì‹œì  í˜•ë³€í™˜
+
  * */
 
 package com.inter1;
@@ -12,16 +14,16 @@ interface Inter5{
 	public abstract void play();
 }
 
-//ÀÎÅÍÆäÀÌ½º ±¸Çö
+//ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„
 public class InterEx04 implements Inter5{
 	
 	@Override
 	public void play(){
-		System.out.println("play ¸Ş¼Òµå");
+		System.out.println("play ë©”ì†Œë“œ");
 	}
 	
 	public void make(){
-		System.out.println("Make ¸Ş¼Òµå");
+		System.out.println("Make ë©”ì†Œë“œ");
 	}
 
 	public static void main(String[] args) {
@@ -31,15 +33,15 @@ public class InterEx04 implements Inter5{
 		it04.make();
 		
 		System.out.println();
-		//Å¬·¡½ºÅ¸ÀÔ -> ÀÎÅÍÆäÀÌ½ºÅ¸ÀÔÀ¸·Î ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
+		//í´ë˜ìŠ¤íƒ€ì… -> ì¸í„°í˜ì´ìŠ¤íƒ€ì…ìœ¼ë¡œ ìë™ì ìœ¼ë¡œ í˜•ë³€í™˜
 		Inter5 it5 = it04;	 
 		it5.play();
 		
-		//È£Ãâ ¹üÀ§¸¦ ¹ş¾î³ª È£Ãâ ºÒ°¡´É
+		//í˜¸ì¶œ ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ í˜¸ì¶œ ë¶ˆê°€ëŠ¥
 		//it5.make();	//ERROR: The method make() is undefined for the type Inter5
 		
 		System.out.println();
-		//ÀÎÅÍÆäÀÌ½º -> Å¬·¡½ºÅ¸ÀÔÀ¸·Î ¸í½ÃÀûÀ¸·Î Çüº¯È¯
+		//ì¸í„°í˜ì´ìŠ¤ -> í´ë˜ìŠ¤íƒ€ì…ìœ¼ë¡œ ëª…ì‹œì ìœ¼ë¡œ í˜•ë³€í™˜
 		InterEx04 it02 = (InterEx04)it5;		
 		it02.play();
 		it02.make();
