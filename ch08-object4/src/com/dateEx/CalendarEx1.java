@@ -1,10 +1,10 @@
-/* CalendarÅ¬·¡½º - Date°ü·Ã ¸Ş¼Òµå
+/* Calendarí´ë˜ìŠ¤ - Dateê´€ë ¨ ë©”ì†Œë“œ
  * 
- * ´Ş·ÂÀÌ³ª ½Ã°è ÀÛ¼º½Ã ÁÖ·Î »ç¿ë
+ * ë‹¬ë ¥ì´ë‚˜ ì‹œê³„ ì‘ì„±ì‹œ ì£¼ë¡œ ì‚¬ìš©
  * 
  * import
- * Calendar °´Ã¼ »ı¼º
- * °´Ã¼ Ãâ·Â
+ * Calendar ê°ì²´ ìƒì„±
+ * ê°ì²´ ì¶œë ¥
  *  
  *  
  */
@@ -18,7 +18,6 @@ import java.util.Calendar;
 public class CalendarEx1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Calendar today = Calendar.getInstance();
 		System.out.println(today);
@@ -29,41 +28,39 @@ public class CalendarEx1 {
 		int month = today.get(Calendar.MONTH);
 		int date = today.get(Calendar.DATE);
 		
-		System.out.println(year +"³â" + month + "¿ù"+ date + "ÀÏ");
+		System.out.println(year +"ë…„" + month + "ì›”"+ date + "ì¼");
 		
-		//Calendar MONTH´Â 0~11À» ¸®ÅÏÇÔ ±×·¡¼­ Á¤»óÀûÀÎ ¿ùÀ» Ãâ·ÂÇÒ·Á¸é +1ÇØÁà¾ß ÇÕ´Ï´Ù.¤¤	
+		//Calendar MONTHëŠ” 0~11ì„ ë¦¬í„´í•¨ ê·¸ë˜ì„œ ì •ìƒì ì¸ ì›”ì„ ì¶œë ¥í• ë ¤ë©´ +1í•´ì¤˜ì•¼ í•©ë‹ˆë‹¤.ã„´	
 		month = month +1;
-		System.out.println(year +"³â" + month + "¿ù"+ date + "ÀÏ");
+		System.out.println(year +"ë…„" + month + "ì›”"+ date + "ì¼");
 		
 		
-		//¿äÀÏ Ãâ·ÂÇÏ±â
-		//Calendar.DAY_OF_WEEK: ¿äÀÏ 1(ÀÏ) ~ 7(Åä)
+		//ìš”ì¼ ì¶œë ¥í•˜ê¸°
+		//Calendar.DAY_OF_WEEK: ìš”ì¼ 1(ì¼) ~ 7(í† )
 		int day = today.get(Calendar.DAY_OF_WEEK);
-		String nday = "";	//ºó¹®ÀÚ¿­ ÃÊ±âÈ­		
+		String nday = "";	//ë¹ˆë¬¸ìì—´ ì´ˆê¸°í™”		
 		
 		System.out.println(day);
 		switch(day){
-		case 1: nday = "ÀÏ"; break;
-		case 2: nday = "¿ù"; break;
-		case 3: nday = "È­"; break;
-		case 4: nday = "¼ö"; break;
-		case 5: nday = "¸ñ"; break;
-		case 6: nday = "±İ"; break;
-		case 7: nday = "Åä"; break;		
+		case 1: nday = "ì¼"; break;
+		case 2: nday = "ì›”"; break;
+		case 3: nday = "í™”"; break;
+		case 4: nday = "ìˆ˜"; break;
+		case 5: nday = "ëª©"; break;
+		case 6: nday = "ê¸ˆ"; break;
+		case 7: nday = "í† "; break;		
 		}
-		System.out.println(nday + "¿äÀÏ");
+		System.out.println(nday + "ìš”ì¼");
 		
-		
-		//¿ÀÀü/¿ÀÈÄ Ç¥½Ã
-								//¿ÀÀü:0, ¿ÀÈÄ:1
+		//ì˜¤ì „/ì˜¤í›„ í‘œì‹œ
+								//ì˜¤ì „:0, ì˜¤í›„:1
 		int amPm = today.get(Calendar.AM_PM);
 		String msg_amPm = (amPm == Calendar.AM) ? 
-								"¿ÀÀü" : "¿ÀÈÄ";
-		int hour = today.get(Calendar.HOUR);	//½Ã
-		int min = today.get(Calendar.MINUTE);	//ºĞ
-		int sec = today.get(Calendar.SECOND);	//ÃÊ
-		System.out.println(msg_amPm + " " + hour + "½Ã" + min + "ºĞ" + sec + "ÃÊ");
+								"ì˜¤ì „" : "ì˜¤í›„";
+		int hour = today.get(Calendar.HOUR);	//ì‹œ
+		int min = today.get(Calendar.MINUTE);	//ë¶„
+		int sec = today.get(Calendar.SECOND);	//ì´ˆ
+		System.out.println(msg_amPm + " " + hour + "ì‹œ" + min + "ë¶„" + sec + "ì´ˆ");
 
 	}
-
 }

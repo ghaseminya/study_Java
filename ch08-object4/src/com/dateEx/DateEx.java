@@ -1,10 +1,10 @@
-/* Date È®ÀÎ
+/* Date í™•ì¸
  * 
  * Date()
- * deprecatedµÈ toLocaleString() ¸Ş¼Òµå È£Ãâ
+ * deprecatedëœ toLocaleString() ë©”ì†Œë“œ í˜¸ì¶œ
  * 
- * SimpleDateFormatÅ¬·¡½º »ç¿ëÀ» À§ÇÑ import
- * SimpleDateFormat °´Ã¼¸¦ ÅëÇØ todayÃâ·Â
+ * SimpleDateFormatí´ë˜ìŠ¤ ì‚¬ìš©ì„ ìœ„í•œ import
+ * SimpleDateFormat ê°ì²´ë¥¼ í†µí•´ todayì¶œë ¥
  */
 
 
@@ -16,23 +16,22 @@ import java.util.Date;
 public class DateEx {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		//DateÅ¬·¡½º´Â ³â¿ùÀÏ ½ÃºĞÃÊ¸¦ ÇÑ²¨¹ø¿¡ Ãâ·ÂÇÒ ¶§ »ç¿ë
-		//³â¿ùÀÏ ½ÃºĞÃÊ¸¦ µû·Î ±¸ÇÒ °æ¿ì¿¡´Â CalendarÅ¬·¡½º¸¦ »ç¿ë
+		//Dateí´ë˜ìŠ¤ëŠ” ë…„ì›”ì¼ ì‹œë¶„ì´ˆë¥¼ í•œêº¼ë²ˆì— ì¶œë ¥í•  ë•Œ ì‚¬ìš©
+		//ë…„ì›”ì¼ ì‹œë¶„ì´ˆë¥¼ ë”°ë¡œ êµ¬í•  ê²½ìš°ì—ëŠ” Calendarí´ë˜ìŠ¤ë¥¼ ì‚¬ìš©
 		Date now = new Date();
 		System.out.println(now);
 		
 		
-		//deprecatedµÈ toLocaleString()È£Ãâ
-		//deprecatedµÈ °ÍÀÓÀ» ÄÄÆÄÀÏ·¯°¡ ¾Ë·ÁÁÜ
-		//½áµµ ¿¡·¯°¡ ³ªÁö ¾ÊÁö¸¸  ¾îÂ¿¼ö ¾ø´Â °æ¿ì¸¦ Á¦¿ÜÇÏ°í´Â deprecatedµÈ ¸Ş¼Òµå´Â °¡±ŞÀû »ç¿ëÇÏÁö ¸»°Í
+		//deprecatedëœ toLocaleString()í˜¸ì¶œ
+		//deprecatedëœ ê²ƒì„ì„ ì»´íŒŒì¼ëŸ¬ê°€ ì•Œë ¤ì¤Œ
+		//ì¨ë„ ì—ëŸ¬ê°€ ë‚˜ì§€ ì•Šì§€ë§Œ  ì–´ì©”ìˆ˜ ì—†ëŠ” ê²½ìš°ë¥¼ ì œì™¸í•˜ê³ ëŠ” deprecatedëœ ë©”ì†Œë“œëŠ” ê°€ê¸‰ì  ì‚¬ìš©í•˜ì§€ ë§ê²ƒ
 		System.out.println(now.toLocaleString());
 
-		//MMÀº ¹«Á¶°Ç ´ë¹®ÀÚ(¿ù)
-		//mmÀº ¹«Á¶°Ç ¼Ò¹®ÀÚ(ºĞ)
-		//Ãâ·Â Æ÷¸ä ¼³Á¤ÈÄ Ãâ·Â
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy³â MM¿ù ddÀÏ E¿äÀÏ a hh:mm:ss");
+		//MMì€ ë¬´ì¡°ê±´ ëŒ€ë¬¸ì(ì›”)
+		//mmì€ ë¬´ì¡°ê±´ ì†Œë¬¸ì(ë¶„)
+		//ì¶œë ¥ í¬ë©§ ì„¤ì •í›„ ì¶œë ¥
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyë…„ MMì›” ddì¼ Eìš”ì¼ a hh:mm:ss");
 		String today = sdf.format(now);
 		System.out.println(today);	
 	}

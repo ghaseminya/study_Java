@@ -1,6 +1,6 @@
-/* ´Ş·Â ¸¸µé±â
+/* ë‹¬ë ¥ ë§Œë“¤ê¸°
  * 
- * ½ºÆäÀÌ½º·Î ¹®ÀÚ¿­ Á¤·ÄÇÏ¿© ´Ş·Â ¸¸µé±â
+ * ìŠ¤í˜ì´ìŠ¤ë¡œ ë¬¸ìì—´ ì •ë ¬í•˜ì—¬ ë‹¬ë ¥ ë§Œë“¤ê¸°
  */
 
 
@@ -14,28 +14,28 @@ public class CalendarEx3 {
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		Calendar cal = Calendar.getInstance();
-		System.out.println("Èñ¸Á ¿¬µµ¿Í ¿ùÀ» ÀÔ·ÂÇÏ¼¼¿ä(ex ¿¬µµ: 2020, ¿ù: 2)");
-		System.out.println("¿¬µµ: ");
+		System.out.println("í¬ë§ ì—°ë„ì™€ ì›”ì„ ì…ë ¥í•˜ì„¸ìš”(ex ì—°ë„: 2020, ì›”: 2)");
+		System.out.println("ì—°ë„: ");
 		int year = input.nextInt();
 		
-		System.out.println("¿ù: ");
+		System.out.println("ì›”: ");
 		int month = input.nextInt();
 		
-		System.out.println("\n[" + year + "³â" + month + "¿ù]");
-		System.out.println("  ÀÏ  ¿ù  È­  ¼ö  ¸ñ  ±İ  Åä");
+		System.out.println("\n[" + year + "ë…„" + month + "ì›”]");
+		System.out.println("  ì¼  ì›”  í™”  ìˆ˜  ëª©  ê¸ˆ  í† ");
 		
-		//Calendar MONTH´Â 0~11À» ¸®ÅÏÇÔ 
-		//Èñ¸Á¿¬, ¿ù, ÀÏ ¼±ÅÃ
+		//Calendar MONTHëŠ” 0~11ì„ ë¦¬í„´í•¨ 
+		//í¬ë§ì—°, ì›”, ì¼ ì„ íƒ
 		cal.set(year, month-1, 1);
 		
-		//¿ùÀÇ ¸¶Áö¸· ³¯Â¥
+		//ì›”ì˜ ë§ˆì§€ë§‰ ë‚ ì§œ
 		int lastofDate = cal.getActualMaximum(Calendar.DATE);
 		
-		//Calendar.DAY_OF_WEEK: ¿äÀÏ 1(ÀÏ) ~ 7(Åä)
-		//Ã¹³¯ÀÇ ¿äÀÏ
+		//Calendar.DAY_OF_WEEK: ìš”ì¼ 1(ì¼) ~ 7(í† )
+		//ì²«ë‚ ì˜ ìš”ì¼
 		int week = cal.get(Calendar.DAY_OF_WEEK);
 				
-		//1ÀÏÀÇ ¿äÀÏÀ» ÃøÁ¤ÇØ¼­ ÇØ´ç ¿äÀÏÀü±îÁö °ø¹éÃ³¸®
+		//1ì¼ì˜ ìš”ì¼ì„ ì¸¡ì •í•´ì„œ í•´ë‹¹ ìš”ì¼ì „ê¹Œì§€ ê³µë°±ì²˜ë¦¬
 		for(int i=1; i<week; i++){
 			System.out.print("    ");				
 		}
@@ -47,7 +47,5 @@ public class CalendarEx3 {
 			week ++;
 		}		
 		System.out.println("\n======================");
-
 	}
-
 }

@@ -6,17 +6,17 @@ import java.io.IOException;
 
 public class CoffeeMain {
 
-	//»ó¼ö (Ä¿ÇÇ ±¸¸Å½Ã Â÷°¨µÇ´Â ¾ç)
+	//ìƒìˆ˜ (ì»¤í”¼ êµ¬ë§¤ì‹œ ì°¨ê°ë˜ëŠ” ì–‘)
 	public static final int PRICE = 300;
 	public static final int CONTENT_COFFEE = 5;
 	public static final int CONTENT_CREAM = 3;
 	public static final int CONTENT_SUGAR = 1;
 
-	int amount = 0; //ÀÔ±İÇÑ µ·ÀÌ ´©Àû
-	int change = 1000; //°Å½º¸§µ·
-	int coffeeQuantity = 10;//Ä¿ÇÇ ¾ç
-	int creamQuantity = 10; //ÇÁ¸² ¾ç
-	int sugarQuantity = 10; //¼³ÅÁ ¾ç
+	int amount = 0; //ì…ê¸ˆí•œ ëˆì´ ëˆ„ì 
+	int change = 1000; //ê±°ìŠ¤ë¦„ëˆ
+	int coffeeQuantity = 10;//ì»¤í”¼ ì–‘
+	int creamQuantity = 10; //í”„ë¦¼ ì–‘
+	int sugarQuantity = 10; //ì„¤íƒ• ì–‘
 
 	BufferedReader br;
 
@@ -27,84 +27,84 @@ public class CoffeeMain {
 				new InputStreamReader(System.in));
 	}
 
-	//ÀÔ·Â ¸Ş¼­µå
+	//ì…ë ¥ ë©”ì„œë“œ
 	public void input()throws IOException{
 		while(true){
 			System.out.print(
-					"1:Ä¿ÇÇ¸¶½Ã±â,2:°ü¸®ÀÚ,3:Á¾·á");
+					"1:ì»¤í”¼ë§ˆì‹œê¸°,2:ê´€ë¦¬ì,3:ì¢…ë£Œ");
 			String str = br.readLine();
 			if(str.equals("1")){
-				System.out.print("µ¿ÀüÀ» ³ÖÀ¸¼¼¿ä(Ä¿ÇÇ°ª"+PRICE+"¿ø)>");
+				System.out.print("ë™ì „ì„ ë„£ìœ¼ì„¸ìš”(ì»¤í”¼ê°’"+PRICE+"ì›)>");
 				String coin = br.readLine();
 
-				System.out.print("±¸¸ÅÀÜ ¼ö ÀÔ·Â>");
+				System.out.print("êµ¬ë§¤ì” ìˆ˜ ì…ë ¥>");
 				String count = br.readLine();
 
 				try{
 					isSale(Integer.parseInt(coin),Integer.parseInt(count));
 				}catch(NumberFormatException e){
-					System.out.println("¼ıÀÚ¸¸ ÀÔ·Â°¡´É!");
+					System.out.println("ìˆ«ìë§Œ ì…ë ¥ê°€ëŠ¥!");
 				}catch(Exception e){
 					System.out.println(e.getMessage());
 				}
 
 			}else if(str.equals("2")){
-				//°ü¸®ÀÚ
+				//ê´€ë¦¬ì
 			}else if(str.equals("3")){
-				System.out.println("¾È´¨~~~");
+				System.out.println("ì•ˆë‡½~~~");
 				break;
 			}else{
 				System.out.println(
-						"Àß¸ø ÀÔ·ÂÇß½À´Ï´Ù.");
+						"ì˜ëª» ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 			}
 		}
 	}
 
-	//Ä¿ÇÇ ÁÖ¹® ¿¬»ê ¸Ş¼­µå
+	//ì»¤í”¼ ì£¼ë¬¸ ì—°ì‚° ë©”ì„œë“œ
 	public void processCoffee(int coin,int count){
-		//°Å½º¸§µ· Ã³¸®
+		//ê±°ìŠ¤ë¦„ëˆ ì²˜ë¦¬
 		int real_change = coin-PRICE*count;
 
 		change -= real_change;
-		System.out.println("°Å½º¸§µ· : " + real_change);
+		System.out.println("ê±°ìŠ¤ë¦„ëˆ : " + real_change);
 
-		//Ä¿ÇÇ,ÇÁ¸²,¼³ÅÁ ¾ç Â÷°¨, amount ´©Àû
+		//ì»¤í”¼,í”„ë¦¼,ì„¤íƒ• ì–‘ ì°¨ê°, amount ëˆ„ì 
 		coffeeQuantity-=CONTENT_COFFEE*count;
 		creamQuantity-=CONTENT_CREAM*count;
 		sugarQuantity-=CONTENT_SUGAR*count;
 		amount+=coin;
 
-		System.out.println("¸À ÁÁÀº Ä¿ÇÇ°¡ " + count + "ÀÜ ÁØºñµÇ¾ú½À´Ï´Ù.");
+		System.out.println("ë§› ì¢‹ì€ ì»¤í”¼ê°€ " + count + "ì” ì¤€ë¹„ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		print();
 	}
 
 	public void isSale(int coin,int count)throws Exception{
 		if(coin<PRICE*count){
-			throw new Exception("µ¿ÀüÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			throw new Exception("ë™ì „ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		}
 		if((coin-PRICE)/count>change){
-			throw new Exception("°Å½º¸§µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			throw new Exception("ê±°ìŠ¤ë¦„ëˆì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		}
 		if(coffeeQuantity<CONTENT_COFFEE*count){
-			throw new Exception("Ä¿ÇÇ°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+			throw new Exception("ì»¤í”¼ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		}
 		if(creamQuantity<CONTENT_CREAM*count){
-			throw new Exception("ÇÁ¸²ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			throw new Exception("í”„ë¦¼ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		}
 		if(sugarQuantity<CONTENT_SUGAR*count){
-			throw new Exception("¼³ÅÁÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			throw new Exception("ì„¤íƒ•ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		}
 		processCoffee(coin,count);
 	}
 
-	//ÇöÀç ÀÚÆÇ±â Á¤º¸ Ãâ·Â
+	//í˜„ì¬ ìíŒê¸° ì •ë³´ ì¶œë ¥
 	public void print(){
-		System.out.println("===ÇöÀç ÀÚÆÇ±â Á¤º¸===");
-		System.out.println("Ä¿ÇÇ¾ç : " + coffeeQuantity);
-		System.out.println("ÇÁ¸²¾ç : " + creamQuantity);
-		System.out.println("¼³ÅÁ¾ç : " + sugarQuantity);
-		System.out.println("°Å½º¸§µ· º¸À¯±İ¾× : " + change);
-		System.out.println("´©Àû±İ¾× : " + amount);
+		System.out.println("===í˜„ì¬ ìíŒê¸° ì •ë³´===");
+		System.out.println("ì»¤í”¼ì–‘ : " + coffeeQuantity);
+		System.out.println("í”„ë¦¼ì–‘ : " + creamQuantity);
+		System.out.println("ì„¤íƒ•ì–‘ : " + sugarQuantity);
+		System.out.println("ê±°ìŠ¤ë¦„ëˆ ë³´ìœ ê¸ˆì•¡ : " + change);
+		System.out.println("ëˆ„ì ê¸ˆì•¡ : " + amount);
 	}
 	public static void main(String[] args){
 		CoffeeMain cm = new CoffeeMain();
