@@ -1,19 +1,19 @@
-/* HashMap - Æ¯Â¡ È®ÀÎ
+/* HashMap - íŠ¹ì§• í™•ì¸
  * 
- * µ¥ÀÌÅÍ »ğÀÔÈÄ
- * µ¥ÀÌÅÍ È£Ãâ 
- * Å°¸¦ ÅëÇØ µ¥ÀÌÅÍ È£Ãâ 
- * °°Àº Å°°ªÀ¸·Î µ¥ÀÌÅÍ »ğÀÔ 
- * key°ªÀ¸·Î null»ç¿ë
- * value°ªÀ¸·Î null»ç¿ë
+ * ë°ì´í„° ì‚½ì…í›„
+ * ë°ì´í„° í˜¸ì¶œ 
+ * í‚¤ë¥¼ í†µí•´ ë°ì´í„° í˜¸ì¶œ 
+ * ê°™ì€ í‚¤ê°’ìœ¼ë¡œ ë°ì´í„° ì‚½ì… 
+ * keyê°’ìœ¼ë¡œ nullì‚¬ìš©
+ * valueê°’ìœ¼ë¡œ nullì‚¬ìš©
  * 
  * -------------------------------
- * ³»ºÎÀûÀÎ ±ÔÄ¢À¸·Î ÀÚµ¿ Á¤·ÄµÊ
- * key°ªÀÇ Áßº¹Àº Çã¿ë¾ÈÇÔ
+ * ë‚´ë¶€ì ì¸ ê·œì¹™ìœ¼ë¡œ ìë™ ì •ë ¬ë¨
+ * keyê°’ì˜ ì¤‘ë³µì€ í—ˆìš©ì•ˆí•¨
  * 
- * ÀÏ°ıÀûÀ¸·Î µ¥ÀÌÅÍ »Ì¾Æ³½ ÈÄ Æ¯Á¤°ª¸¸ °¡Á®¿Ã °æ¿ì »ç¿ë
+ * ì¼ê´„ì ìœ¼ë¡œ ë°ì´í„° ë½‘ì•„ë‚¸ í›„ íŠ¹ì •ê°’ë§Œ ê°€ì ¸ì˜¬ ê²½ìš° ì‚¬ìš©
  * 
- * È¯°æ¼³Á¤½Ã ¸¹ÀÌ »ç¿ë
+ * í™˜ê²½ì„¤ì •ì‹œ ë§ì´ ì‚¬ìš©
  */
 
 package com.map;
@@ -23,34 +23,34 @@ import java.util.HashMap;
 public class HashMapEx01 {
 
 	public static void main(String[] args) {
-		// Å°¿Í º§·ù¸ğµÎ Object Å¸ÀÔ·Î µé¾î°¨
+		// í‚¤ì™€ ë²¨ë¥˜ëª¨ë‘ Object íƒ€ì…ë¡œ ë“¤ì–´ê°
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
-		map.put("ÇØ¸®", new Integer(95));
-		map.put("Çì¸£¹Ì¿Â´À", new Integer(100));
-		map.put("·Ğ", new Integer(85));
-		map.put("µå·¹ÀÌÄÚ", new Integer(93));
-		map.put("³×ºô", new Integer(70));
-		map.put("¿ë", new Integer(20));
+		map.put("ë‚˜ì˜¤ë¯¸", new Integer(95));
+		map.put("ì„¸ë ˆë‚˜", new Integer(100));
+		map.put("ë¦°", new Integer(85));
+		map.put("ë‚¸ì‹œ", new Integer(93));
+		map.put("ì˜¬ë¦¬ë¹„ì•„", new Integer(70));
+		map.put("ìš©", new Integer(20));
 		
-		//Å°ÀÇ Áßº¹Àº Çã¿ëÇÏÁö ¾ÊÀ½, ±×·¡¼­ value°ªÀÌ º¯°æµÊ
-		map.put("Çì¸£¹Ì¿Â´À", new Integer(0));		
+		//í‚¤ì˜ ì¤‘ë³µì€ í—ˆìš©í•˜ì§€ ì•ŠìŒ, ê·¸ë˜ì„œ valueê°’ì´ ë³€ê²½ë¨
+		map.put("ì˜¬ë¦¬ë¹„ì•„", new Integer(0));		
 		
 		System.out.println(map);		
 		
-		//Å°¸¦ ÅëÇØ µ¥ÀÌÅÍ È£Ãâ
-		Integer num = map.get("Çì¸£¹Ì¿Â´À");
-		System.out.println( "Çì¸£¹Ì¿À´À ÀÇ ¼ºÀûÀº "  + num);
+		//í‚¤ë¥¼ í†µí•´ ë°ì´í„° í˜¸ì¶œ
+		Integer num = map.get("ì˜¬ë¦¬ë¹„ì•„");
+		System.out.println( "ì˜¬ë¦¬ë¹„ì•„ ì˜ ì„±ì ì€ "  + num);
 		
-		//key°ªÀ¸·Î null»ç¿ë 
+		//keyê°’ìœ¼ë¡œ nullì‚¬ìš© 
 		map.put(null,  new Integer(99));
 		
-		//key·Î ³Î»ç¿ë °¡´É, nullÀ» ½Äº°ÀÚ Ã³·³ ÀÌ¿ëÇÔ
+		//keyë¡œ ë„ì‚¬ìš© ê°€ëŠ¥, nullì„ ì‹ë³„ì ì²˜ëŸ¼ ì´ìš©í•¨
 		System.out.println(map);	
 		
-		//value°ªÀ¸·Î null»ç¿ë 
-		map.put("µå·¹°ï",  null);
+		//valueê°’ìœ¼ë¡œ nullì‚¬ìš© 
+		map.put("ë“œë ˆê³¤",  null);
 		
-		//value°ªÀ¸·Î null»ç¿ë°¡´É
+		//valueê°’ìœ¼ë¡œ nullì‚¬ìš©ê°€ëŠ¥
 		System.out.println(map);		
 	}
 }

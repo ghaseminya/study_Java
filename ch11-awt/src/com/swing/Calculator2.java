@@ -1,15 +1,15 @@
-/* »çÄ¢¿¬»ê±â - ¹®ÀÚ ÀÔ·Â ¿¹¿ÜÃ³¸®
+/* ì‚¬ì¹™ì—°ì‚°ê¸° - ë¬¸ìž ìž…ë ¥ ì˜ˆì™¸ì²˜ë¦¬
  * 
  * 
- * ¼ýÀÚ¸¸ ÀÔ·ÂµÇ¾î¾ßµÇ´Âµ¥ ¹®ÀÚ°¡ ÀÔ·ÂµÇ´ÂÁö °ËÁõ
- * charAt()°ú ¾Æ½ºÅ°ÄÚµå È°¿ë
+ * ìˆ«ìžë§Œ ìž…ë ¥ë˜ì–´ì•¼ë˜ëŠ”ë° ë¬¸ìžê°€ ìž…ë ¥ë˜ëŠ”ì§€ ê²€ì¦
+ * charAt()ê³¼ ì•„ìŠ¤í‚¤ì½”ë“œ í™œìš©
  * 
  *  
- * 51 -> 5½ÊÀÌ
+ * 51 -> 5ì‹­ì´
  *       01 2   
  *  
  * charAt(i)
- * ¾Æ½ºÅ°ÄÚµå°ª: ¼ýÀÚÀÇ ¹üÀ§ 48~57(0~9)¾È¿¡ ÀÖÀ¸¸é ¼ýÀÚÀÌ°í ÀÌ ¹üÀ§ÀÌ¸é ¹®ÀÚ¶ó°í ¾Ë·ÁÁØ´Ù.
+ * ì•„ìŠ¤í‚¤ì½”ë“œê°’: ìˆ«ìžì˜ ë²”ìœ„ 48~57(0~9)ì•ˆì— ìžˆìœ¼ë©´ ìˆ«ìžì´ê³  ì´ ë²”ìœ„ì´ë©´ ë¬¸ìžë¼ê³  ì•Œë ¤ì¤€ë‹¤.
  * 
  */
 
@@ -40,7 +40,7 @@ public class Calculator2 extends JFrame implements ActionListener{
 	String str1, str2, com;
 	
 	public Calculator2(){
-		super("»çÄ¢¿¬»ê±â");
+		super("ì‚¬ì¹™ì—°ì‚°ê¸°");
 		
 		Container contentPane = getContentPane();		
 		
@@ -60,11 +60,11 @@ public class Calculator2 extends JFrame implements ActionListener{
 		panel1.add(new JLabel("="));
 		panel1.add(text3);
 		
-		//°á°ú°ªÀÌ º¸¿©Áö´Â TextField ¼öÁ¤ ºÒ°¡
+		//ê²°ê³¼ê°’ì´ ë³´ì—¬ì§€ëŠ” TextField ìˆ˜ì • ë¶ˆê°€
 		text3.setEditable(false);
 		
-		button1 = new JButton("È®ÀÎ");
-		button2 = new JButton("Ãë¼Ò");
+		button1 = new JButton("í™•ì¸");
+		button2 = new JButton("ì·¨ì†Œ");
 		
 		panel2.add(button1);
 		panel2.add(button2);
@@ -72,13 +72,13 @@ public class Calculator2 extends JFrame implements ActionListener{
 		contentPane.add(panel1, BorderLayout.NORTH);
 		contentPane.add(panel2, BorderLayout.CENTER);
 
-		//ÀÍ¸í³»ºÎÅ¬·¡½º·Î x¹öÆ° ÇÑ°ÍÀÌ¶û µ¿ÀÏ
+		//ìµëª…ë‚´ë¶€í´ëž˜ìŠ¤ë¡œ xë²„íŠ¼ í•œê²ƒì´ëž‘ ë™ì¼
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//x, y
 		setLocation(500, 400);	
 		
-		//»çÀÌÁî¸¦ ¸í½ÃÇÏÁö ¾Ê°í pack()»ç¿ëÇÏ¸é ÄÄÆ÷³ÍÆ®ÀÇ Å©±â¸¦ ÀÎ½ÄÇØ¼­ ÀÚµ¿ÀûÀ¸·Î »çÀÌÁî¸¦ °è»ê		
+		//ì‚¬ì´ì¦ˆë¥¼ ëª…ì‹œí•˜ì§€ ì•Šê³  pack()ì‚¬ìš©í•˜ë©´ ì»´í¬ë„ŒíŠ¸ì˜ í¬ê¸°ë¥¼ ì¸ì‹í•´ì„œ ìžë™ì ìœ¼ë¡œ ì‚¬ì´ì¦ˆë¥¼ ê³„ì‚°		
 		pack();
 		
 		button1.addActionListener(this);
@@ -90,28 +90,28 @@ public class Calculator2 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e){
 		
-		//°´Ã¼ ÀÚÃ¼¸¦ ºÒ·¯¿À±â
+		//ê°ì²´ ìžì²´ë¥¼ ë¶ˆëŸ¬ì˜¤ê¸°
 		Object obj = e.getSource();
 		
-		if( obj == button1 ){	//È®ÀÎ
+		if( obj == button1 ){	//í™•ì¸
 			str1 = text1.getText();
 			str2 = text2.getText();
 			com = (String)combo.getSelectedItem();			
 						
 			
-			//String -> int ½Ã ¿¹¿ÜÃ³¸® ¹æ¹ý 2
+			//String -> int ì‹œ ì˜ˆì™¸ì²˜ë¦¬ ë°©ë²• 2
 			int check =0;
 			for(int i=0; i<str1.length(); i++){
 				
 				//'1' -> 49
 				check = str1.charAt(i);
 				
-				//¾Æ½ºÅ°ÄÚµå 48~59ÀÎÁö Ã¼Å©
+				//ì•„ìŠ¤í‚¤ì½”ë“œ 48~59ì¸ì§€ ì²´í¬
 				if( check >= 48 || check <=59){
 					num1 = Integer.parseInt(str1);					
 				}else
 				{
-					showErrMsg(text2, "¼ýÀÚ¸¸ ÀÔ·Â°¡´ÉÇÕ´Ï´Ù");
+					showErrMsg(text2, "ìˆ«ìžë§Œ ìž…ë ¥ê°€ëŠ¥í•©ë‹ˆë‹¤");
 				}				
 			}			
 			
@@ -120,20 +120,20 @@ public class Calculator2 extends JFrame implements ActionListener{
 				num1 = Integer.parseInt(str1);
 				
 			}catch(NumberFormatException ne){
-				showErrMsg(text1, "¼ýÀÚ¸¸ ÀÔ·Â°¡´ÉÇÕ´Ï´Ù");
+				showErrMsg(text1, "ìˆ«ìžë§Œ ìž…ë ¥ê°€ëŠ¥í•©ë‹ˆë‹¤");
 				return;
 			}			
 			try{
 				num2 = Integer.parseInt(str2);
 				
 			}catch(NumberFormatException ne){
-				showErrMsg(text2, "¼ýÀÚ¸¸ ÀÔ·Â°¡´ÉÇÕ´Ï´Ù");
+				showErrMsg(text2, "ìˆ«ìžë§Œ ìž…ë ¥ê°€ëŠ¥í•©ë‹ˆë‹¤");
 			}
 			
 			doCalc();
 			
 			
-		}else{	//Ãë¼Ò
+		}else{	//ì·¨ì†Œ
 			text1.setText("");
 			text2.setText("");
 			text3.setText("");			
@@ -141,7 +141,7 @@ public class Calculator2 extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		// ¿¾³¯ MAC½ºÅ¸ÀÏ·Î Ç¥½Ã
+		// ì˜›ë‚  MACìŠ¤íƒ€ì¼ë¡œ í‘œì‹œ
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		new Calculator2();
 	}
@@ -158,17 +158,17 @@ public class Calculator2 extends JFrame implements ActionListener{
 			//text3.setText( String.valueOf(result) );
 			text3.setText(result + "");
 		}catch(ArithmeticException ae){
-			showErrMsg(text2, "0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù!");
+			showErrMsg(text2, "0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
 		}
 	}
 	
 	private void showErrMsg(JTextField text, String str){
 		text2.requestFocus();
 		text2.setText("");
-		// ¿¡·¯ ¹ß»ý½Ã ÇÕ°è¸¦ Áö¿ò
+		// ì—ëŸ¬ ë°œìƒì‹œ í•©ê³„ë¥¼ ì§€ì›€
 		text3.setText("");
-								//ºÎ¸ðÄÄÆ÷³ÍÆ®, ¿¡·¯¹®±¸(¸Þ½ÃÁö), ¸Þ½ÃÁö Å¸ÀÌÆ², ¾ÆÀÌÄÜÅ¸ÀÔ(¸Þ½ÃÁöÅ¸ÀÔ)
-		JOptionPane.showMessageDialog(this, str, "¿¡·¯ ¸Þ½ÃÁö", JOptionPane.ERROR_MESSAGE);
+								//ë¶€ëª¨ì»´í¬ë„ŒíŠ¸, ì—ëŸ¬ë¬¸êµ¬(ë©”ì‹œì§€), ë©”ì‹œì§€ íƒ€ì´í‹€, ì•„ì´ì½˜íƒ€ìž…(ë©”ì‹œì§€íƒ€ìž…)
+		JOptionPane.showMessageDialog(this, str, "ì—ëŸ¬ ë©”ì‹œì§€", JOptionPane.ERROR_MESSAGE);
 		
 	}
 }

@@ -4,11 +4,11 @@
  * EchoClient
  * EchoServer
  * -------------------------------------------------------
- * Æ÷Æ®¹øÈ£ ³Ñ°ÜÁÖ¸é¼­
- * ¼­¹ö ¼ÒÄÏ »ı¼º
+ * í¬íŠ¸ë²ˆí˜¸ ë„˜ê²¨ì£¼ë©´ì„œ
+ * ì„œë²„ ì†Œì¼“ ìƒì„±
  * 
- * while¿¡¼­ accept¿¡¼­ Å¬¶óÀÌ¾ğÆ® ¼Ò¼Â »ı¼º
- * Å¬¶óÀÌ³ÊÆ®°¡ µé¾î¿À¸é tcp¼ÒÄÏ »ı¼º
+ * whileì—ì„œ acceptì—ì„œ í´ë¼ì´ì–¸íŠ¸ ì†Œì…‹ ìƒì„±
+ * í´ë¼ì´ë„ˆíŠ¸ê°€ ë“¤ì–´ì˜¤ë©´ tcpì†Œì¼“ ìƒì„±
  */
 
 package com.socket;
@@ -41,38 +41,38 @@ public class EchoServer {
 			System.exit(0);
 		}
 
-		//Áß´Ü½ÃÅ°Áö ¾ÊÀ¸¸é °è¼Ó Å¬¶óÀÌ¾ğÆ®¸¦ ±â´Ù¸®µµ·Ï ¹«ÇÑ·çÇÁ
+		//ì¤‘ë‹¨ì‹œí‚¤ì§€ ì•Šìœ¼ë©´ ê³„ì† í´ë¼ì´ì–¸íŠ¸ë¥¼ ê¸°ë‹¤ë¦¬ë„ë¡ ë¬´í•œë£¨í”„
 		while(true){
 			try{
-				System.out.println("Å¬¶óÀÌ¾ğÆ®ÀÇ ¿äÃ»À» ±â´Ù¸®´Â Áß!");
+				System.out.println("í´ë¼ì´ì–¸íŠ¸ì˜ ìš”ì²­ì„ ê¸°ë‹¤ë¦¬ëŠ” ì¤‘!");
 
-				//¼ÒÄÏ »ı¼º, Ã»Ãë
+				//ì†Œì¼“ ìƒì„±, ì²­ì·¨
 				Socket tcpSocket = serverS.accept();
 
-				//Client IPÁÖ¼Ò ±¸ÇÏ±â
-				System.out.println("Å¬¶óÀÌ¾ğÆ®ÀÇ IPÁÖ¼Ò: " + tcpSocket.getInetAddress().getHostAddress());
+				//Client IPì£¼ì†Œ êµ¬í•˜ê¸°
+				System.out.println("í´ë¼ì´ì–¸íŠ¸ì˜ IPì£¼ì†Œ: " + tcpSocket.getInetAddress().getHostAddress());
 
-				//ÀÔ·Â ½ºÆ®¸² »ı¼º client¿¡¼­ Àü¼ÛµÈ µ¥ÀÌÅÍ Ã³¸®)
+				//ì…ë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„± clientì—ì„œ ì „ì†¡ëœ ë°ì´í„° ì²˜ë¦¬)
 				is = tcpSocket.getInputStream();
-				//byte½ºÆ®¸² -> char½ºÆ®¸² Çüº¯È¯				
+				//byteìŠ¤íŠ¸ë¦¼ -> charìŠ¤íŠ¸ë¦¼ í˜•ë³€í™˜				
 				bufferR = new BufferedReader(new InputStreamReader(is));
 
-				//Ãâ·Â ½ºÆ®¸² »ı¼º (¼­¹ö¿¡¼­ Å¬¶óÀÌ¾ğÆ®·Î Àü¼ÛµÉ µ¥ÀÌÅÍ Ã³¸®)
+				//ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„± (ì„œë²„ì—ì„œ í´ë¼ì´ì–¸íŠ¸ë¡œ ì „ì†¡ë  ë°ì´í„° ì²˜ë¦¬)
 				os = tcpSocket.getOutputStream();					
 				bufferW = new BufferedWriter(new OutputStreamWriter(os));
 
-				//client¿¡¼­ Àü¼ÛµÈ µ¥ÀÌÅÍ¸¦ ¹ŞÀ½
+				//clientì—ì„œ ì „ì†¡ëœ ë°ì´í„°ë¥¼ ë°›ìŒ
 				String message = bufferR.readLine();
-				//ÄÜ¼Ö¿¡ Ç¥½Ã
-				System.out.println("¼ö½Å¸Ş½ÃÁö: " +  message);
+				//ì½˜ì†”ì— í‘œì‹œ
+				System.out.println("ìˆ˜ì‹ ë©”ì‹œì§€: " +  message);
 
-				//ÁÙ¹Ù²ŞÀ» ÇÔÀ¸·Î½á ´õÀÌ»ó µ¥ÀÌÅÍ°¡ ¾øÀ½À» Ç¥½Ã
+				//ì¤„ë°”ê¿ˆì„ í•¨ìœ¼ë¡œì¨ ë”ì´ìƒ ë°ì´í„°ê°€ ì—†ìŒì„ í‘œì‹œ
 				message = message + System.getProperty("line.separator");
 
-				//¼­¹ö¿¡¼­ Å¬¶óÀÌ¾ğÆ®·Î Àü¼Û (µ¥ÀÌÅÍ¸¦ ¹öÆÛ¿¡ ÀúÀå)
+				//ì„œë²„ì—ì„œ í´ë¼ì´ì–¸íŠ¸ë¡œ ì „ì†¡ (ë°ì´í„°ë¥¼ ë²„í¼ì— ì €ì¥)
 				bufferW.write(message);
 
-				//¼­¹ö¿¡¼­ Å¬¶óÀÌ¾ğÆ®·Î µ¥ÀÌÅÍ¸¦ Àü¼Û(¸í½ÃÀû flush)
+				//ì„œë²„ì—ì„œ í´ë¼ì´ì–¸íŠ¸ë¡œ ë°ì´í„°ë¥¼ ì „ì†¡(ëª…ì‹œì  flush)
 				bufferW.flush();			
 
 			}catch(IOException e){

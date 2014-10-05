@@ -1,19 +1,19 @@
-/* ±×¸²ÆÇ ±×¸®±â - ¹®ÀÚ¸¦ ÅëÇØ °£´ÜÇÏ°Ô ±×¸²ÆÇ ±¸Çö
+/* ê·¸ë¦¼íŒ ê·¸ë¦¬ê¸° - ë¬¸ìë¥¼ í†µí•´ ê°„ë‹¨í•˜ê²Œ ê·¸ë¦¼íŒ êµ¬í˜„
  * 
  * import
- * ±×¸²À» ±×¸®±â À§ÇØ »ç¿ëÇÒ ¹®ÀÚ¼ÂÆÃ
+ * ê·¸ë¦¼ì„ ê·¸ë¦¬ê¸° ìœ„í•´ ì‚¬ìš©í•  ë¬¸ìì…‹íŒ…
  * implements MouseMotionListener
- * Frame¿¡ ¸¶¿ì½º ÀÌº¥Æ®¸®½º³Ê ¿¬°á
- * @Override public void mouseMoved(MouseEvent e){ } ±¸Çö
- * @Override public void mouseDragged(MouseEvent e){ } ±¸Çö ¹× ÀçÁ¤ÀÇ
- * repaint();	// ³»ºÎÀûÀ¸·Î paint(Graphics g)¸¦ ÀÚµ¿ÀûÀ¸·Î È£Ãâ À§ÇØ *  
- * update()¸¦ ÀçÁ¤ÀÇ
+ * Frameì— ë§ˆìš°ìŠ¤ ì´ë²¤íŠ¸ë¦¬ìŠ¤ë„ˆ ì—°ê²°
+ * @Override public void mouseMoved(MouseEvent e){ } êµ¬í˜„
+ * @Override public void mouseDragged(MouseEvent e){ } êµ¬í˜„ ë° ì¬ì •ì˜
+ * repaint();	// ë‚´ë¶€ì ìœ¼ë¡œ paint(Graphics g)ë¥¼ ìë™ì ìœ¼ë¡œ í˜¸ì¶œ ìœ„í•´ *  
+ * update()ë¥¼ ì¬ì •ì˜
  * ----------------------------------------------------------------------
- * paint(Graphics g) ¸Å¹ø °»½Å, ÇöÀçµ¥ÀÌÅÍ¸¸ Ç¥½ÃÇÕ´Ï´Ù.
- * ±×¸²ÆÇÀº °è¼Ó ´©ÀûµÇ¾îÁ®¾ß ÇÔ, ´©Àû½ÃÅ°±â À§ÇØ FrameÀÇ update()¸¦ ÀçÁ¤ÀÇÇØ¾ß ÇÕ´Ï´Ù.
+ * paint(Graphics g) ë§¤ë²ˆ ê°±ì‹ , í˜„ì¬ë°ì´í„°ë§Œ í‘œì‹œí•©ë‹ˆë‹¤.
+ * ê·¸ë¦¼íŒì€ ê³„ì† ëˆ„ì ë˜ì–´ì ¸ì•¼ í•¨, ëˆ„ì ì‹œí‚¤ê¸° ìœ„í•´ Frameì˜ update()ë¥¼ ì¬ì •ì˜í•´ì•¼ í•©ë‹ˆë‹¤.
  * 
- * mouseMoved() {} ÀÌº¥Æ®·Î ¹®ÀÚ°¡ ¸¶¿ì½º¸¦ µû¶ó´Ù´Ï´Â °ÍÀ» È®ÀÎ
- * mouseMoved() {} -> mouseDragged {} ¸Ş¼Òµå ³»¿ë ¿Å°Ü ±×¸²ÀÌ ±×·ÁÁö´Â °ÍÈ®ÀÎ
+ * mouseMoved() {} ì´ë²¤íŠ¸ë¡œ ë¬¸ìê°€ ë§ˆìš°ìŠ¤ë¥¼ ë”°ë¼ë‹¤ë‹ˆëŠ” ê²ƒì„ í™•ì¸
+ * mouseMoved() {} -> mouseDragged {} ë©”ì†Œë“œ ë‚´ìš© ì˜®ê²¨ ê·¸ë¦¼ì´ ê·¸ë ¤ì§€ëŠ” ê²ƒí™•ì¸
  * 
  */
 package com.graphic;
@@ -33,9 +33,9 @@ public class GraphicEx03 extends Frame implements MouseMotionListener{
 	int y=0;	
 	
 	public GraphicEx03(){
-		super("±×·¡ÇÈ µ¥½ºÆ®3");
+		super("ê·¸ë˜í”½ ë°ìŠ¤íŠ¸3");
 		
-		//x¹öÆ° ÀÌº¥Æ® Ã³¸®
+		//xë²„íŠ¼ ì´ë²¤íŠ¸ ì²˜ë¦¬
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e){
@@ -46,12 +46,12 @@ public class GraphicEx03 extends Frame implements MouseMotionListener{
 		setBounds(100, 100, 500, 500);
 		setVisible(true);
 		
-		//Frame¿¡ ¸¶¿ì½º ÀÌº¥Æ®¸®½º³Ê ¿¬°á
+		//Frameì— ë§ˆìš°ìŠ¤ ì´ë²¤íŠ¸ë¦¬ìŠ¤ë„ˆ ì—°ê²°
 		addMouseMotionListener(this);
 	}
 	
 	public void paint(Graphics g){
-		//±×¸²À» ±×¸®±â À§ÇØ »ç¿ëÇÒ ¹®ÀÚ¼ÂÆÃ
+		//ê·¸ë¦¼ì„ ê·¸ë¦¬ê¸° ìœ„í•´ ì‚¬ìš©í•  ë¬¸ìì…‹íŒ…
 		g.setFont(new Font("Serif", Font.PLAIN, 15));
 		g.setColor(Color.GREEN);
 		g.drawString("*", x, y);		
@@ -63,18 +63,18 @@ public class GraphicEx03 extends Frame implements MouseMotionListener{
 	
 	@Override
 	public void mouseDragged(MouseEvent e){
-		//¿òÁ÷ÀÏ¶§ ¸¶´Ù ¸¶¿ì½º Ä¿¼­ÀÇ ÁÂÇ¥
+		//ì›€ì§ì¼ë•Œ ë§ˆë‹¤ ë§ˆìš°ìŠ¤ ì»¤ì„œì˜ ì¢Œí‘œ
 				x = e.getX();
 				y = e.getY();
 				
-				//paint()¸Ş¼Òµå¸¦ ÅëÇØ Á÷Á¢ graphics °´Ã¼¸¦ ³Ö¾îÁÙ¼ö ¾ø´Ù.
-				//±×´ë½Å, repaint()¸¦ »ç¿ëÇÏ°Ô µÇ¸é ³»ºÎÀûÀ¸·Î paint(Graphics g)¸¦ ÀÚµ¿ÀûÀ¸·Î È£ÃâÇÑ´Ù.
+				//paint()ë©”ì†Œë“œë¥¼ í†µí•´ ì§ì ‘ graphics ê°ì²´ë¥¼ ë„£ì–´ì¤„ìˆ˜ ì—†ë‹¤.
+				//ê·¸ëŒ€ì‹ , repaint()ë¥¼ ì‚¬ìš©í•˜ê²Œ ë˜ë©´ ë‚´ë¶€ì ìœ¼ë¡œ paint(Graphics g)ë¥¼ ìë™ì ìœ¼ë¡œ í˜¸ì¶œí•œë‹¤.
 				// repaint() -> update(Graphics g) -> paint(Graphics g)
 				repaint();
 	}
 	
-	//±×¸²ÆÇÀº °è¼Ó ÀÌÀü ±×¸° ÈçÀûÀÌ ´©ÀûµÇ¾îÁ®¾ß ÇÔ, 
-	//´©Àû½ÃÅ°±â À§ÇØ FrameÀÇ update()¸¦ ÀçÁ¤ÀÇ
+	//ê·¸ë¦¼íŒì€ ê³„ì† ì´ì „ ê·¸ë¦° í”ì ì´ ëˆ„ì ë˜ì–´ì ¸ì•¼ í•¨, 
+	//ëˆ„ì ì‹œí‚¤ê¸° ìœ„í•´ Frameì˜ update()ë¥¼ ì¬ì •ì˜
 	@Override
 	public void update(Graphics g){
 		paint(g);

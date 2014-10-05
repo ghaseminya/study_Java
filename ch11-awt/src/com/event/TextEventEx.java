@@ -2,24 +2,24 @@
  * 
  * 
  * import
- * »ı¼ºÀÚ »ı¼º
- * Frame»ó¼Ó¹ŞÀº °´Ã¼»ı¼º
- * °´Ã¼»ı¼º (TextFiled, Button, TextArea)
+ * ìƒì„±ì ìƒì„±
+ * Frameìƒì†ë°›ì€ ê°ì²´ìƒì„±
+ * ê°ì²´ìƒì„± (TextFiled, Button, TextArea)
  * 
- * Frame Å¸ÀÌÆ²
- * ÃÊ±â ¹öÆ°»óÅÂ ÁöÁ¤ - ºñÈ°¼ºÈ­ 
- * Panel °´Ã¼ »ı¼º
- * Frame¿¡ Panel, TextArea, ButtonÀ» ¼øÂ÷ÀûÀ¸·Î µî·Ï
+ * Frame íƒ€ì´í‹€
+ * ì´ˆê¸° ë²„íŠ¼ìƒíƒœ ì§€ì • - ë¹„í™œì„±í™” 
+ * Panel ê°ì²´ ìƒì„±
+ * Frameì— Panel, TextArea, Buttonì„ ìˆœì°¨ì ìœ¼ë¡œ ë“±ë¡
  * 
- * FrameÀÇ À§Ä¡, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
- * FrameÀÇ ³ëÃâ¿©ºÎ ¼³Á¤
+ * Frameì˜ ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
+ * Frameì˜ ë…¸ì¶œì—¬ë¶€ ì„¤ì •
  * implements ActionListener
- * Button°ú ÀÌº¥Æ® ¿¬°á
- * @Override actionPerformed ±¸Çö
+ * Buttonê³¼ ì´ë²¤íŠ¸ ì—°ê²°
+ * @Override actionPerformed êµ¬í˜„
  * 
  * 
  * implements TextListener
- * TextField¿¡ ÀÌº¥Æ® ¿¬°á
+ * TextFieldì— ì´ë²¤íŠ¸ ì—°ê²°
  * @Override textValueChanged 
  * 
  * 
@@ -43,57 +43,57 @@ import java.awt.event.ActionListener;
 public class TextEventEx extends Frame implements ActionListener, TextListener{	
 	
 	TextField tf = new TextField(20);
-	Button input = new Button("ÀÔ·Â");
-	Button exit = new Button("Á¾·á");
+	Button input = new Button("ì…ë ¥");
+	Button exit = new Button("ì¢…ë£Œ");
 	TextArea ta = new TextArea();	
 	
 	public TextEventEx(){
-		//Frame Å¸ÀÌÆ² ¼³Á¤
+		//Frame íƒ€ì´í‹€ ì„¤ì •
 		super("TextEvent Test");
 		
-		//ÃÊ±â ¹öÆ°»óÅÂ ÁöÁ¤ - ºñÈ°¼ºÈ­
+		//ì´ˆê¸° ë²„íŠ¼ìƒíƒœ ì§€ì • - ë¹„í™œì„±í™”
 		input.setEnabled(false);
 		
-		//Panel °´Ã¼ »ı¼º
+		//Panel ê°ì²´ ìƒì„±
 		Panel p = new Panel();
-		p.add(new Label("Á¦¸ñ:"));
+		p.add(new Label("ì œëª©:"));
 		p.add(tf);
 		p.add(input);
 		
-		//Frame¿¡ Panel, TextArea, ButtonÀ» ¼øÂ÷ÀûÀ¸·Î µî·Ï
+		//Frameì— Panel, TextArea, Buttonì„ ìˆœì°¨ì ìœ¼ë¡œ ë“±ë¡
 		add(p, BorderLayout.NORTH);
 		add(ta, BorderLayout.CENTER);
 		add(exit, BorderLayout.SOUTH);
 		
-		//Button°ú ÀÌº¥Æ® ¿¬°á
+		//Buttonê³¼ ì´ë²¤íŠ¸ ì—°ê²°
 		input.addActionListener(this);
 		exit.addActionListener(this);
 		
-		//TextField¿¡ ÀÌº¥Æ® ¿¬°á
+		//TextFieldì— ì´ë²¤íŠ¸ ì—°ê²°
 		tf.addTextListener(this);
 		
-		//FrameÀÇ À§Ä¡, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
+		//Frameì˜ ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
 		setBounds(300, 300, 300, 300);			
 		
-		//FrameÀÇ ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frameì˜ ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);
 		
 	}
 	@Override
 	public void actionPerformed(ActionEvent e){
-		if( e.getActionCommand().equals("ÀÔ·Â")){
+		if( e.getActionCommand().equals("ì…ë ¥")){
 			ta.append(tf.getText() + "\n");
 			tf.setText("");
-			//Æ÷Ä¿½º¸¦ TextField¿¡ µÎ±â
+			//í¬ì»¤ìŠ¤ë¥¼ TextFieldì— ë‘ê¸°
 			tf.requestFocus();
-		}else if( e.getActionCommand().equals("Á¾·á")){
+		}else if( e.getActionCommand().equals("ì¢…ë£Œ")){
 			System.exit(0);
 		}		
 	}
 	@Override
 	public void textValueChanged(TextEvent e){
 		
-		if(tf.getText().equals("")){	//ÀÔ·ÂÇÑ µ¥ÀÌÅÍ°¡ ¾ø´Â °æ¿ì
+		if(tf.getText().equals("")){	//ì…ë ¥í•œ ë°ì´í„°ê°€ ì—†ëŠ” ê²½ìš°
 			input.setEnabled(false);					
 		}else{
 			input.setEnabled(true);	

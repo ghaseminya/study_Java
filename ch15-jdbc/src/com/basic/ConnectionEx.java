@@ -1,4 +1,4 @@
-/* JDBC ¿¬µ¿Å×½ºÆ®
+/* JDBC ì—°ë™í…ŒìŠ¤íŠ¸
  * 
  */
 package com.basic;
@@ -10,20 +10,20 @@ import java.sql.SQLException;
 public class ConnectionEx {
 	
 	public static void main(String[] args){
-		//Á¢¼Ó Á¤º¸ ÀúÀå
-		//JDBC»ç¿ëÇÏ¸é¼­ OracleDB¸¦ »ç¿ëÇÏ¸ç thinµå¶óÀÌ¹ö¸¦ »ç¿ëÇÏ¿© IP¹× Æ÷Æ®·Î Á¢¼Ó ¹× DBÀÇ SID						//
+		//ì ‘ì† ì •ë³´ ì €ì¥
+		//JDBCì‚¬ìš©í•˜ë©´ì„œ OracleDBë¥¼ ì‚¬ìš©í•˜ë©° thinë“œë¼ì´ë²„ë¥¼ ì‚¬ìš©í•˜ì—¬ IPë° í¬íŠ¸ë¡œ ì ‘ì† ë° DBì˜ SID						//
 		//"jdbc:oracle:thin:@	192.168.0.10:1521:orcl";
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
 		String passwd ="1234";
 		
 		try{
-			//JDBC ¼öÇà 1´Ü°è: µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
-			//ÁöÁ¤µÈ µå¶óÀÌ¹ö Å¬·¡½º¸¦ Ã£¾Æ¼­ ¸Ş¸ğ¸®¿¡ ·Îµå½ÃÅ´
+			//JDBC ìˆ˜í–‰ 1ë‹¨ê³„: ë“œë¼ì´ë²„ í´ë˜ìŠ¤ ë¡œë“œ
+			//ì§€ì •ëœ ë“œë¼ì´ë²„ í´ë˜ìŠ¤ë¥¼ ì°¾ì•„ì„œ ë©”ëª¨ë¦¬ì— ë¡œë“œì‹œí‚´
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//JDBC ¼öÇà 2´Ü°è: Connection °´Ã¼(URL, ID, PASSWORD)ÅëÇØ °èÁ¤ ÀÎÁõ ¼öÇà
+			//JDBC ìˆ˜í–‰ 2ë‹¨ê³„: Connection ê°ì²´(URL, ID, PASSWORD)í†µí•´ ê³„ì • ì¸ì¦ ìˆ˜í–‰
 			Connection con = DriverManager.getConnection(dbURL, id, passwd);
-			System.out.println("Connection°´Ã¼°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.");
+			System.out.println("Connectionê°ì²´ê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			System.out.println(con);
 		}catch(SQLException e) {
 			e.printStackTrace();

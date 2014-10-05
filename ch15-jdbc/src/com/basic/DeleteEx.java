@@ -1,8 +1,8 @@
 /* SQL - DELETE 
  * 
  * -----------------------------------
- * ÀÚ¹Ù´Â AUTO COMMITÀÌ´Ù.
- * ±×·¡¼­, ·Ñ¹é(ROLLBACK)ÀÌ µÇÁö ¾Ê½À´Ï´Ù.
+ * ìë°”ëŠ” AUTO COMMITì´ë‹¤.
+ * ê·¸ë˜ì„œ, ë¡¤ë°±(ROLLBACK)ì´ ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
  */
 
 
@@ -18,7 +18,7 @@ import java.sql.SQLException;
 public class DeleteEx {
 
 	public static void main(String[] args) {
-		//Á¢¼Ó Á¤º¸ ÀúÀå
+		//ì ‘ì† ì •ë³´ ì €ì¥
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
 		String passwd ="1234";
@@ -29,27 +29,27 @@ public class DeleteEx {
 		String sql="";		
 		
 		try{
-			//JDBC 1´Ü°è: Driver ·Îµå
+			//JDBC 1ë‹¨ê³„: Driver ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//JDBC 2´Ü°è: Connection °´Ã¼ »ı¼º
+			//JDBC 2ë‹¨ê³„: Connection ê°ì²´ ìƒì„±
 			con = DriverManager.getConnection(dbURL, id, passwd);
-			//JDBC 3´Ü°è: Statement°´Ã¼ »ı¼º
+			//JDBC 3ë‹¨ê³„: Statementê°ì²´ ìƒì„±
 			stmt = con.createStatement();			
 			
-			//DELETE½Ã WHERE¾²Áö ¾Ê°í »èÁ¦ÇÒ °æ¿ì º¹±¸ ºÒ°¡´ÉÇÕ´Ï´Ù.
-			//ÀÚ¹Ù´Â ÀÚµ¿Ä¿¹ÔµÇ±â ¶§¹®¿¡ ·Ñ¹éÀÌ µÇÁö ¾Ê½À´Ï´Ù.
+			//DELETEì‹œ WHEREì“°ì§€ ì•Šê³  ì‚­ì œí•  ê²½ìš° ë³µêµ¬ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.
+			//ìë°”ëŠ” ìë™ì»¤ë°‹ë˜ê¸° ë•Œë¬¸ì— ë¡¤ë°±ì´ ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 			sql="DELETE FROM test1 WHERE id='bigbird'";
-			//JDBC 4´Ü°è: SQL¹® ½ÇÇà
-			//°á°ú´Â intÇüÀ¸·Î ¹İÈ¯
+			//JDBC 4ë‹¨ê³„: SQLë¬¸ ì‹¤í–‰
+			//ê²°ê³¼ëŠ” intí˜•ìœ¼ë¡œ ë°˜í™˜
 			int count = stmt.executeUpdate(sql);
-			//¹İÈ¯µÈ Á¤¼ö°ªÀ» Ãâ·ÂÇØ¼­ SQL¹®ÀÌ ½ÇÇàµÈ ÈÄ Àû¿ëµÈ ·¹ÄÚµåÀÇ °³¼ö¸¦ È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.
-			System.out.println(count +"°³ÀÇ ÇàÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù");
+			//ë°˜í™˜ëœ ì •ìˆ˜ê°’ì„ ì¶œë ¥í•´ì„œ SQLë¬¸ì´ ì‹¤í–‰ëœ í›„ ì ìš©ëœ ë ˆì½”ë“œì˜ ê°œìˆ˜ë¥¼ í™•ì¸í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+			System.out.println(count +"ê°œì˜ í–‰ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤");
 			
 			sql="SELECT * FROM test1";
-			//JDBC 5´Ü°è: °á°ú ResultSet¿¡ ÀúÀå
+			//JDBC 5ë‹¨ê³„: ê²°ê³¼ ResultSetì— ì €ì¥
 			rs = stmt.executeQuery(sql);
 			System.out.println("ID\tAGE");
-			//°á°úÇà Ãâ·Â
+			//ê²°ê³¼í–‰ ì¶œë ¥
 			while(rs.next()){
 				System.out.print(rs.getString("id") + "\t" + rs.getInt("age") + "\n");				
 			}			
@@ -59,7 +59,7 @@ public class DeleteEx {
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 			
-		}finally{	//ÀÚ¿ø°ü¸®
+		}finally{	//ìì›ê´€ë¦¬
 			if( stmt!=null){ try{stmt.clearBatch();}catch(SQLException e){e.printStackTrace(); } };
 			if( con!=null){ try{con.close();}catch(SQLException e){e.printStackTrace();} }			
 		}

@@ -1,13 +1,13 @@
-/* File Class - °£´Ü File Å½»ö±â
+/* File Class - ê°„ë‹¨ File íƒìƒ‰ê¸°
  * 
- *  ÆÄÀÏ °´Ã¼ »ý¼º
- *  ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê°Å³ª µð·ºÅä¸®°¡ ¾Æ´Ñ °æ¿ì¿¡ ´ëÇÑ Á¶°Ç¹® ¼±¾ð
- *  ÁöÁ¤ÇÑ °æ·ÎÀÇ ÇÏÀ§ µð·ºÅä¸® ¹× ÆÄÀÏ Á¤º¸ ¹ÝÈ¯
+ *  íŒŒì¼ ê°ì²´ ìƒì„±
+ *  íŒŒì¼ì´ ì¡´ìž¬í•˜ì§€ ì•Šê±°ë‚˜ ë””ë ‰í† ë¦¬ê°€ ì•„ë‹Œ ê²½ìš°ì— ëŒ€í•œ ì¡°ê±´ë¬¸ ì„ ì–¸
+ *  ì§€ì •í•œ ê²½ë¡œì˜ í•˜ìœ„ ë””ë ‰í† ë¦¬ ë° íŒŒì¼ ì •ë³´ ë°˜í™˜
  *  
  * ------------------------------------------------------------
- * µð·ºÅä¸®¿Í ÆÄÀÏÀÇ ¸®½ºÆ®¸¦ Ãâ·ÂÇÕ´Ï´Ù.
- * Ãâ·Â½Ã µð·ºÅä¸®´Â [ ]Ç¥½Ã¸¦ ÇØÁÖ°í
- * ÆÄÀÏÀº ÆÄÀÏ¿ë·®À» Ç¥½ÃÇØ ÁÝ´Ï´Ù.
+ * ë””ë ‰í† ë¦¬ì™€ íŒŒì¼ì˜ ë¦¬ìŠ¤íŠ¸ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
+ * ì¶œë ¥ì‹œ ë””ë ‰í† ë¦¬ëŠ” [ ]í‘œì‹œë¥¼ í•´ì£¼ê³ 
+ * íŒŒì¼ì€ íŒŒì¼ìš©ëŸ‰ì„ í‘œì‹œí•´ ì¤ë‹ˆë‹¤.
  * 
  */
 
@@ -19,22 +19,22 @@ public class FileEx01 {
 	public static void main(String[] args){
 		String path = "C:\\";
 		
-		//ÆÄÀÏ °´Ã¼ »ý¼º
+		//íŒŒì¼ ê°ì²´ ìƒì„±
 		File f = new File(path);
-		//ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê°Å³ª µð·ºÅä¸®°¡ ¾Æ´Ñ °æ¿ì
+		//íŒŒì¼ì´ ì¡´ìž¬í•˜ì§€ ì•Šê±°ë‚˜ ë””ë ‰í† ë¦¬ê°€ ì•„ë‹Œ ê²½ìš°
 		if(!f.exists() || !f.isDirectory()){
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº µð·ºÅä¸®ÀÔ´Ï´Ù.");
-			//ÇÁ·Î±×·¥ Á¾·á
+			System.out.println("ìœ íš¨í•˜ì§€ ì•Šì€ ë””ë ‰í† ë¦¬ìž…ë‹ˆë‹¤.");
+			//í”„ë¡œê·¸ëž¨ ì¢…ë£Œ
 			System.exit(0);
 		}		
-		//ÁöÁ¤ÇÑ °æ·ÎÀÇ ÇÏÀ§ µð·ºÅä¸® ¹× ÆÄÀÏ Á¤º¸ ¹ÝÈ¯
+		//ì§€ì •í•œ ê²½ë¡œì˜ í•˜ìœ„ ë””ë ‰í† ë¦¬ ë° íŒŒì¼ ì •ë³´ ë°˜í™˜
 		File[] files = f.listFiles();
 		
 		for(int i=0; i<files.length; i++){
 			File f2 = files[i];
-			if(f2.isDirectory()){	//µð·ºÅä¸® Ç¥½Ã
+			if(f2.isDirectory()){	//ë””ë ‰í† ë¦¬ í‘œì‹œ
 				System.out.println("[" + f2.getName() + "]");
-			}else{	//ÆÄÀÏ Ç¥½Ã				
+			}else{	//íŒŒì¼ í‘œì‹œ				
 				System.out.printf("%s\t(%,dbytes)\n", f2.getName(), f2.length());
 			}
 		}		

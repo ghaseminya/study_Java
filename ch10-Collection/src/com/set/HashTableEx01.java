@@ -1,8 +1,8 @@
 /* HashTable 
  * 
  * -------------------------------------------
- * key, value¿¡ nullÇã¿ë ¾ÈÇÔ (run time½Ã ¿¡·¯)
- * µ¥ÀÌÅÍ »ğÀÔ½Ã nullÃ¼Å© ÇØ¾ß ÇÔ
+ * key, valueì— nullí—ˆìš© ì•ˆí•¨ (run timeì‹œ ì—ëŸ¬)
+ * ë°ì´í„° ì‚½ì…ì‹œ nullì²´í¬ í•´ì•¼ í•¨
  * 
  * */
 
@@ -17,27 +17,27 @@ public class HashTableEx01 {
 		Hashtable<String, Double> ht = new Hashtable<String, Double>();
 		
 		
-		ht.put("ÀÌ¼ø½Å", new Double(173.2));
-		ht.put("°­°¨Âù", new Double(181.8));
-		ht.put("À¯°ü¼ø", new Double(192));
-		ht.put("±¤°èÅä", new Double(165.9));
+		ht.put("ì´ìˆœì‹ ", new Double(173.2));
+		ht.put("ê°•ê°ì°¬", new Double(181.8));
+		ht.put("ìœ ê´€ìˆœ", new Double(192));
+		ht.put("ê´‘ê³„í† ", new Double(165.9));
 		
 		System.out.println(ht);
 		
-		Double keynum = ht.get("À¯°ü¼ø");
-		System.out.println("À¯°ü¼øÀÇ Å°´Â " + keynum);
+		Double keynum = ht.get("ìœ ê´€ìˆœ");
+		System.out.println("ìœ ê´€ìˆœì˜ í‚¤ëŠ” " + keynum);
 		
 		
-		//Å°ÀÇ Áßº¹À» Çã¿ëÇÏÁö ¾ÊÀ½
-		ht.put("À¯°ü¼ø", new Double(111));
-		keynum = ht.get("À¯°ü¼ø");
-		System.out.println("À¯°ü¼øÀÇ Å°´Â " + keynum);
+		//í‚¤ì˜ ì¤‘ë³µì„ í—ˆìš©í•˜ì§€ ì•ŠìŒ
+		ht.put("ìœ ê´€ìˆœ", new Double(111));
+		keynum = ht.get("ìœ ê´€ìˆœ");
+		System.out.println("ìœ ê´€ìˆœì˜ í‚¤ëŠ” " + keynum);
 		
-		//key·Î null »ç¿ë ºÒ°¡ (ÄÄÆÄÀÏ½Ã¿¡´Â ¿À·ù°¡ ³ªÁö ¾ÊÁö¸¸ ½ÇÇà½Ã ¿À·ù³²)
+		//keyë¡œ null ì‚¬ìš© ë¶ˆê°€ (ì»´íŒŒì¼ì‹œì—ëŠ” ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•Šì§€ë§Œ ì‹¤í–‰ì‹œ ì˜¤ë¥˜ë‚¨)
 		//ht.put(null, new Double(222));	//ERROR: java.lang.NullPointerException
 
-		//value·Î null »ç¿ë ºÒ°¡ (ÄÄÆÄÀÏ½Ã¿¡´Â ¿À·ù°¡ ³ªÁö ¾ÊÁö¸¸ ·±Å¸ÀÓ½Ã ¿À·ù³²)
-		//ht.put("¿ÀÈ£¶ó", null);	//ERROR:	//ERROR: java.lang.NullPointerException
+		//valueë¡œ null ì‚¬ìš© ë¶ˆê°€ (ì»´íŒŒì¼ì‹œì—ëŠ” ì˜¤ë¥˜ê°€ ë‚˜ì§€ ì•Šì§€ë§Œ ëŸ°íƒ€ì„ì‹œ ì˜¤ë¥˜ë‚¨)
+		//ht.put("ì˜¤í˜¸ë¼", null);	//ERROR:	//ERROR: java.lang.NullPointerException
 
 	}
 

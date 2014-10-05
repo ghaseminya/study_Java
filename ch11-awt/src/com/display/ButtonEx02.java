@@ -1,17 +1,17 @@
-/* Button »ı¼º - layout ¹Ì»ç¿ë
+/* Button ìƒì„± - layout ë¯¸ì‚¬ìš©
  * 
  * import 
- * Frame »ó¼Ó
- * »ı¼ºÀÚ ¼³Á¤
- * °´Ã¼ »ı¼º
+ * Frame ìƒì†
+ * ìƒì„±ì ì„¤ì •
+ * ê°ì²´ ìƒì„±
  * 
- * Button Ãß°¡
- * layout¹Ì»ç¿ëÁöÁ¤	//setLayout(null)
+ * Button ì¶”ê°€
+ * layoutë¯¸ì‚¬ìš©ì§€ì •	//setLayout(null)
  * 
- * buttonÀÇ ÁÂÇ¥ÁöÁ¤(x, y À§Ä¡ ÁöÁ¤)
+ * buttonì˜ ì¢Œí‘œì§€ì •(x, y ìœ„ì¹˜ ì§€ì •)
  * 
  * --------------------------------------
- * ÄÄÆ÷³ÍÆ®¸¦ ¸¹ÀÌ ¾µ°æ¿ì ÀÏÀÏÀÌ »çÀÌÁî¿Í ÁÂÇ¥ÁöÁ¤ÇØ¾ß µÇ´Â ¹®Á¦ ¹ß»ı
+ * ì»´í¬ë„ŒíŠ¸ë¥¼ ë§ì´ ì“¸ê²½ìš° ì¼ì¼ì´ ì‚¬ì´ì¦ˆì™€ ì¢Œí‘œì§€ì •í•´ì•¼ ë˜ëŠ” ë¬¸ì œ ë°œìƒ
  * 
  */
 
@@ -20,32 +20,32 @@ package com.display;
 import java.awt.Frame;
 import java.awt.Button;
 
-//Frame »ó¼Ó
+//Frame ìƒì†
 public class ButtonEx02 extends Frame {
 	
-	//»ı¼ºÀÚ ¼³Á¤
+	//ìƒì„±ì ì„¤ì •
 	public ButtonEx02(){
-		//Á¦¸ñ »ı¼º
+		//ì œëª© ìƒì„±
 		super("button Test 02");		
-		//Å©±â ÁöÁ¤
+		//í¬ê¸° ì§€ì •
 		setSize(300,  300);	//width, height			
 		
-		//Button Ãß°¡ÇÏ±â
-		Button b = new Button("È®ÀÎ");
-		//layout¹Ì»ç¿ëÁöÁ¤: layout »ç¿ë¾ÈÇÏ°í setSize()»ç¿ëÇÏµµ·Ï ¸í½ÃÀûÀ¸·Î ÁöÁ¤
+		//Button ì¶”ê°€í•˜ê¸°
+		Button b = new Button("í™•ì¸");
+		//layoutë¯¸ì‚¬ìš©ì§€ì •: layout ì‚¬ìš©ì•ˆí•˜ê³  setSize()ì‚¬ìš©í•˜ë„ë¡ ëª…ì‹œì ìœ¼ë¡œ ì§€ì •
 		setLayout(null);
 		b.setSize(100,  50);	//widht, height
-		b.setLocation(100, 50);	//x, y À§Ä¡ ÁöÁ¤
-		//ButtonÀ» Frame¿¡ µî·Ï
+		b.setLocation(100, 50);	//x, y ìœ„ì¹˜ ì§€ì •
+		//Buttonì„ Frameì— ë“±ë¡
 		add(b);
 		
-		//Frame ³ëÃâ ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œ ì—¬ë¶€ ì„¤ì •
 		setVisible(true);
 	}
 	
 
 	public static void main(String[] args) {
-		// °´Ã¼ »ı¼º
+		// ê°ì²´ ìƒì„±
 		new ButtonEx02();
 
 	}

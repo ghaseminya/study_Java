@@ -6,7 +6,7 @@
  *  MultiServerThread
  * 
  * ----------------------------------------------------------------
- * ´Ù¸¥ Å¬¶óÀÌ¾ğÆ®ÀÇ ¸Ş½ÃÁö¸¦ ¹Ş±â À§ÇÑ Å¬·¡½º
+ * ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ì˜ ë©”ì‹œì§€ë¥¼ ë°›ê¸° ìœ„í•œ í´ë˜ìŠ¤
  * 
  */
 
@@ -20,46 +20,46 @@ public class MultiClientThread extends Thread{
 	}
 	@Override
 	public void run(){
-		//Àü¼ÛÇÒ 
+		//ì „ì†¡í•  
 		String message = null;
-		//¹ŞÀº
+		//ë°›ì€
 		String[] receivedMsg = null;
 		boolean isStop = false;
 		
-		//¹«ÇÑ·çÇÁ
+		//ë¬´í•œë£¨í”„
 		while(!isStop){
 			
 			try{
-				//¼­¹ö¿¡¼­ Àü¼ÛµÈ µ¥ÀÌÅÍ
-				//readObject ¿ªÁ÷·ÄÈ­ÇÏ¿© µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿È
+				//ì„œë²„ì—ì„œ ì „ì†¡ëœ ë°ì´í„°
+				//readObject ì—­ì§ë ¬í™”í•˜ì—¬ ë°ì´í„°ë¥¼ ì½ì–´ì˜´
 				message = (String)mc.getOis().readObject();
-				//#À¸·Î ¸Ş½ÃÁö ºĞ¸®
+				//#ìœ¼ë¡œ ë©”ì‹œì§€ ë¶„ë¦¬
 				//receiveMsg[0]: ID 
 				//[1]: message 
 				receivedMsg = message.split("#");
 				
 			}catch(Exception e){
 				e.printStackTrace();
-				//¿¹¿Ü°¡ ¹ß»ıÇÑ °æ¿ì while¹®À» ºüÁ®³ª¿È
+				//ì˜ˆì™¸ê°€ ë°œìƒí•œ ê²½ìš° whileë¬¸ì„ ë¹ ì ¸ë‚˜ì˜´
 				isStop = true;				
 			}
 			System.out.println(receivedMsg[0] + ", " + receivedMsg[1]);
 			
-			//µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÑ À¯Àú°¡ Á¾·áÇÑ °æ¿ì
+			//ë°ì´í„°ë¥¼ ì „ì†¡í•œ ìœ ì €ê°€ ì¢…ë£Œí•œ ê²½ìš°
 			if(receivedMsg[1].equals("exit")){
 				if(receivedMsg[0].equals(mc.getId())){
-					//ÇöÀç »ç¿ëÀÚ¿Í µ¿ÀÏÇÑ IDÀÌ¸é ÇÁ·Î±×·¥ Á¾·á
+					//í˜„ì¬ ì‚¬ìš©ìì™€ ë™ì¼í•œ IDì´ë©´ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 					mc.exit();
-				}else{	//Å¸user Á¾·á½Ã
-					mc.getJta().append(receivedMsg[0] + "´ÔÀÌ Á¾·áÇÏ¿´½À´Ï´Ù." + System.getProperty("line.separator"));
+				}else{	//íƒ€user ì¢…ë£Œì‹œ
+					mc.getJta().append(receivedMsg[0] + "ë‹˜ì´ ì¢…ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤." + System.getProperty("line.separator"));
 					//Caret = cursor
-					//Ä¿¼­ÀÇ À§Ä¡¸¦ º¸Á¤
-					//ÀüÃ¼ ±ÛÀ» ÀĞ¾îµé¿©¼­ ±× ´ÙÀ½À§Ä¡¿¡ Ä¿¼­°¡ ³õÀÌ°Ô À§Ä¡½ÃÅ´
+					//ì»¤ì„œì˜ ìœ„ì¹˜ë¥¼ ë³´ì •
+					//ì „ì²´ ê¸€ì„ ì½ì–´ë“¤ì—¬ì„œ ê·¸ ë‹¤ìŒìœ„ì¹˜ì— ì»¤ì„œê°€ ë†“ì´ê²Œ ìœ„ì¹˜ì‹œí‚´
 					mc.getJta().setCaretPosition(mc.getJta().getDocument().getLength());
 				}				
-			}else{	//µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÑ À¯Àú°¡ °è¼Ó Ã¤ÆÃÁßÀÎ °æ¿ì
+			}else{	//ë°ì´í„°ë¥¼ ì „ì†¡í•œ ìœ ì €ê°€ ê³„ì† ì±„íŒ…ì¤‘ì¸ ê²½ìš°
 				mc.getJta().append(receivedMsg[0] + ": " + receivedMsg[1] + System.getProperty("line.separator"));
-				//Ä¿¼­ À§Ä¡ º¸Á¤
+				//ì»¤ì„œ ìœ„ì¹˜ ë³´ì •
 				mc.getJta().setCaretPosition(mc.getJta().getDocument().getLength());
 			}
 		}		

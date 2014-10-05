@@ -1,4 +1,4 @@
-/* URL - URLÀÇ ´Ù¾çÇÑ Á¤º¸ Ãâ·Â
+/* URL - URLì˜ ë‹¤ì–‘í•œ ì •ë³´ ì¶œë ¥
  *  
  */
 
@@ -15,27 +15,27 @@ public class URLEx01 {
 		
 		
 		try{
-			//URL°´Ã¼ »ı¼º
+			//URLê°ì²´ ìƒì„±
 			URL url = new URL("http://java.sun.com/index.jap?name=hongjildong#content");	
 			//URL url = new URL("http://java.sun.com:80/index.jap?name=kim#content");
-			//Çü½ÄÀÌ ¾È¸Â´Â °æ¿ì ERROR ±×·¯¹Ç·Î try~catch()ÇØ Áà¾ß ÇÔ, MalformedURLException importÇØÁÖ°í try~catch
+			//í˜•ì‹ì´ ì•ˆë§ëŠ” ê²½ìš° ERROR ê·¸ëŸ¬ë¯€ë¡œ try~catch()í•´ ì¤˜ì•¼ í•¨, MalformedURLException importí•´ì£¼ê³  try~catch
 			//ERROR:Unhandled exception type MalformedURLException
 			
-			//URL Á¤º¸ Ãâ·Â
-			System.out.println("ÇÁ·ÎÅäÄİ:\t" + url.getProtocol());
-			System.out.println("È£½ºÆ®:\t\t" + url.getHost());
-			//Æ÷Æ®¹øÈ£ ¸í½Ã¾ÈÇÑ ÇüÅÂ¿¡¼­ Æ÷Æ®¹øÈ£ Ãâ·Â
-			//Æ÷Æ®¹øÈ£ ¸í½ÃÈÄ Æ÷Æ®¹øÈ£ Ãâ·Â			
-			System.out.println("Æ÷Æ®¹øÈ£:\t" + url.getPort());
-			//defaultÆ÷Æ® Ç¥½Ã
-			System.out.println("defaultÆ÷Æ®¹øÈ£:" + url.getDefaultPort());
+			//URL ì •ë³´ ì¶œë ¥
+			System.out.println("í”„ë¡œí† ì½œ:\t" + url.getProtocol());
+			System.out.println("í˜¸ìŠ¤íŠ¸:\t\t" + url.getHost());
+			//í¬íŠ¸ë²ˆí˜¸ ëª…ì‹œì•ˆí•œ í˜•íƒœì—ì„œ í¬íŠ¸ë²ˆí˜¸ ì¶œë ¥
+			//í¬íŠ¸ë²ˆí˜¸ ëª…ì‹œí›„ í¬íŠ¸ë²ˆí˜¸ ì¶œë ¥			
+			System.out.println("í¬íŠ¸ë²ˆí˜¸:\t" + url.getPort());
+			//defaultí¬íŠ¸ í‘œì‹œ
+			System.out.println("defaultí¬íŠ¸ë²ˆí˜¸:" + url.getDefaultPort());
 			
-			System.out.println("ÆĞ½º:\t\t" + url.getPath());
-			System.out.println("¿äÃ»ÇÑ ÆÄÀÏÀÚ¿ø Á¤º¸:\t" + url.getFile());
-			System.out.println("Äõ¸®:\t\t" + url.getQuery()); 
+			System.out.println("íŒ¨ìŠ¤:\t\t" + url.getPath());
+			System.out.println("ìš”ì²­í•œ íŒŒì¼ìì› ì •ë³´:\t" + url.getFile());
+			System.out.println("ì¿¼ë¦¬:\t\t" + url.getQuery()); 
 			
-			// ¾ŞÄ¿Æ÷ÀÎÆ® = ·¹ÆÛ·±½º
-			System.out.println("·¹ÆÛ·±½º:\t" + url.getRef());
+			// ì•µì»¤í¬ì¸íŠ¸ = ë ˆí¼ëŸ°ìŠ¤
+			System.out.println("ë ˆí¼ëŸ°ìŠ¤:\t" + url.getRef());
 			
 			
 		}catch(MalformedURLException e){ e.printStackTrace(); }

@@ -1,4 +1,4 @@
-/* Chatting ÇÁ·Î±×·¥ - MultiServerThread
+/* Chatting í”„ë¡œê·¸ë¨ - MultiServerThread
  * 
  *  
  *  MultiClient
@@ -7,8 +7,8 @@
  *  MultiServerThread
  *  
  * ------------------------------------------------
- * °¢°¢ÀÇ Å¬¶óÀÌ¾ğÆ®ÀÇ ¼ÒÄÏ °´Ã¼¸¦ À¯ÁöÇÏ±â À§ÇÑ Å¬·¡½º.
- * ÀÌ Å¬·¡½º´Â ¸ÖÆ¼¼­¹ö¿¡ ÀÖ´Â ÄÃ·º¼ÇÀ» °¡Áö°í ÀÖ±â ¶§¹®¿¡ ´Ù¸¥ Å¬¶óÀÌ¾ğÆ®¿¡°Ô ¸Ş½ÃÁö¸¦ º¸³¾¼ö ÀÖ½À´Ï´Ù. 
+ * ê°ê°ì˜ í´ë¼ì´ì–¸íŠ¸ì˜ ì†Œì¼“ ê°ì²´ë¥¼ ìœ ì§€í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤.
+ * ì´ í´ë˜ìŠ¤ëŠ” ë©€í‹°ì„œë²„ì— ìˆëŠ” ì»¬ë ‰ì…˜ì„ ê°€ì§€ê³  ìˆê¸° ë•Œë¬¸ì— ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë©”ì‹œì§€ë¥¼ ë³´ë‚¼ìˆ˜ ìˆìŠµë‹ˆë‹¤. 
  *  
  */
 
@@ -17,7 +17,7 @@ package com.socket;
 import java.net.*;
 import java.io.*;
 public class MultiServerThread implements Runnable{
-	//¸â¹öº¯¼ö
+	//ë©¤ë²„ë³€ìˆ˜
 	private Socket socket;
 	private MultiServer ms;
 	private ObjectInputStream ois;
@@ -27,52 +27,52 @@ public class MultiServerThread implements Runnable{
 		this.ms = ms;
 	}
 	
-	//µ¥ÀÌÅÍ Ã³¸®½Ã µ¥ÀÌÅÍ ¿Ü°îÀ» ¹æÁöÇÏ±â À§ÇØ synchronized ºí·Ï »ı¼º
-	//run()¿¡ ÇÏ³ªÀÇ °´Ã¼¸¸ Á¢±ÙÇÏµµ·Ï ÇÔ
+	//ë°ì´í„° ì²˜ë¦¬ì‹œ ë°ì´í„° ì™¸ê³¡ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ synchronized ë¸”ë¡ ìƒì„±
+	//run()ì— í•˜ë‚˜ì˜ ê°ì²´ë§Œ ì ‘ê·¼í•˜ë„ë¡ í•¨
 	public synchronized void run(){
 		boolean isStop = false;
 		try{
-			//¼ÒÄÏ »ı¼º
+			//ì†Œì¼“ ìƒì„±
 			socket = ms.getSocket();
 			
 			ois = new ObjectInputStream(socket.getInputStream());
 			oos = new ObjectOutputStream(socket.getOutputStream());
 			
 			String message = null;
-			//¹«ÇÑ ·çÇÁ
+			//ë¬´í•œ ë£¨í”„
 			while(!isStop){
-				//Å¬¶óÀÌ¾ğÆ®°¡ º¸³½ ¸Ş½ÃÁö¸¦ ¹ŞÀ½
+				//í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚¸ ë©”ì‹œì§€ë¥¼ ë°›ìŒ
 				message = (String)ois.readObject();
-				//ID¿Í ¸Ş½ÃÁö ºĞ¸®
+				//IDì™€ ë©”ì‹œì§€ ë¶„ë¦¬
 				String[] str = message.split("#");
-				if(str[1].equals("exit")){	//Á¾·á
+				if(str[1].equals("exit")){	//ì¢…ë£Œ
 					broadCasting(message);
 					isStop = true;
-				}else{	//°è¼Ó Ã¤ÆÃ
+				}else{	//ê³„ì† ì±„íŒ…
 					broadCasting(message);
 				}
 			}
-			//ArrayList °´Ã¼¸¦ Á¦°Å
+			//ArrayList ê°ì²´ë¥¼ ì œê±°
 			ms.getList().remove(this);
 			
-			System.out.println(socket.getInetAddress()+ "Á¤»óÀûÀ¸·Î Á¾·áÇÏ¼Ì½À´Ï´Ù");
+			System.out.println(socket.getInetAddress()+ "ì •ìƒì ìœ¼ë¡œ ì¢…ë£Œí•˜ì…¨ìŠµë‹ˆë‹¤");
 			System.out.println("list size : "+ms.getList().size());
 		}catch(Exception e){
-			//¿À·ù°¡ ¹ß»ıÇÑ Å¬¶óÀÌ¾ğÆ® »©±â
+			//ì˜¤ë¥˜ê°€ ë°œìƒí•œ í´ë¼ì´ì–¸íŠ¸ ë¹¼ê¸°
 			ms.getList().remove(this);
-			System.out.println(socket.getInetAddress()+ "ºñÁ¤»óÀûÀ¸·Î Á¾·áÇÏ¼Ì½À´Ï´Ù");
+			System.out.println(socket.getInetAddress()+ "ë¹„ì •ìƒì ìœ¼ë¡œ ì¢…ë£Œí•˜ì…¨ìŠµë‹ˆë‹¤");
 			System.out.println("list size : "+ms.getList().size());
 		}
 	}
 	
 	public void broadCasting(String message)throws IOException{
-		//ArrayList°¡Á®¿Í¼­ ´Ù¸¥ À¯Àúµé¿¡°Ô ¸Ş½ÃÁö¸¦ º¸³¿
+		//ArrayListê°€ì ¸ì™€ì„œ ë‹¤ë¥¸ ìœ ì €ë“¤ì—ê²Œ ë©”ì‹œì§€ë¥¼ ë³´ëƒ„
 		for(MultiServerThread ct : ms.getList()){
 			ct.send(message);
 		}
 	}
 	
-	//¸Ş½ÃÁö¸¦ º¸³¿
+	//ë©”ì‹œì§€ë¥¼ ë³´ëƒ„
 	public void send(String message)throws IOException{
 		oos.writeObject(message);        
 	}

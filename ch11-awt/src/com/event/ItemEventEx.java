@@ -1,8 +1,4 @@
-/* Item ÄÄÆ÷³ÍÆ®
- * 
- * 
- * 
- * 
+/* Item ì»´í¬ë„ŒíŠ¸
  * 
  * 
  */
@@ -27,21 +23,21 @@ public class ItemEventEx extends Frame implements ActionListener, ItemListener {
 	Panel p2 = new Panel();
 	
 	TextArea ta = new TextArea(5, 20);
-	Button exit = new Button("Á¾·á");
-	Checkbox cb1 = new Checkbox("Ãà±¸");
-	Checkbox cb2 = new Checkbox("³ó±¸");
-	Checkbox cb3 = new Checkbox("¾ß±¸");
-	Checkbox cb4 = new Checkbox("Á·±¸");
-	Checkbox cb5 = new Checkbox("¹è±¸");
-	Checkbox cb6 = new Checkbox("¼ö¿µ");
+	Button exit = new Button("ì¢…ë£Œ");
+	Checkbox cb1 = new Checkbox("ì¶•êµ¬");
+	Checkbox cb2 = new Checkbox("ë†êµ¬");
+	Checkbox cb3 = new Checkbox("ì•¼êµ¬");
+	Checkbox cb4 = new Checkbox("ì¡±êµ¬");
+	Checkbox cb5 = new Checkbox("ë°°êµ¬");
+	Checkbox cb6 = new Checkbox("ìˆ˜ì˜");
 
 	
-	//»ı¼ºÀÚ »ı¼º	
+	//ìƒì„±ì ìƒì„±	
 	public ItemEventEx(){
-		//Á¦¸ñ ¼³Á¤
+		//ì œëª© ì„¤ì •
 		super("ItemEvent Test");
 		
-		//Ã¼Å©¹Ú½º¸¦  Panel 1¿¡ µî·Ï
+		//ì²´í¬ë°•ìŠ¤ë¥¼  Panel 1ì— ë“±ë¡
 		p1.add(cb1);
 		p1.add(cb2);
 		p1.add(cb3);
@@ -49,18 +45,18 @@ public class ItemEventEx extends Frame implements ActionListener, ItemListener {
 		p1.add(cb5);
 		p1.add(cb6);
 		
-		//ButtonÀ» Panel 2¿¡ µî·Ï
+		//Buttonì„ Panel 2ì— ë“±ë¡
 		p2.add(exit);
 		
-		//PanelÀ» Frame¿¡ µî·Ï
+		//Panelì„ Frameì— ë“±ë¡
 		add(p1, BorderLayout.NORTH);
 		add(p2, BorderLayout.SOUTH);
 		add(ta, BorderLayout.CENTER);
 				
-		//Button°ú ÀÌº¥Æ® ¸®½º³Ê ¿¬°á
+		//Buttonê³¼ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²°
 		exit.addActionListener(this);
 		
-		//Checkbox¿Í ÀÌº¥Æ® ¸®½º³Ê ¿¬°á
+		//Checkboxì™€ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²°
 		cb1.addItemListener(this);
 		cb2.addItemListener(this);
 		cb3.addItemListener(this);
@@ -68,7 +64,7 @@ public class ItemEventEx extends Frame implements ActionListener, ItemListener {
 		cb5.addItemListener(this);
 		cb6.addItemListener(this);
 		
-		//Frame À§Ä¡,Å©±â ÁöÁ¤
+		//Frame ìœ„ì¹˜,í¬ê¸° ì§€ì •
 		setBounds(300, 300, 300, 300);		
 		
 		setVisible(true);		
@@ -79,10 +75,10 @@ public class ItemEventEx extends Frame implements ActionListener, ItemListener {
 	}
 	@Override
 	public void itemStateChanged(ItemEvent e){
-		if(e.getStateChange() == ItemEvent.SELECTED){	//¼±ÅÃÇÑ °æ¿ì
-			ta.append(e.getItem() + "À» ¼±ÅÃ\n\n");
-		}else if(e.getStateChange() == ItemEvent.DESELECTED){	//¼±ÅÃÇØÁ¦µÈ °æ¿ì
-			ta.append(e.getItem() + "À» Ãë¼Ò\n\n");
+		if(e.getStateChange() == ItemEvent.SELECTED){	//ì„ íƒí•œ ê²½ìš°
+			ta.append(e.getItem() + "ì„ ì„ íƒ\n\n");
+		}else if(e.getStateChange() == ItemEvent.DESELECTED){	//ì„ íƒí•´ì œëœ ê²½ìš°
+			ta.append(e.getItem() + "ì„ ì·¨ì†Œ\n\n");
 		}
 	}
 

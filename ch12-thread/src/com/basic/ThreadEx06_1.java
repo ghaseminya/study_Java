@@ -1,4 +1,4 @@
-/* Thread - µ¿±âÈ­ Àü (µ¥ÀÌÅÍ ¿Ö°î¹ß»ı)
+/* Thread - ë™ê¸°í™” ì „ (ë°ì´í„° ì™œê³¡ë°œìƒ)
  * 
  * 
  */
@@ -7,12 +7,12 @@
 package com.basic;
 
 class ATM_1 implements Runnable{
-	//°øÀ¯ÀÚ¿ø
+	//ê³µìœ ìì›
 	private long depositMoney = 10000;
 	
 	@Override
 	public void run(){
-		//this: µ¿±âÈ­ÇÒ °´Ã¼
+		//this: ë™ê¸°í™”í•  ê°ì²´
 		//synchronized (this) {	
 			for( int i=0; i<5; i++){
 				try{
@@ -20,7 +20,7 @@ class ATM_1 implements Runnable{
 				}catch(InterruptedException e){
 					e.printStackTrace();					
 				}
-				// 0ÀÌÇÏ¸é ¹İº¹¹® ºüÁ®³ª¿È
+				// 0ì´í•˜ë©´ ë°˜ë³µë¬¸ ë¹ ì ¸ë‚˜ì˜´
 				if( depositMoney <= 0 ) break;
 				
 				withDraw(1000);
@@ -28,13 +28,13 @@ class ATM_1 implements Runnable{
 //		}		
 	}
 	
-	//ÀÓ°è¿µ¿ª
+	//ì„ê³„ì˜ì—­
 	public void withDraw(long howMuch){
 		if(depositMoney > 0){
 			depositMoney -= howMuch;
 			System.out.println(Thread.currentThread().getName() + "\t" + depositMoney);			
 		}else{
-			System.out.println(Thread.currentThread().getName() + "ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");			
+			System.out.println(Thread.currentThread().getName() + "ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");			
 		}
 	}	
 }

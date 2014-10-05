@@ -1,24 +1,24 @@
-/* °´Ã¼ Á÷·ÄÈ­ - ObjectOutputStream
+/* ê°ì²´ ì§ë ¬í™” - ObjectOutputStream
  * 
- * ÆÄÀÏ »ý¼ºÈÄ ÆÄÀÏ Á÷·ÄÈ­ÇÏ±â
+ * íŒŒì¼ ìƒì„±í›„ íŒŒì¼ ì§ë ¬í™”í•˜ê¸°
  * 
  * ------------------------------------------------------------------------------
  * Customer.java
  * CustomerMain.java
  *  
  * ------------------------------------------------------------------------------
- * °´Ã¼¾È¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ À§ÁÖ
- * (Å¬·¡½º¸¦ ´Ù ÀúÀåÇÏ´Â °ÍÀÌ ¾Æ´Ï¶ó ¸â¹öº¯¼ö¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â °ÍÀÓ) 
+ * ê°ì²´ì•ˆì— ì €ìž¥ëœ ë°ì´í„° ìœ„ì£¼
+ * (í´ëž˜ìŠ¤ë¥¼ ë‹¤ ì €ìž¥í•˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ ë©¤ë²„ë³€ìˆ˜ì— ì €ìž¥ëœ ë°ì´í„°ë¥¼ ì €ìž¥í•˜ëŠ” ê²ƒìž„) 
  * 
- * ÂüÁ¶ÇÏÁö(»ç¿ëÇÏÁö) ¾ÊÀ» °æ¿ì ¾²·¹±â °´Ã¼°¡ µÇ¾î »ç¿ëÇÒ ¼ö ¾ø´Âµ¥ 
- * °´Ã¼ Á÷·ÄÈ­¸¦ ÇØ³õÀ¸¸é ´Ù½Ã »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. °´Ã¼¸¦ º¸°ü ÈÄ Àç»ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
- * (°´Ã¼ Á¤ÀÇ ¹× »ý¼º/ÀúÀåµÇ´Â °úÁ¤ÀÌ ÇÊ¿ä¾øÀÌ ¹Ù·Î »ç¿ë°¡´ÉÇÏ°Ô ÇÏ±â À§ÇØ)
- * ÀÛ¾÷ÀÏ½Ã Á¤ÁöÇß´Ù°¡ ´Ù½Ã ÀÛ¾÷ Àç°³ÇÒ ¶§µµ È¿À²ÀûÀÓ.
+ * ì°¸ì¡°í•˜ì§€(ì‚¬ìš©í•˜ì§€) ì•Šì„ ê²½ìš° ì“°ë ˆê¸° ê°ì²´ê°€ ë˜ì–´ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ”ë° 
+ * ê°ì²´ ì§ë ¬í™”ë¥¼ í•´ë†“ìœ¼ë©´ ë‹¤ì‹œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ê°ì²´ë¥¼ ë³´ê´€ í›„ ìž¬ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ * (ê°ì²´ ì •ì˜ ë° ìƒì„±/ì €ìž¥ë˜ëŠ” ê³¼ì •ì´ í•„ìš”ì—†ì´ ë°”ë¡œ ì‚¬ìš©ê°€ëŠ¥í•˜ê²Œ í•˜ê¸° ìœ„í•´)
+ * ìž‘ì—…ì¼ì‹œ ì •ì§€í–ˆë‹¤ê°€ ë‹¤ì‹œ ìž‘ì—… ìž¬ê°œí•  ë•Œë„ íš¨ìœ¨ì ìž„.
  * 
- * object.ser: JVMÀÌ ÀÐÀ»¼ö ÀÖ´Â °ÍÀÌ´Ù.
+ * object.ser: JVMì´ ì½ì„ìˆ˜ ìžˆëŠ” ê²ƒì´ë‹¤.
  *  
- * °´Ã¼ Á÷·ÄÈ­ »ç¿ëÀÌÀ¯:
- * ¼­¹ö°£ µ¥ÀÌÅÍ Àü¼ÛÀ» À§ÇØ¼­ »ç¿ë(³×Æ®¿öÅ© Àü¼Û)
+ * ê°ì²´ ì§ë ¬í™” ì‚¬ìš©ì´ìœ :
+ * ì„œë²„ê°„ ë°ì´í„° ì „ì†¡ì„ ìœ„í•´ì„œ ì‚¬ìš©(ë„¤íŠ¸ì›Œí¬ ì „ì†¡)
  */
 
 package com.serial;
@@ -31,31 +31,31 @@ public class CustomerMain1 {
 
 	public static void main(String[] args) {
 		// 
-		System.out.println("===°´Ã¼ Á÷·ÄÈ­ ÇÏ±â===");
+		System.out.println("===ê°ì²´ ì§ë ¬í™” í•˜ê¸°===");
 		
 		FileOutputStream fos = null;
 		ObjectOutputStream oos = null;
 		
-		//Á÷·ÄÈ­ÇÒ °´Ã¼ »ý¼º
-		//ÂüÁ¶ÇÏÁö(»ç¿ëÇÏÁö) ¾ÊÀ» °æ¿ì ¾²·¹±â °´Ã¼°¡ µÇ¾î »ç¿ëÇÒ ¼ö ¾ø´Âµ¥ °´Ã¼ Á÷·ÄÈ­¸¦ ÇØ³õÀ¸¸é ´Ù½Ã »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. 
-		//"Steve½ºÆ¼ºê" µ¥ÀÌÅÍ¸¦ °¡Áø °´Ã¼ »ý¼º
-		Customer c = new Customer("Steve½ºÆ¼ºê");
+		//ì§ë ¬í™”í•  ê°ì²´ ìƒì„±
+		//ì°¸ì¡°í•˜ì§€(ì‚¬ìš©í•˜ì§€) ì•Šì„ ê²½ìš° ì“°ë ˆê¸° ê°ì²´ê°€ ë˜ì–´ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ”ë° ê°ì²´ ì§ë ¬í™”ë¥¼ í•´ë†“ìœ¼ë©´ ë‹¤ì‹œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 
+		//"SteveìŠ¤í‹°ë¸Œ" ë°ì´í„°ë¥¼ ê°€ì§„ ê°ì²´ ìƒì„±
+		Customer c = new Customer("SteveìŠ¤í‹°ë¸Œ");
 		
 		try{
-			//°´Ã¼ Á÷·ÄÈ­ÇÒ¶§´Â dat/ser·Î È®ÀåÀÚÇÏ´Â °ÍÀÌ º¸Åë
-			//byteÃ³¸®¸¦ ÇØ¾ßÇÏ±â ¶§¹®¿¡ FileOutputStream°´Ã¼ »ý¼º
+			//ê°ì²´ ì§ë ¬í™”í• ë•ŒëŠ” dat/serë¡œ í™•ìž¥ìží•˜ëŠ” ê²ƒì´ ë³´í†µ
+			//byteì²˜ë¦¬ë¥¼ í•´ì•¼í•˜ê¸° ë•Œë¬¸ì— FileOutputStreamê°ì²´ ìƒì„±
 			fos = new FileOutputStream("object.ser");
-			//°´Ã¼ Á÷·ÄÈ­¸¦ À§ÇØ¼­ ObjectOutputStream°´Ã¼ »ý¼º
+			//ê°ì²´ ì§ë ¬í™”ë¥¼ ìœ„í•´ì„œ ObjectOutputStreamê°ì²´ ìƒì„±
 			oos = new ObjectOutputStream(fos);
-			//°´Ã¼ Á÷·ÄÈ­ ¼öÇà
-			//writeObject()ÀÌ¿ëÇØ¼­ Customer°´Ã¼¸¦ ÆÄÀÏ¿¡ Ãâ·Â
+			//ê°ì²´ ì§ë ¬í™” ìˆ˜í–‰
+			//writeObject()ì´ìš©í•´ì„œ Customerê°ì²´ë¥¼ íŒŒì¼ì— ì¶œë ¥
 			oos.writeObject(c);
 			
-			System.out.println("°´Ã¼ Á÷·ÄÈ­ ¿Ï·á!!!");			
+			System.out.println("ê°ì²´ ì§ë ¬í™” ì™„ë£Œ!!!");			
 			
 		}catch(IOException e){ 
 			e.printStackTrace(); 
-		}finally{	//ÀÚ¿ø °ü¸®
+		}finally{	//ìžì› ê´€ë¦¬
 			if( oos!=null){ try{oos.close();}catch(IOException e){e.printStackTrace();} }
 			if( fos!=null){ try{fos.close();}catch(IOException e){e.printStackTrace();} }			
 		}	

@@ -1,14 +1,14 @@
-/* ¼öµ¿À¸·Î TRANSACTION Á¦¾î - ¿ÀÅäÄ¿¹Ô ¹®Á¦Á¡ È®ÀÎ
+/* ìˆ˜ë™ìœ¼ë¡œ TRANSACTION ì œì–´ - ì˜¤í† ì»¤ë°‹ ë¬¸ì œì  í™•ì¸
  * 
  * 
- * ¿ÀÅä Ä¿¹Ô Ã³¸®
- * ¼öµ¿ Ä¿¹Ô Ã³¸®
+ * ì˜¤í†  ì»¤ë°‹ ì²˜ë¦¬
+ * ìˆ˜ë™ ì»¤ë°‹ ì²˜ë¦¬
  * -------------------------------------------------------------------
- * ¿ÀÅä Ä¿¹Ô µÇ±â ¶§¹®¿¡ 
- * SQL¹® 1~3Àº ¼öÇàµÇ°í 4¸¸ ¼öÇà¾ÈµÇ¾î¼­
- * µ¥ÀÌÅÍÀÇ ¿Ü°îÀÌ ÀÏ¾î³¯¼ö ÀÖ´Â ¹®Á¦°¡ ¹ß»ıÇÕ´Ï´Ù.
+ * ì˜¤í†  ì»¤ë°‹ ë˜ê¸° ë•Œë¬¸ì— 
+ * SQLë¬¸ 1~3ì€ ìˆ˜í–‰ë˜ê³  4ë§Œ ìˆ˜í–‰ì•ˆë˜ì–´ì„œ
+ * ë°ì´í„°ì˜ ì™¸ê³¡ì´ ì¼ì–´ë‚ ìˆ˜ ìˆëŠ” ë¬¸ì œê°€ ë°œìƒí•©ë‹ˆë‹¤.
  * 
- * ¿ÀÅä Ä¿¹ÔµÇ¾î ¿À·ù½Ã ROLLBACKÀ» ¼öÇàÇÒ ¼ö ¾ø½À´Ï´Ù. 
+ * ì˜¤í†  ì»¤ë°‹ë˜ì–´ ì˜¤ë¥˜ì‹œ ROLLBACKì„ ìˆ˜í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. 
  * 
  */
 
@@ -24,7 +24,7 @@ import java.sql.ResultSet;
 public class TransactionEx1 {
 
 	public static void main(String[] args) {
-		//Á¢¼Ó Á¤º¸ ÀúÀå
+		//ì ‘ì† ì •ë³´ ì €ì¥
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
 		String passwd ="1234";
@@ -37,28 +37,28 @@ public class TransactionEx1 {
 		
 		
 		try{
-			//JDBC 1´Ü°è ¼öÇà: DRIVER·Îµå
+			//JDBC 1ë‹¨ê³„ ìˆ˜í–‰: DRIVERë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//JDBC 2´Ü°è: Connection °´Ã¼ »ı¼º
+			//JDBC 2ë‹¨ê³„: Connection ê°ì²´ ìƒì„±
 			con = DriverManager.getConnection(dbURL, id, passwd);
-			//JDBC 3´Ü°è: Statement°´Ã¼ »ı¼º
+			//JDBC 3ë‹¨ê³„: Statementê°ì²´ ìƒì„±
 			stmt = con.createStatement();
 			
-			//SQL¹® ¼öÇà1: INSERT
+			//SQLë¬¸ ìˆ˜í–‰1: INSERT
 			sql = "INSERT INTO test1 values('sys01', 10)";
-			stmt.executeUpdate(sql);	//JDBC 4´Ü°è: SQL ½ÇÇà
-			//SQL¹® ¼öÇà2: INSERT
+			stmt.executeUpdate(sql);	//JDBC 4ë‹¨ê³„: SQL ì‹¤í–‰
+			//SQLë¬¸ ìˆ˜í–‰2: INSERT
 			sql = "INSERT INTO test1 values('sys02', 20)";
 			stmt.executeUpdate(sql);			
-			//SQL¹® ¼öÇà3: INSERT
+			//SQLë¬¸ ìˆ˜í–‰3: INSERT
 			sql = "INSERT INTO test1 values('sys03', 30)";
 			stmt.executeUpdate(sql);
-			//SQL¹® ¼öÇà4: INSERT
-			//°íÀÇ·Î ¿À·ù ¹ß»ı½ÃÅ´
-			sql = "INSERT INTO test1 values('sys04', 40";	//ERROR:	java.sql.SQLException: ORA-00917: ´©¶ôµÈ ÄŞ¸¶
+			//SQLë¬¸ ìˆ˜í–‰4: INSERT
+			//ê³ ì˜ë¡œ ì˜¤ë¥˜ ë°œìƒì‹œí‚´
+			sql = "INSERT INTO test1 values('sys04', 40";	//ERROR:	java.sql.SQLException: ORA-00917: ëˆ„ë½ëœ ì½¤ë§ˆ
 			stmt.executeUpdate(sql);		
 			
-			System.out.println("SQL¹® ¼öÇà¿Ï·á");
+			System.out.println("SQLë¬¸ ìˆ˜í–‰ì™„ë£Œ");
 			
 			
 //			int count = stmt.executeUpdate(sql);

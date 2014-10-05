@@ -1,11 +1,12 @@
-/* Á¦³×¸¯È­ º¯°æ
+/* ì œë„¤ë¦­í™” ë³€ê²½
 
-kr.studyjava.generic02\GenericsEx01.javaÀÇ Áßº¹Á¦°Å ÈÄ Å¸ÀÔÀÌ ¾ÈÀüÇÏÁö ¾ÊÀº ¹®Á¦Á¡À» Á¦³×¸¯È­ÇÏ¿© ÇØ°á 
-Á¦³×¸¯È­ º¯°æ
+kr.studyjava.generic02\GenericsEx01.javaì˜ ì¤‘ë³µì œê±° í›„ íƒ€ì…ì´ ì•ˆì „í•˜ì§€ ì•Šì€ ë¬¸ì œì ì„ ì œë„¤ë¦­í™”í•˜ì—¬ í•´ê²° 
+ì œë„¤ë¦­í™” ë³€ê²½
 
-Á¦³×¸¯È­ÀÇ ÀÌÁ¡
--ÄÄÆÄÀÏ ´Ü°è¿¡¼­ ¿À·ù°¡ °ËÃâµË´Ï´Ù.
--Áßº¹ÀÇ Á¦°Å¿Í Å¸ÀÔ ¾ÈÀü¼ºÀ» µ¿½Ã¿¡ Ãß±¸ÇÒ ¼ö ÀÖ°Ô µË´Ï´Ù.
+ì œë„¤ë¦­í™”ì˜ ì´ì 
+-ì»´íŒŒì¼ ë‹¨ê³„ì—ì„œ ì˜¤ë¥˜ê°€ ê²€ì¶œë©ë‹ˆë‹¤. 
+(ì¸ìŠ¤í„´ìŠ¤ ìƒì„±ì‹œ ê²°ì •ëœ Tì˜ ìë£Œí˜•ì— ì¼ì¹˜í•˜ì§€ ì•Šìœ¼ë©´ ì»´íŒŒì¼ ì—ëŸ¬ê°€ ë°œìƒ í•˜ë¯€ë¡œ ìë£Œí˜•ì— ì•ˆì „)
+-ì¤‘ë³µì˜ ì œê±°ì™€ íƒ€ì… ì•ˆì „ì„±ì„ ë™ì‹œì— ì¶”êµ¬í•  ìˆ˜ ìˆê²Œ ë©ë‹ˆë‹¤.
 
  */
 package kr.studyjava.generic03;
@@ -34,14 +35,17 @@ class Person<T>{
 public class GenericEx01 {
 	public static void main(String[] args) {
 		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(10));
-		EmployeeInfo ei1 = p1.info;
-		System.out.println(ei1.position); // ¼º°ø
+		//Të¥¼ EmployeeInfoë¡œ ê²°ì •í•´ì„œ EmployeeInfoì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³  
+		//ì´ë¥¼ ì°¸ì¡°í•  ìˆ˜ ìˆëŠ” ì°¸ì¡°ë³€ìˆ˜ë¥¼ ì„ ì–¸í•´ì„œ ì°¸ì¡° ê°’ì„ ì €ì¥í•©ë‹ˆë‹¤.
 
-		Person<String> p2 = new Person<String>("»çÀå");
+		EmployeeInfo ei1 = p1.info;
+		System.out.println(ei1.position); // ì„±ê³µ
+
+		Person<String> p2 = new Person<String>("ì‚¬ì¥");
 		String ei2 = p2.info;
-		//p2.info°¡ StringÀÌ°í 
-		//StringÀº position ÇÊµå°¡ ¾ø´Âµ¥ ÀÌ°ÍÀ» È£ÃâÇÏ°í ÀÖ±â ¶§¹®¿¡ ÄÄÆÄÀÏ ¿¡·¯°¡ ¹ß»ıÇÕ´Ï´Ù. 
-//		System.out.println(ei2.position); // ÄÄÆÄÀÏ ¿¡·¯
+		//p2.infoê°€ Stringì´ê³  
+		//Stringì€ position í•„ë“œê°€ ì—†ëŠ”ë° ì´ê²ƒì„ í˜¸ì¶œí•˜ê³  ìˆê¸° ë•Œë¬¸ì— ì»´íŒŒì¼ ì—ëŸ¬ê°€ ë°œìƒí•©ë‹ˆë‹¤. 
+//		System.out.println(ei2.position); // ì»´íŒŒì¼ ì—ëŸ¬
 	}
 }
 

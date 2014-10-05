@@ -1,9 +1,9 @@
-/* Button »ı¼º - Panel »ı¼ºÀ¸·Î ButtonÅ©±â ÁöÁ¤
+/* Button ìƒì„± - Panel ìƒì„±ìœ¼ë¡œ Buttoní¬ê¸° ì§€ì •
  * 
  * 
  * ------------------------------------------------------
- * ¹öÆ°ÀÇ ·¹ÀÌºíÀ» °¨½Ò¼ö ÀÖ´Â ÃÖ¼Ò Å©±â·Î buttonÀÌ »ı¼ºµÊ
- * PanelÀº ±âº» Áß¾ÓÁ¤·ÄµÊ
+ * ë²„íŠ¼ì˜ ë ˆì´ë¸”ì„ ê°ìŒ€ìˆ˜ ìˆëŠ” ìµœì†Œ í¬ê¸°ë¡œ buttonì´ ìƒì„±ë¨
+ * Panelì€ ê¸°ë³¸ ì¤‘ì•™ì •ë ¬ë¨
  * 
  */
 
@@ -16,22 +16,22 @@ import java.awt.Panel;
 public class PanelEx01 extends Frame{
 	
 	public PanelEx01(){
-		//Á¦¸ñ ¼³Á¤
+		//ì œëª© ì„¤ì •
 		setTitle("Panel Test");
 		setSize(300, 300);
 		
-		//Panel »ı¼º
+		//Panel ìƒì„±
 		Panel p = new Panel();
 						
-		//Button »ı¼º
-		Button b = new Button("È®ÀÎ");
-		//ButtonÀ» Panel¿¡ µî·Ï
+		//Button ìƒì„±
+		Button b = new Button("í™•ì¸");
+		//Buttonì„ Panelì— ë“±ë¡
 		p.add(b);
 		
-		//PanelÀ» Frame¿¡ µî·Ï
+		//Panelì„ Frameì— ë“±ë¡
 		add(p);
 		
-		//Frame ³ëÃâ ¿©ºÎ ¼³Á¤ 
+		//Frame ë…¸ì¶œ ì—¬ë¶€ ì„¤ì • 
 		setVisible(true);
 	}
 

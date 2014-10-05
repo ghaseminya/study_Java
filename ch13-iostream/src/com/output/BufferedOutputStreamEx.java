@@ -1,19 +1,19 @@
 /* BufferedOutputStream
  * 
- * String -> byte[] ÀúÀå
- * ¸í½ÃÀû flush
- * Close()	//ÀÚ¿øÁ¤¸®
+ * String -> byte[] ì €ìž¥
+ * ëª…ì‹œì  flush
+ * Close()	//ìžì›ì •ë¦¬
  * 
  * 
  * ---------------------------
- * BufferedOutputStreamÇÏ¸é ¹öÆÛ¿¡ ÀúÀåµÇ´Âµ¥
- * ¹öÆÛ°ø°£ÀÌ ÀÚµ¿À¸·Î Â÷¸é autoflushÇÏ¸é µÊ 
- * buffer°ø°£À» ´Ù Ã¤¿ìÁö ¸øÇØ ÆÄÀÏ¿¡ ÀúÀåµÇÁö ¾Ê´Â´Ù. ÀÌ °æ¿ì ¸í½ÃÀûÀ¸·Î flushÇØ¾ß ÆÄÀÏ¿¡ ÀúÀåµÊ.
+ * BufferedOutputStreamí•˜ë©´ ë²„í¼ì— ì €ìž¥ë˜ëŠ”ë°
+ * ë²„í¼ê³µê°„ì´ ìžë™ìœ¼ë¡œ ì°¨ë©´ autoflushí•˜ë©´ ë¨ 
+ * bufferê³µê°„ì„ ë‹¤ ì±„ìš°ì§€ ëª»í•´ íŒŒì¼ì— ì €ìž¥ë˜ì§€ ì•ŠëŠ”ë‹¤. ì´ ê²½ìš° ëª…ì‹œì ìœ¼ë¡œ flushí•´ì•¼ íŒŒì¼ì— ì €ìž¥ë¨.
  *  * 
- * close()¸Þ¼Òµå°¡ ÀÚ¿øÁ¤¸®ÇÏ±â Àü¿¡ buffer¿¡ µ¥ÀÌÅÍ°¡ ³²¾ÆÀÖÀ¸¸é flushÇÑ ÈÄ ÀÚ¿øÁ¤¸®¸¦ ÇÏ°ÔµË´Ï´Ù.
- * ¿¡·¯¹æÁö¸¦ À§ÇØ ¸¸µé¾îÁø ¼ø¼­ÀÇ ¿ª¼øÀ¸·Î ÀÚ¿øÁ¤¸®ÇØ ÁÝ´Ï´Ù. 
+ * close()ë©”ì†Œë“œê°€ ìžì›ì •ë¦¬í•˜ê¸° ì „ì— bufferì— ë°ì´í„°ê°€ ë‚¨ì•„ìžˆìœ¼ë©´ flushí•œ í›„ ìžì›ì •ë¦¬ë¥¼ í•˜ê²Œë©ë‹ˆë‹¤.
+ * ì—ëŸ¬ë°©ì§€ë¥¼ ìœ„í•´ ë§Œë“¤ì–´ì§„ ìˆœì„œì˜ ì—­ìˆœìœ¼ë¡œ ìžì›ì •ë¦¬í•´ ì¤ë‹ˆë‹¤. 
  * 
- * close()¸¦ ¾ÈÇÒ °æ¿ì´Â ¹Ýµå½Ã ¸í½ÃÀûÀ¸·Î flush()ÇØ¾ß ÇÕ´Ï´Ù.
+ * close()ë¥¼ ì•ˆí•  ê²½ìš°ëŠ” ë°˜ë“œì‹œ ëª…ì‹œì ìœ¼ë¡œ flush()í•´ì•¼ í•©ë‹ˆë‹¤.
  */
 
 package com.output;
@@ -25,30 +25,30 @@ import java.io.IOException;
 public class BufferedOutputStreamEx {
 
 	public static void main(String[] args) {
-		//¸í½Ã ÈÄ ÃÊ±âÈ­
+		//ëª…ì‹œ í›„ ì´ˆê¸°í™”
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
 
 		try{
-			//°´Ã¼ »ý¼º
+			//ê°ì²´ ìƒì„±
 			fos = new FileOutputStream("bufferOut.txt");
 			bos = new BufferedOutputStream(fos);
 
-			String str ="BufferedOutputStream TestÀÔ´Ï´Ù.";
+			String str ="BufferedOutputStream Testìž…ë‹ˆë‹¤.";
 			//String -> byte[]			
 			bos.write(str.getBytes());
 
-			//buffer°ø°£À» ´Ù Ã¤¿ìÁö ¸øÇØ ÆÄÀÏ¿¡ ÀúÀåµÇÁö ¾Ê´Â´Ù.
-			//¹öÆÛÀÇ ³»¿ëÀ» ÆÄÀÏ¿¡ ¿Å±â°í ¹öÆÛ¸¦ ºñ¿ò(¸í½ÃÀûÀ¸·Î flush)
+			//bufferê³µê°„ì„ ë‹¤ ì±„ìš°ì§€ ëª»í•´ íŒŒì¼ì— ì €ìž¥ë˜ì§€ ì•ŠëŠ”ë‹¤.
+			//ë²„í¼ì˜ ë‚´ìš©ì„ íŒŒì¼ì— ì˜®ê¸°ê³  ë²„í¼ë¥¼ ë¹„ì›€(ëª…ì‹œì ìœ¼ë¡œ flush)
 			//bos.flush();
 
-			System.out.println("ÆÄÀÏ »ý¼º ¹× ³»¿ë ±â¼ú!");
+			System.out.println("íŒŒì¼ ìƒì„± ë° ë‚´ìš© ê¸°ìˆ !");
 
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//ÀÚ¿øÁ¤¸®			
-			//close()¸Þ¼Òµå°¡ ÀÚ¿øÁ¤¸®ÇÏ±â Àü¿¡ buffer¿¡ µ¥ÀÌÅÍ°¡ ³²¾ÆÀÖÀ¸¸é flushÇÑ ÈÄ ÀÚ¿øÁ¤¸®¸¦ ÇÏ°ÔµË´Ï´Ù.
-			//»ý¼º ¿ª¼øÀ¸·Î ÀÚ¿øÁ¤¸®
+		}finally{	//ìžì›ì •ë¦¬			
+			//close()ë©”ì†Œë“œê°€ ìžì›ì •ë¦¬í•˜ê¸° ì „ì— bufferì— ë°ì´í„°ê°€ ë‚¨ì•„ìžˆìœ¼ë©´ flushí•œ í›„ ìžì›ì •ë¦¬ë¥¼ í•˜ê²Œë©ë‹ˆë‹¤.
+			//ìƒì„± ì—­ìˆœìœ¼ë¡œ ìžì›ì •ë¦¬
 			if( bos != null){ try{ bos.close(); }catch(IOException e){e.printStackTrace();} } 
 			if( fos != null){ try{ fos.close(); }catch(IOException e){e.printStackTrace();} }
 		}

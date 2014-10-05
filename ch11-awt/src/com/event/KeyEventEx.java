@@ -1,14 +1,14 @@
 /* KeyEvent
  *  
- * ¹æÇâÅ° ÀÔ·Â½Ã TextArea¿¡ Å°ÀÔ·Â Ãâ·ÂÇÏ±â
+ * ë°©í–¥í‚¤ ì…ë ¥ì‹œ TextAreaì— í‚¤ì…ë ¥ ì¶œë ¥í•˜ê¸°
  * 
- * TextArea °´Ã¼ »ı¼º
- * Frame¿¡ TextArea µî·Ï(FrameÀüÃ¼¿¡ TextArea°¡ À§Ä¡ÇÏ°Ô µË´Ï´Ù)
+ * TextArea ê°ì²´ ìƒì„±
+ * Frameì— TextArea ë“±ë¡(Frameì „ì²´ì— TextAreaê°€ ìœ„ì¹˜í•˜ê²Œ ë©ë‹ˆë‹¤)
  * implements KeyListener
- * TextArea¿¡ ÀÌº¥Æ®¸®½ºÆ® ¿¬°á
- * Ãß»ó ¸Ş¼Òµå ±¸Çö
- * Frame À§Ä¡, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
- * Frame ³ëÃâ ¿©ºÎ ¼³Á¤
+ * TextAreaì— ì´ë²¤íŠ¸ë¦¬ìŠ¤íŠ¸ ì—°ê²°
+ * ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„
+ * Frame ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
+ * Frame ë…¸ì¶œ ì—¬ë¶€ ì„¤ì •
  * 
  */
 
@@ -21,26 +21,26 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyEventEx extends Frame implements KeyListener{
-	//TextArea °´Ã¼ »ı¼º
+	//TextArea ê°ì²´ ìƒì„±
 	TextArea ta = new TextArea();
 	
 	public KeyEventEx(){
-		//Á¦¸ñ ¼³Á¤
+		//ì œëª© ì„¤ì •
 		super("KeyEvent Test");
 		
-		//Frame¿¡ TextAreaµî·Ï(FrameÀüÃ¼¿¡ TextArea°¡ À§Ä¡ÇÏ°Ô µË´Ï´Ù)
+		//Frameì— TextAreaë“±ë¡(Frameì „ì²´ì— TextAreaê°€ ìœ„ì¹˜í•˜ê²Œ ë©ë‹ˆë‹¤)
 		add(ta);
 		
-		//TextArea¿¡ ÀÌº¥Æ®¸®½ºÆ® ¿¬°á
+		//TextAreaì— ì´ë²¤íŠ¸ë¦¬ìŠ¤íŠ¸ ì—°ê²°
 		ta.addKeyListener(this);
 		
-		//Frame À§Ä¡, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
+		//Frame ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
 		setBounds(300, 300, 300, 300);
 		
-		//Frame ³ëÃâ ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œ ì—¬ë¶€ ì„¤ì •
 		setVisible(true);		
 	}
-	// Ãß»ó ¸Ş¼Òµå ±¸Çö (Å°°¡ ´­·ÈÀ» ¶§)
+	// ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„ (í‚¤ê°€ ëˆŒë ¸ì„ ë•Œ)
 	@Override
 	public void keyPressed(KeyEvent e){
 		if(e.getKeyChar() == KeyEvent.VK_DOWN){
@@ -58,18 +58,18 @@ public class KeyEventEx extends Frame implements KeyListener{
 		}
 	}	
 	
-	// Ãß»ó ¸Ş¼Òµå ±¸Çö
+	// ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„
 	@Override
 	public void keyTyped(KeyEvent e){		
 	}
 	
-	// Ãß»ó ¸Ş¼Òµå ±¸Çö
+	// ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„
 	@Override
 	public void keyReleased(KeyEvent e){			
 	}	
 	
 	public static void main(String[] args) {
-		// °´Ã¼ »ı¼º
+		// ê°ì²´ ìƒì„±
 		new KeyEventEx();
 	}
 }

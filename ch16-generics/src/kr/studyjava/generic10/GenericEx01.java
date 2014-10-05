@@ -1,13 +1,13 @@
-/* Á¦³×¸¯ »ý·«
-Á¦³×¸¯À» Æ¯Á¤ÇÏÁö ¾ÊÀ¸¸é  extends Object°ú µ¿ÀÏÇÑ ÀÇ¹Ì°¡ µË´Ï´Ù. ObjectÀÇ ÀÚ½ÄÀÌ¸é ¸ðµÎ ¿Ã ¼ö ÀÖ½À´Ï´Ù. 
-Object°¡ °¡Áö°í ÀÖ´Â(¸ðµç Å¬·¡½º°¡ °¡Áö°í ÀÖ´Â) ¸Þ¼Òµå(toString, Cloneµî)¸¦ Á¦¿ÜÇÑ ¸Þ¼Òµå´Â Á¦³×¸¯À¸·Î ¼±¾ðÇÑ  °´Ã¼¿¡¼­´Â È£ÃâÇÒ ¼ö ¾ø½À´Ï´Ù. 
-´Ü¼øÈ÷ ObjectÀÎ »óÅÂÀÌ±â ¶§¹®¿¡ Object°¡ °¡Áö°í ÀÖ´Â °Í¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
+/* ì œë„¤ë¦­ ìƒëžµ
+ì œë„¤ë¦­ì„ íŠ¹ì •í•˜ì§€ ì•Šìœ¼ë©´  extends Objectê³¼ ë™ì¼í•œ ì˜ë¯¸ê°€ ë©ë‹ˆë‹¤. Objectì˜ ìžì‹ì´ë©´ ëª¨ë‘ ì˜¬ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 
+Objectê°€ ê°€ì§€ê³  ìžˆëŠ”(ëª¨ë“  í´ëž˜ìŠ¤ê°€ ê°€ì§€ê³  ìžˆëŠ”) ë©”ì†Œë“œ(toString, Cloneë“±)ë¥¼ ì œì™¸í•œ ë©”ì†Œë“œëŠ” ì œë„¤ë¦­ìœ¼ë¡œ ì„ ì–¸í•œ  ê°ì²´ì—ì„œëŠ” í˜¸ì¶œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. 
+ë‹¨ìˆœížˆ Objectì¸ ìƒíƒœì´ê¸° ë•Œë¬¸ì— Objectê°€ ê°€ì§€ê³  ìžˆëŠ” ê²ƒë§Œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
  */
 package kr.studyjava.generic10;
 
 abstract class Info{
-	//Ãß»ó ¸Þ¼Òµå
+	//ì¶”ìƒ ë©”ì†Œë“œ
 	public abstract int getInfo();
 }
 
@@ -15,7 +15,7 @@ class EmployeeInfo extends Info{
 	public int position;
 	EmployeeInfo(int position){ this.position = position; }
 
-	//Ãß»ó ¸Þ¼Òµå ±¸Çö
+	//ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„
 	@Override
 	public int getInfo(){
 		return this.position;
@@ -27,11 +27,11 @@ class Person<T>{
 	Person(T info){ 
 		this.info = info; 
 
-		//Á¦³×¸¯À» Æ¯Á¤ÇÏÁö ¾ÊÀ¸¸é  extends Object°ú µ¿ÀÏÇÑ ÀÇ¹Ì°¡ µË´Ï´Ù. ObjectÀÇ ÀÚ½ÄÀÌ¸é ¸ðµÎ ¿Ã¼ö ÀÖ½À´Ï´Ù. 
-		//Object°¡ °¡Áö°í ÀÖ´Â(¸ðµç Å¬·¡½º°¡ °¡Áö°í ÀÖ´Â) ¸Þ¼Òµå(toString, Cloneµî)¸¦ Á¦¿ÜÇÑ ¸Þ¼Òµå´Â Á¦³×¸¯À¸·Î ¼±¾ðÇÑ  °´Ã¼¿¡¼­´Â È£ÃâÇÒ ¼ö ¾ø½À´Ï´Ù. 
-		//´Ü¼øÈ÷ ObjectÀÎ »óÅÂÀÌ±â ¶§¹®¿¡ Object°¡ °¡Áö°í ÀÖ´Â °Í¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-		//EmployeeInfoÅ¬·¡½ºÀÇ getInfo()È£ÃâÇÒ ¼ö ¾ø½À´Ï´Ù.
-//        info.getInfo();	//ÄÄÆÄÀÏ ¿¡·¯ ¹ß»ý
+		//ì œë„¤ë¦­ì„ íŠ¹ì •í•˜ì§€ ì•Šìœ¼ë©´  extends Objectê³¼ ë™ì¼í•œ ì˜ë¯¸ê°€ ë©ë‹ˆë‹¤. Objectì˜ ìžì‹ì´ë©´ ëª¨ë‘ ì˜¬ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 
+		//Objectê°€ ê°€ì§€ê³  ìžˆëŠ”(ëª¨ë“  í´ëž˜ìŠ¤ê°€ ê°€ì§€ê³  ìžˆëŠ”) ë©”ì†Œë“œ(toString, Cloneë“±)ë¥¼ ì œì™¸í•œ ë©”ì†Œë“œëŠ” ì œë„¤ë¦­ìœ¼ë¡œ ì„ ì–¸í•œ  ê°ì²´ì—ì„œëŠ” í˜¸ì¶œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. 
+		//ë‹¨ìˆœížˆ Objectì¸ ìƒíƒœì´ê¸° ë•Œë¬¸ì— Objectê°€ ê°€ì§€ê³  ìžˆëŠ” ê²ƒë§Œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+		//EmployeeInfoí´ëž˜ìŠ¤ì˜ getInfo()í˜¸ì¶œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+//        info.getInfo();	//ì»´íŒŒì¼ ì—ëŸ¬ ë°œìƒ
 	}
 }
 
@@ -39,7 +39,7 @@ class Person<T>{
 public class GenericEx01 {
 	public static void main(String[] args) {
 		Person p1 = new Person(new EmployeeInfo(10));
-		Person<String> p2 = new Person<String>("»çÀå");
+		Person<String> p2 = new Person<String>("ì‚¬ìž¥");
 	}
 }
 

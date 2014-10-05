@@ -1,12 +1,12 @@
-/* ±âº» µ¥ÀÌÅÍ Å¸ÀÔ°ú Á¦³×¸¯
+/* ê¸°ë³¸ ë°ì´í„° íƒ€ìž…ê³¼ ì œë„¤ë¦­
 
-kr.studyjava.generic04\GenericsEx01.java ¿¡¼­ ±âº»ÀÚ·áÇüÀ» Á¦³×¸¯»ç¿ë½Ã ¹ß»ýÇÑ ÄÄÆÄÀÏ ¿¡·¯ ÇØ°áÇÏ±â
+kr.studyjava.generic04\GenericsEx01.java ì—ì„œ ê¸°ë³¸ìžë£Œí˜•ì„ ì œë„¤ë¦­ì‚¬ìš©ì‹œ ë°œìƒí•œ ì»´íŒŒì¼ ì—ëŸ¬ í•´ê²°í•˜ê¸°
 
-Á¦³×¸¯¿¡¼­´Â ÂüÁ¶ µ¥ÀÌÅÍ Å¸ÀÔ¸¸ ¿Ã¼ö ÀÖ½À´Ï´Ù.
-±âº» ÀÚ·áÇü(int, char, doubleµî)¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.
+ì œë„¤ë¦­ì—ì„œëŠ” ì°¸ì¡° ë°ì´í„° íƒ€ìž…ë§Œ ì˜¬ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ê¸°ë³¸ ìžë£Œí˜•(int, char, doubleë“±)ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
 
-ÀÚ¹Ù¿¡¼­´Â ±âº»µ¥ÀÌÅÍÅ¸ÀÔÀ» °´Ã¼·Î »ç¿ëÇÏ±â À§ÇØ wrapperÅ¬·¡½º¸¦ Á¦°øÇØ ÁÖ°í ÀÖ½À´Ï´Ù. 
-±âº»µ¥ÀÌÅÍÅ¸ÀÔÀ» ¸¶Ä¡ °´Ã¼ÀÎ°Í Ã³·³ ¸¸µé ¼ö ÀÖ´Â Å¬·¡½º¸¦ wrapperÅ¬·¡½º(·¡ÆÛÅ¬·¡½º)¶ó°í ÇÕ´Ï´Ù.
+ìžë°”ì—ì„œëŠ” ê¸°ë³¸ë°ì´í„°íƒ€ìž…ì„ ê°ì²´ë¡œ ì‚¬ìš©í•˜ê¸° ìœ„í•´ wrapperí´ëž˜ìŠ¤ë¥¼ ì œê³µí•´ ì£¼ê³  ìžˆìŠµë‹ˆë‹¤. 
+ê¸°ë³¸ë°ì´í„°íƒ€ìž…ì„ ë§ˆì¹˜ ê°ì²´ì¸ê²ƒ ì²˜ëŸ¼ ë§Œë“¤ ìˆ˜ ìžˆëŠ” í´ëž˜ìŠ¤ë¥¼ wrapperí´ëž˜ìŠ¤(ëž˜í¼í´ëž˜ìŠ¤)ë¼ê³  í•©ë‹ˆë‹¤.
 
 */
 package kr.studyjava.generic05;
@@ -26,11 +26,11 @@ class Person<T, S>{
 public class GenericEx01 {
   public static void main(String[] args) {
       EmployeeInfo e = new EmployeeInfo(10);
-      //new Integer´Â ±âº» µ¥ÀÌÅÍ Å¸ÀÔÀÎ int¸¦ ÂüÁ¶ µ¥ÀÌÅÍ Å¸ÀÔÀ¸·Î º¯È¯ÇØÁÖ´Â ¿ªÇÒÀ» ÇÏ´Â ·¡ÆÛ Å¬·¡½º
-      //±âº» µ¥ÀÌÅÍ Å¸ÀÔÀ» »ç¿ëÇÒ ¼ö ¾ø´Â Á¦³×¸¯¿¡¼­ int¸¦ »ç¿ëÇÒ ¼ö ÀÖÀ½
+      //new IntegerëŠ” ê¸°ë³¸ ë°ì´í„° íƒ€ìž…ì¸ intë¥¼ ì°¸ì¡° ë°ì´í„° íƒ€ìž…ìœ¼ë¡œ ë³€í™˜í•´ì£¼ëŠ” ì—­í• ì„ í•˜ëŠ” ëž˜í¼ í´ëž˜ìŠ¤
+      //ê¸°ë³¸ ë°ì´í„° íƒ€ìž…ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ì œë„¤ë¦­ì—ì„œ intë¥¼ ì‚¬ìš©í•  ìˆ˜ ìžˆìŒ
       Integer id = new Integer(20);
       Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(e, id);
-      //·¹ÆÛÅ¬·¡½º°¡ ´ã°í ÀÖ´Â ¿ø·¡ÀÇ ¼ýÀÚ¸¦ ±âº»Å×ÀÌÅÍ Å¸ÀÔÀ¸·Î µ¹·ÁÁÝ´Ï´Ù.
+      //ë ˆí¼í´ëž˜ìŠ¤ê°€ ë‹´ê³  ìžˆëŠ” ì›ëž˜ì˜ ìˆ«ìžë¥¼ ê¸°ë³¸í…Œì´í„° íƒ€ìž…ìœ¼ë¡œ ëŒë ¤ì¤ë‹ˆë‹¤.
       System.out.println(p1.id.intValue());
       
       System.out.println(p1.info.position);

@@ -1,22 +1,22 @@
-/* Swing - »çÄ¢¿¬»ê±â
+/* Swing - ì‚¬ì¹™ì—°ì‚°ê¸°
  * 
  * 
- * È­¸é ±¸¼º ÀÛ¾÷
+ * í™”ë©´ êµ¬ì„± ì‘ì—…
  * 
- * ÄÄÆ÷³ÍÆ®ÀÇ Å©±â¿¡ ¸ÂÃç Å©±âÁ¶Á¤¤¤ 
- * ¿¾³¯ MAC½ºÅ¸ÀÏ·Î Ç¥½Ã
- * Á¶°ÇÃ¼Å©
- * ¿¬»ê ¼öÇà - doCalc()
- * ¿¡·¯¸Ş½ÃÁö Ãâ·Â - showErrMsg() 
+ * ì»´í¬ë„ŒíŠ¸ì˜ í¬ê¸°ì— ë§ì¶° í¬ê¸°ì¡°ì •ã„´ 
+ * ì˜›ë‚  MACìŠ¤íƒ€ì¼ë¡œ í‘œì‹œ
+ * ì¡°ê±´ì²´í¬
+ * ì—°ì‚° ìˆ˜í–‰ - doCalc()
+ * ì—ëŸ¬ë©”ì‹œì§€ ì¶œë ¥ - showErrMsg() 
  * implements ActionListener
- * ¹öÆ°¿¡ ActionÀÌº¥Æ® ¸®½º³Ê¸¦ ¿¬°á
+ * ë²„íŠ¼ì— Actionì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆë¥¼ ì—°ê²°
  * @Override	public void actionPerformed(ActionEvent e){ }
  *  
  * ---------------------------------------------------------
- * swith~case¹®¿¡¼­ Á¶°Ç Ã¼Å©½Ã ¹®ÀÚ¿­À» ¹®ÀÚ·Î ÃßÃâÇÏ´Â ÇÔ¼ö 
+ * swith~caseë¬¸ì—ì„œ ì¡°ê±´ ì²´í¬ì‹œ ë¬¸ìì—´ì„ ë¬¸ìë¡œ ì¶”ì¶œí•˜ëŠ” í•¨ìˆ˜ 
  * "+" -> charAt(0) -> '+'
  *  
- * try ~ catch ¹®ÀÚ Ã¼Å©
+ * try ~ catch ë¬¸ì ì²´í¬
  * 
  */
 
@@ -47,8 +47,8 @@ public class Calculator1 extends JFrame implements ActionListener{
 	String str1, str2, com;
 	
 	public Calculator1(){
-		//Frame¿¡ Á¦¸ñ ¼³Á¤
-		super("»çÄ¢¿¬»ê±â");
+		//Frameì— ì œëª© ì„¤ì •
+		super("ì‚¬ì¹™ì—°ì‚°ê¸°");
 		
 		Container contentPane = getContentPane();		
 		
@@ -59,43 +59,43 @@ public class Calculator1 extends JFrame implements ActionListener{
 		text2= new JTextField(5);
 		text3= new JTextField(5);
 		
-		//¿¬»ê ±âÈ£¸¦ ´ãÀº String°´Ã¼ »ı¼º
+		//ì—°ì‚° ê¸°í˜¸ë¥¼ ë‹´ì€ Stringê°ì²´ ìƒì„±
 		String[] op ={"+", "-", "*", "/"};
-		//¿¬»ê ±âÈ£¸¦ ComboBox¿¡ ÀúÀå
+		//ì—°ì‚° ê¸°í˜¸ë¥¼ ComboBoxì— ì €ì¥
 		combo = new JComboBox(op);
 		
-		//panel1¿¡ »çÁ÷¿¬»êÀ» À§ÇÑ ÄÄÆ÷³ÍÆ® µî·Ï
+		//panel1ì— ì‚¬ì§ì—°ì‚°ì„ ìœ„í•œ ì»´í¬ë„ŒíŠ¸ ë“±ë¡
 		panel1.add(text1);
 		panel1.add(combo);
 		panel1.add(text2);
 		panel1.add(new JLabel("="));
 		panel1.add(text3);
 		
-		//°á°ú°ªÀÌ º¸¿©Áö´Â TextField ¼öÁ¤ ºÒ°¡
+		//ê²°ê³¼ê°’ì´ ë³´ì—¬ì§€ëŠ” TextField ìˆ˜ì • ë¶ˆê°€
 		text3.setEditable(false);
 		
-		//Button »ı¼º
-		button1 = new JButton("È®ÀÎ");
-		button2 = new JButton("Ãë¼Ò");
+		//Button ìƒì„±
+		button1 = new JButton("í™•ì¸");
+		button2 = new JButton("ì·¨ì†Œ");
 		
-		//panel2¿¡ È®ÀÎ, Ãë¼Ò ¹öÆ° µî·Ï
+		//panel2ì— í™•ì¸, ì·¨ì†Œ ë²„íŠ¼ ë“±ë¡
 		panel2.add(button1);
 		panel2.add(button2);
 		
-		//panel1, panel2¸¦ FrameÀÇ Boraderlayout¿µ¿ª À§ÂÊ°ú Áß¾Ó¿µ¿ª¿¡ µî·Ï
+		//panel1, panel2ë¥¼ Frameì˜ Boraderlayoutì˜ì—­ ìœ„ìª½ê³¼ ì¤‘ì•™ì˜ì—­ì— ë“±ë¡
 		contentPane.add(panel1, BorderLayout.NORTH);
 		contentPane.add(panel2, BorderLayout.CENTER);
 
-		//x¹öÆ° Å¬¸¯½Ã Á¾·á - ÀÍ¸í³»ºÎÅ¬·¡½º·Î x¹öÆ° ÇÑ°ÍÀÌ¶û µ¿ÀÏ
+		//xë²„íŠ¼ í´ë¦­ì‹œ ì¢…ë£Œ - ìµëª…ë‚´ë¶€í´ë˜ìŠ¤ë¡œ xë²„íŠ¼ í•œê²ƒì´ë‘ ë™ì¼
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//x, y
 		setLocation(500, 400);	
 		
-		//»çÀÌÁî¸¦ ¸í½ÃÇÏÁö ¾Ê°í pack()»ç¿ëÇÏ¸é ÄÄÆ÷³ÍÆ®ÀÇ Å©±â¸¦ ÀÎ½ÄÇØ¼­ ÀÚµ¿ÀûÀ¸·Î »çÀÌÁî¸¦ °è»ê		
+		//ì‚¬ì´ì¦ˆë¥¼ ëª…ì‹œí•˜ì§€ ì•Šê³  pack()ì‚¬ìš©í•˜ë©´ ì»´í¬ë„ŒíŠ¸ì˜ í¬ê¸°ë¥¼ ì¸ì‹í•´ì„œ ìë™ì ìœ¼ë¡œ ì‚¬ì´ì¦ˆë¥¼ ê³„ì‚°		
 		pack();
 		
-		//¹öÆ°¿¡ ActionÀÌº¥Æ® ¸®½º³Ê¸¦ ¿¬°á
+		//ë²„íŠ¼ì— Actionì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆë¥¼ ì—°ê²°
 		button1.addActionListener(this);
 		button2.addActionListener(this);
 				
@@ -105,10 +105,10 @@ public class Calculator1 extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e){
 		
-		//°´Ã¼ ÀÚÃ¼¸¦ ºÒ·¯¿À±â
+		//ê°ì²´ ìì²´ë¥¼ ë¶ˆëŸ¬ì˜¤ê¸°
 		Object obj = e.getSource();
 		
-		if( obj == button1 ){	//È®ÀÎ
+		if( obj == button1 ){	//í™•ì¸
 			str1 = text1.getText();
 			str2 = text2.getText();
 			com = (String)combo.getSelectedItem();			
@@ -117,25 +117,25 @@ public class Calculator1 extends JFrame implements ActionListener{
 			num1 = Integer.parseInt(str1);
 			num2 = Integer.parseInt(str2);*/
 			
-			//String -> int ½Ã ¿¹¿ÜÃ³¸®
+			//String -> int ì‹œ ì˜ˆì™¸ì²˜ë¦¬
 			try{
 				num1 = Integer.parseInt(str1);
 				
 			}catch(NumberFormatException ne){
-				showErrMsg(text1, "¼ıÀÚ¸¸ ÀÔ·Â°¡´ÉÇÕ´Ï´Ù");
+				showErrMsg(text1, "ìˆ«ìë§Œ ì…ë ¥ê°€ëŠ¥í•©ë‹ˆë‹¤");
 				return;
 			}			
 			try{
 				num2 = Integer.parseInt(str2);
 				
 			}catch(NumberFormatException ne){
-				showErrMsg(text2, "¼ıÀÚ¸¸ ÀÔ·Â°¡´ÉÇÕ´Ï´Ù");
+				showErrMsg(text2, "ìˆ«ìë§Œ ì…ë ¥ê°€ëŠ¥í•©ë‹ˆë‹¤");
 			}
 			
-			//¿¬»ê ¼öÇà ¸Ş¼Òµå È£Ãâ
+			//ì—°ì‚° ìˆ˜í–‰ ë©”ì†Œë“œ í˜¸ì¶œ
 			doCalc();			
 			
-		}else{	//Ãë¼Ò
+		}else{	//ì·¨ì†Œ
 			text1.setText("");
 			text2.setText("");
 			text3.setText("");			
@@ -143,12 +143,12 @@ public class Calculator1 extends JFrame implements ActionListener{
 	}
 
 	public static void main(String[] args) {
-		// ¿¾³¯ MAC½ºÅ¸ÀÏ·Î Ç¥½Ã
+		// ì˜›ë‚  MACìŠ¤íƒ€ì¼ë¡œ í‘œì‹œ
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		new Calculator1();
 	}
 	
-	//¿¬»ê ¼öÇà
+	//ì—°ì‚° ìˆ˜í–‰
 	private void doCalc(){
 		try{
 			switch(com.charAt(0)){
@@ -161,17 +161,17 @@ public class Calculator1 extends JFrame implements ActionListener{
 			//text3.setText( String.valueOf(result) );
 			text3.setText(result + "");
 		}catch(ArithmeticException ae){
-			showErrMsg(text2, "0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù!");
+			showErrMsg(text2, "0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤!");
 		}
 	}
 	
-	//¿¡·¯¸Ş½ÃÁö Ãâ·Â
+	//ì—ëŸ¬ë©”ì‹œì§€ ì¶œë ¥
 	private void showErrMsg(JTextField text, String str){
 		text2.requestFocus();
 		text2.setText("");
-		// ¿¡·¯ ¹ß»ı½Ã ÇÕ°è¸¦ Áö¿ò
+		// ì—ëŸ¬ ë°œìƒì‹œ í•©ê³„ë¥¼ ì§€ì›€
 		text3.setText("");
-								//ºÎ¸ğÄÄÆ÷³ÍÆ®, ¿¡·¯¹®±¸(¸Ş½ÃÁö), ¸Ş½ÃÁö Å¸ÀÌÆ², ¾ÆÀÌÄÜÅ¸ÀÔ(¸Ş½ÃÁöÅ¸ÀÔ)
-		JOptionPane.showMessageDialog(this, str, "¿¡·¯ ¸Ş½ÃÁö", JOptionPane.ERROR_MESSAGE);		
+								//ë¶€ëª¨ì»´í¬ë„ŒíŠ¸, ì—ëŸ¬ë¬¸êµ¬(ë©”ì‹œì§€), ë©”ì‹œì§€ íƒ€ì´í‹€, ì•„ì´ì½˜íƒ€ì…(ë©”ì‹œì§€íƒ€ì…)
+		JOptionPane.showMessageDialog(this, str, "ì—ëŸ¬ ë©”ì‹œì§€", JOptionPane.ERROR_MESSAGE);		
 	}
 }

@@ -1,9 +1,9 @@
 /* Vector
  * 
- * ÀÚ¿ø Ãß°¡
- * ¿ä¼Ò ÃßÃâ
- * ÀÚ¿ø °Ë»ö
- * ÀÚ¿ø »èÁ¦
+ * ìì› ì¶”ê°€
+ * ìš”ì†Œ ì¶”ì¶œ
+ * ìì› ê²€ìƒ‰
+ * ìì› ì‚­ì œ
  */
 
 package com.list;
@@ -15,31 +15,31 @@ public class VectorEx {
 	public static void main(String[] args) {
 		Vector<Double> v = new Vector<Double>();
 		
-		//ÀÚ¿ø Ãß°¡
+		//ìì› ì¶”ê°€
 		v.add(new Double(100.3));
 		v.add(3.14);
-		v.add(1000.);	//1000.0 µ¿ÀÏÀÇ¹Ì
+		v.add(1000.);	//1000.0 ë™ì¼ì˜ë¯¸
 		
-		//¿ä¼ÒÃßÃâ
+		//ìš”ì†Œì¶”ì¶œ
 		for( Double dbl : v){
 			System.out.println(dbl);
 		}		
 		
 		System.out.println();
-		//ÀÚ¿ø°Ë»ö
-		double search = 1000.0;	//°Ë»öÇÒ ¿ä¼Ò
+		//ìì›ê²€ìƒ‰
+		double search = 1000.0;	//ê²€ìƒ‰í•  ìš”ì†Œ
 		int index = v.indexOf(search);
-		if(index != -1){	//ÇØ´çµ¥ÀÌÅÍ°¡ ¾øÀ¸¸é:-1 ¸®ÅÏ
-			System.out.println("°Ë»ö¿ä¼Ò" + search + "ÀÇ À§Ä¡: " + index);			
+		if(index != -1){	//í•´ë‹¹ë°ì´í„°ê°€ ì—†ìœ¼ë©´:-1 ë¦¬í„´
+			System.out.println("ê²€ìƒ‰ìš”ì†Œ" + search + "ì˜ ìœ„ì¹˜: " + index);			
 		}else{
-			System.out.println("°Ë»ö¿ä¼Ò" + search + "°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ê²€ìƒ‰ìš”ì†Œ" + search + "ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 				
-		double del = 3.14;	//»èÁ¦ÇÒ ¿ä¼Ò
-		//µ¥ÀÌÅÍ Æ÷ÇÔ À¯¹« È®ÀÎÇÏ¿© µ¥ÀÌÅÍ »èÁ¦
+		double del = 3.14;	//ì‚­ì œí•  ìš”ì†Œ
+		//ë°ì´í„° í¬í•¨ ìœ ë¬´ í™•ì¸í•˜ì—¬ ë°ì´í„° ì‚­ì œ
 		if(v.contains(del)){
-			v.remove(del);	//»èÁ¦
-			System.out.println(del + "»èÁ¦¿Ï·á");
+			v.remove(del);	//ì‚­ì œ
+			System.out.println(del + "ì‚­ì œì™„ë£Œ");
 		}
 		
 		for( Double dbl : v){

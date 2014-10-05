@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class UpdateEx {
 
 	public static void main(String[] args) {
-		//Á¢¼Ó Á¤º¸ ÀúÀå
+		//ì ‘ì† ì •ë³´ ì €ì¥
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
 		String passwd ="1234";
@@ -24,27 +24,27 @@ public class UpdateEx {
 		String sql = null;
 		
 		try{
-			//JDBC 1´Ü°è: µå¶óÀÌ¹ö ·Îµå
+			//JDBC 1ë‹¨ê³„: ë“œë¼ì´ë²„ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//JDBC 2´Ü°è: Connection °´Ã¼ »ı¼º
+			//JDBC 2ë‹¨ê³„: Connection ê°ì²´ ìƒì„±
 			con = DriverManager.getConnection(dbURL, id, passwd);
-			//JDBC 3´Ü°è: Statement °´Ã¼ »ı¼º
+			//JDBC 3ë‹¨ê³„: Statement ê°ì²´ ìƒì„±
 			stmt = con.createStatement();
 			
 			
-			//DB ¾÷µ¥ÀÌÆ®(¼öÁ¤)
+			//DB ì—…ë°ì´íŠ¸(ìˆ˜ì •)
 			sql = "UPDATE test1 SET age=10 WHERE id='bluebird'";
-			//sql = "UPDATE test1 SET age=10";	//WHEREÀı »«°æ¿ì
-			//sql = "UPDATE test1 SET age=20 WHERE id='dragon'";	//¾ø´Â ID ¼öÁ¤ ½Ãµµ
-			//JDBC 4´Ü°è: SQL ½ÇÇà
+			//sql = "UPDATE test1 SET age=10";	//WHEREì ˆ ëº€ê²½ìš°
+			//sql = "UPDATE test1 SET age=20 WHERE id='dragon'";	//ì—†ëŠ” ID ìˆ˜ì • ì‹œë„
+			//JDBC 4ë‹¨ê³„: SQL ì‹¤í–‰
 			int count = stmt.executeUpdate(sql);			
-			System.out.println(count + "°³ ÇàÀÇ Á¤º¸¸¦ ¼öÁ¤Çß½À´Ï´Ù.");
+			System.out.println(count + "ê°œ í–‰ì˜ ì •ë³´ë¥¼ ìˆ˜ì •í–ˆìŠµë‹ˆë‹¤.");
 			
 			
-			//DB ÀüÃ¼ µ¥ÀÌÅÍ ÀĞ±â
+			//DB ì „ì²´ ë°ì´í„° ì½ê¸°
 			sql ="SELECT * FROM test1";
-			//JDBC 4´Ü°è: SQL ½ÇÇà
-			//JDBC 5´Ü°è: ResultSet¿¡ °á°ú ÀúÀå
+			//JDBC 4ë‹¨ê³„: SQL ì‹¤í–‰
+			//JDBC 5ë‹¨ê³„: ResultSetì— ê²°ê³¼ ì €ì¥
 			rs = stmt.executeQuery(sql);
 			System.out.println("ID\tAge");
 			while(rs.next()){

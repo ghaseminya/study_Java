@@ -1,8 +1,8 @@
-/* Thread - Thread »ó¼Ó
+/* Thread - Thread ìƒì†
  * 
- * Thread »ó¼Ó
- * ½º·¹µå ÀÌ¸§ ÁöÁ¤
- * ½º·¹µåÀÇ run()¸¦ ÀçÁ¤ÀÇ
+ * Thread ìƒì†
+ * ìŠ¤ë ˆë“œ ì´ë¦„ ì§€ì •
+ * ìŠ¤ë ˆë“œì˜ run()ë¥¼ ì¬ì •ì˜
  * -sleep()
  * start();
  * 
@@ -12,33 +12,33 @@ package com.basic;
 
 public class ThreadEx01 extends Thread{
 	
-	//½º·¹µå ÀÌ¸§ ÁöÁ¤
+	//ìŠ¤ë ˆë“œ ì´ë¦„ ì§€ì •
 	public ThreadEx01(String threadName){
-		super(threadName);	//½º·¹µåÀÌ¸§ ¼³Á¤, ÁöÁ¤ÇÏÁö ¾ÊÀ¸¸é ½Ã½ºÅÛ¿¡¼­ ÀÚµ¿ÀûÀ¸·Î ¼ıÀÚ·Î ÀÌ¸§ºÎ¿©µÊ		
+		super(threadName);	//ìŠ¤ë ˆë“œì´ë¦„ ì„¤ì •, ì§€ì •í•˜ì§€ ì•Šìœ¼ë©´ ì‹œìŠ¤í…œì—ì„œ ìë™ì ìœ¼ë¡œ ìˆ«ìë¡œ ì´ë¦„ë¶€ì—¬ë¨		
 	}
 	
-	//½º·¹µåÀÇ run()¸¦ ÀçÁ¤ÀÇ
+	//ìŠ¤ë ˆë“œì˜ run()ë¥¼ ì¬ì •ì˜
 	@Override
 	public void run(){
 		for(int i=0; i<10; i++){
 			
 			try{
-				//ÁöÁ¤µÈ ½Ã°£(¹Ğ¸®¼¼ÄÁµå)¸¸Å­ ¼öÇàÀ» ¸ØÃã
-				sleep(1000);	//1ÃÊ
+				//ì§€ì •ëœ ì‹œê°„(ë°€ë¦¬ì„¸ì»¨ë“œ)ë§Œí¼ ìˆ˜í–‰ì„ ë©ˆì¶¤
+				sleep(1000);	//1ì´ˆ
 			}catch(InterruptedException e){
-				//¿À·ù¸Ş½ÃÁö Ãâ·Â: ¿À·ù³»¿ë, ¿À·ù³­ ÁÙ¼ö Ç¥½Ã
+				//ì˜¤ë¥˜ë©”ì‹œì§€ ì¶œë ¥: ì˜¤ë¥˜ë‚´ìš©, ì˜¤ë¥˜ë‚œ ì¤„ìˆ˜ í‘œì‹œ
 				e.printStackTrace();
 			}
 			
-			System.out.print("½º·¹µå ÀÌ¸§: " + currentThread().getName() + "\t");	//ÇöÀç ½º·¹µåÀÇ °´Ã¼ ¹İÈ¯ÈÄ ÀÌ¸§¸¸ ¹İÈ¯
+			System.out.print("ìŠ¤ë ˆë“œ ì´ë¦„: " + currentThread().getName() + "\t");	//í˜„ì¬ ìŠ¤ë ˆë“œì˜ ê°ì²´ ë°˜í™˜í›„ ì´ë¦„ë§Œ ë°˜í™˜
 			System.out.println("temp value: "+ i);
 		}
 	}
 
 	public static void main(String[] args) {		
-		//½º·¹µå °´Ã¼ »ı¼º
-		ThreadEx01 td = new ThreadEx01("Ã¹¹øÂ°");
-		//td.run(); 	//¼øÂ÷¼öÇà
-		td.start(); 	//start() -> run() º´·Ä ¼öÇàÇÒ¼ö ÀÖµµ·Ï È£Ãâ
+		//ìŠ¤ë ˆë“œ ê°ì²´ ìƒì„±
+		ThreadEx01 td = new ThreadEx01("ì²«ë²ˆì§¸");
+		//td.run(); 	//ìˆœì°¨ìˆ˜í–‰
+		td.start(); 	//start() -> run() ë³‘ë ¬ ìˆ˜í–‰í• ìˆ˜ ìˆë„ë¡ í˜¸ì¶œ
 	}
 }

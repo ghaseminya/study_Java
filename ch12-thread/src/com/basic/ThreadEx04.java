@@ -1,17 +1,17 @@
-/* Thread - Join()È£ÃâÇÏ¿© Æ¯Á¤½º·¹µå ¿ì¼± ½ÇÇà
+/* Thread - Join()í˜¸ì¶œí•˜ì—¬ íŠ¹ì •ìŠ¤ë ˆë“œ ìš°ì„  ì‹¤í–‰
  * 
- * class MyRunnableTwo implements Runnable{ } »ı¼º
+ * class MyRunnableTwo implements Runnable{ } ìƒì„±
  * -@Override public void run(){ }
  * -public void first()
  * -public void second()
- * °´Ã¼ »ı¼º
- * join()¸Ş¼­µå È£Ãâ
+ * ê°ì²´ ìƒì„±
+ * join()ë©”ì„œë“œ í˜¸ì¶œ
  * 
  * --------------------------------------------------------
- * ½º·¹µå ½ºÄÉÁÙ·¯¿¡ ÀÇÇØ ¸Å¹ø ¼öÇàÇÒ ¶§¸¶´Ù ½ÇÇà¼ø¼­ º¯°æµÊ È®ÀÎ 
- * join()¸Ş¼­µå¸¦ È£ÃâÇÏ¿© Æ¯Á¤ ½º·¹µå ¸ÕÀú ¼öÇàµÊÀ» È®ÀÎ 
+ * ìŠ¤ë ˆë“œ ìŠ¤ì¼€ì¤„ëŸ¬ì— ì˜í•´ ë§¤ë²ˆ ìˆ˜í–‰í•  ë•Œë§ˆë‹¤ ì‹¤í–‰ìˆœì„œ ë³€ê²½ë¨ í™•ì¸ 
+ * join()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•˜ì—¬ íŠ¹ì • ìŠ¤ë ˆë“œ ë¨¼ì € ìˆ˜í–‰ë¨ì„ í™•ì¸ 
  * 
- * join()¸Ş¼­µå¸¦ È£ÃâÇØ¼­ join()¸Ş¼­µå¸¦ È£ÃâÇÑ ½º·¹µå°¡ ¸ÕÀú ¼öÇàµÇµµ·ÏÇÏ°í ´Ù¸¥ ½º·¹µå¸¦ Àá½Ã ÁßÁöÇÏ°Ô ÇÏ´Â ±â¹ı
+ * join()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•´ì„œ join()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œ ìŠ¤ë ˆë“œê°€ ë¨¼ì € ìˆ˜í–‰ë˜ë„ë¡í•˜ê³  ë‹¤ë¥¸ ìŠ¤ë ˆë“œë¥¼ ì ì‹œ ì¤‘ì§€í•˜ê²Œ í•˜ëŠ” ê¸°ë²•
  * 
  */
 package com.basic;
@@ -36,28 +36,28 @@ class MyRunnableTwo implements Runnable{
 public class ThreadEx04 {
 	
 	public static void main(String[] args){
-		//join()È£ÃâÈÄ Ãâ·Â Å×½ºÆ®
-//		System.out.println(Thread.currentThread().getName() + "\tÃ¹¹øÂ° Ãâ·Â");
-//		System.out.println(Thread.currentThread().getName() + "\tµÎ¹øÂ° Ãâ·Â");
+		//join()í˜¸ì¶œí›„ ì¶œë ¥ í…ŒìŠ¤íŠ¸
+//		System.out.println(Thread.currentThread().getName() + "\tì²«ë²ˆì§¸ ì¶œë ¥");
+//		System.out.println(Thread.currentThread().getName() + "\të‘ë²ˆì§¸ ì¶œë ¥");
 				
-		//°´Ã¼ »ı¼º
+		//ê°ì²´ ìƒì„±
 		MyRunnableTwo mrt = new MyRunnableTwo();
-		//½º·¹µå¿¡ run()ÀÖ´Â Å¬·¡½º °´Ã¼ µî·Ï
+		//ìŠ¤ë ˆë“œì— run()ìˆëŠ” í´ë˜ìŠ¤ ê°ì²´ ë“±ë¡
 		Thread t = new Thread(mrt);
 		t.start();
 		
-		//join()¸Ş¼­µå¸¦ È£ÃâÇØ¼­ join()¸Ş¼­µå¸¦ È£ÃâÇÑ ½º·¹µå°¡ ¸ÕÀú ¼öÇàµÇµµ·ÏÇÏ°í ´Ù¸¥ ½º·¹µå¸¦ Àá½Ã ÁßÁöÇÏ°Ô ÇÏ´Â ±â¹ı
+		//join()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•´ì„œ join()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•œ ìŠ¤ë ˆë“œê°€ ë¨¼ì € ìˆ˜í–‰ë˜ë„ë¡í•˜ê³  ë‹¤ë¥¸ ìŠ¤ë ˆë“œë¥¼ ì ì‹œ ì¤‘ì§€í•˜ê²Œ í•˜ëŠ” ê¸°ë²•
 		try{
 			t.join();
 		}catch(InterruptedException e){
 			e.printStackTrace();
 		}		
 		
-		//join()È£ÃâÈÄ Ãâ·Â Å×½ºÆ®
-//		System.out.println(Thread.currentThread().getName() + "\tµÎ¹øÂ° Ãâ·Â");
+		//join()í˜¸ì¶œí›„ ì¶œë ¥ í…ŒìŠ¤íŠ¸
+//		System.out.println(Thread.currentThread().getName() + "\të‘ë²ˆì§¸ ì¶œë ¥");
 		
-		//ÇöÀç ½º·¹µåÀÇ ÀÌ¸§ ¹İÈ¯ÇÏ±â
-		System.out.println(Thread.currentThread().getName() + "\tÃ¹¹øÂ° Ãâ·Â");
-		System.out.println(Thread.currentThread().getName() + "\tµÎ¹øÂ° Ãâ·Â");
+		//í˜„ì¬ ìŠ¤ë ˆë“œì˜ ì´ë¦„ ë°˜í™˜í•˜ê¸°
+		System.out.println(Thread.currentThread().getName() + "\tì²«ë²ˆì§¸ ì¶œë ¥");
+		System.out.println(Thread.currentThread().getName() + "\të‘ë²ˆì§¸ ì¶œë ¥");
 	}
 }

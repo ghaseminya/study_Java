@@ -1,7 +1,7 @@
-/* ArrayList - Á¦³×¸¯Ç¥ÇöÀ¸·Î °´Ã¼ »ı¼º
+/* ArrayList - ì œë„¤ë¦­í‘œí˜„ìœ¼ë¡œ ê°ì²´ ìƒì„±
  * 
- * IntegerÇü ArrayList°´Ã¼ »ı¼º
- * add()¸Ş¼Òµå ÅëÇÑ µ¥ÀÌÅÍ »ğÀÔ
+ * Integerí˜• ArrayListê°ì²´ ìƒì„±
+ * add()ë©”ì†Œë“œ í†µí•œ ë°ì´í„° ì‚½ì…
  *   
  */
 
@@ -12,14 +12,15 @@ import java.util.ArrayList;
 public class ArrayListEx05 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayList<Integer> al = new ArrayList<Integer>();
 		
-		al.add(new Integer(10));	//¸í½ÃÀûÀ¸·Î boxing
+		al.add(new Integer(10));	//ëª…ì‹œì ìœ¼ë¡œ boxing
 		al.add(20);		//int -> Integer (Auto boxing)
 		al.add(30);		//int -> Integer (Auto boxing)
+		//Auto Boxingê³¼ Auto Unboxingì˜ ë„ì›€ìœ¼ë¡œ ì •ìˆ˜ ë‹¨ìœ„ì˜ ë°ì´í„° ì…ì¶œë ¥ì´ ë§¤ìš° ìì—°ìŠ¤ëŸ½ê²Œ ì´ë¤„ì§ˆ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+
 		
-		//È®Àå for¹®
+		//í™•ì¥ forë¬¸
 		for(Integer num : al){
 			System.out.println(num);
 		}

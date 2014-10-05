@@ -2,8 +2,8 @@
  * 
  * 
  * rs.next()
- * next()°¡ ResulSet¹Û¿¡ ÀÖ´Â Ä¿¼­¸¦ ResulSetÀÇ °á°úÇàÀ¸·Î ¿Ä±â°í
- * next( )¸¦ ÀÌ¿ëÇØ¼­ ÇàÀ» ¼±ÅÃÇÕ´Ï´Ù.
+ * next()ê°€ ResulSetë°–ì— ìˆëŠ” ì»¤ì„œë¥¼ ResulSetì˜ ê²°ê³¼í–‰ìœ¼ë¡œ ì˜­ê¸°ê³ 
+ * next( )ë¥¼ ì´ìš©í•´ì„œ í–‰ì„ ì„ íƒí•©ë‹ˆë‹¤.
  */
 
 package com.basic;
@@ -16,7 +16,7 @@ import java.sql.Statement;
 
 public class SelectEx {
 	public static void main(String[] args){
-		//Á¢¼Ó Á¤º¸ ÀúÀå
+		//ì ‘ì† ì •ë³´ ì €ì¥
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
 		String passwd ="1234";
@@ -26,35 +26,35 @@ public class SelectEx {
 		ResultSet rs = null;
 		
 		try{
-			//JDBC ¼öÇà 1´Ü°è: µå¶óÀÌ¹ö ·Îµå
+			//JDBC ìˆ˜í–‰ 1ë‹¨ê³„: ë“œë¼ì´ë²„ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			//JDBC ¼öÇà 2´Ü°è: Connection °´Ã¼ »ı¼º
+			//JDBC ìˆ˜í–‰ 2ë‹¨ê³„: Connection ê°ì²´ ìƒì„±
 			con = DriverManager.getConnection(dbURL, id, passwd);
 			
-			//¼öÇà SQL¹® ¼±¾ğ
-			//String sql ="SELECT * FROM test1";	//ÄÃ·³ÀÇ ÀÎµ¦½º°¡ ¸¸µé¾îÁø ¼ø¼­
+			//ìˆ˜í–‰ SQLë¬¸ ì„ ì–¸
+			//String sql ="SELECT * FROM test1";	//ì»¬ëŸ¼ì˜ ì¸ë±ìŠ¤ê°€ ë§Œë“¤ì–´ì§„ ìˆœì„œ
 			//String sql ="SELECT id, age FROM test1";
 			String sql ="SELECT age, id FROM test1";	
-			//ÀÎµ¦½º·Î Ãâ·Â½Ã ÄÃ·³ÀÇ ¼ø¼­¿¡ ¸Â°Ô Ãâ·Â¿¡ »ç¿ëÇÑ ÀÎµ¦½ºµµ ¼öÁ¤ÇØ ÁÖ¾î¾ß ÇÕ´Ï´Ù. ±×·¸Áö ¾ÊÀ¸¸é ERROR
-			//DBÀÇ ÀÎµ¦½º°¡ ¾Æ´Ï¶ó 
-			//SELECTÇÒ ¶§ ÀÎµ¦½º·Î Ãâ·ÂµÇ¹Ç·Î Àß ¸¶Ãß¾îÁÖ¾î¾ß ÇÕ´Ï´Ù. ÀÎµ¦½ºº¸´Ù´Â ÄÃ·³¸íÀ» »ç¿ëÇÏ¸é ERROR¸¦ ÁÙÀÏ ¼ö ÀÖ´Ù. 
+			//ì¸ë±ìŠ¤ë¡œ ì¶œë ¥ì‹œ ì»¬ëŸ¼ì˜ ìˆœì„œì— ë§ê²Œ ì¶œë ¥ì— ì‚¬ìš©í•œ ì¸ë±ìŠ¤ë„ ìˆ˜ì •í•´ ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤. ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ ERROR
+			//DBì˜ ì¸ë±ìŠ¤ê°€ ì•„ë‹ˆë¼ 
+			//SELECTí•  ë•Œ ì¸ë±ìŠ¤ë¡œ ì¶œë ¥ë˜ë¯€ë¡œ ì˜ ë§ˆì¶”ì–´ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤. ì¸ë±ìŠ¤ë³´ë‹¤ëŠ” ì»¬ëŸ¼ëª…ì„ ì‚¬ìš©í•˜ë©´ ERRORë¥¼ ì¤„ì¼ ìˆ˜ ìˆë‹¤. 
 			
-			//JDBC ¼öÇà 3´Ü°è: Statement°´Ã¼ »ı¼º
+			//JDBC ìˆ˜í–‰ 3ë‹¨ê³„: Statementê°ì²´ ìƒì„±
 			stmt = con.createStatement();
 			
-			//JDBC ¼öÇà 4´Ü°è: SQL¹® ½ÇÇà
-			//JDBC ¼öÇà 5´Ü°è: ResultSet °´Ã¼ »ı¼º
-			//°á°úÇàÀ» ResultSet¿¡ ÀúÀå
+			//JDBC ìˆ˜í–‰ 4ë‹¨ê³„: SQLë¬¸ ì‹¤í–‰
+			//JDBC ìˆ˜í–‰ 5ë‹¨ê³„: ResultSet ê°ì²´ ìƒì„±
+			//ê²°ê³¼í–‰ì„ ResultSetì— ì €ì¥
 			rs = stmt.executeQuery(sql);
-			System.out.println("ÀÌ¸§\t³ªÀÌ");
+			System.out.println("ì´ë¦„\të‚˜ì´");
 			
-			//ResultSet¿¡ ÀúÀåµÈ °á°úÇà Ãâ·Â
+			//ResultSetì— ì €ì¥ëœ ê²°ê³¼í–‰ ì¶œë ¥
 			while(rs.next()){	//
-				//°á°úÇà ¹ÛÀ¸·Î ³ª°¡°Ô µÇ¸é Ä¿¼­°¡ 
+				//ê²°ê³¼í–‰ ë°–ìœ¼ë¡œ ë‚˜ê°€ê²Œ ë˜ë©´ ì»¤ì„œê°€ 
 				System.out.print(rs.getString("id")+"\t");
 				System.out.print(rs.getInt("age")+ "\n");
-				//DB ÀÎµ¦½º·Î Ãâ·Â
+				//DB ì¸ë±ìŠ¤ë¡œ ì¶œë ¥
 //				System.out.print(rs.getString(1)+"\t");
 //				System.out.print(rs.getInt(2)+ "\n");
 				
@@ -63,8 +63,8 @@ public class SelectEx {
 			e.printStackTrace();
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-		}finally{	//ÀÚ¿ø°ü¸®
-			//ÀÚ¿øÀ» »ı¼ºÇß´ø ¿ª¼øÀ¸·Î ÀÚ¿ø¹İ³³À» ¼öÇàÇÕ´Ï´Ù.
+		}finally{	//ìì›ê´€ë¦¬
+			//ìì›ì„ ìƒì„±í–ˆë˜ ì—­ìˆœìœ¼ë¡œ ìì›ë°˜ë‚©ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤.
 			if( stmt!=null){ try{stmt.close();}catch(SQLException e){e.printStackTrace(); } }
 			if( con!=null){ try{con.close();}catch(SQLException e){ e.printStackTrace(); } }		
 		}		

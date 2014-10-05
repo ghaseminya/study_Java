@@ -1,16 +1,16 @@
-/* FileInputStream - ¿µ¹®/ÇÑ±Û Ãâ·Â - byte[]¹è¿­ ÀÌ¿ë, ÀÚ¿øÁ¤¸®
+/* FileInputStream - ì˜ë¬¸/í•œê¸€ ì¶œë ¥ - byte[]ë°°ì—´ ì´ìš©, ìžì›ì •ë¦¬
  * 
- * ÆÄÀÏÀ» ÀÐ¾î¿Å
- * ÇÑ ¹ÙÀÌÆ®¾¿ ÀÐ¾îµéÀÌ±â ¶§¹®¿¡ ¾Æ½ºÅ°ÄÚµå·Î ÀúÀåµÇ´Â °Í Ãâ·ÂÇÏ¿© È®ÀÎ/È®ÀÎÈÄ ÁÖ¼®Ã³¸®
+ * íŒŒì¼ì„ ì½ì–´ì˜®
+ * í•œ ë°”ì´íŠ¸ì”© ì½ì–´ë“¤ì´ê¸° ë•Œë¬¸ì— ì•„ìŠ¤í‚¤ì½”ë“œë¡œ ì €ìž¥ë˜ëŠ” ê²ƒ ì¶œë ¥í•˜ì—¬ í™•ì¸/í™•ì¸í›„ ì£¼ì„ì²˜ë¦¬
  * 
- * byte[]À» StringÀ¸·Î ÆÄ½Ì
+ * byte[]ì„ Stringìœ¼ë¡œ íŒŒì‹±
  * 
- * ÀÚ¿ø Á¤¸® Standard
+ * ìžì› ì •ë¦¬ Standard
  * -----------------------------------------------------------------------
- * ÀÚ¹Ù ¿ÜÀûÀÎ ¿ä¼Ò¶û ¿¬µ¿ÇÒ °æ¿ì ÀÚ¿øÁ¤¸®
- * °´Ã¼¸¦ »ý¼ºÇØ¼­ Á¢±Ù
- * °´Ã¼¸¦ »ý¼ºÇÑÈÄ ¼Ò¸íÀ» ¸ø½ÃÅ°¹Ç·Î ÆÄÀÏ¿¬°áÈÄ¿¡µµ ÆÄÀÏ¿¬°á°¡´É»óÅÂ°¡ °è¼Ó Áö¼ÓµÊ(ÀÌ·²°æ¿ì ºÎÇÏ°¡ ¹ß»ýÇÒ ¼ö ÀÖÀ½)
- * ±×·¡¼­, °´Ã¼¿Í ÆÄÀÏ°úÀÇ °ü°è¸¦ ²÷¾î ÀÚ¿øÁ¤¸®¸¦ ÇØÁÜ
+ * ìžë°” ì™¸ì ì¸ ìš”ì†Œëž‘ ì—°ë™í•  ê²½ìš° ìžì›ì •ë¦¬
+ * ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ì ‘ê·¼
+ * ê°ì²´ë¥¼ ìƒì„±í•œí›„ ì†Œëª…ì„ ëª»ì‹œí‚¤ë¯€ë¡œ íŒŒì¼ì—°ê²°í›„ì—ë„ íŒŒì¼ì—°ê²°ê°€ëŠ¥ìƒíƒœê°€ ê³„ì† ì§€ì†ë¨(ì´ëŸ´ê²½ìš° ë¶€í•˜ê°€ ë°œìƒí•  ìˆ˜ ìžˆìŒ)
+ * ê·¸ëž˜ì„œ, ê°ì²´ì™€ íŒŒì¼ê³¼ì˜ ê´€ê³„ë¥¼ ëŠì–´ ìžì›ì •ë¦¬ë¥¼ í•´ì¤Œ
  * 
  */
 
@@ -27,32 +27,32 @@ public class FileInputStreamEx02 {
 		byte readArray[];
 		
 		try{
-			//byteÃ³¸®¸¦ ÇÏ´Â FileInputStream°´Ã¼¸¦ »ý¼º
+			//byteì²˜ë¦¬ë¥¼ í•˜ëŠ” FileInputStreamê°ì²´ë¥¼ ìƒì„±
 			fis = new FileInputStream("file.txt");
 		
-			//¿µ¹®ÀÌ¿ÜÀÇ ¹®ÀÚµµ Ã³¸®°¡´ÉÇÏµµ·Ï Ã³¸® - ÀÔ·ÂµÈ µ¥ÀÌÅÍ¸¦ byte¹è¿­¿¡ ÀúÀåÇÑ ÈÄ String·Î ÆÄ½Ì
-			//available()ÀÐ¾îµéÀÎ µ¥ÀÌÅÍ¸¦ ÀÚµ¿ÀûÀ¸·Î ÀÎµ¦½º ¼ö¸¦ ¹ÝÈ¯
+			//ì˜ë¬¸ì´ì™¸ì˜ ë¬¸ìžë„ ì²˜ë¦¬ê°€ëŠ¥í•˜ë„ë¡ ì²˜ë¦¬ - ìž…ë ¥ëœ ë°ì´í„°ë¥¼ byteë°°ì—´ì— ì €ìž¥í•œ í›„ Stringë¡œ íŒŒì‹±
+			//available()ì½ì–´ë“¤ì¸ ë°ì´í„°ë¥¼ ìžë™ì ìœ¼ë¡œ ì¸ë±ìŠ¤ ìˆ˜ë¥¼ ë°˜í™˜
 			readArray = new byte[fis.available()];
 			
-			//ÀÔ·ÂµÈ µ¥ÀÌÅÍ¸¦ ÀÐ¾îµé¿© byte[]¿¡ ÀúÀå
-			//³»ºÎÀûÀ¸·Î loop
+			//ìž…ë ¥ëœ ë°ì´í„°ë¥¼ ì½ì–´ë“¤ì—¬ byte[]ì— ì €ìž¥
+			//ë‚´ë¶€ì ìœ¼ë¡œ loop
 			fis.read(readArray);
 			
-			//ÇÑ ¹ÙÀÌÆ®¾¿ ÀÐ¾îµéÀÌ±â ¶§¹®¿¡ ¾Æ½ºÅ°ÄÚµå·Î ÀúÀåÇÏ°ÔµÊ
+			//í•œ ë°”ì´íŠ¸ì”© ì½ì–´ë“¤ì´ê¸° ë•Œë¬¸ì— ì•„ìŠ¤í‚¤ì½”ë“œë¡œ ì €ìž¥í•˜ê²Œë¨
 //			for(byte b : readArray){ System.out.print(b); System.out.println(); }
 			
-			//byte[]À» StringÀ¸·Î ÆÄ½Ì
-			//³»ºÎÀûÀ¸·Î 2byte·Î Ã³¸®ÇÏ°Ô µÊ
+			//byte[]ì„ Stringìœ¼ë¡œ íŒŒì‹±
+			//ë‚´ë¶€ì ìœ¼ë¡œ 2byteë¡œ ì²˜ë¦¬í•˜ê²Œ ë¨
 			System.out.println(new String(readArray));			
 			
 		}catch(FileNotFoundException e){
 			e.printStackTrace();			
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//ÀÚ¿ø Á¤¸® Standard
-			//°´Ã¼°¡ ÀÖ´ÂÁö Ã¼Å©
+		}finally{	//ìžì› ì •ë¦¬ Standard
+			//ê°ì²´ê°€ ìžˆëŠ”ì§€ ì²´í¬
 			if( fis != null ){
-				//IOException¹ß»ýÇÒ ¼ö ÀÖÀ¸¹Ç·Î try~catch
+				//IOExceptionë°œìƒí•  ìˆ˜ ìžˆìœ¼ë¯€ë¡œ try~catch
 				try{
 					fis.close();					
 				}catch(IOException e){

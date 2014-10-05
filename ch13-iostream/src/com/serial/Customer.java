@@ -1,31 +1,31 @@
-/* °´Ã¼ Á÷·ÄÈ­ - Á÷·ÄÈ­ ´ë»ó
+/* ê°ì²´ ì§ë ¬í™” - ì§ë ¬í™” ëŒ€ìƒ
  *  
  * -------------------------------------------------------------
- * SerializableÀÎÅÍÆäÀÌ½º°¡ ±¸ÇöµÈ Å¬·¡½º´Â °´Ã¼ Á÷·ÄÈ­ ´ë»óÀÌ µÊ
- * ¸â¹ö º¯¼ö¿¡ ÀÖ´Â µ¥ÀÌÅÍ°¡ Áß¿äÇÑ °ÍÀÌ¹Ç·Î ¸â¹ö º¯¼ö°¡ ÀÖ¾î¾ß Á÷·ÄÈ­¸¦ ÇÏ¸ç
- * ¸â¹ö º¯¼ö°¡ ¾ø´Â °æ¿ì Á÷·ÄÈ­ÇÏ´Â °ÍÀº ¹«ÀÇ¹ÌÇÕ´Ï´Ù.
+ * Serializableì¸í„°í˜ì´ìŠ¤ê°€ êµ¬í˜„ëœ í´ë˜ìŠ¤ëŠ” ê°ì²´ ì§ë ¬í™” ëŒ€ìƒì´ ë¨
+ * ë©¤ë²„ ë³€ìˆ˜ì— ìˆëŠ” ë°ì´í„°ê°€ ì¤‘ìš”í•œ ê²ƒì´ë¯€ë¡œ ë©¤ë²„ ë³€ìˆ˜ê°€ ìˆì–´ì•¼ ì§ë ¬í™”ë¥¼ í•˜ë©°
+ * ë©¤ë²„ ë³€ìˆ˜ê°€ ì—†ëŠ” ê²½ìš° ì§ë ¬í™”í•˜ëŠ” ê²ƒì€ ë¬´ì˜ë¯¸í•©ë‹ˆë‹¤.
  * 
  * 
- * Á÷·ÄÈ­Àü ¹İµå½Ã ¸í½ÃÇØ¾ß µË´Ï´Ù.
- * implements ÇÏÁö ¾ÊÀ¸¸é ERROR³²
+ * ì§ë ¬í™”ì „ ë°˜ë“œì‹œ ëª…ì‹œí•´ì•¼ ë©ë‹ˆë‹¤.
+ * implements í•˜ì§€ ì•Šìœ¼ë©´ ERRORë‚¨
  * java.io.NotSerializableException: com.serial.Customer
 	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1183)
 	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:347)
 	at com.serial.CustomerMain.main(CustomerMain.java:46)
-	object.ser¿¡ ERROR¸¦ Æ÷ÇÔÇÑ ¿©·¯ÁÙÀÇ ³»¿ëÀÌ ÀúÀåµÊ(Á¤»ó Á÷·ÄÈ­´Â ÇÑÁÙ·Î ÀúÀåµÊ)
+	object.serì— ERRORë¥¼ í¬í•¨í•œ ì—¬ëŸ¬ì¤„ì˜ ë‚´ìš©ì´ ì €ì¥ë¨(ì •ìƒ ì§ë ¬í™”ëŠ” í•œì¤„ë¡œ ì €ì¥ë¨)
  */
 
 package com.serial;
 
 import java.io.Serializable;
 
-//SerializableÀÎÅÍÆäÀÌ½º°¡ ±¸ÇöµÈ Å¬·¡½º´Â °´Ã¼ Á÷·ÄÈ­ ´ë»óÀÌ µÊ
+//Serializableì¸í„°í˜ì´ìŠ¤ê°€ êµ¬í˜„ëœ í´ë˜ìŠ¤ëŠ” ê°ì²´ ì§ë ¬í™” ëŒ€ìƒì´ ë¨
 public class Customer implements Serializable{
 //public class Customer {
-	//¸â¹ö º¯¼ö(ÀÎ½ºÅÏ½º º¯¼ö)
+	//ë©¤ë²„ ë³€ìˆ˜(ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜)
 	private String name;
 	
-	//ÀÎ½ºÅÏ½º º¯¼ö ÃÊ±âÈ­ÇÏ´Â »ı¼ºÀÚ
+	//ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜ ì´ˆê¸°í™”í•˜ëŠ” ìƒì„±ì
 	public Customer(String name){
 		this.name = name;
 	}

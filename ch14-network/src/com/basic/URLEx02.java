@@ -1,18 +1,18 @@
 /* URL - URL.openStream()
  * 
- * URLÀ» ÅëÇØ ÇØ´ç ¼­¹ö Á¢±Ù
- * OpenstreamÈ£ÃâÇØ¼­ InputStreamÇüÅÂ·Î ÀúÀåÈÄ
- * InputStreamReader¿¡ ³Ñ±æ¶§ ÀÎÄÚµù ¹æ½Ä ÁöÁ¤¾ÈÇÏ°í 
- * readline()À» ÅëÇØ Ãâ·Â
+ * URLì„ í†µí•´ í•´ë‹¹ ì„œë²„ ì ‘ê·¼
+ * Openstreamí˜¸ì¶œí•´ì„œ InputStreamí˜•íƒœë¡œ ì €ì¥í›„
+ * InputStreamReaderì— ë„˜ê¸¸ë•Œ ì¸ì½”ë”© ë°©ì‹ ì§€ì •ì•ˆí•˜ê³  
+ * readline()ì„ í†µí•´ ì¶œë ¥
  * 
  * 
- * InputStreamReader¿¡ ³Ñ±æ¶§ ÀÎÄÚµù ¹æ½Ä ÁöÁ¤ÈÄ
- * readline()À» ÅëÇØ Ãâ·Â
+ * InputStreamReaderì— ë„˜ê¸¸ë•Œ ì¸ì½”ë”© ë°©ì‹ ì§€ì •í›„
+ * readline()ì„ í†µí•´ ì¶œë ¥
  * ---------------------------------------------------------------------
  * 
  * 
- * ÀÎÄÚµù ¹æ½ÄÀÌ ¸ÂÁö ¾ÊÀ¸¸é µ¥ÀÌÅÍ°¡ ±úÁú¼ö ÀÖÀ½
- * ¹æ½ÄÀÌ ´Ù¸¥ °æ¿ì ¸í½ÃÀûÀ¸·Î ÁöÁ¤ÇØ Áà¾ß ÇÕ´Ï´Ù.
+ * ì¸ì½”ë”© ë°©ì‹ì´ ë§ì§€ ì•Šìœ¼ë©´ ë°ì´í„°ê°€ ê¹¨ì§ˆìˆ˜ ìˆìŒ
+ * ë°©ì‹ì´ ë‹¤ë¥¸ ê²½ìš° ëª…ì‹œì ìœ¼ë¡œ ì§€ì •í•´ ì¤˜ì•¼ í•©ë‹ˆë‹¤.
  * 
  */
 
@@ -36,18 +36,18 @@ public class URLEx02 {
 		String line ="";
 		
 		try{
-			//ÁÖ¼Ò¸¦ ÀĞ¾î¿È
+			//ì£¼ì†Œë¥¼ ì½ì–´ì˜´
 			url = new URL(address);
-			//ÁÖ¼Ò¸¦ ÅëÇØ URLÀ» ÀĞ¾î¿Í InputStreamÀ» ¾ò¾î¿À±âÀ§ÇØ openStream()À» È£Ãâ
+			//ì£¼ì†Œë¥¼ í†µí•´ URLì„ ì½ì–´ì™€ InputStreamì„ ì–»ì–´ì˜¤ê¸°ìœ„í•´ openStream()ì„ í˜¸ì¶œ
 			InputStream in =  url.openStream();
-			//BufferedReader°´Ã¼ »ı¼º
+			//BufferedReaderê°ì²´ ìƒì„±
 			//input = new BufferedReader(new InputStreamReader(in));
-			//ÀÎÄÚµù ¹æ½Ä ÁöÁ¤
+			//ì¸ì½”ë”© ë°©ì‹ ì§€ì •
 			input = new BufferedReader(new InputStreamReader(in, "UTF-8"));
 			
 			
 			while( (line=input.readLine())!=null ){
-				//ÁÙ¹Ù²Ş
+				//ì¤„ë°”ê¿ˆ
 				System.out.println(line);
 			}			
 			

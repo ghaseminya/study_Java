@@ -1,5 +1,5 @@
-/* Á¦³×¸¯ÀÇ »ı·«
-Á¦³×¸¯Àº »ı·« °¡´ÉÇÕ´Ï´Ù. 
+/* ì œë„¤ë¦­ì˜ ìƒëµ
+ì œë„¤ë¦­ì€ ìƒëµ ê°€ëŠ¥í•©ë‹ˆë‹¤. 
 
  */
 package kr.studyjava.generic06;
@@ -28,7 +28,7 @@ public class GenericEx01 {
 		System.out.println(p1.id.intValue());
 		System.out.println();
 
-		//ei, id·Î µé¾î¿À´Â °ªÀ» ÅëÇØ ¸í½ÃÀûÀ¸·Î ÁöÁ¤ÇÏÁö ¾Ê¾Æµµ ÄÄÆÄÀÏ½Ã ÀÚµ¿À¸·Î ÇØ¼®ÇÏ°Ô µË´Ï´Ù.
+		//ei, idë¡œ ë“¤ì–´ì˜¤ëŠ” ê°’ì„ í†µí•´ ëª…ì‹œì ìœ¼ë¡œ ì§€ì •í•˜ì§€ ì•Šì•„ë„ ì»´íŒŒì¼ì‹œ ìë™ìœ¼ë¡œ í•´ì„í•˜ê²Œ ë©ë‹ˆë‹¤.
 		Person p2 = new Person(ei, id);
 		System.out.println(p1.info.position);
 		System.out.println(p1.id.intValue());

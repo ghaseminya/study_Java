@@ -1,6 +1,6 @@
 /* FileWriter
  *  
- * Æ¯Á¤ ¹®ÀÚ¿­À» ÀúÀåÇÏ´Â ÅØ½ºÆ® ÆÄÀÏ »ı¼ºÇÏ±â 
+ * íŠ¹ì • ë¬¸ìì—´ì„ ì €ì¥í•˜ëŠ” í…ìŠ¤íŠ¸ íŒŒì¼ ìƒì„±í•˜ê¸° 
  * 
  */
 
@@ -16,16 +16,16 @@ public class FileWriterEx {
 		FileWriter fw = null;
 		
 		try{
-			//°´Ã¼ »ı¼º
+			//ê°ì²´ ìƒì„±
 			fw = new FileWriter("fileWriter.txt");
 			
-			String message = "FileWriter Å×½ºÆ® ÁßÀÔ´Ï´Ù.";
-			//ÆÄÀÏ¿¡ ¾²±â
+			String message = "FileWriter í…ŒìŠ¤íŠ¸ ì¤‘ì…ë‹ˆë‹¤.";
+			//íŒŒì¼ì— ì“°ê¸°
 			fw.write(message);
-			System.out.println("ÆÄÀÏ »ı¼º ¹× ³»¿ë ±â¼ú");
+			System.out.println("íŒŒì¼ ìƒì„± ë° ë‚´ìš© ê¸°ìˆ ");
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//ÀÚ¿ø°ü¸®
+		}finally{	//ìì›ê´€ë¦¬
 			if( fw !=null ){ try{ fw.close();}catch(IOException e){e.printStackTrace();}  }			
 		}		
 	}	

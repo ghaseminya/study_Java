@@ -1,4 +1,4 @@
-/* InetAddress - µµ¸ŞÀÎ ÁÖ¼Ò¿Í ·ÎÄÃ ÁÖ¼Ò Ãâ·Â
+/* InetAddress - ë„ë©”ì¸ ì£¼ì†Œì™€ ë¡œì»¬ ì£¼ì†Œ ì¶œë ¥
  *  
  */
 
@@ -13,28 +13,28 @@ import java.net.UnknownHostException;
 public class InetAddressEx{
 
 	public static void main(String[] args) {
-		//ÀÔ·Â¹Ş±âÀ§ÇØ °´Ã¼ »ı¼º
+		//ì…ë ¥ë°›ê¸°ìœ„í•´ ê°ì²´ ìƒì„±
 		BufferedReader br = null;
-		//ÀÔ·Â¹ŞÀº  URLÀúÀå
+		//ì…ë ¥ë°›ì€  URLì €ì¥
 		String url = null;
 		
-		//¹è¿­·Î Á¤º¸¸¦ ¹ŞÀ¸¹Ç·Î ÀúÀåÇÒ ¹è¿­ ¼±¾ğ
+		//ë°°ì—´ë¡œ ì •ë³´ë¥¼ ë°›ìœ¼ë¯€ë¡œ ì €ì¥í•  ë°°ì—´ ì„ ì–¸
 		InetAddress[] addresses;		
 		
 		try{
 			br = new BufferedReader(new InputStreamReader(System.in));
-			System.out.print("À¥»çÀÌÆ® ÁÖ¼Ò ÀÔ·Â > ");
+			System.out.print("ì›¹ì‚¬ì´íŠ¸ ì£¼ì†Œ ì…ë ¥ > ");
 			url = br.readLine();
 			
-			//ÇØ´ç µµ¸ŞÀÎ°ú ¸ÅÇÎµÇ¾î ÀÖ´Â ¸ğµç ÁÖ¼Ò¸¦ ±¸ÇÔ, StaticÇÑ ¸Ş¼Òµå·Î µÇ¾î ÀÖ¾î Á÷Á¢ È£Ãâ
+			//í•´ë‹¹ ë„ë©”ì¸ê³¼ ë§¤í•‘ë˜ì–´ ìˆëŠ” ëª¨ë“  ì£¼ì†Œë¥¼ êµ¬í•¨, Staticí•œ ë©”ì†Œë“œë¡œ ë˜ì–´ ìˆì–´ ì§ì ‘ í˜¸ì¶œ
 			addresses = InetAddress.getAllByName(url);			
 			
-			//µµ¸ŞÀÎ ÁÖ¼Ò Ãâ·Â
+			//ë„ë©”ì¸ ì£¼ì†Œ ì¶œë ¥
 			for(int i=0; i<addresses.length; i++){
 				System.out.println(addresses[i]);
 			}
 			
-			//·ÎÄÃ ÁÖ¼Ò Ãâ·Â
+			//ë¡œì»¬ ì£¼ì†Œ ì¶œë ¥
 			System.out.println("Local computer's IP: ");
 			System.out.println(InetAddress.getLocalHost());
 		}catch(UnknownHostException e){

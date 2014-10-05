@@ -1,7 +1,7 @@
-/* ÄÚµåÀÇ Áßº¹ Á¦°Å
-kr.studyjava.generic01\GenericsEx01.javaÀÇ ÄÚµå Áßº¹ Á¦°Å
+/* ì½”ë“œì˜ ì¤‘ë³µ ì œê±°
+kr.studyjava.generic01\GenericsEx01.javaì˜ ì½”ë“œ ì¤‘ë³µ ì œê±°
 
-ÄÚµå Áßº¹ Á¦°ÅÈÄ ¹ßÇàÇÑ Å¸ÀÔÀÌ ¾ÈÀüÇÏÁö ¾ÊÀº ¹®Á¦Á¡ ÇØ°á
+ì½”ë“œ ì¤‘ë³µ ì œê±°í›„ ë°œí–‰í•œ íƒ€ìž…ì´ ì•ˆì „í•˜ì§€ ì•Šì€ ë¬¸ì œì  í•´ê²°
 -> kr.studyjava.generic03\GenericsEx01.java
 
 */
@@ -19,39 +19,39 @@ class EmployeeInfo{
 }
 
 
-//ÄÚµå Áßº¹ Á¦°Å
+//ì½”ë“œ ì¤‘ë³µ ì œê±°
 class Person{
-    //¸ðµç Å¬·¡ÀÇ °øÅë Á¶»óÀÎ Object Å¸ÀÔÀ¸·Î Á¤ÀÇ
+    //ëª¨ë“  í´ëž˜ì˜ ê³µí†µ ì¡°ìƒì¸ Object íƒ€ìž…ìœ¼ë¡œ ì •ì˜
     public Object info;
     Person(Object info){ this.info = info; }
 }
 public class GenericsEx01 {
     public static void main(String[] args) {
 
-        Person p1 = new Person("»çÀå");
-        //p1.info´Â ObjectÅ¸ÀÔÀÎµ¥ Çüº¯È¯ÇÏ¿© EmployeeInfo·Î º¯°æ
-        //·±Å¸ÀÓ½Ã java.lang.ClassCastException ¹ß»ý
+        Person p1 = new Person("ì‚¬ìž¥");
+        //p1.infoëŠ” Objectíƒ€ìž…ì¸ë° í˜•ë³€í™˜í•˜ì—¬ EmployeeInfoë¡œ ë³€ê²½
+        //ëŸ°íƒ€ìž„ì‹œ java.lang.ClassCastException ë°œìƒ
         EmployeeInfo ei = (EmployeeInfo)p1.info;
         System.out.println(ei.position);
     }
 }
 
 /*
-ÄÄÆÄÀÏ½Ã ¿¹¿Ü°¡ ¹ßÇàÇÏÁö ¾Ê°í ·±Å¸ÀÓ½Ã java.lang.ClassCastException ¹ß»ý
+ì»´íŒŒì¼ì‹œ ì˜ˆì™¸ê°€ ë°œí–‰í•˜ì§€ ì•Šê³  ëŸ°íƒ€ìž„ì‹œ java.lang.ClassCastException ë°œìƒ
 
-Object·Î ÁöÁ¤ÇÏ¿© ¾î¶² µ¥ÀÌÅÍÅ¸ÀÔµµ ¿Ã¼ö ÀÖ°ÔµÊ¿¡ µû¶ó Å¸ÀÔÀÎ ¾ÈÀüÇÏÁö ¾Ê°Ô µÇ¾ú½À´Ï´Ù.
-Å¸ÀÔÀÌ ¾ÈÀüÇÏÁö ¾ÊÀ½(Type Safety): 
-JAVA´Â Çã¿ëµÇÁö ¾ÊÀ½ / 
-Javascript, Ruby, PHP´Â Å¸ÀÔ¿¡ »ó°ü¾ÈÇÔ. º¯¼ö¿¡ ¾î¶²ÇÑ °ªÀÌ ÀúÀåµÇµç »ó°üÇÏÁö ¾Ê°í °³¹ßÀÚ¿¡°Ô Ã¥ÀÓÀ» À§ÀÓ.
+Objectë¡œ ì§€ì •í•˜ì—¬ ì–´ë–¤ ë°ì´í„°íƒ€ìž…ë„ ì˜¬ìˆ˜ ìžˆê²Œë¨ì— ë”°ë¼ íƒ€ìž…ì¸ ì•ˆì „í•˜ì§€ ì•Šê²Œ ë˜ì—ˆìŠµë‹ˆë‹¤.
+íƒ€ìž…ì´ ì•ˆì „í•˜ì§€ ì•ŠìŒ(Type Safety): 
+JAVAëŠ” í—ˆìš©ë˜ì§€ ì•ŠìŒ / 
+Javascript, Ruby, PHPëŠ” íƒ€ìž…ì— ìƒê´€ì•ˆí•¨. ë³€ìˆ˜ì— ì–´ë–¤í•œ ê°’ì´ ì €ìž¥ë˜ë“  ìƒê´€í•˜ì§€ ì•Šê³  ê°œë°œìžì—ê²Œ ì±…ìž„ì„ ìœ„ìž„.
 
-ÀÚ¹Ù¿Í °°Àº ¾ð¾î´Â
-ÄÚµùÇÏ´Â ´Ü°è¿¡¼­ º¯¼öÀúÀå½Ã ÀúÀåµÇ´Â Å¸ÀÔÀ» ÁöÁ¤ÇÏ´Â °ÍÀº º¯¼ö¾È¿¡´Â ÇØ´ç µ¥ÀÌÅÍ Å¸ÀÔ¸¸ µé¾î¿Í¾ß¸¸ ÇÏ´Â ¾ð¾îÀÔ´Ï´Ù.
-Çö ÄÚµå¿¡¼­ ¹ß»ýÇÏ´Â ÀÌ ºÎºÐÀ» ÇØ°áÇÏ±â À§ÇØ Á¦³×¸¯ÀÌ µµÀÔµÊ (ÄÄÆÄÀÏ½Ã ¿¹¿Ü°¡ ¹ßÇàÇÏÁö ¾Ê°í ·±Å¸ÀÓ½Ã)
+ìžë°”ì™€ ê°™ì€ ì–¸ì–´ëŠ”
+ì½”ë”©í•˜ëŠ” ë‹¨ê³„ì—ì„œ ë³€ìˆ˜ì €ìž¥ì‹œ ì €ìž¥ë˜ëŠ” íƒ€ìž…ì„ ì§€ì •í•˜ëŠ” ê²ƒì€ ë³€ìˆ˜ì•ˆì—ëŠ” í•´ë‹¹ ë°ì´í„° íƒ€ìž…ë§Œ ë“¤ì–´ì™€ì•¼ë§Œ í•˜ëŠ” ì–¸ì–´ìž…ë‹ˆë‹¤.
+í˜„ ì½”ë“œì—ì„œ ë°œìƒí•˜ëŠ” ì´ ë¶€ë¶„ì„ í•´ê²°í•˜ê¸° ìœ„í•´ ì œë„¤ë¦­ì´ ë„ìž…ë¨ (ì»´íŒŒì¼ì‹œ ì˜ˆì™¸ê°€ ë°œí–‰í•˜ì§€ ì•Šê³  ëŸ°íƒ€ìž„ì‹œ)
 
-ÄÄÆÄÀÏ¾ð¾î¸¦ »ç¿ëÇÏ´Â Áß¿äÇÑ ÀåÁ¡Àº ÇÁ·Î±×·¥ÀÌ µÇ±âÀü¿¡ °³¹ßÀÚÀÇ ¿À·ù³ª ½Ç¼ö¸¦ ¹Ì¸® Àâ¾ÆÁÖ°Ô µË´Ï´Ù.(ÄÄÆÄÀÏÀÇ Áß¿äÇÑ ÀÌÁ¡)
+ì»´íŒŒì¼ì–¸ì–´ë¥¼ ì‚¬ìš©í•˜ëŠ” ì¤‘ìš”í•œ ìž¥ì ì€ í”„ë¡œê·¸ëž¨ì´ ë˜ê¸°ì „ì— ê°œë°œìžì˜ ì˜¤ë¥˜ë‚˜ ì‹¤ìˆ˜ë¥¼ ë¯¸ë¦¬ ìž¡ì•„ì£¼ê²Œ ë©ë‹ˆë‹¤.(ì»´íŒŒì¼ì˜ ì¤‘ìš”í•œ ì´ì )
 
-º¯¼öÀÇ µ¥ÀÌÅÍÅ¸ÀÔÀ» Á¤ÀÇÇÏ´Â ÀåÁ¡Àº ÇØ´ç º¯¼ö¿¡ ÁöÁ¤ÇÑ µ¥ÀÌÅÍÅ¸ÀÔ¸¸ µé¾î¿À´Â °ÍÀ» º¸ÀåÇÏ°í ´Ù¸¥ µ¥ÀÌÅÍÇüÀÌ µé¾î¿À´Â °ÍÀ» ±ÝÁö½ÃÅ°´Â È¿°ú¸¦ ÁÜ.
+ë³€ìˆ˜ì˜ ë°ì´í„°íƒ€ìž…ì„ ì •ì˜í•˜ëŠ” ìž¥ì ì€ í•´ë‹¹ ë³€ìˆ˜ì— ì§€ì •í•œ ë°ì´í„°íƒ€ìž…ë§Œ ë“¤ì–´ì˜¤ëŠ” ê²ƒì„ ë³´ìž¥í•˜ê³  ë‹¤ë¥¸ ë°ì´í„°í˜•ì´ ë“¤ì–´ì˜¤ëŠ” ê²ƒì„ ê¸ˆì§€ì‹œí‚¤ëŠ” íš¨ê³¼ë¥¼ ì¤Œ.
 
-Å¸ÀÔ ¾ÈÀü, ÄÚµå Áßº¹ Á¦°Å¸¦ À§ÇØ Á¦³×¸¯ ±â´ÉÀÌ ÀÚ¹Ù¿¡ µµÀÔµÇ¾ú½À´Ï´Ù.
+íƒ€ìž… ì•ˆì „, ì½”ë“œ ì¤‘ë³µ ì œê±°ë¥¼ ìœ„í•´ ì œë„¤ë¦­ ê¸°ëŠ¥ì´ ìžë°”ì— ë„ìž…ë˜ì—ˆìŠµë‹ˆë‹¤.
 
 */

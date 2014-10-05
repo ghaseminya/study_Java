@@ -1,9 +1,9 @@
-/* ArrayList - ArrayList °´Ã¼ »ı¼º ¹× µ¥ÀÌÅÍ Ãâ·Â
+/* ArrayList - ArrayList ê°ì²´ ìƒì„± ë° ë°ì´í„° ì¶œë ¥
  *  
  * import
- * °´Ã¼»ı¼º
- * ArrayList °´Ã¼¿¡ µ¥ÀÌÅÍ »ğÀÔ
- * ArrayListÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·Â 
+ * ê°ì²´ìƒì„±
+ * ArrayList ê°ì²´ì— ë°ì´í„° ì‚½ì…
+ * ArrayListì˜ ë°ì´í„°ë¥¼ ì¶œë ¥ 
  */
 
 package com.list;
@@ -13,22 +13,21 @@ import java.util.ArrayList;
 public class ArrayListEx02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayList al = new ArrayList();
-		al.add("¹èÆ®¸Ç");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("È«±æµ¿");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("ÀÏÁö¸Å");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("°­ÇÏ´Ã");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("½´ÆÛ¸Ç");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("½ºÆÄÀÌ´õ¸Ç");	// String -> Object ¾÷Ä³½ºÆÃ
+		al.add("ë°°íŠ¸ë§¨");		// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("í™ê¸¸ë™");		// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ì¼ì§€ë§¤");		// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ê°•í•˜ëŠ˜");		// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ìŠˆí¼ë§¨");		// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ìŠ¤íŒŒì´ë”ë§¨");	// String -> Object ì—…ìºìŠ¤íŒ…
 		
-		for(int i=0; i<al.size(); i++){
+		for(int i=0; i<al.size(); i++){	//size()	:ì €ì¥í•œ ë°ì´í„°ì˜ ê°¯ìˆ˜ ë°˜í™˜
 			//al.get(i);	//Objcet type
 			
-			//Object -> String ´Ù¿îÄ³½ºÆÃ
-			String name = (String)al.get(i);
+			//Object -> String ë‹¤ìš´ìºìŠ¤íŒ…
+			String name = (String)al.get(i);	//get(i)	:iì¸ë±ìŠ¤ì— ì €ì¥ëœ ì¸ìŠ¤í„´ìŠ¤ì˜ ì°¸ì¡°ê°’ì„ ë°˜í™˜
 			
-			//Ãâ·Â
+			//ì¶œë ¥
 			System.out.println(name);			
 		}	
 	}

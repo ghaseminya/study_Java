@@ -1,7 +1,7 @@
-/* Lotto ÇÁ·Î±×·¥ - ArrayList 
+/* Lotto í”„ë¡œê·¸ë¨ - ArrayList 
  * 
- * contains¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ Áßº¹Ã¼Å©
- * Colloections.sort ¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ Á¤·Ä
+ * containsë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ì¤‘ë³µì²´í¬
+ * Colloections.sort ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ì •ë ¬
  * 
  */
 
@@ -16,28 +16,28 @@ public class ArrayListLotto {
 
 	public static void main(String[] args) {
 		
-		//ArrayList °´Ã¼ »ı¼º
+		//ArrayList ê°ì²´ ìƒì„±
 		List<Integer> list = new ArrayList<Integer>();
 		
 		Random random = new Random();		
 		
-		//°´Ã¼ »ı¼º ¹× ÃÊ±âÈ­
+		//ê°ì²´ ìƒì„± ë° ì´ˆê¸°í™”
 		Integer it = null;
 		
 		
-		//Á¶°Ç Ã¼Å©		
+		//ì¡°ê±´ ì²´í¬		
 		while(list.size() < 6){
 			it = new  Integer(random.nextInt(45)+1);	// 1~45
-			//contains¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ Áßº¹Ã¼Å©
+			//containsë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ì¤‘ë³µì²´í¬
 			if(!list.contains(it)){
 				list.add(it);
 			}
 		}
 		
-		//Colloections.sort ¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ Á¤·Ä
+		//Colloections.sort ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ì •ë ¬
 		Collections.sort(list);;
 		
-		//Ãâ·Â
+		//ì¶œë ¥
 		for(Integer i : list){
 			System.out.println(i+ "\t");
 		}

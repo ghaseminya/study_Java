@@ -1,6 +1,6 @@
 /* WindowEvent
  * 
- * Á¾·á¹öÆ° Å¬¸¯½Ã ÇÁ·Î±×·¥ Á¾·á
+ * ì¢…ë£Œë²„íŠ¼ í´ë¦­ì‹œ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
  * 
  */
 
@@ -16,26 +16,26 @@ public class WindowEventEx extends Frame implements WindowListener{
 	Label lb;
 	
 	public WindowEventEx(){
-		//FrameÀÇ Å¸ÀÌÆ² ¼³Á¤
+		//Frameì˜ íƒ€ì´í‹€ ì„¤ì •
 		super("WindowEvent Test");
 		
-		//Label¿¡ Á¾·á¸¦ À§ÇÑ ¾È³»¹®±¸ ÀÔ·Â
-		lb = new Label("ÇÁ·¹ÀÓÀÇ Á¾·á¹öÆ°À» ´­·¯ÁÖ¼¼¿ä!");
+		//Labelì— ì¢…ë£Œë¥¼ ìœ„í•œ ì•ˆë‚´ë¬¸êµ¬ ì…ë ¥
+		lb = new Label("í”„ë ˆì„ì˜ ì¢…ë£Œë²„íŠ¼ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”!");
 		
-		//FrameÀ» ÀÌº¥Æ® ¸®½º³Ê¿¡ ¿¬°á
+		//Frameì„ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆì— ì—°ê²°
 		addWindowListener(this);
 		
-		//LabelÀ» Frame¿¡ µî·Ï
+		//Labelì„ Frameì— ë“±ë¡
 		add(lb);
 		
-		//FrameÀÇ À§Ä¡, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
+		//Frameì˜ ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
 		setBounds(300, 300, 300, 300);
-		//Frame ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);
 	}
-	//Ãß»ó ¸Ş¼Òµå ±¸Çö
-	//WindowListenerÀÎÅÍÆäÀÌ½ºÀÇ 7°³ÀÇ Ãß»ó¸Ş¼Òµå¸¦ ¸ğµÎ ±¸ÇöÇØ¾ß µÊ
-	//ÇÁ·¹ÀÓÀÇ Á¾·á¹öÆ° Å¬¸¯½Ã ÇÁ·Î±×·¥ Á¾·á
+	//ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„
+	//WindowListenerì¸í„°í˜ì´ìŠ¤ì˜ 7ê°œì˜ ì¶”ìƒë©”ì†Œë“œë¥¼ ëª¨ë‘ êµ¬í˜„í•´ì•¼ ë¨
+	//í”„ë ˆì„ì˜ ì¢…ë£Œë²„íŠ¼ í´ë¦­ì‹œ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 	@Override
 	public void windowClosing(WindowEvent e){
 		System.exit(0);

@@ -1,16 +1,16 @@
-/* Adapter Class - ³»ºÎ Å¬·¡½º »ı¼ºÇÏ¿© ÀÌº¥Æ® Ã³¸®
+/* Adapter Class - ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„±í•˜ì—¬ ì´ë²¤íŠ¸ ì²˜ë¦¬
  *  
  * 
- * ¸â¹ö ³»ºÎ Å¬·¡½º »ı¼º - KeyAdapter Å¬·¡½º¸¦ »ó¼ÓÇÏ´Â
- * ÀÌº¥Æ® ¸®½º³Ê ¿¬°á - KeyEvent
+ * ë©¤ë²„ ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„± - KeyAdapter í´ë˜ìŠ¤ë¥¼ ìƒì†í•˜ëŠ”
+ * ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²° - KeyEvent
  * @Override 	public void keyTyped(KeyEvent e){}
  * 
- * ¸â¹ö ³»ºÎ Å¬·¡½º »ı¼º - WindowAdapetÅ¬·¡½º¸¦ »ó¼ÓÇÏ´Â
- * ÀÌº¥Æ® ¸®½º³Ê ¿¬°á - WindowEvent
+ * ë©¤ë²„ ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„± - WindowAdapetí´ë˜ìŠ¤ë¥¼ ìƒì†í•˜ëŠ”
+ * ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²° - WindowEvent
  * @Override	public void windowClosing(WindowEvent e){}
  *  * 
  * ----------------------------------------------------------------------------------------
- * ¿ÜºÎ Å¬·¡½º¸¦ ³»ºÎ Å¬·¡½º·Î Á¤ÀÇÇÏ¿© ¸â¹öº¯¼ö¸¦ ¹Ù·Î È£ÃâÇÒ ¼ö ÀÖµµ·Ï ÇÏ¿© ÄÚµå ±æÀÌ¸¦ ÁÙ¿©º¾´Ï´Ù.
+ * ì™¸ë¶€ í´ë˜ìŠ¤ë¥¼ ë‚´ë¶€ í´ë˜ìŠ¤ë¡œ ì •ì˜í•˜ì—¬ ë©¤ë²„ë³€ìˆ˜ë¥¼ ë°”ë¡œ í˜¸ì¶œí•  ìˆ˜ ìˆë„ë¡ í•˜ì—¬ ì½”ë“œ ê¸¸ì´ë¥¼ ì¤„ì—¬ë´…ë‹ˆë‹¤.
  * ----------------------------------------------------------------------------------------
 
  */
@@ -41,64 +41,64 @@ public class AdapterEx extends Frame implements ActionListener{
 
 	
 	public AdapterEx(){
-		//Frame Á¦¸ñ ¼³Á¤
+		//Frame ì œëª© ì„¤ì •
 		super("Adapter Class Test");
 		
-		//Panel »ı¼º
+		//Panel ìƒì„±
 		p1 = new Panel();
 		p2 = new Panel();
 		p3 = new Panel();
 		
-		//TextField, TextArea »ı¼º
+		//TextField, TextArea ìƒì„±
 		tf = new TextField(35);
 		ta = new TextArea(10, 35);
 		
-		//Button »ı¼º
+		//Button ìƒì„±
 		bClear = new Button("Clear");
 		bExit = new Button("Exit");
 		
-		//Panel¿¡ ÄÁÆ®·Ñ Ãß°¡
+		//Panelì— ì»¨íŠ¸ë¡¤ ì¶”ê°€
 		p1.add(tf);
 		p2.add(ta);
 		p3.add(bClear);
 		p3.add(bExit);
 		
-		//Frame¿¡ °¢ PanelÀ» BorderLayour¿µ¿ª¿¡ µî·Ï
+		//Frameì— ê° Panelì„ BorderLayourì˜ì—­ì— ë“±ë¡
 		add(p1, BorderLayout.NORTH);
 		add(p2, BorderLayout.CENTER);
 		add(p3, BorderLayout.SOUTH);
 		
-		//FrameÀÇ À§Ä¡, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
+		//Frameì˜ ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
 		setBounds(300,  200,  300,  300);
-		//Frame ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);
 		
-		//ÀÌº¥Æ® ¸®½º³Ê ¿¬°á - ButtonÀÇ ÀÌº¥Æ®
+		//ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²° - Buttonì˜ ì´ë²¤íŠ¸
 		bClear.addActionListener(this);
 		bExit.addActionListener(this);
 		
-		//ÀÌº¥Æ® ¸®½º³Ê ¿¬°á - KeyEvent
-		//³»ºÎ Å¬·¡½º¿¡¼­ ¹Ù·Î ÀÌº¥Æ® ¸®½º³Ê¿¡ ¿¬°á½ÃÄÑÁİ´Ï´Ù.
+		//ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²° - KeyEvent
+		//ë‚´ë¶€ í´ë˜ìŠ¤ì—ì„œ ë°”ë¡œ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆì— ì—°ê²°ì‹œì¼œì¤ë‹ˆë‹¤.
 		tf.addKeyListener(new KeyEventHandlers());		
 		
-		//ÀÌº¥Æ® ¸®½º³Ê ¿¬°á - WindowEvent
-		//³»ºÎ Å¬·¡½º¿¡¼­ adapterÅ¬·¡½º¸¦ »ó¼Ó¹Ş¾Æ °´Ã¼¸¦ »ı¼ºÇØ¼­ ÀÌº¥Æ® ¸®½º³Ê¿¡ ¿¬°á½ÃÄÑÁİ´Ï´Ù.
+		//ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²° - WindowEvent
+		//ë‚´ë¶€ í´ë˜ìŠ¤ì—ì„œ adapterí´ë˜ìŠ¤ë¥¼ ìƒì†ë°›ì•„ ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆì— ì—°ê²°ì‹œì¼œì¤ë‹ˆë‹¤.
 		addWindowListener(new WindowEventHandlers());		
 		
 	}
 	
-	//¸â¹ö ³»ºÎ Å¬·¡½º »ı¼º - WindowAdapetÅ¬·¡½º¸¦»ó¼ÓÇÏ´Â
+	//ë©¤ë²„ ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„± - WindowAdapetí´ë˜ìŠ¤ë¥¼ìƒì†í•˜ëŠ”
 	class WindowEventHandlers extends WindowAdapter{
-		//Á¾·á¹öÆ° Å¬¸¯½Ã ÇÁ·Î±×·¥ Á¾·á
+		//ì¢…ë£Œë²„íŠ¼ í´ë¦­ì‹œ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 		@Override
 		public void windowClosing(WindowEvent e){
 			System.exit(0);
 		}
 	}
 	
-	//¸â¹ö ³»ºÎ Å¬·¡½º »ı¼º - KeyAdapter Å¬·¡½º¸¦ »ó¼ÓÇÏ´Â
+	//ë©¤ë²„ ë‚´ë¶€ í´ë˜ìŠ¤ ìƒì„± - KeyAdapter í´ë˜ìŠ¤ë¥¼ ìƒì†í•˜ëŠ”
 	class KeyEventHandlers extends KeyAdapter{
-		//¿øÇÏ´Â ¸Ş¼Òµå¸¸ ÀçÁ¤ÀÇ		
+		//ì›í•˜ëŠ” ë©”ì†Œë“œë§Œ ì¬ì •ì˜		
 		@Override
 		public void keyTyped(KeyEvent e){
 			if(e.getKeyChar()==KeyEvent.VK_ENTER){

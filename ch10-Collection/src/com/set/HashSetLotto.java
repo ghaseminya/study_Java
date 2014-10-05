@@ -1,7 +1,7 @@
-/* Lotto ÇÁ·Î±×·¥ - HashSet
+/* Lotto í”„ë¡œê·¸ë¨ - HashSet
  * 
  * 
- * Á¤·ÄÇÏ±â
+ * ì •ë ¬í•˜ê¸°
  */
 
 package com.set;
@@ -15,26 +15,26 @@ import java.util.ArrayList;
 public class HashSetLotto {
 
 	public static void main(String[] args) {
-		// HashSet °´Ã¼ »ı¼º
+		// HashSet ê°ì²´ ìƒì„±
 		// HashSet <Integer> hs = new HashSet<Integer>();
 		
 		Set <Integer> set = new HashSet<Integer>();
-		//ÃÊ±â¿¡ SetÅ¸ÀÔÀ¸·Î °´Ã¼»ı¼ºÇÏ¿© µ¥ÀÌÅÍ¸¦ »ğÀÔÇÔ		
+		//ì´ˆê¸°ì— Setíƒ€ì…ìœ¼ë¡œ ê°ì²´ìƒì„±í•˜ì—¬ ë°ì´í„°ë¥¼ ì‚½ì…í•¨		
 		
 		while(set.size() < 6){
-			// 1~45³­¼ö ¹ß»ı
+			// 1~45ë‚œìˆ˜ ë°œìƒ
 			//hs.add( (int)(Math.random()*45+1) );
 			int num = (int)(Math.random()*45+1);
 			set.add(new Integer(num));		
 		}		
 		System.out.println(set);		
 		
-		//Á¤·ÄÇÏ±â
+		//ì •ë ¬í•˜ê¸°
 		//Collections.sort(hs);	//ERROR: The method sort(List<T>) in the type Collections is not applicable for the arguments (HashSet<Integer>)
-		//Collections.sort´Â ¸®½ºÆ®Å¸ÀÔÀÌ¿©¼­ setÅ¸ÀÔÀ» ¸®½ºÆ® Å¸ÀÔÀ¸·Î ¹İµé¾îÁà¾ß ÇÕ´Ï´Ù.
+		//Collections.sortëŠ” ë¦¬ìŠ¤íŠ¸íƒ€ì…ì´ì—¬ì„œ setíƒ€ì…ì„ ë¦¬ìŠ¤íŠ¸ íƒ€ì…ìœ¼ë¡œ ë°˜ë“¤ì–´ì¤˜ì•¼ í•©ë‹ˆë‹¤.
 				
 		//Set -> Collection -> List
-		//SetÀº Á¤·ÄÀ» ¸øÇÏ¹Ç·Î ListÅ¸ÀÔÀ¸·Î º¯È¯
+		//Setì€ ì •ë ¬ì„ ëª»í•˜ë¯€ë¡œ Listíƒ€ì…ìœ¼ë¡œ ë³€í™˜
 		List<Integer> list = new ArrayList<Integer>(set);
 		
 		System.out.println(list);

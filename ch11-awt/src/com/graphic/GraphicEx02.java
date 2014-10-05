@@ -1,10 +1,10 @@
-/* ÀÌ¹ÌÁö ºÒ·¯¿À±â
+/* ì´ë¯¸ì§€ ë¶ˆëŸ¬ì˜¤ê¸°
  * 
- * x¹öÆ° ÀÌº¥Æ®Ã³¸® - ÀÍ¸í³»ºÎ Å¬·¡½º·Î
+ * xë²„íŠ¼ ì´ë²¤íŠ¸ì²˜ë¦¬ - ìµëª…ë‚´ë¶€ í´ë˜ìŠ¤ë¡œ
  * 
- * ch11-awt¿¡ bird.jpg¿¡ º¹»çÇØ ³Ö½À´Ï´Ù. 
+ * ch11-awtì— bird.jpgì— ë³µì‚¬í•´ ë„£ìŠµë‹ˆë‹¤. 
  * 
- * ÀĞ¾î¿Â ÀÌ¹ÌÁö¸¦ ÀÌ¹ÌÁö °´Ã¼¿¡ ÀúÀåÇÏ±â
+ * ì½ì–´ì˜¨ ì´ë¯¸ì§€ë¥¼ ì´ë¯¸ì§€ ê°ì²´ì— ì €ì¥í•˜ê¸°
  * @Override public void paint(Graphics g){ }
  */
 
@@ -23,9 +23,9 @@ public class GraphicEx02 extends Frame{
 	Image img = null;
 	
 	public GraphicEx02(){
-		super("±×·¡ÇÈ Å×½ºÆ®2");
+		super("ê·¸ë˜í”½ í…ŒìŠ¤íŠ¸2");
 		
-		//x¹öÆ° ÀÌº¥Æ®Ã³¸® - ÀÍ¸í³»ºÎ Å¬·¡½º·Î
+		//xë²„íŠ¼ ì´ë²¤íŠ¸ì²˜ë¦¬ - ìµëª…ë‚´ë¶€ í´ë˜ìŠ¤ë¡œ
 		addWindowListener(new WindowAdapter(){
 			@Override
 			public void windowClosing(WindowEvent e){
@@ -33,13 +33,13 @@ public class GraphicEx02 extends Frame{
 			}			
 		});		
 				
-		//ÀÌ¹ÌÁö ÀĞ±â
-		//ÀĞ¾î¿Â ÀÌ¹ÌÁö¸¦ ÀÌ¹ÌÁö °´Ã¼¿¡ ÀúÀåÇÏ±â
+		//ì´ë¯¸ì§€ ì½ê¸°
+		//ì½ì–´ì˜¨ ì´ë¯¸ì§€ë¥¼ ì´ë¯¸ì§€ ê°ì²´ì— ì €ì¥í•˜ê¸°
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		img = tk.getImage("bird.jpg");	//300x200
 				
 		
-		//Frame ¼³Á¤
+		//Frame ì„¤ì •
 		setBounds(100, 100, 400, 400);
 		setVisible(true);
 		
@@ -47,18 +47,18 @@ public class GraphicEx02 extends Frame{
 	@Override
 	public void paint(Graphics g){
 		
-		//ÀÌ¹ÌÁö°¡ null°æ¿ì 
+		//ì´ë¯¸ì§€ê°€ nullê²½ìš° 
 		if(img == null) return;
 		
-		//Image °´Ã¼, x, y, width, height, ImageObserver°´Ã¼
+		//Image ê°ì²´, x, y, width, height, ImageObserverê°ì²´
 		//g.drawImage(img, 300, 200,  this);
 		//g.drawImage(img, 0, 0, 300, 200,  this);
-		// ÀÌ¹ÌÁö¸¦ ´ÃÀÌ¸é ÀÌ¹ÌÁö ±úÁüÀÌ ¹ß»ı
+		// ì´ë¯¸ì§€ë¥¼ ëŠ˜ì´ë©´ ì´ë¯¸ì§€ ê¹¨ì§ì´ ë°œìƒ
 		//g.drawImage(img, 0, 0, 450, 300,  this);
-		//ÀÌ¹ÌÁö¸¦ ÁÙÀÏ°æ¿ì ºñÀ²·Î ÁÙÀÎ´Ù. À§¿¡ ÀÖ´Â °Íµµ ÁÂÇ¥·Î ÀÎ½ÄÇÑ´Ù.
+		//ì´ë¯¸ì§€ë¥¼ ì¤„ì¼ê²½ìš° ë¹„ìœ¨ë¡œ ì¤„ì¸ë‹¤. ìœ„ì— ìˆëŠ” ê²ƒë„ ì¢Œí‘œë¡œ ì¸ì‹í•œë‹¤.
 		//g.drawImage(img, 0, 0, 150, 100,  this);
 		
-		//ÀÌ¹ÌÁö¸¦ ÁÙÀÏ°æ¿ì ºñÀ²·Î ÁÙÀÎ´Ù. À§¿¡ ÀÖ´Â °Íµµ ÁÂÇ¥·Î ÀÎ½ÄÇÑ´Ù.
+		//ì´ë¯¸ì§€ë¥¼ ì¤„ì¼ê²½ìš° ë¹„ìœ¨ë¡œ ì¤„ì¸ë‹¤. ìœ„ì— ìˆëŠ” ê²ƒë„ ì¢Œí‘œë¡œ ì¸ì‹í•œë‹¤.
 		g.drawImage(img, 10, 10, 300, 200,  this);
 	}
 

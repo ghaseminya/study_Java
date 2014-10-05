@@ -2,11 +2,11 @@
  *  
  * -------------------------------------------------------------
  * 
- * System.in: ±âº»ÀÔ·Â(byteÀÔ·Â)
+ * System.in: ê¸°ë³¸ì…ë ¥(byteì…ë ¥)
  * 
- * BufferedReader Å¬·¡½º
- * -BufferedReader°¡ ¹®ÀÚ¿­(String)·Î Ã³¸®
- * -ÀÔ·Âµ¥ÀÌÅÍÀÇ °³¼öÀÇ »ó°ü¾øÀÌ ¶óÀÎ¹ÙÀÌ¶óÀÎÀ¸·Î ÀĞ¾îµéÀÎ´Ù. 
+ * BufferedReader í´ë˜ìŠ¤
+ * -BufferedReaderê°€ ë¬¸ìì—´(String)ë¡œ ì²˜ë¦¬
+ * -ì…ë ¥ë°ì´í„°ì˜ ê°œìˆ˜ì˜ ìƒê´€ì—†ì´ ë¼ì¸ë°”ì´ë¼ì¸ìœ¼ë¡œ ì½ì–´ë“¤ì¸ë‹¤. 
  * 
  */
 
@@ -23,23 +23,23 @@ public class BufferedReaderEx {
 		String line ="";
 		
 		try{
-			//µ¥ÄÚ·¹ÀÌ¼Ç ÆĞÅÏ
-			//InputStreamÇüÀÇ System.inÀ» InputStreamReader»ı¼ºÀÚÀÇ ÀÎÀÚ·Î ÁöÁ¤ÇÏ¿© byteÃ³¸®¸¦ charÃ³¸®·Î º¯°æ½ÃÄ×À¸¸ç, 
-			//´Ù½Ã BufferedRedaer¸¦ »ç¿ëÇÏ¿© ÇÑ ¶óÀÎ¾¿ ÀÔ·Âµ¥ÀÌÅÍ¸¦ Ã³¸®ÇÒ ¼ö ÀÖµµ·Ï ÇÔ
+			//ë°ì½”ë ˆì´ì…˜ íŒ¨í„´
+			//InputStreamí˜•ì˜ System.inì„ InputStreamReaderìƒì„±ìì˜ ì¸ìë¡œ ì§€ì •í•˜ì—¬ byteì²˜ë¦¬ë¥¼ charì²˜ë¦¬ë¡œ ë³€ê²½ì‹œì¼°ìœ¼ë©°, 
+			//ë‹¤ì‹œ BufferedRedaerë¥¼ ì‚¬ìš©í•˜ì—¬ í•œ ë¼ì¸ì”© ì…ë ¥ë°ì´í„°ë¥¼ ì²˜ë¦¬í•  ìˆ˜ ìˆë„ë¡ í•¨
 			br = new BufferedReader(new InputStreamReader(System.in));
 			
 			do{
-				System.out.print("¹®ÀÚ ÀÔ·Â(Á¾·ù: q/Q ÀÔ·Â)> ");
-				//IOExceoptionÀÌ ³¯¼ö ÀÖ¾î¼­ try~catch
+				System.out.print("ë¬¸ì ì…ë ¥(ì¢…ë¥˜: q/Q ì…ë ¥)> ");
+				//IOExceoptionì´ ë‚ ìˆ˜ ìˆì–´ì„œ try~catch
 				line = br.readLine();
-				System.out.println("ÀÔ·ÂÇÏ½Å ¹®Àå: " + line );
-			//}while( !line.equals("q"));	// q¸¸ °¡´É
-			}while( !line.equalsIgnoreCase("q"));	// q, Q ¸ğµÎ °¡´É
-			System.out.println("ÇÁ·Î±×·¥ Á¾·á!!");
+				System.out.println("ì…ë ¥í•˜ì‹  ë¬¸ì¥: " + line );
+			//}while( !line.equals("q"));	// që§Œ ê°€ëŠ¥
+			}while( !line.equalsIgnoreCase("q"));	// q, Q ëª¨ë‘ ê°€ëŠ¥
+			System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ!!");
 			
 		}catch(IOException e){
 			e.printStackTrace();
-		}finally{	//ÀÚ¿ø°ü¸°
+		}finally{	//ìì›ê´€ë¦°
 			if( br!=null ){ try{br.close();}catch(IOException e){e.printStackTrace();} }
 		}		
 	}

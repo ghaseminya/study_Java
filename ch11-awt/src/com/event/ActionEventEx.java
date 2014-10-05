@@ -1,21 +1,21 @@
-/* Event Ã³¸®
+/* Event ì²˜ë¦¬
  * 
- * Panel °´Ã¼ »ı¼º
- * Button°´Ã¼ »ı¼º
- * TextArea °´Ã¼ »ı¼º
- * ButtonÀ»  Panel¿¡ µî·Ï
- * Frame¿¡ Panel°ú TextAreasµî·Ï
+ * Panel ê°ì²´ ìƒì„±
+ * Buttonê°ì²´ ìƒì„±
+ * TextArea ê°ì²´ ìƒì„±
+ * Buttonì„  Panelì— ë“±ë¡
+ * Frameì— Panelê³¼ TextAreasë“±ë¡
  * 
- * implements ActionListener	(ActionListener°¤°í ÀÖ´Â ÀÌº¥Æ® Ã³¸®°¡´É  ActionEventEx°¡ ¸®½º³ÊÀÇ ±â´ÉÀ» °¤°ÔµÈ´Ù. )
- * @Override 	public void actionPerformed(ActionEvent ae){}	//ActinListern°¡ actionPerfored()È£Ãâ¤¤
- * ÀÌº¥Æ® ¼Ò½º¿Í ÀÌº¥Æ® ¸®½º³Ê ¿¬°á
+ * implements ActionListener	(ActionListenerê°‡ê³  ìˆëŠ” ì´ë²¤íŠ¸ ì²˜ë¦¬ê°€ëŠ¥  ActionEventExê°€ ë¦¬ìŠ¤ë„ˆì˜ ê¸°ëŠ¥ì„ ê°‡ê²Œëœë‹¤. )
+ * @Override 	public void actionPerformed(ActionEvent ae){}	//ActinListernê°€ actionPerfored()í˜¸ì¶œã„´
+ * ì´ë²¤íŠ¸ ì†ŒìŠ¤ì™€ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²°
  * 
  * ---------------------------------------
- * ÀÌº¥Æ® Ã³¸® ¼ø¼­ (Java¿Í Android µ¿ÀÏ)
- * 1.ÀÌº¥Æ® ¼Ò½º ¼±Á¤
- * 2.ÀÌº¥Æ® ¸®½º³Ê¸¦ ±¸Çö
- * 3.ÀÌº¥Æ® ¼Ò½º¿Í ÀÌº¥Æ® ¸®½º³Ê ¿¬°á
- * 4.ÀÌº¥Æ® ÇÚµé·¯ ³»¿ë ±¸Çö
+ * ì´ë²¤íŠ¸ ì²˜ë¦¬ ìˆœì„œ (Javaì™€ Android ë™ì¼)
+ * 1.ì´ë²¤íŠ¸ ì†ŒìŠ¤ ì„ ì •
+ * 2.ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆë¥¼ êµ¬í˜„
+ * 3.ì´ë²¤íŠ¸ ì†ŒìŠ¤ì™€ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²°
+ * 4.ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ ë‚´ìš© êµ¬í˜„
  * 
  */
 
@@ -29,8 +29,8 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//extends Frame: Frame»ó¼Ó
-//implements ActionListener: ActionEventEx°¡ ActionListner¿ªÇÒÀ» ÇÔ
+//extends Frame: Frameìƒì†
+//implements ActionListener: ActionEventExê°€ ActionListnerì—­í• ì„ í•¨
 public class ActionEventEx extends Frame implements ActionListener{
 	
 	Panel p;
@@ -39,55 +39,55 @@ public class ActionEventEx extends Frame implements ActionListener{
 	
 	
 	public ActionEventEx() {		
-		super("ActionEvent Å×½ºÆ®");
+		super("ActionEvent í…ŒìŠ¤íŠ¸");
 		
-		//Panel°´Ã¼ »ı¼º
+		//Panelê°ì²´ ìƒì„±
 		p = new Panel();
 		
-		//Button°´Ã¼ »ı¼º (ÀÌº¥Æ® ¼Ò½º)
-		input = new Button("ÀÔ·Â");
-		exit = new Button("Á¾·á");
+		//Buttonê°ì²´ ìƒì„± (ì´ë²¤íŠ¸ ì†ŒìŠ¤)
+		input = new Button("ì…ë ¥");
+		exit = new Button("ì¢…ë£Œ");
 		
 		
-		//ÀÌº¥Æ® ¼Ò½º¿Í ÀÌº¥Æ® ¸®½º³Ê ¿¬°á
+		//ì´ë²¤íŠ¸ ì†ŒìŠ¤ì™€ ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ ì—°ê²°
 		input.addActionListener(this);
 		exit.addActionListener(this);
 		
-		//TextArea °´Ã¼ »ı¼º
+		//TextArea ê°ì²´ ìƒì„±
 		ta = new TextArea();
 		
-		//ButtonÀ»  Panel¿¡ µî·Ï
+		//Buttonì„  Panelì— ë“±ë¡
 		p.add(input);
 		p.add(exit);
 		
-		//Frame¿¡ µî·Ï
+		//Frameì— ë“±ë¡
 		add(p, BorderLayout.NORTH);
 		add(ta, BorderLayout.CENTER);
 		
-		//x, y, width, height ¼³Á¤
+		//x, y, width, height ì„¤ì •
 		setBounds(300, 300, 300, 300);		
 		
-		//Frame ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);		
 	}
 	
-	//ÀÌº¥Æ® ÇÚµé·¯(ÀÌº¥Æ®°¡ ¹ß»ıÇÏ¸é È£ÃâµÊ)
+	//ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬(ì´ë²¤íŠ¸ê°€ ë°œìƒí•˜ë©´ í˜¸ì¶œë¨)
 	@Override
 	public void actionPerformed(ActionEvent ae){
-		//ÀÌº¥Æ®°¡ ¹ß»ıÇÑ ÀÌº¥Æ® ¼Ò½ºÀÇ ¸í·É ¹®ÀÚ¿­À» ±¸ÇÔ
+		//ì´ë²¤íŠ¸ê°€ ë°œìƒí•œ ì´ë²¤íŠ¸ ì†ŒìŠ¤ì˜ ëª…ë ¹ ë¬¸ìì—´ì„ êµ¬í•¨
 		String name = ae.getActionCommand();
-		if(name.equals("ÀÔ·Â")){
-			ta.append("¹öÆ°À» Å¬¸¯ÇÏ¿´½À´Ï´Ù.\n");
+		if(name.equals("ì…ë ¥")){
+			ta.append("ë²„íŠ¼ì„ í´ë¦­í•˜ì˜€ìŠµë‹ˆë‹¤.\n");
 			
-		}else{//Á¾·á			
-			//ÇÁ·Î±×·¥ Á¾·á
+		}else{//ì¢…ë£Œ			
+			//í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 			System.exit(0);
 		}		
 	}	
 	
 
 	public static void main(String[] args) {
-		// FrameÀ» »ó¼Ó¹ŞÀº Å¬·¡½ºÀÇ °´Ã¼ »ı¼º
+		// Frameì„ ìƒì†ë°›ì€ í´ë˜ìŠ¤ì˜ ê°ì²´ ìƒì„±
 		new ActionEventEx();
 	}
 }

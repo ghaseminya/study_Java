@@ -1,10 +1,10 @@
 /* BufferedWriter
  * 
  * import
- * °´Ã¼ »ı¼º 
- * ÀúÀåÀÌ ¹öÆÛ¿¡ ÀúÀåµÊ
- * ÁÙ¹Ù²Ş / ¸Ş¼­µå¸¦ ÅëÇØ ÁÙ¹Ù²Ş
- * ÀÚ¿ø°ü¸®
+ * ê°ì²´ ìƒì„± 
+ * ì €ì¥ì´ ë²„í¼ì— ì €ì¥ë¨
+ * ì¤„ë°”ê¿ˆ / ë©”ì„œë“œë¥¼ í†µí•´ ì¤„ë°”ê¿ˆ
+ * ìì›ê´€ë¦¬
  * 
  */
 package com.writer;
@@ -21,24 +21,24 @@ public class BufferedWriterEx {
 		BufferedWriter bw = null;
 		
 		try{
-			//°´Ã¼ »ı¼º
+			//ê°ì²´ ìƒì„±
 			fw = new FileWriter("bufferedWirter.txt");
 			bw = new BufferedWriter(fw);
-			//ÀúÀåÀÌ ¹öÆÛ¿¡ ÀúÀåµÊ
-			bw.write("BufferedWirter TestÀÔ´Ï´Ù.");
-			//ÁÙ¹Ù²Ş
+			//ì €ì¥ì´ ë²„í¼ì— ì €ì¥ë¨
+			bw.write("BufferedWirter Testì…ë‹ˆë‹¤.");
+			//ì¤„ë°”ê¿ˆ
 			bw.newLine();
-			//¸Ş¼­µå¸¦ ÅëÇØ ÁÙ¹Ù²Ş
-			bw.write("¾È³çÇÏ¼¼¿ä" + System.getProperty("line.separator") + "Hello BufferedWriter");
+			//ë©”ì„œë“œë¥¼ í†µí•´ ì¤„ë°”ê¿ˆ
+			bw.write("ì•ˆë…•í•˜ì„¸ìš”" + System.getProperty("line.separator") + "Hello BufferedWriter");
 			
-			//close()¸Ş¼­µå°¡ ¹öÆÛ¿¡ ³²¾ÆÀÖ´Â ³»¿ëÀ» ÆÄÀÏ¿¡ Àü¼ÛÇÏ°í ¹öÆÛ¸¦ ºñ¿ò
+			//close()ë©”ì„œë“œê°€ ë²„í¼ì— ë‚¨ì•„ìˆëŠ” ë‚´ìš©ì„ íŒŒì¼ì— ì „ì†¡í•˜ê³  ë²„í¼ë¥¼ ë¹„ì›€
 			//bw.flush();
-			System.out.println("ÆÄÀÏ»ı¼º ¹× ³»¿ë ±â¼ú");
+			System.out.println("íŒŒì¼ìƒì„± ë° ë‚´ìš© ê¸°ìˆ ");
 			
 		}catch(IOException e){
 			e.printStackTrace();
 			
-		}finally{	//ÀÚ¿ø°ü¸® 
+		}finally{	//ìì›ê´€ë¦¬ 
 				if( bw!=null ){ try{bw.close();}catch(IOException e){e.printStackTrace();} }
 				if( fw!=null ){ try{fw.close();}catch(IOException e){e.printStackTrace();} }
 		}

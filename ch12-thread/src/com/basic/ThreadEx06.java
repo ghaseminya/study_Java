@@ -1,12 +1,12 @@
-/* Thread - µ¿±âÈ­ ÈÄ (synchronized µ¿±âÈ­ ºí·° ÀÌ¿ë)
+/* Thread - ë™ê¸°í™” í›„ (synchronized ë™ê¸°í™” ë¸”ëŸ­ ì´ìš©)
  * 
  * -----------------------------------------------------------
- * °øÀ¯ÀÚ¿øÀ» º¯°æÇÏ´Â ÀÓ°è¿µ¿ªÀ»
- * synchronized·Î µÑ·¯½Î¿© ÀÖ¾î¼­ µé¾î¿Â thread¸¦ ¸ÕÀú ¼öÇà¿Ï·áÇÑ ´ÙÀ½ ´ÙÀ½ Thread·Î Á¦¾î¸¦ ³Ñ±ä´Ù.
+ * ê³µìœ ìì›ì„ ë³€ê²½í•˜ëŠ” ì„ê³„ì˜ì—­ì„
+ * synchronizedë¡œ ë‘˜ëŸ¬ì‹¸ì—¬ ìˆì–´ì„œ ë“¤ì–´ì˜¨ threadë¥¼ ë¨¼ì € ìˆ˜í–‰ì™„ë£Œí•œ ë‹¤ìŒ ë‹¤ìŒ Threadë¡œ ì œì–´ë¥¼ ë„˜ê¸´ë‹¤.
  * 
- * Thread¸¦ »ç¿ëÇÒ °æ¿ì ÁÖÀÇ
- * - °¡±ŞÀû °øÀ¯ÀÚ¿ø ¸¸µéÁö ¸»°Í.
- * - °øÀ¯ÀÚ¿øÀ» ¸¸µé°æ¿ì ¹İµå½Ã µ¿±âÈ­ ÇÒ°Í
+ * Threadë¥¼ ì‚¬ìš©í•  ê²½ìš° ì£¼ì˜
+ * - ê°€ê¸‰ì  ê³µìœ ìì› ë§Œë“¤ì§€ ë§ê²ƒ.
+ * - ê³µìœ ìì›ì„ ë§Œë“¤ê²½ìš° ë°˜ë“œì‹œ ë™ê¸°í™” í• ê²ƒ
  * 
  */
 
@@ -14,12 +14,12 @@ package com.basic;
 
 
 class ATM implements Runnable{
-	//°øÀ¯ÀÚ¿ø
+	//ê³µìœ ìì›
 	private long depositMoney = 10000;
 	
 	@Override
 	public void run(){
-		//this: µ¿±âÈ­ÇÒ °´Ã¼
+		//this: ë™ê¸°í™”í•  ê°ì²´
 		synchronized (this) {	
 			for( int i=0; i<5; i++){
 				try{
@@ -27,7 +27,7 @@ class ATM implements Runnable{
 				}catch(InterruptedException e){
 					e.printStackTrace();					
 				}
-				// 0ÀÌÇÏ¸é ¹İº¹¹® ºüÁ®³ª¿È
+				// 0ì´í•˜ë©´ ë°˜ë³µë¬¸ ë¹ ì ¸ë‚˜ì˜´
 				if( depositMoney <= 0 ) break;
 				
 				withDraw(1000);
@@ -35,13 +35,13 @@ class ATM implements Runnable{
 		}		
 	}
 	
-	//ÀÓ°è¿µ¿ª
+	//ì„ê³„ì˜ì—­
 	public void withDraw(long howMuch){
 		if(depositMoney > 0){
 			depositMoney -= howMuch;
 			System.out.println(Thread.currentThread().getName() + "\t" + depositMoney);			
 		}else{
-			System.out.println(Thread.currentThread().getName() + "ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");			
+			System.out.println(Thread.currentThread().getName() + "ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");			
 		}
 	}	
 }

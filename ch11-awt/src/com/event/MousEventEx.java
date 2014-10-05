@@ -1,9 +1,6 @@
 /* MouseEvent
  * 
- * 
- * 
- * 
- * ÄÄÆ÷³ÍÆ®°¡ ¿òÁ÷ÀÌ°Ô ÇÒ·Á¸é layoutÀ» ºñÈ°¼ºÈ­ ½ÃÄÑ¾ß ÇÕ´Ï´Ù.
+ * ì»´í¬ë„ŒíŠ¸ê°€ ì›€ì§ì´ê²Œ í• ë ¤ë©´ layoutì„ ë¹„í™œì„±í™” ì‹œì¼œì•¼ í•©ë‹ˆë‹¤.
  */
 
 package com.event;
@@ -19,40 +16,40 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 
 public class MousEventEx extends Frame implements ActionListener, MouseMotionListener{
-	//Label °´Ã¼ »ı¼¶, ÃÊ±â¼³Á¤
+	//Label ê°ì²´ ìƒì„¬, ì´ˆê¸°ì„¤ì •
 	Label move = new Label("***********", Label.CENTER);
-	Button btnExits = new Button("Á¾·á");	
+	Button btnExits = new Button("ì¢…ë£Œ");	
 	
 	public MousEventEx() {
-		//Frame Å¸ÀÌÆ² ÁöÁ¤
+		//Frame íƒ€ì´í‹€ ì§€ì •
 		setTitle("MouseEvnet Test");
 		
-		//LabelÀÇ Àü°æ»ö ¹× ¹è°æ»ö ¼³Á¤
+		//Labelì˜ ì „ê²½ìƒ‰ ë° ë°°ê²½ìƒ‰ ì„¤ì •
 		move.setForeground(Color.WHITE);
 		move.setBackground(Color.RED);
 		
-		//ÄÄÆ÷³ÍÆ®°¡ ÀÌº¥Æ® ¹ß»ıÀÌ ÀÌµ¿ÇÏ°Ô Ã³¸®ÇÏ·Á¸é ·¹ÀÌ¾Æ¿ôÀ» »ç¿ëÇÏÁö ¸»¾Æ¾ß ÇÕ´Ï´Ù.
-		//LayoutÀ» ºñÈ°¼ºÈ­ ÇÕ´Ï´Ù.
+		//ì»´í¬ë„ŒíŠ¸ê°€ ì´ë²¤íŠ¸ ë°œìƒì´ ì´ë™í•˜ê²Œ ì²˜ë¦¬í•˜ë ¤ë©´ ë ˆì´ì•„ì›ƒì„ ì‚¬ìš©í•˜ì§€ ë§ì•„ì•¼ í•©ë‹ˆë‹¤.
+		//Layoutì„ ë¹„í™œì„±í™” í•©ë‹ˆë‹¤.
 		setLayout(null);
 		
-		//ButtonÀ» ÀÌº¥Æ®¸®½º³Ê ¿¬°á
+		//Buttonì„ ì´ë²¤íŠ¸ë¦¬ìŠ¤ë„ˆ ì—°ê²°
 		btnExits.addActionListener(this);
 		
-		//FrameÀ» ÀÌº¥Æ®¸®½º³Ê¿¡ ¿¬°á
+		//Frameì„ ì´ë²¤íŠ¸ë¦¬ìŠ¤ë„ˆì— ì—°ê²°
 		addMouseMotionListener(this);
 		
-		//Label, Button¿¡ ÁÂÇ¥, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
+		//Label, Buttonì— ì¢Œí‘œ, ë„“ì´, ë†’ì´ ì„¤ì •
 		move.setBounds(100, 50, 150, 20);
 		btnExits.setBounds(250,  500,  50,  30);
 		
-		//Frame¿¡ Label°ú ¹öÆ° µî·Ï
+		//Frameì— Labelê³¼ ë²„íŠ¼ ë“±ë¡
 		add(move);
 		add(btnExits);
 		
-		//Frame ÁÂÇ¥, ³ĞÀÌ, ³ôÀÌ ¼³Á¤
+		//Frame ì¢Œí‘œ, ë„“ì´, ë†’ì´ ì„¤ì •
 		setBounds(300,  300,  300,  300);
 		
-		//Frame ³ëÃâ ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œ ì—¬ë¶€ ì„¤ì •
 		setVisible(true);
 	}
 	@Override
@@ -62,10 +59,10 @@ public class MousEventEx extends Frame implements ActionListener, MouseMotionLis
 	
 	@Override
 	public void mouseMoved(MouseEvent e){
-		//¸¶¿ì½º x, yÁÂÇ¥¸¦ Point ÀúÀåÈÄ
+		//ë§ˆìš°ìŠ¤ x, yì¢Œí‘œë¥¼ Point ì €ì¥í›„
 		Point p = e.getPoint();
 		
-		//ÀúÀåµÈ ¸¶¿ì½º x,yÁÂÇ¥¸¦ LabelÀÇ x,yÁÂÇ¥¿¡ ³Ö¾îÁİ´Ï´Ù.
+		//ì €ì¥ëœ ë§ˆìš°ìŠ¤ x,yì¢Œí‘œë¥¼ Labelì˜ x,yì¢Œí‘œì— ë„£ì–´ì¤ë‹ˆë‹¤.
 		move.setLocation(p);		
 	}
 	

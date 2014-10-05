@@ -1,9 +1,9 @@
-/* ¹öÆ° »ı¼º - BorderLayout»ç¿ë
+/* ë²„íŠ¼ ìƒì„± - BorderLayoutì‚¬ìš©
  * 
  * 
  * 
- *  Å©±â Á¶Á¤½Ã ¹öÆ° Å©±â°¡ È®ÀåµË´Ï´Ù.
- *  È®ÀåµÇÁö ¾Ê°Ô ÇÏ±â À§ÇØ¼­´Â Panel»ç¿ë
+ *  í¬ê¸° ì¡°ì •ì‹œ ë²„íŠ¼ í¬ê¸°ê°€ í™•ì¥ë©ë‹ˆë‹¤.
+ *  í™•ì¥ë˜ì§€ ì•Šê²Œ í•˜ê¸° ìœ„í•´ì„œëŠ” Panelì‚¬ìš©
  */
 
 package com.display;
@@ -18,37 +18,37 @@ public class BorderLayoutEx01 extends Frame{
 	
 	
 	public BorderLayoutEx01(){
-		//Frame ¼³Á¤
+		//Frame ì„¤ì •
 		setTitle("BorderLay Test");
 		setSize(300, 300);
-		//Frame¿¡´Â ±âº» ·¹ÀÌ¾Æ¿ôÀÌ BorderLayoutÀ¸·Î ÁöÁ¤µÇ¾î ÀÖ¾î
-		//BorderLayout»ç¿ë½Ã ·¹ÀÌ¾Æ¿ô ¼³Á¤ »ı·«°¡´É
+		//Frameì—ëŠ” ê¸°ë³¸ ë ˆì´ì•„ì›ƒì´ BorderLayoutìœ¼ë¡œ ì§€ì •ë˜ì–´ ìˆì–´
+		//BorderLayoutì‚¬ìš©ì‹œ ë ˆì´ì•„ì›ƒ ì„¤ì • ìƒëµê°€ëŠ¥
 		//setLayout(new BorderLayout());
 	
-		//Panel »ı¼º
+		//Panel ìƒì„±
 		Panel pc = new Panel();
 		Panel pe = new Panel();		
 				
-		//Button Ãß°¡
+		//Button ì¶”ê°€
 		Button  btnEast= new Button("east");
 		Button  btnWest= new Button("west");
 		Button  btnSouth= new Button("south");
 		Button  btnNorth= new Button("north");
 		Button  btnCenter= new Button("center");
 		
-		//center¸¦ Panel¿¡ µî·Ï
+		//centerë¥¼ Panelì— ë“±ë¡
 		pc.add(btnCenter);
 		//p.add(east);
 		pe.add(btnEast);
 		
-		//Frame¿¡ ¹öÆ° Ãß°¡
+		//Frameì— ë²„íŠ¼ ì¶”ê°€
 		add(pe, BorderLayout.EAST);
 		add(btnWest, BorderLayout.WEST);
 		add(btnSouth, BorderLayout.SOUTH);
 		add(btnNorth, BorderLayout.NORTH);
 		add(pc, BorderLayout.CENTER);			
 		
-		//Frame ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);
 	}
 

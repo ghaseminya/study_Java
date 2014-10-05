@@ -1,24 +1,24 @@
-/* Button »ý¼º - ±âº» Frame¿¡ Ç¥½Ã
+/* Button ìƒì„± - ê¸°ë³¸ Frameì— í‘œì‹œ
  * 
- * Frame»ó¼Ó
- * »ý¼ºÀÚ »ý¼º
- * °´Ã¼ »ý¼º
- * Button »ý¼º
- * Button »çÀÌÁî ÁöÁ¤
- * ButtonÀ» Frame¿¡ µî·Ï 
+ * Frameìƒì†
+ * ìƒì„±ìž ìƒì„±
+ * ê°ì²´ ìƒì„±
+ * Button ìƒì„±
+ * Button ì‚¬ì´ì¦ˆ ì§€ì •
+ * Buttonì„ Frameì— ë“±ë¡ 
  * 
  * ------------------------------------------------------
- * Button »ý¼º - È®´ëµÇ´Â Çö»ó È®ÀÎ
- * ÆÐ³ÎÀ» »ç¿ëÇØ Button Å©±â ÁöÁ¤ (PanelEx01.java)  
+ * Button ìƒì„± - í™•ëŒ€ë˜ëŠ” í˜„ìƒ í™•ì¸
+ * íŒ¨ë„ì„ ì‚¬ìš©í•´ Button í¬ê¸° ì§€ì • (PanelEx01.java)  
  * 
- **setSize·Î ÁöÁ¤ÇÑ ¹öÆ° Å©±â·Î Ç¥ÁöµÇÁö ¾Ê°í FrameÅ©±â·Î È®´ëµÇ´Â Çö»ó ¹ß»ý
- * ·¹ÀÌ¾Æ¿ôÀ» »ç¿ëÇØ ¹öÆ°ÀÇ Å©±â¸¦ °­Á¦ÇØ¾ß ÇÏ´Âµ¥ ·¹ÀÌ¾Æ¿ôÀ» »ç¿ëÇÏÁö ¾Ê¾Æ¼­ ¹öÆ°ÀÌ È®´ëµÇ´Â Çö»ó ¹ß»ý
+ **setSizeë¡œ ì§€ì •í•œ ë²„íŠ¼ í¬ê¸°ë¡œ í‘œì§€ë˜ì§€ ì•Šê³  Frameí¬ê¸°ë¡œ í™•ëŒ€ë˜ëŠ” í˜„ìƒ ë°œìƒ
+ * ë ˆì´ì•„ì›ƒì„ ì‚¬ìš©í•´ ë²„íŠ¼ì˜ í¬ê¸°ë¥¼ ê°•ì œí•´ì•¼ í•˜ëŠ”ë° ë ˆì´ì•„ì›ƒì„ ì‚¬ìš©í•˜ì§€ ì•Šì•„ì„œ ë²„íŠ¼ì´ í™•ëŒ€ë˜ëŠ” í˜„ìƒ ë°œìƒ
  * 
- * ÄÄÆ÷³ÍÆ®´Â ±âº»ÀûÀ¸·Î setSize°¡ ¾È¸ÔÇô È®´ëµÊ (setLayout ±âº» Àû¿ëµÇ¾î ÀÖÀ½)
- **ÇØ°á¹æ¹ý:
- * 1)setSize¸¦ »ç¿ëÇÏ°í layoutÀ» »ç¿ë¾ÈÇÒ·Á¸é layout»ç¿ë ¾ÈÇÑ´Ù°í ÁöÁ¤ÇØ Áà¾ß ÇÕ´Ï´Ù.
- * 2)layoutÀ» ½á¼­ Æ²À» ¸¸µé°í ÀÌ Æ²¾È¿¡ ÄÄÆ÷³ÍÆ®¸¦ ¸¸µé¾î¾ß ÇÕ´Ï´Ù.
- * 3)ÄÄÆ÷³ÍÆ® »ç¿ë½Ã ÆÐ³Î·Î ¹­¾î¼­ Ç¥ÇöÇÑ´Ù.(ÆÐ³Îµµ layoutÁöÁ¤µÇ¾î ÀÖÀ½)
+ * ì»´í¬ë„ŒíŠ¸ëŠ” ê¸°ë³¸ì ìœ¼ë¡œ setSizeê°€ ì•ˆë¨¹í˜€ í™•ëŒ€ë¨ (setLayout ê¸°ë³¸ ì ìš©ë˜ì–´ ìžˆìŒ)
+ **í•´ê²°ë°©ë²•:
+ * 1)setSizeë¥¼ ì‚¬ìš©í•˜ê³  layoutì„ ì‚¬ìš©ì•ˆí• ë ¤ë©´ layoutì‚¬ìš© ì•ˆí•œë‹¤ê³  ì§€ì •í•´ ì¤˜ì•¼ í•©ë‹ˆë‹¤.
+ * 2)layoutì„ ì¨ì„œ í‹€ì„ ë§Œë“¤ê³  ì´ í‹€ì•ˆì— ì»´í¬ë„ŒíŠ¸ë¥¼ ë§Œë“¤ì–´ì•¼ í•©ë‹ˆë‹¤.
+ * 3)ì»´í¬ë„ŒíŠ¸ ì‚¬ìš©ì‹œ íŒ¨ë„ë¡œ ë¬¶ì–´ì„œ í‘œí˜„í•œë‹¤.(íŒ¨ë„ë„ layoutì§€ì •ë˜ì–´ ìžˆìŒ)
  * 
  */
 
@@ -28,25 +28,25 @@ package com.display;
 import java.awt.Frame;
 import java.awt.Button;
 
-//Frame »ó¼Ó
+//Frame ìƒì†
 public class ButtonEx01 extends Frame{
 	
-	//»ý¼ºÀÚ »ý¼º
+	//ìƒì„±ìž ìƒì„±
 	public ButtonEx01(){
-		//Á¦¸ñ ¼³Á¤
-		super("Button Å×½ºÆ®");		
-		//width, hegith¼³Á¤
+		//ì œëª© ì„¤ì •
+		super("Button í…ŒìŠ¤íŠ¸");		
+		//width, hegithì„¤ì •
 		 setSize(300,  300);		 
-		 //Framew ³ëÃâ ¿©ºÎ ÁöÁ¤
+		 //Framew ë…¸ì¶œ ì—¬ë¶€ ì§€ì •
 		 setVisible(true);
 		 
 		 
-		 //ButtonÁöÁ¤
-		 //Button°´Ã¼ »ý¼º
-		 Button b = new Button("È®ÀÎ");
-		 // setSize·Î ÁöÁ¤ÇÑ ¹öÆ° Å©±â·Î Ç¥ÁöµÇÁö ¾Ê°í ÀüÅ× FrameÅ©±â·Î È®´ëµÇ´Â Çö»ó ¹ß»ý
-		 b.setSize(100,  50); 	//width, height ¼³Á¤		 
-		 //ButtonÀ» Frame¿¡ µî·Ï
+		 //Buttonì§€ì •
+		 //Buttonê°ì²´ ìƒì„±
+		 Button b = new Button("í™•ì¸");
+		 // setSizeë¡œ ì§€ì •í•œ ë²„íŠ¼ í¬ê¸°ë¡œ í‘œì§€ë˜ì§€ ì•Šê³  ì „í…Œ Frameí¬ê¸°ë¡œ í™•ëŒ€ë˜ëŠ” í˜„ìƒ ë°œìƒ
+		 b.setSize(100,  50); 	//width, height ì„¤ì •		 
+		 //Buttonì„ Frameì— ë“±ë¡
 		 add(b);
 		
 	}

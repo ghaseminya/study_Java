@@ -1,12 +1,12 @@
-/* È®Àå For¹®, ArrayList µ¥ÀÌÅÍ »ğÀÔ/»èÁ¦
+/* í™•ì¥ Forë¬¸, ArrayList ë°ì´í„° ì‚½ì…/ì‚­ì œ
  * 
- * ArrayListÀÇ µ¥ÀÌÅÍ »ğÀÔ
- * ArrayListÀÇ µ¥ÀÌÅÍ¸¦ È®ÀåFor¹®À¸·Î Ãâ·Â 
- * ArrayListÀÇ µ¥ÀÌÅÍ »èÁ¦-indexÅëÇØ
- * ArrayListÀÇ µ¥ÀÌÅÍ »èÁ¦-°´Ã¼(¿ä¼Ò)ÅëÇØ
+ * ArrayListì˜ ë°ì´í„° ì‚½ì…
+ * ArrayListì˜ ë°ì´í„°ë¥¼ í™•ì¥Forë¬¸ìœ¼ë¡œ ì¶œë ¥ 
+ * ArrayListì˜ ë°ì´í„° ì‚­ì œ-indexí†µí•´
+ * ArrayListì˜ ë°ì´í„° ì‚­ì œ-ê°ì²´(ìš”ì†Œ)í†µí•´
  *  
- * JDK5.0ÀÌ»ó ºÎÅÍ »ç¿ë°¡´É
- * ³»ºÎÀûÀ¸·Î indexingÇÏ¸é¼­ µ¥ÀÌÅÍ¸¦ »Ì¾ÆÁÖ°Ô µË´Ï´Ù. 
+ * JDK5.0ì´ìƒ ë¶€í„° ì‚¬ìš©ê°€ëŠ¥
+ * ë‚´ë¶€ì ìœ¼ë¡œ indexingí•˜ë©´ì„œ ë°ì´í„°ë¥¼ ë½‘ì•„ì£¼ê²Œ ë©ë‹ˆë‹¤. 
  */
 
 package com.list;
@@ -16,29 +16,29 @@ import java.util.ArrayList;
 public class ArrayListEx04 {
 
 	public static void main(String[] args) {
-		// Á¦³×¸¯ Ç¥ÇöÀ¸·Î ½ºÆ®¸µ¸¸ ÀÔ·Â¹Şµµ·Ï ¼±¾ğ
+		// ì œë„¤ë¦­ í‘œí˜„ìœ¼ë¡œ ìŠ¤íŠ¸ë§ë§Œ ì…ë ¥ë°›ë„ë¡ ì„ ì–¸
 		ArrayList<String> al = new ArrayList<String>();
-		al.add("¹èÆ®¸Ç");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("È«±æµ¿");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("°­ÇÏ´Ã");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("ÀÏÁö¸Å");	// String -> Object ¾÷Ä³½ºÆÃ
+		al.add("ë°°íŠ¸ë§¨");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("í™ê¸¸ë™");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ê°•í•˜ëŠ˜");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ì¼ì§€ë§¤");	// String -> Object ì—…ìºìŠ¤íŒ…
 		
-		//È®Àå for¹®À¸·Î Ãâ·Â
+		//í™•ì¥ forë¬¸ìœ¼ë¡œ ì¶œë ¥
 		for(String name : al){
 			System.out.println(name);
 		}
 		
 		System.out.println();
-		//»èÁ¦
-		al.remove(2);	//ÇØ´ç ÀÎµ¦½º »èÁ¦
+		//ì‚­ì œ
+		al.remove(2);	//í•´ë‹¹ ì¸ë±ìŠ¤ ì‚­ì œ
 
 		for(String name : al){
 			System.out.println(name);
 		}
 
 		System.out.println();
-		//»èÁ¦
-		al.remove("È«±æµ¿");	//ÇØ´ç °´Ã¼(¿ä¼Ò) 
+		//ì‚­ì œ
+		al.remove("í™ê¸¸ë™");	//í•´ë‹¹ ê°ì²´(ìš”ì†Œ) 
 
 		for(String name : al){
 			System.out.println(name);

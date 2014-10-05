@@ -1,6 +1,6 @@
-/* ¸Ş¼Òµå¿¡ Á¦³×¸¯ Àû¿ë
-¸Ş¼Òµå¿¡ Á¦³×¸¯ Àû¿ë
-Á¦³×¸¯Àº ¸Ş¼Òµå¿¡ Àû¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. 
+/* ë©”ì†Œë“œì— ì œë„¤ë¦­ ì ìš©
+ë©”ì†Œë“œì— ì œë„¤ë¦­ ì ìš©
+ì œë„¤ë¦­ì€ ë©”ì†Œë“œì— ì ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. 
 
 */
 package kr.studyjava.generic07;
@@ -10,7 +10,7 @@ class EmployeeInfo{
     EmployeeInfo(int position){ this.position = position; }
 }
 
-//Å¬·¡½º ¾È¿¡¼­ »ç¿ëÇÏ´Â Á¦³×¸¯
+//í´ë˜ìŠ¤ ì•ˆì—ì„œ ì‚¬ìš©í•˜ëŠ” ì œë„¤ë¦­
 class Person<T, S>{
     public T info;
     public S id;
@@ -19,7 +19,7 @@ class Person<T, S>{
         this.id = id;
     }
     
-    //ÇÔ¼ö¿¡¼­ »ç¿ëÇÏ´Â Á¦³×¸¯
+    //í•¨ìˆ˜ì—ì„œ ì‚¬ìš©í•˜ëŠ” ì œë„¤ë¦­
     public <U> void printData(U info){
         System.out.println(info);
     }
@@ -30,9 +30,9 @@ public class GenericEx01 {
         Integer id = new Integer(20);
         Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(ei, id);
 
-        //ÇÔ¼öÀÇ Á¦³×¸¯ »ç¿ë
+        //í•¨ìˆ˜ì˜ ì œë„¤ë¦­ ì‚¬ìš©
         p1.<EmployeeInfo>printData(ei);
-        //Á¦³Ø¸¯ »ı·«½Ã e µé¾î¿À´Â µ¥ÀÌÅÍ Å¸ÀÔÀ¸·Î Á¦³×¸¯ Å¸ÀÔÀÌ ÀÚµ¿À¸·Î °áÁ¤ µË´Ï´Ù.
+        //ì œë„¥ë¦­ ìƒëµì‹œ e ë“¤ì–´ì˜¤ëŠ” ë°ì´í„° íƒ€ì…ìœ¼ë¡œ ì œë„¤ë¦­ íƒ€ì…ì´ ìë™ìœ¼ë¡œ ê²°ì • ë©ë‹ˆë‹¤.
         p1.printData(ei);
     }
 }

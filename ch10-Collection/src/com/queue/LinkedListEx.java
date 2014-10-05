@@ -2,8 +2,8 @@
  *   
  * 
  * -------------------------
- * Queue±¸Á¶ (FIFOÈ®ÀÎ)
- * 'µµ·Î'¿¡¼­ 'Â÷'°¡ ¿òÁ÷ÀÎ´Â °Í°ú °°À½
+ * Queueêµ¬ì¡° (FIFOí™•ì¸)
+ * 'ë„ë¡œ'ì—ì„œ 'ì°¨'ê°€ ì›€ì§ì¸ëŠ” ê²ƒê³¼ ê°™ìŒ
  * 
  */
 
@@ -15,20 +15,20 @@ public class LinkedListEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] arr = {"Àåºñ","³ªÆÈ²É","¹«±ÃÈ­","¹éÇÕ","¸ñ·Ã","°³³ª¸®", "ÇÒ¹Ì²É"};
+		String[] arr = {"ì¥ë¹„","ë‚˜íŒ”ê½ƒ","ë¬´ê¶í™”","ë°±í•©","ëª©ë ¨","ê°œë‚˜ë¦¬", "í• ë¯¸ê½ƒ"};
 		
-		//Queue »ı¼º
+		//Queue ìƒì„±
 		LinkedList<String> stk = new LinkedList<String>();
 		
-		//Queue¿¡ arrÀÇ µ¥ÀÌÅÍ »ğÀÔ
+		//Queueì— arrì˜ ë°ì´í„° ì‚½ì…
 		for(int i=0; i<arr.length; i++){
 			stk.offer(arr[i]);
 		}
 		System.out.println(stk);
 
-		//µ¥ÀÌÅÍ »Ì¾Æ³»±â		
-		while(stk.peek()!= null){	//peek() µ¥ÀÌÅÍ ÀÖ´ÂÁö¸¸ °Ë»ç
-			System.out.println(stk.poll());	//µ¥ÀÌÅÍ »©³»°í ÇØ´ç µ¥ÀÌÅÍ´Â »èÁ¦
+		//ë°ì´í„° ë½‘ì•„ë‚´ê¸°		
+		while(stk.peek()!= null){	//peek() ë°ì´í„° ìˆëŠ”ì§€ë§Œ ê²€ì‚¬
+			System.out.println(stk.poll());	//ë°ì´í„° ë¹¼ë‚´ê³  í•´ë‹¹ ë°ì´í„°ëŠ” ì‚­ì œ
 		}
 		
 		System.out.println("=====================");

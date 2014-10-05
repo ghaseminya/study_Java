@@ -1,11 +1,11 @@
-/* Ç¥ÁØ ÀÔÃâ·Â
+/* í‘œì¤€ ìž…ì¶œë ¥
  * 
- * ¿µ¹®ÀÔ·Â
- * ÇÑ±ÛÀÔ·Â
+ * ì˜ë¬¸ìž…ë ¥
+ * í•œê¸€ìž…ë ¥
  * ----------------------------------------------------
- * ¿µ¹®ÅØ½ºÆ®(1byte)¸¸ Ã³¸®°¡´ÉÇÏ°í 
- * 2byte(ÇÑ±Û)·Î Ã³¸®µÇ¾î¾ßÇÏ´Â ¹®ÀÚ´Â ±úÁü,
- * µû¶ó¼­ ÀÌ¹æ¹ýÀº Àú¼öÁØÀÇ ÀÔ·ÂÀ» Ã³¸®ÇÏ´Â ¹æ¹ýÀÔ´Ï´Ù.
+ * ì˜ë¬¸í…ìŠ¤íŠ¸(1byte)ë§Œ ì²˜ë¦¬ê°€ëŠ¥í•˜ê³  
+ * 2byte(í•œê¸€)ë¡œ ì²˜ë¦¬ë˜ì–´ì•¼í•˜ëŠ” ë¬¸ìžëŠ” ê¹¨ì§,
+ * ë”°ë¼ì„œ ì´ë°©ë²•ì€ ì €ìˆ˜ì¤€ì˜ ìž…ë ¥ì„ ì²˜ë¦¬í•˜ëŠ” ë°©ë²•ìž…ë‹ˆë‹¤.
  * 
  */
 
@@ -19,13 +19,13 @@ public class StandardInputEx {
 		//
 		try{
 			int input = 0;
-			//Ç¥ÁØÀÔ·Â			
-			//System.inÀ» ÀÌ¿ëÇØ InputStreamÀ» ¾ò¾î ¹Ù·Î read()¸¦ »ç¿ëÇÏ¿© ÀÔ·ÂÇÑ µ¥ÀÌÅÍ Áß
-			//1byte¸¸À» ÀÐ¾î¼­ Ã³¸®
+			//í‘œì¤€ìž…ë ¥			
+			//System.inì„ ì´ìš©í•´ InputStreamì„ ì–»ì–´ ë°”ë¡œ read()ë¥¼ ì‚¬ìš©í•˜ì—¬ ìž…ë ¥í•œ ë°ì´í„° ì¤‘
+			//1byteë§Œì„ ì½ì–´ì„œ ì²˜ë¦¬
 			while( (input=System.in.read()) != -1){
-				// byte·Î Ã³¸®µÇ±â ¶§¹®¿¡ Ãâ·ÂÀ» À§ÇØ¼­´Â (char)·Î Çüº¯È¯ÇØÁÖ¾î¾ß ÇÕ´Ï´Ù.
-				//abcd¿ì¸®³ª¶ó¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¸é 1byte¸¸À» ÀÐ±â¶§¹®¿¡ a¹®ÀÚ¸¦ ¾Æ½ºÅ° ÄÚµå°ªÀÎ 97°ªÀ» Ãâ·ÂÇÏ°í
-				//(char)Çüº¯È¯ÇÏ¿©¾ß Á¤»óÀûÀÎ ¹®ÀÚ¸¦ È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.
+				// byteë¡œ ì²˜ë¦¬ë˜ê¸° ë•Œë¬¸ì— ì¶œë ¥ì„ ìœ„í•´ì„œëŠ” (char)ë¡œ í˜•ë³€í™˜í•´ì£¼ì–´ì•¼ í•©ë‹ˆë‹¤.
+				//abcdìš°ë¦¬ë‚˜ë¼ë¬¸ìžë¥¼ ìž…ë ¥í•˜ë©´ 1byteë§Œì„ ì½ê¸°ë•Œë¬¸ì— aë¬¸ìžë¥¼ ì•„ìŠ¤í‚¤ ì½”ë“œê°’ì¸ 97ê°’ì„ ì¶œë ¥í•˜ê³ 
+				//(char)í˜•ë³€í™˜í•˜ì—¬ì•¼ ì •ìƒì ì¸ ë¬¸ìžë¥¼ í™•ì¸í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 				System.out.println("input: " + input + ",(char)input: " + (char)input);
 			}
 		}catch(IOException e){

@@ -1,10 +1,10 @@
 /* FileReader
  * 
- * file.txt¿¡ ÇÑ±Û°ú ¿µ¹®À¸·ÎµÈ ³»¿ëÀ» ÀÔ·Â 
- * ÆÄÀÏ¸íÀ» ÀÔ·Â¹Ş¾Æ FileReader °´Ã¼ »ı¼º
- * ÆÄÀÏ·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ ÇÑ ¹®ÀÚ¾¿ ÀĞ¾îµé¿© À¯´ÏÄÚµå·Î ¹İÈ¯
- * À¯´ÏÄÚµå¸¦ char·Î Ãâ·Â
- * ÀÚ¿ø °ü¸® 
+ * file.txtì— í•œê¸€ê³¼ ì˜ë¬¸ìœ¼ë¡œëœ ë‚´ìš©ì„ ì…ë ¥ 
+ * íŒŒì¼ëª…ì„ ì…ë ¥ë°›ì•„ FileReader ê°ì²´ ìƒì„±
+ * íŒŒì¼ë¡œë¶€í„° ë°ì´í„°ë¥¼ í•œ ë¬¸ìì”© ì½ì–´ë“¤ì—¬ ìœ ë‹ˆì½”ë“œë¡œ ë°˜í™˜
+ * ìœ ë‹ˆì½”ë“œë¥¼ charë¡œ ì¶œë ¥
+ * ìì› ê´€ë¦¬ 
  */
 
 package com.reader;
@@ -20,10 +20,10 @@ public class FileReaderEx {
 		int readChar;
 		
 		try{
-			//ÆÄÀÏ¸íÀ» ÀÔ·Â¹Ş¾Æ FileReader °´Ã¼ »ı¼º
+			//íŒŒì¼ëª…ì„ ì…ë ¥ë°›ì•„ FileReader ê°ì²´ ìƒì„±
 			fr = new FileReader("file.txt");
 			
-			//ÆÄÀÏ·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ ÇÑ ¹®ÀÚ¾¿ ÀĞ¾îµé¿© À¯´ÏÄÚµå·Î ¹İÈ¯
+			//íŒŒì¼ë¡œë¶€í„° ë°ì´í„°ë¥¼ í•œ ë¬¸ìì”© ì½ì–´ë“¤ì—¬ ìœ ë‹ˆì½”ë“œë¡œ ë°˜í™˜
 			while( (readChar=fr.read()) != -1){
 				System.out.print( (char)readChar );
 			}			
@@ -31,7 +31,7 @@ public class FileReaderEx {
 			e.printStackTrace();			
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//ÀÚ¿ø°ü¸®
+		}finally{	//ìì›ê´€ë¦¬
 			if( fr != null) { try{fr.close(); }catch(IOException e){ e.printStackTrace();} }			
 		}
 	}

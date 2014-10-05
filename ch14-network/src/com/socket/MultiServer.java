@@ -1,4 +1,4 @@
-/* Chatting ÇÁ·Î±×·¥ - MultiServer
+/* Chatting í”„ë¡œê·¸ë¨ - MultiServer
  * 
  *  MultiClient
  *  MultiClientThread
@@ -6,8 +6,8 @@
  *  MultiServerThread
  * 
  * ------------------------------------------------------------------
- * ¸ğµç Å¬¶óÀÌ¾ğÆ®ÀÇ TCP¿äÃ»À» ¹Ş¾Æ ¼ÒÄÏ °´Ã¼¸¦ »ı¼ºÇÑ ÈÄ ¼ÒÄÏÀ» À¯ÁöÇÏ±â À§ÇÑ ½º·¹µå¸¦ »ı¼ºÇÏ°í
- * ÀÌ ½º·¹µå¸¦ ÀúÀåÇÒ Collection(ArrayList)À» »ı¼ºÇÏ´Â Å¬·¡½º
+ * ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì˜ TCPìš”ì²­ì„ ë°›ì•„ ì†Œì¼“ ê°ì²´ë¥¼ ìƒì„±í•œ í›„ ì†Œì¼“ì„ ìœ ì§€í•˜ê¸° ìœ„í•œ ìŠ¤ë ˆë“œë¥¼ ìƒì„±í•˜ê³ 
+ * ì´ ìŠ¤ë ˆë“œë¥¼ ì €ì¥í•  Collection(ArrayList)ì„ ìƒì„±í•˜ëŠ” í´ë˜ìŠ¤
  */
 
 package com.socket;
@@ -31,12 +31,12 @@ public class MultiServer {
 			mst = new MultiServerThread(this);
 			//
 			list.add(mst);
-			//½º·¹µå »ı¼º
+			//ìŠ¤ë ˆë“œ ìƒì„±
 			Thread t = new Thread(mst);
 			t.start();
 		}
 	}
-	//MultiServerThreadÅ¸ÀÔÀÇ Arraylist ¹İÈ¯
+	//MultiServerThreadíƒ€ì…ì˜ Arraylist ë°˜í™˜
 	public ArrayList<MultiServerThread> getList(){
 		return list;
 	}

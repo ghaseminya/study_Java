@@ -1,15 +1,15 @@
-/* Graphic - paint()·Î ´Ù¾çÇÑ µµÇü±×¸®±â
+/* Graphic - paint()ë¡œ ë‹¤ì–‘í•œ ë„í˜•ê·¸ë¦¬ê¸°
  *  
- * x¹öÆ° Å¬¸¯½Ã Á¾·áÃ³¸® - ÀÍ¸í Å¬·¡½º ÀÌ¿ë
- * Frame À§Ä¡, ³ÐÀÌ, ³ôÀÌ ¼³Á¤
- * Frame ³ëÃâ¿©ºÎ ¼³Á¤
- * paint·Î ±×¸²À» ±×¸±¼ö ÀÖ´Â °ø°£À» ¸¸µé°í Graphics¸¦ ÅëÇØ ±×¸²À» ±×¸³´Ï´Ù
+ * xë²„íŠ¼ í´ë¦­ì‹œ ì¢…ë£Œì²˜ë¦¬ - ìµëª… í´ëž˜ìŠ¤ ì´ìš©
+ * Frame ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
+ * Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
+ * paintë¡œ ê·¸ë¦¼ì„ ê·¸ë¦´ìˆ˜ ìžˆëŠ” ê³µê°„ì„ ë§Œë“¤ê³  Graphicsë¥¼ í†µí•´ ê·¸ë¦¼ì„ ê·¸ë¦½ë‹ˆë‹¤
  * 
  * 
  * 
  * ------------------------------------------------------------------
- * ±×¸²À» ±×¸±¼ö ÀÖ´Â Æ¯º°ÇÑ °ø°£ÀÖ¾î¾ß ÇÏ´Âµ¥ 
- * paint( )¸Þ¼Òµå·Î ±× °ø°£À» ¸¸µé¾î ÁÖ°í Graphics°´Ã¼¸¦ ÅëÇØ ±×¸²À» ±×¸³´Ï´Ù.
+ * ê·¸ë¦¼ì„ ê·¸ë¦´ìˆ˜ ìžˆëŠ” íŠ¹ë³„í•œ ê³µê°„ìžˆì–´ì•¼ í•˜ëŠ”ë° 
+ * paint( )ë©”ì†Œë“œë¡œ ê·¸ ê³µê°„ì„ ë§Œë“¤ì–´ ì£¼ê³  Graphicsê°ì²´ë¥¼ í†µí•´ ê·¸ë¦¼ì„ ê·¸ë¦½ë‹ˆë‹¤.
  * 
  * 
  * 
@@ -31,10 +31,10 @@ public class GraphicEx01 extends Frame {
 	Graphics g;	
 	
 	public GraphicEx01(){
-		//Frame Å¸ÀÌÆ² ¼³Á¤
+		//Frame íƒ€ì´í‹€ ì„¤ì •
 		super("Graphic Test");
 		
-		//x¹öÆ° Å¬¸¯½Ã Á¾·áÃ³¸® - ÀÍ¸í Å¬·¡½º ÀÌ¿ë
+		//xë²„íŠ¼ í´ë¦­ì‹œ ì¢…ë£Œì²˜ë¦¬ - ìµëª… í´ëž˜ìŠ¤ ì´ìš©
 		addWindowListener(new WindowAdapter(){
 			@Override
 			public void windowClosing(WindowEvent e){
@@ -42,49 +42,49 @@ public class GraphicEx01 extends Frame {
 			}
 		});	
 		
-		//Frame À§Ä¡, ³ÐÀÌ, ³ôÀÌ ¼³Á¤
+		//Frame ìœ„ì¹˜, ë„“ì´, ë†’ì´ ì„¤ì •
 		setBounds(100, 100, 400, 300);
 		
-		//Frame ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);		
 	}
-	//paint·Î ±×¸²À» ±×¸±¼ö ÀÖ´Â °ø°£À» ¸¸µé°í Graphics¸¦ ÅëÇØ ±×¸²À» ±×¸³´Ï´Ù.
+	//paintë¡œ ê·¸ë¦¼ì„ ê·¸ë¦´ìˆ˜ ìžˆëŠ” ê³µê°„ì„ ë§Œë“¤ê³  Graphicsë¥¼ í†µí•´ ê·¸ë¦¼ì„ ê·¸ë¦½ë‹ˆë‹¤.
 	@Override
 	public void paint(Graphics g){
-		//±ÛÀÚ
-		//±ÛÀÚÀÇ ±Û²Ã, ½ºÅ¸ÀÏ, Å©±â ÁöÁ¤
+		//ê¸€ìž
+		//ê¸€ìžì˜ ê¸€ê¼´, ìŠ¤íƒ€ì¼, í¬ê¸° ì§€ì •
 		g.setFont(new Font("Serif", Font.PLAIN, 15));
-		//Ç¥½ÃÇÒ ±ÛÀÚ, À§Ä¡(x, y)
-		g.drawString("Graphics¸¦ ÀÌ¿ëÇØ¼­ ±×¸²À» ±×¸³´Ï´Ù", 10, 50);
+		//í‘œì‹œí•  ê¸€ìž, ìœ„ì¹˜(x, y)
+		g.drawString("Graphicsë¥¼ ì´ìš©í•´ì„œ ê·¸ë¦¼ì„ ê·¸ë¦½ë‹ˆë‹¤", 10, 50);
 		
-		//¿ø
-		//x, y, width, height ¿ø ±×¸®±â
+		//ì›
+		//x, y, width, height ì› ê·¸ë¦¬ê¸°
 		g.drawOval(50, 60, 50, 50);
-		//»ö±òÀ» ÁöÁ¤
+		//ìƒ‰ê¹”ì„ ì§€ì •
 		g.setColor(Color.BLUE);
-		//ÁöÁ¤µÈ »ö±ò·Î ¿øÀ» Ã¤¿ó´Ï´Ù.
+		//ì§€ì •ëœ ìƒ‰ê¹”ë¡œ ì›ì„ ì±„ì›ë‹ˆë‹¤.
 		g.fillOval(100, 100, 50, 50);
 		
-		//¼±
+		//ì„ 
 		g.setColor(Color.RED);
-		//½ÃÀÛxÁÂÇ¥, ½ÃÀÛyÁÂ·á, Á¾·áxÁÂÇ¥, Á¾·áyÁÂÇ¥
+		//ì‹œìž‘xì¢Œí‘œ, ì‹œìž‘yì¢Œë£Œ, ì¢…ë£Œxì¢Œí‘œ, ì¢…ë£Œyì¢Œí‘œ
 		g.drawLine(300, 100, 50, 50);
 		
-		//»ç°¢Çü
+		//ì‚¬ê°í˜•
 		g.setColor(Color.CYAN);
 		g.fillRect(160, 100, 50, 50);
-		//x, y, width, height, ¸ð¼­¸®¸¦ µÕ±Û°Ô ÇÒ ³ÐÀÌ¿Í ³ôÀÌ
+		//x, y, width, height, ëª¨ì„œë¦¬ë¥¼ ë‘¥ê¸€ê²Œ í•  ë„“ì´ì™€ ë†’ì´
 		//g.fillRoundRect(220, 100, 120, 80, 30, 30);
-		g.fillRoundRect(220, 100, 120, 80, 100, 100);	//Àû´çÇÑ ¶ó¿îµåÀÇ »çÀÛÇü ±×¸®±â
+		g.fillRoundRect(220, 100, 120, 80, 100, 100);	//ì ë‹¹í•œ ë¼ìš´ë“œì˜ ì‚¬ìž‘í˜• ê·¸ë¦¬ê¸°
 		
-		//´Ù°¢Çü
+		//ë‹¤ê°í˜•
 		g.setColor(Color.MAGENTA);
-		//²ÀÁöÁ¡ xÁÂÇ¥ ¹è¿­, ²ÀÁöÁ¡yÁÂÇ¥ ¹è¿­, ²ÀÁöÁ¡ °¹¼ö
+		//ê¼­ì§€ì  xì¢Œí‘œ ë°°ì—´, ê¼­ì§€ì yì¢Œí‘œ ë°°ì—´, ê¼­ì§€ì  ê°¯ìˆ˜
 		g.fillPolygon(new int[]{50,100,150,200}, new int[]{250,200,200,250}, 4);
 						
-		//¿øÈ£
+		//ì›í˜¸
 		g.setColor(Color.PINK);
-		//x, y, width, height, ½ÃÀÛ°¢µµ, ³¡°¢µµ
+		//x, y, width, height, ì‹œìž‘ê°ë„, ëê°ë„
 		//g.fillArc(250, 200, 100, 100, 0, 120);
 		g.fillArc(250, 200, 100, 100, 0, 240);
 		

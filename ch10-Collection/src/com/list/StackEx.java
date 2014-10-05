@@ -3,13 +3,13 @@
  * push()
  * pop()
  *  
- * String °´Ã¼ »ı¼º
- * °´Ã¼ÀÇ ¿ä¼Ò¸¦ ½ºÅÃ¿¡ ³Ö±â
- * ½ºÅÃÀÇ ¸¶Áö¸·¿ä¼Ò°¡ ¸ÕÀú popµÇ¸é¼­ ²¨Áö´Â °Í È®ÀÎ
+ * String ê°ì²´ ìƒì„±
+ * ê°ì²´ì˜ ìš”ì†Œë¥¼ ìŠ¤íƒì— ë„£ê¸°
+ * ìŠ¤íƒì˜ ë§ˆì§€ë§‰ìš”ì†Œê°€ ë¨¼ì € popë˜ë©´ì„œ êº¼ì§€ëŠ” ê²ƒ í™•ì¸
  * 
  * ---------------
- * ÈÄÀÔ¼±Ãâ È®ÀÎ
- * ¼¼¿öÁ® ÀÖ´Â ÆÄÀÌÇÁ¿Í °°À½
+ * í›„ì…ì„ ì¶œ í™•ì¸
+ * ì„¸ì›Œì ¸ ìˆëŠ” íŒŒì´í”„ì™€ ê°™ìŒ
  */
 
 package com.list;
@@ -21,10 +21,9 @@ import javax.print.DocFlavor.STRING;
 public class StackEx {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String[] arr = {"¼­¿ï","´ëÀü","´ë±¸","ºÎ»ê","Âï°í","±¤ÁÖ", "ÀÎÃµ"};
+		String[] arr = {"ì„œìš¸","ëŒ€ì „","ëŒ€êµ¬","ë¶€ì‚°","ì°ê³ ","ê´‘ì£¼", "ì¸ì²œ"};
 		
-		//Stringµ¥ÀÌÅÍ¸¦ Stack¿¡ ³Ö±â
+		//Stringë°ì´í„°ë¥¼ Stackì— ë„£ê¸°
 		Stack<String> stk = new Stack<String>();
 		
 		for(int i =0; i< arr.length; i++){
@@ -33,13 +32,13 @@ public class StackEx {
 		System.out.println(stk);
 		
 		System.out.println("===================================");
-		//ÇöÀç StackÀÌ ºñ¾îÀÖ´ÂÁö È®ÀÎ
+		//í˜„ì¬ Stackì´ ë¹„ì–´ìˆëŠ”ì§€ í™•ì¸
 		while(!stk.isEmpty()){
-			//ÇöÀç Stack¿¡ ÀúÀåµÈ °´Ã¼¸¦ ²¨³» ¿È
+			//í˜„ì¬ Stackì— ì €ì¥ëœ ê°ì²´ë¥¼ êº¼ë‚´ ì˜´
 			System.out.println(stk.pop());
 		}
 		
-		//ÇöÀç Stack¿¡ °´Ã¼°¡ ÀúÀåµÇ¾î ÀÖ´ÂÁö È®ÀÎ
+		//í˜„ì¬ Stackì— ê°ì²´ê°€ ì €ì¥ë˜ì–´ ìˆëŠ”ì§€ í™•ì¸
 		System.out.println(stk);
 	}
 }

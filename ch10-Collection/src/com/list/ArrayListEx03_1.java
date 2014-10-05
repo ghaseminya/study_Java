@@ -1,12 +1,12 @@
-/* ArrayList - Á¦³×¸¯ Ç¥Çö
+/* ArrayList - ì œë„¤ë¦­ í‘œí˜„
  * 
- * Á¦³×¸¯ Ç¥Çö:
- * ÄÃ·º¼Ç ÇÁ·¹ÀÓ¿öÅ© °è¿­ÀÇ Å¬·¡½ºµéÀº °´Ã¼¸¦ ÀúÀåÇÒ ¶§ ObjectÅ¸ÀÔÀ¸·Î ÀúÀåÇÔ.
- * ±×·¡¼­, ¿©·¯ Å¸ÀÔÀÇ µ¥ÀÌÅÍ¸¦ ÀúÀå ÇÒ ¼ö ÀÖ½À´Ï´Ù.
- * ÀÌ·²°æ¿ì, ÀúÀåµÈ µ¥ÀÌÅÍ¸¦ ´ÜÀÏÇÑ Å¸ÀÔÀ¸·Î ´Ù¿îÄ³½ºÆÃÀÌ ºÒ°¡´ÉÇÏ±â ¶§¹®¿¡ ÀÛ¾÷ÀÌ ºÒÆíÇÔ
- * ÀÌ·± ¹®Á¦Á¡À» ÇØ°áÇÏ±â À§ÇØ °´Ã¼ »ý¼º½Ã Å¸ÀÔÀ» ÁöÁ¤ÇÏ´Â ¹æ¹ýÀ» µµÀÔÇÏ¿´½À´Ï´Ù.
- * Á¦³×¸¯ Ç¥ÇöÀ» »ç¿ëÇÏ¸é ÁöÁ¤ÇÑ Å¸ÀÔÀ¸·Î °´Ã¼¸¦ ÀúÀå ¹×  °ü¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù. 
- * JDK 5.0ÀÌ»óºÎÅÍ»ç¿ë°¡´É
+ * ì œë„¤ë¦­ í‘œí˜„:
+ * ì»¬ë ‰ì…˜ í”„ë ˆìž„ì›Œí¬ ê³„ì—´ì˜ í´ëž˜ìŠ¤ë“¤ì€ ê°ì²´ë¥¼ ì €ìž¥í•  ë•Œ Objectíƒ€ìž…ìœ¼ë¡œ ì €ìž¥í•¨.
+ * ê·¸ëž˜ì„œ, ì—¬ëŸ¬ íƒ€ìž…ì˜ ë°ì´í„°ë¥¼ ì €ìž¥ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ * ì´ëŸ´ê²½ìš°, ì €ìž¥ëœ ë°ì´í„°ë¥¼ ë‹¨ì¼í•œ íƒ€ìž…ìœ¼ë¡œ ë‹¤ìš´ìºìŠ¤íŒ…ì´ ë¶ˆê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì— ìž‘ì—…ì´ ë¶ˆíŽ¸í•¨
+ * ì´ëŸ° ë¬¸ì œì ì„ í•´ê²°í•˜ê¸° ìœ„í•´ ê°ì²´ ìƒì„±ì‹œ íƒ€ìž…ì„ ì§€ì •í•˜ëŠ” ë°©ë²•ì„ ë„ìž…í•˜ì˜€ìŠµë‹ˆë‹¤.
+ * ì œë„¤ë¦­ í‘œí˜„ì„ ì‚¬ìš©í•˜ë©´ ì§€ì •í•œ íƒ€ìž…ìœ¼ë¡œ ê°ì²´ë¥¼ ì €ìž¥ ë°  ê´€ë¦¬í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. 
+ * JDK 5.0ì´ìƒë¶€í„°ì‚¬ìš©ê°€ëŠ¥
  */
 
 package com.list;
@@ -17,24 +17,24 @@ public class ArrayListEx03_1 {
 
 	public static void main(String[] args) {		
 
-		//Á¦³×¸¯ Ç¥ÇöÀ¸·Î ÇÏ³ªÀÇ Å¸ÀÔ ÁöÁ¤
+		//ì œë„¤ë¦­ í‘œí˜„ìœ¼ë¡œ í•˜ë‚˜ì˜ íƒ€ìž… ì§€ì •
 		ArrayList<String> al = new ArrayList();
-		al.add("¹èÆ®¸Ç");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("È«±æµ¿");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("ÀÏÁö¸Å");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("°­ÇÏ´Ã");	// String -> Object ¾÷Ä³½ºÆÃ
+		al.add("ë°°íŠ¸ë§¨");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("í™ê¸¸ë™");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ì¼ì§€ë§¤");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ê°•í•˜ëŠ˜");	// String -> Object ì—…ìºìŠ¤íŒ…
 		
-		//Á¦³×¸¯ Ç¥ÇöÀ» ÅëÇØ StringÅ¸ÀÔÀÇ °´Ã¼¸¸ ÀúÀåÇÏ°Ô ¸í½ÃÇØ¼­ ´Ù¸¥ Å¸ÀÔÀÇ °´Ã¼´Â ÀúÀå ºÒ°¡´É
-		//ÄÄÆÄÀÏ½Ã¿¡ °É·¯Áü
+		//ì œë„¤ë¦­ í‘œí˜„ì„ í†µí•´ Stringíƒ€ìž…ì˜ ê°ì²´ë§Œ ì €ìž¥í•˜ê²Œ ëª…ì‹œí•´ì„œ ë‹¤ë¥¸ íƒ€ìž…ì˜ ê°ì²´ëŠ” ì €ìž¥ ë¶ˆê°€ëŠ¥
+		//ì»´íŒŒì¼ì‹œì— ê±¸ëŸ¬ì§
 		//al.add(new Integer(100));	//ERROR: The method add(String) in the type ArrayList<String> is not applicable for the arguments (Integer)
-		al.add("¾ÆÀÌ¾ð¸Ç");		
+		al.add("ì•„ì´ì–¸ë§¨");		
 		
 		for(int i=0; i<al.size(); i++){
 			
-			//Çüº¯È¯ ºÒÇÊ¿ä
+			//í˜•ë³€í™˜ ë¶ˆí•„ìš”
 			String name = al.get(i);
 			
-			//Ãâ·Â
+			//ì¶œë ¥
 			System.out.println(name);
 		}
 	}

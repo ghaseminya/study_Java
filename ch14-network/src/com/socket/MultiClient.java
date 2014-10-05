@@ -1,4 +1,4 @@
-/* Chatting ÇÁ·Î±×·¥ - MultiClient
+/* Chatting í”„ë¡œê·¸ë¨ - MultiClient
  * 
  *  MultiClient
  *  MultiClientThread
@@ -6,12 +6,12 @@
  *  MultiServerThread
  * 
  * -----------------------------------------
- * SwingÀ¸·Î ±¸ÇöµÈ Å¬¶óÀÌ¾ğÆ® Å¬·¡½º.
- * ÀÌ Å¬·¡½º¿¡¼­´Â ¸Ş½ÃÁö¸¦ º¸³¾ ¶§´Â ÀÌº¥Æ®¿¡¼­ Ã³¸®Çß°í,
- * ´Ù¸¥ Å¬¶óÀÌ¾ğÆ®°¡ º¸³½ ¸Ş½ÃÁö¸¦ ¹Ş±â À§ÇØ MultiClientThread°´Ã¼¸¦ »ı¼ºÇÏ¿´½À´Ï´Ù.
- * UI µğÀÚÀÎ
+ * Swingìœ¼ë¡œ êµ¬í˜„ëœ í´ë¼ì´ì–¸íŠ¸ í´ë˜ìŠ¤.
+ * ì´ í´ë˜ìŠ¤ì—ì„œëŠ” ë©”ì‹œì§€ë¥¼ ë³´ë‚¼ ë•ŒëŠ” ì´ë²¤íŠ¸ì—ì„œ ì²˜ë¦¬í–ˆê³ ,
+ * ë‹¤ë¥¸ í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚¸ ë©”ì‹œì§€ë¥¼ ë°›ê¸° ìœ„í•´ MultiClientThreadê°ì²´ë¥¼ ìƒì„±í•˜ì˜€ìŠµë‹ˆë‹¤.
+ * UI ë””ìì¸
  * 
- * ID#¸Ş½ÃÁö
+ * ID#ë©”ì‹œì§€
  * 
  */
 
@@ -42,7 +42,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JOptionPane;
 
 public class MultiClient extends JFrame implements ActionListener {
-	//º¯¼ö ¼±¾ğ
+	//ë³€ìˆ˜ ì„ ì–¸
 	private Socket socket;
 	private ObjectInputStream ois;
 	private ObjectOutputStream oos;
@@ -55,24 +55,24 @@ public class MultiClient extends JFrame implements ActionListener {
 	private JButton jbtn;
 	
 	public MultiClient(String ip, String id){
-		//Á¦¸ñ »ı¼º
+		//ì œëª© ìƒì„±
 		super("Multi Chatting");
 		
 		this.ip = ip;
 		this.id = id;
 		
-		//ÄÄÆ÷³ÍÆ® »ı¼º
+		//ì»´í¬ë„ŒíŠ¸ ìƒì„±
 		jtf = new JTextField(30);
 		jta = new JTextArea("", 10, 50);
 		jlb1 = new JLabel("User ID : [" + id +"]");
 		jlb2 = new JLabel("IP : " + ip );
-		jbtn = new JButton("Á¾·á");
+		jbtn = new JButton("ì¢…ë£Œ");
 		jp1 = new JPanel();
 		jp2 = new JPanel();
 		
-		//TextAreaÀÇ ¹è°æ»ö ÁöÁ¤
+		//TextAreaì˜ ë°°ê²½ìƒ‰ ì§€ì •
 		jta.setBackground(Color.ORANGE);
-		//¸í½ÃÀûÀ¸·Î BoraderLayout»ç¿ëÇÏµµ·Ï ¸í½Ã
+		//ëª…ì‹œì ìœ¼ë¡œ BoraderLayoutì‚¬ìš©í•˜ë„ë¡ ëª…ì‹œ
 		jp1.setLayout(new BorderLayout());
 		jp2.setLayout(new BorderLayout());		
 		
@@ -81,87 +81,87 @@ public class MultiClient extends JFrame implements ActionListener {
 		jp2.add(jlb1, BorderLayout.CENTER);
 		jp2.add(jlb2, BorderLayout.EAST);
 		
-		//JFrame¿¡ ¿¬°á
+		//JFrameì— ì—°ê²°
 		add(jp1, BorderLayout.SOUTH);
 		add(jp2, BorderLayout.NORTH);
 		
-		//TextArea¿¡ ½ºÅ©·Ñ Ã³¸®
+		//TextAreaì— ìŠ¤í¬ë¡¤ ì²˜ë¦¬
 		JScrollPane jsp = new JScrollPane(jta, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-		//JFrame¿¡ µî·Ï
+		//JFrameì— ë“±ë¡
 		add(jsp, BorderLayout.CENTER);
-		//ÆíÁı ºÒ°¡´É
+		//í¸ì§‘ ë¶ˆê°€ëŠ¥
 		jta.setEditable(false);
 		
-		//ÀÌº¥Æ® ¼Ò½º¿Í ÀÌº¥Æ®¸®½º³Ê ¿¬°á
+		//ì´ë²¤íŠ¸ ì†ŒìŠ¤ì™€ ì´ë²¤íŠ¸ë¦¬ìŠ¤ë„ˆ ì—°ê²°
 		jtf.addActionListener(this);
 		jbtn.addActionListener(this);		
-		//Á¾·á½Ã ¸Ş½ÃÁö Ã³¸®¸¦ ÇÏ±â À§ÇÑ Ã³¸®ÇÏ±â À§ÇÑ ÀÍ¸í ³»ºÎ Å¬·¡½º
+		//ì¢…ë£Œì‹œ ë©”ì‹œì§€ ì²˜ë¦¬ë¥¼ í•˜ê¸° ìœ„í•œ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ ìµëª… ë‚´ë¶€ í´ë˜ìŠ¤
 		addWindowListener(new WindowAdapter() {
-			//ÀÌº¥Æ® ÇÚµé·¯ ±¸Çö
+			//ì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ êµ¬í˜„
 			@Override
 			public void windowClosing(WindowEvent e){
 				
 				try{
-					//¼­¹ö¿¡ Á¾·á¸Ş½ÃÁö Àü´Ş
+					//ì„œë²„ì— ì¢…ë£Œë©”ì‹œì§€ ì „ë‹¬
 					oos.writeObject(MultiClient.this.id + "#exit");
 				}catch(IOException ie){
 					ie.printStackTrace();					
 				}
-				//ÇÁ·Î±×·¥ Á¾·á
+				//í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 				System.exit(0);
 			}			
 			@Override
 			public void windowOpened(WindowEvent e){
-				//FrameÀÌ µğ½ºÇÃ·¹ÀÌµÇ¸é Æ÷Ä¿½º¸¦ JTextField¿¡ °¡Á®°¨
+				//Frameì´ ë””ìŠ¤í”Œë ˆì´ë˜ë©´ í¬ì»¤ìŠ¤ë¥¼ JTextFieldì— ê°€ì ¸ê°
 				jtf.requestFocus();
 			}
 		});		
 		 		
-		//½ºÅ©¸° Å©±â ÀĞ¾î¿À±â(³ĞÀÌ¿Í ³ôÀÌ)
+		//ìŠ¤í¬ë¦° í¬ê¸° ì½ì–´ì˜¤ê¸°(ë„“ì´ì™€ ë†’ì´)
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension d = tk.getScreenSize();
 		int screenWidth = d.width;
 		int screenHeight = d.height;		
-		// ¸ğ´ÏÅÍ Á¤Áß¾Ó¿¡ ¹èÄ¡
+		// ëª¨ë‹ˆí„° ì •ì¤‘ì•™ì— ë°°ì¹˜
 		setLocation( (screenWidth-getWidth())/2, (screenHeight-getHeight())/2);
 		
-		//Å©±â ÁöÁ¤ÇÏÁö ¾ÊÀ» °æ¿ì ÀÚ¿¬½º·´°Ô »çÀÌÁî ÁöÁ¤µÇµµ·Ï pack()
+		//í¬ê¸° ì§€ì •í•˜ì§€ ì•Šì„ ê²½ìš° ìì—°ìŠ¤ëŸ½ê²Œ ì‚¬ì´ì¦ˆ ì§€ì •ë˜ë„ë¡ pack()
 		pack();
 				
-		//FrameÀÇ »çÀÌÁî º¯°æ ºÒ°¡´É
+		//Frameì˜ ì‚¬ì´ì¦ˆ ë³€ê²½ ë¶ˆê°€ëŠ¥
 		setResizable(false);
 		
-		//Frame ³ëÃâ¿©ºÎ ¼³Á¤
+		//Frame ë…¸ì¶œì—¬ë¶€ ì„¤ì •
 		setVisible(true);		
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e){
-		//ÀÌº¥Æ® ¹ß»ı °´Ã¼ ±¸ÇÏ±â
+		//ì´ë²¤íŠ¸ ë°œìƒ ê°ì²´ êµ¬í•˜ê¸°
 		Object obj = e.getSource();
 		
-		//Á¶°Ç Ã¼Å©
+		//ì¡°ê±´ ì²´í¬
 		if( obj == jtf){
 			String msg = jtf.getText();
-			//ÀÔ·ÂÇÏÁö ¾ÊÀº °æ¿ì
+			//ì…ë ¥í•˜ì§€ ì•Šì€ ê²½ìš°
 			if(msg ==null || msg.length() ==0){
-				JOptionPane.showMessageDialog(this, "¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä", "°æ°í", JOptionPane.WARNING_MESSAGE);				
+				JOptionPane.showMessageDialog(this, "ë©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”", "ê²½ê³ ", JOptionPane.WARNING_MESSAGE);				
 			}
 			else{
-				//µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇßÀ»  °æ¿ì
+				//ë°ì´í„°ë¥¼ ì…ë ¥í–ˆì„  ê²½ìš°
 				try{
-					//µ¥ÀÌÅÍ¸¦ ¼­¹ö·Î Àü¼Û
+					//ë°ì´í„°ë¥¼ ì„œë²„ë¡œ ì „ì†¡
 					oos.writeObject(id + "#" + msg);
 					
 				}catch(IOException ie){
 					ie.printStackTrace();					
 				}
-				//JTextField¸¦ ÃÊ±âÈ­
+				//JTextFieldë¥¼ ì´ˆê¸°í™”
 				jtf.setText("");
 			}
 			
 		}else if( obj == jbtn){
-			//¼­¹ö¿¡ Á¾·á¸Ş½ÃÁö Àü´Ş
+			//ì„œë²„ì— ì¢…ë£Œë©”ì‹œì§€ ì „ë‹¬
 			try{
 				oos.writeObject(id +"#exit");
 				
@@ -171,53 +171,53 @@ public class MultiClient extends JFrame implements ActionListener {
 		}		
 	}
 	
-	//Á¾·áÃ³¸®
+	//ì¢…ë£Œì²˜ë¦¬
 	public void exit(){
 		System.exit(0);
 	}
 	
-	//ÀÔ·Â ½ºÆ®¸² ¹İÈ¯
+	//ì…ë ¥ ìŠ¤íŠ¸ë¦¼ ë°˜í™˜
 	public ObjectInputStream getOis(){
 		return ois;
 	}
 
-	//JTextArea¹İÈ¯
+	//JTextAreaë°˜í™˜
 	public JTextArea getJta(){
 		return jta;
 	}
 	
-	//ID¹İÈ¯
+	//IDë°˜í™˜
 	public String getId(){
 		return id;
 	}
 	
-	//ÃÊ±âÈ­
+	//ì´ˆê¸°í™”
 	public void init() throws IOException{
-		//¼ÒÄÏ »ı¼º, ¼­¹ö¿Í °°Àº Æ÷Æ®¹øÈ£ ¸í½Ã
+		//ì†Œì¼“ ìƒì„±, ì„œë²„ì™€ ê°™ì€ í¬íŠ¸ë²ˆí˜¸ ëª…ì‹œ
 		socket = new Socket(ip, 5000);
 		System.out.println("Connected.......");
 		
-		//ÀÔÃâ·Â °´Ã¼ »ı¼º
-		//¼­¹ö¿¡ µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÒ °´Ã¼ »ı¼º
+		//ì…ì¶œë ¥ ê°ì²´ ìƒì„±
+		//ì„œë²„ì— ë°ì´í„°ë¥¼ ì „ì†¡í•  ê°ì²´ ìƒì„±
 		oos = new ObjectOutputStream(socket.getOutputStream());		
-		//¼­¹ö·ÎºÎÅÍ Àü´Ş¹ŞÀº µ¥ÀÌÅÍ¸¦ Ã³¸®(ÀÔ·Â)ÇÒ °´Ã¼
+		//ì„œë²„ë¡œë¶€í„° ì „ë‹¬ë°›ì€ ë°ì´í„°ë¥¼ ì²˜ë¦¬(ì…ë ¥)í•  ê°ì²´
 		ois = new ObjectInputStream(socket.getInputStream());
 		
-		//µ¥ÀÌÅÍ Ã³¸®¸¦ À§ÇÑ ½º·¹µå »ı¼º
-		//½ÇÁ¦ µ¥ÀÌÅÍ Ã³¸®
+		//ë°ì´í„° ì²˜ë¦¬ë¥¼ ìœ„í•œ ìŠ¤ë ˆë“œ ìƒì„±
+		//ì‹¤ì œ ë°ì´í„° ì²˜ë¦¬
 		MultiClientThread ct = new MultiClientThread(this);
 		ct.start();
 	}
 	
 	public static void main(String[] args) {
-		// ¿¾³¯ MAC½ºÅ¸ÀÏ ÁöÁ¤
+		// ì˜›ë‚  MACìŠ¤íƒ€ì¼ ì§€ì •
 		JFrame.setDefaultLookAndFeelDecorated(true);
-		//°´Ã¼ »ı¼º, ¼­¹öIP¿Í ID
+		//ê°ì²´ ìƒì„±, ì„œë²„IPì™€ ID
 		MultiClient cc = new MultiClient("192.168.0.10", "dregon");
 		
 		
 		try{
-			//È£Ãâ
+			//í˜¸ì¶œ
 			cc.init();
 		}catch(IOException e){
 			e.printStackTrace();

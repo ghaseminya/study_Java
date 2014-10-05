@@ -1,12 +1,12 @@
-/* ±¸±¸´Ü Ãâ·ÂÈÄ ÆÄÀÏ ÀúÀå - BufferedReader, FileWriter¸¦ È°¿ëÇÏ¿©
+/* êµ¬êµ¬ë‹¨ ì¶œë ¥í›„ íŒŒì¼ ì €ìž¥ - BufferedReader, FileWriterë¥¼ í™œìš©í•˜ì—¬
  * 
  * ------------------------------------------------------------
 FileWriterGGdan
-½Ç½À:  ±¸±¸´Ü Ãâ·Â ÀúÀå
+ì‹¤ìŠµ:  êµ¬êµ¬ë‹¨ ì¶œë ¥ ì €ìž¥
 
-1)´Ü ÀÔ·Â (BufferedReader) : String -> int
-2)ÄÜ¼Ö¿¡ ±¸±¸´Ü Ãâ·Â ÈÄ
-3)ÆÄÀÏ¿¡ ÀúÀå (FileWriter)
+1)ë‹¨ ìž…ë ¥ (BufferedReader) : String -> int
+2)ì½˜ì†”ì— êµ¬êµ¬ë‹¨ ì¶œë ¥ í›„
+3)íŒŒì¼ì— ì €ìž¥ (FileWriter)
  
  */
 
@@ -20,42 +20,42 @@ import java.io.InputStreamReader;
 public class FileWriterGGdan {
 
 	public static void main(String[] args) {
-		//º¯¼ö ¼±¾ð
+		//ë³€ìˆ˜ ì„ ì–¸
 		BufferedReader br = null;		
 		FileWriter fw = null;
 		
 		String str = null;
 		String gugu = null;
 		
-		//´Ü ÀúÀå º¯¼ö
+		//ë‹¨ ì €ìž¥ ë³€ìˆ˜
 		int dan = 1;
 		
 		try{
-			//°´Ã¼ »ý¼º
+			//ê°ì²´ ìƒì„±
 			fw = new FileWriter("FileWriterGGdan.txt");
 			
-			System.out.println("´ÜÀÔ·Â >");
+			System.out.println("ë‹¨ìž…ë ¥ >");
 			br = new BufferedReader(new InputStreamReader(System.in));
 			
-			//´Ü ÀÔ·Â ¹Þ±â
+			//ë‹¨ ìž…ë ¥ ë°›ê¸°
 			str = br.readLine();			
 			
 			dan = Integer.parseInt(str);
 			
-			//±¸±¸´Ü Ãâ·Â
+			//êµ¬êµ¬ë‹¨ ì¶œë ¥
 			for(int i =1; i<=9; i++){	
 				
 				//gugu = dan + "*" +  i + "=" + (dan*i) + "\n";
 				gugu = dan + "*" +  i + "=" + (dan*i);				
 				
 				System.out.println( gugu );
-				//ÆÄÀÏ ÀúÀå				
+				//íŒŒì¼ ì €ìž¥				
 				fw.write(gugu + System.getProperty("line.separator"));
 			}			
 		}catch(IOException e){
 			e.printStackTrace();
 			
-		}finally{	//ÀÚ¿ø°ü¸® 
+		}finally{	//ìžì›ê´€ë¦¬ 
 				if( br != null){ try{br.close();} catch(IOException e){e.printStackTrace();} }
 				if( fw != null){ try{fw.close();} catch(IOException e){e.printStackTrace();} }			
 		}		

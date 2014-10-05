@@ -1,19 +1,19 @@
-/* HashMap - Å°°ª ÅëÇØ ÀÏ°ıÀûÀ¸·Î µ¥ÀÌÅÍ ±¸ÇÏ±â (Iterator ÀÎÅÍÆäÀÌ½º ÀÌ¿ë)
+/* HashMap - í‚¤ê°’ í†µí•´ ì¼ê´„ì ìœ¼ë¡œ ë°ì´í„° êµ¬í•˜ê¸° (Iterator ì¸í„°í˜ì´ìŠ¤ ì´ìš©)
  * 
  * 
- * Å°¸¦ ±¸ÇÏ±â À§ÇØ  Iterator¿¡¼­ ¸Ş¼Òµå È£ÃâÇÏ¿© µ¥ÀÌÅÍ ±¸ÇÏ±â
+ * í‚¤ë¥¼ êµ¬í•˜ê¸° ìœ„í•´  Iteratorì—ì„œ ë©”ì†Œë“œ í˜¸ì¶œí•˜ì—¬ ë°ì´í„° êµ¬í•˜ê¸°
  *
- * °´Ã¼»ı¼º
- * HashMap¿¡ µ¥ÀÌÅÍ ÀúÀå
+ * ê°ì²´ìƒì„±
+ * HashMapì— ë°ì´í„° ì €ì¥
  * 
- * ´Ü°èº° (HashMap -> Set /  Set -> Iterator) 
- * ÇÑ²¨¹ø¿¡ (HashMap -> Set -> Iterator)
+ * ë‹¨ê³„ë³„ (HashMap -> Set /  Set -> Iterator) 
+ * í•œêº¼ë²ˆì— (HashMap -> Set -> Iterator)
  * 
  * 
  * -------------------------------------
- * ³»ºÎÀûÀ¸·Î Á¤·Ä
+ * ë‚´ë¶€ì ìœ¼ë¡œ ì •ë ¬
  *  * 
- * Iterator °´Ã¼ »ı¼ºÈÄ ÀÌ °´Ã¼¿¡ µ¥ÀÌÅÍ ÀúÀå
+ * Iterator ê°ì²´ ìƒì„±í›„ ì´ ê°ì²´ì— ë°ì´í„° ì €ì¥
  */
 
 package com.map;
@@ -33,7 +33,7 @@ public class HashMapEx02 {
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
 		
 		for(int i =0; i<msg.length; i++){
-			//Map¿¡ key, value ÀúÀå
+			//Mapì— key, value ì €ì¥
 			map.put(i,  msg[i]);
 		}
 		
@@ -41,7 +41,7 @@ public class HashMapEx02 {
 		System.out.println();
 		
 		
-		/* ´Ü°èº° ¼±¾ğ°úÁ¤ 
+		/* ë‹¨ê³„ë³„ ì„ ì–¸ê³¼ì • 
 		//HashMap -> Set
 		Set<Integer> s = map.keySet();
 		//Set -> Iterator
@@ -50,7 +50,7 @@ public class HashMapEx02 {
 		//HashMap -> Set -> Iterator
 		Iterator<Integer> keys = map.keySet().iterator();		
 		
-		//key°ª ÇÑ²¨¹ø¿¡ °¡Á®¿À±â
+		//keyê°’ í•œêº¼ë²ˆì— ê°€ì ¸ì˜¤ê¸°
 		while(keys.hasNext()){
 			Integer key = keys.next();
 			System.out.println(key + ", " + map.get(key));

@@ -1,13 +1,13 @@
-/* FileOutputStream - µ¤¾î¾²±â, ÀÌ¾î¾²±â
+/* FileOutputStream - ë®ì–´ì“°ê¸°, ì´ì–´ì“°ê¸°
  * 
- * FileOutputStream °´Ã¼ »ı¼º
- * °æ·Î¿¡ ÆÄÀÏ »ı¼º
- * ¸í½ÃÇÒ µ¥ÀÌÅÍ ÀÔ·Â
- * String -> byte[] ¹è¿­ÇàÅÂ·Î º¯È¯ - getBytes()
+ * FileOutputStream ê°ì²´ ìƒì„±
+ * ê²½ë¡œì— íŒŒì¼ ìƒì„±
+ * ëª…ì‹œí•  ë°ì´í„° ì…ë ¥
+ * String -> byte[] ë°°ì—´í–‰íƒœë¡œ ë³€í™˜ - getBytes()
  * 
- * ÀÌ¾î¾²±â
+ * ì´ì–´ì“°ê¸°
  * ---------------------------------------------------
- * FileInpuStream, FileOutputStream ÇüÅÂ ¹İµå½Ã ¼÷Áö
+ * FileInpuStream, FileOutputStream í˜•íƒœ ë°˜ë“œì‹œ ìˆ™ì§€
  */
 
 package com.output;
@@ -20,31 +20,31 @@ public class FileOutputStreamEx {
 
 	public static void main(String[] args) {
 		
-		//FileOutputStream °´Ã¼ »ı¼º
+		//FileOutputStream ê°ì²´ ìƒì„±
 		FileOutputStream fos = null;
 		try{
-			//°æ·Î¿¡ ÆÄÀÏ »ı¼º
-			//±âº»°ª : µ¤¾î¾²±â
+			//ê²½ë¡œì— íŒŒì¼ ìƒì„±
+			//ê¸°ë³¸ê°’ : ë®ì–´ì“°ê¸°
 //			fos = new FileOutputStream("C:" + File.separator + "javanAndroid" + File.separator+ "fileout.txt");
 			
 			
-			//byte·Î ÆÄÀÏ¿¡ Ãâ·ÂÇÏ±â À§ÇÑ FileOutputStream°´Ã¼ »ı¼º
-			//ÀÌ¾î¾²±â			
+			//byteë¡œ íŒŒì¼ì— ì¶œë ¥í•˜ê¸° ìœ„í•œ FileOutputStreamê°ì²´ ìƒì„±
+			//ì´ì–´ì“°ê¸°			
 			fos = new FileOutputStream("C:" + File.separator + "javanAndroid" + File.separator+ "fileout.txt", true);			
 			
-			//¸í½ÃÇÒ µ¥ÀÌÅÍ ÀÔ·Â
-			String message = "Hello FileOut!! ÆÄÀÏ¿¡ ³»¿ëÀÔ´Ï´Ù.";
+			//ëª…ì‹œí•  ë°ì´í„° ì…ë ¥
+			String message = "Hello FileOut!! íŒŒì¼ì— ë‚´ìš©ì…ë‹ˆë‹¤.";
 			
-			//String -> byte[] ¹è¿­ÇàÅÂ·Î º¯È¯ 
+			//String -> byte[] ë°°ì—´í–‰íƒœë¡œ ë³€í™˜ 
 			fos.write(message.getBytes());
 			
-			System.out.println("ÆÄÀÏÀ» »ı¼ºÈÄ ³»¿ëÀ» ±â¼úÇÔ");	
+			System.out.println("íŒŒì¼ì„ ìƒì„±í›„ ë‚´ìš©ì„ ê¸°ìˆ í•¨");	
 			
 		}catch(IOException e){
 			e.printStackTrace();
 			
-		}finally{	//ÀÚ¿ø Á¤¸®					
-			//°´Ã¼°¡ ÀÖ´ÂÁö Ã¼Å©
+		}finally{	//ìì› ì •ë¦¬					
+			//ê°ì²´ê°€ ìˆëŠ”ì§€ ì²´í¬
 			if( fos != null)try{fos.close();}catch(IOException e){} 
 		}
 	}

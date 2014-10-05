@@ -1,18 +1,18 @@
-/* FrameÃ¢ »ý¼ºÇÏ±â
+/* Frameì°½ ìƒì„±í•˜ê¸°
  * 
- * Frame »ó¼ÓÈÄ °´Ã¼»ý¼º
- * FrameÀÇ »ý¼ºÀÚ¿¡¼­ ±âº» ¼ÂÆÃ ÁöÁ¤
- * - Á¦¸ñ ¼³Á¤
- * - ³ÐÀÌ, ³ôÀÌ ¼³Á¤
- * FrameÀÇ È­¸é ³ëÃâ ¿©ºÎ ÁöÁ¤ 
+ * Frame ìƒì†í›„ ê°ì²´ìƒì„±
+ * Frameì˜ ìƒì„±ìžì—ì„œ ê¸°ë³¸ ì…‹íŒ… ì§€ì •
+ * - ì œëª© ì„¤ì •
+ * - ë„“ì´, ë†’ì´ ì„¤ì •
+ * Frameì˜ í™”ë©´ ë…¸ì¶œ ì—¬ë¶€ ì§€ì • 
  * 
  * --------------------------------------
- * ÃÖ¼ÒÈ­, ÃÖ´ëÈ­´Â ±âº»Áö¿ø(±âº»)
- * Á¾·á¹öÆ°Àº ÀÛµ¿¾ÈµÊ(±âº»)
+ * ìµœì†Œí™”, ìµœëŒ€í™”ëŠ” ê¸°ë³¸ì§€ì›(ê¸°ë³¸)
+ * ì¢…ë£Œë²„íŠ¼ì€ ìž‘ë™ì•ˆë¨(ê¸°ë³¸)
  *  
- **Frame»ý¼º¹æ¹ý
- * 1)Frame »ó¼Ó (±ÇÀå) - ¸ðµâÈ­ ½ÃÅ³¼ö ÀÖ´Â ÀåÁ¡ÀÌ ÀÖ¾î ÀçÈ°¿ë¼º ³ô¾ÆÁü
- * 2)Frame °´Ã¼»ý¼º - ÀçÈ°¿ë¼º ¶³¾îÁü, 
+ **Frameìƒì„±ë°©ë²•
+ * 1)Frame ìƒì† (ê¶Œìž¥) - ëª¨ë“ˆí™” ì‹œí‚¬ìˆ˜ ìžˆëŠ” ìž¥ì ì´ ìžˆì–´ ìž¬í™œìš©ì„± ë†’ì•„ì§
+ * 2)Frame ê°ì²´ìƒì„± - ìž¬í™œìš©ì„± ë–¨ì–´ì§, 
  */
 
 
@@ -20,22 +20,22 @@ package com.display;
 
 import java.awt.Frame;
 
-// Frame »ó¼Ó
+// Frame ìƒì†
 public class FrameEx01 extends Frame{
 	
-	//»ý¼ºÀÚ¿¡¼­ ±âº»¼ÂÆÃ ÁöÁ¤
+	//ìƒì„±ìžì—ì„œ ê¸°ë³¸ì…‹íŒ… ì§€ì •
 	public FrameEx01(){
-		//Á¦¸ñ ¼³Á¤
+		//ì œëª© ì„¤ì •
 		super("Frame Test");
 		
-		//³ÐÀÌ, ³ôÀÌ ¼³Á¤
+		//ë„“ì´, ë†’ì´ ì„¤ì •
 		setSize(300,  300);
 		
-		//Frame È­¸é ³ëÃâ ¿©ºÎ ÁöÁ¤
+		//Frame í™”ë©´ ë…¸ì¶œ ì—¬ë¶€ ì§€ì •
 		setVisible(true);
 	}
 	public static void main(String[] args){
-		//°´Ã¼ »ý¼º
+		//ê°ì²´ ìƒì„±
 		new FrameEx01();
 	}
 

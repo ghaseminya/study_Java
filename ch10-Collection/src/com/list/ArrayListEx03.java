@@ -1,8 +1,8 @@
-/* ArrayList - ¿¡·¯¹ß»ý (´Ù¿îÄ³½ºÆÃ½Ã)
+/* ArrayList - ì—ëŸ¬ë°œìƒ (ë‹¤ìš´ìºìŠ¤íŒ…ì‹œ)
  * 
- * String°ªÀÌ ¾Æ´Ñ ´Ù¸¥ µ¥ÀÌÅÍÇüÀÌ ÀÔ·ÂµÇ¾î 
- * ´Ù¿îÄ³½ºÆÃ½Ã ¿¡·¯¹ß»ý(ÄÄÆÄÀÏ½Ã ¹®Á¦´Â ¾øÀ¸³ª ½ÇÇà½Ã ¿¡·¯¹ß»ý)
- * Á¦³×¸¯ Ç¥ÇöÀ¸·Î ¿¡·¯ ¼öÁ¤(ArrayList03_1.java)ÇÏ¿© ÇØ°á  
+ * Stringê°’ì´ ì•„ë‹Œ ë‹¤ë¥¸ ë°ì´í„°í˜•ì´ ìž…ë ¥ë˜ì–´ 
+ * ë‹¤ìš´ìºìŠ¤íŒ…ì‹œ ì—ëŸ¬ë°œìƒ(ì»´íŒŒì¼ì‹œ ë¬¸ì œëŠ” ì—†ìœ¼ë‚˜ ì‹¤í–‰ì‹œ ì—ëŸ¬ë°œìƒ)
+ * ì œë„¤ë¦­ í‘œí˜„ìœ¼ë¡œ ì—ëŸ¬ ìˆ˜ì •(ArrayList03_1.java)í•˜ì—¬ í•´ê²°  
  */
 
 package com.list;
@@ -14,18 +14,18 @@ public class ArrayListEx03 {
 	public static void main(String[] args) {
 		// 
 		ArrayList al = new ArrayList();
-		al.add("¹èÆ®¸Ç");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("È«±æµ¿");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("ÀÏÁö¸Å");	// String -> Object ¾÷Ä³½ºÆÃ
-		al.add("°­ÇÏ´Ã");	// String -> Object ¾÷Ä³½ºÆÃ
+		al.add("ë°°íŠ¸ë§¨");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("í™ê¸¸ë™");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ì¼ì§€ë§¤");	// String -> Object ì—…ìºìŠ¤íŒ…
+		al.add("ê°•í•˜ëŠ˜");	// String -> Object ì—…ìºìŠ¤íŒ…
 
-		al.add(new Integer(100));	//Integer -> Object ¾÷Ä³½ºÆÃ
-		al.add("ÇæÅ©");		
+		al.add(new Integer(100));	//Integer -> Object ì—…ìºìŠ¤íŒ…
+		al.add("í—í¬");		
 		
-		//ÄÄÆÄÀÏ½Ã ¹®Á¦´Â ¾øÀ¸³ª ½ÇÇà½Ã ¿¡·¯¹ß»ý
+		//ì»´íŒŒì¼ì‹œ ë¬¸ì œëŠ” ì—†ìœ¼ë‚˜ ì‹¤í–‰ì‹œ ì—ëŸ¬ë°œìƒ
 		for(int i=0; i<al.size(); i++){
 			String name = (String)al.get(i);	//ERROR: java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.String
-			//Ãâ·Â
+			//ì¶œë ¥
 			System.out.println(name);
 		}
 	}

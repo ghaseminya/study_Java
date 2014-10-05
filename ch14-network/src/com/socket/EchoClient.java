@@ -4,9 +4,9 @@
  * EchoClient
  * EchoServer
  * -------------------------------------------------------
- * »ı¼ºÀÚ¿¡¼­ Á¤º¸ ¹Ş°í
- * ¼ÒÄÏ »ı¼º getsocket()
- * ÀÔÃâ·Â ½ºÆ®¸²(¹ÙÀÌÆ®½ºÆ®¸²) -> ¹®ÀÚ½ºÆ®¸²
+ * ìƒì„±ìì—ì„œ ì •ë³´ ë°›ê³ 
+ * ì†Œì¼“ ìƒì„± getsocket()
+ * ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼(ë°”ì´íŠ¸ìŠ¤íŠ¸ë¦¼) -> ë¬¸ììŠ¤íŠ¸ë¦¼
  *  
  */
 
@@ -23,9 +23,9 @@ import java.net.Socket;
 
 public class EchoClient {
 	
-	//¼­¹ö IP ÀúÀå º¯¼ö
+	//ì„œë²„ IP ì €ì¥ ë³€ìˆ˜
 	private String ip;
-	//¼­¹ö Æ÷Æ® ÀúÀå º¯¼ö
+	//ì„œë²„ í¬íŠ¸ ì €ì¥ ë³€ìˆ˜
 	private int port;
 	private String str;
 	BufferedReader br_file;
@@ -34,36 +34,36 @@ public class EchoClient {
 		this.ip = ip;
 		this.port = port;
 		
-		//¼­¹ö·Î ¿¬°áµÇ¸ç tcp¼ÒÄÏ »ı¼º
+		//ì„œë²„ë¡œ ì—°ê²°ë˜ë©° tcpì†Œì¼“ ìƒì„±
 		Socket tcpSocket = getSocket();
-		//¹ÙÀÌÆ® ½ºÆ®¸³
-		//Ãâ·Â ½ºÆ®¸² (¼­¹ö¿¡ µ¥ÀÌÅÍ Àü¼Û)
+		//ë°”ì´íŠ¸ ìŠ¤íŠ¸ë¦½
+		//ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ (ì„œë²„ì— ë°ì´í„° ì „ì†¡)
 		OutputStream os_socket = tcpSocket.getOutputStream();
-		//ÀÔ·Â ½ºÆ®¸² ( ¼­¹ö¿¡¼­ Å¬¶óÀÌ¾ğÆ®·Î Àü¼ÛµÈ µ¥ÀÌÅÍ Ã³¸®)
+		//ì…ë ¥ ìŠ¤íŠ¸ë¦¼ ( ì„œë²„ì—ì„œ í´ë¼ì´ì–¸íŠ¸ë¡œ ì „ì†¡ëœ ë°ì´í„° ì²˜ë¦¬)
 		InputStream is_socket =  tcpSocket.getInputStream();		
-		//¹ÙÀÌÆ®½ºÆ®¸² -> ¹®ÀÚ½ºÆ®¸²
+		//ë°”ì´íŠ¸ìŠ¤íŠ¸ë¦¼ -> ë¬¸ììŠ¤íŠ¸ë¦¼
 		BufferedWriter bufferW = new BufferedWriter(new OutputStreamWriter(os_socket));		
 		BufferedReader bufferR = new BufferedReader(new InputStreamReader(is_socket));
 		
-		//µ¥ÀÌÅÍ ÀÔ·Â¿ë ÀÔ·Â½ºÆ®¸² »ı¼º
-		System.out.print("ÀÔ·Â >");
+		//ë°ì´í„° ì…ë ¥ìš© ì…ë ¥ìŠ¤íŠ¸ë¦¼ ìƒì„±
+		System.out.print("ì…ë ¥ >");
 		br_file = new BufferedReader(new InputStreamReader(System.in));
 		
-		//Ç¥ÁØ ÀÔ·Â
+		//í‘œì¤€ ì…ë ¥
 		str = br_file.readLine();
 		//EOF
 		str += System.getProperty("line.separator");
-		//µ¥ÀÌÅÍ¸¦ ¹öÆÛ¿¡ ÀúÀå
+		//ë°ì´í„°ë¥¼ ë²„í¼ì— ì €ì¥
 		bufferW.write(str);
-		//µ¥ÀÌÅÍ¸¦ ¼­¹ö¿¡ Àü¼Û
+		//ë°ì´í„°ë¥¼ ì„œë²„ì— ì „ì†¡
 		bufferW.flush();
-		//¼­¹ö¿¡¼­ Àü¼ÛµÈ µ¥ÀÌÅÍ Ã³¸®
+		//ì„œë²„ì—ì„œ ì „ì†¡ëœ ë°ì´í„° ì²˜ë¦¬
 		str = bufferR.readLine();
 		
-		//Echo°á°ú Ãâ·Â
+		//Echoê²°ê³¼ ì¶œë ¥
 		System.out.println("Echo Result: " + str);
 		
-		//ÀÚ¿ø°ü¸®
+		//ìì›ê´€ë¦¬
 		br_file.close();
 		bufferW.close();
 		os_socket.close();
@@ -75,7 +75,7 @@ public class EchoClient {
 	public Socket getSocket(){
 		Socket tcpSocket = null;
 		try{
-			//¼ÒÄÏ »ı¼º
+			//ì†Œì¼“ ìƒì„±
 			tcpSocket = new Socket(ip, port);
 			
 		}catch(IOException e){

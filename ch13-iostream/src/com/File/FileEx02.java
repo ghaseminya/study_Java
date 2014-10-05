@@ -1,10 +1,10 @@
-/* File Class - ÆÄÀÏÁ¤º¸ È®ÀÎ, ÆÄÀÏ »ı¼º/º¯°æ/»èÁ¦
+/* File Class - íŒŒì¼ì •ë³´ í™•ì¸, íŒŒì¼ ìƒì„±/ë³€ê²½/ì‚­ì œ
  * 
  * import
- * ÆÄÀÏ °´Ã¼ »ı¼º
- * ÆÄÀÏ »ı¼º ÈÄ °á°ú°ª Ãâ·ÂÇÏ±â
+ * íŒŒì¼ ê°ì²´ ìƒì„±
+ * íŒŒì¼ ìƒì„± í›„ ê²°ê³¼ê°’ ì¶œë ¥í•˜ê¸°
  * ---------------------------------------------------
- * ÆÄÀÏ ¸¸µé±â
+ * íŒŒì¼ ë§Œë“¤ê¸°
  * 
  */
 
@@ -16,42 +16,42 @@ import java.io.IOException;
 public class FileEx02 {
 	
 	public static void main(String[] args){
-		//ÆÄÀÏ °´Ã¼ »ı¼º
+		//íŒŒì¼ ê°ì²´ ìƒì„±
 		File f1 = new File("C:" + File.separator + "javanAndroid" + File.separator + "sample.txt");
 		
-		System.out.println("=== ÆÄÀÏ »ı¼º===");
+		System.out.println("=== íŒŒì¼ ìƒì„±===");
 		try{
-			//ÆÄÀÏ »ı¼º
+			//íŒŒì¼ ìƒì„±
 			System.out.println(f1.createNewFile());
 		}catch(IOException e){
 			e.printStackTrace();
 		}		
 		
-		System.out.println("\n=== ÆÄÀÏ Á¤º¸===");
-		//Àı´ë°æ·Î
-		System.out.println("Àı´ë°æ·Î : " + f1.getAbsolutePath());
-		System.out.println("µğ·ºÅä¸®¸í : " + f1.getParent());
-		System.out.println("ÆÄÀÏ¸í : " + f1.getName());
-		System.out.println("ÆÄÀÏÅ©±â : " + f1.length());
+		System.out.println("\n=== íŒŒì¼ ì •ë³´===");
+		//ì ˆëŒ€ê²½ë¡œ
+		System.out.println("ì ˆëŒ€ê²½ë¡œ : " + f1.getAbsolutePath());
+		System.out.println("ë””ë ‰í† ë¦¬ëª… : " + f1.getParent());
+		System.out.println("íŒŒì¼ëª… : " + f1.getName());
+		System.out.println("íŒŒì¼í¬ê¸° : " + f1.length());
 		
-		//ÆÄÀÏ¸í º¯°æÇÏ±â
-		System.out.println("\n=== ÆÄÀÏ¸í º¯°æ===");		
-		//º¯°æÇÏ°íÀÚÇÏ´Â ÆÄÀÏ °´Ã¼ »ı¼º
+		//íŒŒì¼ëª… ë³€ê²½í•˜ê¸°
+		System.out.println("\n=== íŒŒì¼ëª… ë³€ê²½===");		
+		//ë³€ê²½í•˜ê³ ìí•˜ëŠ” íŒŒì¼ ê°ì²´ ìƒì„±
 		File f2 = new File("C:" + File.separator + "javanAndroid" + File.separator + "sampleNameChanged.txt");
 		System.out.println(f1.getName() + " -> " + f2.getName());
 		System.out.println(f1.renameTo(f2));
-		System.out.println("Àı´ë°æ·Î : " + f2.getAbsolutePath());
-		System.out.println("µğ·ºÅä¸®¸í : " + f2.getParent());
-		System.out.println("ÆÄÀÏ¸í : " + f2.getName());
-		System.out.println("ÆÄÀÏÅ©±â : " + f2.length());
+		System.out.println("ì ˆëŒ€ê²½ë¡œ : " + f2.getAbsolutePath());
+		System.out.println("ë””ë ‰í† ë¦¬ëª… : " + f2.getParent());
+		System.out.println("íŒŒì¼ëª… : " + f2.getName());
+		System.out.println("íŒŒì¼í¬ê¸° : " + f2.length());
 		
-		//ÆÄÀÏ »èÁ¦
-		System.out.println("\n=== ÆÄÀÏ¸í »èÁ¦===");
-		//ÆÄÀÏÀÌ Á¸ÀçÇÒ °æ¿ì ÆÄÀÏ »èÁ¦
+		//íŒŒì¼ ì‚­ì œ
+		System.out.println("\n=== íŒŒì¼ëª… ì‚­ì œ===");
+		//íŒŒì¼ì´ ì¡´ì¬í•  ê²½ìš° íŒŒì¼ ì‚­ì œ
 		if( f2.delete()){
-			System.out.println(f2.getName() + " ÆÄÀÏ »èÁ¦¿Ï·á");
+			System.out.println(f2.getName() + " íŒŒì¼ ì‚­ì œì™„ë£Œ");
 		}else{
-			System.out.println("ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù");
+			System.out.println("íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤");
 		}		
 	}
 }

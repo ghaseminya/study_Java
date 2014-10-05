@@ -1,10 +1,10 @@
-/* FileInputSteam ¿µ¹® Ãâ·Â - ÆÄÀÏÁ¤º¸¸¦ ÇÑ¹®ÀÚ¾¿ ÀÐÀºÈÄ Ã³¸®, ÀÚ¿øÁ¤¸®
+/* FileInputSteam ì˜ë¬¸ ì¶œë ¥ - íŒŒì¼ì •ë³´ë¥¼ í•œë¬¸ìžì”© ì½ì€í›„ ì²˜ë¦¬, ìžì›ì •ë¦¬
  * 
  * -----------------------------------------------------------------------
- * ÀÚ¹Ù ¿ÜÀûÀÎ ¿ä¼Ò¶û ¿¬µ¿ÇÒ °æ¿ì ÀÚ¿øÁ¤¸®
- * °´Ã¼¸¦ »ý¼ºÇØ¼­ Á¢±Ù
- * °´Ã¼¸¦ »ý¼ºÇÑÈÄ ¼Ò¸íÀ» ¸ø½ÃÅ°¹Ç·Î ÆÄÀÏ¿¬°áÈÄ¿¡µµ ÆÄÀÏ¿¬°á°¡´É»óÅÂ°¡ °è¼Ó Áö¼ÓµÊ(ÀÌ·²°æ¿ì ºÎÇÏ°¡ ¹ß»ýÇÒ ¼ö ÀÖÀ½)
- * ±×·¡¼­, °´Ã¼¿Í ÆÄÀÏ°úÀÇ °ü°è¸¦ ²÷¾î ÀÚ¿øÁ¤¸®¸¦ ÇØÁÜ
+ * ìžë°” ì™¸ì ì¸ ìš”ì†Œëž‘ ì—°ë™í•  ê²½ìš° ìžì›ì •ë¦¬
+ * ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ì ‘ê·¼
+ * ê°ì²´ë¥¼ ìƒì„±í•œí›„ ì†Œëª…ì„ ëª»ì‹œí‚¤ë¯€ë¡œ íŒŒì¼ì—°ê²°í›„ì—ë„ íŒŒì¼ì—°ê²°ê°€ëŠ¥ìƒíƒœê°€ ê³„ì† ì§€ì†ë¨(ì´ëŸ´ê²½ìš° ë¶€í•˜ê°€ ë°œìƒí•  ìˆ˜ ìžˆìŒ)
+ * ê·¸ëž˜ì„œ, ê°ì²´ì™€ íŒŒì¼ê³¼ì˜ ê´€ê³„ë¥¼ ëŠì–´ ìžì›ì •ë¦¬ë¥¼ í•´ì¤Œ
  * 
  */
 
@@ -20,24 +20,24 @@ public class FileInputStreamEx01 {
 		int readbyte = 0;
 		
 		try{
-			//ÆÄÀÏÀ» ÀÐ¾î¿Å
+			//íŒŒì¼ì„ ì½ì–´ì˜®
 			fis = new FileInputStream("file.txt");
 			
-			//ÆÄÀÏÀÇ Á¤º¸¸¦ ÇÑ¹®ÀÚ¾¿ ÀÐ¾îµé¿© ¾Æ½ºÅ°ÄÚµå·Î ¹ÝÈ¯
-			//¿µ¹®ÀÌ¿ÜÀÇ ¹®ÀÚ´Â ±úÁü			
-			//-1ÀÌ¸é ¹®¼­ÀÇ ³¡(EOF)ÀÌ¹Ç·Î whileÀ» ºüÁ®³ª¿È
+			//íŒŒì¼ì˜ ì •ë³´ë¥¼ í•œë¬¸ìžì”© ì½ì–´ë“¤ì—¬ ì•„ìŠ¤í‚¤ì½”ë“œë¡œ ë°˜í™˜
+			//ì˜ë¬¸ì´ì™¸ì˜ ë¬¸ìžëŠ” ê¹¨ì§			
+			//-1ì´ë©´ ë¬¸ì„œì˜ ë(EOF)ì´ë¯€ë¡œ whileì„ ë¹ ì ¸ë‚˜ì˜´
 			while( (readbyte=fis.read()) !=-1){
-				//¾Æ½ºÅ°°ªÀÌ±â ¶§¹®¿¡ (char)·Î Ä³½ºÆÃ
+				//ì•„ìŠ¤í‚¤ê°’ì´ê¸° ë•Œë¬¸ì— (char)ë¡œ ìºìŠ¤íŒ…
 				System.out.print( (char)readbyte );
 			}			
 		}catch(FileNotFoundException e){
 			e.printStackTrace();			
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//ÀÚ¿ø Á¤¸® Standard
-			//°´Ã¼°¡ ÀÖ´ÂÁö Ã¼Å©
+		}finally{	//ìžì› ì •ë¦¬ Standard
+			//ê°ì²´ê°€ ìžˆëŠ”ì§€ ì²´í¬
 			if( fis != null ){
-				//IOException¹ß»ýÇÒ ¼ö ÀÖÀ¸¹Ç·Î try~catch
+				//IOExceptionë°œìƒí•  ìˆ˜ ìžˆìœ¼ë¯€ë¡œ try~catch
 				try{
 					fis.close();					
 				}catch(IOException e){

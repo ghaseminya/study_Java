@@ -1,6 +1,6 @@
 /* SQL - INSERT
  * 
- * µ¥ÀÌÅÍ ³Ö±â  
+ * ë°ì´í„° ë„£ê¸°  
  */
 
 package com.basic;
@@ -12,8 +12,8 @@ import java.sql.Statement;
 
 public class InsertEx {
 	public static void main(String[] args){
-		//Á¢¼Ó Á¤º¸ ÀúÀå
-		//JDBC»ç¿ëÇÏ¸é¼­ OracleDB¸¦ »ç¿ëÇÏ¸ç thinµå¶óÀÌ¹ö¸¦ »ç¿ëÇÏ¿© IP¹× Æ÷Æ®·Î Á¢¼Ó ¹× DBÀÇ SID						//
+		//ì ‘ì† ì •ë³´ ì €ì¥
+		//JDBCì‚¬ìš©í•˜ë©´ì„œ OracleDBë¥¼ ì‚¬ìš©í•˜ë©° thinë“œë¼ì´ë²„ë¥¼ ì‚¬ìš©í•˜ì—¬ IPë° í¬íŠ¸ë¡œ ì ‘ì† ë° DBì˜ SID						//
 		//"jdbc:oracle:thin:@	192.168.0.10:1521:orcl";
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
@@ -23,26 +23,26 @@ public class InsertEx {
 		Statement stmt = null;
 		
 		try{
-			//JDBC ¼öÇà 1´Ü°è: µå¶óÀÌ¹ö Å¬·¡½º ·Îµå
+			//JDBC ìˆ˜í–‰ 1ë‹¨ê³„: ë“œë¼ì´ë²„ í´ë˜ìŠ¤ ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//JDBC ¼öÇà 2´Ü°è: Connection °´Ã¼(URL, ID, PASSWORD)ÅëÇØ °èÁ¤ ÀÎÁõ ¼öÇà
+			//JDBC ìˆ˜í–‰ 2ë‹¨ê³„: Connection ê°ì²´(URL, ID, PASSWORD)í†µí•´ ê³„ì • ì¸ì¦ ìˆ˜í–‰
 			con = DriverManager.getConnection(dbURL, id, passwd);
 			
-			//SQL¹®ÀåÀ» String º¯¼ö·Î ÀúÀå
+			//SQLë¬¸ì¥ì„ String ë³€ìˆ˜ë¡œ ì €ì¥
 			String sql = "INSERT INTO test1(id, age) VALUES('prettybird', 70)";
-			//JDBC ¼öÇà 3´Ü°è: Statement °´Ã¼ »ı¼º
-			//Table¿¡ Á¢¼ÓÇØ¼­ SQL¹® ¼öÇà
+			//JDBC ìˆ˜í–‰ 3ë‹¨ê³„: Statement ê°ì²´ ìƒì„±
+			//Tableì— ì ‘ì†í•´ì„œ SQLë¬¸ ìˆ˜í–‰
 			stmt = con.createStatement();
-			//JDBC ¼öÇà 4´Ü°è: SQL¹® ½ÇÇà
-			//executeUpdate() ½ÇÇàÈÄ ÀÔ·ÂµÈ ÇàÀÇ °¹¼ö¸¦ ¹İÈ¯ÇÔ
+			//JDBC ìˆ˜í–‰ 4ë‹¨ê³„: SQLë¬¸ ì‹¤í–‰
+			//executeUpdate() ì‹¤í–‰í›„ ì…ë ¥ëœ í–‰ì˜ ê°¯ìˆ˜ë¥¼ ë°˜í™˜í•¨
 			int count = stmt.executeUpdate(sql);			
-			System.out.println(count + "°³ÀÇ ÇàÀ» Ãß°¡ÇÏ¿´½À´Ï´Ù.");
+			System.out.println(count + "ê°œì˜ í–‰ì„ ì¶”ê°€í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			
 		}catch(SQLException e){
 			e.printStackTrace();
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-		}finally{	//ÀÚ¿ø °ü¸®
+		}finally{	//ìì› ê´€ë¦¬
 			if( stmt!=null){ try{stmt.close();}catch(SQLException e){e.printStackTrace();} }
 			if( con!=null){ try{con.close();}catch(SQLException e){e.printStackTrace();} }			
 		}		

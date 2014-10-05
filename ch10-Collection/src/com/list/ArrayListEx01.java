@@ -1,9 +1,9 @@
-/* ArrayList - ArrayList¿¡ °´Ã¼°¡ ÀúÀåµÊÀ» Ãâ·ÂÀ¸·Î È®ÀÎ
+/* ArrayList - ArrayListì— ê°ì²´ê°€ ì €ìž¥ë¨ì„ ì¶œë ¥ìœ¼ë¡œ í™•ì¸
  * 
  * import
- * ArrayList¿¡ °´Ã¼¸¦ ÀúÀå
- * ArrayList¿¡ °´Ã¼°¡ ÀúÀåµÊÀ» Ãâ·ÂÀ¸·Î È®ÀÎÇÏ±â
- * ObjectÅ¬·¡½ºÀÇ ToString()ÀçÁ¤ÀÇÇØ¼­ µ¥ÀÌÅÍ°ª Ãâ·Â È®ÀÎÇÏ±â 
+ * ArrayListì— ê°ì²´ë¥¼ ì €ìž¥
+ * ArrayListì— ê°ì²´ê°€ ì €ìž¥ë¨ì„ ì¶œë ¥ìœ¼ë¡œ í™•ì¸í•˜ê¸°
+ * Objectí´ëž˜ìŠ¤ì˜ ToString()ìž¬ì •ì˜í•´ì„œ ë°ì´í„°ê°’ ì¶œë ¥ í™•ì¸í•˜ê¸° 
  */
 
 package com.list;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 class A{
 	
-	//Object¿¡ ÀÖ´Â toString()ÀçÁ¤ÀÇ: ÂüÁ¶°ª Ãâ·ÂµÇ´Â °ÍÀ» µ¥ÀÌÅÍ°ªÀÌ Ãâ·ÂµÇµµ·Ï ÀçÁ¤ÀÇ
+	//Objectì— ìžˆëŠ” toString()ìž¬ì •ì˜: ì°¸ì¡°ê°’ ì¶œë ¥ë˜ëŠ” ê²ƒì„ ë°ì´í„°ê°’ì´ ì¶œë ¥ë˜ë„ë¡ ìž¬ì •ì˜
 	@Override
 	public String toString(){
 		return "A";
@@ -22,17 +22,17 @@ class A{
 public class ArrayListEx01 {
 
 	public static void main(String[] args) {
-		//ArrayList¿¡ °´Ã¼¸¦ ÀúÀå
+		//ArrayListì— ê°ì²´ë¥¼ ì €ìž¥
 		ArrayList a1 = new ArrayList();
-		//add()ÅëÇØ µ¥ÀÌÅÍ »ðÀÔ
+		//add()í†µí•´ ë°ì´í„° ì‚½ìž…
 		a1.add(new A());			//A -> Object
 		a1.add(new Integer(100));	//Integer -> Object
-		a1.add("°èÀý");				//String -> Object
+		a1.add("ê³„ì ˆ");				//String -> Object
 		
 		System.out.println(a1);
-		//[com.list.A@40671416, 100, °èÀý]	//ÂüÁ¶°ªÀÌ ¹ÝÈ¯µÈ °ÍÀ» È®ÀÎ
+		//[com.list.A@40671416, 100, ê³„ì ˆ]	//ì°¸ì¡°ê°’ì´ ë°˜í™˜ëœ ê²ƒì„ í™•ì¸
 		
-		//toString()ÀçÁ¤ÀÇ ÈÄ Ãâ·Â
-		//[A, 100, °èÀý]	//toString()ÀçÁ¤ÀÇ¸¦ ÅëÇØ ÂüÁ¶°ªÀÌ ¾Æ´Ñ ¸®ÅÏµÈ µ¥ÀÌÅÍ°ª Ãâ·Â
+		//toString()ìž¬ì •ì˜ í›„ ì¶œë ¥
+		//[A, 100, ê³„ì ˆ]	//toString()ìž¬ì •ì˜ë¥¼ í†µí•´ ì°¸ì¡°ê°’ì´ ì•„ë‹Œ ë¦¬í„´ëœ ë°ì´í„°ê°’ ì¶œë ¥
 	}
 }

@@ -1,13 +1,13 @@
-/* Á¦³×¸¯ÀÇ Á¦ÇÑ(class)
-extends ¿¹¾à¾î·Î
-Á¦³×¸¯À¸·Î ¿Ã ¼ö ÀÖ´Â µ¥ÀÌÅÍ Å¸ÀÔÀ» Æ¯Á¤ Å¬·¡½ºÀÇ ÀÚ½ÄÀ¸·Î Á¦ÇÑ
+/* ì œë„¤ë¦­ì˜ ì œí•œ(class)
+extends ì˜ˆì•½ì–´ë¡œ
+ì œë„¤ë¦­ìœ¼ë¡œ ì˜¬ ìˆ˜ ìˆëŠ” ë°ì´í„° íƒ€ì…ì„ íŠ¹ì • í´ë˜ìŠ¤ì˜ ìì‹ìœ¼ë¡œ ì œí•œ
 */
 
 package kr.studyjava.generic08;
 
-//ºÎ¸ğ Å¬·¡½º (²À Ãß»óÅ¬·¡½ºÀÏ ÇÊ¿ä´Â ¾øÀ½)
+//ë¶€ëª¨ í´ë˜ìŠ¤ (ê¼­ ì¶”ìƒí´ë˜ìŠ¤ì¼ í•„ìš”ëŠ” ì—†ìŒ)
 abstract class Info{
-	//Ãß»ó ¸Ş¼Òµå
+	//ì¶”ìƒ ë©”ì†Œë“œ
 	public abstract int getInfo();
 }
 
@@ -15,28 +15,28 @@ class EmployeeInfo extends Info{
 	public int position;
 	EmployeeInfo(int position){ this.position = position; }
 
-	//Ãß»ó ¸Ş¼Òµå ±¸Çö
+	//ì¶”ìƒ ë©”ì†Œë“œ êµ¬í˜„
 	@Override
 	public int getInfo(){
 		return this.position;
 	}
 }
-//PersonÀÇ T´Â Info Å¬·¡½º³ª ±× ÀÚ½Ä ¿Ü¿¡´Â ¿Ã ¼ö ¾ø½À´Ï´Ù.
-//extends´Â »ó¼Ó(extends)»Ó ¾Æ´Ï¶ó ±¸Çö(implements)ÀÇ °ü°è¿¡¼­µµ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
-//InfoÅ¬·¡½ºÀÇ ÀÚ½Äµé ¸¸ÀÌ T·Î ¿Ã¼ö ÀÖ½À´Ï´Ù.
+//Personì˜ TëŠ” Info í´ë˜ìŠ¤ë‚˜ ê·¸ ìì‹ ì™¸ì—ëŠ” ì˜¬ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+//extendsëŠ” ìƒì†(extends)ë¿ ì•„ë‹ˆë¼ êµ¬í˜„(implements)ì˜ ê´€ê³„ì—ì„œë„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+//Infoí´ë˜ìŠ¤ì˜ ìì‹ë“¤ ë§Œì´ Të¡œ ì˜¬ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 class Person<T extends Info>{
 	public T info;
 	Person(T info){ this.info = info; }
 }
 public class GenericEx01 {
 	public static void main(String[] args) {
-		//InfoÀÇ ÀÚ½ÄÀÎ Å¸ÀÔÀ» ÁöÁ¤
-		//Person p1 = new Person(new EmployeeInfo(1));  //µ¿ÀÏ ÄÚµå¸¦ ¾Æ·¡¿¡¼­ ¸í½ÃÀûÀ¸·Î Á¤ÀÇ
+		//Infoì˜ ìì‹ì¸ íƒ€ì…ì„ ì§€ì •
+		//Person p1 = new Person(new EmployeeInfo(1));  //ë™ì¼ ì½”ë“œë¥¼ ì•„ë˜ì—ì„œ ëª…ì‹œì ìœ¼ë¡œ ì •ì˜
 		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(10));
 		System.out.println(p1.info.getInfo());
 
-		//InfoÀÇ ÀÚ½ÄÀÌ ¾Æ´Ñ Å¸ÀÔÀ» ÁöÁ¤
-//		Person<String> p2 = new Person<String>("»çÀå");	//ÄÄÆÄÀÏ ¿¡·¯
+		//Infoì˜ ìì‹ì´ ì•„ë‹Œ íƒ€ì…ì„ ì§€ì •
+//		Person<String> p2 = new Person<String>("ì‚¬ì¥");	//ì»´íŒŒì¼ ì—ëŸ¬
 	}
 }
 

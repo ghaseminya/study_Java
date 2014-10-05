@@ -1,7 +1,7 @@
-/* File Class - µğ·ºÅä¸®
+/* File Class - ë””ë ‰í† ë¦¬
  * 
- * µğ·ºÅä¸® »ı¼º
- * µğ·ºÅä¸® »èÁ¦ 
+ * ë””ë ‰í† ë¦¬ ìƒì„±
+ * ë””ë ‰í† ë¦¬ ì‚­ì œ 
  * 
  */
 
@@ -11,18 +11,18 @@ import java.io.File;
 
 public class FileEx03 {
 	public static void main(String[] args){
-		System.out.println("===µğ·ºÅä¸® »ı¼º===");
+		System.out.println("===ë””ë ‰í† ë¦¬ ìƒì„±===");
 		File f = new File("C:" + File.separator + "javanAndroid" + File.separator + "javaSample");
 		
-		//µğ·ºÅä¸® »ı¼ºÈÄ ¼º°ø½Ã true ½ÇÆĞ½Ã false
+		//ë””ë ‰í† ë¦¬ ìƒì„±í›„ ì„±ê³µì‹œ true ì‹¤íŒ¨ì‹œ false
 		System.out.println(f.mkdir());
 		
-		//µğ·ºÅä¸® »èÁ¦
-		System.out.println("\n===µğ·ºÅä¸® »ı¼º===");
+		//ë””ë ‰í† ë¦¬ ì‚­ì œ
+		System.out.println("\n===ë””ë ‰í† ë¦¬ ìƒì„±===");
 		if(f.delete())
-			System.out.println(f.getName() + " µğ·ºÅä¸® »èÁ¦");
+			System.out.println(f.getName() + " ë””ë ‰í† ë¦¬ ì‚­ì œ");
 		else{
-			System.out.println("µğ·ºÅä¸®°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ë””ë ‰í† ë¦¬ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}		
 	}
 }

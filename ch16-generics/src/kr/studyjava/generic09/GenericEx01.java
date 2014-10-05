@@ -1,15 +1,15 @@
-/* Á¦³×¸¯ÀÇ Á¦ÇÑ(interface)
-Á¦³×¸¯ÀÇ extends´Â »ó¼Ó(extends)»Ó ¾Æ´Ï¶ó ±¸Çö(implements)ÀÇ °ü°è¿¡¼­µµ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
+/* ì œë„¤ë¦­ì˜ ì œí•œ(interface)
+ì œë„¤ë¦­ì˜ extendsëŠ” ìƒì†(extends)ë¿ ì•„ë‹ˆë¼ êµ¬í˜„(implements)ì˜ ê´€ê³„ì—ì„œë„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 */
 
 package kr.studyjava.generic09;
 
-//ÀÎÅÍÆäÀÌ½º Á¤ÀÇ
+//ì¸í„°í˜ì´ìŠ¤ ì •ì˜
 interface Info{
 	int getInfo();
 }
 
-//ÀÎÅÍÆäÀÌ½º ±¸Çö Å¬·¡½º
+//ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„ í´ë˜ìŠ¤
 class EmployeeInfo implements Info{
 	public int position;
 	EmployeeInfo(int position){ this.position = position; }
@@ -20,7 +20,7 @@ class EmployeeInfo implements Info{
 	}
 }
 
-//Á¦³×¸¯¿¡¼­ extends´Â »ó¼ÓÇÑ´Ù´Â ÀÇ¹Ì°¡ ¾Æ´Ï¶ó ºÎ¸ğ°¡ ´©±¸ÀÎÁö ¸í½ÃÇÏ´Â ¿ëµµ·Î »ç¿ëµË´Ï´Ù.
+//ì œë„¤ë¦­ì—ì„œ extendsëŠ” ìƒì†í•œë‹¤ëŠ” ì˜ë¯¸ê°€ ì•„ë‹ˆë¼ ë¶€ëª¨ê°€ ëˆ„êµ¬ì¸ì§€ ëª…ì‹œí•˜ëŠ” ìš©ë„ë¡œ ì‚¬ìš©ë©ë‹ˆë‹¤.
 class Person<T extends Info>{
 	public T info;
 	Person(T info){ 
@@ -32,12 +32,12 @@ class Person<T extends Info>{
 public class GenericEx01 {
 
 	public static void main(String[] args) {
-		//InfoÀÇ ÀÚ½ÄÀÎ Å¸ÀÔÀ» ÁöÁ¤
-		//Person p1 = new Person(new EmployeeInfo(1));  //µ¿ÀÏ ÄÚµå¸¦ ¾Æ·¡¿¡¼­ ¸í½ÃÀûÀ¸·Î Á¤ÀÇ
+		//Infoì˜ ìì‹ì¸ íƒ€ì…ì„ ì§€ì •
+		//Person p1 = new Person(new EmployeeInfo(1));  //ë™ì¼ ì½”ë“œë¥¼ ì•„ë˜ì—ì„œ ëª…ì‹œì ìœ¼ë¡œ ì •ì˜
 		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(10));
 		System.out.println(p1.info.getInfo());
 
-		//InfoÀÇ ÀÚ½ÄÀÌ ¾Æ´Ñ Å¸ÀÔÀ» ÁöÁ¤
-//		Person<String> p2 = new Person<String>("»çÀå");	//ÄÄÆÄÀÏ ¿¡·¯
+		//Infoì˜ ìì‹ì´ ì•„ë‹Œ íƒ€ì…ì„ ì§€ì •
+//		Person<String> p2 = new Person<String>("ì‚¬ì¥");	//ì»´íŒŒì¼ ì—ëŸ¬
 	}
 }

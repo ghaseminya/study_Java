@@ -1,4 +1,4 @@
-/* Hashtab - EnumerationÀÎÅÍÆäÀÌ½º ÀÌ¿ë
+/* Hashtab - Enumerationì¸í„°í˜ì´ìŠ¤ ì´ìš©
  * 
  * 
  * 
@@ -13,13 +13,12 @@ import java.util.Enumeration;
 public class HashtableEx02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Hashtable<String, Object> ht = new Hashtable<String, Object>();
-		ht.put("name", "È«±æµ¿");
+		ht.put("name", "í™ê¸¸ë™");
 		ht.put("age", "27");
 		ht.put("phone", "010-1234-5678");
-		ht.put("address", "¼­¿ï½Ã");
+		ht.put("address", "ì„œìš¸ì‹œ");
 		
 		Enumeration<String> en = ht.keys();
 		

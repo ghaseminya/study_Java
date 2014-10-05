@@ -1,13 +1,13 @@
-/* ¼öµ¿À¸·Î TRANSACTION Á¦¾î - ¿ÀÅäÄ¿¹Ô ¹®Á¦Á¡ ÇØ°á
+/* ìˆ˜ë™ìœ¼ë¡œ TRANSACTION ì œì–´ - ì˜¤í† ì»¤ë°‹ ë¬¸ì œì  í•´ê²°
  * 
  * 
- * ¿ÀÅä Ä¿¹Ô¸¦ ¼öµ¿ Ä¿¹ÔÃ³¸®·Î º¯°æÇÏ¿© ¼öÇàÇÏ±â 
- * ¹®Á¦¹ß»ı½Ã ¸ğµç Æ®·£Á§¼Ç ROLLBACK½ÃÅ°±â 
+ * ì˜¤í†  ì»¤ë°‹ë¥¼ ìˆ˜ë™ ì»¤ë°‹ì²˜ë¦¬ë¡œ ë³€ê²½í•˜ì—¬ ìˆ˜í–‰í•˜ê¸° 
+ * ë¬¸ì œë°œìƒì‹œ ëª¨ë“  íŠ¸ëœì ì…˜ ROLLBACKì‹œí‚¤ê¸° 
  * -----------------------------------------------------------------------------------------------
  * 
- * ¿©·¯°³ÀÇ Äõ¸®¹® ¼öÇà½Ã µ¥ÀÌÅÍ¿Ü°îÀ» ¹æÁöÇÏ±â À§ÇØ ¼öµ¿Ä¿¹Ô »ç¿ë(Æ®·»Á§¼Ç Ã³¸®)
- * ¿¹¿Ü°¡ ¹ß»ıÇÑ °æ¿ì¿¡¸¸ ROLLBACK°¡´ÉÇÏ±â ¶§¹®¿¡
- * SQL¹®À» Ã¶ÀúÇÏ°Ô °ËÁõÇØ¾ß ÇÕ´Ï´Ù. (Á¤»óÀûÀÎ SQL¹®ÀÎ °æ¿ì´Â rollbackÇÒ¼ö ¾ø½À´Ï´Ù)
+ * ì—¬ëŸ¬ê°œì˜ ì¿¼ë¦¬ë¬¸ ìˆ˜í–‰ì‹œ ë°ì´í„°ì™¸ê³¡ì„ ë°©ì§€í•˜ê¸° ìœ„í•´ ìˆ˜ë™ì»¤ë°‹ ì‚¬ìš©(íŠ¸ë Œì ì…˜ ì²˜ë¦¬)
+ * ì˜ˆì™¸ê°€ ë°œìƒí•œ ê²½ìš°ì—ë§Œ ROLLBACKê°€ëŠ¥í•˜ê¸° ë•Œë¬¸ì—
+ * SQLë¬¸ì„ ì² ì €í•˜ê²Œ ê²€ì¦í•´ì•¼ í•©ë‹ˆë‹¤. (ì •ìƒì ì¸ SQLë¬¸ì¸ ê²½ìš°ëŠ” rollbackí• ìˆ˜ ì—†ìŠµë‹ˆë‹¤)
  */
 
 package com.transaction;
@@ -20,7 +20,7 @@ import java.sql.SQLException;
 public class TransactionEx2 {
 
 	public static void main(String[] args) {
-		//Á¢¼Ó Á¤º¸ ÀúÀå
+		//ì ‘ì† ì •ë³´ ì €ì¥
 		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
 		String id = "user06";
 		String passwd ="1234";
@@ -29,39 +29,39 @@ public class TransactionEx2 {
 		Statement stmt = null;
 		String sql ="";
 		
-		//SQL¹®ÀÇ Á¤»ó ¼öÇà À¯¹«È®ÀÎ º¯¼ö
+		//SQLë¬¸ì˜ ì •ìƒ ìˆ˜í–‰ ìœ ë¬´í™•ì¸ ë³€ìˆ˜
 		boolean success = false;
 		
 		try{
-			//JDBC 1´Ü°è: DRIVER ·Îµå
+			//JDBC 1ë‹¨ê³„: DRIVER ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//JDBC 2´Ü°è: Connection °´Ã¼ »ı¼º
+			//JDBC 2ë‹¨ê³„: Connection ê°ì²´ ìƒì„±
 			con = DriverManager.getConnection(dbURL, id, passwd);
-			//AUTOÄ¿¹ÔÀº Connection¿¡¼­ ±âº»¼³Á¤µÇ¾î ÀÖÀ½
-			//AUTOÄ¿¹Ô ÇØÁ¦
+			//AUTOì»¤ë°‹ì€ Connectionì—ì„œ ê¸°ë³¸ì„¤ì •ë˜ì–´ ìˆìŒ
+			//AUTOì»¤ë°‹ í•´ì œ
 			con.setAutoCommit(false);
-			//JDBC 3´Ü°è: Statement°´Ã¼ »ı¼º
+			//JDBC 3ë‹¨ê³„: Statementê°ì²´ ìƒì„±
 			stmt = con.createStatement();
 			
-			//SQL¹® ¼öÇà1: INSERT
+			//SQLë¬¸ ìˆ˜í–‰1: INSERT
 			sql = "INSERT INTO test1 values('sys01', 10)";
-			stmt.executeUpdate(sql);	//JDBC 4´Ü°è: SQL ½ÇÇà
-			//SQL¹® ¼öÇà2: INSERT
+			stmt.executeUpdate(sql);	//JDBC 4ë‹¨ê³„: SQL ì‹¤í–‰
+			//SQLë¬¸ ìˆ˜í–‰2: INSERT
 			sql = "INSERT INTO test1 values('sys02', 20)";
 			stmt.executeUpdate(sql);			
-			//SQL¹® ¼öÇà3: INSERT
+			//SQLë¬¸ ìˆ˜í–‰3: INSERT
 			sql = "INSERT INTO test1 values('sys03', 30)";
 			stmt.executeUpdate(sql);
-			//SQL¹® ¼öÇà4: INSERT
-			//°íÀÇ·Î ¿À·ù ¹ß»ı½ÃÅ´
-			sql = "INSERT INTO test1 values('sys04', 40";	//ERROR: java.sql.SQLException: ORA-00917: ´©¶ôµÈ ÄŞ¸¶
+			//SQLë¬¸ ìˆ˜í–‰4: INSERT
+			//ê³ ì˜ë¡œ ì˜¤ë¥˜ ë°œìƒì‹œí‚´
+			sql = "INSERT INTO test1 values('sys04', 40";	//ERROR: java.sql.SQLException: ORA-00917: ëˆ„ë½ëœ ì½¤ë§ˆ
 			stmt.executeUpdate(sql);					
 			
-			//SQL¹®ÀÌ Á¤»ó¼öÇàµÇÁö ¸øÇÏ´Â °æ¿ì catch(SQLException e)¹®À¸·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.
-			//SQL¹®ÀÌ Á¤»óÀûÀ¸·Î ¼öÇàµÇ¾úÀ» °æ¿ì
+			//SQLë¬¸ì´ ì •ìƒìˆ˜í–‰ë˜ì§€ ëª»í•˜ëŠ” ê²½ìš° catch(SQLException e)ë¬¸ìœ¼ë¡œ ì´ë™í•˜ê²Œ ë©ë‹ˆë‹¤.
+			//SQLë¬¸ì´ ì •ìƒì ìœ¼ë¡œ ìˆ˜í–‰ë˜ì—ˆì„ ê²½ìš°
 			success = true;
 			
-			System.out.println("SQL¹® ¼öÇà¿Ï·á");
+			System.out.println("SQLë¬¸ ìˆ˜í–‰ì™„ë£Œ");
 			
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -70,15 +70,15 @@ public class TransactionEx2 {
 			e.printStackTrace();			
 		}finally{	
 			try{
-				if(success){	//Á¤»óÀûÀ¸·Î µ¥ÀÌÅÍ Ã³¸®
+				if(success){	//ì •ìƒì ìœ¼ë¡œ ë°ì´í„° ì²˜ë¦¬
 					con.commit();
 
-				}else{			//ºñÁ¤»óÀûÀ¸·Î µ¥ÀÌÅÍ Ã³¸®
+				}else{			//ë¹„ì •ìƒì ìœ¼ë¡œ ë°ì´í„° ì²˜ë¦¬
 					con.rollback();
 				}
 			}catch(SQLException e){ e.printStackTrace(); }			
 			
-			//ÀÚ¿ø°ü¸®
+			//ìì›ê´€ë¦¬
 			if( stmt!=null){ try{stmt.close();}catch(SQLException e){e.printStackTrace();} }
 			if( con!=null){ try{con.close();}catch(SQLException e){e.printStackTrace();} }			
 		}

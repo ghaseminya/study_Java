@@ -1,9 +1,9 @@
-/* ÄÚµå Áßº¹
-StudentPerson, EmployeePerson¿¡ µ¿ÀÏÇüÅÂÁ¸ÀçÇÏ´Â ÄÚµå
-StudentPerson, EmployeePersonÀ» ´ëÇ¥ÇÒ ¼ö ÀÖ´Â Å¬·¡½º »ı¼º °¡´É 
--> Áßº¹ Á¦°Å, ÄÚµå °£¼ÒÈ­, À¯Áöº¸¼ö ½±¿öÁü
+/* ì½”ë“œ ì¤‘ë³µ
+StudentPerson, EmployeePersonì— ë™ì¼í˜•íƒœì¡´ì¬í•˜ëŠ” ì½”ë“œ
+StudentPerson, EmployeePersonì„ ëŒ€í‘œí•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ ìƒì„± ê°€ëŠ¥ 
+-> ì¤‘ë³µ ì œê±°, ì½”ë“œ ê°„ì†Œí™”, ìœ ì§€ë³´ìˆ˜ ì‰½ì›Œì§
 
-Áßº¹ ÄÚµå Á¦°ÅÇÑ ÄÚµå
+ì¤‘ë³µ ì½”ë“œ ì œê±°í•œ ì½”ë“œ
 -> kr.studyjava.generic02\GenericsEx01.java
 
 */
@@ -12,14 +12,14 @@ package kr.studyjava.generic01;
 
 class StudentInfo{
 	public int grade;
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	StudentInfo(int grade){ 
 		this.grade = grade; 
 	}
 }
 class StudentPerson{
 	public StudentInfo info;
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	StudentPerson(StudentInfo info){ 
 		this.info = info; 
 	}
@@ -34,7 +34,7 @@ class EmployeeInfo{
 }
 class EmployeePerson{
 	public EmployeeInfo info;
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	EmployeePerson(EmployeeInfo info){ 
 		this.info = info; 
 	}
@@ -43,9 +43,9 @@ class EmployeePerson{
 
 public class GenericsEx01 {
 	public static void main(String[] args) {
-		//°´Ã¼ »ı¼º
+		//ê°ì²´ ìƒì„±
 		StudentInfo si = new StudentInfo(10);
-		//si¸¦ ÀÎÀÚ·Î ÇÏ´Â °´Ã¼ »ı¼º
+		//sië¥¼ ì¸ìë¡œ í•˜ëŠ” ê°ì²´ ìƒì„±
 		StudentPerson sp = new StudentPerson(si);
 		System.out.println(sp.info.grade);
 
