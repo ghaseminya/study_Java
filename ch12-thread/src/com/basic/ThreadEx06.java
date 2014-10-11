@@ -19,7 +19,9 @@ class ATM implements Runnable{
 	
 	@Override
 	public void run(){
-		//this: 동기화할 객체
+		
+		//synchronized(this)에서 this는 동기화의 대상을 알리는 용도 로 사용이 되었다. 즉, 메소드가 호출된 인스턴스 자신을 대상으로 동기화를 진행하는 문장.
+		//this: 동기화할 객체 
 		synchronized (this) {	
 			for( int i=0; i<5; i++){
 				try{

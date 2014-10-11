@@ -1,11 +1,13 @@
 /* File Class - 파일정보 확인, 파일 생성/변경/삭제
- * 
- * import
- * 파일 객체 생성
- * 파일 생성 후 결과값 출력하기
- * ---------------------------------------------------
- * 파일 만들기
- * 
+
+강의내용
+	• import
+	• 파일 객체 생성
+	• 파일 생성 후 결과값 출력하기
+
+---------------------------------------------------
+파일 만들기
+ 
  */
 
 package com.File;
@@ -38,8 +40,10 @@ public class FileEx02 {
 		System.out.println("\n=== 파일명 변경===");		
 		//변경하고자하는 파일 객체 생성
 		File f2 = new File("C:" + File.separator + "javanAndroid" + File.separator + "sampleNameChanged.txt");
+		//File.separator	: 컴파일환경의 운영체제에 따른 구분자로 각각 치환됩니다.
 		System.out.println(f1.getName() + " -> " + f2.getName());
-		System.out.println(f1.renameTo(f2));
+		//renameTo()는 파일의 이름을 변경하는 메소드인데, 경로의 변경에 사용이 가능
+		System.out.println(f1.renameTo(f2));	//파일 이동
 		System.out.println("절대경로 : " + f2.getAbsolutePath());
 		System.out.println("디렉토리명 : " + f2.getParent());
 		System.out.println("파일명 : " + f2.getName());

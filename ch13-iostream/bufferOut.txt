@@ -1,1 +1,1 @@
-BufferedOutputStream Test�Դϴ�.
+BufferedOutputStream Test입니다.
