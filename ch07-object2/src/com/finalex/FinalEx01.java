@@ -1,41 +1,41 @@
-/*»ó¼ö¿¡ final Àû¿ë*/
+/*ìƒìˆ˜ì— final ì ìš©*/
 
 package com.finalex;
 
 public class FinalEx01 {
 	
-	//º¯¼ö
+	//ë³€ìˆ˜
 	int var1 = 100;
 	
-	//»ó¼ö(°´Ã¼ ¸â¹ö »ó¼öÈ­)
+	//ìƒìˆ˜(ê°ì²´ ë©¤ë²„ ìƒìˆ˜í™”)
 	final int var2 = 300;
 	
-	//»ó¼ö (½ºÅÂÆ½ »ó¼öÈ­)
+	//ìƒìˆ˜ (ìŠ¤íƒœí‹± ìƒìˆ˜í™”)
 	public static final int VAR3 = 400;
 
 	public static void main(String[] args) {
 		
 		FinalEx01 f1 = new FinalEx01();
-		System.out.println("f1.var1 º¯°æ Àü °ª: ");
+		System.out.println("f1.var1 ë³€ê²½ ì „ ê°’: ");
 		System.out.println(f1.var1);
 		
 		
 		f1.var1 = 200;
-		System.out.println("f1.var1 º¯°æ ÈÄ °ª: ");
+		System.out.println("f1.var1 ë³€ê²½ í›„ ê°’: ");
 		System.out.println(f1.var1);		
 		
-		//»ó¼ö´Â º¯°æºÒ°¡
+		//ìƒìˆ˜ëŠ” ë³€ê²½ë¶ˆê°€
 		//f1.var2 = 300;	//ERROR:The final field FinalEx01.var2 cannot be assigned
-		System.out.println("final »ó¼ö(f1.var2) È£Ãâ: ");
+		System.out.println("final ìƒìˆ˜(f1.var2) í˜¸ì¶œ: ");
 		System.out.println(f1.var2);
 		
-		//STATIC»ó¼ö È£Ãâ
-		System.out.println("STATIC»ó¼ö(VAR3) È£Ãâ: ");
+		//STATICìƒìˆ˜ í˜¸ì¶œ
+		System.out.println("STATICìƒìˆ˜(VAR3) í˜¸ì¶œ: ");
 		System.out.println(VAR3);
 		
-		//»ó¼ö (Áö¿ªº¯¼ö »ó¼öÈ­)
+		//ìƒìˆ˜ (ì§€ì—­ë³€ìˆ˜ ìƒìˆ˜í™”)
 		final int NUM = 100;
-		System.out.println("Áö¿ªº¯¼ö¸¦ »ó¼öÈ­: ");
+		System.out.println("ì§€ì—­ë³€ìˆ˜ë¥¼ ìƒìˆ˜í™”: ");
 		System.out.println(NUM);
 	}
 

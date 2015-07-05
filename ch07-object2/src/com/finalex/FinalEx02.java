@@ -1,12 +1,12 @@
-/*¸Ş¼Òµå¿¡ final ÁöÁ¤*/
+/*ë©”ì†Œë“œì— final ì§€ì •*/
 
 package com.finalex;
 
 class Cont{
 	
-	//¸Ş¼­µå¿¡  finalÀ» ±âÀçÇÏ¸é »ó¼ÓÀº µÇÁö¸¸ ¸Ş¼Òµå ÀçÁ¤ÀÇ ºÒ°¡´É
+	//ë©”ì„œë“œì—  finalì„ ê¸°ì¬í•˜ë©´ ìƒì†ì€ ë˜ì§€ë§Œ ë©”ì†Œë“œ ì¬ì •ì˜ ë¶ˆê°€ëŠ¥
 	public final void play(){
-		System.out.println("ÇÃ·¹ÀÌ ¸Ş¼Òµå");
+		System.out.println("í”Œë ˆì´ ë©”ì†Œë“œ");
 	}
 }
 
@@ -16,7 +16,7 @@ public class FinalEx02 extends Cont{
 //	@Override
 	//	Cannot override the final method from Cont
 	/*public void play(){
-		System.out.println("ÀÚ½Ä Å¬·¡½ºÀÇ ÇÃ·¹ÀÌ ¸Ş¼Òµå");
+		System.out.println("ìì‹ í´ë˜ìŠ¤ì˜ í”Œë ˆì´ ë©”ì†Œë“œ");
 	}*/
 	
 	public static void main(String[] args) {

@@ -1,25 +1,25 @@
-/* ¿À¹ö¶óÀÌµù, 
- * ´ÙÇü¼ºÀ» ÀÌ¿ëÇÑ ¸Ş¼ÒµåÀÇ ÀÎÀÚ ÁöÁ¤*/
+/* ì˜¤ë²„ë¼ì´ë”©, 
+ * ë‹¤í˜•ì„±ì„ ì´ìš©í•œ ë©”ì†Œë“œì˜ ì¸ì ì§€ì •*/
 
 package com.ext4;
 
 class Product{
-	int price;		//Á¦Ç° °¡°İ
-	int bonusPoint;	//º¸³Ê½º Á¡¼ö
+	int price;		//ì œí’ˆ ê°€ê²©
+	int bonusPoint;	//ë³´ë„ˆìŠ¤ ì ìˆ˜
 	
 	public Product(int price){
 		this.price = price;
-		bonusPoint = price/10;	//Á¦Ç°°¡°İÀÇ 10%				
+		bonusPoint = price/10;	//ì œí’ˆê°€ê²©ì˜ 10%				
 	}
 	
 	public String getName(){
-		return "»óÇ°";		
+		return "ìƒí’ˆ";		
 	}	
 }
 
 class Tv extends Product{
 	public Tv(){
-		super(100);	//100¸¸¿ø		
+		super(100);	//100ë§Œì›		
 	}
 	
 	@Override
@@ -51,22 +51,22 @@ class Audio extends Product{
 }
 
 class Buyer{
-	int money = 1000;	//º¸À¯ ±İ¾×
-	int bonusPoint = 0;	//º¸À¯ º¸³Ê½º Æ÷ÀÎÆ®
+	int money = 1000;	//ë³´ìœ  ê¸ˆì•¡
+	int bonusPoint = 0;	//ë³´ìœ  ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸
 	
-	//Æ¯Á¤ Á¦Ç°Å¸ÀÔÀ» ¸í½ÃÇÑ °æ¿ì
+	//íŠ¹ì • ì œí’ˆíƒ€ì…ì„ ëª…ì‹œí•œ ê²½ìš°
 	//public void buy(Tv p){
 	
-	//ºÎ¸ğÅ¬·¡½º Å¸ÀÔÀ¸·Î ¸í½Ã
+	//ë¶€ëª¨í´ë˜ìŠ¤ íƒ€ì…ìœ¼ë¡œ ëª…ì‹œ
 	public void buy(Product p){
 		if(money < p.price){
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.");
-			//void ÇüÀÏ¶§¸¸ return;ÇÏ¸é ¹İº¹¹®ÀÌ Á¾·áµÈ´Ù.
+			System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ë¬¼ê±´ì„ ì‚´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+			//void í˜•ì¼ë•Œë§Œ return;í•˜ë©´ ë°˜ë³µë¬¸ì´ ì¢…ë£Œëœë‹¤.
 			return;
 		}
 		money -= p.price;
 		bonusPoint += p.bonusPoint;
-		System.out.println(p.getName() + "À»(¸¦) ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");		
+		System.out.println(p.getName() + "ì„(ë¥¼) êµ¬ì…í•˜ì…¨ìŠµë‹ˆë‹¤.");		
 	}
 }
 
@@ -74,33 +74,33 @@ public class PolyArgumentTest {
 
 	public static void main(String[] args) {
 		
-		//±¸¸ÅÀÚ »ı¼º
+		//êµ¬ë§¤ì ìƒì„±
 		Buyer b1 = new Buyer();
-		//Á¦Ç° »ı»ê
+		//ì œí’ˆ ìƒì‚°
 		Tv t1 = new Tv();
 		Computer c1 = new Computer();
 		Audio a1 = new Audio();
 		
-		System.out.println("º¸À¯ ±İ¾×Àº" + b1.money + "¸¸¿øÀÔ´Ï´Ù");
+		System.out.println("ë³´ìœ  ê¸ˆì•¡ì€" + b1.money + "ë§Œì›ì…ë‹ˆë‹¤");
 		
-		System.out.println("\n Æ¼ºêÀÌ ±¸¸Å:" + t1.price + "¸¸¿ø");
-		//TV ±¸¸Å
-		b1.buy(t1);		// Tv -> Product Å¸ÀÔÀ¸·Î ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
-		System.out.println("ÇöÀç ³²Àº µ·Àº" + b1.money + "¸¸¿øÀÔ´Ï´Ù");
-		System.out.println("ÇöÀç º¸³Ê½º Æ÷ÀÎÆ®´Â" + b1.bonusPoint + "Á¡ÀÔ´Ï´Ù");
-		//buy(Tv v) -> buy(Product p)·Î ¹Ù²ã¾ß ¸ğµç Á¦Ç°À» ±¸ÀÔÇÒ ¼ö ÀÖ½À´Ï´Ù.
+		System.out.println("\n í‹°ë¸Œì´ êµ¬ë§¤:" + t1.price + "ë§Œì›");
+		//TV êµ¬ë§¤
+		b1.buy(t1);		// Tv -> Product íƒ€ì…ìœ¼ë¡œ ìë™ì ìœ¼ë¡œ í˜•ë³€í™˜
+		System.out.println("í˜„ì¬ ë‚¨ì€ ëˆì€" + b1.money + "ë§Œì›ì…ë‹ˆë‹¤");
+		System.out.println("í˜„ì¬ ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ëŠ”" + b1.bonusPoint + "ì ì…ë‹ˆë‹¤");
+		//buy(Tv v) -> buy(Product p)ë¡œ ë°”ê¿”ì•¼ ëª¨ë“  ì œí’ˆì„ êµ¬ì…í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 		//b1.buy(c1);	//ERROR: The method buy(Tv) in the type Buyer is not applicable for the arguments (Computer)
 				
-		//COMPUTER±¸¸Å
-		System.out.println("\n ÄÄÇ»ÅÍ ±¸¸Å:" + c1.price + "¸¸¿ø");
-		b1.buy(c1);		// Computer -> Product Å¸ÀÔÀ¸·Î ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
-		System.out.println("ÇöÀç ³²Àº µ·Àº" + b1.money + "¸¸¿øÀÔ´Ï´Ù");
-		System.out.println("ÇöÀç º¸³Ê½º Æ÷ÀÎÆ®´Â" + b1.bonusPoint + "Á¡ÀÔ´Ï´Ù");
+		//COMPUTERêµ¬ë§¤
+		System.out.println("\n ì»´í“¨í„° êµ¬ë§¤:" + c1.price + "ë§Œì›");
+		b1.buy(c1);		// Computer -> Product íƒ€ì…ìœ¼ë¡œ ìë™ì ìœ¼ë¡œ í˜•ë³€í™˜
+		System.out.println("í˜„ì¬ ë‚¨ì€ ëˆì€" + b1.money + "ë§Œì›ì…ë‹ˆë‹¤");
+		System.out.println("í˜„ì¬ ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ëŠ”" + b1.bonusPoint + "ì ì…ë‹ˆë‹¤");
 		
-		//AUDIO±¸¸Å
-		System.out.println("\n ¿Àµğ¿À ±¸¸Å:" + a1.price + "¸¸¿ø");
-		b1.buy(a1);		// Audio  -> Product Å¸ÀÔÀ¸·Î ÀÚµ¿ÀûÀ¸·Î Çüº¯È¯
-		System.out.println("ÇöÀç ³²Àº µ·Àº" + b1.money + "¸¸¿øÀÔ´Ï´Ù");
-		System.out.println("ÇöÀç º¸³Ê½º Æ÷ÀÎÆ®´Â" + b1.bonusPoint + "Á¡ÀÔ´Ï´Ù");
+		//AUDIOêµ¬ë§¤
+		System.out.println("\n ì˜¤ë””ì˜¤ êµ¬ë§¤:" + a1.price + "ë§Œì›");
+		b1.buy(a1);		// Audio  -> Product íƒ€ì…ìœ¼ë¡œ ìë™ì ìœ¼ë¡œ í˜•ë³€í™˜
+		System.out.println("í˜„ì¬ ë‚¨ì€ ëˆì€" + b1.money + "ë§Œì›ì…ë‹ˆë‹¤");
+		System.out.println("í˜„ì¬ ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ëŠ”" + b1.bonusPoint + "ì ì…ë‹ˆë‹¤");
 	}
 }

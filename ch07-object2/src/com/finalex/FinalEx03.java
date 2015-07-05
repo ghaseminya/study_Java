@@ -1,8 +1,8 @@
-/* Å¬·¡½º¿¡ final Àû¿ë
+/* í´ëž˜ìŠ¤ì— final ì ìš©
  * 
- * JAVA API¿¡¼­ finalÀû¿ë ¿¹)
- * JAVAÀÇ ±âº»Å¬·¡½º´Â »ó¼Ó ¾È ½ÃÅ°°Ô ÇÏ¿´½À´Ï´Ù. 
- * ¿Ö³ÄÇÏ¸é. ¿øÇü ±×´ë·Î »ç¿ëÇÏ°Ô ÇÏ±â À§ÇØ¼­ ÀÔ´Ï´Ù. (±âº»ÀûÀÎ Ã³¸®)
+ * JAVA APIì—ì„œ finalì ìš© ì˜ˆ)
+ * JAVAì˜ ê¸°ë³¸í´ëž˜ìŠ¤ëŠ” ìƒì† ì•ˆ ì‹œí‚¤ê²Œ í•˜ì˜€ìŠµë‹ˆë‹¤. 
+ * ì™œëƒí•˜ë©´. ì›í˜• ê·¸ëŒ€ë¡œ ì‚¬ìš©í•˜ê²Œ í•˜ê¸° ìœ„í•´ì„œ ìž…ë‹ˆë‹¤. (ê¸°ë³¸ì ì¸ ì²˜ë¦¬)
  * public final class String
  * public final class System
  *  
@@ -11,7 +11,7 @@
 
 package com.finalex;
 
-//Å¬·¡½º¿¡ finalÀ» ¸í½ÃÇÏ¸é »ó¼ÓµÇÁö ¾Ê½À´Ï´Ù.
+//í´ëž˜ìŠ¤ì— finalì„ ëª…ì‹œí•˜ë©´ ìƒì†ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 /*final class Me{
 	int a = 100;
 }*/

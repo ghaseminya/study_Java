@@ -1,5 +1,5 @@
-/* »ó¼ÓÈÄ ¿À¹ö¶óÀÌµù / ¾÷ ÄÉ½ºÆÃ
- * ¹®¹ı ±ÔÄ¢) »ó¼Ó½Ã ¸Ş¼Òµå ¿À¹ö¶óÀÌµù µÇ¾î ÀÖÀ¸¸é È®ÀåµÇ¾î ÀÖ´Â °ÍÀÌ È£ÃâµÈ´Ù.
+/* ìƒì†í›„ ì˜¤ë²„ë¼ì´ë”© / ì—… ì¼€ìŠ¤íŒ…
+ * ë¬¸ë²• ê·œì¹™) ìƒì†ì‹œ ë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë”© ë˜ì–´ ìˆìœ¼ë©´ í™•ì¥ë˜ì–´ ìˆëŠ” ê²ƒì´ í˜¸ì¶œëœë‹¤.
  * 
  * 
  * */
@@ -9,7 +9,7 @@ package com.ext3;
 class Parent3{
 	int a = 100;
 	public void play(){
-		System.out.println("ºÎ¸ğ Å¬·¡½º");
+		System.out.println("ë¶€ëª¨ í´ë˜ìŠ¤");
 	}
 }
 
@@ -18,7 +18,7 @@ class Child3 extends Parent3{
 
 	@Override
 	public void play(){
-		System.out.println("ÀÚ½Ä Å¬·¡½º");
+		System.out.println("ìì‹ í´ë˜ìŠ¤");
 	}
 }
 
@@ -30,8 +30,8 @@ public class Exten03 {
 		System.out.println(ch3.a);
 		ch3.play();
 		
-		System.out.println("\n¾÷ÄÉ½ºÆÃ: ");
-		//ºÎ¸ğ Å¬·¡½º Å¸ÀÔÀ¸·Î
+		System.out.println("\nì—…ì¼€ìŠ¤íŒ…: ");
+		//ë¶€ëª¨ í´ë˜ìŠ¤ íƒ€ì…ìœ¼ë¡œ
 		Parent3 np3 = ch3;
 		System.out.println(np3.a);
 		np3.play();

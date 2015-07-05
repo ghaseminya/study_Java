@@ -1,19 +1,19 @@
-/* ºÎ¸ğ Å¬·¡½º Á¤ÀÇ
+/* ë¶€ëª¨ í´ë˜ìŠ¤ ì •ì˜
  * 
- * ÀÚ½ÄÅ¬·¡½º(Protoss, Terran, Zerg)¿¡¼­ 
-»ó¼Ó¹ŞÀ» ºÎ¸ğ Å¬·¡½º¸¦ Á¤ÀÇÇÕ´Ï´Ù.*/
+ * ìì‹í´ë˜ìŠ¤(Protoss, Terran, Zerg)ì—ì„œ 
+ìƒì†ë°›ì„ ë¶€ëª¨ í´ë˜ìŠ¤ë¥¼ ì •ì˜í•©ë‹ˆë‹¤.*/
 
 package com.abs2;
 
-//Ãß»ó Å¬·¡½º: ºÎ¸ğ ¿ªÇÒ¸¸
+//ì¶”ìƒ í´ë˜ìŠ¤: ë¶€ëª¨ ì—­í• ë§Œ
 public abstract class Unit {
 	protected String name;
 	protected int energy;
 	
-	//Ãß»ó ¸Ş¼Òµå: ÀçÁ¤ÀÇ ÇÊ¼ö
+	//ì¶”ìƒ ë©”ì†Œë“œ: ì¬ì •ì˜ í•„ìˆ˜
 	abstract public void decEnergy();
 	
-	//ÀÏ¹İ ¸Ş¼Òµå: ÀçÁ¤ÀÇ ¼±ÅÃÀû
+	//ì¼ë°˜ ë©”ì†Œë“œ: ì¬ì •ì˜ ì„ íƒì 
 	public int getEnergy(){
 		return energy;
 	}

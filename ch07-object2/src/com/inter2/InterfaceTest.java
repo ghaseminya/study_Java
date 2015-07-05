@@ -1,13 +1,13 @@
-/* ÀÎÅÍÆäÀÌ½º - Ç¥ÁØÈ­
+/* ì¸í„°íŽ˜ì´ìŠ¤ - í‘œì¤€í™”
  * 
- * ÀÎÅÍÆäÀÌ½º¸¦ ÅëÇØ Ç¥ÁØÈ­ÇØ¼­ ÀÚ·áÇüÀ¸·Î »ç¿ë
- * ÀÏ¹ÝÀûÀ¸·Î ÀÎÅÍÆäÀÌ½ºÅëÇØ Ç¥ÁØÈ­¸¦ ¸¹ÀÌ ÇÕ´Ï´Ù.
+ * ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ í†µí•´ í‘œì¤€í™”í•´ì„œ ìžë£Œí˜•ìœ¼ë¡œ ì‚¬ìš©
+ * ì¼ë°˜ì ìœ¼ë¡œ ì¸í„°íŽ˜ì´ìŠ¤í†µí•´ í‘œì¤€í™”ë¥¼ ë§Žì´ í•©ë‹ˆë‹¤.
  * 
- * ÀÎÅÍÆäÀÌ½º »ý¼º
- * Å¬·¡½º1, 2 »ý¼º
- * Å¬·¡½º1, 2 ¿¡¼­ ÀÎÅÍÆäÀÌ½º ±¸Çö
- * Å¬·¡½º3¿¡¼­ ÀÎÅÍÆäÀÌ½º ÀÚ·áÇüÀ¸·Î ¸Þ¼Òµå Ã³¸®
- * Å¬·¡½º3 °´Ã¼ »ý¼º ÈÄ È£Ãâ
+ * ì¸í„°íŽ˜ì´ìŠ¤ ìƒì„±
+ * í´ëž˜ìŠ¤1, 2 ìƒì„±
+ * í´ëž˜ìŠ¤1, 2 ì—ì„œ ì¸í„°íŽ˜ì´ìŠ¤ êµ¬í˜„
+ * í´ëž˜ìŠ¤3ì—ì„œ ì¸í„°íŽ˜ì´ìŠ¤ ìžë£Œí˜•ìœ¼ë¡œ ë©”ì†Œë“œ ì²˜ë¦¬
+ * í´ëž˜ìŠ¤3 ê°ì²´ ìƒì„± í›„ í˜¸ì¶œ
  * */
 
 
@@ -20,19 +20,19 @@ interface I{
 class B implements I{
 	@Override
 	public void play(){
-		System.out.println("BÅ¬·¡½ºÀÇ play");
+		System.out.println("Bí´ëž˜ìŠ¤ì˜ play");
 	}	
 }
 
 class C implements I{
 	@Override
 	public void play(){
-		System.out.println("CÅ¬·¡½ºÀÇ play");
+		System.out.println("Cí´ëž˜ìŠ¤ì˜ play");
 	}	
 }
 
 class Z{
-	//ÀÎÅÍÆäÀÌ½º¸¦ ÀÚ·áÇüÀ¸·Î Àü´Þ
+	//ì¸í„°íŽ˜ì´ìŠ¤ë¥¼ ìžë£Œí˜•ìœ¼ë¡œ ì „ë‹¬
 	public void autoPlay(I i){
 		i.play();		
 	}
@@ -43,8 +43,8 @@ public class InterfaceTest {
 	public static void main(String[] args) {
 		
 		Z zp = new Z();
-		zp.autoPlay(new B());	// B -> I ÀÚµ¿ Çüº¯È¯
-		zp.autoPlay(new C());	// C -> I ÀÚµ¿ Çüº¯È¯
+		zp.autoPlay(new B());	// B -> I ìžë™ í˜•ë³€í™˜
+		zp.autoPlay(new C());	// C -> I ìžë™ í˜•ë³€í™˜
 	}
 
 }
