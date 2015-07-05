@@ -1,5 +1,5 @@
 /*
-System.out.printlnÀÇ È°¿ë
+System.out.printlnì˜ í™œìš©
 */
 
 public class PrintlnEx {
@@ -9,10 +9,10 @@ public class PrintlnEx {
 		System.out.println(10);
 		System.out.println(-10);
 		System.out.println(3.14);
-		System.out.println(3.14 + "´Â ½Ç¼öÀÔ´Ï´Ù.");
+		System.out.println(3.14 + "ëŠ” ì‹¤ìˆ˜ì…ë‹ˆë‹¤.");
 		System.out.println("10+20=" + 30);
-		System.out.println("10+20" + "ÀÇ ¿¬»ê°á°ú´Â 30ÀÔ´Ï´Ù.");
-		System.out.println("ÀÚ¹Ù " + "¿­°ø Áß");
+		System.out.println("10+20" + "ì˜ ì—°ì‚°ê²°ê³¼ëŠ” 30ì…ë‹ˆë‹¤.");
+		System.out.println("ìë°” " + "ì—´ê³µ ì¤‘");
 		System.out.println(10+20);
 		System.out.println(10*20);
 		System.out.println(10/20);

@@ -3,19 +3,19 @@ public class Basic {
 	public static void main(String[] args){
 		
 		
-		//ÇÑÁÙ ÁÖ¼®
-		//System.out.println("ÇÑÁÙ ÁÖ¼® ´Ş±â");
+		//í•œì¤„ ì£¼ì„
+		//System.out.println("í•œì¤„ ì£¼ì„ ë‹¬ê¸°");
 		
-		/*¿©·¯ÁÙ ÁÖ¼®
+		/*ì—¬ëŸ¬ì¤„ ì£¼ì„
 		
-		ÆÄÀÏÀÌ¸§: Basic.java
-		ÀÛ¼ºÀÚ: CodeDragon
-		°­ÀÇ³»¿ë: ÁÖ¼®¹® È®ÀÎ
-		System.out.println("´ÙÇà ÁÖ¼® ´Ş±â");
+		íŒŒì¼ì´ë¦„: Basic.java
+		ì‘ì„±ì: CodeDragon
+		ê°•ì˜ë‚´ìš©: ì£¼ì„ë¬¸ í™•ì¸
+		System.out.println("ë‹¤í–‰ ì£¼ì„ ë‹¬ê¸°");
 		
 		*/
 		 		 
-		System.out.println("ÁÖ¼® ´Ş±â");
+		System.out.println("ì£¼ì„ ë‹¬ê¸°");
 		
 	}
 

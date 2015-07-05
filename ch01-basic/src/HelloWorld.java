@@ -1,5 +1,5 @@
 /*
- * eclipse¿¡¼­ ÇÁ·ÎÁ§Æ® »ı¼º ÈÄ Hello WorldÃâ·Â ¿¬½À
+ * eclipseì—ì„œ í”„ë¡œì íŠ¸ ìƒì„± í›„ Hello Worldì¶œë ¥ ì—°ìŠµ
 */
 
 public class HelloWorld {
