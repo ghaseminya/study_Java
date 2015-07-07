@@ -19,5 +19,4 @@ public class PrintlnEx {
 		System.out.println(10-20);
 
 	}
-
 }
