@@ -1,13 +1,13 @@
-/*
-서로 다른 인스턴스의 생성은, 인스턴스 변수의 초기화라는 문제
 
-해결방법
-	• 생성자 함수를 통해 인스턴스 생성시 초기화 수행
-	• AppleMarket03
+//서로 다른 인스턴스의 생성은, 인스턴스 변수의 초기화라는 문제
+//
+//해결방법
+//	• 생성자 함수를 통해 인스턴스 생성시 초기화 수행
+//	• AppleMarket03
 
-*/
 
-/*
+
+
 public class AppleMarket02 {
 
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class AppleMarket02 {
 		AppleSeller seller1 = new AppleSeller();
 		AppleSeller seller2 = new AppleSeller();
 		
-		//멤버변수 초기화하기 위한 함수 호출
+		//멤버변수 초기화하기 위한 함수 호출 (인스턴스 생성후 매번 초기화 해주어야 하는 문제 발생)
 		seller1.initSeller(0, 20, 2500);
 		seller2.initSeller(0, 50, 1000);
 		
@@ -83,4 +83,3 @@ class AppleBuyer
 		System.out.println("사과 개수: " + numOfApple);		
 	}
 }
-*/

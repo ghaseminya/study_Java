@@ -37,13 +37,13 @@ public class MyClass {
 		name =n;		
 	}
 
-	public String getName(){
-		return name;
-	}
-	
 	public void setAge(int a){
 		age = a;
 	}
+	
+	public String getName(){
+		return name;
+	}	
 	
 	public int getAge(){
 		return age;

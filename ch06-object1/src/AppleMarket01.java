@@ -1,6 +1,6 @@
 /*
 //객체 이해
-*/
+
 
 
 public class AppleMarket01 {
@@ -30,34 +30,30 @@ class AppleSeller{
 	//final		: 변수 -> 상수화
 	final int APPLE_PRICE=1000;
 	
-	public int saleApple(int money)
-	{
+	public int saleApple(int money)	{
 		int num=money/APPLE_PRICE;
 		numOfApple-=num;
 		myMoney+=money;
 		return num;
 	}
-	public void showSaleResult()
-	{
+	public void showSaleResult() {
 		System.out.println("보유 사과: " + numOfApple);
 		System.out.println("판매 수익: " + myMoney);
 	}
 }
 
 
-class AppleBuyer
-{
+class AppleBuyer{
 	int myMoney=10000;	//보유 금액
 	int numOfApple=0;	//보유 사과 수
 	
-	public void buyApple(AppleSeller seller, int money)
-	{
+	public void buyApple(AppleSeller seller, int money)	{
 		numOfApple+=seller.saleApple(money);
 		myMoney-=money;
 	}
-	public void showBuyResult()
-	{
+	public void showBuyResult()	{
 		System.out.println("보유 금액: " + myMoney);
 		System.out.println("사과 개수: " + numOfApple);		
 	}
 }
+*/

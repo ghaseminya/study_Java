@@ -1,13 +1,12 @@
-/*
-인자값이 있는 생성자를 통한 초기화
--생성자를 통한 원하는 값으로 초기화
-*/
+
+//인자값이 있는 생성자를 통한 초기화
+//-생성자를 통한 원하는 값으로 초기화
+
 
 
 public class ObjectEx03 {
 	
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
 		//인스턴스 생성
 		Number myNumber1=new Number(10);
 		//new Number	: 인스턴스 생성 의미
@@ -23,34 +22,30 @@ public class ObjectEx03 {
 		System.out.println("myNumber2 메소드 호출 후 값: "+myNumber2.getNumber());
 	}
 
-	public static void instMethod(Number number)
-	{
+	public static void instMethod(Number number){
 		number.addNum(10);
 	}		
 	
 }
 
 //클래스 정의(설계)
-class Number
-{
+class Number{
 	//멤버변수 = 인스턴스 변수
 	int num;
 	
 	//인자값이 있는 생성자 정의
-	public Number(int number)
-	{
+	public Number(int number){
 		num=number;
 		System.out.println("생성자 호출됨!");
 		System.out.println("전달된 인자값: "+number);
 	}
 	
 	//멤버 메소드 = 인스턴스 메소드
-	public void addNum(int n)
-	{
+	public void addNum(int n){
 		num+=n;
 	}
-	public int getNumber()
-	{
+	
+	public int getNumber()	{
 		return num;
 	}
 }

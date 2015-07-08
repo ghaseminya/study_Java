@@ -1,13 +1,13 @@
 /*
 //생성자 함수 정의 및 인스턴시 생성시 생성자 함수 호출
+//AppleMarket02.java에서 매번 인스턴스 변수를 초기화 주어야 하는 문제 해결
 
-*/
 
-/*
+
 public class AppleMarket03 {
 	public static void main(String[] args) {
 
-		//인스턴스 생성시 생성자 호출하여 초기화 수행
+		//인스턴스 생성시 생성자 호출하여 초기화 수행 (AppleMarket02.java 문제 해결)
 		AppleSeller seller1 = new AppleSeller(0, 20, 2500);
 		AppleSeller seller2 = new AppleSeller(0, 50, 1000);
 
@@ -41,23 +41,21 @@ class AppleSeller{
 //	2) return Type이 전혀 정의되지 않으며, 반환하지 않는 메소드 입니다
 //	3) 인스턴스 생성시 생성자는 반드시 호출됩니다.
 	
-	//생성자 정의
-	public AppleSeller(int money, int appleNumber, int price)
-	{
+	//생성자 정의, 인스턴시 생성시 인자값 전찰을 통해 초기화된 참조변수가 만들어집니다.
+	public AppleSeller(int money, int appleNumber, int price){
 		myMoney=money;
 		numOfApple=appleNumber;
 		APPLE_PRICE=price;
 	}
 	
-	public int saleApple(int money)
-	{
+	public int saleApple(int money)	{
 		int num=money/APPLE_PRICE;
 		numOfApple-=num;
 		myMoney+=money;
 		return num;
 	}
-	public void showSaleResult()
-	{
+	
+	public void showSaleResult(){
 		System.out.println("보유 사과: " + numOfApple);
 		System.out.println("판매 수익: " + myMoney);
 	}
@@ -65,18 +63,16 @@ class AppleSeller{
 }
 
 
-class AppleBuyer
-{
+class AppleBuyer{
 	int myMoney=10000;	//보유 금액
 	int numOfApple=0;	//보유 사과 수
 	
-	public void buyApple(AppleSeller seller, int money)
-	{
+	public void buyApple(AppleSeller seller, int money)	{
 		numOfApple+=seller.saleApple(money);
 		myMoney-=money;
 	}
-	public void showBuyResult()
-	{
+	
+	public void showBuyResult()	{
 		System.out.println("보유 금액: " + myMoney);
 		System.out.println("사과 개수: " + numOfApple);		
 	}
