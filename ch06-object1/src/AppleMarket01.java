@@ -1,8 +1,8 @@
 /*
-객체 이해
+//객체 이해
 */
 
-/*
+
 public class AppleMarket01 {
 
 	public static void main(String[] args) {
@@ -10,8 +10,9 @@ public class AppleMarket01 {
 		//참조변수의 선언 = 인스턴스 생성
 		AppleSeller seller = new AppleSeller();
 		AppleBuyer buyer = new AppleBuyer();
+		
 		//메소드 호출	: 메소드 호출을 통해 메시지 전달하는 것을 의미, 메소드 전달은 두 객체간의 대화방법입니다.
-		buyer.buyApple(seller, 2000);	//사자 판매자에게 2,000원어치 사과 구매 요청
+		buyer.buyApple(seller, 2000);	//사과 판매자에게 2,000원어치 사과 구매 요청
 		
 		System.out.println("사과 판매자의 현재 상태");
 		seller.showSaleResult();
@@ -60,4 +61,3 @@ class AppleBuyer
 		System.out.println("사과 개수: " + numOfApple);		
 	}
 }
-*/

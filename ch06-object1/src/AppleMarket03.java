@@ -1,8 +1,9 @@
 /*
-생성자 함수 정의 및 인스턴시 생성시 생성자 함수 호출
+//생성자 함수 정의 및 인스턴시 생성시 생성자 함수 호출
 
 */
 
+/*
 public class AppleMarket03 {
 	public static void main(String[] args) {
 
@@ -80,3 +81,5 @@ class AppleBuyer
 		System.out.println("사과 개수: " + numOfApple);		
 	}
 }
+
+*/
