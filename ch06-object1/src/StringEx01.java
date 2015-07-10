@@ -5,8 +5,7 @@ String클래스의 인스턴스 생성
 
 public class StringEx01 {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args)	{
 //JAVA는 큰 따옴표(")로 묶여서 표현되는 문자열을 모두 인스턴스화 합니다.
 //문자열은 String 이라는 이름의 클래스로 표현됩니다
 
