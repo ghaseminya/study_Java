@@ -11,7 +11,7 @@ public class MethodEx04 {
 	/*가변인자 : Variable Arguements
 	JDK v5.0이상부터 사용가능*/	
 	//타입은 일지하고 인자의 갯수가 가변적
-	public void argTest(int ... n){	//인자전달하면 배열을 만든후 배열에 저장하고 그 주소값을 n으로 입력받는다.
+	public void argsTest(int ... n){	//인자전달하면 배열을 만든후 배열에 저장하고 그 주소값을 n으로 입력받는다.
 		
 		for(int i=0; i<n.length; i++){
 			System.out.println("n[" + i+ "] :" + n[i]);			
@@ -34,10 +34,10 @@ public class MethodEx04 {
 		
 		System.out.println();
 		//가변인자를 사용하는 메서드 호출
-		m.argTest(50, 60, 70);
-		m.argTest(22, 33);
-		m.argTest(11);
-		m.argTest(100, 200, 300, 400, 500, 600);
-		m.argTest();
+		m.argsTest(50, 60, 70);
+		m.argsTest(22, 33);
+		m.argsTest(11);
+		m.argsTest(100, 200, 300, 400, 500, 600);
+		m.argsTest();
 	}
 }

@@ -11,16 +11,19 @@ public class MethodEx03 {
 		}		
 	}	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		int[] ref = {100, 200, 300};
+		
 		for(int i=0; i<ref.length; i++){
 			System.out.println(ref[i]);
 		}
 		
 		System.out.println();
 		System.out.println("===============================");		
-		MethodEx03 m = new MethodEx03();		
+		MethodEx03 m = new MethodEx03();
+		
 		m.increase(ref);	//주소를 인자로전달
+		
 		for(int i=0; i<ref.length; i++){
 			System.out.println(ref[i]);
 		}

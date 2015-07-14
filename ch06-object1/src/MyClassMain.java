@@ -1,5 +1,6 @@
 /* 은닉화, 캡슐화 - 클래스 분리
  * 
+ * File Info
  * MyClass.java
  * MyClassMain.java
  * */
@@ -12,8 +13,8 @@ public class MyClassMain {
 		MyClass mc1 = new MyClass();		
 		
 		//접근지정자가 private이기 때문에 호출 불가능 (은닉화되어 있음)
-		//mc1.name = "홍길동";
-		//mc1.age = 18;
+		//mc1.name = "홍길동";	// ERROR-he field MyClass.name is not visible
+		//mc1.age = 18;			// ERROR-he field MyClass.name is not visible
 		
 		//메소드(method)를 통해서만 접근가능
 		mc1.setName("홍길동");
