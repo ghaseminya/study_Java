@@ -1,16 +1,18 @@
 /* 메서드 오버로딩
  * 
- * */
+메서드 오버로딩: 기능이 같은 메서드를 여러개 만들 때 사용함 (오보로딩할 멤버메소드 들에 대한 규칙)
+- 메서드 명은 같고 인자의 타입을 다르게 명시
+- 타입이 같으면 인자의 갯수를 다르게 명시
+- 갯수가 같으면 순서를 다르게 명시
+
+
+*/
 
 public class OverloadingEx01 {	
 	//멤버변수
 	int var1;	
 	
-	/*멤버메서드
-	메서드 오버로딩: 기능이 같은 메서드를 여러개 만들 때 사용함
-	- 메서드 명은 같고 인자의 타입을 다르게 명시
-	- 타입이 같으면 인자의 갯수를 다르게 명시
-	- 갯수가 같으면 순서를 다르게 명시*/
+	//멤버메서드
 	public void getLength(int n){
 					//int -> Sting
 		String s = String.valueOf(n);
@@ -18,7 +20,7 @@ public class OverloadingEx01 {
 	}
 	
 	//ERROR: Duplicate method getLength(int)in type OverloadingTest
-	// 인자명은 같아도 상관없으나 자료형이 달라야 한다.
+	// 인자명은 같아도 상관없으나 자료형이 달라야 합니다.
 //	public void getLength(int a){
 //	}
 	

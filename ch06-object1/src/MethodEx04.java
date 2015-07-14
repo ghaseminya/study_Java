@@ -1,5 +1,10 @@
 /* 가변인자 : Variable Arguements 
- * */
+
+Varargs를 제외하고 자바에서 인자 전달시 전달하는 인자가 복사되어 전달됩니다. (값 복사, 주소 복사)
+JDK5.0 이전에는 특정 메서드를 정의할 때 인자(argument)의 타입과 수를 정해 두고 호출 시 전달되는 인자(argument)의 수가 일치하지 않을 경우에는 메서드를 호출할 수가 없었습니다(Error)
+이런 문제를 해결하기 위해 메서드의 이름은 같지만 인자의 수가 다른 여러 개의 메서드를 정의하는 메서드오버로딩(Overloading) 또는 메서드 정의 시에 배열객체를 인자로 지정하여 주였습니다.
+이 경우 매번 호출 시에 배열화 작업을 해주어야 하는 불편함이 있었습니다.이런 문제점이 JDK v5.0이상부터 Varargs기능으로 해결 되었다.
+* */
 
 public class MethodEx04 {
 	
@@ -31,6 +36,7 @@ public class MethodEx04 {
 		//전달되는 인자의 타입이 불일치
 //		m.getNum(5.6);	//ERROR: The method getNum(int) in the type MethodTest04 is not applicable for the arguments (double)
 		m.getNum( (int)5.6);
+		
 		
 		System.out.println();
 		//가변인자를 사용하는 메서드 호출
