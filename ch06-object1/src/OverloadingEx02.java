@@ -8,9 +8,9 @@ public class OverloadingEx02 {
 	public static void main(String[] args) {
 		OverloadingEx02 oe1 = new OverloadingEx02();
 
+		//개별적으로 함수 호출
 		oe1.intLength(1000);
 		oe1.floatLength(3.14f);
-
 		oe1.stringLength("10000");
 	}
 
@@ -27,5 +27,4 @@ public class OverloadingEx02 {
 		System.out.println("입력한 값의 길이 : " + str.length());
 
 	}
-
 }

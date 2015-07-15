@@ -1,4 +1,8 @@
 
+//생성자 오버로딩
+//인자값을 가진 생성자를 통해 다양한 인스턴스 생성
+
+
 public class OverloadingEx04 {
 
 	public static void main(String[] args) {
@@ -10,13 +14,10 @@ public class OverloadingEx04 {
 		man.showInfo();
 		idol.showInfo();
 	}
-
 }
 
 
-class Person
-{
-
+class Person{
 	private String personName;
 	private int personID;
 	private int personAge;
@@ -42,7 +43,10 @@ class Person
 			System.out.println("당신의 ID: "+ personID);
 			System.out.println("입장하세요\n");
 		}
-		else
+		else{
+			System.out.println("당신의 나이는: "+ personAge);
 			System.out.println("미성년자 입니다 \n");
+		}
+			
 	}
 }

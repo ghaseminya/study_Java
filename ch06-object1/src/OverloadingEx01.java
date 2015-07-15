@@ -4,8 +4,6 @@
 - 메서드 명은 같고 인자의 타입을 다르게 명시
 - 타입이 같으면 인자의 갯수를 다르게 명시
 - 갯수가 같으면 순서를 다르게 명시
-
-
 */
 
 public class OverloadingEx01 {	
@@ -29,7 +27,8 @@ public class OverloadingEx01 {
 		String s = String.valueOf(f);
 		getLength(s);
 	}
-	
+
+	//접근지정자를 public에서 void로 바꿔
 	//지정자를 다르게 하더라도 메서드 오버로딩에서는 다르게 인식 되지 않습니다.
 	/*void getLength(float f){
 		//float -> Sting
@@ -69,11 +68,14 @@ public class OverloadingEx01 {
 	}
 	
 	
-	/*private void getLength(String str){		
+	//접근지정자와 반환형를 다르게 하더라도 메서드 오버로딩에서는 다르게 인식 되지 않습니다.
+	/*
+	private void getLength(String str){		
 	System.out.println("입력한 값의 길이: " + str.length());
 	}	*/
 	
-	/*public int getLength(String str){		
+	/*
+	public int getLength(String str){		
 		System.out.println("입력한 값의 길이: " + str.length());
 		return 0;
 	}	*/
