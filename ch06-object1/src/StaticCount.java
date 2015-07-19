@@ -1,7 +1,8 @@
 /* static 변수
  * 
- * StaticCount
- * StaticEx01 * 
+ * FileInfo
+ * StaticCount.java
+ * StaticEx01.java 
  * */
 
 
