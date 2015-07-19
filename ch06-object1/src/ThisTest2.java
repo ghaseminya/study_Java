@@ -1,4 +1,4 @@
-/* 멤버변수와 지역변수 구분하기
+/* 멤버변수와 지역변수 구분하기 (this)
  * 
  */
 
@@ -21,11 +21,11 @@ public class ThisTest2 {
 	public ThisTest2(String name, int age){
 		//멤버변수	= 지역변수
 		this.name 	= name;
-		this.age 	= age;		
+		this.age 	= age;	
+		//this.name이라고 하게 되면 ThisTest2()함수안에 있는 name이 아니라 클래스의 멤버인 name을 지칭합니다.
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ThisTest2 tt1 = new ThisTest2("마징가",  25);
 		System.out.println( tt1.name + " / " + tt1.age );
 	}

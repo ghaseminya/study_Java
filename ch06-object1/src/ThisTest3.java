@@ -1,4 +1,4 @@
-/* 생성자 호출을 통한 초기화 
+/* 생성자 호출을 통한 초기화 ( this() )
  
  */
 
@@ -10,7 +10,7 @@ public class ThisTest3 {
 		
 		//생성자내에서 또 다른 생성자를 호출하는 것도 초기화 작업 임
 		//초기화 작업 전에 수행문이 있으면 ERROR:Constructor call must be the first statement in a constructor
-		//System.out.println("생성자 호출 전 수행문 호출(ERROR)");
+//		System.out.println("생성자 호출 전 수행문 호출(ERROR)");
 	
 		//생성자내에서 또 다른 생성자 호출
 		this("인자없는 생성자 ");
@@ -25,7 +25,7 @@ public class ThisTest3 {
 					//int -> String
 		//String	s = String.valueOf(a);
 		//System.out.println(s);
-		this(String.valueOf(a));		
+		this(String.valueOf(a));	//생성자내에서 또 다른 생성자를 호출하는 것도 초기화 작업 임	
 	}	
 
 	public static void main(String[] args) {
