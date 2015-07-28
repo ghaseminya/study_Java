@@ -1,7 +1,4 @@
-/* 객체 생성
- * 
- */
-
+//객체 생성 - 객체에 데이터 저장 후 출력하기
 
 public class Student1 {	
 	
@@ -18,7 +15,7 @@ public class Student1 {
 		Student1 student1 = new Student1();		
 		System.out.println(student1);
 		
-		//객체가 생성안된 경우 null/0인 기본값이 츨력됩니다. 
+		//객체가 생성안된 경우 null/0인 기본값이 츨력됩니다.
 		System.out.println(student1.name);
 		System.out.println(student1.age);
 		
@@ -40,5 +37,4 @@ public class Student1 {
 		System.out.println(newstudent.name);
 		System.out.println(newstudent.age);
 	}
-
 }

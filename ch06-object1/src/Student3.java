@@ -1,8 +1,6 @@
-/* 객체 생성 - 멤버 메소드 호출
- * 
- * 입력받아서 처리하기
- * 
- */
+//객체 생성 - 멤버 메소드 호출
+//데이터를 표준입력받아서 처리하기
+
 
 public class Student3 {	
 	
@@ -27,7 +25,6 @@ public class Student3 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
@@ -41,6 +38,9 @@ public class Student3 {
 		
 		nStu.gPrint("수학 점수를 입력하세요 > ");
 		nStu.math = input.nextInt();
+		
+		input.close();	//자원 해제
+		
 		
 		System.out.println();
 		nStu.gPrint("국어 점수: " + nStu.korean);

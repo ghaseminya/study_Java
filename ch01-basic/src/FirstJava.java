@@ -9,6 +9,6 @@ public class FirstJava		// 클래스 명 FirstJava
 		System.out.println("Hello World!!!");
 		System.out.println("안녕 자바월드!!");
 		System.out.println("First Java");
-		//System.out.println(): Sytem 클래스의 멤버 out이 참조하는 인스턴스의 println 메소드를 호출하는 문장
+		//System.out.println(): System 클래스의 멤버 out이 참조하는 인스턴스의 println() 메소드를 호출하는 문장
 	}
 }

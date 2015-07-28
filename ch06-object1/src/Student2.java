@@ -1,6 +1,4 @@
-/* 객체 생성 - 멤버 메소드 호출
- * 
- */
+//객체 생성 - 멤버 메소드 호출
 
 public class Student2 {	
 	
@@ -41,11 +39,13 @@ public class Student2 {
 				"총점" + "\t" + 
 				"평균");
 		
+		
 		System.out.println(student.name + "\t" +  
 				student.korean + "\t" + 
 				student.math + "\t" + 
 				student.english + "\t" + 
 				student.sum + "\t" + 
 				student.avg);
+		
 	}
 }
