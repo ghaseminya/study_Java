@@ -1,6 +1,5 @@
-/* 상속 - 멤버 메소드
- * 
- */
+// 상속 - 멤버 메소드
+// 부모 클래스와 자식클래스의 메소드 호출
 
 package com.ext1;
 
@@ -23,7 +22,10 @@ public class Exten02 {
 	public static void main(String[] args){
 		
 		B bb = new B();
+		
+		//부모 클래스의 메소드 호출
 		bb.make();
+		//자식 클래스의 메소드 호출
 		bb.fun();		
 	}
 }

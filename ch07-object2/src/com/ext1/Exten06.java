@@ -1,15 +1,13 @@
-/*
-상위클래스의 static 변수
-	• static 변수는 접근의 허용여부와 관계가 있습니다.
-	• 상위 클래스의 static 변수에 하위 클래스도 그냥 이름만으로 접근이 가능합니다.
+//상위클래스의 static 변수
+//	• static 변수는 접근의 허용여부와 관계가 있습니다.
+//	• 상위 클래스의 static 변수에 하위 클래스도 그냥 이름만으로 접근이 가능합니다.
 
-*/
 package com.ext1;
 
 
 class Money
 {
-	public static int balance=0;	//static멤버변수, 
+	public static int balance=0;	//static멤버변수 
 	//static멤버변수는 접근 허용여부와 관련이 있으며 하위 클래스에도 그냥 이름만으로 접근 가능
 
 	public void addMoney(int num){
@@ -41,7 +39,14 @@ public class Exten06 {
 		saveMoney.saveMoney(2000);
 		saveMoney.showMoney();
 		
-		SaveMoney.balance+=500;		
+		SaveMoney.balance+=500;	//직접접근		
 		saveMoney.showMoney();
+		
+		Money.balance+=22;		//직접접근
+		saveMoney.showMoney();
+
+		//아래도 가능
+//		money.balance+=10;
+//		saveMoney.showMoney();
 	}
 }

@@ -1,9 +1,9 @@
-/* static 변수
- * 
- * FileInfo
- * StaticCount.java
- * StaticEx01.java 
- * */
+//static 변수
+ 
+// FileInfo
+//StaticCount.java	static 변수 선언
+//StaticEx01.java	Static 변수 호출
+  
 
 
 public class StaticCount {

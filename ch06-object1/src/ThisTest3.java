@@ -1,6 +1,5 @@
-/* 생성자 호출을 통한 초기화 ( this() )
+//생성자 호출을 통한 초기화 ( this() )
  
- */
 
 public class ThisTest3 {
 	

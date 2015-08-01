@@ -1,6 +1,4 @@
-/* 멤버변수와 지역변수 구분하기 (this)
- * 
- */
+//멤버변수와 지역변수 구분하기 (this)
 
 public class ThisTest2 {	
 	String name;

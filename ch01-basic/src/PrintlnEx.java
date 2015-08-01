@@ -1,6 +1,4 @@
-/*
-System.out.println의 활용
-*/
+//System.out.println의 활용
 
 public class PrintlnEx {
 

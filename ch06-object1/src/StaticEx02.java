@@ -1,8 +1,8 @@
-/* 인스턴스 변수와 Static변수
- * 
- * 인스턴스 이름을 이용한 접근방법
- * 클래스 이름을 이용한 접근방법(권장)
- * */
+//인스턴스 변수와 Static변수
+// 
+//인스턴스 이름을 이용한 접근방법
+//클래스 이름을 이용한 접근방법(권장)
+
 
 public class StaticEx02 {
 	
@@ -15,8 +15,8 @@ public class StaticEx02 {
 
 	public static void main(String[] args) {		
 		
-		/*Exception in thread "main" java.lang.Error: Unresolved compilation problem:	Cannot make a static reference to the non-static field s1
-		인스턴스 변수는 객체 생성  호출 가능*/
+		//Exception in thread "main" java.lang.Error: Unresolved compilation problem:	Cannot make a static reference to the non-static field s1
+		//인스턴스 변수는 객체 생성후  호출 가능
 //		System.out.println(s1);
 		
 //		객체 생성후  호출

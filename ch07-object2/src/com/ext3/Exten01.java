@@ -7,6 +7,7 @@
 
 package com.ext3;
 
+
 //부모 클래스
 class Parent{
 	int a = 100;	

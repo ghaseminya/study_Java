@@ -1,7 +1,8 @@
-/*
-default패키지로 묶인 두 클래스간 상속시 멤버변수 호출
+//동일 패키지로 묶인 두 클래스간 상속시 멤버변수 호출
 
-*/
+//private < default < protected < public
+//클래스내부 < 동일패키지 < 상속 클래스 < 이외의 영역(아무 관계 없음)
+
 package com.ext1;
 
 
@@ -11,7 +12,7 @@ class Bird{
 	protected int num2;	//protected멤버변수
 	//위 두개의 멤버변수는 상속관계에 앞서 동일 패키지로 묶여있는 Eagle 클래스에 의해 접근 가능합니다.
 	
-	public void make(){
+	public void smile(){
 		System.out.println("부모 클래스");
 		System.out.println("num1: " + num1);
 		System.out.println("num2: " + num2);
@@ -39,7 +40,7 @@ public class Exten04 {
 
 		Eagle eagle = new Eagle();
 		eagle.fun();
-		eagle.make();
+		eagle.smile();
 	}
 
 }
