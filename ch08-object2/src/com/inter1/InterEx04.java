@@ -1,12 +1,10 @@
-/* 
-인터페이스 - 자료형으로 사용
+//인터페이스 - 자료형으로 사용
  
-강의내용
-	• 인터페이스 생성
-	• 클래스타입 -> 인터페이스타입으로 자동적으로 형변환
-	• 인터페이스타입 -> 클래스 타입 명시적 형변환
+//강의내용
+//	• 인터페이스 생성
+//	• 클래스타입 -> 인터페이스타입으로 자동적으로 형변환
+//	• 인터페이스타입 -> 클래스 타입 명시적 형변환
 
- * */
 
 package com.inter1;
 
@@ -27,7 +25,7 @@ public class InterEx04 implements Inter5{
 	}
 
 	public static void main(String[] args) {
-		// 
+
 		InterEx04 it04 = new  InterEx04();
 		it04.play();
 		it04.make();
@@ -38,7 +36,7 @@ public class InterEx04 implements Inter5{
 		it5.play();
 		
 		//호출 범위를 벗어나 호출 불가능
-		//it5.make();	//ERROR: The method make() is undefined for the type Inter5
+//		it5.make();	//ERROR: The method make() is undefined for the type Inter5
 		
 		System.out.println();
 		//인터페이스 -> 클래스타입으로 명시적으로 형변환

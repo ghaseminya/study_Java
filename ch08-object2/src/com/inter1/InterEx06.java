@@ -1,10 +1,7 @@
-/*
-인터페이스 다중 상속
+//인터페이스 다중 상속
 
 
-*/
 package com.inter1;
-
 
 
 interface Interf1{

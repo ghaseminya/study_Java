@@ -1,4 +1,4 @@
-/* 추상 클래스*/
+//추상 클래스
 
 package com.abs1;
 
@@ -7,14 +7,18 @@ package com.abs1;
 //추상 클래스는 추상메서드가 없는 경우도 있지만 일반적으로 추상메소드를 한개 이상 갖고 있음
 abstract class A{
 
-	int a=100;
+	int a=100;	//변수
 	
 	//추상 메소드:
-	public abstract void number();	//미구현된 메세지
+	public abstract void number();	//미구현된 메소드
 									//반드시 자식 클래스에서 일반 메소드로 구현해 줘야 합니다.
+									//abstract라는 예약어를 통해 현재 메서드가 추상 메서드임을 표시
+									//추상 메서드는 몸체(body, {})가 없이 세미콜론(;)으로 문장이 끝납니다.
 	
 	//일반 메소드
-	public void setA(int a){this.a = a;};
+	public void setA(int a){
+		this.a = a;
+	};
 	
 }
 class B extends A{
@@ -34,7 +38,7 @@ public class AbstractEx01 {
 
 		//추상 클래스는 객체 생성 불가능
 		//부모 클래스 역할 만 합니다.
-		//A a1 = new A(); //ERROR: Cannot instantiate the type A
+//		A a1 = new A(); //ERROR: Cannot instantiate the type A
 		
 		B b1 = new B();
 		System.out.println(b1.a);
