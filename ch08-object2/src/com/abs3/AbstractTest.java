@@ -20,6 +20,10 @@ abstract class AbsEx1{
 }
 
 //추상 클래스(자식)
+//getC() 메소드를 오버라이딩 하지 않았으므로, abstract 상태 그대로 포함되는 것이 되기 때문에 
+//결국 AbsEx2 클래스는 하나 이상의 abstract 메소드를 포함하게되는 것이므로
+//abstract로 선언되어야 하며, 인스턴스의 생성도 불가능하게 됩니다
+//class AbsEx2 extends AbsEx1{	//ERROR - he type AbsEx2 must implement the inherited abstract method AbsEx1.getC()
 abstract class AbsEx2 extends AbsEx1{
 	String msg = "추상화";
 	
