@@ -1,9 +1,8 @@
-/* super(인자값)
- * 
- * 상속
- * 인자가 있는 생성자만 있는 경우
- * 
- */
+//super(인자값)
+
+//상속
+//인자가 있는 생성자만 있는 경우
+ 
 
 package com.ext2;
 
@@ -11,7 +10,7 @@ package com.ext2;
 class A3{	
 	int a = 100;
 	
-	public A3(String msg){
+	public A3(String msg){	//인자가 있는 생성자
 		System.out.println(msg);		
 	}
 }
@@ -20,10 +19,10 @@ class A3{
 class B3 extends A3{
 	
 	public B3(){
-		//super();			//ERROR:The constructor A3() is undefined
+//		super();		//ERROR:The constructor A3() is undefined
 		super("문자열");	//A3의 String데이터가 전달되는 생성자 호출
-							//default생성자 없이 인자가 있는 생성자만 선언할 경우
-							//자식 클래스에서 super()에 명시적으로 인자값과 함게 호출해 주어야 합니다.	
+						//default생성자 없이 인자가 있는 생성자만 선언할 경우
+						//자식 클래스에서 super()에 명시적으로 인자값과 함게 호출해 주어야 합니다.	
 	}
 }
 

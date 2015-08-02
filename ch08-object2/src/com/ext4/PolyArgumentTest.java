@@ -1,5 +1,4 @@
-/* 오버라이딩, 
- * 다형성을 이용한 메소드의 인자 지정*/
+//오버라이딩, 다형성을 이용한 메소드의 인자 지정
 
 package com.ext4;
 
@@ -83,7 +82,7 @@ public class PolyArgumentTest {
 		
 		System.out.println("보유 금액은" + b1.money + "만원입니다");
 		
-		System.out.println("\n 티브이 구매:" + t1.price + "만원");
+		System.out.println("\n티브이 구매:" + t1.price + "만원");
 		//TV 구매
 		b1.buy(t1);		// Tv -> Product 타입으로 자동적으로 형변환
 		System.out.println("현재 남은 돈은" + b1.money + "만원입니다");
@@ -92,13 +91,13 @@ public class PolyArgumentTest {
 		//b1.buy(c1);	//ERROR: The method buy(Tv) in the type Buyer is not applicable for the arguments (Computer)
 				
 		//COMPUTER구매
-		System.out.println("\n 컴퓨터 구매:" + c1.price + "만원");
+		System.out.println("\n컴퓨터 구매:" + c1.price + "만원");
 		b1.buy(c1);		// Computer -> Product 타입으로 자동적으로 형변환
 		System.out.println("현재 남은 돈은" + b1.money + "만원입니다");
 		System.out.println("현재 보너스 포인트는" + b1.bonusPoint + "점입니다");
 		
 		//AUDIO구매
-		System.out.println("\n 오디오 구매:" + a1.price + "만원");
+		System.out.println("\n오디오 구매:" + a1.price + "만원");
 		b1.buy(a1);		// Audio  -> Product 타입으로 자동적으로 형변환
 		System.out.println("현재 남은 돈은" + b1.money + "만원입니다");
 		System.out.println("현재 보너스 포인트는" + b1.bonusPoint + "점입니다");

@@ -1,11 +1,7 @@
-/*
+//instanceof 연산자
+//	• 형변환이 가능한지를 묻는 연산자입니다.
+//	• 형변환이 가능하면 true를 가능하지 않으면 false를 반환합니다.
 
-
-instanceof 연산자
-	• 형변환이 가능한지를 묻는 연산자입니다.
-	• 형변환이 가능하면 true를 가능하지 않으면 false를 반환합니다.
-
-*/
 package com.ext2;
 
 class Box

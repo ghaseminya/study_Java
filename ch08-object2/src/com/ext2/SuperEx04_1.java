@@ -1,7 +1,4 @@
-/* super() 연습 - 처리 후
- * 
- * 
- * */
+//super() 연습 - 처리 후
 
 package com.ext2;
 
@@ -27,8 +24,8 @@ class Point3D_ extends Point_{
 	
 Point3D_(int x, int y, int z){		
 		//초기화 순서가 있으므로 순서를 정확히 해줘야 한다.
-		/*this.z = z;
-		super(x, y);*/	
+//		this.z = z;
+//		super(x, y);	//ERROR-Constructor call must be the first statement in a constructor
 	
 		super(x, y);	
 		this.z = z;
@@ -46,7 +43,6 @@ Point3D_(int x, int y, int z){
 public class SuperEx04_1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Point3D_ p3d = new Point3D_(7, 8, 9);
 		System.out.println(p3d.getLocation());

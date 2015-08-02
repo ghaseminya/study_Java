@@ -1,7 +1,10 @@
-/* super()
- * 
- * 상속
- * 디폴트 생성자만 있는 경우*/
+//super()
+
+//상속
+//디폴트 생성자만 있는 경우
+//-------------------------
+//학습내용
+//디폴트 생성자가 암묵적으로 삽입되는 것 코드로 확인
 
 package com.ext2;
 
@@ -28,6 +31,12 @@ class Child2 extends Parent2{
 public class SuperEx02 {
 
 	public static void main(String[] args){
-		Child2 ch = new Child2();		
+		Child2 ch = new Child2();
+
+		//출력결과가 필요한 경우
+//		ch.a=10;
+//		ch.b=20;
+//		System.out.println(ch.a);
+//		System.out.println(ch.b);
 	}
 }

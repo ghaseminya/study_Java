@@ -1,4 +1,4 @@
-/*상수에 final 적용*/
+//상수에 final 적용
 
 package com.finalex;
 
@@ -25,7 +25,7 @@ public class FinalEx01 {
 		System.out.println(f1.var1);		
 		
 		//상수는 변경불가
-		//f1.var2 = 300;	//ERROR:The final field FinalEx01.var2 cannot be assigned
+//		f1.var2 = 300;	//ERROR:The final field FinalEx01.var2 cannot be assigned
 		System.out.println("final 상수(f1.var2) 호출: ");
 		System.out.println(f1.var2);
 		
@@ -37,6 +37,8 @@ public class FinalEx01 {
 		final int NUM = 100;
 		System.out.println("지역변수를 상수화: ");
 		System.out.println(NUM);
+		//상수 변경 불가
+//		NUM = 300;	//The final local variable NUM cannot be assigned. It must be blank and not using a compound assignment
 	}
 
 }

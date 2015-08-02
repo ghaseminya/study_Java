@@ -1,6 +1,10 @@
-/* super() 연습 - 처리 전 
- * 
- * */
+//super() 연습 - 처리 전 
+//super()를 통해 초기화하기
+
+//File Info
+//SuperEx04.java	자식클래스의 생성자를 통해 초기화
+//SuperEx04_1.java	super()를 통해 초기화
+
 
 package com.ext2;
 

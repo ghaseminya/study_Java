@@ -1,4 +1,4 @@
-/*메소드에 final 지정*/
+//메소드에 final 지정
 
 package com.finalex;
 
@@ -13,11 +13,11 @@ class Cont{
 public class FinalEx02 extends Cont{
 
 	
+	//ERROR - Cannot override the final method from Cont
 //	@Override
-	//	Cannot override the final method from Cont
-	/*public void play(){
-		System.out.println("자식 클래스의 플레이 메소드");
-	}*/
+//	public void play(){
+//		System.out.println("자식 클래스의 플레이 메소드");
+//	}
 	
 	public static void main(String[] args) {
 		FinalEx02 f = new FinalEx02();
