@@ -1,3 +1,4 @@
+//자바 파일 생성후 실행 연습
 
 public class Hello {
 

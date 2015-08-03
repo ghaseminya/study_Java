@@ -1,7 +1,5 @@
-/*
-boolean자료형 출력
+//boolean자료형 출력
 
-*/
 public class VariableBoolean01 {
 
 	public static void main(String[] args) {

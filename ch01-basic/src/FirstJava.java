@@ -1,3 +1,5 @@
+//프로그램의 기본 골격 및 구성 확인
+
 public class FirstJava		// 클래스 명 FirstJava
 {	//클래스 명이 FirstJava이면, 컴파일시 FirstClass.class가 생성됩니다.
 	public static void main(String[] args)	// 메소드명 main
