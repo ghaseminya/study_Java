@@ -1,20 +1,23 @@
-/*
-메소드의 매개변수
 
-학습내용
-	• 두개의 매개변수를 호출하는 함수 정의 및 호출
-	• 매개변수가 없는 함수 정의 및 호출
-*/
+//메소드의 매개변수
+
+//학습내용
+//	• 두개의 매개변수를 호출하는 함수 정의 및 호출
+//	• 매개변수가 없는 함수 정의 및 호출
+
 public class FunctionEx02 {
 	
 	public static void main(String[] args) {
 		System.out.println("프로그램의 시작");
 		
 		int minute = 30;
+		
 		//메소드 실행(호출)
 		tellTime(9, 11);
 		tellTime(18, 30);
-		tellTime(20, minute);	//변수를 통한 메소드 호출
+		
+		//변수를 통한 메소드 호출
+		tellTime(20, minute);
 		byEveryone();
 		System.out.println("프로그램의 끝");
 	}

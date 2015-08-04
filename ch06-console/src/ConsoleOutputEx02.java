@@ -1,7 +1,5 @@
-/*
-printf( )메소드를 통한 문자열 조합
+//printf( )메소드를 통한 문자열 조합
 
-*/
 public class ConsoleOutputEx02 {
 
 	public static void main(String[] args)

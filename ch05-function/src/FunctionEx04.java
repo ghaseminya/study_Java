@@ -1,6 +1,5 @@
-/*
-키워드 return의 역할
-*/
+//키워드 return의 역할
+
 public class FunctionEx04 {
 
 	public static void main(String[] args) {
@@ -12,12 +11,11 @@ public class FunctionEx04 {
 		System.out.println("리턴된 결과: " + returnResult);
 	}
 	
-/*
-return 키워드 역할
-	• 값의 반환
-	• 메소드 종료
+
+//return 키워드 역할
+//	• 값의 반환
+//	• 메소드 종료
 	
-*/	
 	public static void dividedby(int num1, int num2)
 	{
 		if(num2==0)

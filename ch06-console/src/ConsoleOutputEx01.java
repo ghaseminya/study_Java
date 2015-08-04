@@ -1,12 +1,11 @@
-/*
-System.out.print vs System.out.println
+//System.out.print vs System.out.println
 
-*/
 
 public class ConsoleOutputEx01 {
 
 	public static void main(String[] args)
-	{		
+	{	
+		//참조변수의 선언 = 인스턴스 생성
 		Friend myFriend1=new Friend("홍길동");
 		Friend myFriend2=new Friend("일지매");
 		

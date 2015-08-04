@@ -1,8 +1,8 @@
+// 입력을 받은 후 배열에 저장한 다음 성적 처리하기
 
 public class ArrayEx05 {
 
 	public static void main(String[] args) {
-		// 입력을 받은 후 배열에 저장힌 다음 성적 처리하기
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		

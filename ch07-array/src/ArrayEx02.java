@@ -1,8 +1,8 @@
+// 배열 선언, 생성, 초기화(암시적으로 배열 생성)
 
 public class ArrayEx02 {
 
 	public static void main(String[] args) {
-		// 배열 선언, 생성, 초기화(암시적으로 배열 생성)
 		
 		//암시적 배열 생성
 		int[] a = {10, 20, 30, 40, 50, 60, 70};

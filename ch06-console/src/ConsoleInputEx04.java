@@ -15,7 +15,6 @@ public class ConsoleInputEx04 {
 //		s = scanner.nextLine();
 		
 		//next(): 문자 또는 문자열을 공백을 기준으로 한단어 또는 한문자를 입력 받습니다.
-
 		s = scanner.next();
 		
 		System.out.println(s);

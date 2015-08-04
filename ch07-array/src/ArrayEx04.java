@@ -1,8 +1,8 @@
+//1차원 배열을 이용하여 한명에 대한 성적처리 프로그램 
 
 public class ArrayEx04 {
 
 	public static void main(String[] args) {
-		// 한명에 대한 성적처리 프로그램 (1차원 배열)
 		
 		//총점
 		int sum=0;
@@ -11,6 +11,7 @@ public class ArrayEx04 {
 		float average1 = 0.0F;
 		float average2 = 0.0F;
 		
+		//배열 선언 및 생성, 초기화 (암시적 배열 생성)
 		int[] score = {100, 88, 88, 100, 90};
 		
 		for(int i=0; i < score.length; i++){

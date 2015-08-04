@@ -1,7 +1,6 @@
-/*
-Scanner클래스의 다양한 메소드 사용
+//Scanner클래스의 다양한 메소드 사용
 
-*/
+
 import java.util.Scanner;
 
 

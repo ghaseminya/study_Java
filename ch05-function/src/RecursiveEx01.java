@@ -1,7 +1,6 @@
-/*
-재귀 함수 호출
-- 함수 코드의 복사본이 하나 더 생성해어 실행되는 것이 재귀입니다.
-*/
+//재귀 함수 호출
+//- 함수 코드의 복사본이 하나 더 생성해서 실행되는 것이 재귀입니다.
+
 public class RecursiveEx01 {
 
 	public static void main(String[] args) {

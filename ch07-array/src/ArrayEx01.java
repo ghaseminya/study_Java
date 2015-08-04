@@ -1,9 +1,12 @@
+//배열 선언 방법/배열 사용 단계
+// 배열 사용 단계: 배열 선언/배열 생성/배열 초기화/배열 출력
+// 배열선언 방법 1 2 3
+
 
 public class ArrayEx01 {
 
 	public static void main(String[] args) {
-		// 배열 선언 단계: 배열 선언/배열 생성/배열 초기화/배열 출력
-		// 배열선언 방법 1 2 3
+
 		
 		//배열 선언
 		char[] ch;
@@ -18,10 +21,10 @@ public class ArrayEx01 {
 		ch[3]='A';
 		
 		//배열명 출력 : char배열일때만 참조값이 아닌 배열값을 보여준다. (참조값을 배열값으로 한번 더 가공해서 보여준다)
-		System.out.println(ch);
+		System.out.println(ch);	//JAVA
 		
 		//배열의 index 0을 개별 호출
-		System.out.println(ch[0]);
+		System.out.println(ch[0]);	//J
 		
 		//반복문을 이용해서 배열의 내용 출력
 		System.out.println();

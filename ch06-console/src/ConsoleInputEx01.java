@@ -1,7 +1,5 @@
-/*
-문자열을 대상으로 Scanner의 인스턴스를 생성
+//문자열을 대상으로 Scanner의 인스턴스를 생성
 
-*/
 import java.util.Scanner;
 
 
