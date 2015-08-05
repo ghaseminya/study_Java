@@ -32,7 +32,7 @@ class Friend
 	public String toString()
 	{
 		return "제 친구의 이름은 "+ name +"입니다.";
-		//println 메소드에 인스턴스의참조값이 전달되면, 
+		//println 메소드에 인스턴스의 참조값이 전달되면, 
 		//인스턴스의 toString 메소드가 반환하는 문자열이 출력됩니다.
 	}	
 }

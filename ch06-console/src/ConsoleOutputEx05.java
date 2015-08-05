@@ -1,12 +1,12 @@
 //서식문자 확인
 //System.out.printf vs System.out.println 차이 확인
+//System.out.println: 출력후 다음행으로 이동
+//System.out.printf	: 출력후 다음행으로 이동 안함, 서식문자 사용
 
 public class ConsoleOutputEx05 {
 
 	public static void main(String[] args){
-		//System.out.printf vs System.out.println 차이 확인
-		//System.out.println: 출력후 다음행으로 이동
-		//System.out.printf	: 출력후 다음행으로 이동 안함, 서식문자 사용
+
 	    System.out.printf("%c", 'A'); System.out.println("");	//A
 	    System.out.printf("%7c", 'A'); System.out.println("");	//[      A]
 	    System.out.printf("%-7c", 'A'); System.out.println("");	//[A      ]

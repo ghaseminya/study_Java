@@ -22,6 +22,7 @@ public class Student2 {
 	
 	public static void main(String[] args) {
 			
+		//참조변수의 선언 = 인스턴스 생성
 		Student2 student = new Student2();
 				
 		student.name = "김연아";

@@ -1,12 +1,9 @@
-/*
-증감/비교/논리 연산자
-*/
+//증감/비교/논리 연산자
 
 public class OperatorEx05 {
 	
 	public static void main(String[] args){
 		System.out.println("=========증감/비교/논리 연산자=========");
-		
 		
 		System.out.println("논리 곱:");
 		int a, b;

@@ -1,6 +1,5 @@
-/*
-비교(관계) 연산자
-*/
+//비교(관계) 연산자
+//비교 연산의 결과가 항상 true 또는 false인 논리값(boolean)이 반환
 
 public class OperatorEx02 {
 	

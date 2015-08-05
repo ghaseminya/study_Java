@@ -28,6 +28,7 @@ public class Student3 {
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
+		//참조변수의 선언 = 인스턴스 생성
 		Student3 nStu = new Student3();
 				
 		nStu.gPrint("국어 점수를 입력하세요 > ");

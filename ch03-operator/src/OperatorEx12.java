@@ -1,7 +1,5 @@
-/*
-대입연산자와 산술연산자
+//대입연산자와 산술연산자
 
-*/
 public class OperatorEx12 {
 
 	public static void main(String[] args) {
@@ -10,9 +8,11 @@ public class OperatorEx12 {
 		int n1 = 7;	//변수 선언 및 초기화	
 		int n2 = 3;
 		
+		//변수 선언 및 연산결과를 통해 변수 초기화
 		int result = n1 + n2;
 		System.out.println("덧셈 결과: "+result);
 
+		//result변수의 데이터 변경
 		result = n1 - n2;
 		System.out.println("뺄셈 결과: " + result);
 		

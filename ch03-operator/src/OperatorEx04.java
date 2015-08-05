@@ -1,17 +1,17 @@
-/*
-논리 연산자
+//논리 연산자
 
-선조건	&&	후조건	Result
-true	&&	true	true
-true	&&	false	false
-faluse	&&			false
+//선조건	&&	후조건	Result
+//true	&&	true	true
+//true	&&	false	false
+//false	&&	true	false
+//false	&&	false	false
 
-선조건	||	후조건	Result
-true	||			true
-false	||	true	true
-false	||	false	false
+//선조건	||	후조건	Result
+//true	||	true	true
+//true	||	false	true
+//false	||	true	true
+//false	||	false	false
 
-*/
 
 public class OperatorEx04 {
 	public static void main(String[] args){
@@ -29,9 +29,8 @@ public class OperatorEx04 {
 		System.out.println("t || f : " + result);
 		
 		System.out.println("");
-		result = ! t;	//부정
+		result = ! t;	//논리부정
 		System.out.println("!t : " + result);
 		
 	}
-
 }

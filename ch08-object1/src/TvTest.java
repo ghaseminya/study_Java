@@ -1,6 +1,4 @@
-/* TV 채널변경하기 - 객체 생성후 객체의 멤버메소드 호출을 통한 멤버 변수 변경
- *  
- */
+//TV 채널변경하기 - 객체 생성후 객체의 멤버메소드 호출을 통한 멤버 변수 변경
 
 //주 클래스만 public지정 할 수 있다.
 class Tv{	
@@ -32,7 +30,7 @@ public class TvTest {
 	//main은 객체에 포함되지 않음.
 	//그냥 메인함수로만 취급
 	//클래스 로더가 main을 메모리에 올리고 
-	//그 다음 객체를 생성합니다. 멤버 메소드만 객체에 포함됩니다.
+	//그 다음 객체를 생성합니다. 멤버 메소드와 멤버 변수만 객체에 포함됩니다.
 	public static void main(String[] args) {
 		Tv t = new Tv();
 		
@@ -43,6 +41,7 @@ public class TvTest {
 		
 		System.out.println();
 		System.out.println("현재 채널 : " + t.channel);
+		
 		//채널 변경하기
 		t.channel = 7;
 		System.out.println("변경된 채널 : " + t.channel);

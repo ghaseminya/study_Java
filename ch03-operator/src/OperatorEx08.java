@@ -1,6 +1,5 @@
-/*
-조건(삼항) 연산자 3 - 대문자 / 소문자 구분하기
-*/
+//조건(삼항) 연산자 - 대문자 / 소문자 구분하기
+
 
 public class OperatorEx08 {
 	public static void main(String[] args){
@@ -13,8 +12,8 @@ public class OperatorEx08 {
 		
 		msg = (ch >= 'A' && ch <= 'Z') ? "대문자입니다" : "소문자입니다";
 		// A ~ Z (65 ~ 90) / a ~ z(97 ~ 122)
-		System.out.println("msg : " + msg);
-		System.out.println("ch : " + ch);		
+		System.out.println("msg : " + msg);	//msg : 소문자입니다
+		System.out.println("ch : " + ch);	//ch : b
 		
 	}
 }

@@ -1,6 +1,5 @@
-/*
-비트 연산자
-*/
+//비트 연산자
+
 
 public class OperatorEx10 {
 	
@@ -31,9 +30,9 @@ public class OperatorEx10 {
 		//----------------------
 		// 0   0  0  0  0 1 0 0
 		
-		System.out.println("a : " + a);	
-		System.out.println("b : " + b);
-		System.out.println("a & b : " + c);
+		System.out.println("a : " + a);		//a : 12
+		System.out.println("b : " + b);		//b : 20
+		System.out.println("a & b : " + c);	//a & b : 4
 		
 
 		
@@ -53,9 +52,9 @@ public class OperatorEx10 {
 		//----------------------
 		// 0   0  0  1  1 1 0 0
 		
-		System.out.println("a : " + a);	
-		System.out.println("b : " + b);
-		System.out.println("a | b : " + d);
+		System.out.println("a : " + a);		//a : 12
+		System.out.println("b : " + b);		//b : 20
+		System.out.println("a | b : " + d);	//a | b : 28
 		
 		
 
@@ -75,9 +74,9 @@ public class OperatorEx10 {
 		//----------------------
 		// 0   0  0  1  1 0 0 0
 		
-		System.out.println("a : " + a);	
-		System.out.println("b : " + b);
-		System.out.println("a ^ b : " + e);
+		System.out.println("a : " + a);		//a : 12
+		System.out.println("b : " + b);		//b : 20
+		System.out.println("a ^ b : " + e);	//a ^ b : 24
 	
 	}
 }

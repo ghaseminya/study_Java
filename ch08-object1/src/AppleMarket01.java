@@ -2,12 +2,11 @@
 //객체 이해
 
 
-
 public class AppleMarket01 {
 
 	public static void main(String[] args) {
 		
-		//참조변수의 선언 = 인스턴스 생성
+		//참조변수의 선언/생성 = 인스턴스 생성
 		AppleSeller seller = new AppleSeller();
 		AppleBuyer buyer = new AppleBuyer();
 		
@@ -23,7 +22,7 @@ public class AppleMarket01 {
 
 }
 
-class AppleSeller{
+class AppleSeller{	//사과 판매자
 	
 	int numOfApple=30;
 	int myMoney=0;
@@ -43,7 +42,7 @@ class AppleSeller{
 }
 
 
-class AppleBuyer{
+class AppleBuyer{	//사과구매자
 	int myMoney=10000;	//보유 금액
 	int numOfApple=0;	//보유 사과 수
 	

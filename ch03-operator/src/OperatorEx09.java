@@ -1,6 +1,6 @@
-/*
-대입연산자, 복합대입 연산자
-*/
+
+//대입연산자, 복합대입 연산자
+
 public class OperatorEx09 {
 	
 	public static void main(String[] args){
