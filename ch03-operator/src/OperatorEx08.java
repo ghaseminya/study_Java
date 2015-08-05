@@ -4,8 +4,7 @@
 public class OperatorEx08 {
 	public static void main(String[] args){
 		
-		System.out.println("=========조건(삼항) 연산자 3=========");
-		//대문자 / 소문자 구분하기
+		System.out.println("=========조건(삼항) 연산자 =========");
 				
 		char ch = 'b';
 		String msg;		//문자열을 저장할 수 있는 변수 선언

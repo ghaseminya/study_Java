@@ -17,6 +17,7 @@ public class OperatorEx18 {
 		System.out.println("n1 << 3: " + r3); //n1 << 3: 16
 		byte r4 = (byte)(n1 << 4);
 		System.out.println("n1 << 4: " + r4); //n1 << 4: 32
+		//왼쪽으로의 비트 열 이동은 2의 배수의 곱
 		
 		
 		System.out.println("\n오른쪽으로 비트열 이동");
@@ -29,5 +30,6 @@ public class OperatorEx18 {
 		System.out.println("n2 >> 3: " + r7); //n2 >> 3: 1
 		byte r8 = (byte)(n2 >> 4);
 		System.out.println("n2 >> 4: " + r8); //n2 >> 4: 0
+		//오른쪽으로의 비트 열 이동은 2의 배수의 나눗셈
 	}
 }
