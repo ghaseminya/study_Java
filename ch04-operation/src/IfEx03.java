@@ -1,7 +1,5 @@
-/*
-조건문 - 다중 if문 ( 성적 등급 처리)
+//조건문 - 다중 if문 ( 성적 등급 처리)
 
-*/
 
 public class IfEx03 {
 
@@ -13,6 +11,7 @@ public class IfEx03 {
 		char grade;
 		
 		System.out.print("성적을 입력하세요 > ");
+		//nextInt(): 입력값을 int형으로 가져온다
 		score = input.nextInt();
 		
 		if( score >= 90 && score <=100 ){
@@ -32,6 +31,7 @@ public class IfEx03 {
 		
 		System.out.println("성적 : " + score);
 		System.out.println("등급: " + grade);
-
+		
+		input.close();
 	}
 }

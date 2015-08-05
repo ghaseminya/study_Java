@@ -1,7 +1,5 @@
-/*
-while문 - 후행/선행
+//while문 - 증감값의 후행/선행
 
-*/
 
 public class WhileEx01 {
 

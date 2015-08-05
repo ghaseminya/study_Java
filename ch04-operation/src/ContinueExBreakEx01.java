@@ -1,7 +1,7 @@
-/*
-continue vs break
+//continue vs break
+//continue문 예시 결과 확인
+//break문 예시 결과 확인
 
-*/
 public class ContinueExBreakEx01 {
 
 	/*
@@ -39,6 +39,4 @@ public class ContinueExBreakEx01 {
 
 		System.out.println("반복문 수행 완료!");
 	}
-	
-	
 }

@@ -1,12 +1,11 @@
-/*
-성적등급 처리하기
-	• case레이블을 하나의 부류로 묶어서 처리하기
-	• char형 조건값 비교하기
-*/
+//성적등급 처리하기
+//	• case레이블을 하나의 그룹으로 묶어서 처리하기
+//	• char형 조건값 비교하기
+//LAB
+	
 public class SwitchEx03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// switch()문 (성적 등급 처리하기)
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
@@ -42,6 +41,7 @@ public class SwitchEx03 {
 		
 		System.out.println("성적 : " + score);
 		System.out.println("등급: " + grade);
-			
+		
+		input.close();
 	}
 }

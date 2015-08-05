@@ -1,7 +1,5 @@
-/*
-for()문 - 비교 인자값 증가
+//for()문 - 비교 인자값 증가
 
-*/
 
 public class ForEx01 {
 

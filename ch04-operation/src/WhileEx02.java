@@ -1,7 +1,6 @@
-/*
-while문 - 1부터 100까지의 누적 합 구하기
+//while문 - 1부터 100까지의 누적 합 구하기
 
-*/
+
 public class WhileEx02 {
 
 	public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class WhileEx02 {
 			sum += su;
 			su++;			//증감식
 		}
-		System.out.println("1~100까지의 합 : " + sum);
+		System.out.println("1~100까지의 합 : " + sum);	//1~100까지의 합 : 5050
 		
 	}
 }

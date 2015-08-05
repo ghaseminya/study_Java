@@ -1,8 +1,6 @@
-/*
-switch()문을 이용하여 사직 연산 수행
-JDK ver7.0부터  switch()문에 인자값으로 문자열 전달 가능
+//switch()문을 이용하여 사직 연산 수행
+//JDK ver7.0부터  switch()문에 인자값으로 문자열 전달 가능
 
-*/
 
 public class SwitchEx04 {
 
@@ -48,12 +46,14 @@ public class SwitchEx04 {
 			}
 			default:{
 				System.out.print("잘못된 연산자를 입력하였습니다. 프로그램을 종료합니다.");			
-				System.exit(0);
+				System.exit(0);	//프로그램 종료
 			}
 		}
 		
 		System.out.println();//한줄 줄 바꿈
 		System.out.print(first + operator + second + " = " + total);
+		
+		input.close();
 
 	}
 }

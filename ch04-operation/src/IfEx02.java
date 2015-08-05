@@ -1,12 +1,11 @@
-/*
-조건문 - 단일 if (정수형 입력 받은 후 짝수 홀수 구분하기)
+//조건문 - 단일 if (정수형 입력 받은 후 짝수 홀수 구분하기)
 
-*/
 
 public class IfEx02 {
 
 	public static void main(String[] args) {
 		
+		//Scanner의 인스턴스를 생성
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int a;
@@ -20,6 +19,9 @@ public class IfEx02 {
 			
 		}else{	// 짝수
 			System.out.print("짝수 입니다.");			
-		}	
+		}
+		
+		//자원 해제, 자원 닫기
+		input.close(); 
 	}
 }

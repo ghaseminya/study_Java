@@ -1,6 +1,5 @@
-/*
-switch문에 문자 비교
-*/
+//switch문에 문자 비교
+
 
 public class SwitchEx02 {
 

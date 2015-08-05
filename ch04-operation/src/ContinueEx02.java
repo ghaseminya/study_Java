@@ -1,6 +1,5 @@
-/*
-3의 배수가 아니거나 7의 배수가 아니라면 출력하고 카운트 증가시키기
-*/
+//3의 배수가 아니거나 7의 배수가 아니라면 출력하고 카운트 증가시키기
+
 
 public class ContinueEx02 {
 
@@ -22,5 +21,4 @@ public class ContinueEx02 {
 		System.out.println("count: " + count);
 		
 	}
-
 }

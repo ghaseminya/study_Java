@@ -1,7 +1,6 @@
-/*
-switch문에서 정수 비교하기
+//switch문에서 정수 비교하기
 
-*/
+
 public class SwitchEx01 {
 
 	public static void main(String[] args) {
@@ -33,5 +32,7 @@ public class SwitchEx01 {
 			break;
 		
 		}
+		
+		input.close();
 	}
 }
