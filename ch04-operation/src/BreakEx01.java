@@ -1,12 +1,9 @@
-/*
-break문 - 특정 조건일 때 반복문 빠져나가기
+//break문 - 특정 조건일 때 반복문 빠져나가기
 
-*/
 
 public class BreakEx01 {
 
 	public static void main(String[] args) {
-		// break문 - 특정 조건일 때 반복문 빠져나가기
 		
 		for( int i=0 ; i<= 10; i++){			
 			System.out.println(i);

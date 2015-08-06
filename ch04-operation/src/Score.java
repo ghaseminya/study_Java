@@ -1,7 +1,9 @@
-/*
-한글 변수 사용, 성적처리프로그램, 데이터검증(중요), 소숫점자리 포멧지정
+//성적처리프로그램, 한글 변수 사용, 데이터검증(중요), 소숫점자리 포멧지정
 
-*/
+//-------------------------
+//유효한 점수 인지 체크하기 (과목별로 )한후  유효한 점수 인지 체크하기 (과목 전체)로 바꿔보기
+
+
 public class Score {
 
 	public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class Score {
 		float 평균1;
 		float 평균2;		
 		
-		//과목 전체를 체크하기
+		//유효한 점수 인지 체크하기 (과목 전체)
 		/*do{
 			System.out.print("국어 : ");
 			국어 = input.nextInt();
@@ -30,7 +32,7 @@ public class Score {
 				수학 < 0 || 수학 > 100);*/
 		
 		
-		//과목별로 유효한 점수 인지 체크하기
+		//유효한 점수 인지 체크하기 (과목별로 )
 		do{
 			System.out.print("국어 : ");
 			국어 = input.nextInt();
@@ -52,7 +54,7 @@ public class Score {
 		//float = int / int;
 		평균1 = 총점/3;			// int -> float 형변환 (65 -> 65.0)
 		평균2 = (float)총점/3.0F;	// int -> float 형변환 (65 -> 65.0)
-//		평균2 = 총점/3.0F;		// int -> float 형변환 (65 -> 65.0)		
+//		평균2 = 총점/3.0F;		// int -> float 형변환 (65 -> 65.0), 상동		
 		
 		System.out.println();
 		System.out.println("총점 = " + 총점);
@@ -87,5 +89,6 @@ public class Score {
 		System.out.println();
 		System.out.println("학점 = " + 학점);
 		
+		input.close();
 	}
 }

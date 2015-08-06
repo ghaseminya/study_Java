@@ -1,7 +1,6 @@
-/*
-3의 배수이고 7의배수인 정수를 찾기
+//3의 배수이고 7의배수인 정수를 찾기
+//1~100까지의 수 중 3의 배수이고 7의배수인 정수 찾으면 더 이상 수행하지 않고 while문 빠져나가기
 
-*/
 public class BreakEx04 {
 
 	public static void main(String[] args) {
@@ -25,5 +24,4 @@ public class BreakEx04 {
 		else
 			System.out.println("3의 배수이고 7의 배수인 정수를 찾지 못했습니다.");
 	}
-
 }
