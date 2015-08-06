@@ -12,8 +12,8 @@ public class OperatorEx07 {
 		
 		System.out.println("a : " + a);	//a : 5
 		System.out.println("b : " + b);	//b : 10
-		
 		System.out.println("");
+		
 		max = a>b ? a : b;
 		System.out.println("max : " + max);	//max : 10
 		
