@@ -1,3 +1,9 @@
+//main 클래스
+
+//MyClass			클래스 생성후 생성자 오버로딩
+//MyClassCreat	main부
+//				다양한 인자를 가지는 생성자 호출하여 객체 생성
+
 package com.name;
 
 public class MyClassCreat {

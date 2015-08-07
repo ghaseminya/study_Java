@@ -1,10 +1,9 @@
-/*
-메소드오버로딩 구현
-- OverloadingEx02 비오버로딩을 오버로딩하여 구현
+//메소드오버로딩 구현
+//- OverloadingEx02 비오버로딩을 오버로딩하여 구현
 
-비슷한 동작을 수행하는 메서드(멤버함수)들을 모아 이름을 같게 하면 
-다양한 메서드(멤버함수)들을 같은 이름으로 일관된 작업을 할 수 있게 합니다.
-*/
+//비슷한 동작을 수행하는 메서드(멤버함수)들을 모아 이름을 같게 하면 
+//다양한 메서드(멤버함수)들을 같은 이름으로 일관된 작업을 할 수 있게 합니다.
+
 
 public class OverloadingEx03 {
 
@@ -17,7 +16,7 @@ public class OverloadingEx03 {
 		oe3.getLength("10000");
 	}
 
-
+	//메소드 오버로딩 함수 정의
 	public void getLength(int n){
 		String s = String.valueOf(n);
 		getLength(s);
@@ -30,7 +29,8 @@ public class OverloadingEx03 {
 		System.out.println("입력한 값의 길이 : "+str.length());
 		return 0;
 	}
-	
+
+//-------------------------------
 //	public void getLength(int n){
 //	void getLength(float n){
 //	private int getLength(String str){

@@ -1,8 +1,6 @@
-/*
-비 오버로딩 예제
--> OverloadingEx03 오버로딩 구현
+//비 오버로딩 예제
+//-> OverloadingEx03 오버로딩 구현
 
-*/
 public class OverloadingEx02 {
 
 	public static void main(String[] args) {
@@ -15,6 +13,7 @@ public class OverloadingEx02 {
 	}
 
 
+	//자료형별로 개별적으로 함수 정의
 	public void intLength(int a){
 		String s = String.valueOf(a);
 		System.out.println("입력한 값의 길이 : " + s.length());

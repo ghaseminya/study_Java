@@ -1,4 +1,3 @@
-
 //생성자 오버로딩
 //인자값을 가진 생성자를 통해 다양한 인스턴스 생성
 
@@ -13,6 +12,7 @@ public class OverloadingEx04 {
 		Person idol=new Person("홍길동", 18);	
 		man.showInfo();
 		idol.showInfo();
+		
 	}
 }
 

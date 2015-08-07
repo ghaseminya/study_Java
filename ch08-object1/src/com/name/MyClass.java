@@ -1,3 +1,5 @@
+// 클래스 생성후 생성자 오버로딩
+
 package com.name;
 
 public class MyClass {
