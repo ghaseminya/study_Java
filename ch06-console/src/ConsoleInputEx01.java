@@ -1,4 +1,4 @@
-//문자열을 대상으로 Scanner의 인스턴스를 생성
+//문자열을 입력대상으로 Scanner의 인스턴스를 생성
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class ConsoleInputEx01 {
 	public static void main(String[] args) {
 
 		String source="1 3 5 7 9";
-		//문자열을 대상으로 Scanner의 인스턴스를 생성
+		//문자열을 입력대상으로 Scanner의 인스턴스를 생성
 		Scanner scanner=new Scanner(source);
 		
 		//nextInt(): 입력값을 int형으로 가져온다

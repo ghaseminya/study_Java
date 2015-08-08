@@ -25,21 +25,23 @@ class Tv{
 }
 
 // 주 클래스
-public class TvTest {
+public class TvRemoteControl {
 	
 	//main은 객체에 포함되지 않음.
 	//그냥 메인함수로만 취급
 	//클래스 로더가 main을 메모리에 올리고 
 	//그 다음 객체를 생성합니다. 멤버 메소드와 멤버 변수만 객체에 포함됩니다.
 	public static void main(String[] args) {
+		//인스턴스 생성
 		Tv t = new Tv();
+		//인스턴스를 통해 해당 멤버에 접근
 		
 		System.out.println("TV 실행 유무 : " + t.power);
+		
 		// 전원 켜기
 		t.power();
-		System.out.println("TV 실행 유무 : " + t.power);		
-		
-		System.out.println();
+		System.out.println("TV 실행 유무 : " + t.power); System.out.println();		
+
 		System.out.println("현재 채널 : " + t.channel);
 		
 		//채널 변경하기
@@ -51,13 +53,13 @@ public class TvTest {
 		System.out.println("변경된 채널 : " + t.channel);
 		
 		t.channelUp();
-		System.out.println("변경된 채널 : " + t.channel);		
+		System.out.println("변경된 채널 : " + t.channel); System.out.println();		
 		
-		System.out.println();
 		// TV전원 끄기
 		t.power();
-		System.out.println("TV 실행 유무 : " + t.power);
+		System.out.println("TV 실행 유무 : " + t.power); System.out.println();
 		
 		t.color = "blue";
+		System.out.println("TV 색상 : " + t.color);
 	}
 }

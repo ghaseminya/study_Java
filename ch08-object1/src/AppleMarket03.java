@@ -29,6 +29,7 @@ public class AppleMarket03 {
 
 }
 
+//사과 판매자
 class AppleSeller{
 	
 	int numOfApple;
@@ -62,7 +63,7 @@ class AppleSeller{
 	
 }
 
-
+//사과구매자
 class AppleBuyer{
 	int myMoney=10000;	//보유 금액
 	int numOfApple=0;	//보유 사과 수

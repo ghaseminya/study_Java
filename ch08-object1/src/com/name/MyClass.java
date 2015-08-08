@@ -7,6 +7,7 @@ public class MyClass {
 	private String name;
 	private int age;
 	
+	//생성자 오버로딩 구현
 	public MyClass(){
 	        name = "codedragon";
 	}
@@ -21,6 +22,8 @@ public class MyClass {
 	  age = a;
 	  name = n;
 	}
+	
+	//멤버 메소드
 	public String getName(){
 	  return name;
 	}

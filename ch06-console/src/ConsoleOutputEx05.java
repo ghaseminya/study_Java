@@ -1,15 +1,20 @@
-//서식문자 확인
+//%서식문자 확인
+
+//%c, 10진수/8진수/16진수, %g, e표기법
 //System.out.printf vs System.out.println 차이 확인
-//System.out.println: 출력후 다음행으로 이동
-//System.out.printf	: 출력후 다음행으로 이동 안함, 서식문자 사용
+//-System.out.println	: 출력후 다음행으로 이동
+//-System.out.printf	: 출력후 다음행으로 이동 안함, 서식문자 사용
 
 public class ConsoleOutputEx05 {
 
 	public static void main(String[] args){
 
+		//문자
 	    System.out.printf("%c", 'A'); System.out.println("");	//A
 	    System.out.printf("%7c", 'A'); System.out.println("");	//[      A]
 	    System.out.printf("%-7c", 'A'); System.out.println("");	//[A      ]
+	    
+	    //10진수
 	    System.out.printf("%d", 1234567); System.out.println("");	//1234567
 	    //8진수
 	    System.out.printf("%o", 1234567); System.out.println("");	//4553207

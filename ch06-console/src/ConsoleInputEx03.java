@@ -28,7 +28,7 @@ public class ConsoleInputEx03 {
 		
 		System.out.print("당신과 짝꿍의 영어점수는 어떻게 되나요? ");
 		
-		//nextBoolean(): boolean타입의 자료형 값을 가져옵니다.
+		//nextDouble(): Double타입의 자료형 값을 가져옵니다.
 		double num1=keyboard.nextDouble();
 		double num2=keyboard.nextDouble();
 		double diff=num1-num2;

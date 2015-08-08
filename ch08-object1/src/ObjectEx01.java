@@ -1,6 +1,7 @@
 /*
 //참조변수와 참조 메소드의 관계 확인
 
+// 주 클래스
 public class ObjectEx01 {
 	
 	public static void main(String[] args){
@@ -19,7 +20,7 @@ public class ObjectEx01 {
 	
 }
 
-//클래스 정의(설계)
+//클래스 정의(클래스 설계)
 class Number{
 	//멤버변수 = 인스턴스 변수
 	int num=0;

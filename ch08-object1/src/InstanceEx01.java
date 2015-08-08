@@ -1,6 +1,9 @@
 //객체 선언/생성/호출
 
+
+//주 클래스: public으로 선언된 클래스
 public class InstanceEx01 {
+	//클래스의 구성요소: 멤버필드, 생성자, 멤버메소드
 
 	//멤버 필드
 	int var1;	//변수
@@ -10,7 +13,6 @@ public class InstanceEx01 {
 //	생성자를 호출하면
 //	멤버 필드와 멤버 메소드가 생성되어 메모리에 올라갈 수 있도록 해줍니다.
 	public InstanceEx01(){}
-	
 	
 	//멤버 메소드
 	public int sum(int a, int b){
@@ -31,13 +33,15 @@ public class InstanceEx01 {
 		//객체 생성
 		me1 = new InstanceEx01();
 		me2 = new InstanceEx01();
+		//new : 객체 생성(인스턴스 생성) 의미
+		//() : InstanceEx01() == 매개변수가 없는 디폴트 생성자를 의미
+		
 		
 //		질문: 같은 클래스를 가지고 객체를 생성하게 되면 같은 참조값을 가지나?
 //		답: 다른 참조값을 가지고 멤버필드도 개별적으로 존재하게 됩니다.
 		//객체 출력(참조값)
 		System.out.println(me1);	//InstanceEx01@659e0bfd
 		System.out.println(me2);	//InstanceEx01@2a139a55
-		
 		
 		//객체의 멤버 변수 출력
 		System.out.println();		

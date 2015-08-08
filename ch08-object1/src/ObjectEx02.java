@@ -1,7 +1,7 @@
 /*
 //인자값없는 생성자를 통한 초기화
 
-
+// 주 클래스
 public class ObjectEx02 {
 	
 	public static void main(String[] args)	{
@@ -11,10 +11,12 @@ public class ObjectEx02 {
 		//Number()		: 매개변수가 없는 Default생성자를 호출하여 인스턴스 생성
 		Number myNumber2=new Number();
 		
+		//myNumber1 메소드
 		System.out.println("myNumber1 메소드 호출 전 값: " + myNumber1.getNumber());
 		instMethod(myNumber1);
 		System.out.println("myNumber1 메소드 호출 후 값: " + myNumber1.getNumber());	
 		
+		//myNumber2 메소드
 		System.out.println("myNumber2 메소드 호출 전 값: " + myNumber2.getNumber());
 		instMethod(myNumber2);
 		System.out.println("myNumber2 메소드 호출 후 값: " + myNumber2.getNumber());
@@ -26,7 +28,7 @@ public class ObjectEx02 {
 	
 }
 
-//클래스 정의(설계)
+//클래스 정의(클래스 설계)
 class Number{
 	//멤버변수 = 인스턴스 변수
 	int num;
@@ -45,4 +47,6 @@ class Number{
 	public int getNumber()	{
 		return num;
 	}
-}*/
+}
+
+*/
