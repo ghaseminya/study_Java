@@ -1,10 +1,9 @@
-/* 인자 전달 방식: 참조 호출(call by reference)
+//인자 전달 방식: 참조 호출(call by reference)
  
- 값 호출(Call by Value)에서는 값(value)을 복사하여 전달하였으므로 호출 시의 실인자는 별도의 값으로 인식되어 영향을 받지 않으며
- 참조 호출(Call by Reference)에서는 주소(reference)가 복사되어 전달 되었으므로 
- 하나의 객체를 참조하는 변수가 2개가 되어 어느 한 곳에서 수정을 하게 되면 같은 객체를 참조하는 다른 쪽에서도 변경된 값을 참조하게 됩니다(영향을 받게 됨).
+//값 호출(Call by Value)에서는 값(value)을 복사하여 전달하였으므로 호출 시의 실인자는 별도의 값으로 인식되어 영향을 받지 않으며
+//참조 호출(Call by Reference)에서는 주소(reference)가 복사되어 전달 되었으므로 
+//하나의 객체를 참조하는 변수가 2개가 되어 어느 한 곳에서 수정을 하게 되면 같은 객체를 참조하는 다른 쪽에서도 변경된 값을 참조하게 됩니다(영향을 받게 됨).
 
- * */
 
 public class MethodEx03 {
 	
@@ -26,6 +25,7 @@ public class MethodEx03 {
 		System.out.println("===============================");		
 		MethodEx03 m = new MethodEx03();
 		
+		//메서드를 호출 시 주소를 인자로 전달하는 방식
 		m.increase(ref);	//주소를 인자로전달
 		
 		for(int i=0; i<ref.length; i++){

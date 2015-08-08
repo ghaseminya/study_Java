@@ -3,7 +3,7 @@
 
 //File Info
 //com.korea		Student.class
-//com.america	Student.class
+//com.america	Student.class	main부
 
 
 package com.korea;

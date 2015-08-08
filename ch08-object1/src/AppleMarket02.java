@@ -1,8 +1,9 @@
-/*//서로 다른 인스턴스의 생성은, 인스턴스 변수의 초기화라는 문제
+/*
+//서로 다른 인스턴스의 생성은, 인스턴스 변수의 초기화라는 문제 발생
 //
 //해결방법
 //	• 생성자 함수를 통해 인스턴스 생성시 초기화 수행
-//	• AppleMarket03
+//	• AppleMarket03.java
 
 
 public class AppleMarket02 {
@@ -37,10 +38,11 @@ public class AppleMarket02 {
 //사과 판매자
 class AppleSeller{
 	
-	int numOfApple;
-	int myMoney;
-	int applePrice;
+	int numOfApple;	//사과 개수
+	int myMoney;	//판매 수익
+	int applePrice;	//사과 가격(사과금액)
 	
+	//사과 판매 메소드
 	public int saleApple(int money)
 	{
 		int num=money/applePrice;
@@ -59,7 +61,7 @@ class AppleSeller{
 	public void initSeller(int money, int appleNumber, int price)
 	{
 		myMoney=money;
-		numOfApple=appleNumber;
+		numOfApple=appleNumber;	
 		applePrice=price;
 	}
 }
@@ -70,6 +72,7 @@ class AppleBuyer
 	int myMoney=10000;	//보유 금액
 	int numOfApple=0;	//보유 사과 수
 	
+	//사과 구매 메소드
 	public void buyApple(AppleSeller seller, int money)
 	{
 		numOfApple+=seller.saleApple(money);

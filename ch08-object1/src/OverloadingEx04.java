@@ -22,7 +22,7 @@ class Person{
 	private int personID;
 	private int personAge;
 
-	
+	//생성자 오버로딩
 	public Person(String name, int pID, int age)
 	{
 		personName =name;
