@@ -35,15 +35,15 @@ public class Animal {
 	
 	public void getPrint()
 	{
-		System.out.println("ÀÌ¸§" + "\t:" + this.name);
-		System.out.println("³ªÀÌ" + "\t:" + this.age);
-		System.out.println("ºñÇà¿©ºÎ" + "\t:" + (isFly() ? "»õ´Ù": "´ßÀÌ´Ù"));
+		System.out.println("ì´ë¦„" + "\t:" + this.name);
+		System.out.println("ë‚˜ì´" + "\t:" + this.age);
+		System.out.println("ë¹„í–‰ì—¬ë¶€" + "\t:" + (isFly() ? "ìƒˆë‹¤": "ë‹­ì´ë‹¤"));
 		
 		/*if(this.fly != false){
-			System.out.println("ºñÇà¿©ºÎ" + "\t:" + "»õ´Ù");			
+			System.out.println("ë¹„í–‰ì—¬ë¶€" + "\t:" + "ìƒˆë‹¤");			
 		}
 		else{
-			System.out.println("ºñÇà¿©ºÎ" + "\t:" + "´ßÀÌ´Ù");
+			System.out.println("ë¹„í–‰ì—¬ë¶€" + "\t:" + "ë‹­ì´ë‹¤");
 		}*/
 	}	
 

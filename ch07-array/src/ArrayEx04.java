@@ -7,12 +7,13 @@ public class ArrayEx04 {
 		//총점
 		int sum=0;
 		
-		//평균
+		//평균 (결과값 확인을 위해 변수 2개 선언, 강제형변환한것과 안한것 결과값 확인)
 		float average1 = 0.0F;
 		float average2 = 0.0F;
 		
 		//배열 선언 및 생성, 초기화 (암시적 배열 생성)
 		int[] score = {100, 88, 88, 100, 90};
+		
 		
 		for(int i=0; i < score.length; i++){
 			
