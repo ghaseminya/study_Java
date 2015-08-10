@@ -12,7 +12,7 @@ public class ConsoleInputEx04 {
 		String s;
 		
 		//nextLine(): 문자 또는 문자열 한라인 전체를 입력 받습니다.
-		//버퍼에 입력된 문자열을 개행문자 \n 까지 오기
+		//버퍼에 입력된 문자열을 개행문자 \n까지 가져오기
 		s = scanner.nextLine();	//Hello World!
 		System.out.println(s);	//Hello World!
 		
