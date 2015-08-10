@@ -1,6 +1,5 @@
-/* 생성자 호출을 통한 초기화 ( this() )
+//생성자 호출을 통한 초기화 ( this() )
  
- */
 
 public class ThisTest4 {
 	
@@ -21,7 +20,7 @@ class People
 	private String name;
 	private int age;
 	private int sex;
-	private String position;
+	private String job;
 	
 	
 	//인가값이 없는 기본 생성자
@@ -40,17 +39,17 @@ class People
 	}
 
 	//3인자값을 가진 생성자
-	public People(String name, int age, String position)
+	public People(String name, int age, String job)
 	{
 		//생성자 내에서 다른 생성자를 다시 호출 가능, 메소드에서 다른 생성자의 호출을 얘기하는 것 아님!
 		//5개의 인자값을 가진 다른 생성자를 다시 호출
 		//this()
-		this(name, age, 1, position);
+		this(name, age, 1, job);
 	}
 
 	
 	//4인자값을 가진 생성자
-	public People(String name, int age, int sex, String position)
+	public People(String name, int age, int sex, String job)
 	{
 		//this		: 현재 인스턴스를 의미
 		//this.name	: 인스턴스의 멤버변수
@@ -58,7 +57,7 @@ class People
 		this.name =name;
 		this.age=age;
 		this.sex=sex;
-		this.position=position;
+		this.job=job;
 		
 		showInfo();
 	}
@@ -69,6 +68,6 @@ class People
 		System.out.println(name + "\t" +
 				age +"\t" + 
 				sex + "\t" + 
-				position);
+				job);
 	}
 }

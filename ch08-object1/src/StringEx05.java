@@ -1,11 +1,10 @@
-/*
-문자열 덧셈
-	• + 연사자를 통한 문자열 덧셈
-	• += 연사자를 통한 문자열 덧셈
+//문자열 덧셈
+//	• + 연사자를 통한 문자열 덧셈
+//	• += 연사자를 통한 문자열 덧셈
+
+//concat("문자열");
 
 
-concat("문자열");
-*/
 public class StringEx05 {
 
 	public static void main(String[] args) {

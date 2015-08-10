@@ -2,9 +2,8 @@
 //인스턴스 이름을 이용한 접근방법
 
 //FileInfo
-//StaticCount.java	static 변수 선언
-//StaticEx01.java	Static 변수 호출
-
+//StaticEx01.java	main부, Static 변수 호출
+//StaticCount.java	Static 변수 선언
 
 
 public class StaticEx01 {
@@ -14,7 +13,7 @@ public class StaticEx01 {
 		StaticCount sc1= new StaticCount();
 		System.out.println("c = " + sc1.c + "\t count = " + StaticCount.count);
 		System.out.println("sc1 = " + sc1.count);	//인스턴스 이름을 이용한 접근방법
-//		System.out.println("sc1 = " + StaticCount.count);	//클래스 이름을 이용한 접근방법(권장)
+//		System.out.println("sc1 = " + StaticCount.count); //클래스 이름을 이용한 접근방법(권장)
 		System.out.println();
 		
 		System.out.println("=================================");
