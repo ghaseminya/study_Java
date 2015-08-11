@@ -1,7 +1,6 @@
-/*
-참조값을 반환하는 메소드
+//참조값을 반환하는 메소드
 
-*/
+
 public class StringBuilderEx02 {
 
 	public static void main(String[] args) {
@@ -14,6 +13,7 @@ public class StringBuilderEx02 {
 
 class Adder{
 	private int num;
+	
 	public Adder(){
 		num=0;
 	}
@@ -21,11 +21,11 @@ class Adder{
 	public Adder add(int num){
 		this.num += num;
 		return this;
-		//this의 반환 인스턴스 자신의 참조 값 반환을 의미.
+		//this의 반환은 인스턴스 자신의 참조 값 반환을 의미.
 		//이렇게 반환되는 참조 값을 대상으로 연이은 함수호출이 가능합니다.
 	}
 	
 	public void showResult(){
-		System.out.println("Result: " + num);
+		System.out.println("Result: " + num); //Result: 11
 	}
 }
