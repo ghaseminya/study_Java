@@ -59,7 +59,7 @@ public class Score {
 		System.out.println();
 		System.out.println("총점 = " + 총점);
 		System.out.println("평균1 = " + 평균1);
-		System.out.println("평균2 = " + 평균2);	//출력 후 줄바꿈
+//		System.out.println("평균2 = " + 평균2);	//출력 후 줄바꿈
 		System.out.printf("평균2 = %.2f", 평균2);	//출력할 데이터의 포멧 지정, SDK ver5.0이상	
 		
 		switch((int)평균2/10){

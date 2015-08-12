@@ -15,19 +15,24 @@ public class DoWhileEx01 {
 		//do~while문
 		System.out.println("===do~ while 실행결과 ===");
 		do{
-			System.out.println(nu1 + " : " + msg);
-			nu1 ++;
-		}while(su++ < 5);	//조건식/증감식, 선 연산 후 증가(증가값은 다음 행부터 적용)
-
+			System.out.println(nu1 + " : " + msg); // 1 2 3 4 5 6
+			nu1 ++; 							   // 2 3 4 5 6 7
+		}while(su++ < 5); //0->1 1->2 2->3	3->4 4->5  5->6
+		//조건식/증감식, 선 연산 후 증가(증가값은 다음 행부터 적용)
+		System.out.println("do~while수행후 nu1: " + nu1);
+		System.out.println("do~while수행후 su: " + su);
 		
 		//while문
 		System.out.println("");
 		System.out.println("=== while 실행결과===");
 		su = 0;
-		while(su++ < 5 ){	//조건식/증감식
-			System.out.println(nu2 + " : " + msg);
-			nu2++;
+		//조건식/증감식,
+		while(su++ < 5 ){ // 0->1 1->2 2->3 3->4 4->5  5->6
+			System.out.println(nu2 + " : " + msg); // 1 2 3 4 5
+			nu2++; //2 3 4 5 6
 		}
+		System.out.println("while수행후 nu2: " + nu2);
+		System.out.println("while수행후 su: " + su);
 /*			
 ===do~ while 실행결과 ===
 1 : Java World!
