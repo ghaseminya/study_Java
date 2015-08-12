@@ -33,10 +33,10 @@ public class Exten06 {
 		
 		Money money = new Money();
 		SaveMoney saveMoney = new SaveMoney();
-		money.addMoney(1000);
+		money.addMoney(1000);	//객체를 통한 간접 접근
 		saveMoney.showMoney();
 
-		saveMoney.saveMoney(2000);
+		saveMoney.saveMoney(2000); //객체를 통한 간접 접근
 		saveMoney.showMoney();
 		
 		SaveMoney.balance+=500;	//직접접근		

@@ -7,9 +7,9 @@
 
 //File Info
 //CellPhoneMain.java	main부
-//CellPhone.java		기본적인 휴대폰 기능 (모델명, 제품번호, 벨소리코드)
-//DiCaPhone.java		카메라 기능 추가 (화소, 렌즈)
-//MP3Phone.java			MP3 기능 추가 (저장용량, 색상)
+//CellPhone.java		기본적인 휴대폰 기능 (모델명, 제품번호, 벨소리코드)	부모클래스
+//DiCaPhone.java		카메라 기능 추가 (화소, 렌즈)					자식클래스
+//MP3Phone.java			MP3 기능 추가 (저장용량, 색상)					자식클래스
 
 
 package com.phone;
@@ -38,5 +38,4 @@ public class CellPhoneMain {
 		System.out.println(mp.getColor());
 		
 	}
-
 }

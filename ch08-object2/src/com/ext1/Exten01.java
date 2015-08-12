@@ -17,7 +17,7 @@ class Child extends Parent{
 	int b = 200;
 
 	//2)상위클래스의 a값 변경한 후 다시 결과 확인
-//	int a = 300;
+	int a = 300;
 }
 
 public class Exten01 {

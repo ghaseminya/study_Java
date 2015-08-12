@@ -1,9 +1,8 @@
-/*
-StringBuilder의 문자열 조합
--문자열의 복잡한 조합의 과정에서는 StringBuilder의 인스턴스가 활용되며
--때문에 추가로 생성되는 인스턴스의 수는 최대 두 개의 인스턴스만 생성됩니다
+//StringBuilder의 문자열 조합
+//-문자열의 복잡한 조합의 과정에서는 StringBuilder의 인스턴스가 활용되며
+//-때문에 추가로 생성되는 인스턴스의 수는 최대 두 개의 인스턴스만 생성됩니다
 
-*/
+
 public class StringBuilderEx03 {
 
 	public static void main(String[] args) {

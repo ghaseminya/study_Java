@@ -2,7 +2,15 @@
 //	• case레이블을 하나의 그룹으로 묶어서 처리하기
 //	• char형 조건값 비교하기
 //LAB
-	
+
+//학점 등급표
+//100~90	A
+//89~80		B
+//79~70		C
+//69~60		D
+//59~0		F
+
+
 public class SwitchEx03 {
 
 	public static void main(String[] args) {

@@ -20,5 +20,4 @@ public class CellPhone {
 	public int getBellSound(){
 		return bellsound;
 	}
-
 }
