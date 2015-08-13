@@ -22,6 +22,7 @@ public class FunctionEx02 {
 		System.out.println("프로그램의 끝");
 	}
 	
+	//매개변수가 있는 함수 정의
 	//매개변수는 전달 순서대로 저장
 	//hour = 9, minute = 11
 	public static void tellTime(int hour, int minute)
@@ -32,10 +33,9 @@ public class FunctionEx02 {
 		
 	}
 	
-//	매개변수 없는 함수 정의
+	//매개변수 없는 함수 정의
 	public static void byEveryone()
 	{
 		System.out.println("내일 뵙겠습니다.");
 	}
-
 }

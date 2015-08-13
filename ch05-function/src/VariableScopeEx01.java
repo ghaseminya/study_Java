@@ -2,7 +2,7 @@
 
 public class VariableScopeEx01 {
 	
-	public static void main(String[] args)	//args의 범위
+	public static void main(String[] args)
 	{
 		
 		boolean scope=true;

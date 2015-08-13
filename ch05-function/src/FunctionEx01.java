@@ -12,15 +12,18 @@ public class FunctionEx01 {
 
 	public static void main(String[] args) {
 		System.out.println("프로그램의 시작");
+		
 		//메소드 실행(호출)
 		tellTime(9);
-		tellTime(18);	//정의한 메소드는 얼마든지 재호출 가능
+		tellTime(18); //정의한 메소드는 얼마든지 재호출 가능
+		
 		System.out.println("프로그램의 끝");
 	}
 	
-	//int time	: 매개변수
-	//매개변수: 매소드 실행시 전달되는 값을 저장하기 위해 선언된 변수
 	//메소드 정의
+	//int hour: 매개변수
+	//매개변수: 매소드 실행시 전달되는 값을 저장하기 위해 선언된 변수
+	//hour = 9: hour에 메소드 호출하면서 전달된 9가 저장
 	public static void tellTime(int hour)
 	{
 		System.out.println("즐거운 하루입니다.");

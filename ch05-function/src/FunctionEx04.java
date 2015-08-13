@@ -1,5 +1,9 @@
 //키워드 return의 역할
 
+//함수안에서 return키워드의 역할 확인
+//-메소드 종료 
+//-메소드 종료 and 값 반환
+
 public class FunctionEx04 {
 
 	public static void main(String[] args) {
