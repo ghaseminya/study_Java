@@ -1,10 +1,11 @@
 //상속후 오버라이딩 / 업 케스팅
-//문법 규칙) 상속시 메소드 오버라이딩 되어 있으면 확장되어 있는 것이 호출됩니다.
+//(문법 규칙) 상속시 메소드 오버라이딩 되어 있으면 확장되어 있는 것이 호출됩니다.
 
 package com.ext3;
 
 class Parent3{
 	int a = 100;
+	
 	public void play(){
 		System.out.println("부모 클래스");
 	}
@@ -29,13 +30,20 @@ public class Exten03 {
 		
 		System.out.println("\n업케스팅: ");
 		//부모 클래스 타입으로
-		Parent3 np3 = ch3;
-		System.out.println(np3.a);
-		np3.play();
+		Parent3 pa3 = ch3;
+		System.out.println(pa3.a);
+		pa3.play(); //자식 클래스
+		//상속시 메소드 오버라이딩 되어 있으면 확장되어 있는 것(오버라이딩된 것)이 호출됩니다.
 		
-		
-		
-
 	}
-
 }
+
+
+/*//출력결과
+200
+자식 클래스
+
+업케스팅: 
+100
+자식 클래스
+*/

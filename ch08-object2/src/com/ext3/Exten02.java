@@ -7,13 +7,13 @@
 package com.ext3;
 
 class A{
-	public void make(){
+	public void playA(){
 		System.out.println("A클래스");
 	}
 }
 
 class B extends A{
-	public void play(){
+	public void playB(){
 		System.out.println("B클래스");
 	}
 }
@@ -23,23 +23,37 @@ public class Exten02 {
 	public static void main(String[] args) {
 
 		System.out.println("\n자식 객체 생성: ");
-		B nB = new B();
-		nB.make();
-		nB.play();
+		B objB = new B();
+		objB.playA();
+		objB.playB();
 		
 		System.out.println("\n업 캐스팅: ");
 		//자식 클래스 타입 -> 부모 클래스 타입 형변환
 		//업 캐스팅, 자동적으로 형변환
-		A nA = nB;
-		nA.make();
+		A objA = objB;
+		objA.playA();
 		//호출 범위를 벗어나 호출 불가
-		//nA.play();	//ERROR: The method play() is undefined for the type A
+		//objA.playB();	//ERROR: The method play() is undefined for the type A
 		
 		System.out.println("\n다운 캐스팅: ");
 		//부모 클래스 타입 -> 자식 클래스 타입 형변환
 		//다운 캐스팅, 명시적으로 형변환
-		B nB2 = (B)nA;
-		nB2.make();
-		nB2.play();
+		B objB2 = (B)objA;
+		objB2.playA();
+		objB2.playB();
 	}
 }
+
+
+/*//출력결과
+자식 객체 생성: 
+A클래스
+B클래스
+
+업 캐스팅: 
+A클래스
+
+다운 캐스팅: 
+A클래스
+B클래스
+*/

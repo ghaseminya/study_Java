@@ -15,16 +15,20 @@ class AClass
 
 class BClass extends AClass
 {
+	@Override
 	public void rideMethod(){
 		System.out.println("BClass's Method");}
+
 	public void loadMethod(int num){
 		System.out.println("int Method");}
 }
 
 class CClass extends BClass
 {
+	@Override
 	public void rideMethod(){
 		System.out.println("CClass's Method");}
+	
 	public void loadMethod(double num){
 		System.out.println("double Method");}
 }
@@ -36,16 +40,25 @@ public class OverridingEx02 {
 		AClass ref1=new CClass();		
 		BClass ref2=new CClass();
 		CClass ref3=new CClass();
-		//컴파일 완료된 후 문장이 끝난후 참조변수에 대한 자료형 정보를 가지고 있지만 실제로 뭘 참조하는 지는(new CClass()) 지워지게 됩니다.
+		//컴파일 완료된 후(문장이 끝난후) 참조변수에 대한 자료형 정보를 가지고 있지만 실제로 뭘 참조하는 지는(new CClass()) 지워지게 됩니다.
 		
 		ref1.rideMethod();
 		ref2.rideMethod();
 		ref3.rideMethod();
-//		참조변수의 자료형에 상관없이 오버라이딩 된 메소드는 외부로부터
-//		가려지므로, 마지막으로 오버라이딩 한 메소드가 호출된다
+		//참조변수의 자료형에 상관없이 오버라이딩 된 메소드는 외부로부터 가려지므로,
+		//마지막으로 오버라이딩 한 메소드가 호출됩니다
 		
 		ref3.loadMethod();
 		ref3.loadMethod(1);
 		ref3.loadMethod(1.2);
 	}
 }
+
+
+// 출력결과
+//CClass's Method
+//CClass's Method
+//CClass's Method
+//void Method
+//int Method
+//double Method
