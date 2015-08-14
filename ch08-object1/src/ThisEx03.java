@@ -1,10 +1,10 @@
 //this() 생성자 호출을 통한 초기화
  
 
-public class ThisTest3 {
+public class ThisEx03 {
 	
 	
-	public ThisTest3(){
+	public ThisEx03(){
 
 		//초기화 작업 전에 수행문이 있으면 ERROR:Constructor call must be the first statement in a constructor
 //		System.out.println("생성자 호출 전 수행문 호출(ERROR)");
@@ -16,11 +16,11 @@ public class ThisTest3 {
 		System.out.println("생성자 호출 후 수행문 호출(정상)");
 	}
 	
-	public ThisTest3(String msg){
+	public ThisEx03(String msg){
 		System.out.println(msg);
 	}
 	
-	public ThisTest3(int a){
+	public ThisEx03(int a){
 					//int -> String
 		//String	s = String.valueOf(a);
 		//System.out.println(s);
@@ -28,12 +28,12 @@ public class ThisTest3 {
 	}	
 
 	public static void main(String[] args) {
-		ThisTest3 tt1 = new ThisTest3();
+		ThisEx03 tt1 = new ThisEx03();
 		
 		System.out.println("==================");
-		ThisTest3 tt2 = new ThisTest3(1000);
+		ThisEx03 tt2 = new ThisEx03(1000);
 		
 		System.out.println("==================");
-		ThisTest3 tt3 = new ThisTest3("대한민국");
+		ThisEx03 tt3 = new ThisEx03("대한민국");
 	}
 }

@@ -3,7 +3,7 @@
 //문제는 setMoney(int money)라는 메서드(멤버함수)에 있으며 자바에서는 특정 영역의 우선권은 멤버변수가 아닌 지역변수가 가지게 되어 있습니다. 
 
 
-public class MyMethod2 {
+public class MethodEx06 {
 
 	//멤버변수
 	int money;
@@ -26,7 +26,7 @@ public class MyMethod2 {
 	}
 	
 	public static void main(String[] args){
-		MyMethod2 mm = new MyMethod2();
+		MethodEx06 mm = new MethodEx06();
 
 		mm.setMoney(5580);
 		System.out.println("money: " + mm.getMoney());

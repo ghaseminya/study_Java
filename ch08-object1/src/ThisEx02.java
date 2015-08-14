@@ -1,6 +1,6 @@
 //멤버변수와 지역변수 구분하기 (this)
 
-public class ThisTest2 {	
+public class ThisEx02 {	
 	String name;
 	int age;
 	
@@ -11,7 +11,7 @@ public class ThisTest2 {
 //		age = age;		
 //	}
 	
-	public ThisTest2(String name, int age){
+	public ThisEx02(String name, int age){
 		//멤버변수	= 지역변수
 		this.name 	= name;
 		this.age 	= age;	
@@ -19,7 +19,7 @@ public class ThisTest2 {
 	}
 
 	public static void main(String[] args) {
-		ThisTest2 tt1 = new ThisTest2("마징가",  25);
+		ThisEx02 tt1 = new ThisEx02("마징가",  25);
 		System.out.println( tt1.name + " / " + tt1.age );
 	}
 }

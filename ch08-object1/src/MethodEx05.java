@@ -1,7 +1,7 @@
 //캡슐화에서 멤버변수와 멤버함수
 //인스턴스변수와 인스턴스 함수 사용하기
 
-public class MyMethod1 {
+public class MethodEx05 {
 
 	// 멤버 변수들
 	int var1,var2;
@@ -17,7 +17,7 @@ public class MyMethod1 {
 	}
 
 	public static void main(String[] args){
-		MyMethod1 mm = new MyMethod1();
+		MethodEx05 mm = new MethodEx05();
 
 		int result = mm.sum(77, 11);
 		System.out.println("result="+result);
