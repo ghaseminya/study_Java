@@ -1,5 +1,5 @@
 //인터페이스 - 다중 상속
-// 
+
 //인터페이스 생성
 //인터페이스 끼리 상속
 //클래스에서 인터페이스 구현
@@ -9,7 +9,6 @@
 
 
 package com.inter1;
-
 
 interface Inter1{	
 	//추상 메소드
@@ -34,8 +33,8 @@ interface Inter4{
 }
 
 // 클래스에서 다중 구현
-// 인터페이스는 둘 이상을 동시에 구현 가능 	인터페이스의 상속(구현)은 extends가 아닌 implements를 사용한다
-public class InterEx03 implements Inter3, Inter4{
+// 인터페이스는 둘 이상을 동시에 구현 가능, 인터페이스의 구현(상속)은 extends가 아닌 implements를 사용합니다.
+public class InterfaceEx03 implements Inter3, Inter4{
 
 	@Override
 	public int getA(){
@@ -59,12 +58,11 @@ public class InterEx03 implements Inter3, Inter4{
 	public static void main(String[] args) {
 		
 		//클래스 객체 생성
-		InterEx03 in3 = new InterEx03();
-		System.out.println(in3.getA());
-		System.out.println(in3.getB());
-		System.out.println(in3.getC());
-		System.out.println(in3.getData());
+		InterfaceEx03 ife3 = new InterfaceEx03();
+		System.out.println(ife3.getA()); //100
+		System.out.println(ife3.getB()); //200
+		System.out.println(ife3.getC()); //400
+		System.out.println(ife3.getData()); //300
 
 	}
-
 }

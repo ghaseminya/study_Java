@@ -3,7 +3,6 @@
 
 package com.inter1;
 
-
 interface Interf1{
 	public int getA();
 }
@@ -17,22 +16,25 @@ interface Interf3 extends Interf1, Interf2{
 	public int getData();
 }
 
-public class InterEx06 implements Interf3{
+//인터페이스의 구현(상속)은 extends가 아닌 implements를 사용합니다.
+public class InterfaceEx06 implements Interf3{
 	
 	int a = 100;
+	
+	@Override
 	public int getA(){
 		return a;
 	}
-	
+	@Override
 	public int getData(){
 		return a+10;
 	}
 	
 	public static void main(String[] args){
-		InterEx06 it = new InterEx06();
-		Interf1 it1 = it;
-		Interf2 it2 = it;
-		Interf3 it3 = it;
+		InterfaceEx06 ife = new InterfaceEx06();
+		Interf1 it1 = ife;
+		Interf2 it2 = ife;
+		Interf3 it3 = ife;
 		System.out.println(it1.getA());
 		System.out.println(it2.getA());
 		System.out.println(it3.getData());

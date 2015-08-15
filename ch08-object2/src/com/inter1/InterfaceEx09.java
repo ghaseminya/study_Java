@@ -1,7 +1,7 @@
 //인터페이스를 통한 다중상속 효과
 //인터페이스와 클래스를 상속
 
-//강의 내용
+//강의 내용(인터페이스를 통한 다중상속 절차)
 //	• 인터페이스 구현
 //	• 다중상속효과를 위한 인터페이스의 추상메소드를 구현하는 클래스 생성
 //	• 클래스 상속, 인테페이스 구현한 클래스에서 인터페이스를 구현한 클래스의 인스턴스 생성
@@ -34,12 +34,12 @@ class Mp3Impl
 
 class SmartPhone extends DMB implements Mp3
 {
-	Mp3Impl mp3=new Mp3Impl();	//인스턴스 생성	
+	Mp3Impl mp3=new Mp3Impl(); //인스턴스 생성	
 	
 	@Override
 	public void onMp3() {
-		mp3.onMp3();		//인스턴스를 통한 메소드 호출
-							//인터페이스를 통해 다중 상속의 효과를 출수 있습니다.
+		mp3.onMp3(); //인스턴스를 통한 메소드 호출
+					 //인터페이스를 통해 다중 상속의 효과를 출수 있습니다.
 	}
 	
 	public void powerOn()
@@ -49,7 +49,7 @@ class SmartPhone extends DMB implements Mp3
 	}
 }
 
-public class InterEx09 {
+public class InterfaceEx09 {
 
 	public static void main(String[] args)
 	{
@@ -67,3 +67,11 @@ public class InterEx09 {
 
 	}
 }
+
+
+/*//출력결과
+MP3 재생
+DMB 출력
+DMB 출력
+MP3 재생
+*/

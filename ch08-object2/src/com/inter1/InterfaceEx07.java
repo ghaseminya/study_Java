@@ -1,6 +1,6 @@
 //인터페이스 - 인터페이스의 상수 응용
 
-//요일(曜日)에 의미를 부여 및 동음(同音)의 동사형 한자를 그날의 행동강령으로 요일에 의미 부여
+//요일(曜日)에 의미를 부여 및 동음(同音)의 동사형 한자를 그날의 행동강령으로 요일에 의미 부여하여 예제 구성
 // 月요일: 달처럼 차분하게. 한계를 극복하는 날=越(넘을 월) 
 // 火요일: 불처럼 열정적으로. 사람들과 화합하는 날=和(화할 화) 
 // 水요일: 물처럼 자연스럽게. 마음을 수양하는 날=修(닦을 수) 
@@ -20,14 +20,14 @@ interface Week{
 	int MON=1, TUE=2, WED=3, THU=4, FRI=5, SAT=6, SUN=7;
 }
 
-public class InterEx07 {
+public class InterfaceEx07 {
 
 	public static void main(String[] args)
 	{
 		System.out.println("좋아하는 요일의 숫자를 선택하세요... ");
 		System.out.println("1.월요일, 2.화요일, 3.수요일");
 		System.out.println("4.목요일, 5.금요일, 6.토요일, 7.일요일");
-		System.out.print("당신의 선택: ");
+		System.out.print("당신의 선택은 > ");
 
 		Scanner scanner=new Scanner(System.in);
 		int select=scanner.nextInt();

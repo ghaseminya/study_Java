@@ -1,10 +1,10 @@
 //인터페이스 - 추상 메소드 구체화
 
 //인터페이스 정의 및 사용 단계
-//인터페이스 정의
-//class에 implements하고 인터페이스 추상 메소드 구체화
-//class의 객체 생성
-//객체를 통해 메소드 호출
+//- 인터페이스 정의
+//- class에 implements하고 인터페이스 추상 메소드 구체화
+//- class의 객체 생성
+//- 객체를 통해 메소드 호출
 
 
 //인터페이스의 특징
@@ -13,18 +13,20 @@
 //	3) 인터페이스 내에 선언된 변수는 무조건 public static final로 선언 (상수)
 //	4) 인터페이스 내에 선언된 메소드는 무조건 public abstract로 선언	(추상 메소드)
 //	5) 인터페이스도 참조변수 선언 가능하고, 
-//	6) 메소드 오버라이딩 원칙 그대로 적용되며 인터페이스가 가지는 추상 메서드 모두 재정의해야 함
+//	6) 메소드 오버라이딩 원칙 그대로 적용되며 인터페이스가 가지는 추상 메서드는 모두 재정의해야 함
 
 package com.inter1;
 
+//인터페이스 정의
 interface A2{
 	//추상 메소드
-	public abstract void getB();	//추상 메소드 선언 원형
-	void getC();					//public abstract생략된 것임, 추상 메소드 선언
+	public abstract void getB(); //추상 메소드 선언, 생략없이 원형으로 추상메소드 선언한 것
+	void getC();				 //추상 메소드 선언, public abstract생략된 것
 }
 
-//A2인터페이스를 B2에 구현
+//A2인터페이스를 B2클래스에 구현
 class B2 implements A2{
+	//추상 메소드 재정의
 	@Override
 	public void getB(){
 		System.out.println("getB 메소드");		
@@ -36,7 +38,7 @@ class B2 implements A2{
 	}
 }
 
-public class InterEx02 {
+public class InterfaceEx02 {
 
 	public static void main(String[] args) {
 		B2 b2b2 = new B2();
@@ -44,3 +46,9 @@ public class InterEx02 {
 		b2b2.getC();
 	}
 }
+
+
+/*//출력결과
+getB 메소드
+getC 메소드
+*/

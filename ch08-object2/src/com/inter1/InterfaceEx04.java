@@ -13,35 +13,47 @@ interface Inter5{
 }
 
 //인터페이스 구현
-public class InterEx04 implements Inter5{
+public class InterfaceEx04 implements Inter5{
 	
 	@Override
 	public void play(){
 		System.out.println("play 메소드");
 	}
 	
-	public void make(){
-		System.out.println("Make 메소드");
+	public void study(){
+		System.out.println("study 메소드");
 	}
 
 	public static void main(String[] args) {
 
-		InterEx04 it04 = new  InterEx04();
-		it04.play();
-		it04.make();
+		InterfaceEx04 ife04 = new  InterfaceEx04();
+		ife04.play();
+		ife04.study();
 		
 		System.out.println();
 		//클래스타입 -> 인터페이스타입으로 자동적으로 형변환
-		Inter5 it5 = it04;	 
-		it5.play();
+		Inter5 if5 = ife04;	 
+		if5.play();
 		
-		//호출 범위를 벗어나 호출 불가능
-//		it5.make();	//ERROR: The method make() is undefined for the type Inter5
+		//호출 범위를 벗어나 호출 불가능 (interface Inter5에 포함된 메소드 아님)
+//		it5.study();	//ERROR: The method study() is undefined for the type Inter5
 		
 		System.out.println();
 		//인터페이스 -> 클래스타입으로 명시적으로 형변환
-		InterEx04 it02 = (InterEx04)it5;		
-		it02.play();
-		it02.make();
+		InterfaceEx04 ife05 = (InterfaceEx04)if5;		
+		ife05.play();
+		ife05.study();
 	}
 }
+
+
+/*//출력결과
+play 메소드
+study 메소드
+
+play 메소드
+
+play 메소드
+study 메소드
+*/
+

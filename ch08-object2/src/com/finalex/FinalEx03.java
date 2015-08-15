@@ -10,16 +10,16 @@
 package com.finalex;
 
 //클래스에 final을 명시하면 상속되지 않습니다.
-//final class Me{
+//final class Parent{
 //	int a = 100;
 //}
 
-class Me{
+class Parent{
 	int a = 100;
 }
 
-// ERROR: The type FinalEx03 cannot subclass the final class Me
-public class FinalEx03 extends Me{
+// ERROR: The type FinalEx03 cannot subclass the final class Parent
+public class FinalEx03 extends Parent{
 
 	public static void main(String[] args) {
 		

@@ -2,7 +2,7 @@
 
 package com.finalex;
 
-class Cont{
+class Me{
 	
 	//메서드에  final을 기재하면 상속은 되지만 메소드 재정의 불가능
 	public final void play(){
@@ -10,10 +10,9 @@ class Cont{
 	}
 }
 
-public class FinalEx02 extends Cont{
+public class FinalEx02 extends Me{
 
-	
-	//ERROR - Cannot override the final method from Cont
+	//상속받은 메소드 재정의 시 ERROR - Cannot override the final method from Me
 //	@Override
 //	public void play(){
 //		System.out.println("자식 클래스의 플레이 메소드");

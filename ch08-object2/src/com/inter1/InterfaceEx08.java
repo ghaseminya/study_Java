@@ -1,4 +1,3 @@
-
 //인터페이스의 Marker 기능
 
 //이름을 출력하는 기능중 특별히 대문자로 모두 출력할 필요가 있을 경우 
@@ -7,7 +6,10 @@
 
 package com.inter1;
 
+//Marker역할을 하는 인터페이스 정의
 //무엇인가를 표시하는(클래스의 특성을 표시하는) 용도로도 인터페이스는 사용(마커, 표시하는 역할)
+//인터페이스의 이름은 ~able로 끝나는 것이 일반적입니다.
+//인터페이스는 비어 있는 형태를 가질 수 있습니다.
 interface UpperCasePrintable{
 	// 비어 있는 형태
 }
@@ -51,7 +53,7 @@ class NameTwo{
 	}
 }
 
-public class InterEx08 {
+public class InterfaceEx08 {
 	public static void main(String[] args){
 		NameOne name1=new NameOne("steve");
 		NameTwo name2=new NameTwo("jessica");
