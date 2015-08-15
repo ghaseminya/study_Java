@@ -3,8 +3,8 @@
 package com.abs1;
 
 //추상 클래스
-//단독으로 객체생성이 불가능하고 상속되어져서 사용되어져야 함
-//추상 클래스는 추상메서드가 없는 경우도 있지만 일반적으로 추상메소드를 한개 이상 갖고 있음
+//단독으로 객체생성이 불가능하고 상속되어져서 사용되어져야 합니다.
+//추상 클래스는 추상메서드가 없는 경우도 있지만 일반적으로 추상메소드를 한개 이상 갖고 있습니다.
 abstract class A{
 
 	int a=100;	//변수
@@ -19,8 +19,8 @@ abstract class A{
 	public void setA(int a){
 		this.a = a;
 	};
-	
 }
+
 class B extends A{
 	int b = 200;
 	
@@ -45,6 +45,16 @@ public class AbstractEx01 {
 		System.out.println(b1.b);
 		b1.number();
 		
+		b1.setA(500);
+		System.out.println(b1.a);
 		
 	}
 }
+
+
+/*//출력결과
+100
+200
+number 메서드
+500
+*/

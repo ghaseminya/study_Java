@@ -10,7 +10,8 @@ public abstract class Unit {
 	protected int energy;
 	
 	//추상 메소드: 재정의 필수
-	abstract public void decEnergy();
+	abstract public void decEnergy();	
+	abstract public void incEnergy();
 	
 	//일반 메소드: 재정의 선택적
 	public int getEnergy(){

@@ -20,4 +20,8 @@ public class Protoss extends Unit{
 		energy--;
 	}
 
+	@Override
+	public void incEnergy() {
+		energy++;
+	}
 }

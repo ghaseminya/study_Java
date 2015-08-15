@@ -17,6 +17,11 @@ public class Zerg extends Unit{
 	//추상 메소드 구현
 	@Override
 	public void decEnergy(){
-		energy -=4;
+		energy -= 4;
+	}
+
+	@Override
+	public void incEnergy() {
+		energy += 4;
 	}
 }

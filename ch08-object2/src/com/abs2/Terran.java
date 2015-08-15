@@ -20,4 +20,8 @@ public class Terran extends Unit{
 		energy -= 2;
 	}
 
+	@Override
+	public void incEnergy() {
+		energy += 2;
+	}
 }
