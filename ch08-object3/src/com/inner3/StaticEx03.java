@@ -1,5 +1,7 @@
-package com.inner3;
+//Nested Class - NestedClass가 private으로 선언된 경우
 
+
+package com.inner3;
 
 class OuterClassOne
 {
@@ -8,7 +10,6 @@ class OuterClassOne
 		NestedClass nst=new NestedClass();
 		nst.simpleMethod();
 	}
-	
 	
 	static class NestedClass
 	{
@@ -23,10 +24,12 @@ class OuterClassTwo
 {
 	OuterClassTwo()
 	{
+		//NestedClass는 선언된 클래스 내부에서만 인스턴스를 생성할 수 있습니다.
 		NestedClass nst=new NestedClass();
 		nst.simpleMethod();		
 	}
 	
+	//NestedClass가 private으로 선언되면, 선언된 클래스 내부에서만 인스턴스를 생성할 수 있습니다.
 	private static class NestedClass
 	{
 		public void simpleMethod()
@@ -36,7 +39,7 @@ class OuterClassTwo
 	}
 }
 
-class NestedClassTest
+class StaticEx03
 {	
 	public static void main(String[] args)
 	{
@@ -45,7 +48,16 @@ class NestedClassTest
 		
 		OuterClassOne.NestedClass nst1=new OuterClassOne.NestedClass();
 		nst1.simpleMethod();
-		// OuterClassTwo.Nested nst2=new OuterClassTwo.Nested();
-		// nst2.simpleMethod();
+
+		//NestedClass가 private으로 선언되면, 선언된 클래스 내부에서만 인스턴스를 생성할 수 있습니다.
+//		OuterClassTwo.NestedClass nst2=new OuterClassTwo.NestedClass(); //ERROR-The type OuterClassTwo.NestedClass is not visible
+//		nst2.simpleMethod();
 	}
 }
+
+
+/*//출력결과
+Nested Instance Method One
+Nested Instance Method Two
+Nested Instance Method One
+*/

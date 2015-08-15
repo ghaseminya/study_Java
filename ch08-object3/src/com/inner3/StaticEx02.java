@@ -1,16 +1,14 @@
-/* 
-Nested 클래스 이해
+//Nested 클래스 이해
 
- */
 
 package com.inner3;
 
 class OuterClass{
 	
 	OuterClass(){
-		//클래스 내부에서는 직접 생성 가능
-		NestedClass nst = new NestedClass();
-		nst.getData();
+		//클래스 내부에서는 직접 객체 생성 가능
+		NestedClass nc = new NestedClass();
+		nc.getData();
 	}
 	
 	//Nested 클래스
@@ -28,11 +26,19 @@ public class StaticEx02 {
 
 	public static void main(String[] args) {
 		
-		OuterClass ot = new OuterClass();
+		OuterClass oc = new OuterClass();
 		
 		//Nested 클래스의 인스턴스 생성방법
-		OuterClass.NestedClass nst1=new OuterClass.NestedClass();
-		nst1.getData();
+		OuterClass.NestedClass ocnc = new OuterClass.NestedClass();
+		ocnc.getData();
+		
+//		OuterClass.NestedClass ocnc2 = oc.new NestedClass(); //ERROR, 참고
 		
 	}
 }
+
+
+/*//출력결과
+Nested Instance Method
+Nested Instance Method
+*/
