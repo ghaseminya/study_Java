@@ -1,7 +1,6 @@
-/*
-0이상 2000미만의 난수가 총 100개 생성되도록 출력
+//0이상 2000미만의 난수가 총 100개 생성되도록 출력
 
-*/
+
 package com.mathex;
 
 import java.util.Random;
