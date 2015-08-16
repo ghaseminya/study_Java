@@ -1,7 +1,6 @@
-/*
-Local 클래스의 적절한 사용 모델
+//Local 클래스의 적절한 사용 모델
 
-*/
+
 package com.inner2;
 
 interface Readable{
@@ -35,6 +34,7 @@ class LocalEx03{
 		localInst1.read();
 
 		OuterClass out2=new OuterClass("Jack");	
+		//외부에 정의된 인터페이스의 참조변수를 통해서 인스턴스의 참조 가능
 		Readable localInst2=out2.createLocalClassInst();
 		localInst2.read();
 	}
