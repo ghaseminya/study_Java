@@ -8,9 +8,9 @@
  * 문자열 변경완료후 스트링으로 저장하기
  */
 
-package com.langex;
 
-public class StringBufferEx {
+
+public class StringBufferEx02 {
 
 	public static void main(String[] args) {
 		//
