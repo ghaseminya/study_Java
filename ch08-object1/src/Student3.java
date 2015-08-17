@@ -40,9 +40,6 @@ public class Student3 {
 		nStu.gPrint("수학 점수를 입력하세요 > ");
 		nStu.math = input.nextInt();
 		
-		input.close();	//자원 해제
-		
-		
 		System.out.println();
 		nStu.gPrint("국어 점수: " + nStu.korean);
 		nStu.gPrint("수학 점수: " + nStu.math);
@@ -52,6 +49,8 @@ public class Student3 {
 		nStu.gPrint("총점은 > " + nStu.getSum()); 
 		
 		System.out.println();
-		nStu.gPrint("평균은> " +nStu.getAvg());		
+		nStu.gPrint("평균은> " +nStu.getAvg());
+		
+		input.close();	//자원 해제
 	}
 }
