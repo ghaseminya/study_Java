@@ -1,10 +1,7 @@
-/* StringTokenizer - 문자열의 구분자가 같은 경우
- * 
- * String객체 생성
- * StringTokenizer사용을 위해 import
- * 
- * */
-
+//StringTokenizer - 문자열의 구분자가 있는 경우
+//
+//String객체 생성
+//StringTokenizer사용을 위해 import
 
 
 import java.util.StringTokenizer;
@@ -26,3 +23,12 @@ public class StringTokenizerEx01 {
 		}
 	}
 }
+
+
+/*//출력결과
+100
+200
+300
+400
+500
+*/
