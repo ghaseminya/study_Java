@@ -53,8 +53,8 @@ class AppleSeller{
 
 //사과구매자
 class AppleBuyer{
-	int myMoney=10000;	//보유 금액
 	int numOfApple=0;	//보유 사과 수
+	int myMoney=10000;	//보유 금액
 	
 	//사과를 사는 기능
 	public void buyApple(AppleSeller seller, int money)	{
