@@ -4,26 +4,26 @@
 public class OverloadingEx02 {
 
 	public static void main(String[] args) {
-		OverloadingEx02 oe1 = new OverloadingEx02();
+		OverloadingEx02 oe = new OverloadingEx02();
 
 		//개별적으로 함수 호출
-		oe1.intLength(1000);
-		oe1.floatLength(3.14f);
-		oe1.stringLength("10000");
+		oe.intLength(1000);
+		oe.floatLength(3.14f);
+		oe.stringLength("10000");
 	}
 
 
 	//자료형별로 개별적으로 함수 정의
+	public void stringLength(String s){
+		System.out.println("입력한 값의 길이 : " + s.length()); //입력한 값의 길이 : 4
+	}
 	public void intLength(int a){
 		String s = String.valueOf(a);
-		System.out.println("입력한 값의 길이 : " + s.length());
+		System.out.println("입력한 값의 길이 : " + s.length());  //입력한 값의 길이 : 4
+															//3.14f: f는 길이에 포함되지 않습니다. 실수임을 표시하는 마킹 역할만합니다.
 	}
 	public void floatLength(float f){
 		String s = String.valueOf(f);
-		System.out.println("입력한 값의 길이 : " + s.length());
-	}
-	public void stringLength(String str){
-		System.out.println("입력한 값의 길이 : " + str.length());
-
+		System.out.println("입력한 값의 길이 : " + s.length()); //입력한 값의 길이 : 5
 	}
 }

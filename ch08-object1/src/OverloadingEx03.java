@@ -8,26 +8,30 @@
 public class OverloadingEx03 {
 
 	public static void main(String[] args) {
-		OverloadingEx03 oe3 = new OverloadingEx03();
+		OverloadingEx03 oe = new OverloadingEx03();
 
 		//같은 이름으로 다양한 기능을 하는 함수 호출
-		oe3.getLength(1000);
-		oe3.getLength(3.14f);
-		oe3.getLength("10000");
+		oe.getLength(1000);
+		oe.getLength(3.14f);
+		oe.getLength("10000");
 	}
 
 	//메소드 오버로딩 함수 정의
+	public void getLength(String str){
+		System.out.println("입력한 값의 길이 : "+str.length());
+	}
 	public void getLength(int n){
 		String s = String.valueOf(n);
 		getLength(s);
 	}
+//	private int getLength(int n){
+//		String s = String.valueOf(n);
+//		getLength(s);
+//		return 0;
+//	}
 	void getLength(float n){
 		String s = String.valueOf(n);
 		getLength(s);
-	}
-	private int getLength(String str){
-		System.out.println("입력한 값의 길이 : "+str.length());
-		return 0;
 	}
 
 //-------------------------------
@@ -38,5 +42,11 @@ public class OverloadingEx03 {
 //	메서드명이 같은 여러 개의 메서드를 구별하는 방법은
 //	메서드에 사용되는 인자의 자료형 또는 인자의 수 다르거나
 //	인자들의 위치(배치)가 서로 다른경우 각각의 메서드로 구별되어 존재합니다.
-
 }
+
+
+/*//출력결과
+입력한 값의 길이 : 4
+입력한 값의 길이 : 4
+입력한 값의 길이 : 5
+*/

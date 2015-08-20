@@ -8,10 +8,12 @@
 
 
 public class OverloadingEx01 {	
-	//멤버변수
-	int var1;	
 	
 	//멤버메서드
+	public void getLength(String str){		
+		System.out.println("입력한 값의 길이: " + str.length());		
+	}
+	
 	public void getLength(int n){
 					//int -> Sting
 		String s = String.valueOf(n);
@@ -49,10 +51,6 @@ public class OverloadingEx01 {
 		getLength(s);
 	}
 	
-	public void getLength(String str){		
-		System.out.println("입력한 값의 길이: " + str.length());		
-	}
-	
 	public void getLength(String str, float f ){
 		String s = str + String.valueOf(f);
 		getLength(s);
@@ -86,14 +84,26 @@ public class OverloadingEx01 {
 		
 		//1000, 3.14F, "대한민국"
 		
-		OverloadingEx01 ot = new OverloadingEx01();
-		ot.getLength(1000);		//1000		->	"1000"
-		ot.getLength(3.14F);	//3.14F		->	"3.14"
-		ot.getLength("대한민국");	//"대한민국"	->	"대한민국"
-		ot.getLength(1000, 3.14F);
-		ot.getLength(3.14F, 1000);
-		ot.getLength("대한민국", 3.14F);
-		ot.getLength(3.14F, "대한민국");
-		ot.getLength(1000, 3.14F, "대한민국");
+		OverloadingEx01 oe = new OverloadingEx01();
+		oe.getLength(1000);		//1000		->	"1000"
+		oe.getLength(3.14F);	//3.14F		->	"3.14"
+		oe.getLength("대한민국");	//"대한민국"	->	"대한민국"
+		oe.getLength(1000, 3.14F);
+		oe.getLength(3.14F, 1000);
+		oe.getLength("대한민국", 3.14F);
+		oe.getLength(3.14F, "대한민국");
+		oe.getLength(1000, 3.14F, "대한민국");
 	}
 }
+
+
+/*//출력결과
+입력한 값의 길이: 4
+입력한 값의 길이: 4
+입력한 값의 길이: 4
+입력한 값의 길이: 8
+입력한 값의 길이: 8
+입력한 값의 길이: 8
+입력한 값의 길이: 8
+입력한 값의 길이: 12
+*/
