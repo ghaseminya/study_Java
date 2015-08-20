@@ -1,26 +1,24 @@
-/* 예외처리 - 사용자 정의 예외 처리
- * 
- * 
- * 양수만 입력되게 하고
- * 음수 입력시 예외처리하기
- * 
- * 
- * 사용자 정의 예외 클래스 작성: 예외문구만 받아서 처리하기 위해 사용
- */
+//예외처리 - 사용자 정의 예외 처리
+//
+//양수만 입력되게 하고 음수 입력시 예외처리하기
+//
+//사용자 정의 예외 클래스 작성: 예외문구만 받아서 처리하기 위해 사용
 
+//사용자 정의 예외 클래스 정의
 package com.basic;
 
-//사용자 정의 예외 클래스
+
 class UserException extends Exception{
 	public UserException(String str){
 		super(str);
 	}
 }
 
+
 public class ExceptionEx07 {
 
 	public static void main(String[] args) {
-		
+
 //		UserException ux = new UserException(str);
 		
 		try{
