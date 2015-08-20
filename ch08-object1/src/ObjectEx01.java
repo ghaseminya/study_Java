@@ -7,11 +7,13 @@ public class ObjectEx01 {
 	public static void main(String[] args){
 		//인스턴스 생성 == 참조변수 선언/생성
 		Number myNumber=new Number();
-		System.out.println("메소드 호출 전 값: "+myNumber.getNumber());	//0
+		/new		: 인스턴스 생성 의미
+		//Number()	: 매개변수가 없는 Default생성자를 호출
+		System.out.println("메소드 호출 전 값: "+myNumber.getNum());	//0
 		
 		//인스턴스 참조값을 메소드의 매개변수로 전달
 		instMethod(myNumber);
-		System.out.println("메소드 호출 후 값: "+myNumber.getNumber());	//10
+		System.out.println("메소드 호출 후 값: "+myNumber.getNum());	//10
 	}
 
 	public static void instMethod(Number number){
@@ -30,7 +32,7 @@ class Number{
 		num+=n;
 	}
 	
-	public int getNumber()	{
+	public int getNum()	{
 		return num;
 	}
 }

@@ -8,25 +8,24 @@ public class ObjectEx03 {
 	public static void main(String[] args){
 		//인스턴스 생성
 		Number myNumber1=new Number(10);
-		//new Number	: 인스턴스 생성 의미
-		//Number()		: 매개변수10을 인자로 전달하여 초기화하는 생성자를 호출하여 인스턴스 생성
+		//new			: 인스턴스 생성 의미
+		//Number(10)	: 매개변수10을 인자로 전달하여 초기화하는 생성자를 호출
 		Number myNumber2=new Number(20);
 		
 		//myNumber1 메소드
-		System.out.println("myNumber1 메소드 호출 전 값: " + myNumber1.getNumber()); //myNumber1 메소드 호출 전 값: 10
+		System.out.println("myNumber1 메소드 호출 전 값: " + myNumber1.getNum()); //myNumber1 메소드 호출 전 값: 10
 		instMethod(myNumber1);
-		System.out.println("myNumber1 메소드 호출 후 값: " + myNumber1.getNumber()); //myNumber1 메소드 호출 후 값: 20
+		System.out.println("myNumber1 메소드 호출 후 값: " + myNumber1.getNum()); //myNumber1 메소드 호출 후 값: 20
 		
 		//myNumber2 메소드
-		System.out.println("myNumber2 메소드 호출 전 값: " + myNumber2.getNumber()); //myNumber2 메소드 호출 전 값: 20
+		System.out.println("myNumber2 메소드 호출 전 값: " + myNumber2.getNum()); //myNumber2 메소드 호출 전 값: 20
 		instMethod(myNumber2);
-		System.out.println("myNumber2 메소드 호출 후 값: " + myNumber2.getNumber()); //myNumber2 메소드 호출 후 값: 30
+		System.out.println("myNumber2 메소드 호출 후 값: " + myNumber2.getNum()); //myNumber2 메소드 호출 후 값: 30
 	}
 
 	public static void instMethod(Number number){
 		number.addNum(10);
 	}		
-	
 }
 
 //클래스 정의(클래스 설계)
@@ -46,7 +45,7 @@ class Number{
 		num+=n;
 	}
 	
-	public int getNumber()	{
+	public int getNum()	{
 		return num;
 	}
 }
