@@ -24,9 +24,10 @@ public class Exten02 {
 		
 		B bb = new B();
 		
+		//자식 클래스의 메소드 호출
+		bb.fun();
+		
 		//부모 클래스의 메소드 호출
 		bb.make();
-		//자식 클래스의 메소드 호출
-		bb.fun();		
 	}
 }

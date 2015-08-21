@@ -51,6 +51,7 @@ class Employee extends Person
 		//super(): super클래스의 생성자를 의미, 인자가 있다면 인자의 형태와 일치하는 생성자를 의미
 		super(name);	//상위 클래스의 생성자 호출
 		
+		// this: 참조 변수, 객체 내에서 나의 객체 참조
 		this.company=company;
 		this.position=position;
 	}
