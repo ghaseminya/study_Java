@@ -10,6 +10,7 @@ package com.korea;
 
 //부모 클래스
 class Human {
+	//protected로 선언된 멤버변수
 	protected String name;
 	protected int age;
 }

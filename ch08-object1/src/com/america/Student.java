@@ -2,8 +2,8 @@
 //public, default 제한자
 
 //File Info
-//com.korea		Student.class
-//com.america	Student.class	main부
+//com.korea.Student class
+//com.america.Student class		main부
 
 //---------------------------------------------
 //com.korea.Student클래스의 getMessage를 default로 정의 후 접근 시도시 ERROR확인
