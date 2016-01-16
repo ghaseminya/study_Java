@@ -22,9 +22,10 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowAdapter;
 
-import com.display.FrameEx01;
+import com.awt01.FrameEx03;
+
+import java.awt.event.WindowAdapter;
 
 public class GraphicEx01 extends Frame {
 	
