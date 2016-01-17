@@ -19,6 +19,7 @@
 
 package com.awt01;
 
+import java.awt.Color;
 import java.awt.Frame;
 
 // Frame 상속
@@ -31,6 +32,9 @@ public class FrameEx03 extends Frame{
 		
 		//넓이, 높이 설정
 		setSize(300,  300);
+		
+		//TODO : 프레임 vs 패널 차이확인을 위해 배경색상 지정
+//		setBackground(Color.yellow);
 		
 		//Frame 화면 노출 여부 지정
 		setVisible(true);

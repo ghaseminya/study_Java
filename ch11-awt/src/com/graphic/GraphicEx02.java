@@ -50,7 +50,7 @@ public class GraphicEx02 extends Frame{
 		//이미지가 null경우 
 		if(img == null) return;
 		
-		//Image 객체, x, y, width, height, ImageObserver객체
+		//drawImage(Image 객체, x, y, width, height, ImageObserver객체)
 		//g.drawImage(img, 300, 200,  this);
 		//g.drawImage(img, 0, 0, 300, 200,  this);
 		// 이미지를 늘이면 이미지 깨짐이 발생
