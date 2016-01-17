@@ -1,10 +1,9 @@
-/*
-Border 생성
 
-SwingEx19에서 Boarder생성
-JCheckBox & JRadioButton & ButtonGroup & Border
+//Border 생성
+//
+//SwingEx19에서 Boarder생성
+//JCheckBox & JRadioButton & ButtonGroup & Border
 
-*/
 package com.swing;
 
 import java.awt.GridLayout;

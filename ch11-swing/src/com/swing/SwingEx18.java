@@ -1,6 +1,13 @@
 /*
 화면 표시영역을 벗어나는 내용이 포함될 경우
 스크롤 바가 자동으로 생성됩니다.
+
+JScrollPane
+VERTICAL_SCROLLBAR_ALWAYS	항상 세로 스크롤 바를 표시
+HORIZONTAL_SCROLLBAR_ALWAYS	항상 가로 스크롤 바를 표시
+HORIZONTAL_SCROLLBAR_NEVER	스크롤 바를 표시하지 않음
+
+
 */
 package com.swing;
 

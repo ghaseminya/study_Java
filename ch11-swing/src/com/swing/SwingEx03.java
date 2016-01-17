@@ -16,7 +16,7 @@ public class SwingEx03 {
 	{
 		//Runtime클래스의 getRuntime()메소드의 반환되는 참조값을 이용해서
 		//exec()메소드 호출시 자바명령문을 입력하면 SwingEx02자바 프로그램이 실행됩니다.
-		Process proc=Runtime.getRuntime().exec("java SwingEx02");
+		Process proc=Runtime.getRuntime().exec("java SwingEx03");
 		proc.waitFor();	//프로그램이 종료되기를 기다리기
 						//실행후 결과값을 받기 위해 기다림
 		

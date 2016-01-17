@@ -1,8 +1,6 @@
 /*
 JButton Mouse Event
 
-
-
 */
 package com.swing;
 

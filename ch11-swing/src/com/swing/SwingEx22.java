@@ -13,12 +13,12 @@ import javax.swing.UIManager;
 public class SwingEx22 {
 
 	public static void main(String[] args) throws Exception {
-		//UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-		//UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+//		UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+//		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 
 		//Quaqua Look and Feel:	quaqua.jar 
-		//UIManager.setLookAndFeel("ch.randelshofer.quaqua.QuaquaLookAndFeel");
-		//JFrame.setDefaultLookAndFeelDecorated(true);
+//		UIManager.setLookAndFeel("ch.randelshofer.quaqua.QuaquaLookAndFeel");
+//		JFrame.setDefaultLookAndFeelDecorated(true);
 
 		//Liquid Look and Feel:	liquidlnf.jar 
 //		UIManager.setLookAndFeel("com.birosoft.liquid.LiquidLookAndFeel");
@@ -27,12 +27,12 @@ public class SwingEx22 {
 //		 UIManager.setLookAndFeel("net.infonode.gui.laf.InfoNodeLookAndFeel");
 
 		//JTattoo Look and Feel: JTattoo.jar 
-		//UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
-		//UIManager.setLookAndFeel("com.jtattoo.plaf.mcwin.McWinLookAndFeel");
+//		UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
+//		UIManager.setLookAndFeel("com.jtattoo.plaf.mcwin.McWinLookAndFeel");
 
 		
 		//Napkin Look And Feel:jdom-1.0.jar, napkinlaf-1.2.jar, napkinlaf-swingset-1.2.jar
-		//UIManager.setLookAndFeel("net.sourceforge.napkinlaf.NapkinLookAndFeel");
+//		UIManager.setLookAndFeel("net.sourceforge.napkinlaf.NapkinLookAndFeel");
 
 		//조합
 		UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");

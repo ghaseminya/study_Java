@@ -102,7 +102,7 @@ class CheckBoxHandler implements ItemListener {
 			btn3.setEnabled(true);
 			btn4.setEnabled(true);
 		}
-		else      ItemEvent.DESELECTED {
+		else {//ItemEvent.DESELECTED
 			btn1.setEnabled(false);
 			btn2.setEnabled(false);
 			btn3.setEnabled(false);
