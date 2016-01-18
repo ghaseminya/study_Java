@@ -1,6 +1,14 @@
+
+/*
 //소수점의 자릿수 지정방법-Math.round 함수 사용
 
+Float 타입형을 String 타입형으로 전환할 때 소수점 자릿수 지정방법
+	• DecimalFormat Class로 소수점 지정방법
+	• String의 포멧 지정 방법
+->	• Math.round 함수 사용
+	• BigDecimal과 DecimalFormat 클래스 사용
 
+*/
 public class VariableEx07 {
 
 	public static void main(String[] args)

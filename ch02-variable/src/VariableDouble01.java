@@ -17,5 +17,4 @@ public class VariableDouble01 {
 		
 		System.out.println(result);
 	}
-
 }

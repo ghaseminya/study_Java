@@ -14,7 +14,9 @@ public class CastEx03 {
 		byte b1 = 127;
 		byte b2 = 127;
 //		byte b3 = b1 + b2;	//Error: cannot convert from int to byte
-		//32bit(4byte)미만 byte형 데이터 연산시 32bit int형으로 승격됩니다. 데이터 타입이 다르므로 즉, int형은 byte형으로 저장되지 않습니다.
+		//32bit(4byte)미만 byte형 데이터 연산시 32bit int형으로 승격됩니다. 
+		//데이터 타입이 다르므로 즉, int형은 byte형으로 저장되지 않습니다.
+		
 		//byte(1byte), int(4byte)
 		int i1 = b1 + b2;
 		System.out.println("i1= " + i1 );	//i1= 254

@@ -17,10 +17,11 @@ public class ConstEx03 {
 		//명시적으로 접미사L을 붙여 long형 상수 표현을 의미하도록 해줍니다.
 		long n2=150;
 		
-		System.out.println(e1);
-		System.out.println(e2);
-		System.out.println(n1);
-		System.out.println(n2);	
+		System.out.println(e1); //3.14159
+		System.out.println(e2); //3.14159
+		System.out.println(n1); //10000000000
+		System.out.println(n2);	//150
+
 	}
 
 }

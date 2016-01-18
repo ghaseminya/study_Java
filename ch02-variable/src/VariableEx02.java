@@ -9,5 +9,4 @@ public class VariableEx02 {
 		System.out.println(num1);
 		System.out.println(num2);
 	}
-
 }
