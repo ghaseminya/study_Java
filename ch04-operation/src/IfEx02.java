@@ -1,6 +1,16 @@
-//조건문 - 단일 if (정수형 입력 받은 후 짝수 홀수 구분하기)
+/*
+//조건문 - if~else문
+//정수형 입력 받은 후 짝수 홀수 구분하기
 
 
+[if~else문 형식]
+if(true or false){
+     //true시 수행되는 영역
+}else{
+     //false시 수행되는 영역
+}
+
+*/
 public class IfEx02 {
 
 	public static void main(String[] args) {

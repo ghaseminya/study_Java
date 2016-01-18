@@ -29,11 +29,10 @@ public class SwitchEx05 {
 			System.out.println("seventh");
 			
 		/*default:
-			System.out.println("Ordinal Number");
+			System.out.println("Ordinal Number"); //서수
 			*/		
 		}
 		
 		System.out.println("I love JAVA!");
 	}
-
 }
