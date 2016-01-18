@@ -83,11 +83,8 @@ public class CastEx03 {
 		long lg2 = 1234L;
 		int result_int3 = int4 + (int)lg2;	//long -> int로 강제 형변환
 		//long(8byte), int(4byte)
-		System.out.println("int4 + lg2 = " + (int2 +lg2) );	//int4 + lg2 = 13579
+		System.out.println("int4 + lg2 = " + (int4 +lg2) );	//int4 + lg2 = 2468
 		System.out.println("result_int3 = " + result_int3);	//result_int3 = 2468
-		
-		
-		
+		//자료형 표현범위에 있어서 데이터 손실 없이 값이 출력됨
 	}
-
 }
