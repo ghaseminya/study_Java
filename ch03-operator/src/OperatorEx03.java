@@ -35,7 +35,5 @@ public class OperatorEx03 {
 			System.out.println("e : " + e);	//e : A
 			System.out.println("f : " + f);	//f : 65
 		}
-		
 	}
-
 }

@@ -1,5 +1,11 @@
+/*
 //대입연산자와 산술연산자
 
+산술 연산자
+4칙 연산(+, -, *, /)과 나머지 값을 구하는 연산자(%)를 지칭합니다.
+
+
+*/
 public class OperatorEx12 {
 
 	public static void main(String[] args) {

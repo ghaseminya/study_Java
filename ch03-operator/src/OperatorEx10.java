@@ -1,6 +1,39 @@
+/*
 //비트 연산자
 
 
+[비트 연산 진리표]
+
+& (AND)
+A	B	A & B
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+
+
+| (OR)
+A	B	A | B
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+
+^ (XOR)
+A	B	A ^ B
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+
+
+~ (NOT)
+A	~A
+0	1
+1	0
+
+*/
 public class OperatorEx10 {
 	
 	public static void main(String[] args){
