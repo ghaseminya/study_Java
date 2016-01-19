@@ -1,9 +1,16 @@
+/*
 //키워드 return의 역할
 
-//함수안에서 return키워드의 역할 확인
-//-메소드 종료 
-//-메소드 종료 and 값 반환
+//함수안에서 return키워드의 역할 확인하기
+//	• 메소드 종료 
+//	• 메소드 종료 and 값 반환
 
+
+return 키워드 역할
+	• 값의 반환
+	• 메소드 종료
+
+*/
 public class FunctionEx04 {
 
 	public static void main(String[] args) {
@@ -16,10 +23,6 @@ public class FunctionEx04 {
 	}
 	
 
-//return 키워드 역할
-//	• 값의 반환
-//	• 메소드 종료
-	
 	public static void dividedby(int num1, int num2)
 	{
 		if(num2==0)

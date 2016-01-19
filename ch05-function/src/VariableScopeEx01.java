@@ -1,5 +1,12 @@
+/*
 //변수의 범위 확인
 
+변수의 영역
+	• 변수가 선언된 지역({ })을 벗어나면 변수는 자동 소멸됩니다.
+	• 변수의 영역이 다르면 동일한 변수 명을 가질 수 있습니다.
+	• 메소드의 매개변수도 메소드내에서만 유효한 지역변수입니다.
+
+*/
 public class VariableScopeEx01 {
 	
 	public static void main(String[] args)
