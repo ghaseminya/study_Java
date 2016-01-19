@@ -70,7 +70,6 @@ public class MousEventEx01 extends Frame implements ActionListener, MouseMotionL
 	}	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new MousEventEx01();
 
 	}
