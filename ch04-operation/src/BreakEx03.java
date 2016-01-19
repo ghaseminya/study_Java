@@ -1,10 +1,14 @@
+/*
 //break문 - 특정 조건일 때 반복문 탈출하기
 //LAB
 
-//제한사항
-//0입력 전까지 입력받은 정수로 합 구하기
-//무한루프 , break활용
+제한사항
+	• 0입력 전까지 입력받은 정수로 합 구하기
+	• 무한루프 , break활용
 
+
+*/	
+	
 public class BreakEx03 {
 
 	public static void main(String[] args) {

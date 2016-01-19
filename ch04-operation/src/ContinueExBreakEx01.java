@@ -1,7 +1,16 @@
+/*
 //continue vs break
 //continue문 예시 결과 확인
 //break문 예시 결과 확인
 
+
+[continue vs break]
+continue	조건 검사로 이동
+break		반복문 탈출
+
+
+
+*/
 public class ContinueExBreakEx01 {
 
 	/*

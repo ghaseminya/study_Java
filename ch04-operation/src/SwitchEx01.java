@@ -40,7 +40,7 @@ public class SwitchEx01 {
 		case 5:
 			System.out.println("5 입력하였습니다.");
 			break;
-		default:
+		default: // 받은 인자값이 case문의 조건값1에서 조건값5까지 일치하는 것이 단 하나도 없다면 default레이블의 수행문을 처리합니다.
 			System.out.println("1 ~ 5 숫자중에서 입력하세요.");
 			break;
 		

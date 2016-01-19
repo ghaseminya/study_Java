@@ -1,7 +1,12 @@
+/*
 //무한 루프 적절한 사용 예제
 //17배수이고 13의 배수인 정수 찾기
 
+무한루프(무한반복)와 break
+	• 모든 반복문은 무한루프에 빠지지 않도록 주의
+	• 무한루프는 보편적으로 break문과 함께 사용됩니다.
 
+*/
 public class LoopEx01 {
 
 	public static void main(String[] args) {

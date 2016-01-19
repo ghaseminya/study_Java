@@ -1,7 +1,9 @@
+/*
 //Switch~Case문에서 문자열 비교를 통해 요일 출력하기
 //monday, tuesday, wednesday, thursday, friday, saturday, sunday
 //LAB
 
+*/
 public class LAB01 {
 
 	public static void main(String[] args) {

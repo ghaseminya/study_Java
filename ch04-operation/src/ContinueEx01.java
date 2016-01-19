@@ -1,7 +1,12 @@
+/*
 //1~10출력할 때 3의 배수는 출력하지 않기
 //LAB
 
+continue문
+	• 반복문을 탈출하기위해 사용되는 것이 아니라 
+	• continue문 이하의 수행문들을 포기하고 다음 회차의 반복을 수행하기 위한 제어문입니다
 
+*/
 public class ContinueEx01 {
 
 	public static void main(String[] args) {
