@@ -31,7 +31,7 @@ public class OperatorEx03 {
 		char e = 'A'; 
 		int f= 65;
 		if( e == f){	//char -> int ('A' -> 65)
-			System.out.println("e와 d는 같다.");
+			System.out.println("e와 f는 같다.");
 			System.out.println("e : " + e);	//e : A
 			System.out.println("f : " + f);	//f : 65
 		}

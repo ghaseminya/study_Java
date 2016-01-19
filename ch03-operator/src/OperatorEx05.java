@@ -10,7 +10,7 @@ public class OperatorEx05 {
 		a = b = 10;
 		boolean c = (a++ >= ++b) && (++a > b++);
 //					10 >=11 && 11 > 10 => false && true
-		System.out.println("a++ >= ++b && ++a > b++ : " + c);	//a++ >= ++b && ++a : false
+		System.out.println("a++ >= ++b && ++a > b++ : " + c); //a++ >= ++b && ++a : false
 		System.out.println("a : " + a);	//a : 11
 		System.out.println("b : " + b);	//b : 11
 		

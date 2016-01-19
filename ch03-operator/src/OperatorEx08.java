@@ -1,6 +1,9 @@
+/*
 //조건(삼항) 연산자 - 대문자 / 소문자 구분하기
 
-
+알파벳 아스키코드표
+http://codedragon.tistory.com/2547
+*/
 public class OperatorEx08 {
 	public static void main(String[] args){
 		

@@ -19,9 +19,8 @@
 ~		피연산자의 모든 비트를 반전 시킨 결과를 반환
 		~n1; 
 
-
-
 */
+
 public class OperatorEx16 {
 	public static void main(String[] args)
 	{
