@@ -1,3 +1,4 @@
+/*
 //%서식문자 확인
 
 //%c, 10진수/8진수/16진수, %g, e표기법
@@ -5,6 +6,11 @@
 //-System.out.println	: 출력후 다음행으로 이동
 //-System.out.printf	: 출력후 다음행으로 이동 안함, 서식문자 사용
 
+
+[서식 문자]
+http://codedragon.tistory.com/2536
+
+*/
 public class ConsoleOutputEx05 {
 
 	public static void main(String[] args){

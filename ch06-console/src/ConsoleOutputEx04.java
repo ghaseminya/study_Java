@@ -1,7 +1,13 @@
+/*
 //%서식문자 확인
 //
 //%g	출력의 대상에 따라서 %e또는 %f형태의 출력
 
+
+[서식 문자]
+http://codedragon.tistory.com/2536
+
+*/
 public class ConsoleOutputEx04 {
 
 	public static void main(String[] args) {
