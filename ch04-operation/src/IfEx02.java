@@ -16,6 +16,7 @@ public class IfEx02 {
 	public static void main(String[] args) {
 		
 		//Scanner의 인스턴스를 생성
+		//System.in	:키보드 리소스를 의미
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int a;

@@ -18,6 +18,9 @@ public class SwitchEx04 {
 		System.out.print("두번째 숫자를 입력하세요 > ");
 		second = input.nextInt();
 		
+		//next(): 문자 또는 문자열을 공백을 기준으로 한단어 또는 한문자를 입력 받습니다
+		//버퍼에 입력된 문자나 문자열에서 공백전까지의 단어 가져오기
+
 		System.out.print("수행할 연산자는( + - * / %) > ");
 		operator = input.next();
 		

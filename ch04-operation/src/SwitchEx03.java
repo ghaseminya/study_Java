@@ -37,8 +37,6 @@ case 조건값6 :
         수행문; 
         break; 
 }
-
-
 */
 public class SwitchEx03 {
 
