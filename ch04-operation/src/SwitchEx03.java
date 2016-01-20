@@ -51,6 +51,8 @@ public class SwitchEx03 {
 		System.out.println("정수형 성적을 입력하세요 > ");
 		score = input.nextInt();
 		
+		//score/10	: 27/10 = 2
+		//System.out.println(score/10);
 		switch(score/10){
 		case 10: // break문은 조건값마다 넣어주는 것을 권장하며 만약 없을 시에는 다음 break문을  만날 때까지 모든 수행문을 처리합니다
 		case 9:{
