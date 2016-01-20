@@ -1,5 +1,9 @@
+/*
 // 배열 선언, 생성, 초기화(암시적으로 배열 생성)
+// 배열명 출력시 16진수 유니크한 참조값(메모리 값이 아닌 가공된 참조값)이 출력됩니다.
 
+
+*/
 public class ArrayEx02 {
 
 	public static void main(String[] args) {

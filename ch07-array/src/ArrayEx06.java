@@ -1,11 +1,22 @@
-// 성적처리하기
+/*
+// 성적처리하기 (성적처리 프로그램)
+//국어, 영어, 수학, 과학을 입력받아  총점,평균, 학점을 구해주는 성적처리 프로그램
 
-//1) 배열 선언
-//2) 국어, 영어, 수학, 과학 성적입력
-//3) 총점, 평균, 학점 구하기
-//4) 출력 (국어 영어 수학	과학	총점	평균	학점)
+TODO : 배열 선언
+TODO : 국어, 영어, 수학, 과학 성적입력
+	TODO : 반복문 사용하여 입력받기
+	TODO : 입력받을 과목을을 배열을 활용하여 출력해 주기 ( ? + " 점수를 입력하세요 > ")
+	TODO : 입벽받은 값 유효성 검사하기  0 < score < 100
+TODO : 총점, 평균, 학점 구하기
+	TODO : switch~case문으로 학점 구하기
+TODO : 출력 (국어 영어 수학	과학	총점	평균	학점)
+	TODO : 출력시 제목 출력하기
 
+최종 성적처리결과 화면
+국어	영어	수학	과학	총점	평균 		학점
+70	80	90	60	300	75.0	F
 
+*/
 public class ArrayEx06 {
 
 	public static void main(String[] args) {
@@ -14,8 +25,10 @@ public class ArrayEx06 {
 		
 		String[] subname = {"국어","영어","수학","과학", "총점"}; //과목명 배열
 		int[] score = new int[subname.length];	//과목별 점수와 총점 배열
+		
 		float average = 0.0F;	//평균	
 		char grade = '?';	//학점, 기본값으로 ?문자 저장
+		
 		
 		for(int i=0; i < score.length-1 ; i++){
 			do{
@@ -43,6 +56,7 @@ public class ArrayEx06 {
 		
 		//평균
 		average = score[score.length-1]/(subname.length-1);
+		
 		
 		//제목 출력
 		for(int i=0; i < score.length ; i++){
