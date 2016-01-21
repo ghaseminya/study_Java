@@ -9,8 +9,6 @@ public class ResursiveEx02 {
 
 		showJava(3);
 	}
-
-	
 	
 //잘못된 재귀 메소드 정의
 /*	public static void showJava(int cnt)
@@ -40,7 +38,7 @@ public class ResursiveEx02 {
 		if(cnt==1)
 			return;
 		
-		//post증가로 면경 및 위치변경
+		//post증가로 변경 및 위치변경 (주의)
 		showJava(--cnt);
 	}
 }

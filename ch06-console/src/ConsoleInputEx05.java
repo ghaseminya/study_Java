@@ -24,15 +24,15 @@ public class ConsoleInputEx05 {
 	
 	
 	//방법 1 - input.nextLine();
-//	System.out.println("정수입력 > ");
-//	int n = input.nextInt();
-//	System.out.println("n: " + n);
-//	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
-//	
-//	input.nextLine();	//버퍼비우기 
-//						//버퍼에 입력된 문자열을 개행문자 \n 까지 가져오기
-//	String str = input.nextLine();
-//	System.out.println("str: " + str);
+	System.out.println("정수입력 > ");
+	int n = input.nextInt();
+	System.out.println("n: " + n);
+	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
+	
+	input.nextLine();	//버퍼비우기 
+						//버퍼에 입력된 문자열을 개행문자 \n 까지 가져오기
+	String str = input.nextLine();
+	System.out.println("str: " + str);
 
 	
 	

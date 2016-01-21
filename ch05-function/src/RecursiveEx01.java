@@ -30,6 +30,9 @@
 1! = 1 
 
 
+팩토리얼 (참고)
+http://codedragon.tistory.com/3320
+
 */
 public class RecursiveEx01 {
 
@@ -46,7 +49,6 @@ public class RecursiveEx01 {
 		else
 			return n*factorial(n-1);
 	}
-	
 	
 	//3 * f(2)	-> 3 * 2 	-> 6반환 
 	//f(2) 		-> 2 * f(1)	-> 2 * 1	-> 2반환

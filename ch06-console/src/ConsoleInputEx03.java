@@ -18,12 +18,12 @@ public class ConsoleInputEx03 {
 		
 		System.out.print("당신은 잘 생겼다고 생각하십니까, 예(true)/아니오(false)? ");
 		
-		//nextBoolean() : boolean타입의 자료형 값을 가져옵니다.
+		//nextBoolean() : boolean타입의 자료형 값을 입력값으로 가져옵니다.
 		boolean isTrue=keyboard.nextBoolean();
 		if(isTrue==true)
 			System.out.println("오~ 멋쟁이님");
 		else
-			System.out.println("오~ 대박 .");
+			System.out.println("헐~ 대박 .");
 	
 		
 		System.out.print("당신과 짝꿍의 영어점수는 어떻게 되나요? ");

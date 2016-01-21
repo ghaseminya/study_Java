@@ -10,7 +10,7 @@ System	out				println
 
 System
 	• java.lang 패키지에 묶여있는 클래스의 이름
-	• import java.lang.*; 자동 삽입되므로 System이란 이름을 직접 쓸 수 있습니다.
+//	• import java.lang.*; 구문이 자동 삽입되어 있어 System이란 이름을 직접 쓸 수 있습니다. (full name을 쓰지 않아도)
 
 out
 	• static 변수이되 인스턴스를 참조하는 참조변수
