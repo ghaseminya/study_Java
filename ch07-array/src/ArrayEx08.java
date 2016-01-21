@@ -1,6 +1,7 @@
+/*
 //2차원 배열 성적처리
 
-
+*/
 public class ArrayEx08 {
 
 	public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class ArrayEx08 {
 		};
 		
 		System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
-		System.out.println("==========================================");
+		System.out.println("===========================");
 		
 		//배열 출력 (성적처리 결과 출력)
 		for(int i=0; i < score.length; i++){
@@ -31,7 +32,6 @@ public class ArrayEx08 {
 			System.out.print(sum/score[i].length + "\t");
 //			System.out.printf("%.2f\t", (float)sum/score[i].length); //66.67
 			System.out.println();
-		
 		}
 	}
 }

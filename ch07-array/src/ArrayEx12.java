@@ -22,8 +22,9 @@ public class ArrayEx12 {
 //			System.out.println(e);	//참조값 출력으로 확인
 		}
 
+		//arr 배열 요소 출력
 		for(Number e: arr)
-			System.out.print(e.getNum()+" ");
+			System.out.print(e.getNum()+" "); //3 5 7 
 		
 		
 		//arr의 배열요소의 참조값을  new Number(7)의 새로운 인스턴스 참조값을 참조하도록 변경
@@ -33,13 +34,13 @@ public class ArrayEx12 {
 		for(Number e: arr){
 			e=new Number(7);	//배열의 참조값 변경으로 arr 배열요소의 참조값이 변경됨
 			e.num+=2;
-			System.out.print(e.getNum()+" ");
+			System.out.print(e.getNum()+" "); //9 9 9 
 //			System.out.println(e);	//참조값 출력으로 확인
 		}
 
 		System.out.println("");
 		for(Number e: arr)
-			System.out.print(e.getNum()+" ");
+			System.out.print(e.getNum()+" "); //3 5 7 
 	}
 }
 

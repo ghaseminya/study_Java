@@ -14,20 +14,18 @@ public class ArrayEx04 {
 		//배열 선언 및 생성, 초기화 (암시적 배열 생성)
 		int[] score = {100, 88, 88, 100, 90};
 		
-		
 		for(int i=0; i < score.length; i++){
-			
 			sum += score[i];
 		}
 		
 		average1 = sum/score.length;
 		average2 = (float)sum/score.length;	// int -> float
 		
-		System.out.println("average1 : " + average1);
-		System.out.println("average2 : " + average2);
+		System.out.println("average1 : " + average1); //average1 : 93.0
+		System.out.println("average2 : " + average2); //average2 : 93.2
 		
 		System.out.println();
-		System.out.println("총점 : " + sum);
-		System.out.println("평균 : " + average2);	
+		System.out.println("총점 : " + sum); //총점 : 466
+		System.out.println("평균 : " + average2); //평균 : 93.2
 	}
 }

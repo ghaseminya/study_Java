@@ -20,13 +20,16 @@ public class ArrayEx09 {
 			System.out.println("동일 배열 참조");
 		else
 			System.out.println("다른 배열 참조");
+		//유니크한 참조값(메모리 값이 아닌 가공된 참조값) 확인하기
+		System.out.println(arr);
+		System.out.println(ref);
 		
 		//배열 출력
 		for(int i=0; i<ref.length; i++)
 			System.out.println("arr[" + i + "]: " + arr[i]);
 	}	
 	
-	
+	//arr배열 요소에  addVal값 더하기
 	public static int[] addArray(int[] arr, int addVal)
 	{
 		for(int i=0; i<arr.length; i++)
