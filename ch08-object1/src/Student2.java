@@ -20,6 +20,7 @@ public class Student2 {
 		return  a/3;
 	}
 	
+	
 	public static void main(String[] args) {
 			
 		//참조변수의 선언 = 인스턴스 생성
@@ -33,6 +34,7 @@ public class Student2 {
 		//멤버변수를 이용하여 처리하기
 //		student.sum = student.korean + student.math + student.english;
 //		student.avg = student.sum / 3;
+		
 		//멤버메소드 호출하여 처리하기
 		student.sum = student.sum(student.korean, student.math, student.english);
 		student.avg = student.avg(student.sum);

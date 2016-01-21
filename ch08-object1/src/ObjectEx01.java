@@ -1,14 +1,17 @@
 /*
 //참조변수와 참조 메소드의 관계 확인
+//확인 후 전체 주석
+
 
 // 주 클래스
 public class ObjectEx01 {
 	
 	public static void main(String[] args){
 		//인스턴스 생성 == 참조변수 선언/생성
-		Number myNumber=new Number();
-		/new		: 인스턴스 생성 의미
+		//new		: 인스턴스 생성 의미
 		//Number()	: 매개변수가 없는 Default생성자를 호출
+		Number myNumber=new Number();
+		
 		System.out.println("메소드 호출 전 값: "+myNumber.getNum());	//0
 		
 		//인스턴스 참조값을 메소드의 매개변수로 전달

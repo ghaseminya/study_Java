@@ -1,5 +1,7 @@
 /*
 //인자값없는 생성자를 통한 초기화
+//확인 후 전체 주석처리
+
 
 // 주 클래스
 public class ObjectEx02 {
@@ -25,7 +27,6 @@ public class ObjectEx02 {
 	public static void instMethod(Number number){
 		number.addNum(10);
 	}		
-	
 }
 
 //클래스 정의(클래스 설계)

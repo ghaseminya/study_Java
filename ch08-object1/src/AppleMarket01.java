@@ -1,14 +1,16 @@
 /*
 //객체 이해하기
+//확인 후 전체 주석처리
 
 //사과 마켓 분석(객체, 변수, 메소드 분석)
+//				AppleSeller		AppleBuyer
 //객체			사과판매자			사과구매자
 //----------------------------------------
-//변수			• 사과 개수		• 사과 개수
-//(데이터, 속성)	• 사과 가격(금액)	• 보유 금액
+//변수			• 사과 개수			• 사과 개수
+//(데이터, 속성)	• 사과 가격(금액)		• 보유 금액
 //				• 판매 수익
 //----------------------------------------
-//메소드			사과를 판다		사과를 산다
+//메소드			사과를 판다			사과를 산다
 //(기능, 행위)
 
 public class AppleMarket01 {
@@ -27,7 +29,6 @@ public class AppleMarket01 {
 		System.out.println("사과 구매자의 현재 상태");
 		buyer.showBuyResult();
 	}
-
 }
 
 //사과 판매자
@@ -41,7 +42,7 @@ class AppleSeller{
 	//사과를 파는 기능
 	public int saleApple(int money)	{
 		int num=money/APPLE_PRICE;
-		numOfApple = numOfApple -num; //numOfApple-=num;
+		numOfApple = numOfApple-num; //numOfApple-=num;
 		myMoney = myMoney + money; //myMoney+=money;
 		return num;
 	}
