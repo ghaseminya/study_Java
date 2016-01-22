@@ -2,7 +2,7 @@
 // 배열 선언 방법/배열 사용 단계
 
 배열(Array)
-	• 배열은 같은 자료 형들끼리 모아둔 하나의 묶음(집합)입니다.
+	• 같은 자료 형들끼리 모아둔 하나의 묶음(집합)입니다.
 	• 자바에서 하나의 배열은 하나의 객체로 인식됩니다.
 
 
@@ -52,6 +52,7 @@ public class ArrayEx01 {
 		
 		//배열의 index 0을 개별 호출
 		System.out.println(ch[0]);	//J
+		System.out.println(ch[2]);  //V
 		
 		//반복문을 이용해서 배열의 내용 출력
 		System.out.println();

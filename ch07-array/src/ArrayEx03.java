@@ -23,7 +23,8 @@ public class ArrayEx03 {
 				min = score[i];
 			}		
 		}
-		System.out.println("max : " + max);
-		System.out.println("min : " + min);
+		//최대값과 최소값만 출력
+		System.out.println("최대값: " + max);
+		System.out.println("최소값: " + min);
 	}
 }

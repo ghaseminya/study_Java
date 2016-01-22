@@ -36,7 +36,9 @@ public class ArrayEx05 {
 			score[score.length-1] += score[i];	
 		}		
 		
-		average = (float)(score[score.length-1]) / score.length;
+//		average = (float)(score[score.length-1]) / score.length;
+		//평균
+		average = (float)(score[score.length-1]/subname.length);
 		
 		System.out.println("총점 : " + score[score.length-1]);
 		System.out.printf("평균 : %.2f", average);
