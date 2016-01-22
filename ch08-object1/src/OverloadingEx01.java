@@ -1,12 +1,15 @@
+/*
 //메서드 오버로딩
  
 //메서드 오버로딩: 기능이 같은 메서드를 여러개 만들 때 사용함
-//(오버로딩할 멤버메소드 들에 대한 규칙)
-//- 메서드 명은 같고 인자의 타입을 다르게 명시
-//- 타입이 같으면 인자의 갯수를 다르게 명시
-//- 갯수가 같으면 순서를 다르게 명시
 
 
+메소드 오버로딩 규칙
+	• 메서드 명은 같고 인자의 타입을 다르게 명시
+	• 타입이 같으면 인자의 갯수를 다르게 명시
+	• 갯수가 같으면 순서를 다르게 명시
+
+*/
 public class OverloadingEx01 {	
 	
 	//멤버메서드
@@ -45,7 +48,7 @@ public class OverloadingEx01 {
 		getLength(s);
 	}
 	
-	//인자 순서가 드르면 다른 것으로 인식합니다.
+	//인자 순서가 다르면 다른 것으로 인식합니다.
 	public void getLength(int a, float f ){
 		String s = String.valueOf(f) + String.valueOf(a);
 		getLength(s);
@@ -68,16 +71,14 @@ public class OverloadingEx01 {
 	
 	
 	//접근지정자와 반환형를 다르게 하더라도 메서드 오버로딩에서는 다르게 인식 되지 않습니다.
-	/*
-	private void getLength(String str){		
-	System.out.println("입력한 값의 길이: " + str.length());
-	}	*/
+//	private void getLength(String str){		
+//	System.out.println("입력한 값의 길이: " + str.length());
+//	}
 	
-	/*
-	public int getLength(String str){		
-		System.out.println("입력한 값의 길이: " + str.length());
-		return 0;
-	}	*/
+//	public int getLength(String str){		
+//		System.out.println("입력한 값의 길이: " + str.length());
+//		return 0;
+//	}
 	
 
 	public static void main(String[] args) {		

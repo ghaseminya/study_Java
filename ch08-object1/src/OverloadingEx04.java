@@ -1,7 +1,14 @@
+/*
 //생성자 오버로딩
 //인자값을 가진 생성자를 통해 다양한 인스턴스 생성
 
 
+생성자 오버로딩
+	• 생성자의 Overloading은 객체를 생성할 수 있는 방법의 수를 제공하는 것
+	• 메서드 오버로딩법과 다를 것이 없어 각 생성자의 구분은 인자로 구별하게 됩니다. 
+	• 생성자의 오버로딩은 하나의 클래스를 기반으로 다양한 형태의 인스턴스 생성을 가능하게 합니다.
+
+*/
 public class OverloadingEx04 {
 
 	public static void main(String[] args) {
@@ -47,6 +54,5 @@ class Person{
 			System.out.println("당신의 나이는: "+ personAge);
 			System.out.println("미성년자 입니다 \n");
 		}
-			
 	}
 }
