@@ -3,13 +3,13 @@
 FileWriter
 
 */
-package com.filter;
+package com.filereaderwriter;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 
-public class FilterStreamEx04 {
+public class FileReaderWriterEx02 {
 
 	public static void main(String[] args) throws IOException
 	{
