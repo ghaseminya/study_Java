@@ -10,7 +10,8 @@ public class MethodEx06 {
 
 	//인자가 정의되면서 money라는 지역변수가 선언, 지역 변수란 현재 영역(함수)을 벗어나면 소멸되는 메모리 공간을 의미 
 	public void setMoney(int money){	// 메서드(멤버 함수)
-		//지역변수의 이름이 멤버변수와 같을 경우에는 지역변수가 우선권을 가지므로 여기서는 멤버변수에 값 대입이 아닌 지역변수 자신에게 자신의 값을 대입한 것이다
+		//지역변수의 이름이 멤버변수와 같을 경우에는 지역변수가 우선권을 가지므로 
+		//여기서는 멤버변수에 값 대입이 아닌 지역변수 자신에게 자신의 값을 대입한 것이 됩니다.
 		money = money;	//WARNING-The assignment to variable money has no effect
 						// -> 0으로 잘못된 결과 출력
 							

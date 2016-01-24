@@ -1,7 +1,17 @@
+/*
 //키워드this()를 이용한 다른생성자의호출
 //키워드this를 이용한 멤버변수 호출
 
 
+[this의 용법]
+형식				의미
+this			• 객체 자신
+				• 파라미터 값으로 객체 자신의 참조값을 넘겨줄때에도 this 사용
+this.멤버변수		• 매개변수와 객체 자신이 가지고 있는 변수(멤버변수)의 이름이 같은 경우 이를 구분하기 위해 자신의 멤버변수에 this를 사용
+this(매개변수);	• 생성자내에서 다른 생성자를 호출
+
+
+*/
 public class OverloadingEx05 {
 
 	public static void main(String[] args) {

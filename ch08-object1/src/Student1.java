@@ -15,7 +15,7 @@ public class Student1 {
 		Student1 student1 = new Student1();		
 		System.out.println(student1);	//Student1@659e0bfd
 		
-		//객체가 생성 안된 경우 null/0인 기본값이 츨력됩니다.
+		//객체가 생성된 후 의 멤버변수가 초기화되지 않은 경우 null/0인 기본값이 출력됩니다.
 		System.out.println(student1.name);	//null
 		System.out.println(student1.age);	//0
 		
