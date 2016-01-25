@@ -25,6 +25,9 @@
 //[클래스명]	클래스의 이름을 의미
 
 
+//---------------------------------
+
+
 // 주 클래스
 public class ObjectEx01 {
 	
@@ -37,13 +40,15 @@ public class ObjectEx01 {
 		System.out.println("메소드 호출 전 값: "+myNumber.getNum());	//0
 		
 		//인스턴스 참조값을 메소드의 매개변수로 전달
-		instMethod(myNumber);
+//		instMethod(myNumber);
+		myNumber.addNum(10);
+		
 		System.out.println("메소드 호출 후 값: "+myNumber.getNum());	//10
 	}
 
-	public static void instMethod(Number number){
-		number.addNum(10);
-	}		
+//	public static void instMethod(Number number){
+//		number.addNum(10);
+//	}		
 	
 }
 

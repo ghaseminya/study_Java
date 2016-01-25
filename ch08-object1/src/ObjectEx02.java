@@ -41,14 +41,18 @@ public class ObjectEx02 {
 		//Number()	: 매개변수가 없는 Default생성자를 호출
 		Number myNumber2=new Number();
 		
-		//myNumber1 메소드
+
 		System.out.println("myNumber1 메소드 호출 전 값: " + myNumber1.getNum());
+		System.out.println("myNumber2 메소드 호출 전 값: " + myNumber2.getNum());
+			
+		//myNumber1 메소드		
 		instMethod(myNumber1);
-		System.out.println("myNumber1 메소드 호출 후 값: " + myNumber1.getNum());	
+		System.out.println("myNumber1 메소드 호출 후 값: " + myNumber1.getNum());
+		System.out.println("myNumber2 메소드 호출 후 값: " + myNumber2.getNum());
 		
 		//myNumber2 메소드
-		System.out.println("myNumber2 메소드 호출 전 값: " + myNumber2.getNum());
 		instMethod(myNumber2);
+		System.out.println("myNumber1 메소드 호출 후 값: " + myNumber1.getNum());
 		System.out.println("myNumber2 메소드 호출 후 값: " + myNumber2.getNum());
 	}
 

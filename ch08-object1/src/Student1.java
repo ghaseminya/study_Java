@@ -1,5 +1,7 @@
+/*
 //객체 생성 - 객체에 데이터 저장 후 출력하기
 
+*/
 public class Student1 {	
 	
 	//멤버 변수
@@ -25,6 +27,7 @@ public class Student1 {
 		student1.age = 400;
 		System.out.println(student1.name);	//홍길동
 		System.out.println(student1.age);	//400
+		
 		
 		//동일한 클래스로 또다른 객체 추가 생성
 		System.out.println();
