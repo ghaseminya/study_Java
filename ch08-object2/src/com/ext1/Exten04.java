@@ -1,8 +1,16 @@
+/*
 //동일 패키지로 묶인 두 클래스간 상속시 멤버변수 호출
 
-//private < default < protected < public
-//클래스내부 < 동일패키지 < 상속 클래스 < 이외의 영역(아무 관계 없음)
+//private 	< default 	< protected < public
+//클래스내부 	< 동일패키지 	< 상속 클래스 	< 이외의 영역(아무 관계 없음)
 
+
+상속(Inheritance)
+	• 특정 클래스(기존 클래스)를 토대로 새로운 클래스를 만드는 것
+	• 특정 클래스(super class)가 가지는 일부 속성과 기능을 
+	     다른 새로운 클래스(sub class)에게 제공하기 위해 맺는 클래스들간의 관계
+
+*/
 
 package com.ext1;
 
