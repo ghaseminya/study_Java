@@ -22,8 +22,9 @@
 
 
 [메소드 오버로딩 필요성]
-같은 목적으로 비슷한 기능을 수행하는 메서드(멤버함수)들을 모아 이름을 같게 하여 
-프로그래머들에게 다양한 메서드(멤버함수)들을 같은 이름으로 호출하여 일관된 작업을 할 수 있게 함으로써 시간과 비용을 줄일 수 있습니다. 
+같은 목적, 비슷한 기능을 수행하는 메서드(멤버함수)들을 모아 같은 이름을 가지게 하면 
+프로그래머들에게 다양한 메서드(멤버함수)들을 같은 이름으로 호출하여 
+일관된 작업을 할 수 있게 함으로써 시간과 비용을 줄일 수 있습니다. 
 
 
 
@@ -61,11 +62,15 @@ public class OverloadingEx03 {
 		String s = String.valueOf(n);
 		getLength(s);
 	}
+	
+	//반환값이 달라도 동일한 메소드로 취급
+	//ERROR-Duplicate method getLength(int) in type OverloadingEx03
 //	private int getLength(int n){
 //		String s = String.valueOf(n);
 //		getLength(s);
 //		return 0;
 //	}
+	
 	void getLength(float n){
 		String s = String.valueOf(n);
 		getLength(s);
