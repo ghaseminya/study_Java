@@ -4,7 +4,8 @@
 //package com.package1;	PackOneJellybeans.java		 	다른 패키지의 클래스 생성
 //package com.package2;	PackTwoKitKat.java			 	같은 패키지내의 클래스 생성
 //package com.package2;	PackTwoLollipop.java			같은 패키지내의 클래스 생성
-//package com.package2;	PackageEx						main부, 클래스 호출(같은 패키지의 클래스 호출, 다른 패키지의 클래스 호출)
+//package com.package2;	PackageEx						main부, 클래스 호출
+ * 														(같은 패키지의 클래스 호출, 다른 패키지의 클래스 호출)
 
 //----------------------
 //TODO : 같은 패키지의 클래스 호출
@@ -13,7 +14,8 @@
 
 
 패키지(package)
-	• 자바에서 이야기하는 패키지는 서로 관련 있는 클래스와 인터페이스를 하나의 단위로 묶는 것을 의미하며, 일종의 Library(자료실)와 비슷
+	• 자바에서 이야기하는 패키지는 서로 관련 있는 클래스와 인터페이스를 하나의 단위로 묶는 것을 의미하며, 
+	     일종의 Library(자료실)와 비슷
 	• 클래스의 중복 문제를 해결하기 위한 수단
 	• 패키지는 폴더로 관리되어 집니다
 

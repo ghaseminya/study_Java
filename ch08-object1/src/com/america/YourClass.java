@@ -31,6 +31,9 @@ public class YourClass {
 	
 	public static void main(String[] args){
 		
+		//accessClass()메소드를 호출시켜서 12가 출력되게해 주세요
+		//객체 2개 생성후 accessClass()메소드 
+		//LAB
 		MyClass mc = new MyClass();
 		YourClass yc = new YourClass();
 		yc.accessClass(mc);

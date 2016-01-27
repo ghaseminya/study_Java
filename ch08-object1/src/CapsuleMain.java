@@ -25,11 +25,11 @@
 	• private과 같은 키워드를 접근지정자(접근제어 지시자)라고 합니다.
 	• private선언으로인해 메소드(method)를 통해서만 접근가능하며
 	• 외부에서는 접근할 수 없습니다.(class 코드 밖에서는 접근할 수 없습니다.)
-
+//--------------------------------------------------
 */
 
 
-//TODO 2: 은닉화된 클래스를 외부에서 접근했을 때 Error(2) - 1/2
+//TODO 2: 선언_은닉화된 클래스를 외부에서 접근했을 때 Error(2) - 1/2
 //외부 클래스 정의
 class Capsule{
 	//private 인스턴스 변수 선언
@@ -55,8 +55,7 @@ class Capsule{
 
 public class CapsuleMain {
 	
-	/*
-	//TODO 1: 같은 클래스에서 호출(1) - 1/2
+	//TODO 1: 선언_같은 클래스에서 호출(1) - 1/2
 	private int a;
 	
 	public void setA(int n){
@@ -66,12 +65,10 @@ public class CapsuleMain {
 	public int getA(){
 		return a;
 	}
-	*/
 
 	public static void main(String[] args) {
 		
-		/*
-		//TODO 1: 같은 클래스에서 호출(1) - 2/2
+		//TODO 1: 호출_같은 클래스에서 호출(1) - 2/2
 		//같은 클래스에서는 호출가능합니다.
 		CapsuleMain csm = new CapsuleMain();
 		
@@ -80,31 +77,26 @@ public class CapsuleMain {
 		
 		csm.a = -10;
 		System.out.println(csm.a);
-		*/
 		
 		
-		/*
-		//TODO 2: 은닉화된 클래스를 외부에서 접근했을 때 Error(2) - 2/2
+		//TODO 2: 호출_은닉화된 클래스를 외부에서 접근했을 때 Error(2) - 2/2
 		//은닉화된 클래스 접근
 		Capsule cs = new Capsule();
 		
-//		ERROR: The field Capsule.a is not visible
-//		접근지정자가 private이면 같은 클래스에서만 호출 가능(은닉화)
-		cs.a = 10;
-		System.out.println(cs.a);
-		*/
+		//ERROR: The field Capsule.a is not visible
+		//접근지정자가 private이면 같은 클래스에서만 호출 가능(은닉화)
+//		cs.a = 10;
+//		System.out.println(cs.a);
 		
 
-		/*
 		//메소드(method)를 통해서 접근(3)
 		//메소드(method)를 통해서만 접근가능
-		Capsule cs = new Capsule();
+		Capsule csu = new Capsule();
 		
-		cs.setA(100);		
-		System.out.println( cs.getA() );
+		csu.setA(100);		
+		System.out.println( csu.getA() );
 		
-		cs.setA(-200);		
-		System.out.println( cs.getA() );
-		*/
+		csu.setA(-200);		
+		System.out.println( csu.getA() );
 	}
 }

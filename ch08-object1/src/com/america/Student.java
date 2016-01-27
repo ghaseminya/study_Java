@@ -27,6 +27,9 @@ private	< default	< protected < public
 
 package com.america;
 
+//클래스 충돌 확인
+//import com.korea.Student;
+
 public class Student {
 	//멤버 메소드
 	public void  interact( ){
