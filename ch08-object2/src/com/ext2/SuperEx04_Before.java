@@ -2,8 +2,8 @@
 //super()를 통해 초기화하기
 
 //File Info
-//SuperEx04.java	자식클래스의 생성자를 통해 초기화
-//SuperEx04_1.java	super()를 통해 초기화
+//SuperEx04_Before.java	자식클래스의 생성자를 통해 초기화
+//SuperEx04_After.java	super()를 통해 초기화
 
 
 package com.ext2;
@@ -32,7 +32,8 @@ class Point3D extends Point{
 	
 	Point3D(){		
 	}
-			
+	
+	//자식클래스의 생성자를 통해 초기화
 	Point3D(int x, int y, int z){		
 		this.x = x;
 		this.y = y;
@@ -47,7 +48,7 @@ class Point3D extends Point{
 	}	
 }
 
-public class SuperEx04 {
+public class SuperEx04_Before {
 
 	public static void main(String[] args) {
 		//객체 생성

@@ -71,12 +71,17 @@ public class SuperEx01 {
 	public static void main(String[]  args){
 		
 		System.out.println("생성자를 통한 부모 메소드 호출:");
-		B bb = new B();
-		bb.play(); System.out.println();
+		B bb = new B(); //부모 클래스의 play
+						//super.a: 100
+		bb.play(); //자식 클래스의 play
+		System.out.println();
+		
 		
 		System.out.println("자식클래스에서 별도 메소드를 생성하여 부모 메소드 호출:");
-		bb.getParentPlay(); System.out.println();
+		bb.getParentPlay(); //부모 클래스의 play 
+							//super.a: 100
+		System.out.println();
 		
-		System.out.println(bb.a);
+		System.out.println(bb.a); //100
 	}
 }

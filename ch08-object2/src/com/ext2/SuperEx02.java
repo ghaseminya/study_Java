@@ -11,10 +11,10 @@ package com.ext2;
 
 //부모 클래스
 class Parent2{
-//class Parents extends Object{
+//class Parent2 extends Object{
 	
 	public Parent2(){
-		super();	//Object의 디폴트 생성자 (암묵적으로 삽입됨)
+		super(); //Object의 디폴트 생성자 (암묵적으로 삽입됨)
 	}
 	
 	int a;
@@ -24,7 +24,7 @@ class Parent2{
 class Child2 extends Parent2{
 	
 	public Child2() {
-		super();	//부모 클래스의 디폴트 생성자 (암묵적으로 삽입됨)
+		super(); //부모 클래스의 디폴트 생성자 (암묵적으로 삽입됨)
 	}
 	
 	int b;
@@ -35,11 +35,11 @@ public class SuperEx02 {
 	public static void main(String[] args){
 		Child2 ch = new Child2();
 
-		System.out.println(ch.a);
-		System.out.println(ch.b);
+		System.out.println(ch.a); //0
+		System.out.println(ch.b); //0
 		ch.a=10;
 		ch.b=20;
-		System.out.println(ch.a);
-		System.out.println(ch.b);
+		System.out.println(ch.a); //10
+		System.out.println(ch.b); //20
 	}
 }

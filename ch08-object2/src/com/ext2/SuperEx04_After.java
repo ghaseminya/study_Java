@@ -1,4 +1,10 @@
 //super() 연습 - 처리 후
+//super()를 통해 초기화하기
+
+//File Info
+//SuperEx04_Before.java	자식클래스의 생성자를 통해 초기화
+//SuperEx04_After.java	super()를 통해 초기화
+
 
 package com.ext2;
 
@@ -23,12 +29,12 @@ class Point3D_ extends Point_{
 
 	
 Point3D_(int x, int y, int z){		
-		//초기화 순서가 있으므로 순서를 정확히 해줘야 한다.
+		//TODO : 초기화 순서가 있으므로 순서를 정확히 해줘야 한다.
 //		this.z = z;
-//		super(x, y);	//ERROR-Constructor call must be the first statement in a constructor
+//		super(x, y); //ERROR-Constructor call must be the first statement in a constructor
 	
-		super(x, y);	
-		this.z = z;
+		super(x, y); //부모 먼저
+		this.z = z;  //그다음 자식
 		
 	}
 	
@@ -40,7 +46,7 @@ Point3D_(int x, int y, int z){
 	}	
 }
 
-public class SuperEx04_1 {
+public class SuperEx04_After {
 
 	public static void main(String[] args) {
 		
