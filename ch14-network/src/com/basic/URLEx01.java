@@ -1,5 +1,6 @@
 /* URL - URL의 다양한 정보 출력
- *  
+
+
  */
 
 package com.basic;
@@ -22,20 +23,20 @@ public class URLEx01 {
 			//ERROR:Unhandled exception type MalformedURLException
 			
 			//URL 정보 출력
-			System.out.println("프로토콜:\t" + url.getProtocol());
-			System.out.println("호스트:\t\t" + url.getHost());
+			System.out.println("프로토콜: " + url.getProtocol());
+			System.out.println("호스트명: " + url.getHost());
 			//포트번호 명시안한 형태에서 포트번호 출력
 			//포트번호 명시후 포트번호 출력			
-			System.out.println("포트번호:\t" + url.getPort());
+			System.out.println("포트번호: " + url.getPort());
 			//default포트 표시
-			System.out.println("default포트번호:" + url.getDefaultPort());
+			System.out.println("default포트번호: " + url.getDefaultPort());
 			
-			System.out.println("패스:\t\t" + url.getPath());
-			System.out.println("요청한 파일자원 정보:\t" + url.getFile());
-			System.out.println("쿼리:\t\t" + url.getQuery()); 
+			System.out.println("패스: " + url.getPath());
+			System.out.println("요청한 파일자원 정보: " + url.getFile());
+			System.out.println("쿼리: " + url.getQuery()); 
 			
-			// 앵커포인트 = 레퍼런스
-			System.out.println("레퍼런스:\t" + url.getRef());
+			// 앵커포인트 = 레퍼런스 = 섹션번호
+			System.out.println("레퍼런스: " + url.getRef());
 			
 			
 		}catch(MalformedURLException e){ e.printStackTrace(); }
