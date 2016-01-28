@@ -22,25 +22,27 @@ public class Exten02 {
 
 	public static void main(String[] args) {
 
-		System.out.println("\n자식 객체 생성: ");
+		System.out.println("자식 객체 생성: ");
 		B objB = new B();
-		objB.playA();
-		objB.playB();
+		objB.playA(); //A클래스
+		objB.playB(); //B클래스
 		
 		System.out.println("\n업 캐스팅: ");
 		//자식 클래스 타입 -> 부모 클래스 타입 형변환
 		//업 캐스팅, 자동적으로 형변환
+		//부모 클래스 타입지정시 호출영역: 부모클래스
 		A objA = objB;
-		objA.playA();
+		objA.playA(); //A클래스
 		//호출 범위를 벗어나 호출 불가
 		//objA.playB();	//ERROR: The method play() is undefined for the type A
 		
 		System.out.println("\n다운 캐스팅: ");
 		//부모 클래스 타입 -> 자식 클래스 타입 형변환
 		//다운 캐스팅, 명시적으로 형변환
+		//자식 클래스 타입지정시 호출영역: 부모클래스 + 자식클래스
 		B objB2 = (B)objA;
-		objB2.playA();
-		objB2.playB();
+		objB2.playA(); //A클래스
+		objB2.playB(); //B클래스
 	}
 }
 

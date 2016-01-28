@@ -25,15 +25,16 @@ public class Exten03 {
 	public static void main(String[] args) {
 		
 		Child3 ch3 = new Child3();		
-		System.out.println(ch3.a);
-		ch3.play();
+		System.out.println(ch3.a); //200
+		ch3.play(); //자식 클래스
 		
 		System.out.println("\n업케스팅: ");
-		//부모 클래스 타입으로
-		Parent3 pa3 = ch3;
-		System.out.println(pa3.a);
+		//부모 클래스 타입으로, 자식 클래스 타입 -> 부모 클래스 타입 형변환
+		Parent3 pa3 = ch3; //100
+		System.out.println(pa3.a); //자식 클래스
+		
+		//상속시 메소드 오버라이딩 되어 있으면 확장되어 있는 것오버라이딩된 것)이 호출됩니다.
 		pa3.play(); //자식 클래스
-		//상속시 메소드 오버라이딩 되어 있으면 확장되어 있는 것(오버라이딩된 것)이 호출됩니다.
 		
 	}
 }
