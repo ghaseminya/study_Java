@@ -3,10 +3,11 @@
 
 [인자 전달 방식]
 값 호출				• 값을 복사하여 전달
-(Call by Value)		• 호출 시의 실인자는 별도의 값으로 인식되어 영향을 받지 않습니다.
+(Call by Value)		• 호출 시의 인자는 별도의 값으로 인식되어 영향을 받지 않습니다.
 
 참조 호출				• reference(주소)가 복사되어 전달
-(Call by Reference)	• 하나의 객체를 참조하는 변수가 2개가 되어 어느 한 곳에서 수정을 하게 되면 같은 객체를 참조하는 다른 쪽에서도 영향을 받게 됩니다
+(Call by Reference)	• 하나의 객체를 참조하는 변수가 2개가 되어 어느 한 곳에서 수정을 하게 되면 
+같은 객체를 참조하는 다른 쪽에서도 영향을 받게 됩니다
 
 Varargs					• 가변인자
 (Variable Arguments)	• 타입은 일치하지만 인자의 개수가 가변적
@@ -43,8 +44,8 @@ public class MethodEx02 {
 		//int var1(실인자)의 값이 복사된 복사본이 int v(형식인자)에 대입
 		int var2 = m.increase(var1); 
 
-		System.out.println("var 1: " + var1);
-		System.out.println("var 2: " + var2);
+		System.out.println("var 1: " + var1); //var 1: 100
+		System.out.println("var 2: " + var2); //var 2: 101
 
 	}
 }
