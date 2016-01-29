@@ -26,8 +26,6 @@ o 클래스에 final을 적용 시 더 이상의 상속 확장이 불가능
 문법 구성	: [접근제한] final class [클래스명]{ }	
 사용 예	: public final class FlyEx{ }
 
-
-
 */
 package com.finalex;
 
@@ -41,7 +39,6 @@ public class FinalEx01 {
 	
 	//상수 (스태틱 상수화)
 	public static final int VAR3 = 400;
-
 	
 	public static void main(String[] args) {
 		
@@ -54,22 +51,30 @@ public class FinalEx01 {
 		System.out.println("f1.var1 변경 후 값: ");
 		System.out.println(f1.var1); //200	
 		
+		
 		//상수는 변경불가
-//		f1.var2 = 300;	//ERROR:The final field FinalEx01.var2 cannot be assigned
+		//ERROR:The final field FinalEx01.var2 cannot be assigned
+//		f1.var2 = 300;	
 		System.out.println("final 상수(f1.var2) 호출: ");
 		System.out.println(f1.var2); //300
+		
 		
 		//STATIC상수 호출
 		System.out.println("STATIC상수(VAR3) 호출: ");
 		System.out.println(VAR3); //400
 		System.out.println(FinalEx01.VAR3); //400
 		
+		
+		
 		//상수 (지역변수 상수화)
+//		int NUM = 100; //지역변수
 		final int NUM = 100;
 		System.out.println("지역변수를 상수화: ");
 		System.out.println(NUM); //100
+		
 		//상수 변경 불가
-//		NUM = 300;	//The final local variable NUM cannot be assigned. It must be blank and not using a compound assignment
+		//ERROR-The final local variable NUM cannot be assigned. It must be blank and not using a compound assignment
+//		NUM = 300;	
 	}
 }
 
