@@ -6,7 +6,6 @@
 private < default 	< protected < public
 클래스내부 	< 동일패키지 	< 상속 클래스 	< 이외의 영역(아무 관계 없음)
 
-
 */
 package com.ext1;
 

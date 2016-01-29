@@ -6,7 +6,8 @@ public class DiCaPhone extends CellPhone{
 	private String pixel;	//화소
 	private String lens;	//렌즈
 	
-	public DiCaPhone(String model, String number, int bellsound, String pixel, String lens){
+	public DiCaPhone(String model, String number, int bellsound, 
+			String pixel, String lens){
 		this.model = model;
 		this.number = number;
 		this.bellsound = bellsound;
