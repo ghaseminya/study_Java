@@ -5,7 +5,7 @@ ClientEx.java	• 클라이언트용 프로그램
 				• 서버측 5000번 포트로 접속을 요청합니다.
 
 */
-package com.socket1;
+package com.chat1.socket;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

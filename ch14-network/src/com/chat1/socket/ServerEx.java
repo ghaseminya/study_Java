@@ -11,7 +11,7 @@ ClientEx.java	• 클라이언트용 프로그램
 
 
 */
-package com.socket1;
+package com.chat1.socket;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -30,7 +30,7 @@ public class ServerEx {
 			
 			//무한대기 상태에서 클라이언트의 접속 요청이 들어오면 SocketEx 스레드 객체를 생성
 			while(true){
-				//accept() : 서버소켓에서 클라이언트의 소켓이접속되기를 기다리는 메소드
+				//accept() : 서버소켓에서 클라이언트의 소켓이 접속되기를 기다리는 메소드
 				//accept() 메소드는 서버소켓이 대기중인 상태로 만들게 되며 접속이 이루어지면 소켓이 생성됩니다.
 				socket = server.accept();
 				client = new SocketEx(this, socket);

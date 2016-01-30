@@ -9,7 +9,7 @@ SocketEx.java	• 서버 프로그램의 일부로서 클라이언트의 접속�
 
 
 */
-package com.socket1;
+package com.chat1.socket;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
