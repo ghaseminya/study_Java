@@ -1,7 +1,7 @@
-/* 제네릭화 변경
+/* 
+//제네릭화 변경
+com.gen04.GenericsEx01.java의 중복제거 후 타입이 안전하지 않은 문제점을 제네릭화하여 해결 
 
-kr.studyjava.generic02\GenericsEx01.java의 중복제거 후 타입이 안전하지 않은 문제점을 제네릭화하여 해결 
-제네릭화 변경
 
 제네릭화의 이점
 -컴파일 단계에서 오류가 검출됩니다. 
@@ -9,7 +9,7 @@ kr.studyjava.generic02\GenericsEx01.java의 중복제거 후 타입이 안전하
 -중복의 제거와 타입 안전성을 동시에 추구할 수 있게 됩니다.
 
  */
-package kr.studyjava.generic03;
+package com.gen05;
 
 class StudentInfo{
 	public int grade;

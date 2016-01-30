@@ -2,7 +2,7 @@
 제네릭은 생략 가능합니다. 
 
  */
-package kr.studyjava.generic06;
+package com.gen08;
 
 class EmployeeInfo{
 	public int position;

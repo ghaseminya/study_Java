@@ -2,7 +2,7 @@
 제네릭 메소드와 배열
 
 */
-package kr.studyjava.generic11;
+package com.gen13;
 
 public class GenericEx01 {
 	//[ ] 연산이 필요하다면 매개변수의 선언을 통해서 전달 되는 참조 값을 배열 의 참조 값으로 제한해야 합니다.

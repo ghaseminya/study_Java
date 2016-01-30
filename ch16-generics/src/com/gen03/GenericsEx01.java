@@ -1,14 +1,16 @@
 /* 코드 중복
-StudentPerson, EmployeePerson에 동일형태존재하는 코드
-StudentPerson, EmployeePerson을 대표할 수 있는 클래스 생성 가능 
--> 중복 제거, 코드 간소화, 유지보수 쉽워짐
+StudentPerson, EmployeePerson에 동일형태존재하는 코드 존재
+-> 중복 코드 존재
 
-중복 코드 제거한 코드
--> kr.studyjava.generic02\GenericsEx01.java
+StudentPerson, EmployeePerson을 대표할 수 있는 클래스 생성 하여 
+-> 중복 제거, 코드 간소화, 유지보수 간편
 
+//-------------------------
+중복 코드를 제거한 코드
+com.gen04.GenericsEx01.java
 */
 
-package kr.studyjava.generic01; 
+package com.gen03; 
 
 class StudentInfo{
 	public int grade;
