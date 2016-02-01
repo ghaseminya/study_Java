@@ -1,5 +1,4 @@
-//인터페이스 다중 상속
-
+//인터페이스의 다중 상속
 
 package com.inter1;
 
@@ -35,9 +34,9 @@ public class InterfaceEx06 implements Interf3{
 		Interf1 it1 = ife;
 		Interf2 it2 = ife;
 		Interf3 it3 = ife;
-		System.out.println(it1.getA());
-		System.out.println(it2.getA());
-		System.out.println(it3.getData());
+		System.out.println(it1.getA()); //100
+		System.out.println(it2.getA()); //100
+		System.out.println(it3.getData()); //110
 	}
 }
 

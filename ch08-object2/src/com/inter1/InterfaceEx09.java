@@ -1,14 +1,18 @@
+/*
 //인터페이스를 통한 다중상속 효과
 //인터페이스와 클래스를 상속
 
 //강의 내용(인터페이스를 통한 다중상속 절차)
-//	• 인터페이스 구현
-//	• 다중상속효과를 위한 인터페이스의 추상메소드를 구현하는 클래스 생성
-//	• 클래스 상속, 인테페이스 구현한 클래스에서 인터페이스를 구현한 클래스의 인스턴스 생성
-//	• 해당 인스턴스를 통해 메소드 호출
+//TODO 1: 클래스와 인터페이스 정의
+//TODO 2: 다중상속효과를 위한 인터페이스의 추상메소드를 구현하는 클래스 생성
+//TODO 3: 클래스 상속, 인테페이스 구현한 클래스의 인스턴스 생성
+//TODO 4: 해당 인스턴스를 통해 메소드 호출
+
+*/
 
 package com.inter1;
 
+//TODO 1: 클래스와 인터페이스 정의
 class DMB
 {
 	public void onDMB()
@@ -32,6 +36,7 @@ class Mp3Impl
 	}
 }
 
+//TODO 2: 다중상속효과를 위한 인터페이스의 추상메소드를 구현하는 클래스 생성
 class SmartPhone extends DMB implements Mp3
 {
 	Mp3Impl mp3=new Mp3Impl(); //인스턴스 생성	
@@ -53,9 +58,11 @@ public class InterfaceEx09 {
 
 	public static void main(String[] args)
 	{
+		//TODO 3: 클래스 상속, 인테페이스 구현한 클래스의 인스턴스 생성
 		SmartPhone smartPhone=new SmartPhone();
 		smartPhone.powerOn();
 		
+		//TODO 4: 해당 인스턴스를 통해 메소드 호출
 		//SmartPhone 클래스가 DMB 클래스를, 그리고 Mp3클래스를 동시에 상속 하고 있는 것처럼 보입니다. 
 		//그러나 자바는 다중 상속을 지원하지 않습니다!
 		//이 부분이 가능하다는 것은 하나는 클래스고 다른 하나는 인터페이스라는 것을 추측할 수 있다.

@@ -27,22 +27,23 @@ public class InterfaceEx04 implements Inter5{
 	public static void main(String[] args) {
 
 		InterfaceEx04 ife04 = new  InterfaceEx04();
-		ife04.play();
-		ife04.study();
+		ife04.play(); //play 메소드
+		ife04.study(); //study 메소드
 		
 		System.out.println();
 		//클래스타입 -> 인터페이스타입으로 자동적으로 형변환
 		Inter5 if5 = ife04;	 
-		if5.play();
+		if5.play(); //play 메소드
 		
 		//호출 범위를 벗어나 호출 불가능 (interface Inter5에 포함된 메소드 아님)
-//		it5.study();	//ERROR: The method study() is undefined for the type Inter5
+		//ERROR: The method study() is undefined for the type Inter5
+//		it5.study();	
 		
 		System.out.println();
 		//인터페이스 -> 클래스타입으로 명시적으로 형변환
 		InterfaceEx04 ife05 = (InterfaceEx04)if5;		
-		ife05.play();
-		ife05.study();
+		ife05.play(); //play 메소드
+		ife05.study(); //study 메소드
 	}
 }
 
