@@ -28,7 +28,7 @@ class Point_{
 class Point3D_ extends Point_{		
 
 	
-Point3D_(int x, int y, int z){		
+	Point3D_(int x, int y, int z){		
 		//TODO : 초기화 순서가 있으므로 순서를 정확히 해줘야 한다.
 //		this.z = z;
 //		super(x, y); //ERROR-Constructor call must be the first statement in a constructor

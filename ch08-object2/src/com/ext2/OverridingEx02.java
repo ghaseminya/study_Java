@@ -1,7 +1,8 @@
 /*
+//오버라이딩(Overriding) vs 오버로딩(Overroading) 차이
 //오버라이딩 관계에서의 메소드 호출
-//참조변수의 자료형에 상관없이 오버라이딩 된 메소드는 외부로부터 가려지므로,
-//마지막으로 오버라이딩 한 메소드가 호출됩니다.
+	• 참조변수의 자료형에 상관없이 오버라이딩 된 메소드는 외부로부터 가려지므로,
+	• 마지막으로 오버라이딩 한 메소드가 호출됩니다.
 
 
 [오버라이딩(Overriding) vs 오버로딩(Overroading)]
@@ -20,8 +21,7 @@
  */
 package com.ext2;
 
-class AClass
-{
+class AClass{
 	public void rideMethod(){
 		System.out.println("AClass's Method");
 	}
@@ -30,8 +30,7 @@ class AClass
 	}
 }
 
-class BClass extends AClass
-{
+class BClass extends AClass{
 	@Override
 	public void rideMethod(){
 		System.out.println("BClass's Method");
@@ -42,8 +41,7 @@ class BClass extends AClass
 	}
 }
 
-class CClass extends BClass
-{
+class CClass extends BClass{
 	@Override
 	public void rideMethod(){
 		System.out.println("CClass's Method");
@@ -54,14 +52,14 @@ class CClass extends BClass
 	}
 }
 
-
 public class OverridingEx02 {
 
 	public static void main(String[] args) {
 		AClass ref1=new CClass();		
 		BClass ref2=new CClass();
 		CClass ref3=new CClass();
-		//컴파일 완료된 후(문장이 끝난후) 참조변수에 대한 자료형 정보를 가지고 있지만 실제로 뭘 참조하는 지는(new CClass()) 지워지게 됩니다.
+		//컴파일 완료된 후(문장이 끝난후) 참조변수에 대한 자료형 정보를 가지고 있지만 
+		//실제로 뭘 참조하는 지는(new CClass()) 지워지게 됩니다.
 
 		ref1.rideMethod(); //CClass's Method
 		ref2.rideMethod(); //CClass's Method

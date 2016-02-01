@@ -11,11 +11,13 @@ package com.ext2;
 //부모 클래스
 class Point{
 	
+	int x;
+	int y;
+	
+	
 	public Point(){		
 	}	
 	
-	int x;
-	int y;
 	
 	public Point(int x, int y){
 		this.x = x;
@@ -30,6 +32,8 @@ class Point{
 //자식 클래스
 class Point3D extends Point{
 	
+	int z;
+	
 	Point3D(){		
 	}
 	
@@ -39,8 +43,6 @@ class Point3D extends Point{
 		this.y = y;
 		this.z = z;
 	}
-	
-	int z;
 	
 	@Override	//메소드 재정의
 	public String getLocation(){
