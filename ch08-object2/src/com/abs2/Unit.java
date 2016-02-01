@@ -1,5 +1,6 @@
 //부모 클래스 정의
- 
+
+//Unit.java		부모클래스 정의 (추상 클래스, 부모역할만)
 //자식클래스(Protoss, Terran, Zerg)에서 상속받을 부모 클래스를 정의합니다
 
 package com.abs2;

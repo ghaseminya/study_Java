@@ -1,4 +1,31 @@
+/*
 //추상 클래스
+
+
+추상화(Abstract)
+	• 추상화는 구체적인 개념으로부터 공통된 부분들만 추려내어 일반화 하는 것을 의미합니다.
+	• 다시 말해서 일반화, 추상화 되었기 때문에 일반적으로 사용할 수 있는 단계가 아닌 아직 미완성(未完成)적인 개념적인 상태가 됩니다.
+	• 자바의 추상화(abstract)작업을 수행하기 위해서는 먼저 추상 메서드를 이해해야 합니다. 
+
+
+
+추상메소드 형식
+	• 메서드 정의시 중괄호({ })를 생략하여 메서드가 하는 일(body) 없이 세미콜론(;)으로 문장이 끝 납니다. (빈 메서드 정의)
+	• 그리고 abstract라는 예약어를 통해 현재 메서드가 추상 메서드임을 표시하고 있습니다. 
+
+[접근제한] abstract void [메소드명]( );
+
+
+
+추상클래스 형식
+	• 추상 메서드를 하나라도 가지게 되는 클래스가 바로 추상 클래스
+	• 하나이상 abstract 메소드를 포함하는 클래스는 abstract로 선언되어야하며, 인스턴스생성은 불가능합니다.
+	• 인스턴스생성은 불가능 하나, 참조변수 선언은 가능하고, 오버라이딩의 원리 그대로 적용하여 추상메소드도 구현가능합니다.
+
+[접근제한] abstract class [클래스명]{ }
+
+
+*/
 
 package com.abs1;
 
@@ -41,12 +68,12 @@ public class AbstractEx01 {
 //		A a1 = new A(); //ERROR: Cannot instantiate the type A
 		
 		B b1 = new B();
-		System.out.println(b1.a);
-		System.out.println(b1.b);
-		b1.number();
+		System.out.println(b1.a); //100
+		System.out.println(b1.b); //200
+		b1.number(); //number 메서드
 		
 		b1.setA(500);
-		System.out.println(b1.a);
+		System.out.println(b1.a); //500
 		
 	}
 }
