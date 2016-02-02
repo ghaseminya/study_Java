@@ -10,7 +10,24 @@
 金요일: 쇠처럼 튼튼하게. 나쁜 습관과 이별하는 날=禁(금할 금) 
 土요일: 흙처럼 부드럽게. 몰입해서 공부하는 날=討(연구할 토) 
 日요일: 해처럼 찬란하게. 안식하는 날=逸(편안할 일)
- 
+
+//---------------------------------------
+//클래스의 상수
+public class Week{
+	public static final int MON=1;
+	public static final int TUE=2, 
+	public static final int WED=3,
+	public static final int THU=4,
+	public static final int FRI=5,
+	public static final int SAT=6,
+	public static final int SUN=7
+}
+
+//인터페이스의 상수
+interface Week{
+   int MON=1, TUE=2, WED=3, 
+   THU=4, FRI=5, SAT=6, SUN=7;
+}
 */
 
 package com.inter1;

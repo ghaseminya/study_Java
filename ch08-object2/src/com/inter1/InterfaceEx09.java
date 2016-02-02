@@ -13,16 +13,13 @@
 package com.inter1;
 
 //TODO 1: 클래스와 인터페이스 정의
-class DMB
-{
-	public void onDMB()
-	{
+class DMB{
+	public void onDMB()	{
 		System.out.println("DMB 출력");
 	}
 }
 
-interface Mp3
-{
+interface Mp3{
 	public void onMp3();
 }
 
@@ -47,8 +44,7 @@ class SmartPhone extends DMB implements Mp3
 					 //인터페이스를 통해 다중 상속의 효과를 출수 있습니다.
 	}
 	
-	public void powerOn()
-	{
+	public void powerOn(){
 		onMp3();
 		onDMB();
 	}
@@ -71,7 +67,6 @@ public class InterfaceEx09 {
 		
 		dmb.onDMB();
 		mp3.onMp3();
-
 	}
 }
 

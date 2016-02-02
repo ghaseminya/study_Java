@@ -5,22 +5,7 @@
 	• 인터페이스 내에 선언된 변수는 무조건 public static final로 선언(상수)이 되므로,
 	• 아래의 두 코드는 완전히 동일한 의미를 가집니다.
 
-//클래스의 상수
-public class Week{
-	public static final int MON=1;
-	public static final int TUE=2, 
-	public static final int WED=3,
-	public static final int THU=4,
-	public static final int FRI=5,
-	public static final int SAT=6,
-	public static final int SUN=7
-}
 
-//인터페이스의 상수
-interface Week{
-   int MON=1, TUE=2, WED=3, 
-   THU=4, FRI=5, SAT=6, SUN=7;
-}
 
 */
 package com.inter1;
