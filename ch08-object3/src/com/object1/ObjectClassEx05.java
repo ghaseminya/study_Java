@@ -1,11 +1,21 @@
-package com.object1;
-/*
-//깊은 복사(Deep Copy)
 
+package com.object1;
+//깊은 복사(Deep Copy)
 //참조변수의 인스턴스값을 카피하고 이 인스턴스가 참조하고 있는 인스턴스의 값까지 복사하게 되어
 //깊은 복사가 이루어져 다른 결과를 출력하게됩니다
 //얇은 복사 => 다시 얇은 복사
 //얇은 복사후 참조하고 있는 인스턴스의 클론메소드 호출하게 됩니다.
+
+//★ 깊은 복사(Deep Copy) 도식도
+//-----------------------------
+//출력결과
+//이름, 나이 정보
+//한국: [김프로, 32]
+//미국: [Bill, 37]
+//
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
 
 
 class InfoPerson implements Cloneable {
@@ -49,7 +59,9 @@ class Nation implements Cloneable {
 		infoAmerican.changePos(x2, y2);
 	}
 	public Object clone() throws CloneNotSupportedException	{
+		//얇은 복사
 		Nation copy=(Nation)super.clone();
+		//다시 얇은 복사
 		copy.infoKorean=(InfoPerson)infoKorean.clone();
 		copy.infoAmerican=(InfoPerson)infoAmerican.clone();
 		
@@ -73,4 +85,5 @@ class ObjectClassEx05
 			e.printStackTrace();
 		}
 	}
-}*/
+}
+

@@ -9,7 +9,6 @@ package com.object1;
 ObjectClassEx03에서 equals()메소드를 재정의하여 수행될 수 있도록 함
 
 
-
 */
 class IntNumber {
 	int num;
@@ -18,7 +17,7 @@ class IntNumber {
 		this.num=num;
 	}
 	
-	//인스턴스간 내용비교를 위한 내용비교 메소드 정의
+	//TODO 3: 인스턴스간 내용비교를 위한 내용비교 메소드 정의
 	public boolean isEquals(IntNumber numObj) {
 		if(this.num==numObj.num)
 			return true;
@@ -33,15 +32,20 @@ public class ObjectClassEx02 {
 		IntNumber num2=new IntNumber(15);
 		IntNumber num3=new IntNumber(10);
 		
+		//TODO 1: == 연산자는 참조 값(주소값)비교
 		if(num1 == num2){
 			System.out.println("num1 == num2");
 		}else if(num1 == num3){
 			System.out.println("num1 == num3");
 		}
+		
+		//TODO 2: 객체의 참조값 확인
 		System.out.println(num1);
 		System.out.println(num2);
 		System.out.println(num3);
 		
+		
+		//TODO 4: 비교 메소드 호출 
 		if(num1.isEquals(num2))
 			System.out.println("num1과 num2는 같은 정수");
 		else

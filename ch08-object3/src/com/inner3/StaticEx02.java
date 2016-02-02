@@ -1,6 +1,26 @@
+/*
 //Nested 클래스 이해
 
 
+중첩클래스(Nested Class)
+	• 자바에서는 클래스 안에 클래스가 선언된 것을 의미합니다.
+	• 이를 Nested Class라고 부릅니다.
+	• 클래스 안에 있는 클래스를 내부클래스 그리고 내부 클래스 가지고 있는 클래스를 외부클래스라고 합니다.
+
+
+
+중첩 클래스의 구성 형식
+class OuterClass {
+     …
+     class InnerClass {
+  
+     }
+  …
+} 
+
+★ Nested Class 분류 도식도
+
+*/
 package com.inner3;
 
 class OuterClass{

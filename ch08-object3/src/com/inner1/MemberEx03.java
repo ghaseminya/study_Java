@@ -1,8 +1,15 @@
+/*
 //Inner 클래스의 특징과 이해
-
 //인스턴스안에 인스턴스가 종속적인 모델
 
 
+Inner 클래스의 특징
+	• Outer클래스의 인스턴스 생성 후에 Inner클래스의 인스턴스 생성이 가능합니다.
+	• Inner클래스내에서는 Outer클래스의 멤버에 직접 접근이 가능합니다.
+	• Inner클래스의 인스턴스는 자신이 속한 Outer클래스의 인스턴스를 기반으로 생성됩니다.
+
+
+*/
 package com.inner1;
 
 class OuterClass{
@@ -38,6 +45,7 @@ class MemberEx03{
 		out1.whatYourName();
 		out2.whatYourName();
 		
+		
 		System.out.println("");
 		//out1(Outer클래스, OuterClass)의 인스턴스에 종속적인 Inner클래스의 인스턴스를 생성하겠다는 의미
 		OuterClass.InnerClass inner1=out1.new InnerClass();
@@ -48,3 +56,17 @@ class MemberEx03{
 		OuterClass.InnerClass inner6=out2.new InnerClass();
 	}
 }
+
+/*
+//출력결과
+My Name is Alice : OuterClass : 1
+My Name is Steve : OuterClass : 1
+
+My Name is Alice : OuterClass : 2
+My Name is Steve : OuterClass : 2
+My Name is Alice : OuterClass : 3
+My Name is Alice : OuterClass : 4
+My Name is Steve : OuterClass : 3
+My Name is Steve : OuterClass : 4
+
+*/

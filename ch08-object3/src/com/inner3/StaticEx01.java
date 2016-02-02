@@ -1,6 +1,7 @@
 //Static 내부 클래스
 
-//일반멤버 클래스는 static한 변수를 쓰지 못하며 //ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
+//일반멤버 클래스는 static한 변수를 쓰지 못하며 
+//ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
 //static변수를 포함한 내부 클래스는 static 클래스여야 합니다.
 
 
@@ -9,11 +10,15 @@ package com.inner3;
 //public, final, abstract만 가능(일반 지정자-클래스의 종류 지정)
 public class StaticEx01 {
 	
-	//static 내부 클래스
-	//일반멤버 클래스는 static한 변수를 쓰지 못하며(ERROR)
+	
+	//일반멤버 클래스는 static한 변수를 쓰지 못하며(컴파일ERROR)
 	//static변수를 포함한 내부 클래스는 static 클래스여야 합니다.
-//	public class StaticInner{ ////ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
-	public static class StaticInner{
+	//ERROR:The field cv cannot be declared static in a non-static inner type, unless initialized with a constant expression
+//	public class StaticInner{ //일반클래스
+//		int iv = 200;
+//		static int cv = 300; //static변수
+//	}
+	public static class StaticInner{ //static 내부 클래스
 		int iv = 200;
 		static int cv = 300; //static변수
 	}

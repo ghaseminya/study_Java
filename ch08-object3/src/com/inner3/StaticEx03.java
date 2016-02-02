@@ -24,7 +24,8 @@ class OuterClassTwo
 {
 	OuterClassTwo()
 	{
-		//NestedClass는 선언된 클래스 내부에서만 인스턴스를 생성할 수 있습니다.
+		//NestedClass는 private로 되어 있어 
+		//선언된 클래스 내부(OuterClassTwo)에서만 인스턴스를 생성할 수 있습니다.
 		NestedClass nst=new NestedClass();
 		nst.simpleMethod();		
 	}
@@ -50,7 +51,8 @@ class StaticEx03
 		nst1.simpleMethod();
 
 		//NestedClass가 private으로 선언되면, 선언된 클래스 내부에서만 인스턴스를 생성할 수 있습니다.
-//		OuterClassTwo.NestedClass nst2=new OuterClassTwo.NestedClass(); //ERROR-The type OuterClassTwo.NestedClass is not visible
+		//ERROR-The type OuterClassTwo.NestedClass is not visible
+//		OuterClassTwo.NestedClass nst2=new OuterClassTwo.NestedClass(); 
 //		nst2.simpleMethod();
 	}
 }
