@@ -5,7 +5,7 @@
  * toString(): 참조값 확인
 */
 
-package com.object1;
+package com.object2;
 
 public class ObjectEx01 {
 

@@ -5,7 +5,7 @@
  * 객체 비교3 - Object.equals를 통한 
  * */
 
-package com.object1;
+package com.object2;
 
 public class ObjectEx02 {
 	public static void main(String[] args){
