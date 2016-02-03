@@ -8,7 +8,6 @@ Inner 클래스의 특징
 	• Inner클래스내에서는 Outer클래스의 멤버에 직접 접근이 가능합니다.
 	• Inner클래스의 인스턴스는 자신이 속한 Outer클래스의 인스턴스를 기반으로 생성됩니다.
 
-
 */
 package com.inner1;
 
