@@ -5,6 +5,11 @@ package com.object1;
 	• Object클래스의 equals()메소드를 재정의하여 내용비교하도록 처리
 
 
+File Info
+object1.ObjectClassEx02	인스턴스간 내용비교를 위한 내용비교 메소드 정의 (==연산자 사용)
+*object1.ObjectClassEx03	Object클래스의 equals()메소드를 재정의하여 내용비교
+
+
 equals() 메소드
 	• 객체의 인스턴스 값 비교
 	• 객체 비교시 실제 값을 비교하지 않고 위치값을 비교

@@ -1,89 +1,39 @@
+/* Object Class - 객체 비교 정리
+TODO : 객체 비교1 - 참조값을 통한 비교
+TODO : 객체 비교2 - 비교 연산자를 통한 비교(가장 많이 사용함)
+TODO : 객체 비교3 - Object.equals를 통한 비교
+*/
 
 package com.object1;
-//깊은 복사(Deep Copy)
-//참조변수의 인스턴스값을 카피하고 이 인스턴스가 참조하고 있는 인스턴스의 값까지 복사하게 되어
-//깊은 복사가 이루어져 다른 결과를 출력하게됩니다
-//얇은 복사 => 다시 얇은 복사
-//얇은 복사후 참조하고 있는 인스턴스의 클론메소드 호출하게 됩니다.
 
-//★ 깊은 복사(Deep Copy) 도식도
-//-----------------------------
-//출력결과
-//이름, 나이 정보
-//한국: [김프로, 32]
-//미국: [Bill, 37]
-//
-//이름, 나이 정보
-//한국: [홍길동, 27]
-//미국: [Sara, 18]
-
-
-class InfoPerson implements Cloneable {
-	private String strName;
-	private int intAge;
-	
-	public InfoPerson(String x, int y) {
-		strName=x;
-		intAge=y;
-	}
-	public void showPosition() {
-		System.out.printf("[%s, %d]", strName, intAge);
-	}
-	public void changePos(String x, int y) {
-		strName=x;
-		intAge=y;
-	}
-	public Object clone() throws CloneNotSupportedException	{
-		return super.clone();
-	}
-}
-
-class Nation implements Cloneable {
-	InfoPerson infoKorean, infoAmerican;
-	
-	public Nation(String x1, int y1, String x2, int y2) {
-		infoKorean=new InfoPerson(x1, y1);
-		infoAmerican=new InfoPerson(x2, y2);
-	}
-	public void showPosition() {
-		System.out.println("이름, 나이 정보");
-		System.out.print("한국: ");
-		infoKorean.showPosition();
-		System.out.println("");	
-		System.out.print("미국: ");
-		infoAmerican.showPosition();	
-		System.out.println("\n");
-	}
-	public void changePos(String x1, int y1, String x2, int y2) {
-		infoKorean.changePos(x1, y1);
-		infoAmerican.changePos(x2, y2);
-	}
-	public Object clone() throws CloneNotSupportedException	{
-		//얇은 복사
-		Nation copy=(Nation)super.clone();
-		//다시 얇은 복사
-		copy.infoKorean=(InfoPerson)infoKorean.clone();
-		copy.infoAmerican=(InfoPerson)infoAmerican.clone();
+public class ObjectClassEx05 {
+	public static void main(String[] args){
+		ObjectClassEx05 ob1 = new ObjectClassEx05();
 		
-		return copy;
-	}
-}
-
-class ObjectClassEx05
-{	
-	public static void main(String[] args) {
-		Nation orgin=new Nation("홍길동", 27, "Sara", 18);
-		Nation copy;
+		//TODO : 객체 비교 - 참조값을 통한
+		//주소값 출력
+		System.out.println("ob1: " + ob1); //ob1: com.object2.ObjectEx02@2a139a55
 		
-		try	{
-			copy=(Nation)orgin.clone();
-			orgin.changePos("김프로", 32, "Bill", 37);
-			orgin.showPosition();
-			copy.showPosition();
+		ObjectClassEx05 ob2 = new ObjectClassEx05();
+		//주소값 출력
+		System.out.println("ob2: " + ob2); //ob2: com.object2.ObjectEx02@15db9742
+		
+
+		//TODO : 객체 비교 - 연산자를 통한 비교 (가장 많이 사용함)
+		if(ob1 == ob2){
+			System.out.println("같은 객체");
+		}else{
+			System.out.println("다른 객체");
 		}
-		catch(CloneNotSupportedException e)	{
-			e.printStackTrace();
+		//다른 객체
+		
+		
+		//TODO : 객체 비교 - Object.equals를 통한 비교
+		if(ob1.equals(ob2)){
+			System.out.println("같은 객체");
+		}else{
+			System.out.println("다른 객체");
 		}
+		//다른 객체
 	}
 }
-
