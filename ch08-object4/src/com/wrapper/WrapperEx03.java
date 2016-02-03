@@ -12,7 +12,7 @@
 
 package com.wrapper;
 
-// Wrapper클래스 정의
+// Wrapper클래스 정의 (사용자 Wrapper클래스)
 class IntWrapper {
 	private int num;
 	
@@ -32,8 +32,10 @@ class WrapperEx03 {
 	}
 
 	public static void main(String[] args) {
-		IntWrapper intInstance=new IntWrapper(3);	//개발자가 정의한  Wrapper클래스 사용
-		Integer basicIntInstance = new Integer(10);	//자바에서 제공하는 Wrapper클래스 사용
+		//개발자가 정의한  Wrapper클래스 사용
+		IntWrapper intInstance=new IntWrapper(3);
+		//자바에서 제공하는 Wrapper클래스 사용
+		Integer basicIntInstance = new Integer(10);
 		
 		showData(intInstance); //3
 		showData(new IntWrapper(7)); //7
