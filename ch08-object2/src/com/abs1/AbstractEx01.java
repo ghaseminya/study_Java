@@ -45,7 +45,7 @@ abstract class A{
 	//일반 메소드
 	public void setA(int a){
 		this.a = a;
-	};
+	}
 }
 
 class B extends A{
