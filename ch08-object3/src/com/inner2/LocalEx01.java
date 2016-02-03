@@ -23,12 +23,12 @@ class OuterClass {
   …
 } 
 
-
 */
 package com.inner2;
 
 public class LocalEx01 {
 	
+	//멤버메소드
 	public void innerTest(){
 		
 		//로컬 내부 클래스
@@ -38,6 +38,7 @@ public class LocalEx01 {
 				System.out.println("Local 내부 클래스");
 			}			
 		}
+		
 		//객체 생성을 위해 명시적으로 객체 생성
 		Inner i = new Inner();
 		i.getData();		
@@ -61,3 +62,6 @@ public class LocalEx01 {
 		le.innerTest();
 	}
 }
+
+//출력결과
+//Local 내부 클래스

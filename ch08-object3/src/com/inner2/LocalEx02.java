@@ -10,7 +10,7 @@
 	• 로컬 내부 클래스의 메모리 소멸 시점은  메소드가 종료될 때
 	• Outer클래스의 멤버변수와 상수값만 접근 가능
 	• 로컬 내부 클래스가 정의된 메소드내의 로컬변수에는 접근 할 수 없습니다.
-	• 로컬내부클래스의 객체생성은 해당 클래스가 포함된 메소드에서만 가능합니다.
+	• 로컬 내부클래스의 객체생성은 해당 클래스가 포함된 메소드에서만 가능합니다.
 
 
 //-----------------------------
@@ -40,8 +40,10 @@ public class LocalEx02 {
 				System.out.println("a = " + a);
 				
 				//로컬 내부 클래스는 로컬내부 클래스가 위치한 메소드에서 지역변수 호출 불가능
-//				System.out.println("b = " + b);	//ERROR:Cannot refer to a non-final variable b inside an inner class defined in a different method
-												//final int b = 200; 선언하면 접근 가능하게됩니다.
+				//ERROR:Cannot refer to a non-final variable b inside an inner class defined in a different method
+//				System.out.println("b = " + b);
+				//메소드의 변수 선언시 final int b = 200; 선언하면 접근 가능하게 됩니다.
+				
 				System.out.println("c = " + c);
 				System.out.println("NUM = " + NUM);
 			}
@@ -53,7 +55,6 @@ public class LocalEx02 {
 	
 	
 	public static void main(String[] args) {
-		// 		
 		LocalEx02 le2 = new LocalEx02();
 		le2.innerTest();
 	}

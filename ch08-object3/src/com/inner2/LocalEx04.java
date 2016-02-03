@@ -1,11 +1,13 @@
 /*
 //Local 클래스의 지역변수, 매개변수 접근
-//	• 메소드가 반환하는 순간 매개변수와 지역변수는 소멸됩니다. 그러므로 매개변수와 지역변수의 접근할수 없습니다. 
-//	• 단, final로 선언된 변수의 접근은 허용합니다. 접근의 허용을 위해서 final 변수를 로컬 클래스의 인스턴스가 접근 가능한 영역에 복사하게 됩니다.(메모리의 스태틱 영역에 복사)
-
+	• 메소드가 반환하는 순간 매개변수와 지역변수는 소멸됩니다. 
+	그러므로 매개변수와 지역변수의 접근할수 없습니다. 
+	• 단, final로 선언된 변수의 접근은 허용합니다. 
+	접근의 허용을 위해서 final 변수를 로컬 클래스의 인스턴스가 접근 가능한 영역에 복사하게 됩니다.(메모리의 스태틱 영역에 복사)
+	메모리구조에서 클래스영역의 상수 메모리(constants pool)영역에 저장됩니다.
+	(클래스 메모리영역은 정적코드 영역과 상수메모리 영역으로 구성되어 있습니ㅏㄷ.
 */
 package com.inner2;
-
 
 interface Readable4{
 	public void read();
@@ -20,7 +22,9 @@ class OuterClass4{
 	
 	//final로 선언된 변수의 접근은 허용합니다. 
 	//접근의 허용을 위해서 final 변수를 로컬 클래스의 인스턴스가 접근 가능한 영역에 복사하게 되므로 접근이 가능합니다.
-	public Readable4 createLocalClassInst(final String instName){		
+	//함수의 매개변수도 지역변수
+	public Readable4 createLocalClassInst(final String instName){
+		
 		class LocalClass implements Readable4{
 			public void read(){
 				System.out.println("Outer instance name: "+ myName);

@@ -17,6 +17,16 @@ finalize() 메소드
 	• 인스턴스가 완전히 소멸되기 직전 호출되는 메소드,
 	• Object 클래스의 멤버이므로 모든 인스턴스에는 이 메소드가 존재합니다
 
+
+
+//------------------------------------
+가비지 컬렉션 명시적(finalize메소드) 호출하는 2가지 메소드
+System.gc();	
+	• Garbage Collection 수행을 명령하는 메소드
+	• GC가 발생하면, 소멸의 대상이 되는 인스턴스는 결정되지만 이것이 실제 소멸로 바로 이어 지지는 않습니다. 왜냐하면 인스턴스의 실제 소멸로 이어지지 않은 상태에서 프로그램이 종료될 수도 있습니다. 종료가 되면 어차피 인스턴스는 소멸 되기 때문입니다.
+System.runFinalization();	
+	• GC에 의해서 소멸이 결정된 인스턴스를 즉시 소멸시키는 메소드
+
 //------------------------------------
 실행과정에서 finalize 메소드는 호출되지 않을 수 있습니다.
 왜냐하면, Garbage Collection이 실행되는 시기와 인스턴스의 완전한 소멸의 시기는 차이가 날 수 있기 때문이다.
@@ -41,12 +51,13 @@ class MyName{
 public class ObjectClassEx01 {
 
 	public static void main(String[] args){
-		MyName obj1=new MyName("인스턴스 1");	//가비지컬렉션 대상
-		MyName obj2=new MyName("인스턴스 2");	//가비지컬렉션 대상
-		MyName obj3=new MyName("인스턴스 3");	//가비지컬렉션 대상
-		obj1=null;
-		obj2=null;
-		obj3=null;
+		MyName obj1=new MyName("인스턴스 1");	
+		MyName obj2=new MyName("인스턴스 2");
+		MyName obj3=new MyName("인스턴스 3");
+		
+		obj1=null; //가비지컬렉션 대상
+		obj2=null; //가비지컬렉션 대상
+		obj3=null; //가비지컬렉션 대상
 		
 		System.out.println("프로그램을 종료합니다.");
 		
