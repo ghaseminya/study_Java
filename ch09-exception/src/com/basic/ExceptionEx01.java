@@ -1,10 +1,9 @@
-
 package com.basic;
 /*
 //예외발생
 //배열의 인덱스 범위를 넘어가서 예외발생
 //-----------------------
-ExceptionEx02
+ExceptionEx02에서 예외처리
 
 
 */

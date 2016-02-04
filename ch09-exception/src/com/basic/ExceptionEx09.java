@@ -1,10 +1,15 @@
+package com.basic;
 /*
 예외 처리하지 않은 경우
 	• main() 메소드의 인자를 받아서 콘솔에 출력
 	• 인자를 넣지 않은 경우와 잘못된 인자를 넣은 경우에도 프로그램이 비정상으로 종료됩니다.
 
 
+File Info
+ExceptionEx09	매개변수없이,  정수가 아닌 문자 입력 시 예외 발생
+*ExceptionEx10	try~catch~finally로 예외처리
 
+//-----------------------------------------------------
 프로그램 코드는 정상이기 때문에 컴파일 정상적으로 수행됩니다. 
 하지만, 실행 중에 인자를 입력하지 않거나  정수값으로 변환될 수 없는 인자를 입력
 하였다면 오류가 발생되게 됩니다. 
@@ -23,12 +28,8 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "c
 NumberFormatException
 데이터의 형 변환에 문제가 있을 경우 발생되며, 넘어온 인자가 정수형으로 변환 될수 없는 값이므로 예외가 발생이 됩니다.
 
-해결코드
-ExceptionEx10.java에서 예외처리 수행
 
 */
-package com.basic;
-
 public class ExceptionEx09 {
 	public static void main(String[] args){
 		//main() 메소드의 첫번째 인자를 받아서 정수형으로 변환

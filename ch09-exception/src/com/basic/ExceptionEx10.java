@@ -1,10 +1,15 @@
+package com.basic;
 /*
 ExceptionEx09 예외 처리하지 않은 코드를 try~catch~finally로 처리
 인자를 넣지 않은 경우와 잘못된 인자를 넣은 경우에도 프로그램이 비정상 종료되지 않고 정상 처리됩니다.
 
-*/
-package com.basic;
 
+File Info
+ExceptionEx09	매개변수없이,  정수가 아닌 문자 입력 시 예외 발생
+*ExceptionEx10	try~catch~finally로 예외처리
+
+
+*/
 public class ExceptionEx10 {
 
 	public static void main(String[] args){
