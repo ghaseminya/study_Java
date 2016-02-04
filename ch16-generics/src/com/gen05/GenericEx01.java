@@ -1,3 +1,4 @@
+package com.gen05;
 /* 
 //제네릭화 변경
 com.gen04.GenericsEx01.java의 중복제거 후 타입이 안전하지 않은 문제점을 제네릭화하여 해결 
@@ -8,8 +9,15 @@ com.gen04.GenericsEx01.java의 중복제거 후 타입이 안전하지 않은 �
 (인스턴스 생성시 결정된 T의 자료형에 일치하지 않으면 컴파일 에러가 발생 하므로 자료형에 안전)
 -중복의 제거와 타입 안전성을 동시에 추구할 수 있게 됩니다.
 
- */
-package com.gen05;
+
+File Info
+com.gen03.GenericsEx01.java		코드 중복
+com.gen04.GenericsEx01.java		중복 코드를 제거한 코드
+								코드 중복 제거후 발행한 타입이 안전하지 않은 문제점 발생
+*com.gen05.GenericsEx01.java	중복제거 후 타입이 안전하지 않은 문제점을 제네릭화하여 해결
+
+
+*/
 
 class StudentInfo{
 	public int grade;
