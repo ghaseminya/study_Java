@@ -1,3 +1,4 @@
+package com.inner4;
 /*
 //Annonymous 내부 클래스 - 축약형태
 //AnonymousEx02의 익명내부클래스 정의를 축약형태로 변형하기
@@ -18,7 +19,7 @@ new InnerParent3() //객체 생성
 .display();	//바로 메소드 호출
 
 */
-package com.inner4;
+
 
 //부모클래스
 class InnerParent3{

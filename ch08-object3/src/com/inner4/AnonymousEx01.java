@@ -41,7 +41,7 @@ Inner클래스는 부모 클래스를 상속받아서 내부클래스를 정의�
 
 정의부		class Inner extends InnerParent2{} //클래스 생성(클래스상속 및 메소드 재정의)
 구현부		new Inner(); //객체 생성
-		i.display(); // 인스턴스를 통해 메소드 호출
+		i.display(); //인스턴스를 통해 메소드 호출
 
 */
 package com.inner4;
@@ -56,22 +56,23 @@ class InnerParent1{
 
 public class AnonymousEx01 {
 
-	// 이름이 없는 내부 클래스 생성하는데 부모이름을 쓰거나 인터페이스명을 쓴다.
-	// 반드시 객체생성을 바로 해주어야 한다.
+	
 	public void innerTest(){
-
+		//Inner클래스는 부모 클래스를 상속받아서 내부클래스를 정의부와 구현부로 구현
+		
 		//정의부	class Inner extends InnerParent1{}
-		class Inner extends InnerParent1{
-			//display 재정의
-//			@Override
-//			public void display(){
-//				System.out.println("재정의된 display");
-//			}
+		class Inner extends InnerParent1{ //클래스 생성(클래스상속 및 메소드 재정의)
+			//display 재정의, 
+			//먼저 재정의하지 않고 구현후 결과확인 후 재정의하여 다시 결과확인
+			@Override
+			public void display(){
+				System.out.println("재정의된 display");
+			}
 		}
 		
 		//구현부	new Inner();
-		Inner i = new Inner();
-		i.display();
+		Inner i = new Inner(); //객체 생성
+		i.display(); //인스턴스를 통해 메소드 호출
 	}
 	
 	public static void main(String[] args) {
@@ -79,7 +80,6 @@ public class AnonymousEx01 {
 		AnonymousEx01 anony = new AnonymousEx01();
 		anony.innerTest();
 	}
-
 }
 
 

@@ -64,3 +64,11 @@ public class ObjectClassEx02 {
 	}
 
 }
+
+/*//출력결과
+com.object1.IntNumber@2a139a55
+com.object1.IntNumber@15db9742
+com.object1.IntNumber@6d06d69c
+num1과 num2는 다른 정수
+num1과 num3는 같은 정수
+*/

@@ -1,3 +1,4 @@
+package com.inner2;
 /*
 //로컬 내부 클래스 
 //로컬 내부 클래스는 로컬내부 클래스가 위치한 메소드의 지역변수 호출 불가능
@@ -18,7 +19,6 @@
 //final int b = 200; 선언후 출력결과 확인
 
 */
-package com.inner2;
 
 public class LocalEx02 {
 	//멤버 변수

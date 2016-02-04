@@ -1,38 +1,30 @@
 //Nested Class - NestedClass가 private으로 선언된 경우
 
-
 package com.inner3;
 
-class OuterClassOne
-{
-	OuterClassOne()
-	{
+class OuterClassOne{
+	OuterClassOne()	{
 		NestedClass nst=new NestedClass();
 		nst.simpleMethod();
 	}
 	
-	static class NestedClass
-	{
-		public void simpleMethod()
-		{
+	static class NestedClass{
+		public void simpleMethod(){
 			System.out.println("Nested Instance Method One");
 		}
 	}
 }
 
-class OuterClassTwo
-{
-	OuterClassTwo()
-	{
+class OuterClassTwo{
+	OuterClassTwo()	{
 		//NestedClass는 private로 되어 있어 
 		//선언된 클래스 내부(OuterClassTwo)에서만 인스턴스를 생성할 수 있습니다.
 		NestedClass nst=new NestedClass();
 		nst.simpleMethod();		
 	}
 	
-	//NestedClass가 private으로 선언되면, 선언된 클래스 내부에서만 인스턴스를 생성할 수 있습니다.
-	private static class NestedClass
-	{
+	//NestedClass가 private으로 선언되면, 선언된 클래스의 내부에서만 인스턴스를 생성할 수 있습니다.
+	private static class NestedClass	{
 		public void simpleMethod()
 		{
 			System.out.println("Nested Instance Method Two");
@@ -40,10 +32,8 @@ class OuterClassTwo
 	}
 }
 
-class StaticEx03
-{	
-	public static void main(String[] args)
-	{
+class StaticEx03{	
+	public static void main(String[] args){
 		OuterClassOne one=new OuterClassOne();
 		OuterClassTwo two=new OuterClassTwo();
 		

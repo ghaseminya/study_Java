@@ -32,6 +32,8 @@ public class AnonymousEx02 {
 	
 	public void innerTest(){
 		
+		// 이름이 없는 내부 클래스 생성하는데 부모이름을 쓰거나 인터페이스명을 쓴다.
+		// 반드시 객체생성을 바로 해주어야 한다.
 		//익명 내부 클래스
 		InnerParent2 i = new InnerParent2(){ //객체 생성
 			//부모클래스의 메소드 재정의

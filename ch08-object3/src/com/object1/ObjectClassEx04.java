@@ -1,8 +1,12 @@
 /* Object Class의 내부 메소드
 
-getClass(): 클래스 정보 확인
-hashCode(): 객체를 식별할 수 있는 unique한 값
 toString(): 참조값 확인
+	• 객체(인스턴스의 실제 값)를 문자열로 변경시키는 메소드
+	
+getClass(): 클래스 정보 확인
+
+hashCode(): 객체를 식별할 수 있는 unique한 값
+
 */
 
 package com.object1;

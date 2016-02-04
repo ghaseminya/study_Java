@@ -1,3 +1,5 @@
+package com.inner2;
+
 /*
 //Local 클래스의 지역변수, 매개변수 접근
 	• 메소드가 반환하는 순간 매개변수와 지역변수는 소멸됩니다. 
@@ -7,7 +9,6 @@
 	메모리구조에서 클래스영역의 상수 메모리(constants pool)영역에 저장됩니다.
 	(클래스 메모리영역은 정적코드 영역과 상수메모리 영역으로 구성되어 있습니ㅏㄷ.
 */
-package com.inner2;
 
 interface Readable4{
 	public void read();
@@ -26,6 +27,7 @@ class OuterClass4{
 	public Readable4 createLocalClassInst(final String instName){
 		
 		class LocalClass implements Readable4{
+			@Override
 			public void read(){
 				System.out.println("Outer instance name: "+ myName);
 				System.out.println("Local instance name: "+ instName);
