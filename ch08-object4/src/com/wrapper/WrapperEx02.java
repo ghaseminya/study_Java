@@ -1,3 +1,4 @@
+package com.wrapper;
 /*
 //Auto boxing/unboxing
 	• Auto Boxing과 Unboxing은 다양한 형태로 진행됩니다.
@@ -35,7 +36,6 @@ Auto UnBoxing	• Wrapper 인스턴스에 저장된 데이터가 자동으로 �
 				• 인스턴스가 와야 하는데, 기본 자료형 데이터가 있다면, Auto Unboxing 수행 
 
 */
-package com.wrapper;
 
 public class WrapperEx02 {
 
@@ -65,7 +65,8 @@ public class WrapperEx02 {
 		
 		//Auto boxing/unboxing
 		//산술연산의 과정에서 자동으로 이루어집니다. 
-		//산술연산을 위해 unboxing이 일어난후 =연산자로 저장하기 위해 다시 boxing이 일어나고 출력을 위해 다시 unboxing이 일어납니다.)
+		//산술연산을 위해 unboxing이 일어난후 =연산자로 저장하기 위해 다시 boxing이 일어나고 
+		//출력을 위해 다시 unboxing이 일어납니다.)
 		Integer result2 = obj3 + obj4;
 		System.out.println("result2 = " + result2); //result2 = 35
 	}

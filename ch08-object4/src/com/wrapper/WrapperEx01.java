@@ -1,3 +1,4 @@
+package com.wrapper;
 /*
 //boxing/unboxing
 //boolean boxing/unboxing하기
@@ -36,7 +37,6 @@ UnBoxing	• 참조자료형 -> 기본자료형
 
 ★ Wrapper클래스의 Boxing & UnBoxing
 */
-package com.wrapper;
 
 public class WrapperEx01 {
 

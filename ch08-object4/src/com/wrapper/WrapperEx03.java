@@ -1,4 +1,6 @@
-//Wrapper클래스 인스턴스 생성
+package com.wrapper;
+/*
+//Wrapper클래스 정의 (사용자 Wrapper클래스), Wrapper클래스 인스턴스 생성
 
 //강의내용
 //	• 개발자가 정의한 Wrapper클래스 사용
@@ -9,8 +11,7 @@
 //개발자가 직접 정의한 integer형 기본자료형에 대한 Wrapper클래스 정의
 //이 Wrapper 클래스에서 기본 자료형 데이터를 저장 및 참조할 수 있는 구조로 정의
 
-
-package com.wrapper;
+*/
 
 // Wrapper클래스 정의 (사용자 Wrapper클래스)
 class IntWrapper {
@@ -38,8 +39,8 @@ class WrapperEx03 {
 		Integer basicIntInstance = new Integer(10);
 		
 		showData(intInstance); //3
-		showData(new IntWrapper(7)); //7
 		showData(basicIntInstance); //10
+		showData(new IntWrapper(7)); //7
 		
 		
 		//문자열 기반 Wrapper클래스
