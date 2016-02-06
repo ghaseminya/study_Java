@@ -1,6 +1,6 @@
 package com.gen03; 
 /* 코드 중복
-StudentPerson, EmployeePerson에 동일형태존재하는 코드 존재
+StudentPerson, EmployeePerson에 동일형태 존재하는 코드 존재
 -> 중복 코드 존재
 
 StudentPerson, EmployeePerson을 대표할 수 있는 클래스 생성 하여 
@@ -8,7 +8,7 @@ StudentPerson, EmployeePerson을 대표할 수 있는 클래스 생성 하여
 
 //-------------------------
 
-File Info
+File Info : 제네릭 만들어지는 과정
 *com.gen03.GenericsEx01.java	코드 중복
 com.gen04.GenericsEx01.java		중복 코드를 제거한 코드
 								코드 중복 제거후 발행한 타입이 안전하지 않은 문제점 발생
@@ -51,6 +51,7 @@ public class GenericsEx01 {
 	public static void main(String[] args) {
 		//객체 생성
 		StudentInfo si = new StudentInfo(10);
+		
 		//si를 인자로 하는 객체 생성
 		StudentPerson sp = new StudentPerson(si);
 		System.out.println(sp.info.grade);

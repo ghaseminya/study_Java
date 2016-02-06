@@ -50,7 +50,8 @@ class GenericsEx<T>{
 //public class GenericsEx02 {
 //
 //	public static void main(String[] args){
-//		
+//
+//		//자료형 타입 미지정하여 객체 생성
 //		GenericsEx t = new GenericsEx();
 //		
 //		String[] aStr ={"가", "나", "다", "라", "마", "바", "사"};
