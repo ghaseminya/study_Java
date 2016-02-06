@@ -1,21 +1,20 @@
-/* Button 생성 - layout 미사용
- * 
- * import 
- * Frame 상속
- * 생성자 설정
- * 객체 생성
- * 
- * Button 추가
- * layout미사용지정	//setLayout(null)
- * 
- * button의 좌표지정(x, y 위치 지정)
- * 
- * --------------------------------------
- * 컴포넌트를 많이 쓸경우 일일이 사이즈와 좌표지정해야 되는 문제 발생
- * 
- */
-
 package com.awt02.component;
+/* Button 생성 - layout 미사용
+
+import 
+Frame 상속
+생성자 설정
+객체 생성
+
+Button 추가
+layout미사용지정	//setLayout(null)
+
+button의 좌표지정(x, y 위치 지정)
+
+--------------------------------------
+layout 미사용시 컴포넌트를 많이 쓸 경우 일일이 사이즈와 좌표 지정해야 되는 문제 발생
+
+*/
 
 import java.awt.Frame;
 import java.awt.Button;
