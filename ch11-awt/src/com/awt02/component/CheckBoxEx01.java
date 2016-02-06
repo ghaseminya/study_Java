@@ -39,7 +39,7 @@ public class CheckBoxEx01 extends Frame{
 		Checkbox cb4 = new Checkbox("Checkbox 4", true);
 		cbt.add(cb4);
 
-		//pack() : 프레임이 포함하는 컴포넌트들을 모두 표시할 수  있을 정도로 프레임의 크기를 자동으로 맞추는 메소드
+		//pack() : 프레임이 포함하는 컴포넌트들을 모두 표시할 수  있을 정도로 프레임의 크기를 자동으로 맞춰주는 메소드
 		cbt.pack();
 		cbt.setVisible(true);       
 	}

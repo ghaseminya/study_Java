@@ -1,4 +1,15 @@
 package com.awt02.component;
+/*
+//레이블 생성
+
+
+Label 
+	• 사각형의 영역에 문자열을 표시할 때 사용하는 컴포넌트
+	• 레이블은 경계선이 없고 특별한 상태를 가지지도 않는 컨트롤
+	• 레이블을 컨테이너에 포함시키게 되면 레이블의 문자만 화면에 표시됩니다.
+	• 레이블의 문자열은 좌, 우, 중앙으로 정렬시킬 수 있습니다.
+
+*/
 
 import java.awt.Color;
 import java.awt.FlowLayout;

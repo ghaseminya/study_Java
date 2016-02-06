@@ -1,4 +1,14 @@
 package com.awt03.menu;
+/*
+
+
+MenuComponent 
+	• 사용자가 항목을 선택하여 항목에 따른 변화가 일어날 수 있도록 구현한 클래스
+	• 메뉴는 보통 최상위 레벨의 윈도우 타이틀바 아래에 존재하는 것으로 
+	사용자가 프로그램의 기능을 선택할 수 있도록 해주는 기능을 가지고 있는 컴포넌트
+	• 메뉴의 구성은 MeunBar, Menu, MenuItem으로 구성
+
+*/
 
 import java.awt.CheckboxMenuItem;
 import java.awt.Frame;

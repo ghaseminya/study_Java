@@ -1,4 +1,22 @@
 package com.awt02.component;
+/*
+//다양한 형태의 스크롤바 생성하기
+
+Scrollbar
+스크롤바를 만들 때 사용
+
+
+스크롤바 생성 형식
+Scrollbar(스크롤바표현방식,현재값,막대가로길이,최소값,최대값)
+
+
+스크롤 표현방식
+구분			스크롤 표현방식
+스평 스크롤바		Scrollbar.HORIZONTAL
+수직 스크롤바		Scrollbar.VERTICAL
+
+
+*/
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -17,13 +35,12 @@ public class ScrollbarEx01 extends Frame{
 		panel1.setLayout(new GridLayout(2, 2));
 
 		//스크롤바 생성
-		
 		Scrollbar sc1 = new Scrollbar();
 		Scrollbar sc2 = new Scrollbar(Scrollbar.VERTICAL);
 		sc1.setValues(50, 20, 0, 100);
 
 		panel1.add(new Label("Level"));
-		panel1.add(new Label("Pressure"));
+		panel1.add(new Label("Stage"));
 		panel1.add(sc1);
 		panel1.add(sc2);
 		panel1.setBackground(Color.orange);
@@ -35,7 +52,7 @@ public class ScrollbarEx01 extends Frame{
 		//Scrollbar(수직수평여부, 초기값, 스크롤단추두께, 최소값, 최대값)
 		Scrollbar sc3 = new Scrollbar(Scrollbar.HORIZONTAL, 0, 10, 0, 100);
 		Scrollbar sc4 = new Scrollbar(Scrollbar.HORIZONTAL, 50, 30, 0, 100);
-		panel2.add(new Label("OP time"));
+		panel2.add(new Label("Speed"));
 		panel2.add(sc3);
 		panel2.add(new Label("Voltage"));
 		panel2.add(sc4);
@@ -77,5 +94,4 @@ public class ScrollbarEx01 extends Frame{
 		new ScrollbarEx01();
 
 	}
-
 }
