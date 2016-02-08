@@ -1,3 +1,4 @@
+package com.buffered;
 /*
 BufferedReader 클래스를 사용하여 콘솔에서 문자열을 입력 받아 화면에 출력하는 프로그램
 
@@ -5,7 +6,7 @@ BufferedReader 클래스를 사용하여 콘솔에서 문자열을 입력 받아
 영어로 테스트
 
 */
-package com.buffered;
+
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
