@@ -1,5 +1,6 @@
+package com.basic;
 /*
-2개의 쓰레드 생성하기 - Thread 클래스를 상속 받아 run()메소드를 오버라이드하는 방법
+//2개의 쓰레드 생성하기 - Thread 클래스를 상속 받아 run()메소드를 오버라이드하는 방법
 출력 순서는 자바가상머신에 의해 결정되어 집니다. 
 두 개의 스레드가 번갈아가며 동시에 실행되고 있으며 2개의 스레드가 번갈아 가며 작업시간을 할당 받고 있습니다.
 
@@ -16,7 +17,7 @@ try{
 }
 
 */
-package com.basic;
+
 
 //Thread 클래스를 상속
 public class ThreadEx15 extends Thread{
@@ -27,8 +28,6 @@ public class ThreadEx15 extends Thread{
 		//생성자에 의해 넘어온 문자열을 멤버변수에 저장
 		tname = name;
 	}
-	
-	
 
 	@Override
 	public void run() {
@@ -50,12 +49,21 @@ public class ThreadEx15 extends Thread{
 
 
 	public static void main(String[] args) {		
-		//4) 스레드 객체 생성
+		//스레드 객체 생성
 		ThreadEx15 td1 = new ThreadEx15("Thread1");
 		ThreadEx15 td2 = new ThreadEx15("Thread2");
-		//td.run(); 	//순차수행
-		//5) start(); 호출
-		td1.start(); 	//start()메소드가 호출되면 쓰레드  생성되고, 생성된 쓰레드는 run 메소드를 호출
+
+		//start(); 호출
+		td1.start(); //start()메소드가 호출되면 쓰레드  생성되고, 생성된 쓰레드는 run 메소드를 호출
 		td2.start();
 	}
 }
+
+/*//출력결과
+Thread2
+Thread1
+Thread2
+Thread1
+Thread2
+
+*/

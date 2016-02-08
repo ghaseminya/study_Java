@@ -1,12 +1,28 @@
+package com.basic;
 /*
 멤버변수를 통한 Thread의 우선순위 지정
 
---------------------------------------------------------------------------
+//----------------------------------------------------
 실행결과에서 보이듯이 쓰레드의 실행시간은 우선순위의 비율대로 나뉘어져 실행되지 않습니다. 
 높은 우선순위의 쓰레드가 종료되어야 낮은 우선순위의 쓰레드가 실행됩니다.
 
 */
-package com.basic;
+
+
+class ThreadPriority extends Thread {
+	String message;
+	
+	public ThreadPriority(String str, int priority) {
+		message=str;
+		setPriority(priority);
+	}
+	public void run() {
+		for(int i=0; i<10; i++)
+		//for(int i=0; i<10000; i++)
+			System.out.println(message+"("+getPriority()+")");
+	}	
+}
+
 
 public class ThreadEx08 {
 
@@ -26,16 +42,36 @@ public class ThreadEx08 {
 }
 
 
-class ThreadPriority extends Thread {
-	String message;
-	
-	public ThreadPriority(String str, int priority) {
-		message=str;
-		setPriority(priority);
-	}
-	public void run() {
-		for(int i=0; i<10; i++)
-		//for(int i=0; i<10000; i++)
-			System.out.println(message+"("+getPriority()+")");
-	}	
-}
+/*
+First(10)
+Third(1)
+Second(5)
+Third(1)
+First(10)
+Third(1)
+Third(1)
+Third(1)
+Second(5)
+Second(5)
+Second(5)
+Second(5)
+Second(5)
+Second(5)
+Second(5)
+Third(1)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+Third(1)
+Second(5)
+Second(5)
+Third(1)
+Third(1)
+Third(1)
+
+*/

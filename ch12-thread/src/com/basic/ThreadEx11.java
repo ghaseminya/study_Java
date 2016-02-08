@@ -1,40 +1,49 @@
+package com.basic;
 /*
 synchronized 기반 동기화 메소드
-
-
 
 synchronized 선언으로 인해서 
 up(), down() 메소드는 스레드에 안전한 함수가 됩니다.
 
- */
-package com.basic;
+Step by Step
+TODO 1: up(), down() 메소드 
+TODO 2: up(), down() 메소드에 synchronized 선언하기 
 
+//----------------------------------------
 
-public class ThreadEx11 {
+동기화 방법
+*	• 메서드의 동기화 방법(synchronized기반 동기화 메소드)
+	• 특정 블록의 동기화 방법(synchronized기반 동기화 블록)
 
-	public static void main(String[] args) {
+//----------------------------------------
 
-		SharedData data = new SharedData();
-		UpThread t = new UpThread(data, "UP Thread");
-		DownThread t2 = new DownThread(data, "Down Thread");
+메서드의 동기화 방법(synchronized기반 동기화 메소드)
+	• synchronized 선언으로 인해서 synchronizedMethod메소드는 쓰레드에 안전한 함수가 됩니다
+	• 그러나 엄청난 성능의 감소를 동반합니다. 그렇기 때문에 위 예제와 같은 메소드의 빈번한 호출은 성능에 문제가 될 수 있습니다.
 
-		t.start();
-		t2.start();
-	}
-
+접근지정자 synchronized 리턴타입 메소드명( ) {  
 }
+public synchronized void synchronizedMethod(){
+        //임계영역 코딩
+}
+
+*/
+
 
 class SharedData{
 	int data;
 
 	//동기화 메소드의 선언
-	public synchronized void up (String name){
+	public void up (String name){
+//	public synchronized void up (String name){
 		System.out.print( name +": "+ data );
 		data++;
 		System.out.println( "를 "+ data +"로 증가시킴");
 	}
+	
 	//동기화 메소드의 선언
-	public synchronized void down (String name){
+	public void down (String name){
+//	public synchronized void down (String name){
 		System.out.print( name +": "+ data );
 		data--;
 		System.out.println( "를 "+ data +"로 감소시킴");
@@ -45,10 +54,12 @@ class UpThread extends Thread{
 
 	SharedData data;
 	String name;
+	
 	public UpThread(SharedData data, String name ){
 		this.data = data;
 		this.name = name;
 	}
+	
 	public void run(){
 
 		for(int i=0; i < 4; i++ ){	
@@ -65,10 +76,12 @@ class DownThread extends Thread{
 
 	SharedData data;
 	String name;
+	
 	public DownThread(SharedData data, String name ){
 		this.data = data;
 		this.name = name;
 	}
+	
 	public void run(){
 
 		for(int i=0; i < 4; i++ ){
@@ -78,5 +91,17 @@ class DownThread extends Thread{
 			data.down(name);
 		}
 	}
+}
 
+public class ThreadEx11 {
+
+	public static void main(String[] args) {
+
+		SharedData data = new SharedData();
+		UpThread t = new UpThread(data, "UP Thread");
+		DownThread t2 = new DownThread(data, "Down Thread");
+
+		t.start();
+		t2.start();
+	}
 }

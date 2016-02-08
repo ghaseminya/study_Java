@@ -1,13 +1,13 @@
+package com.basic;
 /*
 //Runnable 인터페이스를 구현해서 무작위로 화면에 원을 그리기
 
 */
-package com.basic;
+
 
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.Graphics;
-
 
 //Frame 클래스를 상속받았으므로 더 이상 다른 클래스를 상속받을 수 없습니다. 
 //그래서, 스레드 기능을 가진 Runnable 인터페이스를 구현하여 작성할 수 있습니다.
@@ -33,8 +33,9 @@ public class ThreadEx16 extends Frame implements Runnable{
 		while(true){
 			//난수 발생
 			//Math.random() 메소드는 static 메소드로서 0 과 1 사이의 무작위 실수를 double 형으로 반환합니다.
+					//0.0은 포함하지만 1.0은 포함하지 않습니다.  0.0<= math.random() <1.0
 			//x, y 는 int 형이므로 명시적 형변환이 필요합니다.
-			x = (int)(Math.random()*300);
+			x = (int)(Math.random()*300); //1~300사이의 랜덤한 숫자 획득
 			y = (int)(Math.random()*300);
 			
 			//0.1초마다 스레드를 중단시키면서 다시 그리기

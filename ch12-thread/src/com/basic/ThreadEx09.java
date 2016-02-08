@@ -1,3 +1,4 @@
+package com.basic;
 /*
 멤버변수를 통한 Thread의 우선순위 지정
 
@@ -6,24 +7,6 @@
 높은 우선순위의 쓰레드가 종료되어야 낮은 우선순위의 쓰레드가 실행됩니다.
 
 */
-package com.basic;
-
-public class ThreadEx09 {
-
-	public static void main(String[] args) {
-		ThreadPriority9 tr1 = new ThreadPriority9("First", Thread.MAX_PRIORITY);
-		ThreadPriority9 tr2 = new ThreadPriority9("Second", Thread.NORM_PRIORITY);
-		ThreadPriority9 tr3 = new ThreadPriority9("Third", Thread.MIN_PRIORITY);
-		
-		//Thread.MAX_PRIORITY	스레드가 가질 수 있는 최대 우선순위값(10)
-		//Thread.NORM_PRIORITY	스레드가 가질 수 있는 기본 우선순위(5)
-		//Thread.MIN_PRIORITY	스레드가 가질 수 있는 최소 우선순위(1)
-		
-		tr1.start();
-		tr2.start();
-		tr3.start();
-	}
-}
 
 class ThreadPriority9 extends Thread {
 	String message;
@@ -49,3 +32,55 @@ class ThreadPriority9 extends Thread {
 		}
 	}	
 }
+
+public class ThreadEx09 {
+
+	public static void main(String[] args) {
+		ThreadPriority9 tr1 = new ThreadPriority9("First", Thread.MAX_PRIORITY);
+		ThreadPriority9 tr2 = new ThreadPriority9("Second", Thread.NORM_PRIORITY);
+		ThreadPriority9 tr3 = new ThreadPriority9("Third", Thread.MIN_PRIORITY);
+		
+		//Thread.MAX_PRIORITY	스레드가 가질 수 있는 최대 우선순위값(10)
+		//Thread.NORM_PRIORITY	스레드가 가질 수 있는 기본 우선순위(5)
+		//Thread.MIN_PRIORITY	스레드가 가질 수 있는 최소 우선순위(1)
+		
+		tr1.start();
+		tr2.start();
+		tr3.start();
+	}
+}
+
+
+/*
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+First(10)
+Third(1)
+Second(5)
+Second(5)
+Second(5)
+Second(5)
+Third(1)
+Second(5)
+Second(5)
+Third(1)
+Second(5)
+Third(1)
+Third(1)
+Third(1)
+Third(1)
+Third(1)
+Third(1)
+Second(5)
+Second(5)
+Second(5)
+Third(1)
+
+*/
