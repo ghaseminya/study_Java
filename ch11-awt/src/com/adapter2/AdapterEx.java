@@ -1,22 +1,27 @@
-/* Adapter Class - 내부 클래스 생성하여 이벤트 처리
- *  
- * 
- * 멤버 내부 클래스 생성 - KeyAdapter 클래스를 상속하는
- * 이벤트 리스너 연결 - KeyEvent
- * @Override 	public void keyTyped(KeyEvent e){}
- * 
- * 멤버 내부 클래스 생성 - WindowAdapet클래스를 상속하는
- * 이벤트 리스너 연결 - WindowEvent
- * @Override	public void windowClosing(WindowEvent e){}
- *  * 
- * ----------------------------------------------------------------------------------------
- * 외부 클래스를 내부 클래스로 정의하여 멤버변수를 바로 호출할 수 있도록 하여 코드 길이를 줄여봅니다.
- * ----------------------------------------------------------------------------------------
-
- */
-
 package com.adapter2;
+/*
+//Adapter Class - 내부 클래스 생성하여 이벤트 처리
 
+
+[작업단계]
+멤버 내부 클래스 생성 - KeyAdapter 클래스를 상속하는
+이벤트 리스너 연결 - KeyEvent
+@Override 	public void keyTyped(KeyEvent e){}
+
+멤버 내부 클래스 생성 - WindowAdapet클래스를 상속하는
+이벤트 리스너 연결 - WindowEvent
+@Override	public void windowClosing(WindowEvent e){}
+ * 
+
+//----------------------------------------------
+//외부 클래스를 내부 클래스로 정의하여 멤버변수를 바로 호출할 수 있도록 하여 코드 길이를 줄여봅니다.
+처리방식 비교하기
+com.adapter1\AdapterEx.java	외부 클래스를 이용하여 이벤트 처리
+*com.adapter2\AdapterEx.java	내부 클래스 생성하여 이벤트 처리
+com.adapter3\AdapterEx.java	익명 내부 클래스 생성하여 이벤트 처리
+
+
+*/
 
 import java.awt.Frame;
 import java.awt.Button;
@@ -38,7 +43,6 @@ public class AdapterEx extends Frame implements ActionListener{
 	TextField tf;
 	TextArea ta;
 	Button bClear, bExit;
-
 	
 	public AdapterEx(){
 		//Frame 제목 설정
@@ -119,8 +123,8 @@ public class AdapterEx extends Frame implements ActionListener{
 		}		
 	}	
 	
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new AdapterEx();
 	}
 }

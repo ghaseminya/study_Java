@@ -1,8 +1,16 @@
+package com.awt03.event;
 /*
 //스크롤 이벤트
 
+
+AdjustmentEvent
+스크롤바를 좌우로 또는 상하로 움직여 스크롤바의 상태가 변화될때 발생하는 이벤트
+
+
+AdjustmentListener
+AdjustmentEvent를 처리하는 이벤트 리스너
+
 */
-package com.awt03.event;
 
 import java.awt.BorderLayout;
 import java.awt.Frame;
@@ -50,5 +58,4 @@ public class AdjustmentEventEx01 extends Frame{
 		ae.setSize(300, 200);
 		ae.setVisible(true);
 	}
-
 }

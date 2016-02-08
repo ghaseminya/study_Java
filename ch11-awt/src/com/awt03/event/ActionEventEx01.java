@@ -1,5 +1,6 @@
+package com.awt03.event;
 /*
-이벤트 처리 3단계 이해하기
+이벤트 처리 3단계 이해하기 or 4단계
 
 [컴포넌트 이벤트 처리 3단계]
 1단계	: 이벤트 소스 결정	
@@ -15,6 +16,10 @@
 		• XXXX부분은 해당 컴포넌트에 붙일 수 있는 리스너 이름을 의미합니다. 
 		• 예) 버튼에 ActionEvent을 처리하기 위하여 버튼에다가 addActionListener를 붙이는 경우
 
+//TODO 4.이벤트 핸들러 내용 구현
+ * 리스너의 추상메소드 구체화
+ * 실제 이벤트 발생시 수행되는 부분
+
 
 [이벤트 처리 작업 단계]
 TODO 1: 이벤트 소스 결정
@@ -25,6 +30,8 @@ ActionEvent처리를 위한 이벤트 핸들러 클래스 작성(내부 클래�
 
 TODO 3: 이벤트 소스와 이벤트 리스너 연결
 Button와 ButtonHandler를 연결
+
+//TODO 4.이벤트 핸들러 내용 구현
 
 
 
@@ -51,7 +58,7 @@ btn.addActionListener(btnHandler);
 btn.addActionListener(new BtnHandler()); 
 
 */
-package com.awt03.event;
+
 
 import java.awt.Button;
 import java.awt.FlowLayout;
@@ -84,10 +91,13 @@ public class ActionEventEx01 extends Frame{
 	//ActionListener 를 구현하여 TfHandler 클래스를 생성
 	public class ButtonHandler implements ActionListener {
 
+		//TODO 4.이벤트 핸들러 내용 구현
 		//actionPerformed() 메소드를 반드시 작성해야 한다. 인자도 반드시 이와 똑 같이 작성해야 합니다. 
 		//이러한 내용은 ActionLIstener 인터페이스에 이미 정의되어 있습니다.
 		@Override
-		public void actionPerformed(ActionEvent e) { //ActionEvent: Button이 눌려졌을 때 발생되는 이벤트
+		public void actionPerformed(ActionEvent e) { 
+			//ActionEvent: Button이 눌려졌을 때 발생되는 이벤트
+			
 			System.out.println("버튼이 클릭되었습니다.");
 		}
 	}

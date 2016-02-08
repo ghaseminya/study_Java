@@ -1,4 +1,13 @@
 package com.awt03.event;
+/*
+//리스트의 특정 항목 선택시 해당 항목을 출력하는 프로그램
+
+ItemEvent
+체크박스, 리스트, 초이스 컴포넌트에서 항목을 선택되거나 선택이 해제 되었을 때 발생하는 이벤트 
+
+ItemListener
+ItemEvent를 처리하는 이벤트 리스너
+*/
 
 import java.awt.FlowLayout;
 import java.awt.Frame;

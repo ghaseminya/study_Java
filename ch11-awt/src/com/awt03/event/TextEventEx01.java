@@ -1,31 +1,39 @@
-/* TextEvent
- * 
- * 
- * import
- * 생성자 생성
- * Frame상속받은 객체생성
- * 객체생성 (TextFiled, Button, TextArea)
- * 
- * Frame 타이틀
- * 초기 버튼상태 지정 - 비활성화 
- * Panel 객체 생성
- * Frame에 Panel, TextArea, Button을 순차적으로 등록
- * 
- * Frame의 위치, 넓이, 높이 설정
- * Frame의 노출여부 설정
- * implements ActionListener
- * Button과 이벤트 연결
- * @Override actionPerformed 구현
- * 
- * 
- * implements TextListener
- * TextField에 이벤트 연결
- * @Override textValueChanged 
- * 
- * 
- */
-
 package com.awt03.event;
+/*//TextEvent와 ActionEvent 동시 처리하기
+
+[작업단계]
+관련 클래스 import
+생성자 생성
+Frame상속받은 객체생성
+객체생성 (TextFiled, Button, TextArea)
+
+Frame 타이틀
+초기 버튼상태 지정 - 비활성화 
+Panel 객체 생성
+Frame에 Panel, TextArea, Button을 순차적으로 등록
+
+Frame의 위치, 넓이, 높이 설정
+Frame의 노출여부 설정
+implements ActionListener
+Button과 이벤트 연결
+@Override actionPerformed 구현
+
+implements TextListener
+TextField에 이벤트 연결
+@Override textValueChanged 
+
+//-------------------------
+
+TextEvent
+	• 텍스트 컴포넌트(TextField, TextArea)에서 키가 입력이 되어 내용이 바뀌었을 때 발생하는 이벤트
+	• 내용이 바뀔때마다 발생하므로 주의해서 사용해야 하며
+	• 사용자가 입력할때마다 처리해야 할 것이 있을 경우에 사용하는 이벤트
+
+
+TextListener
+TextEvent를 처리하는 이벤트 리스너
+
+*/
 
 import java.awt.Frame;
 import java.awt.Button;
@@ -93,9 +101,9 @@ public class TextEventEx01 extends Frame implements ActionListener, TextListener
 	@Override
 	public void textValueChanged(TextEvent e){
 		
-		if(tf.getText().equals("")){	//입력한 데이터가 없는 경우
+		if(tf.getText().equals("")){ //입력한 데이터가 없는 경우
 			input.setEnabled(false);					
-		}else{
+		}else{ //입력한 데이터가 있는 경우
 			input.setEnabled(true);	
 		}		
 	}

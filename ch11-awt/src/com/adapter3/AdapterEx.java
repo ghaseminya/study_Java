@@ -1,26 +1,35 @@
-/* Adapter Class - 익명 내부 클래스 생성하여 이벤트 처리
- *   
- *  
- * new KeyAdapter(){ } - 익명내부 클래스로 이벤트 리스너 연결 - KeyEvent 
- * @Override 	public void keyTyped(KeyEvent e){}
- *   
- * new WindowAdapter(){ } - 익명내부 클래스로 이벤트 리스너 연결- WindowEvent 
- * @Override	public void windowClosing(WindowEvent e){}
- *  
- * ----------------------------------------------------------------------------------------
- * 내부 클래스를 익명 내부 클래스로 변경하여 코드 길이를 줄여봅니다
- * ----------------------------------------------------------------------------------------
- * 익명 내부 클래스 사용시 이점
- * - 코드 파악 쉽다.
- * - 코드 길이 짧아진다.
- * 
- * Android에서 익명내부 클래스 많이 쓰이므로 사용 형태 및 구조 파악합니다.
- *  
- */
-
-
 package com.adapter3;
+/*
+//Adapter Class - 익명 내부 클래스 생성하여 이벤트 처리
+ 
+new KeyAdapter(){ } - 익명내부 클래스로 이벤트 리스너 연결 - KeyEvent 
+@Override 	public void keyTyped(KeyEvent e){}
+  
+new WindowAdapter(){ } - 익명내부 클래스로 이벤트 리스너 연결- WindowEvent 
+@Override	public void windowClosing(WindowEvent e){}
+ 
+//----------------------------------------------
+//내부 클래스를 익명 내부 클래스로 변경하여 코드 길이를 줄여봅니다
+처리방식 비교하기
+com.adapter1\AdapterEx.java	외부 클래스를 이용하여 이벤트 처리
+com.adapter2\AdapterEx.java	내부 클래스 생성하여 이벤트 처리
+*com.adapter3\AdapterEx.java	익명 내부 클래스 생성하여 이벤트 처리
+//----------------------------------------------
 
+익명 내부 클래스 사용시 이점
+
+특징
+	• 익명 클래스를 이용해서 클래스가 정의된 경우
+	• 코드 파악 쉽다.
+	• 코드 길이 짧아진다.
+	• local Inner클래스의 변형된 형태
+	• 일반적으로 인터페이스 또는 추상클래스를 구현하는 클래스로 자주 사용
+	• 일회성 처리를 수행할 경우 많이 사용합니다.
+	• Android에서 이벤트 처리시 익명 내부 클래스로 많이 사용합니다. 
+	그러므로 사용 형태 및 구조 잘 파악해 두시기 바랍니다.
+	
+
+*/
 
 import java.awt.Frame;
 import java.awt.Button;

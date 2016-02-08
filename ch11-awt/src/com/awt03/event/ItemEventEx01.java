@@ -1,10 +1,9 @@
-/* Item 컴포넌트
- * 
- * 
- */
-
-
 package com.awt03.event;
+/* Item 컴포넌트
+체크박스의 선택항목을 선택 또는 해제시 발생하는 이벤트를 통해 TextArea에 문자열을 추가해주는 프로그램
+
+
+*/
 
 import java.awt.Frame;
 import java.awt.Button;

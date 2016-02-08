@@ -1,10 +1,9 @@
-/*
-
-
-
-//위쪽의 리스트 항목을 더블 클릭하면 아래쪽의 텍스트 에어리어에 항목의 내용이 추가되는 프로그램
-*/
 package com.awt03.event;
+/*
+//위쪽의 리스트 항목을 더블 클릭하면 아래쪽의 TextArea에 선택된 항목의 문자열이 추가되는 프로그램
+
+*/
+
 
 import java.awt.BorderLayout;
 import java.awt.Frame;
@@ -51,7 +50,6 @@ public class ListEventEx02 extends Frame{
 		//처리하기 위한 이벤트는 ActionEvent 이며, 리스트의 특정 항목을 더블클릭할 때 발생합니다.
 		sports.addActionListener(new SportsHandler());
 		
-		
 	}
 	
 	//sports 변수의 ActionEvent 를 처리하기 위한 핸들러 클래스
@@ -63,7 +61,6 @@ public class ListEventEx02 extends Frame{
 			//다중텍스트상자에 리스트에서 더블클릭된 항목을 가져와 추가하기
 			ta.append(sports.getSelectedItem() + "\n");
 		}
-		
 	}
 	
 	public static void main(String[] args) {
@@ -71,5 +68,4 @@ public class ListEventEx02 extends Frame{
 		le.setSize(300, 200);
 		le.setVisible(true);
 	}
-
 }

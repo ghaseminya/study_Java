@@ -1,25 +1,38 @@
-/* Event 처리
- * 
- * Panel 객체 생성
- * Button객체 생성
- * TextArea 객체 생성
- * Button을  Panel에 등록
- * Frame에 Panel과 TextAreas등록
- * 
- * implements ActionListener	(ActionListener갇고 있는 이벤트 처리가능  ActionEventEx가 리스너의 기능을 갇게된다. )
- * @Override 	public void actionPerformed(ActionEvent ae){}	//ActinListern가 actionPerfored()호출ㄴ
- * 이벤트 소스와 이벤트 리스너 연결
- * 
- * ---------------------------------------
- * 이벤트 처리 순서 (Java와 Android 동일)
- * TODO 1.이벤트 소스 선정
- * TODO 2.이벤트 리스너를 구현
- * TODO 3.이벤트 소스와 이벤트 리스너 연결
- * TODO 4.이벤트 핸들러 내용 구현
- * 
- */
-
 package com.awt03.event;
+/* Event 처리
+//버튼 클릭시 발생하는 이벤트 처리하기
+
+Panel 객체 생성
+Button객체 생성(입력버튼, 종료버튼)
+TextArea 객체 생성
+Button을  Panel에 등록
+Frame에 Panel과 TextAreas등록
+
+//ActionListener갇고 있는 이벤트 처리가능  ActionEventEx02가 리스너의 기능을 갇게된다.
+implements ActionListener	
+//ActionListener가 actionPerfored()호출
+@Override 	public void actionPerformed(ActionEvent ae){}	
+//이벤트 소스와 이벤트 리스너 연결
+input.addActionListener(this);
+
+---------------------------------------
+이벤트 처리 순서 (Java와 Android 동일)
+TODO 1.이벤트 소스 선정
+TODO 2.이벤트 리스너를 구현
+TODO 3.이벤트 소스와 이벤트 리스너 연결
+TODO 4.이벤트 핸들러 내용 구현
+
+
+//-------------------------------------
+
+ActionEvent
+	• ActionEvent는 버튼이 눌렸거나, 리스트, 메뉴 등의 컴포넌트가 선택이 되었을 때 발생하는 이벤트
+	• 텍스트 필드에서 엔터를 쳤을 때도 발생되는 이벤트
+
+
+ActionListener
+ActionEvent를 처리하는 이벤트 리스너 
+*/
 
 import java.awt.Frame;
 import java.awt.Button;

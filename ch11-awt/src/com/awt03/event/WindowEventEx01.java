@@ -1,10 +1,8 @@
-/* WindowEvent
- * 
- * 종료버튼 클릭시 프로그램 종료
- * 
- */
-
 package com.awt03.event;
+/* WindowEvent
+종료버튼 클릭시 프로그램 종료
+
+*/
 
 import java.awt.Frame;
 import java.awt.Label;
@@ -33,6 +31,7 @@ public class WindowEventEx01 extends Frame implements WindowListener{
 		//Frame 노출여부 설정
 		setVisible(true);
 	}
+	
 	//추상 메소드 구현
 	//WindowListener인터페이스의 7개의 추상메소드를 모두 구현해야 됨
 	//프레임의 종료버튼 클릭시 프로그램 종료
@@ -53,8 +52,8 @@ public class WindowEventEx01 extends Frame implements WindowListener{
 	@Override
 	public void windowDeiconified(WindowEvent e){}	
 
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new WindowEventEx01();
 	}
 }

@@ -1,10 +1,10 @@
+package com.awt03.event;
 /* Event 처리
 텍스트 필드에서 문자열 입력 후 엔터키를 눌렀을 때 
 ActionEvent가 발생되어 문자열을 TextArea에 추가하는 프로그램
  
  */
 
-package com.awt03.event;
 
 import java.awt.Frame;
 import java.awt.Button;

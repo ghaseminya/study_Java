@@ -1,49 +1,47 @@
-/* Adapter Class - 외부 클래스를 이용하여 이벤트 처리
- * 
- * 
- * 필요한 자원 import
- * 
- * Frame 제목 설정 
- * Panel 생성
- * Button 생성
- * Panel에 컨트롤 추가
- * Frame에 각 Panel을 BorderLayour영역에 등록
- * Frame의 위치, 넓이, 높이 설정
- * Frame 노출여부 설정
- * 
- * 
- * implements ActionListener
- * 이벤트 리스너 연결 - Button의 이벤트
- * @Override 	public void actionPerformed(ActionEvent e){}
- * 
- * 별도의 클래스 생성 - KeyAdapter 클래스를 상속하는
- * 이벤트 리스너 연결 - KeyEvent
- * @Override 	public void keyTyped(KeyEvent e){}
- * 
- * 별도의 클래스 생성 - WindowAdapet클래스를상속하는
- * 이벤트 리스너 연결 - WindowEvent
- * @Override	public void windowClosing(WindowEvent e){}
- * 
- * 
- * ----------------------------------------------------------------------------------------
- * Frame이 상속되어 있어서 Adapter클래스를 상속하지 하지 못한다. 자바는 단일 상속만 지원하므로
- * 별도의 클래스에서 상속받아서 이벤트리스너를 연결해 주어야 합니다.
- * 그래서, 모든 이벤트 핸들러를 구현할 필요없음
- * 
- * 
- * 클래스 다중상속 불가, 단일상속
- * 인터페이스 다중상속 지원
- * 
- * 
- *  필요한 자원 import
- *  화면구성
- *  이벤트 처리
- *  - adapter클래스를 별도의 클래스에 상속받아
- *  - 이벤트리스너에 연결시 객체 생성하여 필요인자넘겨주면서 생성함
- *   
- */
-
 package com.adapter1;
+/*
+//Adapter Class - 외부 클래스를 이용하여 이벤트 처리
+adapter클래스를 별도의 클래스에 상속받아 정의 (KeyAdapter, WindowAdapter)하고
+이벤트리스너에 연결시 객체 생성하여 필요인자넘겨주면서 생성해 줍니다.
+
+
+[작업단계]
+필요한 자원 import
+Frame 제목 설정 
+Panel 생성
+Button 생성
+Panel에 컨트롤 추가
+Frame에 각 Panel을 BorderLayour영역에 등록
+Frame의 위치, 넓이, 높이 설정
+Frame 노출여부 설정
+
+implements ActionListener
+이벤트 리스너 연결 - Button의 이벤트
+@Override 	public void actionPerformed(ActionEvent e){}
+
+별도의 클래스 생성 - KeyAdapter 클래스를 상속하는
+이벤트 리스너 연결 - KeyEvent
+@Override 	public void keyTyped(KeyEvent e){}
+
+별도의 클래스 생성 - WindowAdapet클래스를상속하는
+이벤트 리스너 연결 - WindowEvent
+@Override	public void windowClosing(WindowEvent e){}
+
+
+//----------------------------------------------
+//외부 클래스를 이용하여 이벤트 처리
+처리방식 비교하기
+*com.adapter1\AdapterEx.java	외부 클래스를 이용하여 이벤트 처리
+com.adapter2\AdapterEx.java	내부 클래스 생성하여 이벤트 처리
+com.adapter3\AdapterEx.java	익명 내부 클래스 생성하여 이벤트 처리
+
+//----------------------------------------------
+Frame이 상속되어 있어서 Adapter클래스를 상속하지 하지 못합니다. 
+자바는 단일 상속만 지원하므로 별도의 클래스에서 Adapter클래스를 상속받아서 구현 한 후 이벤트리스너에 연결해 주어야 합니다.
+그래서, Adapter클래스 사용으로 모든 이벤트 핸들러를 구현할 필요없음
+(클래스 다중상속 불가, 단일상속 / 인터페이스 다중상속 지원)
+
+*/
 
 import java.awt.Frame;
 import java.awt.Button;
@@ -158,7 +156,7 @@ class KeyEventHandlers extends KeyAdapter{
 	}	
 }
 
-//별도의 클래스 생성 - WindowAdapet클래스를상속하는
+//별도의 클래스 생성 - WindowAdapter클래스를상속하는
 class WindowEventHandlers extends WindowAdapter{
 	//종료버튼 클릭시 프로그램 종료
 	@Override

@@ -1,18 +1,26 @@
-/* KeyEvent
- *  
- * 방향키 입력시 TextArea에 키입력 출력하기
- * 
- * TextArea 객체 생성
- * Frame에 TextArea 등록(Frame전체에 TextArea가 위치하게 됩니다)
- * implements KeyListener
- * TextArea에 이벤트리스트 연결
- * 추상 메소드 구현
- * Frame 위치, 넓이, 높이 설정
- * Frame 노출 여부 설정
- * 
- */
-
 package com.awt03.event;
+/*
+방향키 입력시 TextArea에 어떤 키를 눌렀는지 출력하기
+
+[작업단계]
+TextArea 객체 생성
+Frame에 TextArea 등록(Frame전체에 TextArea가 위치하게 됩니다)
+implements KeyListener
+TextArea에 이벤트리스트 연결
+추상 메소드 구현
+Frame 위치, 넓이, 높이 설정
+Frame 노출 여부 설정
+
+//----------------------
+
+KeyEvent
+사용자가 키보드와 같은 입력장치를 통해서 키 입력을 했을 때 발생하는 이벤트
+
+
+KeyListener
+KeyEvent를 처리하는 이벤트 리스너
+
+*/
 
 import java.awt.Frame;
 import java.awt.TextArea;
@@ -40,6 +48,7 @@ public class KeyEventEx01 extends Frame implements KeyListener{
 		//Frame 노출 여부 설정
 		setVisible(true);		
 	}
+	
 	// 추상 메소드 구현 (키가 눌렸을 때)
 	@Override
 	public void keyPressed(KeyEvent e){
@@ -67,6 +76,7 @@ public class KeyEventEx01 extends Frame implements KeyListener{
 	@Override
 	public void keyReleased(KeyEvent e){			
 	}	
+	
 	
 	public static void main(String[] args) {
 		// 객체 생성

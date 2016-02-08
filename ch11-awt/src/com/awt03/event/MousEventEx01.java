@@ -1,9 +1,27 @@
-/* MouseEvent
- * 
- * 컴포넌트가 움직이게 할려면 layout을 비활성화 시켜야 합니다.
- */
-
 package com.awt03.event;
+/* MouseMotionEvent 
+//포인터 좌표 출력하기
+//윈도우 안에서 마우스 버튼을 클릭할  때마다 이벤트를 발생시켜 클릭 시점의 마우스 포인터  X, Y좌표를 콘솔에 출력시키는 프로그램
+	• 좌표의 범위는 윈도우의 크기와 동일합니다.
+	• 좌표의 범위는 윈도우의 크기와 동일합니다.
+	• MouseMotionListener를 사용하여 마우스가 움직일 때마다 콘솔에 현재 마우스 좌표를 출력하는 프로그램
+
+
+MouseMotionEvent
+	• MouseMotionEvent는 컴포넌트의 영역 내에서 마우스를 움직였을 때 발생하는 이벤트로 자체적으로 처리해 주는 클래스가 존재하지 않으며 MouseEvent 클래스를 그대로 사용합니다.
+	• MouseMotionEvent는 마우스가 이동할 때마다 발생하기때문에 필요한 경우에만 이벤트를 처리하는 것이 좋습니다.  
+
+
+MouseMotionListener
+	• 마우스와 관련 있는 이벤트 중 MouseMotionEvent를 처리하는 이벤트 리스너
+
+
+java.awt.Point
+	• Point 클래스는 좌표 상의 어떤 위치를 나타내는데 사용
+	• 각종 프레임이나 다른 컴퓨넌트의 위치를 설정할 때 사용
+	• x와 y좌표값을 저장하기 위한 멤버변수를 가지고 있습니다.
+	
+*/
 
 import java.awt.Frame;
 import java.awt.Label;
@@ -28,7 +46,7 @@ public class MousEventEx01 extends Frame implements ActionListener, MouseMotionL
 		move.setForeground(Color.WHITE);
 		move.setBackground(Color.RED);
 		
-		//컴포넌트가 이벤트 발생이 이동하게 처리하려면 레이아웃을 사용하지 말아야 합니다.
+		//컴포넌트가 이벤트 발생시 이동하게 처리하려면 레이아웃을 사용하지 말아야 합니다.
 		//Layout을 비활성화 합니다.
 		setLayout(null);
 		
@@ -52,6 +70,7 @@ public class MousEventEx01 extends Frame implements ActionListener, MouseMotionL
 		//Frame 노출 여부 설정
 		setVisible(true);
 	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e){
 		System.exit(0);
@@ -59,7 +78,7 @@ public class MousEventEx01 extends Frame implements ActionListener, MouseMotionL
 	
 	@Override
 	public void mouseMoved(MouseEvent e){
-		//마우스 x, y좌표를 Point 저장후
+		//마우스 x, y좌표를 Point 객체에 저장후
 		Point p = e.getPoint();
 		
 		//저장된 마우스 x,y좌표를 Label의 x,y좌표에 넣어줍니다.
@@ -73,5 +92,4 @@ public class MousEventEx01 extends Frame implements ActionListener, MouseMotionL
 		new MousEventEx01();
 
 	}
-
 }
