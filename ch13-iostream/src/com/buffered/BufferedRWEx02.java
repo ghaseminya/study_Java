@@ -1,14 +1,15 @@
-/* BufferedWriter
-BufferedWriter 클래스를 이용하여 파일 생성 및 내용 추가하기
-
- * import
- * 객체 생성 
- * 저장이 버퍼에 저장됨
- * 줄바꿈 / 메서드를 통해 줄바꿈
- * 자원관리
- * 
- */
 package com.buffered;
+/* BufferedWriter
+//BufferedWriter 클래스를 이용하여 파일 생성 및 내용 추가하기
+
+import
+객체 생성 
+저장이 버퍼에 저장됨
+줄바꿈 / 메서드를 통해 줄바꿈
+자원관리
+
+*/
+
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
