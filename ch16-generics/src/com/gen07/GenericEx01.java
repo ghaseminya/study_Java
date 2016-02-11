@@ -54,8 +54,18 @@ public class GenericEx01 {
       
       //레퍼클래스가 담고 있는 원래의 숫자를 기본테이터 타입으로 돌려줍니다.
       System.out.println(p1.id.intValue());
-      
       System.out.println(p1.info.position);
+      
+      
+      
+      Person<EmployeeInfo, Integer> p2 = 
+				new Person<EmployeeInfo, Integer>( 
+						new EmployeeInfo(20), new Integer(30));
+      //20출력
+      System.out.println(p2.info.position);
+      //30출력
+      System.out.println(p2.id.intValue());
+      
   }
 }
 
