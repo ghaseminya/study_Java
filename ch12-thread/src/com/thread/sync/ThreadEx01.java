@@ -1,20 +1,21 @@
+package com.thread.sync;
 /*
 //동기화 메소드를 가진 클래스
+//synchronized 로 동기화하기
 
 TODO : 실행 결과 확인
 두 개의 스레드가 번갈아 가며 동기화 메소드를 수행하고 있으며
 출력되고 있는 두 줄이 거의 동시에 1초 간격으로 출력이 되고 있습니다.
 
+
 File Info
-ThreadEx01.java	• 동기화 메소드를 가진 클래스
-ThreadEx02.java	• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
-				• ThreadEx01클래스의 plus()메소드 호출
-ThreadEx03.java	• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
-				• ThreadEx01클래스의 minus()메소드 호출
+*ThreadEx01.java	• 동기화 메소드를 가진 클래스
+ThreadEx02.java		• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
+					• ThreadEx01클래스의 plus()메소드 호출
+ThreadEx03.java		• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
+					• ThreadEx01클래스의 minus()메소드 호출
 
 */
-
-package com.thread.sync;
 
 public class ThreadEx01 {
 

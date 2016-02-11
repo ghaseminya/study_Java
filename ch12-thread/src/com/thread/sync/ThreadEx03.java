@@ -1,9 +1,18 @@
-
-//동기화 메소드에 접근하기 위해 만든 스레드 클래스
-//ThreadEx01클래스에서 사용하기 위한 클래스. 따라서, main() 메소드가 없습니다.
-//ThreadEx01클래스의 minus()메소드 호출
-
 package com.thread.sync;
+/*
+//동기화 메소드에 접근하기 위해 만든 스레드 클래스
+ThreadEx01클래스에서 사용하기 위한 클래스. 따라서, main() 메소드가 없습니다.
+ThreadEx01클래스의 minus()메소드 호출
+
+
+File Info
+ThreadEx01.java		• 동기화 메소드를 가진 클래스
+ThreadEx02.java		• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
+					• ThreadEx01클래스의 plus()메소드 호출
+*ThreadEx03.java	• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
+					• ThreadEx01클래스의 minus()메소드 호출
+
+*/
 
 public class ThreadEx03 extends Thread{
 
