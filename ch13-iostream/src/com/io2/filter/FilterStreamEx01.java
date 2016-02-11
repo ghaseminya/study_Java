@@ -8,7 +8,7 @@ DataOutputStream 클래스와 DataInputStream클래스는
 
 
 */
-package com.filter;
+package com.io2.filter;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

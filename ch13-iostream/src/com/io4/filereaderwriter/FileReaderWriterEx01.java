@@ -5,7 +5,7 @@
 출력결과
 지정된 수만큼 읽어오므로 뒤에 이상한 문자가 보일 수 있습니다.
 */
-package com.filereaderwriter;
+package com.io4.filereaderwriter;
 
 import java.io.FileReader;
 

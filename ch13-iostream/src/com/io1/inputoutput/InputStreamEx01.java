@@ -1,6 +1,14 @@
+package com.io1.inputoutput;
 /*
 InputStreamReader 클래스를 사용하여 문자열을 입력하고 엔터키를 누르면 바로 화면에 입력한 내용을 출력하는 프로그램
 
+
+
+InputStreamReader와 OutputStreamWriter
+InputStreamReader	바이트 입력 스트림 => 문자 입력 스트림
+OutputStreamWriter	바이트 출력 스트림 => 문자 출력 스트림
+
+//--------------------------------------------
 출력결과 (영어로 입력, 한글입력이 바이트문자로 이상하게 출력될 수 있습니다)
 java
 java
@@ -9,7 +17,7 @@ stream
 test
 test
 */
-package com.inputoutput;
+
 
 //java.io 패키지에는 자바 입출력 관련 클래스들이 모여 있습니다.
 import java.io.InputStreamReader;
@@ -48,7 +56,5 @@ public class InputStreamEx01 {
 		}
 		
 		System.out.println();
-		
 	}
-
 }

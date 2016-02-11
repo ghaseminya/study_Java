@@ -3,7 +3,7 @@
 FileWriter
 
 */
-package com.filereaderwriter;
+package com.io4.filereaderwriter;
 
 import java.io.FileWriter;
 import java.io.IOException;

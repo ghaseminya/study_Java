@@ -1,5 +1,6 @@
+package com.io1.inputoutput;
 /*
-표준 입출력
+//표준 입출력
 
 강의내용 
 	• 영문입력
@@ -11,7 +12,7 @@
 따라서 이방법은 저수준의 입력을 처리하는 방법입니다.
  
 */
-package com.inputoutput;
+
 
 import java.io.IOException;
 
@@ -36,5 +37,4 @@ public class StandardIOStreamEx01 {
 			e.printStackTrace();
 		}
 	}
-
 }

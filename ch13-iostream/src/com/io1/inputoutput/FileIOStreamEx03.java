@@ -1,3 +1,4 @@
+package com.io1.inputoutput;
 /*
 스트림 기반의 파일 입출력  (바이트 단위 복사)
 
@@ -5,7 +6,7 @@
 바이트 단위 복사(1바이트 씩 복사)가 수행됩니다.
 큰 파일 사이즈를 파일 복사할 경우 많은 시간이 걸릴 수 있습니다.
 */
-package com.inputoutput;
+
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

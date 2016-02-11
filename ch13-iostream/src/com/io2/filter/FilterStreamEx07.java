@@ -2,7 +2,7 @@
 파일 대상의 문자열 입력
 
 */
-package com.filter;
+package com.io2.filter;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

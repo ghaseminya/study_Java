@@ -8,7 +8,7 @@ BufferedOutputStream 클래스의 flush 메소드 호출을 통해서 버퍼링 
 
 
 */
-package com.filter;
+package com.io2.filter;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

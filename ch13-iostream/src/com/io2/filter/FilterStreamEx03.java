@@ -3,7 +3,7 @@
 -> 파일에 double형 데이터 저장 + 버퍼링
 
 */
-package com.filter;
+package com.io2.filter;
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;

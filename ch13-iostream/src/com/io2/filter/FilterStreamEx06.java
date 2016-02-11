@@ -2,7 +2,7 @@
 파일 대상의 문자열 출력
 
 */
-package com.filter;
+package com.io2.filter;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

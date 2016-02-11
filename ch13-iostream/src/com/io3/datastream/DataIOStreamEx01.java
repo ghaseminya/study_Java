@@ -3,7 +3,7 @@ DataOutputStream 클래스를 활용하여
 자바 기본 데이터형을 파일에 출력시키는 프로그램
 
 */
-package com.datastream;
+package com.io3.datastream;
 
 import java.io.DataOutputStream;
 import java.io.File;

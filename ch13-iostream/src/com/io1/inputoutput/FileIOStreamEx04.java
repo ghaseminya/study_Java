@@ -1,3 +1,4 @@
+package com.io1.inputoutput;
 /*
 
 바이트 단위 read & write 메소드를 대신해서 바이트 배열 단위의 메소드 호출 (속도 향상)
@@ -9,7 +10,7 @@ FileInputStreamEx02와의 가장 큰 차이점은 1KB 크기의 버퍼를 이용
 실제로 속도의 향상을 느낄 수 있습니다.
 
 */
-package com.inputoutput;
+
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -10,7 +10,7 @@ PrintWriter는 PrintStream을 대신할 수 있도록 정의된 클래스이며 
 
  */
 
-package com.filter;
+package com.io2.filter;
 
 import java.io.FileWriter;
 import java.io.IOException;
