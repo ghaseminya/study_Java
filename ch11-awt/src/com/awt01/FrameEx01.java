@@ -3,6 +3,13 @@ package com.awt01;
 //프레임 생성하기 1
 //AWT 사용 기본 구조
 
+
+GUI 프로그래밍(Graphic User Interface)
+	• GUI는 DOS(CUI방식)와 같은 방식의 텍스트 기반 운영체제가 아닌 그래픽(Graphic)을 이용하여 사용자와 프로그램 간의
+	 상호작용을 할 수 있도록 해주는 인터페이스를 의미
+	• 자바에서 이러한 그래픽 기반 프로그래밍을 지원하기 위해 나온 것이 바로 AWT
+
+
 AWT의 기본 개념
 	• AWT(Abstract Window Toolkit)는 
 	GUI 프로그래밍을 제작하기 위해 자바에서 제공하는 라이브러리를 모아놓은 것(GUI 환경을 구축하기 위한 자바 API)
@@ -15,9 +22,11 @@ AWT의 기본 개념
 	• 이러한 단점을 극복하기 위해 개발된 것이 JFC(Java Foundation Classes)입니다.
 
 
+
 JFC (Java Foundation Classe)
 	• JFC는 클래스 라이브러리 형태로 자바 프로그래밍 언어를 사용해 미리 작성해 놓은 코드 모음 (GUI 프로그래밍에 필요한 각종 툴킷을 모아놓은 것)
 	• GUI의 기능들을 구현할 수 있는 AWT, 스윙(Swing), 2D, Accessibiliy(접근성), Drag&Drop 등을 지원합니다.
+
 
 
 Container(컨테이너)
@@ -44,12 +53,14 @@ Container(컨테이너)
 
 Frame
 	• Window 클래스의 하위 클래스로 일반적인 응용프로그램에서 윈도우를 생성하기 위해 사용되는 클래스
-	• Frame 클래스의 상위 클래스인 Window 클래스는 타이틀, 메뉴 등이 지원되지 않기 때문에 일반적으로 사용하지 않고 Frame 클래스를 사용합니다 
-	• Frame 클래스는 기본적으로 경계선(Border), 타이틀, 메뉴, 시스템상자(최소화, 최대화, 종료 버튼) 등의 기능을 제공합니다
+	• Frame 클래스의 상위 클래스인 Window 클래스는 타이틀, 메뉴 등이 지원되지 않기 때문에 
+	일반적으로 사용하지 않고 Frame 클래스를 사용합니다 
+	• Frame 클래스는 기본적으로 경계선(Border), 타이틀, 메뉴, 시스템상자(최소화, 최대화, 종료 버튼) 
+	등의 기능을 제공합니다
 	• Frame은 다른 윈도우에 속해 있지 않은 윈도우(최상위 레벨 윈도우)
 	• 대부분의 윈도우 Application 에서 사용되며 윈도우 화면을 나타내는 클래스
-	• setSize(),  setBounds()메서드 등을 이용해서 Window의 크기를 설정한 후 setVisible(), show()메서드를 통해서 화면에 출력시킬 수 있습니다.
-
+	• setSize(),  setBounds()메서드 등을 이용해서 Window의 크기를 설정한 후 setVisible(), 
+	show()메서드를 통해서 화면에 출력시킬 수 있습니다.
 
 */
 

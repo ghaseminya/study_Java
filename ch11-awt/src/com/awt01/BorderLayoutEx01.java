@@ -20,7 +20,6 @@ BorderLayout.CENTER	중앙(Center)	기본값
 BorderLayout.EAST	동(East)		폭
 BorderLayout.SOUTH	남(South)	폭
 
-
 */
 
 import java.awt.Component;
@@ -34,7 +33,7 @@ public class BorderLayoutEx01 extends Frame{
 	
 	public BorderLayoutEx01(){
 		//Frame 설정
-		setTitle("BorderLay Test");
+		setTitle("BorderLayout Test");
 		setSize(300, 300);
 		//Frame에는 기본 레이아웃이 BorderLayout으로 지정되어 있어
 		//BorderLayout사용시 레이아웃 설정 생략가능
@@ -44,7 +43,7 @@ public class BorderLayoutEx01 extends Frame{
 		Panel pc = new Panel();
 		Panel pe = new Panel();		
 				
-		//Button 추가
+		//Button 생성
 		Button  btnEast= new Button("east");
 		Button  btnWest= new Button("west");
 		Button  btnSouth= new Button("south");
