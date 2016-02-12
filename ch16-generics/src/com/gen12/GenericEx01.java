@@ -45,9 +45,10 @@ class Person<T>{
 
 public class GenericEx01 {
 	public static void main(String[] args) {
-		Person p1 = new Person(new EmployeeInfo(10));
+		Person<EmployeeInfo> p1 = new Person(new EmployeeInfo(10));
+//		Person p2 = new Person(new EmployeeInfo(10));
 		
-		Person<String> p2 = new Person<String>("사장");
+		Person<String> p3 = new Person<String>("사장");
 	}
 }
 

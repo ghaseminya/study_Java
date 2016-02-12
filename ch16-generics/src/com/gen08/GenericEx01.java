@@ -27,10 +27,11 @@ public class GenericEx01 {
 		System.out.println(p1.id.intValue()); //20
 		System.out.println();
 
+		//제네릭은 생략 가능
 		//ei, id로 들어오는 값을 통해 명시적으로 지정하지 않아도 컴파일시 자동으로 해석하게 됩니다.
-		Person p2 = new Person(ei, id);
-		System.out.println(p1.info.position); //10
-		System.out.println(p1.id.intValue()); //20
+		Person<EmployeeInfo, Integer> p2 = new Person(ei, id);
+		System.out.println(p2.info.position); //10
+		System.out.println(p2.id.intValue()); //20
 	}
 }
 

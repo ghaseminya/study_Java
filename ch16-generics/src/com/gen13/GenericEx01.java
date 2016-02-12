@@ -21,6 +21,10 @@ public class GenericEx01 {
 	public static <T> void showArrayData(T[] arr) {
 		for(int i=0; i<arr.length; i++)
 			System.out.println(arr[i]);
+		
+//		for( String str: arr){
+//			System.out.println(str);
+//		}
 	}
 	
 	public static void main(String[] args) {

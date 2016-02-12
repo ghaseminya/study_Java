@@ -42,12 +42,14 @@ class Person<T extends Info>{
 }
 public class GenericEx01 {
 	public static void main(String[] args) {
-		//TODO 1: 제네릭 타입을 생략한 형태 
+		
+		//TODO 1: 위의 코드(제네릭 타입을 생략)를  명시적으로 정의한 코드
+		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(10));
+		
+		//TODO 2: 제네릭 타입을 생략한 형태 
 		//Info의 자식인 타입을 지정
 //		Person p1 = new Person(new EmployeeInfo(1));
 		
-		//TODO 2: 위의 코드(제네릭 타입을 생략)를  명시적으로 정의한 코드
-		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(10));
 		
 		System.out.println(p1.info.getInfo()); //10
 
