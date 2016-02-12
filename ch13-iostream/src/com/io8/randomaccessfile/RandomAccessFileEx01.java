@@ -2,7 +2,7 @@
 RandomAccessFile클래스의 인스턴스 생성 및 활용
 
 */
-package com.randomaccessfile;
+package com.io8.randomaccessfile;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

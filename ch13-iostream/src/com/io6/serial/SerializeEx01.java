@@ -2,7 +2,7 @@
 직렬화 연계
 
 */
-package com.serial;
+package com.io6.serial;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

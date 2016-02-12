@@ -6,7 +6,7 @@
 왜냐하면 실행환경 및 실행위치가 변경될 경우 나타날수 있는 문제점을 최소화할수 있기 때문입니다.
 
 */
-package com.File;
+package com.io7.file;
 
 import java.io.File;
 

@@ -1,3 +1,4 @@
+package com.io1.inputoutput;
 /* 
 FileInputSteam 영문 출력 - 파일정보를 한문자씩 읽은후 처리, 자원정리
   
@@ -6,10 +7,11 @@ FileInputSteam 영문 출력 - 파일정보를 한문자씩 읽은후 처리, �
  객체를 생성해서 접근
  객체를 생성한후 소멸을 못시키므로 파일연결후에도 파일연결가능상태가 계속 지속됨(이럴경우 부하가 발생할 수 있음)
  그래서, 객체와 파일과의 관계를 끊어 자원정리를 해줌
+
+
  
  */
 
-package com.io1.inputoutput;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

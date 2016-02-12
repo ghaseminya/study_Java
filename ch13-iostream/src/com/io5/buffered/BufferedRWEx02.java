@@ -1,4 +1,4 @@
-package com.buffered;
+package com.io5.buffered;
 /* BufferedWriter
 //BufferedWriter 클래스를 이용하여 파일 생성 및 내용 추가하기
 

@@ -7,7 +7,7 @@ RandomAccessFile클래스를 이용하여 파일로 저장하기
 생성된 파일 오픈시 한글 깨짐 확인 될 경우 인코딩을 EUC_KR으로 다시 오픈
 
 */
-package com.randomaccessfile;
+package com.io8.randomaccessfile;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

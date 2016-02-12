@@ -3,7 +3,7 @@ RamdomAccessFile 클래스를 사용하여 텍스트 파일의 내용을 읽어�
 
 
 */
-package com.randomaccessfile;
+package com.io8.randomaccessfile;
 
 import java.io.RandomAccessFile;
 

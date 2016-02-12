@@ -12,7 +12,7 @@
  
  */
 
-package com.File;
+package com.io7.file;
 
 import java.io.File;
 import java.io.IOException;

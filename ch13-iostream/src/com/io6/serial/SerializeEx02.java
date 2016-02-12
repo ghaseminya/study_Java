@@ -5,7 +5,7 @@
 transient로 선언된 멤버는 직렬화의 대상에서 제외됩니다.
 따라서 복원 시 자료형 별 디폴트 값(0, 0.0, null등)이 대신 저장되어 집니다.
 */
-package com.serial;
+package com.io6.serial;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
