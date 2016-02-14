@@ -19,7 +19,8 @@ public class JavaClientSocket {
 
 		try {
 			Socket socket = new Socket(host, port);
-			System.out.println("클라이언트 소켓이 생성되었습니다. 호스트 :" + host +", 포트 : " + port);
+			System.out.println("클라이언트 소켓이 생성되었습니다.");
+			System.out.println("호스트 :" + host +", 포트 : " + port);
 			
 			String output = "Hello form Client";
 			ObjectOutputStream outstream = new ObjectOutputStream(socket.getOutputStream());
