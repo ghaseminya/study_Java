@@ -44,7 +44,7 @@ public class ButtonEx01 extends Frame{
 		//버튼에 레이블 지정
 		button2.setLabel("Button2");
 		
-		//현재 프레임에 버튼을 부착하는 
+		//현재 프레임에 버튼을 부착
 		add(button1);
 		add(button2);
 		

@@ -1,5 +1,8 @@
 package com.awt02.component;
-/*//Checkbox를 그룹으로 묶어 RadioButton 형태로 활용
+/*
+//Checkbox를 그룹으로 묶어 RadioButton 형태로 활용
+
+Checkbox 
 	• 여러 개의 체크박스를 묶어 하나의 그룹으로 만들면 
 	그룹내에서는 하나의 선택 값만 유지할 수 있는 라디오 버튼 형태로도 사용할 수 있는 컴포넌트
 	• 그룹으로 묶을 때는 CheckboxGroup 클래스를 사용
@@ -14,7 +17,7 @@ public class RadioButtonEx01 extends Frame{
 	
 	public static void main(String args[]) {
 		RadioButtonEx01 cbt = new RadioButtonEx01();
-        cbt.setTitle("Checkbox Test");
+        cbt.setTitle("RadioButton Test");
         cbt.setLayout(new FlowLayout());
 
         //체크 박스를 하나로 묶는 객체 생성

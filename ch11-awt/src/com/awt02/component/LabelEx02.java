@@ -3,8 +3,6 @@ package com.awt02.component;
 //레이블 생성방법 3가지
 //레이블 정렬
 
-
-
 */
 
 import java.awt.Frame;
@@ -19,7 +17,7 @@ public class LabelEx02 extends Frame{
 			System.out.println(" Left Alignment");
 			break;
 		case 1:
-			System.out.println(" Left Center");
+			System.out.println(" Center Alignment");
 			break;
 		case 2:
 			System.out.println(" Right Alignment");
@@ -62,7 +60,7 @@ public class LabelEx02 extends Frame{
 
 /*//출력결과
 Label 1 is  Left Alignment
-Label 2 is  Left Center
+Label 2 is  Center Alignment
 Label 3 is  Right Alignment
 
 */

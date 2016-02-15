@@ -28,7 +28,7 @@ public class ButtonEx03 extends Frame {
 		super("button Test 02");
 		
 		//크기 지정
-		setSize(300,  300);	//width, height			
+		setSize(300, 300);	//width, height			
 		
 		//Button 추가하기
 		Button b = new Button("확인");
