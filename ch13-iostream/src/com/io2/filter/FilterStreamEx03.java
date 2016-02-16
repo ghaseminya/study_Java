@@ -1,9 +1,10 @@
+package com.io2.filter;
 /*
 기본 자료형 데이터 입출력 + 버퍼 스트림
 -> 파일에 double형 데이터 저장 + 버퍼링
 
 */
-package com.io2.filter;
+
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;

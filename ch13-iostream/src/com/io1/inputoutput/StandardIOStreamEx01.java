@@ -29,9 +29,10 @@ public class StandardIOStreamEx01 {
 			while( (input=System.in.read()) != -1){ //abcdef우리나라
 				
 				// byte로 처리되기 때문에 출력을 위해서는 (char)로 형변환해주어야 합니다.
-				//abcd우리나라문자를 입력하면 1byte만을 읽기때문에 a문자를 아스키 코드값인 97값을 출력하고
+				// "abcd우리나라"문자를 입력하면 1byte만을 읽기때문에 a문자를 아스키 코드값인 97값을 출력하고
 				//(char)형변환하여야 정상적인 문자를 확인할 수 있습니다.
-				System.out.println("input: " + input + " ,(char)input: " + (char)input);
+				System.out.println("input: " + input + 
+						" ,(char)input: " + (char)input);
 			}
 		}catch(IOException e){
 			e.printStackTrace();

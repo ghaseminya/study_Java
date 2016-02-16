@@ -1,5 +1,7 @@
+package com.io1.inputoutput;
 /* 
-FileInputStream - 영문/한글 출력 - byte[]배열 이용, 자원정리
+FileInputStream - 영문/한글 출력
+byte[]배열 이용, 자원정리
 
 
 강의 내용
@@ -10,14 +12,9 @@ FileInputStream - 영문/한글 출력 - byte[]배열 이용, 자원정리
 
 
 -----------------------------------------------------------------------
-자바 외적인 요소랑 연동할 경우 자원정리
-객체를 생성해서 접근
-객체를 생성한후 소명을 못시키므로 파일연결후에도 파일연결가능상태가 계속 지속됨(이럴경우 부하가 발생할 수 있음)
-그래서, 객체와 파일과의 관계를 끊어 자원정리를 해줌
+
  
  */
-
-package com.io1.inputoutput;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -26,6 +23,7 @@ import java.io.IOException;
 
 public class FileIOStreamEx02 {
 	public static void main(String[] args){
+		
 		FileInputStream fis = null;
 		byte readArray[];
 		
@@ -41,11 +39,13 @@ public class FileIOStreamEx02 {
 			//내부적으로 loop
 			fis.read(readArray);
 			
-			//한 바이트씩 읽어들이기 때문에 아스키코드로 저장하게됨
-//			for(byte b : readArray){ System.out.print(b); System.out.println(); }
+			//한 바이트씩 읽어들이기 때문에 내부적으로 아스키코드로 저장되어있어 한바이트씩 출력할 경우 
+			//아스키코드로 출력됩니다. 
+//			for(byte b : readArray){ 
+//				System.out.print(b); System.out.println(); }
 			
-			//byte[]을 String으로 파싱
-			//내부적으로 2byte로 처리하게 됨
+			//byte[]을 String으로 파싱하면
+			//내부적으로 2byte로 처리하게 되어 정상적으로 문자열이 출력됩니다.
 			System.out.println(new String(readArray));			
 			
 		}catch(FileNotFoundException e){

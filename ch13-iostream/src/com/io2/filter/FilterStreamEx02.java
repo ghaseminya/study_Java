@@ -1,3 +1,4 @@
+package com.io2.filter;
 /*
 버퍼링 기능을 제공하는 필터 스트림
 BufferedInputStream, BufferedOutputStream클래스
@@ -8,7 +9,7 @@ BufferedOutputStream 클래스의 flush 메소드 호출을 통해서 버퍼링 
 
 
 */
-package com.io2.filter;
+
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
