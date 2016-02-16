@@ -1,5 +1,6 @@
 package com.awt03.event;
-/*//TextEvent와 ActionEvent 동시 처리하기
+/*
+//TextEvent와 ActionEvent 동시 처리하기
 
 [작업단계]
 관련 클래스 import

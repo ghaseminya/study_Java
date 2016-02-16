@@ -44,7 +44,7 @@ import java.awt.event.ActionListener;
 
 //TODO 2.이벤트 리스너를 구현
 //extends Frame: Frame상속
-//implements ActionListener: ActionEventEx가 ActionListner역할을 함
+//implements ActionListener: ActionEventEx가 ActionListner역할을 합니다.
 public class ActionEventEx02 extends Frame implements ActionListener{
 	
 	Panel p;
@@ -63,10 +63,7 @@ public class ActionEventEx02 extends Frame implements ActionListener{
 		input = new Button("입력");
 		exit = new Button("종료");
 		
-		//TODO 3.이벤트 소스와 이벤트 리스너 연결
-		//이벤트 소스(Button)와 이벤트 리스너(ActionEventEx) 연결
-		input.addActionListener(this);
-		exit.addActionListener(this);
+		
 		
 		
 		//TextArea 객체 생성
@@ -87,7 +84,12 @@ public class ActionEventEx02 extends Frame implements ActionListener{
 		setBounds(300, 300, 300, 300);		
 		
 		//Frame 노출여부 설정
-		setVisible(true);		
+		setVisible(true);
+		
+		//TODO 3.이벤트 소스와 이벤트 리스너 연결
+		//이벤트 소스(Button)와 이벤트 리스너(ActionEventEx) 연결
+		input.addActionListener(this);
+		exit.addActionListener(this);
 	}
 	
 	//TODO 4.이벤트 핸들러 내용 구현

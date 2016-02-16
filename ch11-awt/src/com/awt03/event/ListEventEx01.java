@@ -25,7 +25,7 @@ public class ListEventEx01 extends Frame{
 		
 		fruits = new List();
 		
-		//리스트 생성
+		//리스트 항목 생성
 		fruits.add("StrawBerry");
 		fruits.add("Mango");
 		fruits.add("Kiwi");
@@ -45,7 +45,8 @@ public class ListEventEx01 extends Frame{
 
 		@Override
 		public void itemStateChanged(ItemEvent e) { //ItemEvent: 리스트 항목을 선택할 때 발생하는 이벤트
-			System.out.println(fruits.getSelectedIndex() + " : " + fruits.getSelectedItem());
+			System.out.println(fruits.getSelectedIndex() + 
+					" : " + fruits.getSelectedItem());
 		}
 		
 	}
@@ -55,5 +56,4 @@ public class ListEventEx01 extends Frame{
 		le.setSize(300, 200);
 		le.setVisible(true);
 	}
-
 }

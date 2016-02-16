@@ -1,6 +1,6 @@
 package com.awt03.event;
 /*
-방향키 입력시 TextArea에 어떤 키를 눌렀는지 출력하기
+//방향키 입력시 TextArea에 어떤 키를 눌렀는지 출력하기
 
 [작업단계]
 TextArea 객체 생성

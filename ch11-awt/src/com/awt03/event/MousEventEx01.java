@@ -8,7 +8,8 @@ package com.awt03.event;
 
 
 MouseMotionEvent
-	• MouseMotionEvent는 컴포넌트의 영역 내에서 마우스를 움직였을 때 발생하는 이벤트로 자체적으로 처리해 주는 클래스가 존재하지 않으며 MouseEvent 클래스를 그대로 사용합니다.
+	• MouseMotionEvent는 컴포넌트의 영역 내에서 마우스를 움직였을 때 발생하는 이벤트로 
+	자체적으로 처리해 주는 클래스가 존재하지 않으며 MouseEvent 클래스를 그대로 사용합니다.
 	• MouseMotionEvent는 마우스가 이동할 때마다 발생하기때문에 필요한 경우에만 이벤트를 처리하는 것이 좋습니다.  
 
 
@@ -40,7 +41,7 @@ public class MousEventEx01 extends Frame implements ActionListener, MouseMotionL
 	
 	public MousEventEx01() {
 		//Frame 타이틀 지정
-		setTitle("MouseEvnet Test");
+		setTitle("MouseEvent Test");
 		
 		//Label의 전경색 및 배경색 설정
 		move.setForeground(Color.WHITE);
