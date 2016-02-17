@@ -8,6 +8,16 @@ import
 줄바꿈 / 메서드를 통해 줄바꿈
 자원관리
 
+File Info
+BufferedRWEx02.java	BufferedWriter 	소스 파일
+bufferedWirter.txt					생성된 결과 파일
+
+
+//------------------------------------------
+BufferedWriter
+	• 바이트 출력 스트림의 BufferedOutputStream과 동일한 기능을 제공하며,
+	• 문자 출력 스트림의 효율적인 버퍼링을 기능을 제공합니다.
+
 */
 
 

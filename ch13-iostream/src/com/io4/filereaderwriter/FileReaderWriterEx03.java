@@ -1,9 +1,25 @@
+package com.io4.filereaderwriter;
 /*
 문자열 스트림 이해
 FileReader
 
+File Info
+FileReaderWriterEx02.java	문자열 스트림 이해
+							FileWriter
+*FileReaderWriter.txt		생성된 결과 파일
+*FileReaderWriterEx03.java	문자열 스트림 이해
+							FileReader
+
+//-------------------------------------------------------------
+
+FileReader
+	• FileReader클래스는 시스템에 있는 파일을 읽을 수 있는 기능을 제공
+	• 파일을 읽을 때는 파일의 경로,  File 객체를 생성자의 매개변수로 지정하여 객체를 생성할 수 있습니다.
+	• 파일이 존재 하지 않으면 FileNotFoundException 예외가 발생
+	• FileReader 클래스는 문자 스트림으로 한문자를 읽기 때문에 화면에 출력하더라도 한글 깨지는 현상이 일어나지 않습니다.
+
 */
-package com.io4.filereaderwriter;
+
 
 import java.io.FileReader;
 import java.io.IOException;

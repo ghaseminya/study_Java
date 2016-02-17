@@ -1,6 +1,12 @@
+package com.io4.filereaderwriter;
+/*
 //콘솔에서 문자열을 입력 받아 지정된 파일에 그 내용을 출력하는 프로그램
 
-package com.io4.filereaderwriter;
+File Info
+FileReaderWriterEx04.java	소스파일
+frw.txt						생성된 결과파일
+
+*/
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -24,11 +30,12 @@ public class FileReaderWriterEx04 {
 			
 			//buf 변수를 비워놓습니다 (초기화)
 			buff = "";
+			
 			//tmp 변수에 버퍼에서 한 행을 읽어 저장
 			tmp = r.readLine();
 			
 			while(tmp !=null){
-				//buf 변수에 문자열을 추가
+				//buff 변수에 문자열을 추가
 				buff += tmp;
 				//버퍼에서 다음 행을 읽어 tmp 변수에 저장
 				tmp = r.readLine();
@@ -39,9 +46,9 @@ public class FileReaderWriterEx04 {
 			FileWriter fw = new FileWriter(fname);
 			
 			//버퍼에 들어있는 문자열을 처음 위치부터 버퍼의 크기만큼 출력한다. 
-			//buff 변수의 길이만큼 파일객체에 출력함으로써 간단하게 텍스트 파일을 생성할 수 있
+			//buff 변수의 길이만큼 파일객체에 출력함으로써 간단하게 텍스트 파일을 생성할 수 있습니다.
 			//write(배열, 문자열의 시작위치, 출력할 문자열의 개수): 
-			//	버퍼에 들어 있는 문자열을 0(처음)부터 buff변수의 길이만큼 파일 객체에 출력하는 메소드
+			//버퍼에 들어 있는 문자열을 0(처음)부터 buff변수의 길이만큼 파일 객체에 출력하는 메소드
 			fw.write(buff, 0, buff.length());
 			fw.close();
 			
