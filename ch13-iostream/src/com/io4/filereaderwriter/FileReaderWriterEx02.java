@@ -11,8 +11,7 @@ import java.io.Writer;
 
 public class FileReaderWriterEx02 {
 
-	public static void main(String[] args) throws IOException
-	{
+	public static void main(String[] args) throws IOException{
 		char ch1='J';	//자바에서 유니코드이므로 각각 2byte로 표현됨
 		char ch2='A';	//자바에서 유니코드이므로 각각 2byte로 표현됨
 		char ch3='V';	//자바에서 유니코드이므로 각각 2byte로 표현됨\
