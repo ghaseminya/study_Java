@@ -25,6 +25,7 @@ public class ThreadEx16 extends Frame implements Runnable{
 	public void update(Graphics g){
 		//배경을 지우지 않고 x, y 좌표를 원의 중심으로 하여 직경 30픽셀의 원을 그리기
 		g.drawOval(x, y, 30, 30);
+		
 	}
 	
 	//run() 메소드를 오버라이딩

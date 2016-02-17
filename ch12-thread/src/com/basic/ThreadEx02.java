@@ -13,12 +13,13 @@ Runnable 구현 클래스를 통한 Thread생성
 	TODO 1: implements Runnable
 	TODO 2: @Override public void run(){ }
 	TODO 3: Runnable이 구현된 클래스의 객체생성
-	TODO 4: 스래드 생성, 스레드 생성자에 run()있는 클래스를 등록
+	TODO 4: 스래드 생성시 스레드 생성자에 run()있는 클래스의 객체를 등록
 	TODO 5: start();호출
 
 //--------------------------------------------
 스레드를 상속시킨것과 동일한 효과 확인하기
-스레드 생성, 스레드에 run()있는 클래스(Runnable이 구현된 객체)를 등록
+스레드 생성, 
+스레드에 run()있는 클래스(Runnable이 구현된 객체)를 등록
  
 */
 
@@ -49,7 +50,7 @@ public class ThreadEx02 implements Runnable{
 		//TODO 3: Runnable이 구현된 클래스의 객체생성
 		ThreadEx02 td = new ThreadEx02();
 		
-		//TODO 4: 스래드 생성, 스레드 생성자에 run()있는 클래스를 등록
+		//TODO 4: 스래드 생성시 스레드 생성자에 run()있는 클래스의 객체를 등록
 		//Runnable이 구현된 객체를 인자로 하여 Thread객체를 생성해서 등록
 		Thread t = new Thread(td, "두번째"); //Thread이름 지정하여 생성
 //		Thread t = new Thread(td);	//Thread이름 미설정시 시스템에서 자동 부여됨
