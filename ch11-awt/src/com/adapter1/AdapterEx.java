@@ -109,6 +109,7 @@ public class AdapterEx extends Frame implements ActionListener{
 		//이벤트 리스너 연결 - WindowEvent		
 		addWindowListener(new WindowEventHandlers());		
 	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e){
 		String str = e.getActionCommand();
@@ -130,13 +131,12 @@ public class AdapterEx extends Frame implements ActionListener{
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new AdapterEx();
 	}
 }
 
 
-//별도의 클래스 생성 - KeyAdapter 클래스를 상속하는
+//TODO : 별도의 클래스 생성 - KeyAdapter 클래스를 상속하는
 class KeyEventHandlers extends KeyAdapter{
 	//원하는 메소드만 재정의
 	TextField tf;
@@ -156,7 +156,7 @@ class KeyEventHandlers extends KeyAdapter{
 	}	
 }
 
-//별도의 클래스 생성 - WindowAdapter클래스를상속하는
+//TODO : 별도의 클래스 생성 - WindowAdapter클래스를상속하는
 class WindowEventHandlers extends WindowAdapter{
 	//종료버튼 클릭시 프로그램 종료
 	@Override

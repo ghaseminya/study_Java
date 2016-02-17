@@ -90,7 +90,7 @@ public class AdapterEx extends Frame implements ActionListener{
 		bClear.addActionListener(this);
 		bExit.addActionListener(this);
 		
-		//이벤트 리스너 연결 - KeyEvent
+		//TODO : 이벤트 리스너 연결 - KeyEvent
 		//익명내부 클래스 사용
 		tf.addKeyListener(new KeyAdapter(){
 			//원하는 메소드만 재정의		
@@ -103,7 +103,7 @@ public class AdapterEx extends Frame implements ActionListener{
 			}			
 		});		
 		
-		//이벤트 리스너 연결 - WindowEvent
+		//TODO : 이벤트 리스너 연결 - WindowEvent
 		//익명내부 클래스 사용
 		addWindowListener(new WindowAdapter(){
 			@Override
@@ -117,6 +117,8 @@ public class AdapterEx extends Frame implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		String str = e.getActionCommand();
 		if( str.equals("Clear") ){
+			ta.setText(" ");
+			tf.setText(" ");	
 			ta.setText("");
 			tf.setText("");			
 		}else if(str.equals("Exit")){
@@ -125,7 +127,6 @@ public class AdapterEx extends Frame implements ActionListener{
 	}	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		new AdapterEx();
 	}
 }

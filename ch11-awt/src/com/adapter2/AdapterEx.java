@@ -91,7 +91,7 @@ public class AdapterEx extends Frame implements ActionListener{
 		
 	}
 	
-	//멤버 내부 클래스 생성 - WindowAdapet클래스를상속하는
+	// TODO : 멤버 내부 클래스 생성 - WindowAdapet클래스를상속하는
 	class WindowEventHandlers extends WindowAdapter{
 		//종료버튼 클릭시 프로그램 종료
 		@Override
@@ -100,7 +100,7 @@ public class AdapterEx extends Frame implements ActionListener{
 		}
 	}
 	
-	//멤버 내부 클래스 생성 - KeyAdapter 클래스를 상속하는
+	// TODO : 멤버 내부 클래스 생성 - KeyAdapter 클래스를 상속하는
 	class KeyEventHandlers extends KeyAdapter{
 		//원하는 메소드만 재정의		
 		@Override

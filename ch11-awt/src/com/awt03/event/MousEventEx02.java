@@ -1,6 +1,6 @@
 package com.awt03.event;
 /* MouseEvent
-
+마우스 클릭시 X, Y 좌표 콘솔에 출력하기
 
 이벤트 핸들러 클래스 만들 때  MouseAdapter vs MouseListener 차이 확인하기 
 
@@ -13,7 +13,8 @@ MouseEvent
 
 MouseListener
 	• 마우스와 관련 있는 이벤트 중 MouseEvent를 처리하는 이벤트 리스너
-	• 마우스 클릭, 마우스 포인터가 특정 영역으로 들어오는 경우, 나가는 경우, 버튼을 누르는 경우, 마우스를 눌렀다가 띠는 경우에 발생하는 이벤트를 처리하는 리스너
+	• 마우스 클릭, 마우스 포인터가 특정 영역으로 들어오는 경우, 나가는 경우, 버튼을 누르는 경우, 
+	마우스를 눌렀다가 띠는 경우에 발생하는 이벤트를 처리하는 리스너
 
 
 TODO 1: 이벤트 핸들러 클래스 - MouseListener
@@ -23,20 +24,18 @@ TODO 2: 이벤트 핸들러 클래스 - MouseAdapter
 
 */
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class MousEventEx02 extends Frame{
 	
 	public MousEventEx02(){
-		//레이아웃 관리자를 BorderLayout 으로 설정
+		//레이아웃 관리자를 FlowLayout 으로 설정
 		setLayout(new FlowLayout());
-		setTitle("MouseEvnet Test");
+		setTitle("MouseEvent Test");
 		setBackground(Color.PINK);
 		
 		//현재 프레임이 이벤트 소스
