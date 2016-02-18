@@ -40,6 +40,7 @@ public class ThreadEx16 extends Frame implements Runnable{
 			y = (int)(Math.random()*300);
 			
 			//0.1초마다 스레드를 중단시키면서 다시 그리기
+			//repaint() 메서드는 내부적으로 update() 메서드를 호출합니다.
 			repaint();
 			try{
 				//sleep() 메소드의 인자는 1000을 1초로 계산한다. (100은 0.1초)
