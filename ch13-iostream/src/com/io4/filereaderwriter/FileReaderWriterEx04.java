@@ -1,5 +1,5 @@
 package com.io4.filereaderwriter;
-/*
+/* BufferedReader
 //콘솔에서 문자열을 입력 받아 지정된 파일에 그 내용을 출력하는 프로그램
 
 File Info

@@ -1,6 +1,6 @@
+package com.io2.filter;
 /* FileReader
- 
- 
+
 강의 내용
 	• file.txt에 한글과 영문으로된 내용을 입력 
 	• 파일명을 입력받아 FileReader 객체 생성
@@ -8,10 +8,8 @@
 	• 유니코드를 char로 출력
 	• 자원 관리
 
- 
- */
+*/
 
-package com.io2.filter;
 
 import java.io.FileReader;
 import java.io.IOException;

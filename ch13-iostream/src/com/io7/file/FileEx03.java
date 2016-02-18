@@ -1,15 +1,13 @@
+package com.io7.file;
 /* File Class - 디렉토리
 
 
 강의내용
 	• 디렉토리 생성
 	• 디렉토리 삭제
-
-
  
  */
 
-package com.io7.file;
 
 import java.io.File;
 

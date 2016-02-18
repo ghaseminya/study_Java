@@ -1,10 +1,8 @@
-/* FileWriter
- *  
- * 특정 문자열을 저장하는 텍스트 파일 생성하기 
- * 
- */
-
 package com.io2.filter;
+/* FileWriter
+//특정 문자열을 저장하는 텍스트 파일 생성하기 
+
+*/
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -26,7 +24,8 @@ public class FilterStreamEx13 {
 		}catch(IOException e){
 			e.printStackTrace();			
 		}finally{	//자원관리
-			if( fw !=null ){ try{ fw.close();}catch(IOException e){e.printStackTrace();}  }			
+			if( fw !=null ){ 
+				try{ fw.close();}catch(IOException e){e.printStackTrace();}  }			
 		}		
 	}	
 }

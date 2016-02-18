@@ -1,16 +1,19 @@
+package com.io2.filter;
 /*
 PrintWriter
 
 --------------------------
-PrintWriter는 입력 필터 스트림이 존재하지 않는 대표적인 스트림 클래스입니다.
-PrintStream과 PrintWriter는 유사합니다.
-PrintWriter는 PrintStream을 대신할 수 있도록 정의된 클래스이며  PrintWriter클래스 활용을 권장합니다.
 
-
+PrintWriter
+	• PrintWriter 클래스는 다른 스트림과 다르게 바이트 출력 스트림과 문자 출력 스트림을 가지고 객체를 생성할 수 있는 클래스입니다.
+	• 자동 플러쉬 기능을 가지고 있습니다.
+	• PrintWriter 클래스의 생성자에는 FileNotFoundException 예외를 발생하기 때문에 반드시 예외처리를 해야 합니다.
+	• PrintWriter는 입력 필터 스트림이 존재하지 않는 대표적인 스트림 클래스입니다.
+	• PrintStream과 PrintWriter는 유사합니다.
+	• PrintWriter는 PrintStream을 대신할 수 있도록 정의된 클래스이며  PrintWriter클래스 활용을 권장합니다.
 
  */
 
-package com.io2.filter;
 
 import java.io.FileWriter;
 import java.io.IOException;

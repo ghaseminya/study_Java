@@ -1,16 +1,15 @@
+package com.io2.filter;
 /* BufferedReader
- *  
- * -------------------------------------------------------------
- * 
- * System.in: 기본입력(byte입력)
- * 
- * BufferedReader 클래스
- * -BufferedReader가 문자열(String)로 처리
- * -입력데이터의 개수의 상관없이 라인바이라인으로 읽어들인다. 
- * 
+
+//-------------------------------------------------------------
+System.in: 기본입력(byte입력)
+
+BufferedReader 클래스
+-BufferedReader가 문자열(String)로 처리
+-입력데이터의 개수의 상관없이 Line by Line 으로 읽어들인다. 
+
  */
 
-package com.io2.filter;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -40,7 +39,8 @@ public class FilterStreamEx12 {
 		}catch(IOException e){
 			e.printStackTrace();
 		}finally{	//자원관린
-			if( br!=null ){ try{br.close();}catch(IOException e){e.printStackTrace();} }
+			if( br!=null ){ 
+				try{br.close();}catch(IOException e){e.printStackTrace();} }
 		}		
 	}
 }

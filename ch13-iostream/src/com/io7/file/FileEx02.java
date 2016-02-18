@@ -1,3 +1,4 @@
+package com.io7.file;
 /* File Class - 
 파일의 주요 정보를 알아내는 프로그램
 파일정보 확인, 파일 생성/변경/삭제
@@ -12,7 +13,6 @@
  
  */
 
-package com.io7.file;
 
 import java.io.File;
 import java.io.IOException;

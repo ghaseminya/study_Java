@@ -29,12 +29,12 @@ public class FilterStreamEx10 {
 		try{
 			//경로에 파일 생성
 			//기본값 : 덮어쓰기
-//			fos = new FileOutputStream("C:" + File.separator + "javanAndroid" + File.separator+ "fileout.txt");
+//			fos = new FileOutputStream("C:" + File.separator + "CodeLab" + File.separator+ "fileout.txt");
 			
 			
 			//byte로 파일에 출력하기 위한 FileOutputStream객체 생성
 			//이어쓰기			
-			fos = new FileOutputStream("C:" + File.separator + "javanAndroid" + File.separator+ "fileout.txt", true);			
+			fos = new FileOutputStream("C:" + File.separator + "CodeLab" + File.separator+ "fileout.txt", true);			
 			
 			//명시할 데이터 입력
 			String message = "Hello FileOut!! 파일에 내용입니다.";

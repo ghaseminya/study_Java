@@ -1,5 +1,5 @@
 package com.io4.filereaderwriter;
-/*
+/* FileWriter
 문자열 스트림 이해
 FileWriter
 

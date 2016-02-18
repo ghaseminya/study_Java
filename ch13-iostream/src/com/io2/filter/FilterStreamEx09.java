@@ -5,16 +5,16 @@ String -> byte[] 저장
 명시적 flush
 Close()	//자원정리
  
+//---------------------------
+[버퍼 비우기]
+BufferedOutputStream하면 버퍼에 저장되는데  버퍼공간이 자동으로 차면 autoflush 됩니다.
+buffer공간을 다 채우지 못채우면 autoflush가 되지 않아 파일에 저장되지 않는다. 이 경우 명시적으로 flush해야 파일에 저장됩니다.
+
+[자원정리]
+close()메소드가 자원정리하기 전에 buffer에 데이터가 남아있으면 flush한 후 자원정리를 하게 됩니다.
+에러방지를 위해 만들어진 순서의 역순으로 자원정리해 줍니다. 
  
- ---------------------------
- BufferedOutputStream하면 버퍼에 저장되는데
- 버퍼공간이 자동으로 차면 autoflush하면 됨 
- buffer공간을 다 채우지 못해 파일에 저장되지 않는다. 이 경우 명시적으로 flush해야 파일에 저장됨.
-  
- close()메소드가 자원정리하기 전에 buffer에 데이터가 남아있으면 flush한 후 자원정리를 하게됩니다.
- 에러방지를 위해 만들어진 순서의 역순으로 자원정리해 줍니다. 
- 
- close()를 안할 경우는 반드시 명시적으로 flush()해야 합니다.
+close()를 안할 경우는 반드시 명시적으로 flush()해야 합니다.
  
  */
 
@@ -48,11 +48,13 @@ public class FilterStreamEx09 {
 
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//자원정리			
+		}finally{ //자원정리			
 			//close()메소드가 자원정리하기 전에 buffer에 데이터가 남아있으면 flush한 후 자원정리를 하게됩니다.
 			//생성 역순으로 자원정리
-			if( bos != null){ try{ bos.close(); }catch(IOException e){e.printStackTrace();} } 
-			if( fos != null){ try{ fos.close(); }catch(IOException e){e.printStackTrace();} }
+			if( bos != null){ 
+				try{ bos.close(); }catch(IOException e){e.printStackTrace();} } 
+			if( fos != null){ 
+				try{ fos.close(); }catch(IOException e){e.printStackTrace();} }
 		}
 	}
 }

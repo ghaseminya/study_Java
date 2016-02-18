@@ -1,5 +1,5 @@
 package com.io4.filereaderwriter;
-/*
+/* FileReader
 
 파일에서 지정된 수 만큼의 문자열을 읽어내는 프로그램
 
