@@ -44,6 +44,7 @@ class ThreadEx10 {
 		at2.start();
 		
 		//TODO: 스레드에 join()호출한 경우와 호출하지 않은 경우 결과 확인하기
+		//try~catch 블럭 주석 처리 전/후 결과확인하기
 		try {
 			//thread의 모든 작업이 완료되도록 하기 위해 join()호출
 			at1.join();	//main thread는 at1 thread가 종료할 때까지 blocked상태가 됩니다. 
@@ -53,6 +54,7 @@ class ThreadEx10 {
 		catch(InterruptedException e) {
 			e.printStackTrace();
 		}
+		
 		
 		System.out.println("1~100까지의 합: "+s.getNumber());
 	}

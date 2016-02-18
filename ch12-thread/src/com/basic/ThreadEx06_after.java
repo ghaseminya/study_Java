@@ -29,6 +29,16 @@ class ATM implements Runnable{
 	//공유자원
 	private long depositMoney = 10000;
 	
+	//임계영역
+	public void withDraw(long howMuch){
+		if(depositMoney > 0){
+			depositMoney -= howMuch;
+			System.out.println(Thread.currentThread().getName() + "\t" + depositMoney);			
+		}else{
+			System.out.println(Thread.currentThread().getName() + "잔액이 부족합니다.");			
+		}
+	}	
+	
 	@Override
 	public void run(){
 		
@@ -48,16 +58,6 @@ class ATM implements Runnable{
 			}			
 		}		
 	}
-	
-	//임계영역
-	public void withDraw(long howMuch){
-		if(depositMoney > 0){
-			depositMoney -= howMuch;
-			System.out.println(Thread.currentThread().getName() + "\t" + depositMoney);			
-		}else{
-			System.out.println(Thread.currentThread().getName() + "잔액이 부족합니다.");			
-		}
-	}	
 }
 
 public class ThreadEx06_after {

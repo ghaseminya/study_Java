@@ -7,6 +7,7 @@
 //ThreadEx13.java	• 실행순서 동기화 구현 전
 //					• 스레드 접근순서의 동기화 필요성
 //					• 실행순서를 보장하지 못합니다
+
 //ThreadEx14.java	• 실행순서 동기화 구현
 
 //--------------------------------------
@@ -84,13 +85,13 @@ public class ThreadEx14 {
 
 		try {
 			reader1.start();
-			reader2.start();
+//			reader2.start();
 			
 			Thread.sleep(1000);			
 			writer.start();
 	
 			reader1.join();
-			reader2.join();
+//			reader2.join();
 			writer.join();
 		}
 		catch(InterruptedException e) {

@@ -32,7 +32,7 @@ class MyRunnableTwo implements Runnable{
 	}
 	
 	public void second(){
-		System.out.println("second");		
+		System.out.println("second");
 	}
 }
 
