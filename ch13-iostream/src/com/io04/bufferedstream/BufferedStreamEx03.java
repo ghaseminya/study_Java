@@ -1,3 +1,4 @@
+package com.io04.bufferedstream;
 /* 
 BufferedOutputStream
   
@@ -5,7 +6,8 @@ String -> byte[] 저장
 명시적 flush
 Close()	//자원정리
  
-//---------------------------
+//-------------------------------------------------------
+
 TODO : 명시적으로 flush하지 않으므로써 buffer공간을 다 채우지 못해 파일에 써지지않는 문제점 확인
 
 [명시적으로 flush하는 방법]
@@ -24,7 +26,6 @@ close()를 안할 경우는 반드시 명시적으로 flush()해야 합니다.
  
  */
 
-package com.io04.bufferedstream;
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
@@ -33,7 +34,7 @@ import java.io.IOException;
 public class BufferedStreamEx03 {
 
 	public static void main(String[] args) {
-		//명시 후 초기화
+		//명시 선언 후 초기화
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
 

@@ -34,13 +34,13 @@ public class FileIOStreamEx04 {
 			//이어쓰기			
 			fos = new FileOutputStream("C:" + File.separator + "CodeLab" + File.separator+ "fileout.txt", true);			
 			
-			//명시할 데이터 입력
-			String message = "Hello FileOut!! 파일에 내용입니다.";
+			//파일에 쓸 데이터
+			String message = "Hello FileOut!! 파일의 내용입니다.";
 			
 			//String -> byte[] 배열행태로 변환 
 			fos.write(message.getBytes());
 			
-			System.out.println("파일을 생성후 내용을 기술함");	
+			System.out.println("파일을 생성후 내용을 기술하였습니다.");	
 			
 		}catch(IOException e){
 			e.printStackTrace();

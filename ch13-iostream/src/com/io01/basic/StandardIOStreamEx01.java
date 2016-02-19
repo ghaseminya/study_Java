@@ -26,6 +26,8 @@ public class StandardIOStreamEx01 {
 			//표준입력			
 			//System.in을 이용해 InputStream을 얻어 바로 read()를 사용하여 입력한 데이터 중
 			//1byte만을 읽어서 처리
+			//System.in.read(): 시스템으로부터 1바이트를 입력받아 정수형으로 리턴한다. 
+			//한글은 1바이트로 표현할 수 없기 때문에 숫자와 영문, 특수문자만 입력할 수 있다.
 			while( (input=System.in.read()) != -1){ //abcdef우리나라
 				
 				// byte로 처리되기 때문에 출력을 위해서는 (char)로 형변환해주어야 합니다.

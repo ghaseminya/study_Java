@@ -2,11 +2,11 @@ package com.io02.filestream;
 /*
 스트림 기반의 파일 입출력  (바이트 단위 복사)
 
-
 바이트 단위 read & write 메소드를 대신해서 바이트 배열 단위의 메소드 호출 (속도 향상)
 public int read(byte[] b) throws IOException
 public int write(byte[] b, int off, int len) throws IOException
--------------------------------------------------
+
+//-------------------------------------------------
 바이트 단위 복사(1바이트 씩 복사)가 수행됩니다.
 큰 파일 사이즈를 파일 복사할 경우 많은 시간이 걸릴 수 있습니다.
 FileInputStreamEx02와의 가장 큰 차이점은 1KB 크기의 버퍼를 이용해서 데이터를 입출력 한다는 점.

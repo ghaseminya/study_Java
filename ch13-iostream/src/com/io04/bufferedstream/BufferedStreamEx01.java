@@ -8,7 +8,6 @@ BufferedOutputStream 클래스의 flush 메소드 호출을 통해서 버퍼링 
 또한, close메소드를 통해 스트림을 종료하면  스트림의 버퍼는 flush를 수행합니다.
 
 
-
 버퍼링 기능을 제공하는 필터 스트림
 구분						클래스				역할
 BufferedInputStream		버퍼 입력 필터 스트림	입력 버퍼 제공
