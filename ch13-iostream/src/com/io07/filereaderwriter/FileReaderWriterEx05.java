@@ -17,13 +17,15 @@ public class FileReaderWriterEx05 {
 			//객체 생성
 			fw = new FileWriter("fileWriter.txt");
 			
+			//파일에 쓸 문자열 데이터
 			String message = "FileWriter 테스트 중입니다.";
+			
 			//파일에 쓰기
 			fw.write(message);
 			System.out.println("파일 생성 및 내용 기술");
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//자원관리
+		}finally{ //자원정리
 			if( fw !=null ){ 
 				try{ fw.close();}catch(IOException e){e.printStackTrace();}  }			
 		}		

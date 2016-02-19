@@ -1,6 +1,12 @@
 package com.io05.serial;
 /* 객체 직렬화 - 직렬화 대상
- 
+
+File Info
+*Customer.java		객체 직렬화(직렬화 대상)
+CustomerMain1.java	객체 직렬화(ObjectOutputStream)
+CustomerMain2.java	역 직렬화(ObjectInputStream)
+
+
 //-------------------------------------------------------------
 Serializable인터페이스가 구현된 클래스는 객체 직렬화 대상이 됩니다.
 멤버 변수에 있는 데이터가 중요한 것이므로 멤버 변수가 있어야 직렬화를 하며
@@ -19,7 +25,7 @@ java.io.NotSerializableException: com.serial.Customer
 
 import java.io.Serializable;
 
-//Serializable인터페이스가 구현된 클래스는 객체 직렬화 대상이 됨
+//Serializable인터페이스가 구현된 클래스는 객체 직렬화 대상이 됩니다.
 public class Customer implements Serializable{
 //public class Customer {
 	//멤버 변수(인스턴스 변수)

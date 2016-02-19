@@ -10,7 +10,6 @@ package com.io07.filereaderwriter;
 
 */
 
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
@@ -27,14 +26,16 @@ public class FileReaderWriterEx04 {
 			
 			//파일로부터 데이터를 한 문자씩 읽어들여 유니코드로 반환
 			while( (readChar=fr.read()) != -1){
+				//아스키 코드를 문자열로 출력
 				System.out.print( (char)readChar );
 			}			
 		}catch(FileNotFoundException e){
 			e.printStackTrace();			
 		}catch(IOException e){
 			e.printStackTrace();			
-		}finally{	//자원관리
-			if( fr != null) { try{fr.close(); }catch(IOException e){ e.printStackTrace();} }			
+		}finally{ //자원관리
+			if( fr != null) { 
+				try{fr.close(); }catch(IOException e){ e.printStackTrace();} }			
 		}
 	}
 }

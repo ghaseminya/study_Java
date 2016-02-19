@@ -6,6 +6,10 @@ File Info
 FileReaderWriterEx04.java	소스파일
 frw.txt						생성된 결과파일
 
+
+출력결과 확인시 아래 문자열 입력 후 테스트
+javastreamtest
+
 */
 
 import java.io.BufferedReader;
@@ -28,10 +32,14 @@ public class BufferedRWEx03 {
 			//표준 입력 장치인 키보드로부터 문자를 입력받는 스트림을 생성하여 BufferedReader 클래스의 인자로 넘겨줍니다.
 			BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
 			
-			//buf 변수를 비워놓습니다 (초기화)
+			//buff 변수를 비워놓습니다 (초기화)
 			buff = "";
 			
-			//tmp 변수에 버퍼에서 한 행을 읽어 저장
+			//tmp 변수에 버퍼에서 한 행을 읽어 저장하기
+			//readLine()
+			//• 한 줄 단위로 읽는 메서드
+			//• 한 줄의 끝을 ‘\r’,’\n’ 중의 하나가 올 경우 또는 ‘\r\n’이 오는 경우를 한 줄의 끝으로 간주합니다.
+			//• 다만 행의 종단 문자는 포함하지 않는다. 	Stream의 EOF 이르면  null 을 반환합니다.
 			tmp = r.readLine();
 			
 			while(tmp !=null){

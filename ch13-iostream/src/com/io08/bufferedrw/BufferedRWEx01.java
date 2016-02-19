@@ -2,8 +2,7 @@ package com.io08.bufferedrw;
 /*
 BufferedReader 클래스를 사용하여 콘솔에서 문자열을 입력 받아 화면에 출력하는 프로그램
 
-출력결과
-영어로 테스트
+출력결과 (영어로 테스트)
 java
 stream
 test
@@ -13,7 +12,6 @@ test
 BufferedReader
 	• 바이트 입력 스트림의 BufferedInputStream과 동일한 기능을 제공하며
 	• 문자 입력 스트림의 효율적인 버퍼링 기능을 제공합니다. 
-
 
 */
 
@@ -35,8 +33,10 @@ public class BufferedRWEx01 {
 			while(true){
 				//readLine()메소드로 한 행 단위로 문자열을 읽어서 String객체에 저장
 				str = in.readLine();
+				
 				if(str == null)
 					break;
+				
 				//출력
 				System.out.println(str);
 			}
