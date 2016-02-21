@@ -1,7 +1,12 @@
 package com.basic;
 /*
-
 인자로 넘겨준 호스트에 대한 정보를 출력하는 프로그램
+
+
+InetAddress 클래스
+	• InetAddress 클래스는 IP 주소를 표현한 클래스(모델링한 클래스)
+	• 자바에서는 모든 IP 주소를 InetAddress 클래스를 사용하여 표현할 수 있습니다.
+
 
 */
 
@@ -18,6 +23,7 @@ public class InetAddressEx01 {
 
 		//입력받기위해 객체 생성
 		BufferedReader br = null;
+		
 		//입력받은  URL저장
 		String url = null;
 
@@ -35,6 +41,7 @@ public class InetAddressEx01 {
 
 			//getHostName(): 호스트 이름을 문자열로 반환합니다.
 			System.out.println("호스트 네임: " + address.getHostName());
+			
 			//getHostAddress(): IP주소를 문자열로 반환합니다.
 			System.out.println("호스트 주소: " + address.getHostAddress());
 			
@@ -45,5 +52,10 @@ public class InetAddressEx01 {
 			if( br!=null ){ try{br.close();}catch(IOException e){e.printStackTrace();} }
 		}
 	}
-
 }
+
+/*//출력결과
+웹사이트 주소 입력 > codedragon.tistory.com
+호스트 네임: codedragon.tistory.com
+호스트 주소: 180.70.134.239
+*/

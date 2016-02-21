@@ -1,3 +1,4 @@
+package com.basic;
 /* URL - URL.openStream()
 //접속한 URL에 대한 HTML 문서의 내용 출력하기
 //URL 클래스와 스트림 클래스를 사용하여 해당 URL의 내용을 읽어오는 프로그램
@@ -10,14 +11,12 @@ TODO 1: URL을 통해 해당 서버 접근
 TODO 2: InputStreamReader에 넘길때 인코딩 방식 지정후
 * readline()을 통해 출력
 
-TODO 1과 TODO 2 결과는 동일
+TODO 1후 결과 확인한 것과 TODO 2후 결과확인한 결과는 동일
 //---------------------------------------------------------------------
 * 인코딩 방식이 맞지 않으면 데이터가 깨질수 있습니다. 
 * 그러므로, 방식이 다른 경우 명시적으로 지정해 줘야 합니다.
 */
 
-
-package com.basic;
 
 import java.net.URL;
 import java.net.UnknownHostException;
@@ -27,13 +26,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-
 public class URLEx02 {	
 	public static void main(String[] args){
 		String address = "http://www.naver.com/index.html";
 		URL url = null;
 		BufferedReader input = null;		
-		String line ="";
+		String line =""; //행단위로 읽은 문자열 임시 저장
 		
 		try{
 			//주소를 읽어와 URL 객체 생성
@@ -67,7 +65,8 @@ public class URLEx02 {
 			e.printStackTrace();
 			
 		}finally{
-			if( input!= null){ try{input.close();}catch(IOException e){e.printStackTrace();} }			
+			if( input!= null){ 
+				try{input.close();}catch(IOException e){e.printStackTrace();} }			
 		}		
 	}
 }

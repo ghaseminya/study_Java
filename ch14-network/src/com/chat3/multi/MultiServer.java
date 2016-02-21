@@ -25,6 +25,7 @@ public class MultiServer {
 		ServerSocket serverSocket = new ServerSocket(5000);
 		MultiServerThread mst = null;
 		boolean isStop = false;
+		
 		while(!isStop){
 			System.out.println("Server ready ....");
 			socket = serverSocket.accept();

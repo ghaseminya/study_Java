@@ -1,16 +1,26 @@
-/* EchoClient
- * 
- * -------------------------------------------------------
- * EchoClient
- * EchoServer
- * -------------------------------------------------------
- * 생성자에서 정보 받고
- * 소켓 생성 getsocket()
- * 입출력 스트림(바이트스트림) -> 문자스트림
- *  
- */
-
 package com.chat2.echo;
+/*
+//EchoClient
+
+
+EchoClient 생성자에서 정보 받고
+소켓 생성 getsocket() 정의후 호출
+입출력 스트림(바이트스트림) -> 문자스트림
+//---------------------------------------------------
+File Info
+com.chat2.echo
+*EchoServer.java	• EchoServer
+					• 포트번호 넘겨주면서 서버 소켓 생성
+					• while에서 accept()에서 클라이언트가 들어오면 tcp소켓 생성(클라이언트 소켓 생성)
+	
+EchoClient.java		• EchoClient
+					• 생성자에서 정보 받고
+					• 소켓 생성 getsocket() 호출
+					• 입출력 스트림(바이트스트림) -> 문자스트림
+
+
+
+*/
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -27,15 +37,19 @@ public class EchoClient {
 	private String ip;
 	//서버 포트 저장 변수
 	private int port;
+	
 	private String str;
 	BufferedReader br_file;
 	
+	//TODO 2:
 	public EchoClient(String ip, int port) throws IOException{
+		
 		this.ip = ip;
 		this.port = port;
 		
 		//서버로 연결되며 tcp소켓 생성
 		Socket tcpSocket = getSocket();
+		
 		//바이트 스트립
 		//출력 스트림 (서버에 데이터 전송)
 		OutputStream os_socket = tcpSocket.getOutputStream();
@@ -43,11 +57,11 @@ public class EchoClient {
 		InputStream is_socket =  tcpSocket.getInputStream();
 		
 		//바이트스트림 -> 문자스트림
-//		BufferedWriter bufferW = new BufferedWriter(new OutputStreamWriter(os_socket));		
-//		BufferedReader bufferR = new BufferedReader(new InputStreamReader(is_socket));
+		BufferedWriter bufferW = new BufferedWriter(new OutputStreamWriter(os_socket));		
+		BufferedReader bufferR = new BufferedReader(new InputStreamReader(is_socket));
 		//TODO : 인코딩 해결 (한글 깨짐현상 해결, 도스창)
-		BufferedWriter bufferW = new BufferedWriter(new OutputStreamWriter(os_socket, "UTF-8"));		
-		BufferedReader bufferR = new BufferedReader(new InputStreamReader(is_socket, "UTF-8"));
+//		BufferedWriter bufferW = new BufferedWriter(new OutputStreamWriter(os_socket, "UTF-8"));		
+//		BufferedReader bufferR = new BufferedReader(new InputStreamReader(is_socket, "UTF-8"));
 		
 		//데이터 입력용 입력스트림 생성
 		System.out.print("입력 >");
@@ -55,8 +69,8 @@ public class EchoClient {
 		
 		//표준 입력
 		str = br_file.readLine();
-		//EOF
-		str += System.getProperty("line.separator");
+		//현재 OS의 줄바꿈 문자 반환
+		str += System.getProperty("line.separator"); //EOF
 		//데이터를 버퍼에 저장
 		bufferW.write(str);
 		//데이터를 서버에 전송
@@ -74,8 +88,9 @@ public class EchoClient {
 		is_socket.close();
 		bufferR.close();
 		tcpSocket.close();
-	}	
+	}
 	
+	//TODO 1:
 	public Socket getSocket(){
 		Socket tcpSocket = null;
 		try{
