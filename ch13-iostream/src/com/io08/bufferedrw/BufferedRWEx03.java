@@ -1,6 +1,6 @@
 package com.io08.bufferedrw;
 /* BufferedReader
-//콘솔에서 문자열을 입력 받아 지정된 파일에 그 내용을 출력하는 프로그램
+//콘솔에서 영문문자열을 입력 받아 지정된 파일에 그 내용을 출력하는 프로그램
 
 File Info
 FileReaderWriterEx04.java	소스파일

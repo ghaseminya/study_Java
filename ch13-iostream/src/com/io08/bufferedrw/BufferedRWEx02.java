@@ -39,7 +39,7 @@ public class BufferedRWEx02 {
 			bw = new BufferedWriter(fw);
 			
 			//저장시 버퍼에 저장됩니다.
-			bw.write("BufferedWirter Test입니다.");
+			bw.write("BufferedWriter Test입니다.");
 			//줄바꿈
 			bw.newLine();
 			//메서드를 통해 줄바꿈

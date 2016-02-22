@@ -15,7 +15,7 @@ FileReaderWriterEx03.java	문자열 스트림 이해
 //-----------------------------------------
 
 FileWriter
-	• FileWriter 클래스는 문자 파일에 출력할 때 사용하는 클래스
+	• FileWriter 클래스는 문자를 파일에 출력할 때 사용하는 클래스
 	• FileWriter 클래스의 생성자는 파일의 경로, File 객체를 이용하여 객체를 생성할 수 있습니다.
 	• 만약, 경로가 실제로 존재하지 않으면 IOException이 발생하게 됩니다.(FileNotFoundException예외가 아님)
 
