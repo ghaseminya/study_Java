@@ -27,7 +27,7 @@ public class InetAddressEx01 {
 		//입력받은  URL저장
 		String url = null;
 
-		//배열로 정보를 받으므로 저장할 배열 선언
+		// 선언
 		InetAddress address;		
 
 		//반드시 예외 처리 해야 합니다.

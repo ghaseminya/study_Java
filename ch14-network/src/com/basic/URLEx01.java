@@ -1,6 +1,7 @@
 package com.basic;
 /* URL - URL의 다양한 정보 출력
 
+
 URL 클래스
 	• URL(Uniform Resource Locator)이란 인터넷에서 접근 가능한 자원의 주소를 표현하는 형식
 	• URL을 이용하여 인터넷 상의 다양한 프로토콜과 자원을 표기할 수 있습니다.

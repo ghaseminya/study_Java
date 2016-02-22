@@ -48,13 +48,10 @@ public class ServerEx {
 		}catch(Exception e){
 			System.out.println(e.toString());
 		}
-		
-		
 	}
 	
 	public static void main(String[] args) {
 
 		ServerEx se = new ServerEx();
 	}
-
 }
