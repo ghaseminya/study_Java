@@ -21,9 +21,10 @@ public class TransactionEx2 {
 
 	public static void main(String[] args) {
 		//접속 정보 저장
-		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
-		String id = "user06";
-		String passwd ="1234";
+//		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
+		String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
+		String id = "user01";
+		String passwd ="oracle12";
 		
 		Connection con = null;
 		Statement stmt = null;
@@ -44,17 +45,17 @@ public class TransactionEx2 {
 			stmt = con.createStatement();
 			
 			//SQL문 수행1: INSERT
-			sql = "INSERT INTO test1 values('sys01', 10)";
+			sql = "INSERT INTO test1 values('sys10', 101)";
 			stmt.executeUpdate(sql);	//JDBC 4단계: SQL 실행
 			//SQL문 수행2: INSERT
-			sql = "INSERT INTO test1 values('sys02', 20)";
+			sql = "INSERT INTO test1 values('sys20', 202)";
 			stmt.executeUpdate(sql);			
 			//SQL문 수행3: INSERT
-			sql = "INSERT INTO test1 values('sys03', 30)";
+			sql = "INSERT INTO test1 values('sys30', 303)";
 			stmt.executeUpdate(sql);
 			//SQL문 수행4: INSERT
 			//고의로 오류 발생시킴
-			sql = "INSERT INTO test1 values('sys04', 40";	//ERROR: java.sql.SQLException: ORA-00917: 누락된 콤마
+			sql = "INSERT INTO test1 values('sys40', 404";	//ERROR: java.sql.SQLException: ORA-00917: 누락된 콤마
 			stmt.executeUpdate(sql);					
 			
 			//SQL문이 정상수행되지 못하는 경우 catch(SQLException e)문으로 이동하게 됩니다.

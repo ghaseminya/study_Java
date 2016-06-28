@@ -18,21 +18,22 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.ResultSet;
+//import java.sql.ResultSet;
 
 
 public class TransactionEx1 {
 
 	public static void main(String[] args) {
 		//접속 정보 저장
-		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
-		String id = "user06";
-		String passwd ="1234";
+//		String dbURL = "jdbc:oracle:thin:@192.168.0.10:1521:orcl";
+		String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
+		String id = "user01";
+		String passwd ="oracle12";
 		
 		
 		Connection con = null;
 		Statement stmt = null;
-		ResultSet rs = null;
+		/*ResultSet rs = null;*/
 		String sql ="";
 		
 		
@@ -61,8 +62,8 @@ public class TransactionEx1 {
 			System.out.println("SQL문 수행완료");
 			
 			
-//			int count = stmt.executeUpdate(sql);
-//			rs = stmt.executeQuery(sql);
+/*			int count = stmt.executeUpdate(sql);
+			rs = stmt.executeQuery(sql);*/
 			
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -73,7 +74,24 @@ public class TransactionEx1 {
 			if( con!=null){ try{con.close();}catch(SQLException e){e.printStackTrace();} }	
 			
 		}
-
 	}
-
 }
+
+
+//출력결과
+//java.sql.SQLException: ORA-00917: 누락된 콤마
+
+
+//오라클 데이터베이스 확인
+//SQL문 4만 수행 안되어서 데이터의 외곡이 일어날수 있는 문제가 발생하였습니다.
+//SQL> SELECT * FROM test1;
+//
+//ID                AGE
+//---------- ----------
+//codedragon         88
+//sys01              10
+//sys02              20
+//sys03              30
+//
+//SQL>
+
