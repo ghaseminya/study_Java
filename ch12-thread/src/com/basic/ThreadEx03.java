@@ -3,14 +3,14 @@ package com.basic;
 Thread - 여러개의 Thread 생성
 
 [Step by Step]
-Runnable 구현한 클래스 객체 생성
-스레드 생성하면서 run()있는 클래스 객체 등록
-start()
+TODO 1: Runnable 구현한 클래스 객체 생성
+TODO 2: 스레드 생성하면서 run()있는 클래스 객체 등록
+TODO 3: start()
 
 -----------------------------------------------------
 실행될 때마다 순서가 바뀌어서 실행되고 있음
-실행될 때마다 시스템마다 다르다 
-스케줄러가 매 순간 실행순서를 결정해주고 관리해 주고 있음
+실행될 때마다 시스템마다 순서가 다릅니다 
+스케줄러가 매 순간 실행순서를 결정해주고 관리해 주고 있습니다.
 
 */
 
@@ -37,12 +37,14 @@ public class ThreadEx03 implements Runnable{
 	}
 	
 	public static void main(String[] args){
-		//Runnable 구현한 클래스 객체 생성
+		//TODO 1: Runnable 구현한 클래스 객체 생성
 		ThreadEx03 td = new ThreadEx03();
 		
 		//여러개의 Thread 생성
-		//스레드 생성하면서 run()있는 클래스 객체 등록
+		//TODO 2: 스레드 생성하면서 run()있는 클래스 객체 등록
 		Thread t1 = new Thread(td, "첫번째 1111111");
+		
+		//TODO 3: start()
 		t1.start();	//start() -> run() 병렬 수행할수 있도록 호출
 		//스레드 생성하면서 run()있는 클래스 객체 등록
 		Thread t2 = new Thread(td, "두번째 2222222");
@@ -52,7 +54,7 @@ public class ThreadEx03 implements Runnable{
 		t3.start();
 		//스레드 생성하면서 run()있는 클래스 객체 등록
 		Thread t4 = new Thread(td, "네번째 4444444");
-		t4.start();		
+		t4.start();
 	}	
 }
 

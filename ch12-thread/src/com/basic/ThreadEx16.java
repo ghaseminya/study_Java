@@ -21,6 +21,10 @@ public class ThreadEx16 extends Frame implements Runnable{
 	}
 	
 	//update() 메소드를 오버라이딩하여 그리기 작업을 수행
+	//update() 메서드와 paint() 메서드는 시스템에서 자동으로 호출되는데
+	//update() 메서드는 내부적으로 paint() 메서드를 다시 호출합니다.
+	//화면이 갱신될 때 (repaint()를 통해) update()메소드가 호출됩니다.
+	//최소화, 최대화, 창 사이즈 조절시 paint() 메서드가 호출됩니다.
 	@Override
 	public void update(Graphics g){
 		//배경을 지우지 않고 x, y 좌표를 원의 중심으로 하여 직경 30픽셀의 원을 그리기

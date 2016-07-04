@@ -41,7 +41,8 @@ public class ThreadEx15 extends Thread{
 				sleep(1000);
 				
 			}catch(Exception e){
-				
+				//오류메시지 출력: 오류내용, 오류난 줄수 표시
+				e.printStackTrace();
 			}
 			System.out.println(tname);
 		}
