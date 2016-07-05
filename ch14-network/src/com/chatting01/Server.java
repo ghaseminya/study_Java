@@ -39,6 +39,7 @@ public class Server {
 		vector = new Vector();
 		try {
 			serv = new ServerSocket(5000);
+			System.out.println("[ChatServer]Server Start...");
 			while (true) {
 				sock = serv.accept();
 				ServerThread client = new ServerThread(this, sock);

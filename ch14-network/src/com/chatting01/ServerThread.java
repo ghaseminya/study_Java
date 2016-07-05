@@ -57,6 +57,8 @@ public class ServerThread extends Thread {
 	
 	//TODO 5:
 	public void run() {
+		System.out.println("##ChatThread start...");
+		
 		String str;
 		try {
 			while (true) {

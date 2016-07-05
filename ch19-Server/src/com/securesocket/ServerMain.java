@@ -1,5 +1,13 @@
-//보안소켓을 이용해서 클라이언트와 서버간 통신하기
 
+/*
+//(인증서 없이) 서버와 클라이언트간 SSL통신하는 예제 프로그램
+
+보안 통신 SSL(SecureSocketLayer)
+Transport Layer계층의 보안을 담당하는 프로토콜
+즉, Socket통신에 대해 보안을 제공하는 프로토콜로 그룹으로 이루어져 있습니다.
+SSL 버전 3까지는 비표준이며
+SSL 버전 3.1부터 TLS라는 이름으로 표준화되었습니다. (SSL3를 기반으로 표준화하였기 때문에 내부적으로 좀 다를 수 있지만 제공하는 서비스는 동일합니다.)
+*/
 
 package com.securesocket;
 
@@ -32,15 +40,17 @@ public class ServerMain {
 		//(SSLServerSocket,SSLSocket에 SSL Socket에 인스턴스를 생성하기 위해 사용)
 		//SSLServerSocket,SSLSocket클래스는 추상클래스로 단독으로 인스턴스 생성이 불가능하며
 		//반드시 Factory클래스를 통해서 인스턴스가 생성가능하도록 되어져 있습니다.(디자인패턴)
+		//자바의 Socket은 기본 제공하는 Socket이외에 임의로 제작이 가능하며 이들 사이에 인스턴스 생성시 Factory패턴을 사용하면 좀 더 쉽게 프로그램밍할 수 있습니다.
 		SSLServerSocketFactory factory = context.getServerSocketFactory();
 		
+		//SSL의 엔코더 방식을 가져오기
 		String[] suites = factory.getSupportedCipherSuites();
 		SSLServerSocket serverSocket = (SSLServerSocket) factory.createServerSocket(port);
 		//인코더 방식 설정
 		serverSocket.setEnabledCipherSuites(suites);
 		
 		SSLSocket socket = (SSLSocket)serverSocket.accept();
-		//상용중인 암호군을 받아서 출력
+		//사용중인 암호군을 받아서 출력
 		System.out.println(socket.getSession().getCipherSuite());
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true); 
@@ -68,7 +78,7 @@ public class ServerMain {
 				
 			}
 		}
-		System.out.println("Send EXIT");
+		System.out.println("System EXIT");
 	}
 
 }

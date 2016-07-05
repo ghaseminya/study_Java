@@ -1,5 +1,8 @@
 package com.securesocket;
+/*
+//보안소켓을 이용해서 클라이언트와 서버간 통신하기
 
+*/
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -60,9 +63,8 @@ public class ClientMain {
 					
 				}
 				
-			}
-		}
-		printWriter.println("System Exit");
+			} //if(text!=null)
+		} //while
+		System.out.println("System Exit");
 	}
-
-}
+} //ClientMain

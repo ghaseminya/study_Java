@@ -38,7 +38,8 @@ public class Client extends Frame implements Runnable {
 	DataInputStream din;
 	DataOutputStream dout;
 	
-	String chatid="[codedragon]";
+//	String chatid="[codedragon]";
+	String chatid="[butterfly]";
 	
 	//TODO 7:
 	public Client() {
@@ -96,7 +97,7 @@ public class Client extends Frame implements Runnable {
 	//TODO 12:
 	public static void main(String args[]) {
 		Client chatc = new Client();
-		chatc.setSize(300,200);
+		chatc.setSize(300,220);
 		chatc.setVisible(true);
 		
 		Thread t = new Thread(chatc);
