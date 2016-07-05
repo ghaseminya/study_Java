@@ -2,6 +2,8 @@ package com.basic;
 /*
 //Runnable 인터페이스를 구현해서 무작위로 화면에 원을 그리기
 
+AWT(Abstract Window Toolkit)
+GUI 프로그래밍을 제작하기 위해 자바에서 제공하는 라이브러리를 모아놓은 것
 */
 
 
@@ -13,9 +15,11 @@ import java.awt.Graphics;
 //그래서, 스레드 기능을 가진 Runnable 인터페이스를 구현하여 작성할 수 있습니다.
 public class ThreadEx16 extends Frame implements Runnable{
 	
+	//좌표 저장 변수
 	int x, y;
 	
 	public ThreadEx16(){
+		//프레임의 제목 설정
 		setTitle("Thread Test");
 		
 	}
@@ -58,6 +62,7 @@ public class ThreadEx16 extends Frame implements Runnable{
 	public static void main(String[] args) {
 		//현재 클래스의 인스턴스를 생성
 		ThreadEx16 te = new ThreadEx16();
+		//프레임의 크기 지정
 		te.setSize(300, 300);
 		//현재 프레임(윈도우)를 보여주기
 		te.setVisible(true);

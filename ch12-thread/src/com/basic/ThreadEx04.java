@@ -12,6 +12,7 @@ join()메서드를 호출해서 join()메서드를 호출한 스레드가 먼저
 
 
 //쓰레드 클래스 정의
+//default : 같은 패키지(폴더)에 있는 클래스들만 허용
 class MyRunnableTwo implements Runnable{
 	@Override
 	public void run(){

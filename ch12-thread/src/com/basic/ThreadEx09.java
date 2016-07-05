@@ -30,7 +30,7 @@ class ThreadPriority9 extends Thread {
 		{
 			e.printStackTrace();
 		}
-	}	
+	}
 }
 
 public class ThreadEx09 {
