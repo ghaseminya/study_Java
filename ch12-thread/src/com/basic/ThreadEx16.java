@@ -1,6 +1,6 @@
 package com.basic;
 /*
-//Runnable 인터페이스를 구현해서 무작위로 화면에 원을 그리기
+//Runnable 인터페이스를 구현해서 무작위로 Frame 화면에 원 그리기
 
 AWT(Abstract Window Toolkit)
 GUI 프로그래밍을 제작하기 위해 자바에서 제공하는 라이브러리를 모아놓은 것

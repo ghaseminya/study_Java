@@ -11,6 +11,7 @@ ThreadEx06_after	동기화 후 (synchronized 동기화 블럭)
 
 class ATM_1 implements Runnable{
 	//공유자원
+	//long 정수형 8byte
 	private long depositMoney = 10000;
 	
 	//임계영역
@@ -34,14 +35,13 @@ class ATM_1 implements Runnable{
 					e.printStackTrace();					
 				}
 				// 0이하면 반복문 빠져나옴
-				if( depositMoney <= 0 ) break;
+				if( depositMoney <= 0 ) 
+					break;
 				
 				withDraw(1000);
-			}			
-//		}		
+			}
+//		}
 	}
-	
-	
 }
 
 public class ThreadEx06_before {
@@ -50,7 +50,21 @@ public class ThreadEx06_before {
 		ATM_1 atm = new ATM_1();
 		Thread mother = new Thread(atm, "mother") ;
 		mother.start();
+		
 		Thread son = new Thread(atm, "son");
 		son.start();
 	}
 }
+
+
+//출력결과
+//mother	8000
+//son	8000
+//mother	7000
+//son	7000
+//son	6000
+//mother	6000
+//son	4000
+//mother	4000
+//mother	2000
+//son	2000

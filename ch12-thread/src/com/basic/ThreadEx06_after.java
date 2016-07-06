@@ -37,25 +37,25 @@ class ATM implements Runnable{
 		}else{
 			System.out.println(Thread.currentThread().getName() + "잔액이 부족합니다.");			
 		}
-	}	
+	}
 	
 	@Override
 	public void run(){
 		
-		//synchronized(this)에서 this는 동기화의 대상을 알리는 용도 로 사용이 되었다. 
+		//synchronized(this)에서 this는 동기화의 대상을 알리는 용도 로 사용이 되었다.
 		//즉, 메소드가 호출된 인스턴스 자신을 대상으로 동기화를 진행하는 문장.
-		synchronized (this) {	
+		synchronized (this) {
 			for( int i=0; i<5; i++){
 				try{
 					Thread.sleep(1000);					
 				}catch(InterruptedException e){
-					e.printStackTrace();					
+					e.printStackTrace();
 				}
 				// 0이하면 반복문 빠져나옴
 				if( depositMoney <= 0 ) break;
 				
 				withDraw(1000);
-			}			
+			}
 		}		
 	}
 }
@@ -66,7 +66,20 @@ public class ThreadEx06_after {
 		ATM atm = new ATM();
 		Thread mother = new Thread(atm, "mother") ;
 		mother.start();
+		
 		Thread son = new Thread(atm, "son");
 		son.start();
 	}
 }
+
+//출력결과
+//mother	9000
+//mother	8000
+//mother	7000
+//mother	6000
+//mother	5000
+//son	4000
+//son	3000
+//son	2000
+//son	1000
+//son	0
