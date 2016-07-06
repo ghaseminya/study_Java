@@ -27,6 +27,8 @@ public class InetAddressEx02{
 		String url = null;
 		
 		//배열로 정보를 받으므로 저장할 배열 선언
+		//• 배열은 같은 자료 형들끼리 모아둔 하나의 묶음(집합)입니다.
+		//• 자바에서 하나의 배열은 하나의 객체로 인식됩니다.
 		InetAddress[] addresses;		
 		
 		try{
@@ -35,6 +37,7 @@ public class InetAddressEx02{
 			url = br.readLine();
 			
 			//해당 도메인과 매핑되어 있는 모든 주소 구하기, Static한 메소드로 되어 있어 직접 호출 가능
+			//getAllByName(): 매개변수 host에 대응되는 InetAddress배열을 반환
 			addresses = InetAddress.getAllByName(url);			
 			
 			//도메인 주소 출력
@@ -44,7 +47,9 @@ public class InetAddressEx02{
 			
 			//로컬 주소 출력
 			System.out.println("Local computer's IP: ");
-			System.out.println(InetAddress.getLocalHost());
+			System.out.println(InetAddress.getLocalHost()); 
+			//로컬컴퓨터 이름/로컬컴퓨터 IP주소 (InetAddress.getHostName()/InetAddress.getHostAddress()
+			//CODEDRAGON/169.254.80.80
 			
 		}catch(UnknownHostException e){
 			e.printStackTrace();
