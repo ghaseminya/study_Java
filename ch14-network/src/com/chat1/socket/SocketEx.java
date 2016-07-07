@@ -16,8 +16,6 @@ ServerEx.java	• 서버의 역할
 
 ClientEx.java	• 클라이언트용 프로그램
 				• 서버측 5000번 포트로 접속을 요청합니다.
-
-
 */
 
 
@@ -79,5 +77,4 @@ public class SocketEx extends Thread{
 			System.out.println(e.toString());
 		}
 	}
-
 }

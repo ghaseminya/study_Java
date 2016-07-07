@@ -56,9 +56,9 @@ class ATM implements Runnable{
 				
 				withDraw(1000);
 			}
-		}		
-	}
-}
+		} //synchronized
+	} //run
+} //ATM
 
 public class ThreadEx06_after {
 	
@@ -70,7 +70,8 @@ public class ThreadEx06_after {
 		Thread son = new Thread(atm, "son");
 		son.start();
 	}
-}
+} //ThreadEx06_after
+
 
 //출력결과
 //mother	9000

@@ -49,7 +49,7 @@ class SharedData{
 		data--;
 		System.out.println( "를 "+ data +"로 감소시킴");
 	}
-}
+} //SharedData
 
 class UpThread extends Thread{
 
@@ -73,7 +73,7 @@ class UpThread extends Thread{
 			data.up(name);
 		}
 	}
-}
+} //UpThread
 
 class DownThread extends Thread{
 
@@ -96,7 +96,7 @@ class DownThread extends Thread{
 			data.down(name);
 		}
 	}
-}
+} //DownThread
 
 public class ThreadEx11 {
 

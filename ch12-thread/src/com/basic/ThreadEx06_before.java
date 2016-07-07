@@ -42,7 +42,7 @@ class ATM_1 implements Runnable{
 			}
 //		}
 	}
-}
+} //ATM_1
 
 public class ThreadEx06_before {
 	

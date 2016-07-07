@@ -26,7 +26,7 @@ class Sum {
 	public int getNumber() {
 		return num;
 	}
-}
+} //Sum
 
 class AdderThread extends Thread {
 	Sum sumInst;
@@ -44,7 +44,7 @@ class AdderThread extends Thread {
 		for (int i = start; i <= end; i++)
 			sumInst.addNumber(i);
 	}
-}
+} //AdderThread
 
 class ThreadEx10 {
 	public static void main(String[] args) {
@@ -70,7 +70,8 @@ class ThreadEx10 {
 
 		System.out.println("1~100까지의 합: " + s.getNumber());
 	}
-}
+} //ThreadEx10
+
 
 /*//출력결과 - TODO: 스레드에 join()호출하지 않은 경우 결과 확인하기
 //스레드에 join()호출하지 않은 경우 결과 -> 랜덤한 결과 출력

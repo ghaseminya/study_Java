@@ -65,6 +65,7 @@ public class InetAddressEx01 {
 			address = InetAddress.getByName(url);			
 
 			//getHostName(): 호스트 이름을 문자열로 반환합니다.
+			//호스트명(Host Name): 	codedragon.tistory.com과 같이 인터넷 상에서 특정 컴퓨터를 가리키는 명칭
 			System.out.println("호스트 네임: " + address.getHostName());
 			
 			//getHostAddress(): IP주소를 문자열로 반환합니다.
@@ -74,10 +75,17 @@ public class InetAddressEx01 {
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
-			if( br!=null ){ try{br.close();}catch(IOException e){e.printStackTrace();} }
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-	}
-}
+	} //main
+} //InetAddressEx01
+
 
 /*//출력결과
 웹사이트 주소 입력 > codedragon.tistory.com
