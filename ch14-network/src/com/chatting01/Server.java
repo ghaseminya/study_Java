@@ -30,6 +30,8 @@ import java.net.Socket;
 import java.util.Vector;
 
 public class Server {
+	//ServerSocket 클래스: 
+	//특정 포트를 열어 놓은 상태에서 대기하다가 클라이언트의 접속 요청이 있으면 이를 새로운 소켓으로 연결하여 처리하는 클래스
 	ServerSocket serv;
 	Socket sock;
 	Vector vector; //클라이언트 소켓 정보를 저장

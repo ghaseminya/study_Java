@@ -13,9 +13,6 @@ EchoServer.java		• EchoServer
 					• 생성자에서 정보 받고
 					• 소켓 생성 getsocket()
 					• 입출력 스트림(바이트스트림) -> 문자스트림
-
-
-
 */
 
 import java.io.IOException;

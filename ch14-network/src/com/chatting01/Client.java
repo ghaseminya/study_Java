@@ -18,6 +18,22 @@ ServerThread.java	• 서버 스레드
 제한사항				• Vector 클래스를 사용해보기
 					• Vector 클래스를 사용하여 접속자의 소켓을 저장하기
 
+//------------------------------------------------
+ActionEvent
+	• ActionEvent는 버튼이 눌렸거나, 리스트, 메뉴 등의 컴포넌트가 선택이 되었을 때 발생하는 이벤트
+	• 텍스트 필드에서 엔터를 쳤을 때도 발생되는 이벤트
+
+ActionListener
+ActionEvent를 처리하는 이벤트 리스너 
+
+//------------------------------------------------
+FlowLayout
+	• 컴포넌트가 컨터이너에 한 줄로 배치되는 형태
+	• 한줄에 포함되지 않으면 다음주로 내려가며 컨테이너의 크기에 따라 컴포넌트의 크기도 자동 조절
+	• 컴포넌트들을 수평(왼쪽에서 오른쪽)으로 순서대로 배치 합니다.
+	• 처음에 배치를 하게되면 상단, 중앙부터 배치가 되는데 배치를 하다가 더 이상 배치할 공간이 없으면 자동으로 다음 줄로 이동하여 배치하게 됩니다.
+	• 컴포넌트를 배치할 때 컴포넌트의 간격을 갭(gap)이라고 하는데 컴포넌트들 사이의 수평, 수직간 간격을 설정할 수 있습니다.
+
 */
 
 import java.awt.FlowLayout;
@@ -39,7 +55,7 @@ public class Client extends Frame implements Runnable {
 	DataOutputStream dout;
 	
 //	String chatid="[codedragon]";
-	String chatid="[butterfly]";
+//	String chatid="[butterfly]";
 	
 	//TODO 7:
 	public Client() {
@@ -54,7 +70,7 @@ public class Client extends Frame implements Runnable {
 		tf.addActionListener(new TfHandler());
 	}
 	
-	//TODO 11:
+	//TODO 11: run() 오버라이드
 	@Override
 	public void run() {
 		try {
@@ -80,7 +96,8 @@ public class Client extends Frame implements Runnable {
 	public void sendMsg(String msg) {
 		try {
 			//UTF-8 인코딩을 사용해서 문자열을 출력
-			dout.writeUTF(chatid+msg);
+//			dout.writeUTF(chatid+msg);
+			dout.writeUTF(msg);
 		} catch(Exception e) {
 			System.out.println(e.toString());
 		}
@@ -88,6 +105,7 @@ public class Client extends Frame implements Runnable {
 	
 	//TODO 9: 이벤트 핸들러
 	public class TfHandler implements ActionListener {
+		@Override
 		public void actionPerformed(ActionEvent e) {
 			sendMsg(tf.getText());
 			tf.setText("");
@@ -97,7 +115,9 @@ public class Client extends Frame implements Runnable {
 	//TODO 12:
 	public static void main(String args[]) {
 		Client chatc = new Client();
+		//Frame 크기
 		chatc.setSize(300,220);
+		//Frame 보여주기
 		chatc.setVisible(true);
 		
 		Thread t = new Thread(chatc);
