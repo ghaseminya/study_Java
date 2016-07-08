@@ -36,7 +36,7 @@ public class ActionEventEx03 extends Frame {
 
 		
 		//이벤트 소스인 tf 변수에 이벤트 핸들러 클래스인 TfHandler 클래스를 연결
-		tf.addActionListener(new TfHandler() );
+		tf.addActionListener(new TfHandler());
 
 	}
 

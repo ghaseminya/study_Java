@@ -2,6 +2,7 @@ package com.awt03.event;
 /*
 이벤트 처리 3단계 이해하기 or 4단계
 
+//-----------------------------------------------------
 [컴포넌트 이벤트 처리 4단계]
 1단계	: 이벤트 소스 결정	
 		• 하나의 윈도우에는 여러 개의 컴포넌트가 존재할 수 있으므로 실제로 이벤트가 발생되면 처리할 컴포넌트를 결정합니다.
@@ -21,16 +22,11 @@ package com.awt03.event;
  		• 실제 이벤트 발생시 수행되는 부분
 
 //-------------------------------------------------------------------------
-
-
 ActionEvent
 	• ActionEvent는 버튼이 눌렸거나, 리스트, 메뉴 등의 컴포넌트가 선택이 되었을 때 발생하는 이벤트
 	• 텍스트 필드에서 엔터를 쳤을 때도 발생되는 이벤트
 
-
 //-------------------------------------------------------------------------
-
-
 [Step by Step 이벤트 처리 작업 단계]
 TODO 1: 이벤트 소스 결정
 Button이 눌려졌을 때 발생되는 ActionEvent 처리하기
@@ -44,7 +40,6 @@ Button와 ButtonHandler를 연결
 TODO 4.이벤트 핸들러 내용 구현
 
 //-------------------------------------------------------------------------
-
 [이벤트 핸들러 연결방법 2 가지]
 • 클래스의 인스턴스 생성 후 사용
 • 인라인(inline) 인스턴스 생성 기법 사용
@@ -91,7 +86,11 @@ public class ActionEventEx01 extends Frame{
 		//이벤트 소스(Button)와 이벤트 리스너(ButtonHandler) 연결
 		//이벤트 리스너  추가 메소드는 addXXXListener형태를가지며 XXX는 해당 이벤트 클래스의 이름과동일합니다.
 		//인라인(inline) 인스턴스 생성 기법
-		button.addActionListener(new ButtonHandler());
+//		button.addActionListener(new ButtonHandler());
+		
+		ButtonHandler btnHandler = new ButtonHandler();
+		button.addActionListener(btnHandler);
+		
 		
 		add(button);
 	}
