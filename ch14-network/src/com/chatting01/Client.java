@@ -26,6 +26,10 @@ ActionEvent
 ActionListener
 ActionEvent를 처리하는 이벤트 리스너 
 
+
+void actionPerformed(ActionEvent e
+컴포넌트에서 액션 이벤트가 발생했을 때 리스너에 의해 호출되는 메소드
+
 //------------------------------------------------
 FlowLayout
 	• 컴포넌트가 컨터이너에 한 줄로 배치되는 형태
@@ -76,6 +80,8 @@ public class Client extends Frame implements Runnable {
 		try {
 			sock = new Socket("127.0.0.1", 5000);
 			
+			//입출력 스트림 생성
+			//DataInputStream: 입력 스트림으로 부터 기본 자료형 데이터을 읽을 수 있는 각종 메서드와 문자를 읽을 수 있는 메서드를 정의
 			din = new DataInputStream(sock.getInputStream());
 			dout = new DataOutputStream(sock.getOutputStream());
 			
