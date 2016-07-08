@@ -68,7 +68,7 @@ public class ServerThread extends Thread {
 		}
 	}
 	
-	//TODO 2:
+	//TODO 2: 클라이언트 -> 서버로 메시지 전송 함수
 	public void sendMsg(String msg) {
 		try {
 			//데이터를 클라이언트로 보내기 위해 writeUTF() 메소드 호출

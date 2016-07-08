@@ -30,7 +30,6 @@ public synchronized void synchronizedMethod(){
 
 */
 
-
 class SharedData{
 	int data;
 

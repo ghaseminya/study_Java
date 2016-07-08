@@ -18,6 +18,7 @@ ServerThread.java	• 서버 스레드
 제한사항				• Vector 클래스를 사용해보기
 					• Vector 클래스를 사용하여 접속자의 소켓을 저장하기
 
+
 //------------------------------------------------
 ActionEvent
 	• ActionEvent는 버튼이 눌렸거나, 리스트, 메뉴 등의 컴포넌트가 선택이 되었을 때 발생하는 이벤트
@@ -27,8 +28,9 @@ ActionListener
 ActionEvent를 처리하는 이벤트 리스너 
 
 
-void actionPerformed(ActionEvent e
+void actionPerformed(ActionEvent e)
 컴포넌트에서 액션 이벤트가 발생했을 때 리스너에 의해 호출되는 메소드
+
 
 //------------------------------------------------
 FlowLayout

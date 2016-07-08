@@ -2,9 +2,6 @@ package com.chatting01;
 /*
 //채팅 프로그램(AWT) - Server
 
-제네릭(Generics)
-	• Generics는 컬렉션(자료구조), 객체들을 저장(수집)하는 구조적인 성격을 제공되는 것
-	• 제네릭(Generic)은 클래스 내부에서 사용할 데이터 타입을 외부에서 지정하는 기법을 의미
 //------------------------------------------------
 File Info
 com.chatting01
@@ -22,8 +19,14 @@ Client.java			• 클라이언트 프로그램
 제한사항				• Vector 클래스를 사용해보기
 					• Vector 클래스를 사용하여 접속자의 소켓을 저장하기
 
+//-----------------------------------------
+제네릭(Generics)
+	• Generics는 컬렉션(자료구조), 객체들을 저장(수집)하는 구조적인 성격을 제공되는 것
+	• 제네릭(Generic)은 클래스 내부에서 사용할 데이터 타입을 외부에서 지정하는 기법을 의미
+	• 데이터 형식(Data Type) 일반화를 이용하는 프로그래밍 패러다임
 
 */
+
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -34,6 +37,7 @@ public class Server {
 	//특정 포트를 열어 놓은 상태에서 대기하다가 클라이언트의 접속 요청이 있으면 이를 새로운 소켓으로 연결하여 처리하는 클래스
 	ServerSocket serv;
 	Socket sock;
+	//Vector 클래스: Vector클래스는 제네릭을 사용할 수 있는 대표적인 클래스
 	Vector vector; //클라이언트 소켓 정보를 저장
 	
 	//TODO 3:
