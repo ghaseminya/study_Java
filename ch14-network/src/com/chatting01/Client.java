@@ -15,6 +15,7 @@ ServerThread.java	• 서버 스레드
 					• 보통 채팅 프로그램들은 텍스트 상자와 다중 텍스트 상자로 구현됩니다.
 					• 클라이언트간 입력되는 내용을 다른 클라이언트에도 모두 뿌려주기
 					• 데이터를 보낼 때는 writeUTF() 메소드를 사용하고 데이터를 받을 때는 readUTF() 메소드를 사용합니다.
+
 제한사항				• Vector 클래스를 사용해보기
 					• Vector 클래스를 사용하여 접속자의 소켓을 저장하기
 
@@ -35,7 +36,7 @@ void actionPerformed(ActionEvent e)
 //------------------------------------------------
 FlowLayout
 	• 컴포넌트가 컨터이너에 한 줄로 배치되는 형태
-	• 한줄에 포함되지 않으면 다음주로 내려가며 컨테이너의 크기에 따라 컴포넌트의 크기도 자동 조절
+	• 한줄에 포함되지 않으면 다음줄로 내려가며 컨테이너의 크기에 따라 컴포넌트의 크기도 자동 조절
 	• 컴포넌트들을 수평(왼쪽에서 오른쪽)으로 순서대로 배치 합니다.
 	• 처음에 배치를 하게되면 상단, 중앙부터 배치가 되는데 배치를 하다가 더 이상 배치할 공간이 없으면 자동으로 다음 줄로 이동하여 배치하게 됩니다.
 	• 컴포넌트를 배치할 때 컴포넌트의 간격을 갭(gap)이라고 하는데 컴포넌트들 사이의 수평, 수직간 간격을 설정할 수 있습니다.
@@ -54,8 +55,8 @@ import java.net.Socket;
 
 public class Client extends Frame implements Runnable {
 	
-	TextField tf;
-	TextArea ta;
+	TextField tf; //메시지 입력
+	TextArea ta; //채팅 메시지 표시
 	Socket sock;
 	DataInputStream din;
 	DataOutputStream dout;
@@ -63,7 +64,7 @@ public class Client extends Frame implements Runnable {
 //	String chatid="[codedragon]";
 //	String chatid="[butterfly]";
 	
-	//TODO 7:
+	//TODO 7: 생성자
 	public Client() {
 		setLayout(new FlowLayout());
 		
@@ -116,7 +117,7 @@ public class Client extends Frame implements Runnable {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			sendMsg(tf.getText());
-			tf.setText("");
+			tf.setText(""); //입력박스 초기화
 		}
 	}
 	
@@ -131,4 +132,4 @@ public class Client extends Frame implements Runnable {
 		Thread t = new Thread(chatc);
 		t.start();
 	}
-}
+} //Client

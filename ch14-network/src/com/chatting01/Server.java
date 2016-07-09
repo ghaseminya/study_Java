@@ -40,12 +40,13 @@ public class Server {
 	//Vector 클래스: Vector클래스는 제네릭을 사용할 수 있는 대표적인 클래스
 	Vector vector; //클라이언트 소켓 정보를 저장
 	
-	//TODO 3:
+	//TODO 3: 생성자
 	public Server() {
 		vector = new Vector();
 		try {
 			serv = new ServerSocket(5000);
 			System.out.println("[ChatServer]Server Start...");
+			
 			while (true) {
 				sock = serv.accept();
 				ServerThread client = new ServerThread(this, sock);
@@ -69,4 +70,4 @@ public class Server {
 	public static void main(String args[]) {
 		Server chats = new Server();
 	}
-}
+} //Server

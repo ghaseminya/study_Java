@@ -55,6 +55,7 @@ public class ServerThread extends Thread {
 			this.server = server;
 			//소켓 생성
 			sock = socket;
+			
 			//입출력 스트림 생성
 			//DataInputStream: 입력 스트림으로 부터 기본 자료형 데이터을 읽을 수 있는 각종 메서드와 문자를 읽을 수 있는 메서드를 정의 
 			din = new DataInputStream(sock.getInputStream());
@@ -68,7 +69,7 @@ public class ServerThread extends Thread {
 		}
 	}
 	
-	//TODO 2: 클라이언트 -> 서버로 메시지 전송 함수
+	//TODO 2: 서버 -> 클라이언트로 메시지 전송 함수
 	public void sendMsg(String msg) {
 		try {
 			//데이터를 클라이언트로 보내기 위해 writeUTF() 메소드 호출
