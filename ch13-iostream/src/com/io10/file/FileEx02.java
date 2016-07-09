@@ -21,8 +21,9 @@ public class FileEx02 {
 	
 	public static void main(String[] args){
 		//파일 객체 생성
-		File f1 = new File("C:" + File.separator + "javanAndroid" + File.separator + "sample.txt");
+		File f1 = new File("C:" + File.separator + "CodeLab" + File.separator + "sample.txt");
 		
+		//------------------------------------
 		System.out.println("=== 파일 생성===");
 		try{
 			//파일 생성
@@ -31,6 +32,7 @@ public class FileEx02 {
 			e.printStackTrace();
 		}		
 		
+		//------------------------------------
 		System.out.println("\n=== 파일 정보===");
 		//절대경로
 		System.out.println("절대경로 : " + f1.getAbsolutePath());
@@ -38,7 +40,12 @@ public class FileEx02 {
 		System.out.println("파일명 : " + f1.getName());
 		System.out.println("파일크기 : " + f1.length());
 		
-		//파일명 변경하기
+		//파일의 쓰기/읽기 권한 체크
+		System.out.println("파일쓰기 권한 : " + f1.canWrite());
+		System.out.println("파일읽기 권한 : " + f1.canRead());
+		
+		
+		//------------------------------------
 		System.out.println("\n=== 파일명 변경===");		
 		//변경하고자하는 파일 객체 생성
 		File f2 = new File("C:" + File.separator + "javanAndroid" + File.separator + "sampleNameChanged.txt");
@@ -51,7 +58,8 @@ public class FileEx02 {
 		System.out.println("파일명 : " + f2.getName());
 		System.out.println("파일크기 : " + f2.length());
 		
-		//파일 삭제
+		
+		//------------------------------------
 		System.out.println("\n=== 파일명 삭제===");
 		//파일이 존재할 경우 파일 삭제
 		if( f2.delete()){
