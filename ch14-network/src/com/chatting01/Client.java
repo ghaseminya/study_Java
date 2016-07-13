@@ -68,8 +68,10 @@ public class Client extends Frame implements Runnable {
 	public Client() {
 		setLayout(new FlowLayout());
 		
-		ta = new TextArea(7,30);
+		//30은 30자
 		tf = new TextField(30);
+		//TextArea 크기지정 (7, 30) 7은 7줄  30은 30자 
+		ta = new TextArea(7,30);
 		add(tf);
 		add(ta);
 		
