@@ -1,5 +1,6 @@
 //서버쪽에 있는 index.jsp의 정보를 POST방식으로 가져오는 프로그램
 
+
 package com.basic;
 
 import java.io.BufferedReader;
