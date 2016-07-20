@@ -186,6 +186,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 		
 		//종료 버튼 처리
 		if (obj == exitButton) { //종료버튼
+			//어플리케이션 종료 코드
 			System.exit(0);
 		} else if (obj == loginButton) { //로그인 버튼
 			id = idInput.getText();
