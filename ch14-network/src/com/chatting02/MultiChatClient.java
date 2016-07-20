@@ -42,7 +42,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 
 	//로그아웃 패널 구성
 	private JPanel logoutPanel;
-	//로그아웃 화면에서 대화면 출력 레이블
+	//로그아웃 화면에서 대화명 출력 레이블
 	private JLabel label2;
 	//로그아웃 버튼
 	private JButton logoutButton;
@@ -88,6 +88,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 		loginPanel.add(loginButton, BorderLayout.EAST);
 
 		
+		
 		//로그 아웃 패널 구성
 		logoutPanel = new JPanel();
 		//레이아웃 설정(로그아웃 패널의 레이아웃을 보더레이아웃으로 설정)
@@ -102,6 +103,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 		logoutPanel.add(label2, BorderLayout.CENTER);
 		logoutPanel.add(logoutButton, BorderLayout.EAST);
 
+		
 		
 		//입력 패널 구성
 		msgPanel = new JPanel();
@@ -123,14 +125,18 @@ public class MultiChatClient implements ActionListener, Runnable {
 		tab.add(loginPanel, "login");
 		tab.add(logoutPanel, "logout");
 
+		
 		//메일 프레임 구성
 		jframe = new JFrame("MultiChat");
 		msgOut = new JTextArea(" ", 10, 30);
 		//JTextArea의 내용을 수정하지 못하게 하기(출력전용으로 사용)
 		msgOut.setEditable(false);
+		//JTextArea가 스크크롤 바를 지원하지 않기 때문에 
+		//JScrollPane위젯이 JTextArea를 포함하는 컨테이너 형식으로 스크롤바를 지원할 수 있습니다.
 		JScrollPane jsp = new JScrollPane(msgOut, 
 				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, //수직 스크롤바는 항상 나타내고, 
 				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER); //수평 스크롤바는 필요할 때만 나타나게 합니다.
+		//로그인 패널 표시
 		jframe.add(tab, BorderLayout.NORTH);
 		jframe.add(jsp, BorderLayout.CENTER);
 		jframe.add(msgPanel, BorderLayout.SOUTH);
@@ -170,8 +176,12 @@ public class MultiChatClient implements ActionListener, Runnable {
 	} //connectServer
 
 	//이벤트 처리
+	//모든 위젯의 이벤트를 하나의 actionPerformed()메소드로 처리
 	// import java.awt.event.ActionEvent;
 	public void actionPerformed(ActionEvent arg0) {
+		//어떤 위젯에서 발생한 이벤트인지 확인하기
+		//getSource()를 이용해 이벤트를 생성시킨 객체의 레퍼런스를 가져와서 
+		//if문으로 확인하여 각각의 이벤트 코드를 작성합니다.
 		Object obj = arg0.getSource();
 		
 		//종료 버튼 처리

@@ -50,7 +50,7 @@ public class MultiChatServer{
 		server.start();
 	}
 
-	// 연결된 모든 클라이언트에 메시지 중계
+	// 연결된 모든 클라이언트에 메시지 전달
 	void msgSendAll(String msg) {
 		for (ChatThread ct : chatlist) {
 			ct.outMsg.println(msg);
