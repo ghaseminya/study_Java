@@ -41,4 +41,5 @@ public class MathEx01 {
 		i = Math.min(6, 8);
 		System.out.println(i); //6
 	}
+	
 }
