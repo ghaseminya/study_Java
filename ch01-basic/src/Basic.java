@@ -6,6 +6,7 @@ public class Basic {
 		//한줄 주석
 		//System.out.println("한줄 주석 달기");
 		
+		
 		/*여러줄 주석
 		
 		파일이름: Basic.java
@@ -18,5 +19,4 @@ public class Basic {
 		System.out.println("주석 달기");
 		
 	}
-
 }

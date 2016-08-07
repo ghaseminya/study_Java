@@ -1,4 +1,5 @@
 //System.out.println의 활용
+//표준 출력 방법 확인하기
 
 public class PrintlnEx {
 
