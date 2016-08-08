@@ -8,9 +8,9 @@ public class CastEx03 {
 		
 		System.out.println("");
 		System.out.println("=========프로모션=========");
-		/*프로모션:
-		더 큰 자료형으로 승격이 일어나는 형태
-		정보의 손실이 전혀 없으며 자동적으로 발생*/
+		//프로모션:
+		//•더 큰 자료형으로 승격이 일어나는 형태
+		//•정보의 손실이 전혀 없으며 자동적으로 발생
 		byte b1 = 127;
 		byte b2 = 127;
 //		byte b3 = b1 + b2;	//Error: cannot convert from int to byte
@@ -49,12 +49,13 @@ public class CastEx03 {
 		System.out.println("resultD = " + resultD);	//resultD = 12445.3
 		
 		
+		//------------------------------
 		System.out.println("");System.out.println("");
 		System.out.println("=========디모션=========");
-		/*디모션:
-		더 작은 자료형으로 강등
-		자료의 손실이 있을 수 있음
-		명시적으로 형변환해야 함*/
+		//디모션:
+		//•더 작은 자료형으로 강등
+		//•자료의 손실이 있을 수 있음
+		//•명시적으로 형변환해야 함
 		byte b4 = 125;
 		byte b5 = 125;
 		byte result_byte = (byte)(b4 + b5); 	
@@ -87,4 +88,5 @@ public class CastEx03 {
 		System.out.println("result_int3 = " + result_int3);	//result_int3 = 2468
 		//자료형 표현범위에 있어서 데이터 손실 없이 값이 출력됨
 	}
+	
 }

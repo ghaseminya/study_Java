@@ -22,7 +22,7 @@ public class VariableTypes01 {
 		boolean bool = true;	//true, false
 		System.out.println("bool = " + bool);
 		
-		//boolean 타입외 데이터 저장시 Error남.
+		//boolean 타입외 데이터 저장시 Error가 발생합니다.
 		//bool = 20;
 		
 		

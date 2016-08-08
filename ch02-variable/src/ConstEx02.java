@@ -8,6 +8,7 @@ public class ConstEx02 {
 //		int num1=10000000000;
 		//num1에 저장불가 (컴파일 에러:The literal 10000000000 of type int is out of range )
 		//10000000000을 int형에 저장하려고 할 때 int형 저장공간보다 크므로 에러가 발생
+		//0 10개
 		
 //		long num2=10000000000;
 		//컴파일 에러(The literal 10000000000 of type int is out of range)
@@ -18,4 +19,5 @@ public class ConstEx02 {
 		//컴파일 에러(cannot convert from double to float)
 		//3.14는 double형 이므로 float에 저장 불가
 	}
+	
 }

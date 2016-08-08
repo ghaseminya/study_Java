@@ -20,12 +20,13 @@ public class VariableEx04 {
 		char ch6='1';
 		char ch7=1;
 		
-		System.out.println(ch1);
-		System.out.println(ch2);
-		System.out.println(ch3);
-		System.out.println(ch4);
-		System.out.println(ch5);
-		System.out.println(ch6);
-		System.out.println(ch7);
+		System.out.println(ch1); //A
+		System.out.println(ch2); //한
+		System.out.println(ch3); //한
+		System.out.println(ch4); //め
+		System.out.println(ch5); //も
+		System.out.println(ch6); //1
+		System.out.println(ch7); //
 	}
+	
 }

@@ -13,10 +13,11 @@
 
 
 [상수의 표현 자료형]
-정수형 상수	int형으로 표현 약속
-실수형 상수	double형으로 표현 약속
+정수형 상수		int형으로 표현 약속
+실수형 상수		double형으로 표현 약속
 
 */
+
 public class ConstEx01 {
 
 	public static void main(String[] args) {

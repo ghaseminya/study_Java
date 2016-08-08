@@ -15,6 +15,7 @@ public class CastEx02 {
 		int num2=20;
 		short result=(short)(num1 + num2);
 		
-		System.out.println(result);
+		System.out.println(result); //30
 	}
+	
 }
