@@ -49,6 +49,7 @@ public class ConsoleInputEx05 {
 
 	
 	
+	//-------------------------------------------
 	//방법 3 - input.nextLine() & Integer.parseInt()
 //	System.out.println("정수입력 > ");
 //	

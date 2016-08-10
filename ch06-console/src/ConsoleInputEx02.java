@@ -14,7 +14,7 @@ public class ConsoleInputEx02 {
 	public static void main(String[] args)
 	{
 		//Scanner의 인스턴스를 생성
-		Scanner scanner=new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		//System.in	:키보드 리소스를 의미
 		
 		int num1=scanner.nextInt();

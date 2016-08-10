@@ -1,7 +1,7 @@
 /*
 //%서식문자 확인
 
-//%c, 10진수/8진수/16진수, %g, e표기법
+//%c, 10진수/8진수/16진수, e표기법
 //System.out.printf vs System.out.println 차이 확인
 //-System.out.println	: 출력후 다음행으로 이동
 //-System.out.printf	: 출력후 다음행으로 이동 안함, 서식문자 사용
@@ -10,12 +10,15 @@
 [서식 문자]
 http://codedragon.tistory.com/2536
 
+
 */
 public class ConsoleOutputEx05 {
 
 	public static void main(String[] args){
 
 		//문자
+		//%c  		한 개의 문자
+		//%숫자c		해당자리 숫자만큼 자리를 확보한 상태로 출력하는 서식
 	    System.out.printf("%c", 'A'); System.out.println("");	//A
 	    System.out.printf("%7c", 'A'); System.out.println("");	//[      A]
 	    System.out.printf("%-7c", 'A'); System.out.println("");	//[A      ]
@@ -28,6 +31,7 @@ public class ConsoleOutputEx05 {
 	    System.out.printf("%x", 1234567); System.out.println("");	//12d687
 	    System.out.printf("%10d", 1234567); System.out.println("");	//[   1234567]
 	    System.out.printf("%f", 123.456789f); System.out.println("");	//123.456787
+	    //%f	실수 출력
 	    
 		 //추가확인 후 코드 추가
 //	    System.out.printf("%g", 123.456789f); System.out.println("");	//123.457
