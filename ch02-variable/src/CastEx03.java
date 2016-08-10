@@ -27,7 +27,7 @@ public class CastEx03 {
 		short s1 = 12345;
 		short s2 = 12345;
 		int i2 = s1 + s2;
-//		32bit(4바이트)미만 short형 데이터 연산시 32bit int형으로 승격
+		//32bit(4바이트)미만 short형 데이터 연산시 32bit int형으로 승격
 		//short(2byte), int(4byte)
 		System.out.println("i2= " + i2 );				// i2= 24690
 		System.out.println("s1 + s2 = " + (s1+s2) );	// 자동적으로 int로 형변환 됩니다.
