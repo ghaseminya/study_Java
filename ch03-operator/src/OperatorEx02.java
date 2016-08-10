@@ -36,22 +36,23 @@ public class OperatorEx02 {
 		boolean result;
 		
 		result = a < b;
-		System.out.println("a < b: " +result );
+		System.out.println("a < b: " +result ); //a < b: true
 		
 		result = a > b;
-		System.out.println("a > b: " +result );
+		System.out.println("a > b: " +result ); //a > b: false
 		
 		result = a <= b;
-		System.out.println("a =< b: " + result);
+		System.out.println("a =< b: " + result); //a =< b: true
 		
 		result = a >= b;
-		System.out.println("a >= b: " + result);
+		System.out.println("a >= b: " + result); //a >= b: false
 		
 		result = a == b;
-		System.out.println("a == b: " + result);
+		System.out.println("a == b: " + result); //a == b: false
 		
 		result = a != b;
-		System.out.println("a != b: " + result);
+		System.out.println("a != b: " + result); //a != b: true
 		
 	}
+	
 }
