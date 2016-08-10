@@ -7,7 +7,7 @@ public class ConstEx04 {
 		//변수
 		int num1 = 100;
 		
-		System.out.println(num1);
+		System.out.println(num1); //100
 		
 		//--------------------
 		//상수
@@ -15,7 +15,7 @@ public class ConstEx04 {
 //		final int num2 = 200;
 		final int NUM2 = 200; //상수명은 관례로 모두 대문자 사용
 		
-		System.out.println(NUM2);
+		System.out.println(NUM2); //200
 
 		
 		//상수 값 변경
