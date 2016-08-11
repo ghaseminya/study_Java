@@ -5,17 +5,17 @@ import java.util.Scanner;
 
 public class ConsoleInputEx03 {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
 		Scanner keyboard=new Scanner(System.in);
 		
 		System.out.print("당신의 이름은? ");
 
-		//nextLine() : 한라인의 문자열을 입력값으로 가져옵니다.
+		//nextLine() : 문자 또는 문자열 한라인 전체를 입력 받습니다.
 		String str=keyboard.nextLine();
 		System.out.println("안녕하세요 "+str+'님');
 		
 		
+		//--------------------
 		System.out.print("당신은 잘 생겼다고 생각하십니까, 예(true)/아니오(false)? ");
 		
 		//nextBoolean() : boolean타입의 자료형 값을 입력값으로 가져옵니다.
@@ -26,6 +26,7 @@ public class ConsoleInputEx03 {
 			System.out.println("헐~ 대박 .");
 	
 		
+		//--------------------
 		System.out.print("당신과 짝꿍의 영어점수는 어떻게 되나요? ");
 		
 		//nextDouble(): Double타입의 자료형 값을 가져옵니다.
@@ -37,6 +38,8 @@ public class ConsoleInputEx03 {
 		else
 			System.out.println("당신이 "+(-diff)+"만큼 작군요.");
 		
+		
+		//--------------------
 		System.out.print("당신의 키는? ");
 		double num3=keyboard.nextDouble();
 		System.out.println("당신의 키는 "+ num3 +"입니다.");

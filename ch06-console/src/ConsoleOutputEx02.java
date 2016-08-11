@@ -20,6 +20,8 @@ public class ConsoleOutputEx02 {
 		//JDK 1.5이상부터 사용가능합니다.
 		System.out.printf("정수는 %d,  실수는 %f, 문자는 %c, 문자열는 %s", 7, 3.14F, 'J', "Love");
 		//정수는 7,  실수는 3.140000, 문자는 J, 문자열는 Love
+		
+
 
 	}
 }
