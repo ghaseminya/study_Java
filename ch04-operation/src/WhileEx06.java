@@ -1,8 +1,6 @@
+//while문 - 입력값 누적합구하기 및 강제 종료
 
-
-
-
-public class ContinueEx02_1 {
+public class WhileEx06 {
 	public static void main(String[] args){
 		java.util.Scanner input= new java.util.Scanner (System.in);
 		int i= 1;
@@ -15,5 +13,8 @@ public class ContinueEx02_1 {
 			System.out.println("누적합계 : " + sum);
 		}
 		System.out.println("반복을 종료합니다");
+		
+		
+		input.close();
 	}
 }

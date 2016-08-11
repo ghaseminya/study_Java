@@ -11,8 +11,7 @@ public class SwitchEx05 {
 //		int n=7;
 //		int n=10;
 		
-		switch(n)
-		{
+		switch(n){
 		case 1:
 			System.out.println("First");
 		case 2:

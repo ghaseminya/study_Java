@@ -1,5 +1,5 @@
-//비교인자값 감소/2씩 증가시키기
-
+//비교인자값 1씩 감소 증가시키기
+//비교인자값 2씩 증가 시키기 (방법1/방법2)
 
 public class ForEx02 {
 
@@ -13,6 +13,8 @@ public class ForEx02 {
 		System.out.println();
 		System.out.println("\t프로그램 종료!");
 		
+		
+		//--------------------
 		// 비교인자값 2씩 증가시켜서 출력시키기 방법1
 		System.out.println();
 		System.out.println("비교 인자값 2씩 증가시키기 1:");
@@ -21,6 +23,7 @@ public class ForEx02 {
 		}
 		System.out.println();
 		System.out.println("\t프로그램 종료!");
+		
 		
 		// 비교인자값 2씩 증가시켜서 출력시키기 방법2
 		System.out.println();
