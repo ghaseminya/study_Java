@@ -25,6 +25,13 @@ public class EscapeSequenceEx01 {
 		
 		System.out.println("나의 이름은 \"홍길동\"이라고 합니다.");
 		// \"	:문자열 내에서 큰 따음표로 인식(")
+		
+		
+		//\n, \t
+		System.out.println("I am a boy, You are a girl");
+		System.out.println("I am a boy, \n You are a girl");
+		System.out.println("I am a boy, \t You are a girl");
+		
 	}
 
 }
@@ -32,3 +39,8 @@ public class EscapeSequenceEx01 {
 
 //출력결과
 //나의 이름은 "홍길동"이라고 합니다.
+//나의 이름은 "홍길동"이라고 합니다.
+//I am a boy, You are a girl
+//I am a boy, 
+// You are a girl
+//I am a boy, 	 You are a girl
