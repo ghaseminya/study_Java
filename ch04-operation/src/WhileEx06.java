@@ -1,4 +1,5 @@
 //while문 - 입력값 누적합구하기 및 강제 종료
+//Ctrl+Q 강제종료
 
 public class WhileEx06 {
 	public static void main(String[] args){
@@ -18,3 +19,16 @@ public class WhileEx06 {
 		input.close();
 	}
 }
+
+
+//출력결과
+//더할 숫자를 입력해 주세요
+//10
+//누적합계 : 10
+//7
+//누적합계 : 17
+//4
+//누적합계 : 21
+//11
+//누적합계 : 32
+//Ctrl+Q 강제종료
