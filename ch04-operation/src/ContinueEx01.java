@@ -1,6 +1,6 @@
-/*
+/* //LAB
 //1~10출력할 때 3의 배수는 출력하지 않기
-//LAB
+
 
 continue문
 	• 반복문을 탈출하기위해 사용되는 것이 아니라 
@@ -17,7 +17,7 @@ public class ContinueEx01 {
 		
 			//특정 조건일때 코드 수행을 건너뛰고 다음 회차로 건너뛴다.
 			if( i%3 == 0)
-				continue;
+				continue; //다음의 수행문들을 수행하지 않고 다음 반복을 위해 증감식으로  이동합니다.
 			System.out.println(i);
 		}
 	}

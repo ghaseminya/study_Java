@@ -6,7 +6,7 @@ public class WhileEx02 {
 	public static void main(String[] args) {
 		
 		int sum, su;
-		sum = su = 0;	//초기식
+		sum = su = 0;		//초기식
 		
 		while(su <= 100){	//조건식
 			

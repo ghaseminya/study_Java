@@ -1,9 +1,14 @@
-/*
+/* //LAB
 //Switch~Case문에서 문자열 비교를 통해 요일 출력하기
 //monday, tuesday, wednesday, thursday, friday, saturday, sunday
-//LAB
+
+
+<JDK 버전별 득이사항>
+6.0	swith()문에 long을 제외한 정수형(byte, short, int), char, 문자열 미지원
+7.0	swith()문에 long을 제외한 정수형(byte, short, int), char, 문자열(String) 지원 추가됨
 
 */
+
 public class LAB01 {
 
 	public static void main(String[] args) {
@@ -35,7 +40,7 @@ public class LAB01 {
 		case "sunday":
 			System.out.printf("일요일\n");
 			break;
-		default:	//사용자의 잘못 입력을 처리하도록 처리
+		default:	//사용자의 잘못된 입력을 처리하는 구문
 			System.out.printf("잘못 입력되었습니다.\n");
 		}
 		

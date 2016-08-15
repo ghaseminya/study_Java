@@ -1,5 +1,7 @@
 /* //LAB
 조건문 - 다중 if문 (성적 등급 처리)
+단일 if문 학점 출력한 후 다중 if문으로 변환하기
+
 
 [학점 등급표]
 100~90	A
@@ -41,7 +43,7 @@ public class IfEx03 {
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
 		int score;
-		char grade;
+		char grade; //char grade ='?'; //초기화 필요할 수 있습니다.
 		
 		System.out.print("성적을 입력하세요 > ");
 		//nextInt(): 입력값을 int형으로 가져온다
@@ -61,6 +63,23 @@ public class IfEx03 {
 			grade ='?';
 			System.out.println("성적을 다시 입력하세요.");
 		}
+		
+		
+		if( score >= 90 && score <=100 ){
+			grade ='A';
+		}if(score >= 80 && score <=89){
+			grade ='B';
+		}if(score >= 70 && score <=79){
+			grade ='C';
+		}if(score >=60 && score <=69){
+			grade = 'D'; 
+		}if(score < 60){
+			grade ='F';			
+		}else{
+			grade ='?';
+			System.out.println("성적을 다시 입력하세요.");
+		}
+		
 		
 		System.out.println("성적 : " + score);
 		System.out.println("등급: " + grade);

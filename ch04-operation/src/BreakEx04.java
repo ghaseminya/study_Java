@@ -18,11 +18,10 @@ public class BreakEx04 {
 		boolean result=false;
 		
 //		while(num<10)	//찾은 못한경우 검증시 코드
-		while(num<100)
-		{
+		while(num<100){
+			
 			//3의 배수이고 7의 배수인 정수이면 while문 빠져나가기
-			if(num%3==0 && num%7==0)
-			{
+			if(num%3==0 && num%7==0){
 				result=true;
 				break;
 			}

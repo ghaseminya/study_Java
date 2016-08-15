@@ -24,20 +24,39 @@ public class BreakEx02 {
 				System.out.println(i + " , " + j);
 			}
 		}
+
 		
-// break label ----------------------		
 		System.out.println("=======================");
+// break label ----------------------		
 		
-		//다중 반복문에서 break할 때 모든 반복문을 완전히 빠져나가게 하려면 break label문을 사용함.
+		//다중 반복문에서 break할 때 모든 반복문을 완전히 빠져나가게 하려면 break label문을 사용해야 합니다.
+		//레이블 선언부분: 레이블 선언 후 반드시 반복문이 와야 합니다.
 		exit_for:	//break label설정
 		for(int i=0; i<3; i++){
 			for(int j=0; j<5; j++){
 				
 				if(j==3)
 					break exit_for;	// break label호출 
+									//레이블이 가리키는 반복문을 탈출합니다.
 					
 				System.out.println(i + " , " + j);
 			}
 		}
 	}
 }
+
+
+//출력결과
+//0 , 0
+//0 , 1
+//0 , 2
+//1 , 0
+//1 , 1
+//1 , 2
+//2 , 0
+//2 , 1
+//2 , 2
+//=======================
+//0 , 0
+//0 , 1
+//0 , 2

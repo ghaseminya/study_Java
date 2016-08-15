@@ -9,8 +9,13 @@ public class ForEx03 {
 		int total = 0;
 		
 		for(int i=1; i<=100; i++){
-			total += i;	// total = total + i;
+			
+			total += i; //total = total + i;
+			
 			System.out.println("1부터 " + i + " 까지의 합은 " + total + " 입니다");
 		}
 	}
 }
+
+
+//1부터 100 까지의 합은 5050 입니다

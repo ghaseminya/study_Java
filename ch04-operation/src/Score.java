@@ -37,7 +37,7 @@ public class Score {
 				수학 < 0 || 수학 > 100);*/
 		
 		
-		//유효한 점수 인지 체크하기 (과목별로 )
+		//유효한 점수 인지 체크하기 (과목별로 ) - 데이터 검증 (중요)
 		do{
 			System.out.print("국어 : ");
 			국어 = input.nextInt();
@@ -56,18 +56,19 @@ public class Score {
 		총점 = 국어 + 영어 + 수학;
 		
 		
-		//데이터 검증 (중요)
+		//데이터 처리
 		//float = int / int;
 		평균1 = 총점/3;				// int -> float 형변환 (65 -> 65.0)
 		평균2 = (float)총점/3.0F;	// int -> float 형변환 (65 -> 65.0)
-//		평균2 = 총점/3.0F;			// int -> float 형변환 (65 -> 65.0), 상동		
+		//평균2 = 총점/3.0F;			// int -> float 형변환 (65 -> 65.0), 상동		
 		
 		System.out.println();
 		System.out.println("총점 = " + 총점);
 		System.out.println("평균1 = " + 평균1);
-//		System.out.println("평균2 = " + 평균2);	//출력 후 줄바꿈
-		System.out.printf("평균2 = %.2f", 평균2);	//출력할 데이터의 포멧 지정, SDK ver5.0이상	
+		//System.out.println("평균2 = " + 평균2);	//출력 후 줄바꿈
+		System.out.printf("평균2 = %.2f \n", 평균2);	//출력할 데이터의 포멧 지정, SDK ver5.0이상	
 		
+		//등급 판별
 		switch((int)평균2/10){
 			case 10:
 			case 9:{
@@ -92,7 +93,7 @@ public class Score {
 				break;			
 			}
 		}
-		System.out.println();
+		
 		System.out.println("학점 = " + 학점);
 		
 		input.close();

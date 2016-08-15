@@ -33,7 +33,9 @@ public class ForEx01 {
 
 	public static void main(String[] args) {
 		
+		//for(초기식 ; 조건식 ; 증감식){
 		for( int i=1; i<=5; i++){
+			//수행문
 			System.out.print("\t"+i);
 		}
 		System.out.println();	//단순 줄바꿈

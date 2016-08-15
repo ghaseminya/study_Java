@@ -15,7 +15,6 @@ public class WhileEx06 {
 		}
 		System.out.println("반복을 종료합니다");
 		
-		
 		input.close();
 	}
 }

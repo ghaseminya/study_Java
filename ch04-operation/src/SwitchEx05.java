@@ -14,22 +14,31 @@ public class SwitchEx05 {
 		switch(n){
 		case 1:
 			System.out.println("First");
+			//TODO : break; 문이 없을 때의 결과 확인
+//			break;
 		case 2:
 			System.out.println("Second");
+//			break;
 		case 3:
 			System.out.println("Thrid");
+//			break;
 		case 4:
 			System.out.println("Fourth");
+//			break;
 		case 5:
 			System.out.println("Fifth");
+//			break;
 		case 6:
 			System.out.println("Sixth");
+//			break;
 		case 7:
 			System.out.println("seventh");
-			
-		/*default:
-			System.out.println("Ordinal Number"); //서수
-			*/		
+//			break;
+		
+		//TODO : default레이블 유무에 따른 결과 확인
+//		default:
+//			System.out.println("Ordinal Number"); //서수
+					
 		}
 		
 		System.out.println("I love JAVA!");
