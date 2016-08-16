@@ -1,6 +1,12 @@
-//LAB
+/*//LAB
 //for문 - 1부터 100까지의 누적 합 구하기
 
+[힌트]
+5050
+1+2+3+4+5+ ..... + 100
+total = total+ i
+
+*/
 
 public class ForEx03 {
 
