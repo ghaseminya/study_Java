@@ -25,7 +25,17 @@
 http://codedragon.tistory.com/2010
 
 
+
+[변수 선언 위치에 따른 유형]
+유형						이름
+함수 외부에 선언된 변수			전역 변수(global variable)
+함수 내부에 선언된 변수			지역 변수(local variable)
+함수의 입력형태에 선언된 변수		매개 변수(parameter)
+클래스 내부에 선언된 변수		멤버 변수(member variable)
+
+
 */
+
 public class FunctionEx01 {
 
 	public static void main(String[] args) {
@@ -38,12 +48,11 @@ public class FunctionEx01 {
 		System.out.println("프로그램의 끝");
 	}
 	
-	//메소드 정의
+	//메소드 정의, 함수의 형태 3 - 출력형태X 입력형태O
 	//int hour: 매개변수
 	//매개변수: 매소드 실행시 전달되는 값을 저장하기 위해 선언된 변수
 	//hour = 9: hour에 메소드 호출하면서 전달된 9가 저장
-	public static void tellTime(int hour)
-	{
+	public static void tellTime(int hour){ 
 		System.out.println("즐거운 하루입니다.");
 		System.out.println("현재 시간은 "+ hour +"시입니다.");
 		

@@ -9,8 +9,10 @@
 return 키워드 역할
 	• 값의 반환
 	• 메소드 종료
+	• 프로그램의 흐름을 함수를 호출한 곳으로 돌려준다.
 
  */
+
 public class FunctionEx04 {
 
 	public static void main(String[] args) {
@@ -23,10 +25,10 @@ public class FunctionEx04 {
 	}
 
 
-	public static void dividedby(int num1, int num2)
-	{
-		if(num2==0)
-		{
+	public static void dividedby(int num1, int num2){
+		
+		if(num2==0){
+			
 			System.out.println("(알림)0값으로 나눌 수 없습니다.");
 
 			//메소드 종료
@@ -35,11 +37,11 @@ public class FunctionEx04 {
 		System.out.println("나눗셈 결과: " + (num1/num2));
 	} 
 
-	public static int divide(int num1, int num2)
-	{
+	public static int divide(int num1, int num2){
+		
 		int result = 0;
-		if(num2==0)
-		{
+		
+		if(num2==0)	{
 			System.out.println("(알림)0값으로 나눌 수 없습니다.");
 
 		}else{
