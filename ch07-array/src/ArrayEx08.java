@@ -32,7 +32,7 @@ public class ArrayEx08 {
 		
 		//제목 출력
 		System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
-		System.out.println("===========================");
+		System.out.println("===========================================");
 		
 		//배열 출력 (성적처리 결과 출력)
 		for(int i=0; i < score.length; i++){
@@ -45,9 +45,20 @@ public class ArrayEx08 {
 				sum += score[i][j];				
 			}
 			System.out.print(sum + "\t");
-			System.out.print(sum/score[i].length + "\t");
+			System.out.print(sum/score[i].length + "\t"); //66
+			//평균의 소수점 2째자리까지 표시하기
 //			System.out.printf("%.2f\t", (float)sum/score[i].length); //66.67
 			System.out.println();
 		}
 	}
 }
+
+
+//출력결과
+//번호	국어	영어	수학	총점	평균
+//===========================================
+//1번	99	89	79	267	89	
+//2번	58	68	78	204	68	
+//3번	30	40	50	120	40	
+//4번	66	77	88	231	77	
+//5번	50	70	80	200	66	

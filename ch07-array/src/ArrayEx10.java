@@ -17,3 +17,11 @@ public class ArrayEx10 {
 			System.out.println(arr[i]);
 	}
 }
+
+
+//출력결과
+//arr.length: 4
+//1
+//2
+//3
+//4

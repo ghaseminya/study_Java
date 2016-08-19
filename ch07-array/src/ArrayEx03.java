@@ -1,6 +1,6 @@
+//LAB
 //최대값 및 최소값 구하기
 //배열에 저장된 값중 최대값과 최소값만 출력하기
-//LAB
 
 public class ArrayEx03 {
 
@@ -28,3 +28,9 @@ public class ArrayEx03 {
 		System.out.println("최소값: " + min);
 	}
 }
+
+
+
+//출력결과
+//최대값: 100
+//최소값: 33

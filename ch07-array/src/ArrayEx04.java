@@ -29,3 +29,11 @@ public class ArrayEx04 {
 		System.out.println("평균 : " + average2); //평균 : 93.2
 	}
 }
+
+
+//출력결과
+//average1 : 93.0
+//average2 : 93.2
+//
+//총점 : 466
+//평균 : 93.2
