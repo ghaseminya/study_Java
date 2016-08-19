@@ -66,3 +66,8 @@ public class RecursiveEx01 {
 
 }
 
+
+//출력결과
+//3 factorial: 6
+//7 factorial: 5040
+//12 factorial: 479001600
