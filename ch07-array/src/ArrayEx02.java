@@ -12,6 +12,7 @@ public class ArrayEx02 {
 		
 		System.out.print("배열명 출력 :"); //배열명 출력 :[I@2a139a55
 		System.out.println(a); //16진수 유니크한 참조값(메모리 값이 아닌 가공된 참조값)
+		//배열명 출력 : char배열일때만 참조값이 아닌 배열값을 보여준다. (참조값을 배열값으로 한번 더 가공해서 보여준다)
 		
 		
 		System.out.println();
