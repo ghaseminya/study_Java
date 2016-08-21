@@ -1,7 +1,15 @@
 /*
-//객체 생성 - 객체에 데이터 저장 후 출력하기
+//객체 생성 
+	• 멤버변수가 초기화되지 않은 경우 기본값 출력되는 것 확인
+	• 객체에 데이터 저장 후 출력하기
+
+
+자료형 기본값 확인
+http://codedragon.tistory.com/480
+
 
 */
+
 public class Student1 {	
 	
 	//멤버 변수
@@ -35,9 +43,9 @@ public class Student1 {
 		System.out.println(newstudent);	//Student1@2a139a55
 		
 		//객체의 멤버변수에 원하는 값으로 설정
-		newstudent.name = "김연아";
-		newstudent.age = 24;
+		newstudent.name = "김연아"; //손연재 22
+		newstudent.age = 25;
 		System.out.println(newstudent.name);	//김연아
-		System.out.println(newstudent.age);		//24
+		System.out.println(newstudent.age);		//25
 	}
 }

@@ -2,15 +2,15 @@
 //TV 채널변경하기 - 객체 생성후 객체의 멤버메소드 호출을 통한 멤버 변수 변경
 
 //------------------------------------
-//객체			TV
-//변수(데이터, 속성) 	• 전원유무  • 채널 • TV색상 
-//메소드(기능, 행위)	• 전원 On/Off • 채널 증가 • 채널 감소
+//객체				TV
+//변수(데이터, 속성) 	• 전원유무  	• 채널 	• TV색상 
+//메소드(기능, 행위)		• 전원 On/Off	• 채널 증가 • 채널 감소
 
 
 //주 클래스만 public지정 할 수 있습니다.
 class Tv{	
 	//멤버 변수(속성)
-	boolean power;	//전원유무
+	boolean power;	//전원유무, boolean의 기본값은 false
 	int channel;	//채널
 	String color;	//색상
 	
@@ -55,10 +55,10 @@ public class TvRemoteControl {
 		t.channel = 7;
 		System.out.println("변경된 채널 : " + t.channel);
 				
-		//채널 업/다운
+		//채널 다운
 		t.channelDown();
 		System.out.println("변경된 채널 : " + t.channel);
-		
+		//채널 업
 		t.channelUp();
 		System.out.println("변경된 채널 : " + t.channel); System.out.println();		
 		

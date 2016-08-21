@@ -1,4 +1,4 @@
-/*
+
 //확인 후 전체 주석
 //참조변수와 참조 메소드의 관계 확인
 
@@ -35,7 +35,7 @@ public class ObjectEx01 {
 		//인스턴스 생성 == 참조변수 선언/생성
 		//new		: 인스턴스 생성 의미
 		//Number()	: 매개변수가 없는 Default생성자를 호출
-		Number myNumber=new Number();
+		Number myNumber = new Number();
 		
 		System.out.println("메소드 호출 전 값: "+myNumber.getNum());	//0
 		
@@ -67,4 +67,3 @@ class Number{ //클래스의 구성요소: 멤버필드, 생성자, 멤버메소
 	}
 }
 
-*/
