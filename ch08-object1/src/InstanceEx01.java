@@ -69,6 +69,7 @@ public class InstanceEx01 {
 		//객체의 멤버 변수 출력
 		System.out.println();		
 		System.out.println(me1.var1);	//0
+		System.out.println(me1.NUM_TWO); // 2
 		
 		//객체의 멤버 변수 변경하기
 		System.out.println();		
