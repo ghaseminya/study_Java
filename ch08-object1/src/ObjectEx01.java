@@ -1,4 +1,4 @@
-
+/*
 //확인 후 전체 주석
 //참조변수와 참조 메소드의 관계 확인
 
@@ -45,13 +45,13 @@ public class ObjectEx01 {
 		myNumber.addNum(10);
 		
 		System.out.println("메소드 호출 후 값: "+myNumber.getNum());	//10
-	}
+	} //main
 
 //	public static void instMethod(Number number){
 //		number.addNum(10);
 //	}		
 	
-}
+} //class ObjectEx01 
 
 //클래스 정의(클래스 설계)
 class Number{ //클래스의 구성요소: 멤버필드, 생성자, 멤버메소드
@@ -68,3 +68,4 @@ class Number{ //클래스의 구성요소: 멤버필드, 생성자, 멤버메소
 	}
 }
 
+*/
