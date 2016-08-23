@@ -2,8 +2,9 @@
 //public, default 제한자
 
 //File Info
-//com.korea.Student class
 //com.america.Student class		main부
+//com.korea.Student class
+
 
 
 접근 지정자(Access modifier)
@@ -13,6 +14,7 @@
 	• 감추고 싶은 것은 감추고 보여주고 싶은 것만 보여 줄 수 있도록 코드를 수식해주는 키워드
 	• 보통, 상수를 제외한 필드는 무조건 감추는 것이 좋습니다.
 
+
 [접근가능 영역 수식]
 private	< default	< protected < public
 클래스 내부	< 동일 패키지	< 상속 클래스	< 이외의 영역 
@@ -21,13 +23,15 @@ private	< default	< protected < public
 //---------------------------------------------
 //TODO 2: com.korea.Student클래스의 getMessage를 default로 정의 후 접근 시도시 ERROR확인
 //TODO 4: com.korea.Student클래스의 getMessage를 public으로 정의 후 접근 시도시 정상접근 확인
+//TODO 5: 클래스 충돌 확인
 //----------------------------------------------
 
 */
 
 package com.america;
 
-//클래스 충돌 확인
+//TODO 5: 클래스 충돌 확인
+//Error-The import com.korea.Student conflicts with a type defined in the same file
 //import com.korea.Student;
 
 public class Student {
