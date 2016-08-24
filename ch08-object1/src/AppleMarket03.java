@@ -1,9 +1,12 @@
-/*
+
 //확인 후 전체 주석처리
 
 //생성자 함수를 통한 초기화
 //생성자 함수 정의 및 인스턴시 생성시 생성자 함수 호출
 //AppleMarket02.java에서 매번 인스턴스 변수를 초기화 주어야 하는 문제 해결
+
+//특강시 
+//여기에서  this 개념도 강의
 
 public class AppleMarket03 {
 	public static void main(String[] args) {
@@ -82,4 +85,3 @@ class AppleBuyer{
 	}
 }
 
-*/
