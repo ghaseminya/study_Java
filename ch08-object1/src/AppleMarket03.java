@@ -1,4 +1,4 @@
-
+/*
 //확인 후 전체 주석처리
 
 //생성자 함수를 통한 초기화
@@ -6,7 +6,7 @@
 //AppleMarket02.java에서 매번 인스턴스 변수를 초기화 주어야 하는 문제 해결
 
 //특강시 
-//여기에서  this 개념도 강의
+//this 개념도 강의
 
 public class AppleMarket03 {
 	public static void main(String[] args) {
@@ -46,6 +46,7 @@ class AppleSeller{
 	
 	//생성자 정의
 	//인스턴시 생성시 인자값 전달을 통해 초기화된 객체의 참조변수가 만들어집니다.
+	//TODO : this로 멤버변수 초기화하기
 	public AppleSeller(int money, int appleNumber, int price){
 		myMoney=money;
 		numOfApple=appleNumber;
@@ -85,3 +86,4 @@ class AppleBuyer{
 	}
 }
 
+*/
