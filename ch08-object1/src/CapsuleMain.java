@@ -73,10 +73,10 @@ public class CapsuleMain {
 		CapsuleMain csm = new CapsuleMain();
 		
 		csm.a = 10;
-		System.out.println(csm.a);
+		System.out.println(csm.a); //10
 		
 		csm.a = -10;
-		System.out.println(csm.a);
+		System.out.println(csm.a); //-10
 		
 		
 		//TODO 2: 호출_은닉화된 클래스를 외부에서 접근했을 때 Error(2) - 2/2
@@ -94,9 +94,11 @@ public class CapsuleMain {
 		Capsule csu = new Capsule();
 		
 		csu.setA(100);		
-		System.out.println( csu.getA() );
+		System.out.println( csu.getA() ); //100
 		
+		//데이터 저장시 유효한 값인지 체크 후 저장
+		//"음수는 허용되지 않습니다."라는 메시지가 출력됩니다.
 		csu.setA(-200);		
-		System.out.println( csu.getA() );
+		System.out.println( csu.getA() ); //100
 	}
 }

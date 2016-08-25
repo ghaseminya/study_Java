@@ -15,7 +15,7 @@ public class MyClass {
 	//디폴트 생성자: 생성자를 명시하지 않으면 컴파일러가 default생성자를 자동 삽입되지만
 	//인자가 있는 생성자를 만들 경우 default생성자가 자동 생성되지 않습니다. 디폴트 생성자가 필요한 경우 default생성자를 직접 작성해 주어야 합니다..
 
-	//TODO 2: ERROR발생 확인 후 정의
+	//TODO 2: ERROR발생 확인 후 디폴트 생성자 정의
 	public MyClass(){}
 	
 	

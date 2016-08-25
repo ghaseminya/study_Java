@@ -36,7 +36,7 @@ package com.america;
 
 public class Student {
 	//멤버 메소드
-	public void  interact( ){
+	public void  interact(){
 		
 		//korea.Student는 public 클래스이므로 어디서 든 인스턴스 생성 가능
 		com.korea.Student instance = new com.korea.Student();

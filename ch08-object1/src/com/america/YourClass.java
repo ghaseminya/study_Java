@@ -25,6 +25,7 @@ public class YourClass {
 		//MyClass의 number멤버변수는 private으로 선언되어 있어 클래스 내부(메소드)에서만 접근 가능합니다
 //		myClass.number=10;		//ERROR - The field MyClass.number is not visible
 		
+		//클래스 내부(메소드)를 통해 private으로 선언된 멤버 변수에 접근
 		myClass.setNumber(12);
 		System.out.println(myClass.getNumber());
 	}
