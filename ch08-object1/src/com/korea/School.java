@@ -2,6 +2,11 @@
 /*
 //protected 제한자
 
+
+FileInfo
+package com.korea;	School.java
+
+
 //----------------------------------------------
 //private	< default	< protected < public
 //클래스 내부	< 동일 패키지	< 상속 클래스	< 이외의 영역 

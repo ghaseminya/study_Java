@@ -60,7 +60,8 @@ package문 아래에 선언
 import 패키지명.클래스명;
 
 import University.Korea.Student;
-University.Korea패키지의 Student클래스를 의미하며 앞의 경로는 생략하고 Student 클래스 이름만으로 표시하고 사용하겠다는 의미입니다.
+University.Korea패키지의 Student클래스를 의미하며 
+앞의 패키지경로명는 생략하고 Student 클래스 이름만으로 표시하고 사용하겠다는 의미입니다.
 
 
 o * 통한 import 선언
