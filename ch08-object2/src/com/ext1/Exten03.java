@@ -47,7 +47,7 @@ class Person
 	public void showName() { 
 		System.out.println("My name is " + name);
 	}
-}
+} //class Person
 
 //자식 클래스, 하위 클래스, 유도 클래스
 class Employee extends Person
@@ -70,4 +70,4 @@ class Employee extends Person
 		System.out.println("My company is " + company);
 		System.out.println("My position is " + position);
 	}
-}
+} //class Employee

@@ -47,3 +47,8 @@ public class Exten02 {
 		bb.make();
 	}
 }
+
+
+//출력결과
+//자식 클래스
+//부모 클래스

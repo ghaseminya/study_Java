@@ -7,16 +7,16 @@
 
 [오버라이딩(Overriding) vs 오버로딩(Overroading)]
 구분		오버라이딩(재정의)													오버로딩(다중정의)
-적용		상속관계														특정 클래스
+적용		상속관계															특정 클래스
 
 접근제한	• super클래스의 메소드보다 sub클래스의 메소드 접근제한이 동일하거나 더 넓어야 합니다.		상관없음
 		• 예)protected라면 proteced/public이여야 합니다.
 
-리턴형		기본적으로 같아야 함													상관없음
+리턴형		기본적으로 같아야 함												상관없음
 
 메소드명	super클래스의 메소드명과 sub클래스의 메소드명이 같아야 함						반드시 같아야 함
 
-인자(타입,개수)	반드시 같아야 함												반드시 달라야 함
+인자(타입,개수)	반드시 같아야 함													반드시 달라야 함
 
  */
 package com.ext2;
@@ -36,6 +36,7 @@ class BClass extends AClass{
 		System.out.println("BClass's Method");
 	}
 
+	//오버로딩 (중복정의)
 	public void loadMethod(int num){
 		System.out.println("int Method");
 	}
@@ -47,6 +48,7 @@ class CClass extends BClass{
 		System.out.println("CClass's Method");
 	}
 
+	//오버로딩 (중복정의)
 	public void loadMethod(double num){
 		System.out.println("double Method");
 	}
