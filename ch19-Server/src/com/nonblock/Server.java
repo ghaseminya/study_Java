@@ -78,7 +78,7 @@ public class Server {
 			
 			ServerSocketChannel server = null;
 			//Selector클래스는 일종의 이벤트 리스너
-			//Non-blocking모드를 지원하는 채널에 Selector를 등록해 놓음으로써
+			//Non-blocking모드를 지원하는 채널에 Selector를 등록해 둠으로써
 			//Non-blocking채널을 연결요청이 들어오거나 데이터가 도착하는 경우에 그 사실을 Selector에 알리게 됩니다.
 			//이 Selector는 어떤 기능을 사용할 수 있는지를 리턴하게 되며 그 리턴값을 통해서 
 			//연결요청을 처리할 지 데이터 읽기를 처리할 지 결정하게 됩니다.
