@@ -14,7 +14,8 @@ IS-A 관계						• 객체간에 IS-A 관계가 성립되어야 합니다.
 • 부모 클래스가 먼저 생성되어야 자식 클래스가 부모의 멤버를 사용할 수 있기 때문입니다.
 
 					
-java.lang.Object클래스		• 가장 상위 클래스는 java.lang.Object클래스입니다. 따라서 모든 클래스는 Object 클래스를 상속받게 됩니다.
+java.lang.Object클래스		
+• 가장 상위 클래스는 java.lang.Object클래스입니다. 따라서 모든 클래스는 Object 클래스를 상속받게 됩니다.
 
 */
 package com.ext1;
