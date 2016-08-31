@@ -1,5 +1,40 @@
 package com.nonblock;
+/*
+Non-blocking 방식
+클라이언트에서 System Call 이 반환될 때, 서버에서 그 결과를 동시에 보여줍니다. 
+폴링방식과 유사하게 서버는 계속해서 응답 메시지를 기다립니다.
+클라이언트가 비정상 종료될 시, 서버는 다시 응답을 새로 기다리게 됩니다.
 
+
+File Info
+package com.nonblock;
+Abortable.java	종료를 나타내는 클래스
+Client.java		클라이언트 프로그램
+-> Server.java	서버 프로그램
+
+
+//---------------------------------
+결과확인시 클라이언트 종료하면 Timeout 에러가 발생합니다.
+에러 메시지가 뜨는 이유는, 클라이언트가 비정상 종료되어 서버에서 기다리고 있는 응답 메시지가 도착하지 않았기 때문에 뜨는 Timeout 오류입니다.
+해당 프로그램에서는 Non-blocking 방식의 서버-클라이언트 예제인데, 
+non-blocking 방식은 클라이언트에서 메시지를 서버에 보내지 않고 종료되어도, Timeout 에러가 발생하고 다시 서버는 요청을 기다리게 됩니다.
+따라서, 이 상태에서 서버는 종료된 상태가 아니기 때문에 다시 클라이언트 파일을 실행시키면 정상적으로 작동하게 됩니다.
+
+Server :: Started
+Server :: Waiting for accept
+Server :: Accepted - Client[/127.0.0.1:9898]
+Client :: Started
+From Client: codedragon
+java.io.IOException: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at com.nonblock.Server$ClientHandlerThread.run(Server.java:200)
+Client :: BYE
+
+*/
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,5 +1,12 @@
 package com.nonblock;
+/*
+File Info
+package com.nonblock;
+Abortable.java	종료를 나타내는 클래스
+-> Client.java	클라이언트 프로그램
+Server.java		서버 프로그램
 
+*/
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
