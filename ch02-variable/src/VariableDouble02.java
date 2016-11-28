@@ -1,6 +1,8 @@
 /*
 실수 선언 및 메모리 저장 및 참조 도식도 예제
 
+
+
 */
 public class VariableDouble02 {
 
