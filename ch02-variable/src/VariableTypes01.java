@@ -70,7 +70,7 @@ public class VariableTypes01 {
 		System.out.println("s2 = " + s2); //s2 = 32767
 		
 		
-//		int 크기: 4byte(표현범위: -214,7483,648 ~ 214,7483,647)
+//		int 크기: 4byte(표현범위: -214,7483,648 ~ 2,147,483,647)
 //		int i1 = 2147483648;	//범위 넘어가면 error
 		int i2 = 123456789;		//정수 표현의 기본
 		System.out.println("i2 = " + i2); //i2 = 123456789
@@ -89,11 +89,11 @@ public class VariableTypes01 {
 		System.out.println("");
 		System.out.println("=========실수형 리터럴=========");
 //		float 크기: 4byte
-		float f1 = 9.1F;
+		float f1 = 9.1F; //그냥 실수를 사용하면 double형으로 인식하므로 접미사를 붙여야 합니다.
 		System.out.println("f1 = " + f1); //f1 = 9.1
 		
 //		double 크기: 8byte (기본)
-		double d1 = 9.8;
+		double d1 = 9.8; //실수는 double형을 선호
 		double d2 = 9.8D;
 		System.out.println("d1 = " + d1); //d1 = 9.8
 		System.out.println("d2 = " + d2); //d2 = 9.8

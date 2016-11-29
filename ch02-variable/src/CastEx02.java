@@ -8,7 +8,8 @@ public class CastEx02 {
 //		short num2=20;
 //		short result=(short)(num1 + num2);
 		//short to int -> 연산 -> int to short (내부적으로 자동으로 일어남)
-		//(num1 + num2)      -> (short)
+		//(num1 + num2)      -> 
+		//(short)(num1+num2); -> (short) 
 		
 		//내부적으로 자동으로 일어나는 것 확인하는 코드
 //		short result=(num1 + num2); 

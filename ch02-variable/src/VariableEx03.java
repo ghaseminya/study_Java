@@ -1,5 +1,5 @@
 /*
-정수 실수 표현 방식
+정수/실수 표현 방식
 
 */
 public class VariableEx03 {

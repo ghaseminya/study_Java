@@ -19,7 +19,7 @@ float f = s + 3.14f;
 				   
 byte -> short/char 	-> int 	-> long (정수형에서의 자동 형변환)
 8bit -> 16bit      	-> 32bit -> 64bit 
-					-> float -> double (정수형에서의 자동 형변환)
+					-> float -> double (실수형에서의 자동 형변환)
 				   	-> 32bit -> 64bit
 				   	-> float -> int (int형 선호)
 				   	-> 32bit -> 32bit
