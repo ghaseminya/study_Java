@@ -1,5 +1,5 @@
 /*
-접미사를 사용한 상수표현방식 변경
+접미사를 사용한 상수 표현방식 변경
 
 */
 public class ConstEx03 {
@@ -23,5 +23,4 @@ public class ConstEx03 {
 		System.out.println(n2);	//150
 
 	}
-
 }

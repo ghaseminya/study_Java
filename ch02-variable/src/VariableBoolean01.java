@@ -2,8 +2,8 @@
 //boolean자료형 출력
 
 [논리 표현]
-true	‘참‘을 의미하는 키워드
-false	‘거짓’을 의미하는 키워드
+true	'참'을 의미하는 키워드
+false	'거짓'을 의미하는 키워드
 
 
 [true와 false 이해]
@@ -44,5 +44,4 @@ public class VariableBoolean01 {
 		System.out.println(7>10); //false
 
 	}
-	
 }

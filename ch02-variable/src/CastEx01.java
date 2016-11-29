@@ -15,6 +15,14 @@ short s=7;
 float f = s + 3.14f;
 
 
+자동 형변환 규칙
+				   
+byte -> short/char 	-> int 	-> long (정수형에서의 자동 형변환)
+8bit -> 16bit      	-> 32bit -> 64bit 
+					-> float -> double (정수형에서의 자동 형변환)
+				   	-> 32bit -> 64bit
+				   	-> float -> int (int형 선호)
+				   	-> 32bit -> 32bit
 //--------------------
 [디모션(demotion)]
 	• 더 작은 자료형으로 변환(명시적 형변환)
@@ -47,5 +55,4 @@ public class CastEx01 {
 		System.out.println("문자 A의 유니코드 값: "+num1); //문자 A의 유니코드 값: 65
 		System.out.println("문자 Z의 유니코드 값: "+num2);	//문자 Z의 유니코드 값: 90
 	}
-	
 }

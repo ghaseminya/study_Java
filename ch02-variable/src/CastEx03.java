@@ -5,7 +5,6 @@
 public class CastEx03 {
 	public static void main(String[] args){
 		
-		
 		System.out.println("");
 		System.out.println("=========프로모션=========");
 		//프로모션:
@@ -16,7 +15,6 @@ public class CastEx03 {
 //		byte b3 = b1 + b2;	//Error: cannot convert from int to byte
 		//32bit(4byte)미만 byte형 데이터 연산시 32bit int형으로 승격됩니다. 
 		//데이터 타입이 다르므로 즉, int형은 byte형으로 저장되지 않습니다.
-		
 		//byte(1byte), int(4byte)
 		int i1 = b1 + b2;
 		System.out.println("i1= " + i1 );	//i1= 254
@@ -61,23 +59,28 @@ public class CastEx03 {
 		byte result_byte = (byte)(b4 + b5); 	
 		//연산결과로 int로 자동으로 형변환 되므로 byte로 자료형을 유지하기 위해 int -> byte로 강제 형변환
 		//(byte): 캐스트 연산자를 사용하여 강제 형변환
+		//int(4byte) -> byte(1byte)
 		System.out.println("result_byte = " + result_byte);	//result_byte = -6
 		System.out.println("b4 + b5 = " + (b4 +b5) );		//b4 + b5 = 250
+		
 		
 		System.out.println("");
 		short s4 = 1234;
 		short s5 = 1234;
 		short result_short = (short)(s4 + s5);
-		System.out.println("s4 + s5 = " + (s4 +s5) );	//s4 + s5 = 2468
-		System.out.println("result_short = " + result_short);	//result_short = 2468
+		System.out.println("s4 + s5 = " + (s4 +s5) ); //s4 + s5 = 2468
+		System.out.println("result_short = " + result_short); //result_short = 2468
+		
 		
 		System.out.println("");
 		int int3 = 1234;
 		float f1 = 100.5F;
 //		int result_int1 = int3 + f1;
 		int result_int2 = int3 + (int)f1;	//float ->int로 강제 형변환 (절삭됨)
+		//int(4byte), float(4byte)
 		System.out.println("int3 + f1 = " + (int3 + f1) );	//int3 + f1 = 1334.5
 		System.out.println("result_int2 = " + result_int2);	//result_int2 = 1334
+		
 		
 		System.out.println("");
 		int int4 = 1234;

@@ -17,8 +17,8 @@ public class VariableEx04 {
 		char ch3=54620;			//54620은 16진수로 0xD55C
 		char ch4=0x3081;
 		char ch5=0x3082;
-		char ch6='1';
-		char ch7=1;
+		char ch6='1'; //문자 '1' 을 저장
+		char ch7=1; //숫자 1에 해당하는 아스키 코드 문자
 		
 		System.out.println(ch1); //A
 		System.out.println(ch2); //한
