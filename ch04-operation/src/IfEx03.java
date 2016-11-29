@@ -49,6 +49,7 @@ public class IfEx03 {
 		//nextInt(): 입력값을 int형으로 가져온다
 		score = input.nextInt();
 		
+		//if~else로 구현한 코드
 		if( score >= 90 && score <=100 ){
 			grade ='A';
 		}else if(score >= 80 && score <=89){
@@ -64,21 +65,21 @@ public class IfEx03 {
 			System.out.println("성적을 다시 입력하세요.");
 		}
 		
-		
-		if( score >= 90 && score <=100 ){
-			grade ='A';
-		}if(score >= 80 && score <=89){
-			grade ='B';
-		}if(score >= 70 && score <=79){
-			grade ='C';
-		}if(score >=60 && score <=69){
-			grade = 'D'; 
-		}if(score < 60){
-			grade ='F';			
-		}else{
-			grade ='?';
-			System.out.println("성적을 다시 입력하세요.");
-		}
+		//if로 구현한 코드
+//		if( score >= 90 && score <=100 ){
+//			grade ='A';
+//		}if(score >= 80 && score <=89){
+//			grade ='B';
+//		}if(score >= 70 && score <=79){
+//			grade ='C';
+//		}if(score >=60 && score <=69){
+//			grade = 'D'; 
+//		}if(score < 60){
+//			grade ='F';			
+//		}else{
+//			grade ='?';
+//			System.out.println("성적을 다시 입력하세요.");
+//		}
 		
 		
 		System.out.println("성적 : " + score);
@@ -87,3 +88,15 @@ public class IfEx03 {
 		input.close();
 	}
 }
+
+/*
+성적을 입력하세요 > 88
+성적 : 88
+등급: B
+
+성적을 입력하세요 > 88
+성적을 다시 입력하세요.
+성적 : 88
+등급: ?
+
+*/

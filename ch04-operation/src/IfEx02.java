@@ -25,10 +25,10 @@ public class IfEx02 {
 		a = input.nextInt();
 				
 		
-		if(a%2 == 1){	//홀수 체크
+		if(a%2 == 1){ //홀수 체크
 			System.out.print("홀수 입니다.");
 			
-		}else{	// 짝수
+		}else{	// 홀수가 아닌 경우 (짝수)
 			System.out.print("짝수 입니다.");			
 		}
 		
