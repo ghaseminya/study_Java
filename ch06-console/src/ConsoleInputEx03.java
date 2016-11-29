@@ -15,6 +15,7 @@ public class ConsoleInputEx03 {
 		System.out.println("안녕하세요 "+str+'님');
 		
 		
+		
 		//--------------------
 		System.out.print("당신은 잘 생겼다고 생각하십니까, 예(true)/아니오(false)? ");
 		
@@ -25,6 +26,7 @@ public class ConsoleInputEx03 {
 		else
 			System.out.println("헐~ 대박 .");
 	
+		
 		
 		//--------------------
 		System.out.print("당신과 짝꿍의 영어점수는 어떻게 되나요? ");
@@ -37,6 +39,7 @@ public class ConsoleInputEx03 {
 			System.out.println("당신이 "+diff+"만큼 크군요.");
 		else
 			System.out.println("당신이 "+(-diff)+"만큼 작군요.");
+		
 		
 		
 		//--------------------

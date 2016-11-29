@@ -30,5 +30,4 @@ public class ConsoleInputEx02 {
 		
 		scanner.close();
 	}
-
 }

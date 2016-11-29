@@ -12,7 +12,7 @@ public class ConsoleInputEx05 {
 
 	java.util.Scanner input = new java.util.Scanner(System.in);
 
-	//문제발생
+	//문제발생 코드
 //	System.out.println("정수입력 > ");
 //	int n = input.nextInt();
 //	System.out.println("n: " + n);

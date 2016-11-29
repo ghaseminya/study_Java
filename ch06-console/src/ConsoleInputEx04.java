@@ -2,8 +2,10 @@
 //Scanner클래스의 메소드 사용하여 입력시
 //next() 와 nextLine() 함수의 차이 확인하기
 
+
 [next() vs nextLine()]
 next()		문자 또는 문자열을 공백을 기준으로 한단어 또는 한문자를 입력 받습니다.
+
 nextLine()	문자 또는 문자열 한라인 전체를 입력 받습니다.
 			한라인의 문자열을 입력값으로 가져옵니다. 
 
@@ -17,6 +19,7 @@ public class ConsoleInputEx04 {
 		Scanner scanner = new Scanner(System.in);
 		
 		String s1;
+		
 		//nextLine(): 문자 또는 문자열 한라인 전체를 입력 받습니다.
 		//버퍼에 입력된 문자열을 개행문자 \n까지 가져오기
 		s1 = scanner.nextLine();	//Hello World!
