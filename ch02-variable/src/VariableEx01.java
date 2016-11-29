@@ -31,7 +31,8 @@ public class VariableEx01 {
 		//TODO : 변수 선언 / 변수 초기화 / 변수 사용
 		int num;	//변수 선언
 		num = 20;	//변수 초기화(최초 데이터 입력)
-		System.out.println(num);	//20
+		System.out.println(num); //변수 사용
+								 //20
 		
 		
 		
