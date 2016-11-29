@@ -7,8 +7,10 @@ public class OperatorEx03 {
 		float b = 10.0F;
 		
 		// int == float
-		if( a == b){	// int -> float (10 -> 10.0F)
-			
+		if( a == b){	
+			//a: int -> float (10 -> 10.0F)
+			//10.0F == 10.0F
+			//b: 10.0F
 			System.out.println("a와 b는 같다.");
 			System.out.println("a : " + a);	//a : 10
 			System.out.println("b : " + b);	//b : 10.0
@@ -20,6 +22,7 @@ public class OperatorEx03 {
 		int d = 0;
 		//char != int
 		if(c != d){		//char -> int ('0' -> 48)
+						//2byte -> 4byte
 			System.out.println("c와 d는 같지 않다.");
 			System.out.println("c : " + c);	//c : 0
 			System.out.println("d : " + d);	//d : 0
@@ -37,3 +40,17 @@ public class OperatorEx03 {
 		}
 	}
 }
+
+/*
+a와 b는 같다.
+a : 10
+b : 10.0
+
+c와 d는 같지 않다.
+c : 0
+d : 0
+
+e와 f는 같다.
+e : A
+f : 65
+*/

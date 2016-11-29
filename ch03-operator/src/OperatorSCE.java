@@ -2,6 +2,7 @@
 //SCE연산 수행으로 인한 주의 사항
 //&&, ||연산자의 오른쪽이 수행되지 않음을 주의
 
+//--------------------
 
 논리 연산자와 SCE(Short-Circuit Evaluation)
 	• SCE는 최단거리 연산이라고도 합니다.
@@ -46,6 +47,7 @@ class OperatorSCE
 		//SCE연산이 수행됩으로써 오른쪽의(num2+=10)는 연산이 수행되어 지지 않습니다.
 		System.out.println("result= "+result);	//result= false
 		System.out.println("num1= " + num1 + ", num2= " + num2); //num1= 10, num2= 0
+		
 		
 		// ||연산자
 		System.out.println("");

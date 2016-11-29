@@ -54,5 +54,4 @@ public class OperatorEx02 {
 		System.out.println("a != b: " + result); //a != b: true
 		
 	}
-	
 }
