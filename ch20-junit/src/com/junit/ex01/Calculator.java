@@ -20,14 +20,17 @@ public class Calculator {
 	}
 	
 	public static double ceil(double num1){
+		//올림
 		return Math.ceil(num1);
 	}
 	
 	public static double floor(double num1){
+		//내림
 		return Math.floor(num1);
 	}
 	
 	public static double abs(double num1){
+		//절대값
 		return Math.abs(num1);
 	}
 }
