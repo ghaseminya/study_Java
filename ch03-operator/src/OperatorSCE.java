@@ -42,7 +42,7 @@ class OperatorSCE
 		// &&연산자
 		result = (num1+=10)<0 && (num2+=10)>0;
 		//(num1+=10)<0 -> 0+=10<0  -> 10<0 -> false
-		//(num2+=10)>0 -> 0+=10>10 -> 10>0 -> true (연산 수행 안됨)
+		//(num2+=10)>0 -> 0+=10>0 -> 10>0 -> true (연산 수행 안됨)
 		//false && true
 		//SCE연산이 수행됩으로써 오른쪽의(num2+=10)는 연산이 수행되어 지지 않습니다.
 		System.out.println("result= "+result);	//result= false

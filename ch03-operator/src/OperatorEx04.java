@@ -14,7 +14,7 @@
 ||	or		• 주어진 조건들 중 하나라도 true이면 true
 	논리합		• a ||  b     //a와 b 둘중 하나라도 true이면 연산결과는 true
 	
-!	no		• true이면 false로 false이면 true로
+!	not		• true이면 false로 false이면 true로
 	부정		• !a     //연산결과는 a가 true이면 false, a가 false이면 true
 
 

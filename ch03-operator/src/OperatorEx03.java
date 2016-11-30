@@ -27,6 +27,7 @@ b : 10.0
 		//char != int
 		if(c != d){		//char -> int ('0' -> 48)
 						//2byte -> 4byte
+			//48 != 0
 			System.out.println("c와 d는 같지 않다.");
 			System.out.println("c : " + c);	//c : 0
 			System.out.println("d : " + d);	//d : 0
@@ -42,6 +43,7 @@ d : 0
 		char e = 'A'; 
 		int f= 65;
 		if( e == f){	//char -> int ('A' -> 65)
+			//65 == 65
 			System.out.println("e와 f는 같다.");
 			System.out.println("e : " + e);	//e : A
 			System.out.println("f : " + f);	//f : 65

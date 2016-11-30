@@ -11,8 +11,6 @@
 --		1씩 감소
 
 
-
-
 */
 public class OperatorEx01 {
 	public static void main(String[] args){

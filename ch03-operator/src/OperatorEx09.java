@@ -51,15 +51,44 @@ public class OperatorEx09 {
 		
 		a -= b;
 		System.out.println("a -=b : " + a);
+		System.out.println("a : " + a);	
+		System.out.println("b : " + b);
 		
 		a *= b;
 		System.out.println("a *=b : " + a);
+		System.out.println("a : " + a);	
+		System.out.println("b : " + b);
 		
 		a /= b;
 		System.out.println("a /=b : " + a);
+		System.out.println("a : " + a);	
+		System.out.println("b : " + b);
 		
 		a %= b;
 		System.out.println("a %=b : " + a);
+		System.out.println("a : " + a);	
+		System.out.println("b : " + b);
 		System.out.println("");
 	}
 }
+
+/*
+a: 100
+b: 3
+a+=b: 103
+a: 103
+b: 3
+a-=b: 100
+a: 100
+b: 3
+a*=b: 300
+a: 300
+b: 3
+a/=b: 100
+a: 100
+b: 3
+a%=b: 1
+a: 1
+b: 3
+
+*/
