@@ -4,7 +4,7 @@
 	• 값을 반환하는 메소드
 	• 값을 반화하지 않는 메소드
   	• public void byExit(){} vs public static void byExit(){}
-
+//--------------------
 
 함수의 반환값
 	• 함수값을 돌려줄 때는 return 문과 함께 사용합니다.
@@ -58,7 +58,7 @@ public class FunctionEx03 {
 	
 	//값을 반환하지 않는 함수
 	public void byExit(){
-//	public static void byExit(){	//static으로 함수정의시 공유 개념이 생겨 객체 생성없이도 접근가능	
+//	public static void byExit(){ //static으로 함수정의시 공유 개념이 생겨 객체 생성없이도 접근가능	
 		System.out.println("프로그램 종료!");
 	}
 	

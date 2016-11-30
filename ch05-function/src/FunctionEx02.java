@@ -25,7 +25,7 @@ public class FunctionEx02 {
 	
 	//함수의 형태 3 - 출력형태X 입력형태O
 	//매개변수가 있는 함수 정의
-	//매개변수는 전달 순서대로 저장
+	//매개변수는 전달된 순서대로 저장되어 집니다.
 	//hour = 9, minute = 11
 	public static void tellTime(int hour, int minute){
 		

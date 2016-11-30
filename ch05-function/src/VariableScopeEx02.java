@@ -22,7 +22,7 @@ public class VariableScopeEx02 {
 	}
 	
 	public static int square(int num) //num의 범위
-	{
+	{								  //메소드의 매개변수도 지역변수
 		int result = num*num; //result 범위
 		return result;
 	}

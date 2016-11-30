@@ -31,7 +31,7 @@ public class FunctionEx04 {
 			
 			System.out.println("(알림)0값으로 나눌 수 없습니다.");
 
-			//메소드 종료
+			//메소드 종료, 프로그램의 흐름을 함수를 호출한 곳으로 이동
 			return;
 		}
 		System.out.println("나눗셈 결과: " + (num1/num2));
@@ -48,7 +48,7 @@ public class FunctionEx04 {
 			result = num1/num2;
 		}
 
-		//메소드 종료 and 값 반환
+		//메소드 종료 and 값 반환, 프로그램의 흐름을 함수를 호출한 곳으로 이동
 		return result;
 	} 
 }
