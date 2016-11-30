@@ -1,8 +1,10 @@
 //while문 - 입력값 누적합구하기 및 0입력시 프로그램 종료하기
 
-//제한사항
-//WhileEx03.java를 break;구문을 사용하여 동일한 결과가 나오도록 완성하기
 
+//제한사항
+//계속 입력하면 입력되는 값을 계속 누적 시켜 누적시킨 합을 출력하기
+//0을 입력하면 입력을 중단하고 프로그램 종료하기
+//WhileEx03.java를 break;구문을 사용하여 동일한 결과가 나오도록 완성하기
 
 public class BreakEx05 {
 	public static void main(String[]args){

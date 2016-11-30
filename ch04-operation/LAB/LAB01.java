@@ -1,6 +1,7 @@
 /* //LAB
 //Switch~Case문에서 문자열 비교를 통해 요일 출력하기
 //monday, tuesday, wednesday, thursday, friday, saturday, sunday
+영문자의 요일을 입력받으면 한글로된 요일을 출력하기
 
 
 <JDK 버전별 득이사항>

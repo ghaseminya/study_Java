@@ -20,6 +20,7 @@ public class ForEx05 {
 		
 		for( int dan=1; dan <10; dan ++){			
 			System.out.print(dan + "단:  ");
+			
 			for( int i = 1; i<10; i++){
 				System.out.print(dan + " x " + i + " = " + (dan * i) + "\t");
 			}

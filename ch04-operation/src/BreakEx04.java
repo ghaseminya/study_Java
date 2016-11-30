@@ -6,7 +6,7 @@
 [제한사항]
 	• 1~100까지의 수 중
 	• 3의 배수이고 7의배수인 정수 찾으면 더 이상 수행하지 않고 while문 빠져나가기
-	• while문 빠져나온후 찾은 정수 출력하고, 찾지못한 경우는 찾지 못했다고 출력하기
+	• while문 빠져나온 후 찾은 정수 출력하고, 찾지못한 경우는 찾지 못했다고 출력하기
 
 */
 
@@ -28,7 +28,7 @@ public class BreakEx04 {
 			num++;
 		}
 		
-		if(result)
+		if(result) //0이상이면 true로 인식
 			System.out.println("찾는 정수 : " + num);
 		else
 			System.out.println("3의 배수이고 7의 배수인 정수를 찾지 못했습니다.");
