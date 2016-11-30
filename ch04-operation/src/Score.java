@@ -6,7 +6,9 @@
  소숫점자리 포멧지정 (소수점이하 2째자리까지)
 
 //-------------------------
-//유효한 점수 인지 체크하기 (과목별로 )한후  유효한 점수 인지 체크하기 (과목 전체)로 바꿔보기
+//유효한 점수 인지 체크하기
+TODO 1:(과목 별로)유효한 점수 인지 체크하기
+TODO 2:(과목 전체)유효한 점수 인지 체크하기
 */
 
 public class Score {
@@ -20,24 +22,24 @@ public class Score {
 		float 평균1;
 		float 평균2;		
 		
-		//유효한 점수 인지 체크하기 (과목 전체)
-		/*do{
-			System.out.print("국어 : ");
-			국어 = input.nextInt();
-			
-			System.out.print("영어 : ");
-			영어 = input.nextInt();
-			
-			System.out.print("수학 : ");
-			수학 = input.nextInt();
-			
-			
-		}while(국어 < 0 || 국어 > 100  ||
-				영어 < 0 || 영어 > 100 ||
-				수학 < 0 || 수학 > 100);*/
+		//TODO 2: 유효한 점수 인지 체크하기 (과목 전체)
+//		do{
+//			System.out.print("국어 : ");
+//			국어 = input.nextInt();
+//			
+//			System.out.print("영어 : ");
+//			영어 = input.nextInt();
+//			
+//			System.out.print("수학 : ");
+//			수학 = input.nextInt();
+//			
+//			
+//		}while(국어 < 0 || 국어 > 100  ||
+//				영어 < 0 || 영어 > 100 ||
+//				수학 < 0 || 수학 > 100);
 		
 		
-		//유효한 점수 인지 체크하기 (과목별로 ) - 데이터 검증 (중요)
+		//TODO 1: 유효한 점수 인지 체크하기 (과목별로 ) - 데이터 검증(중요), SecureCoding
 		do{
 			System.out.print("국어 : ");
 			국어 = input.nextInt();

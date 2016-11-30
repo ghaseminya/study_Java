@@ -1,5 +1,6 @@
 //while문 - 입력값 누적합구하기 및 강제 종료
 //Ctrl+Q 강제종료
+//0을 입력하면 종료
 
 public class WhileEx06 {
 	public static void main(String[] args){
@@ -8,7 +9,8 @@ public class WhileEx06 {
 		int sum = 0;
 		System.out.println("더할 숫자를 입력해 주세요");
 
-		while(i>0){
+//		while(i>0){ //0입력하면 종료
+		while(i>=0){
 			i = input.nextInt();
 			sum=sum+i;
 			System.out.println("누적합계 : " + sum);

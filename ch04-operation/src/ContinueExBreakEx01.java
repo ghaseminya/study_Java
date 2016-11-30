@@ -1,7 +1,7 @@
 /*
 //continue vs break
-//continue문 예시 결과 확인
-//break문 예시 결과 확인
+//TODO :continue문 예시 결과 확인
+//TODO :break문 예시 결과 확인
 
 
 [continue vs break]
@@ -28,7 +28,8 @@ public class ContinueExBreakEx01 {
 		System.out.println("반복문 수행 완료!");
 	}
 	
-	
+
+//--------------------	
 	//TODO : break문 예시
 //	public static void main(String[] args) {
 //		// 특정조건일때 break문으로 반복문을 빠져나감

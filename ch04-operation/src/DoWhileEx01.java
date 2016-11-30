@@ -21,11 +21,11 @@ public class DoWhileEx01 {
 		}while(su++ < 5); //0->1 1->2 2->3	3->4 4->5  5->6
 		//조건식/증감식, 선 연산 후 증가(증가값은 다음 행부터 적용)
 		
-		System.out.println("do~while수행후 nu1: " + nu1);
-		System.out.println("do~while수행후 su: " + su);
+		System.out.println("do~while수행후 nu1: " + nu1); //7
+		System.out.println("do~while수행후 su: " + su); //6
 		
 		
-		//------------------------------
+//------------------------------
 		//while문
 		System.out.println("");
 		System.out.println("=== while 실행결과===");
@@ -36,8 +36,8 @@ public class DoWhileEx01 {
 			System.out.println(nu2 + " : " + msg); // 1 2 3 4 5
 			nu2++; //2 3 4 5 6
 		}
-		System.out.println("while수행후 nu2: " + nu2);
-		System.out.println("while수행후 su: " + su);
+		System.out.println("while수행후 nu2: " + nu2); //6
+		System.out.println("while수행후 su: " + su); //6
 
 	}
 }
@@ -51,6 +51,8 @@ public class DoWhileEx01 {
 4 : Java World!
 5 : Java World!
 6 : Java World!
+do~while수행후 nu1: 7
+do~while수행후 su: 6
 
 === while 실행결과===
 1 : Java World!
@@ -58,4 +60,6 @@ public class DoWhileEx01 {
 3 : Java World!
 4 : Java World!
 5 : Java World!
+while수행후 nu2: 6
+while수행후 su: 6
 */
