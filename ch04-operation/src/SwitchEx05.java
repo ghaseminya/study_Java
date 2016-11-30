@@ -1,6 +1,6 @@
 //switch~case문과 switch~case~ default레이블 유무 따른 출력결과 확인
-//break; 문이 없을 때의 결과 확인
-//default레이블 유무에 따른 결과 확인
+//TODO : break; 문이 없을 때의 결과 확인
+//TODO : default레이블 유무에 따른 결과 확인
 
 
 public class SwitchEx05 {

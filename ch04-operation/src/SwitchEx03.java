@@ -45,8 +45,8 @@ public class SwitchEx03 {
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		int score;
-		char grade;
+		int score; //점수
+		char grade; //등급
 		
 		System.out.println("정수형 성적을 입력하세요 > ");
 		score = input.nextInt();
@@ -54,9 +54,10 @@ public class SwitchEx03 {
 		//score/10	: 27/10 = 2
 		//System.out.println(score/10);
 		switch(score/10){
-		case 10: // break문은 조건값마다 넣어주는 것을 권장하며 만약 없을 시에는 다음 break문을  만날 때까지 모든 수행문을 처리합니다
+		case 10: // break문은 조건값마다 넣어주는 것을 권장하며 만약 없을 시에는 
+				 // 다음 break문을  만날 때까지 모든 수행문을 처리합니다
 		case 9:{
-			// 10, 9레이블을 하나의 부류로 묶어서 처리하게 됩니다.
+			// 10, 9레이블을 하나의 그룹으로 묶어서 처리하게 됩니다.
 			grade ='A';
 			break;
 		}

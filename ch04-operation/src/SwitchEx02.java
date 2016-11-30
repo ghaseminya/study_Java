@@ -1,5 +1,15 @@
+/*
 //switch문에 문자 비교
+	• if문의 조건값은 boolean형인데 비해 
+	• switch문의 조건값은 long형을 제외한 정수형(byte, short, int) 또는 char형이 올 수 있습니다. 
 
+if			switch
+boolean		byte
+			short
+			int
+			char
+
+*/
 
 public class SwitchEx02 {
 

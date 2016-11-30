@@ -1,4 +1,4 @@
-//while문 - 증감값의 후행/선행
+//while문 - 증감값의 후행/선행 (주의)
 
 
 public class WhileEx01 {
@@ -39,7 +39,6 @@ public class WhileEx01 {
 //1
 //0
 //후행 후  i : -1
-//
 //9
 //8
 //7

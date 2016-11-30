@@ -13,7 +13,7 @@ public class WhileEx02 {
 			sum += su;
 			su++;			//증감식
 		}
-		System.out.println("1~100까지의 합 : " + sum);	//1~100까지의 합 : 5050
+		System.out.println("1~100까지의 합 : " + sum); //1~100까지의 합 : 5050
 		
 	}
 }

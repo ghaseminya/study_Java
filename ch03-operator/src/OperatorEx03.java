@@ -15,7 +15,11 @@ public class OperatorEx03 {
 			System.out.println("a : " + a);	//a : 10
 			System.out.println("b : " + b);	//b : 10.0
 		}
-		
+/*
+a와 b는 같다.
+a : 10
+b : 10.0
+*/
 		
 		System.out.println("");
 		char c ='0';
@@ -27,7 +31,11 @@ public class OperatorEx03 {
 			System.out.println("c : " + c);	//c : 0
 			System.out.println("d : " + d);	//d : 0
 		}
-		
+/*
+c와 d는 같지 않다.
+c : 0
+d : 0
+*/
 		
 		System.out.println("");
 		//char == int
@@ -42,14 +50,6 @@ public class OperatorEx03 {
 }
 
 /*
-a와 b는 같다.
-a : 10
-b : 10.0
-
-c와 d는 같지 않다.
-c : 0
-d : 0
-
 e와 f는 같다.
 e : A
 f : 65
