@@ -11,7 +11,7 @@
 
 
 [멤버 접근법]
-	• mc와 같은 객체의 참조(reference)를 통해 . (점)를 사용하여 해당 객체의 메서드나 변수 즉 멤버들에 접근 할 수 있습니다. 
+	• mc와 같은 객체의 참조(reference)를 통해 .(점)를 사용하여 해당 객체의 메서드나 변수 즉 멤버들에 접근 할 수 있습니다. 
 	•  .는 dot연산자라고도 하며 사용법은 객체참조.멤버명 형식으로 사용됩니다. 
 
 [멤버 접근 형식]
@@ -30,7 +30,7 @@ public class InstanceEx01 {
 
 	//멤버 필드
 	int var1;	//변수
-	final int NUM_TWO=2;	//상수
+	final int NUM_TWO=2; //상수
 	
 //	생성자: 객체 생성시 호출 되고 멤버변수를 초기화하는 역할
 //	생성자를 호출하면
@@ -60,7 +60,7 @@ public class InstanceEx01 {
 		//() : InstanceEx01() == 매개변수가 없는 디폴트 생성자를 의미
 		
 		
-//		질문: 같은 클래스를 가지고 객체를 생성하게 되면 같은 참조값을 가지나?
+//		질문: 같은 클래스를 가지고 객체를 생성하게 되면 같은 참조값을 가지나요?
 //		답: 다른 참조값을 가지고 멤버필드도 개별적으로 존재하게 됩니다.
 		//객체 출력(참조값)
 		System.out.println(me1);	//InstanceEx01@659e0bfd
@@ -78,9 +78,9 @@ public class InstanceEx01 {
 		System.out.println(me2.var1);	//0
 	
 
-//		멤버 상수 변경하기
-//		멤버 상수는 변경할 수 없으므로 변경시 Error
-//		me1.NUM_TWO = 20;	//Error: The final field InstanceEx01.NUM_TWO cannot be assigned
+		//멤버 상수 변경하기
+		//멤버 상수는 변경할 수 없으므로 변경시 Error
+//		me1.NUM_TWO = 20; //Error: The final field InstanceEx01.NUM_TWO cannot be assigned
 		
 		System.out.println();
 		//멤버 메소드 호출
