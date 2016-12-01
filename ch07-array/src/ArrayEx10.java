@@ -4,6 +4,8 @@
 배열 길이확인
 배열 인스턴스의 멤버변수 length에는 배열의 길이정보가 저정되어 있습니다.
 
+배열명.length
+
 */
 
 public class ArrayEx10 {

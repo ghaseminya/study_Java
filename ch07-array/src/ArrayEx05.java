@@ -19,19 +19,20 @@ public class ArrayEx05 {
 		
 		//배열의 마지막에 총점을 입력하기 위해 +1
 		int[]	score = new int[subname.length + 1];
-		float average = 0.0F;
+		float average = 0.0F; // 평균
 			
 		
 		for(int i=0; i<subname.length; i++){
 			
-			//1~100사이의 정수만 입력가능
+			//1~100사이의 정수만 입력 가능 (입력값 체크) - SecureCoding
 			do{
+				//입력받을 과목명 표시
 				System.out.print(subname[i] + " 점수를 입력하세요 > ");
 				score[i] = input.nextInt();
 							
 			}while(score[i] < 0 || score[i] >100); //입력 받은 값의 유효성 체크
 			
-			//총점
+			//총점 누적
 			score[score.length-1] += score[i];	
 		}		
 		
@@ -45,3 +46,15 @@ public class ArrayEx05 {
 		input.close();
 	}
 }
+
+
+/* 출력결과
+국어 점수를 입력하세요 > 90
+영어 점수를 입력하세요 > 80
+수학 점수를 입력하세요 > 70
+과학 점수를 입력하세요 > 60
+총점 : 300
+평균 : 75.00
+*/
+
+

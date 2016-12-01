@@ -6,6 +6,21 @@
 	• 자바에서 하나의 배열은 하나의 객체로 인식됩니다.
 
 
+
+배열의 종류
+1차원 배열		같은 자료 형들끼리 모아둘 수 있는 묶음이 하나밖에 없는 경우
+다차원 배열		1차원 배열이 여러 개 있는 경우
+객체형 배열		객체를 참조하는 참조변수들의 묶음
+기본 자료형 배열	boolean, char, int등과 같은 기본 자료 형의 배열
+
+
+
+도식도
+http://cfile30.uf.tistory.com/image/211C084655BFFBE4038A89
+
+
+
+
 배열 작업 단계  (단계별 생성)
 1	배열 선언
 2	배열 생성
@@ -34,23 +49,23 @@ public class ArrayEx01 {
 	public static void main(String[] args) {
 		
 		//배열 사용 단계: 1)배열 선언/2)배열 생성/3)배열 초기화/4)배열 출력
-		//1)배열 선언
+		//TODO : 1)배열 선언
 		char[] ch;
 		
-		//2)배열 생성
+		//TODO : 2)배열 생성
 		ch = new char[4];
 		
-		//3)배열 초기화
+		//TODO : 3)배열 초기화
 		ch[0]='J';
 		ch[1]='A';
 		ch[2]='V';
 		ch[3]='A';
 		
-		//4)배열 출력
+		//TODO : 4)배열 출력
 		//배열명 출력 : char배열일때만 참조값이 아닌 배열값을 보여준다. (참조값을 배열값으로 한번 더 가공해서 보여준다)
 		System.out.println(ch);	//JAVA
 		
-		//배열의 index 0을 개별 호출
+		//배열의 index 요소를  개별적으로 호출
 		System.out.println(ch[0]);	//J
 		System.out.println(ch[2]);  //V
 		
@@ -63,7 +78,8 @@ public class ArrayEx01 {
 		}
 		
 		
-		//배열 선언 방법 1 2 3
+		
+		//TODO : 배열 선언 방법 3가지
 		//배열선언 방법 1: 배열 선언 및 생성
 		int i[] = new int[7];
 		

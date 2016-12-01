@@ -1,6 +1,5 @@
 //2차원 배열 길이 확인
 
-
 public class ArrayEx11 {
 
 	public static void main(String[] args) {
@@ -14,8 +13,10 @@ public class ArrayEx11 {
 				{7, 8, 9, 10}
 		};
 
-		System.out.println("배열의 세로길이: "+arr.length);
+		//배열의 전체 길이
+		System.out.println("배열의 세로길이: "+arr.length); //배열의 세로길이: 5
 
+		//각 행의 길이 (가로)
 		for(int i=0; i<arr.length; i++)
 			System.out.printf("%d행의 길이: %d \n", i+1, arr[i].length);
 		
