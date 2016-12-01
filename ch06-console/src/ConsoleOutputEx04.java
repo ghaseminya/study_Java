@@ -42,6 +42,9 @@ public class ConsoleOutputEx04 {
 		System.out.println("");	//27
 		
 		//%f: 실수 형태
+		System.out.printf("%f", 123.4567); //123.456700
+		System.out.println("");
+		
 		//%.2f: 소수점 2째자리까지 표시
 		System.out.printf("%.2f",123.4567); 
 		System.out.println("");	//123.46

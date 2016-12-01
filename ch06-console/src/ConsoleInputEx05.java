@@ -13,30 +13,33 @@ public class ConsoleInputEx05 {
 	java.util.Scanner input = new java.util.Scanner(System.in);
 
 	//문제발생 코드
-//	System.out.println("정수입력 > ");
-//	int n = input.nextInt();
-//	System.out.println("n: " + n);
-//	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
-//	String str = input.nextLine();
-//	System.out.println("str: " + str);
+	//확인 후 주석처리
+	System.out.println("정수입력 > ");
+	int n = input.nextInt();
+	System.out.println("n: " + n);
+	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
+	String str = input.nextLine();
+	System.out.println("str: " + str);
 	//콘솔입력을 받는게 아니라 버퍼에 있는 데이터를 가져오게 된다. 즉, 버퍼에 있는 \n문자를 가져오게 됩니다
 	//숫자형 데이터 입력을 받은 직후 문자를 입력받아야 한다면 버퍼를 비워준후 입력을 받아야 합니다.
 	
 	
 	//방법 1 - input.nextLine();
-	System.out.println("정수입력 > ");
-	int n = input.nextInt();
-	System.out.println("n: " + n);
-	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
-	
-	input.nextLine();	//버퍼비우기 
-						//버퍼에 입력된 문자열을 개행문자 \n 까지 가져오기
-	String str = input.nextLine();
-	System.out.println("str: " + str);
+	//확인 후 주석처리
+//	System.out.println("정수입력 > ");
+//	int n = input.nextInt();
+//	System.out.println("n: " + n);
+//	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
+//	
+//	input.nextLine();	//버퍼비우기 
+//						//버퍼에 입력된 문자열을 개행문자 \n 까지 가져오기
+//	String str = input.nextLine();
+//	System.out.println("str: " + str);
 
 	
 	
 	//방법 2 - input.skip("[\\r\\n]+");
+	//확인 후 주석처리
 //	System.out.println("정수입력 > ");
 //	int n = input.nextInt();
 //	System.out.println("n: " + n);
@@ -51,6 +54,7 @@ public class ConsoleInputEx05 {
 	
 	//-------------------------------------------
 	//방법 3 - input.nextLine() & Integer.parseInt()
+	//확인 후 주석처리
 //	System.out.println("정수입력 > ");
 //	
 //	String s_num = input.nextLine();    // 입력받을 숫자를 문자열로 입력받고
@@ -60,8 +64,8 @@ public class ConsoleInputEx05 {
 //	System.out.println("원하는 요일을 입력하세요(영문 소문자) > ");
 //	String str = input.nextLine();
 //	System.out.println("str> " + str);
-	
-	input.close();
+//	
+//	input.close();
 	}
 }
 	

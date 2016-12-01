@@ -6,6 +6,7 @@
 Scanner 클래스
 	• Scanner 클래스는 단순히 키보드의 입력만을 목적으로 디자인된 클래스가 아니라
 	• 다양한 리소스를 대상으로 입력을 받을 수 있도록 정의된 클래스입니다.
+	java.util 패키지 안에 있는 클래스
 
 */
 
@@ -28,6 +29,7 @@ public class ConsoleInputEx01 {
 		int num3=scanner.nextInt();
 		int num4=scanner.nextInt();
 		int num5=scanner.nextInt();
+		
 		int sum=num1+num2+num3+num4+num5;
 		
 		System.out.printf(

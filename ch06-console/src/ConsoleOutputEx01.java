@@ -42,7 +42,7 @@ public class ConsoleOutputEx01 {
 		//TODO :표준 출력만 실습할 경우
 		System.out.print("출력이 ");
 		System.out.print("종료되었습니다.");
-		System.out.println("");
+		System.out.println(""); //코딩 후 추가로 개행하기 위해 삽입하기
 		System.out.print("끝");
 		
 //------------------------------------------
