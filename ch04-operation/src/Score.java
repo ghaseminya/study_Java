@@ -20,26 +20,19 @@ public class Score {
 		int 국어 = 0, 영어 = 0, 수학 = 0, 총점 = 0;
 		char  학점;
 		float 평균1;
-		float 평균2;		
+		float 평균2;
 		
-		//TODO 2: 유효한 점수 인지 체크하기 (과목 전체)
-//		do{
-//			System.out.print("국어 : ");
-//			국어 = input.nextInt();
-//			
-//			System.out.print("영어 : ");
-//			영어 = input.nextInt();
-//			
-//			System.out.print("수학 : ");
-//			수학 = input.nextInt();
-//			
-//			
-//		}while(국어 < 0 || 국어 > 100  ||
-//				영어 < 0 || 영어 > 100 ||
-//				수학 < 0 || 수학 > 100);
+		//TODO 1: 유효성 검사 없이 입력받기 (보안에 취약)
+		System.out.print("국어 : ");
+		국어 = input.nextInt();
+		System.out.print("영어 : ");
+		영어 = input.nextInt();
+		System.out.print("수학 : ");
+		수학 = input.nextInt();
 		
-		
-		//TODO 1: 유효한 점수 인지 체크하기 (과목별로 ) - 데이터 검증(중요), SecureCoding
+
+		//TODO 2: 유효한 점수 인지 체크하기 (과목별로 ) - 데이터 검증(중요), SecureCoding
+		// 사용자의 입력값은 반드시 검증 후 프로그램내에서 사용해야 합니다.
 		do{
 			System.out.print("국어 : ");
 			국어 = input.nextInt();
@@ -56,6 +49,24 @@ public class Score {
 		}while(수학 < 0 || 수학 > 100);				
 		
 		총점 = 국어 + 영어 + 수학;
+		
+		//TODO 3: 유효한 점수 인지 체크하기 (과목 전체)
+//		do{
+//			System.out.print("국어 : ");
+//			국어 = input.nextInt();
+//			
+//			System.out.print("영어 : ");
+//			영어 = input.nextInt();
+//			
+//			System.out.print("수학 : ");
+//			수학 = input.nextInt();
+//			
+//			
+//		}while(국어 < 0 || 국어 > 100  ||
+//				영어 < 0 || 영어 > 100 ||
+//				수학 < 0 || 수학 > 100);
+		
+		
 		
 		
 		//데이터 처리

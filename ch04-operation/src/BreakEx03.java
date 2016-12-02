@@ -14,8 +14,8 @@ public class BreakEx03 {
 		
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		
-		int a =0;
-		int total = 0;
+		int a =0; //반복할 변수
+		int total = 0; //누적합계
 		
 		System.out.println("0전까지 입력받은 정수로 합 구하기");
 		

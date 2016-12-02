@@ -1,4 +1,3 @@
-
 /*
 
 do~while문
@@ -32,8 +31,8 @@ public class DoWhileEx01 {
 		int num=10;	//조건식을 만족시키지 않는 초기값
 		
 		do 
-		{
-			System.out.println("I Love JAVA - " + num);	//무조건 한번은 수행됨
+		{ //무조건 한번은 수행됨
+			System.out.println("I Love JAVA - " + num);
 			num++;		//반복문을 종료하기 위한 구문
 		}while(num<7);	//반복 조건
 	}

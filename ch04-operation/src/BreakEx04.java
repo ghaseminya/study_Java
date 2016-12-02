@@ -29,7 +29,7 @@ public class BreakEx04 {
 		}
 		
 		if(result) //0이상이면 true로 인식
-			System.out.println("찾는 정수 : " + num);
+			System.out.println("찾는 정수 : " + num); //찾는 정수 : 21
 		else
 			System.out.println("3의 배수이고 7의 배수인 정수를 찾지 못했습니다.");
 	}
