@@ -34,7 +34,6 @@
 	• 오버로딩된 메소드는 호출시 전달하는 인자를 통해서 구별됩니다.
 	• 리턴 타입은 달라도 무관합니다.(접근제한과 반환형은 변경가능)
 
-
 */
 
 public class OverloadingEx03 {
@@ -52,12 +51,14 @@ public class OverloadingEx03 {
 	public void getLength(String str){
 		System.out.println("입력한 값의 길이 : "+str.length());
 	}
+	
+	//메소드 오버로딩 함수 정의
 	public void getLength(int n){
 		String s = String.valueOf(n);
 		getLength(s);
 	}
 	
-	//반환값이 달라도 동일한 메소드로 취급
+	//반환값이 달라도 동일한 메소드로 취급 -> 컴파일에러
 	//ERROR-Duplicate method getLength(int) in type OverloadingEx03
 //	private int getLength(int n){
 //		String s = String.valueOf(n);
@@ -65,6 +66,7 @@ public class OverloadingEx03 {
 //		return 0;
 //	}
 	
+	//메소드 오버로딩 함수 정의
 	void getLength(float n){
 		String s = String.valueOf(n);
 		getLength(s);

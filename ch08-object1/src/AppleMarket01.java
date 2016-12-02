@@ -46,6 +46,7 @@ class AppleSeller{
 		myMoney = myMoney + money; //myMoney+=money;
 		return num;
 	}
+	//판매 현황 출력
 	public void showSaleResult() {
 		System.out.println("보유 사과: " + numOfApple);
 		System.out.println("판매 수익: " + myMoney);
@@ -62,6 +63,7 @@ class AppleBuyer{
 		numOfApple+=seller.saleApple(money);
 		myMoney-=money;
 	}
+	//구매 현황 출력
 	public void showBuyResult()	{
 		System.out.println("보유 금액: " + myMoney);
 		System.out.println("사과 개수: " + numOfApple);		

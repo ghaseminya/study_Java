@@ -31,11 +31,11 @@ public class Student2 {
 		student.math = 90;
 		student.english = 80;
 		
-		//멤버변수를 이용하여 처리하기 (총점, 평균)
+		//TODO : 멤버변수를 이용하여 처리하기 (총점, 평균)
 //		student.sum = student.korean + student.math + student.english;
 //		student.avg = student.sum / 3;
 		
-		//멤버메소드 호출하여 처리하기 (총점, 평균)
+		//TODO : 멤버메소드 호출하여 처리하기 (총점, 평균)
 		student.sum = student.sum(student.korean, student.math, student.english);
 		student.avg = student.avg(student.sum);
 		

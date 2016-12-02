@@ -25,9 +25,11 @@ public class Student1 {
 		Student1 student1 = new Student1();		
 		System.out.println(student1);	//Student1@659e0bfd
 		
+		
 		//객체가 생성된 후 의 멤버변수가 초기화되지 않은 경우 null/0인 기본값이 출력됩니다.
 		System.out.println(student1.name);	//null
 		System.out.println(student1.age);	//0
+		
 		
 		System.out.println();
 		//객체의 멤버변수에 원하는 값을 설정한 후 출력합니다.
@@ -41,6 +43,7 @@ public class Student1 {
 		System.out.println();
 		Student1 newstudent = new Student1();
 		System.out.println(newstudent);	//Student1@2a139a55
+		
 		
 		//객체의 멤버변수에 원하는 값으로 설정
 		newstudent.name = "김연아"; //손연재 22

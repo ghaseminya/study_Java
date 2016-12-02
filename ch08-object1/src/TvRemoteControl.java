@@ -3,7 +3,7 @@
 
 //------------------------------------
 //객체				TV
-//변수(데이터, 속성) 	• 전원유무  	• 채널 	• TV색상 
+//변수(데이터, 속성) 		• 전원유무  	• 채널 	• TV색상 
 //메소드(기능, 행위)		• 전원 On/Off	• 채널 증가 • 채널 감소
 
 
@@ -62,10 +62,11 @@ public class TvRemoteControl {
 		t.channelUp();
 		System.out.println("변경된 채널 : " + t.channel); System.out.println();		
 		
-		// TV전원 끄기
+		//TV전원 끄기
 		t.power();
 		System.out.println("TV 실행 유무 : " + t.power); System.out.println();
 		
+		//TV 색상 변경
 		t.color = "blue";
 		System.out.println("TV 색상 : " + t.color);
 	}
