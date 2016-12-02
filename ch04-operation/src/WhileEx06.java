@@ -5,15 +5,20 @@
 public class WhileEx06 {
 	public static void main(String[] args){
 		java.util.Scanner input= new java.util.Scanner (System.in);
-		int i= 1;
-		int sum = 0;
+		
+		int i = 1; //반복 변수
+		int sum = 0; //누적 합계
 		System.out.println("더할 숫자를 입력해 주세요");
 
 //		while(i>0){ //0입력하면 종료
+//		while(i!=0){
+		////do~while()
 		while(i>=0){
 			i = input.nextInt();
 			sum=sum+i;
 			System.out.println("누적합계 : " + sum);
+			
+			//if문으로 종료조건, break;
 		}
 		System.out.println("반복을 종료합니다");
 		

@@ -1,65 +1,41 @@
-//do ~ while문, 
-//do~while과  while실행결과 차이확인하기
+
+/*
+
+do~while문
+	• while문이 		[선 비교, 후 처리]라 하면 
+	  do ~ while문은	[선 처리, 후 비교]이다. 
+	• 즉 조건식에 불만족하더라도 무조건 한번은 수행하게 되어 있습니다.
+	• while 조건식 뒤의 ;(세미콜론) 잊지 말것
 
 
+[do~while 구성 및 동작]
+do{ 
+     수행구문
+
+}while(조건식);
+
+
+
+for 반복문 vs while반복문
+http://codedragon.tistory.com/3946
+
+//------------------------------------
+조건식이 만족하는 경우의 결과확인
+조건식이 만족하지않은 경우의 결과확인
+*/
 public class DoWhileEx01 {
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		
-		int su = 0;	//초기식
-		int nu1, nu2;
-		nu1 = nu2 = 1;
+//		int num=0;	//초기값 (조건식 만족)
 		
-		String msg = "Java World!";
+		int num=10;	//조건식을 만족시키지 않는 초기값
 		
-		//do~while문
-		System.out.println("===do~ while 실행결과 ===");
-		
-		do{
-			System.out.println(nu1 + " : " + msg); // 1 2 3 4 5 6
-			nu1 ++; 							   // 2 3 4 5 6 7
-		}while(su++ < 5); //0->1 1->2 2->3	3->4 4->5  5->6
-		//조건식/증감식, 선 연산 후 증가(증가값은 다음 행부터 적용)
-		
-		System.out.println("do~while수행후 nu1: " + nu1); //7
-		System.out.println("do~while수행후 su: " + su); //6
-		
-		
-//------------------------------
-		//while문
-		System.out.println("");
-		System.out.println("=== while 실행결과===");
-		su = 0; //초기식
-		
-		//조건식/증감식,
-		while(su++ < 5 ){ // 0->1 1->2 2->3 3->4 4->5  5->6
-			System.out.println(nu2 + " : " + msg); // 1 2 3 4 5
-			nu2++; //2 3 4 5 6
-		}
-		System.out.println("while수행후 nu2: " + nu2); //6
-		System.out.println("while수행후 su: " + su); //6
-
+		do 
+		{
+			System.out.println("I Love JAVA - " + num);	//무조건 한번은 수행됨
+			num++;		//반복문을 종료하기 위한 구문
+		}while(num<7);	//반복 조건
 	}
 }
 
-
-/*			
-===do~ while 실행결과 ===
-1 : Java World!
-2 : Java World!
-3 : Java World!
-4 : Java World!
-5 : Java World!
-6 : Java World!
-do~while수행후 nu1: 7
-do~while수행후 su: 6
-
-=== while 실행결과===
-1 : Java World!
-2 : Java World!
-3 : Java World!
-4 : Java World!
-5 : Java World!
-while수행후 nu2: 6
-while수행후 su: 6
-*/

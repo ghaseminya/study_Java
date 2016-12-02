@@ -26,25 +26,24 @@ public class ContinueExBreakEx01 {
 		}
 		
 		System.out.println("반복문 수행 완료!");
-	}
-	
 
+		
+		System.out.println();
 //--------------------	
-	//TODO : break문 예시
-//	public static void main(String[] args) {
-//		// 특정조건일때 break문으로 반복문을 빠져나감
-//		// 반복문 다음 문장 수행
-//
-//		for(int i =0; i<=10; i++){
-//
-//			//특정 조건일때 반복문을 빠져나감(for문 탈출).
-//			if( i == 7)
-//				break;
-//			System.out.println(i);
-//		}
-//
-//		System.out.println("반복문 수행 완료!");
-//	}
+		//TODO : break문 예시
+		// 특정조건일때 break문으로 반복문을 빠져나감
+		// 반복문 다음 문장 수행
+		for(int i =0; i<=10; i++){
+	
+			//특정 조건일때 반복문을 빠져나감(for문 탈출).
+			if( i == 7)
+				break;
+			System.out.println(i);
+		}
+	
+		System.out.println("반복문 수행 완료!");
+		
+	}
 }
 
 
