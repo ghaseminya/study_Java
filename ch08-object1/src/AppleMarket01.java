@@ -41,10 +41,12 @@ class AppleSeller{
 	
 	//사과를 파는 기능
 	public int saleApple(int money)	{
-		int num=money/APPLE_PRICE;
+		int num=money/APPLE_PRICE; //받은 돈에서 사과한개 가격으로 나누어 사과개수 구하기
 		numOfApple = numOfApple-num; //numOfApple-=num;
+									 //현재 보유 사과에서 판매한 사과수만큼 빼기
 		myMoney = myMoney + money; //myMoney+=money;
-		return num;
+									//현재 보유금액에서 사과를 판매한 금액을 합산하기
+		return num; //구매자에게 사과가격 반환
 	}
 	//판매 현황 출력
 	public void showSaleResult() {
@@ -60,8 +62,9 @@ class AppleBuyer{
 	
 	//사과를 사는 기능
 	public void buyApple(AppleSeller seller, int money)	{
-		numOfApple+=seller.saleApple(money);
-		myMoney-=money;
+		//메소드(메시지)를 통해 다른 객체과 의사소통
+		numOfApple+=seller.saleApple(money); //금액을 지불하여 사과구매 -> 사과개수
+		myMoney-=money; //현재 돈에서 사과구매한 금액 빼기
 	}
 	//구매 현황 출력
 	public void showBuyResult()	{

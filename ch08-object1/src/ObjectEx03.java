@@ -5,7 +5,7 @@
 //-생성자를 통해 원하는 값으로 초기화
 
 
-//디폴트 생성자(Default Contructor)
+//디폴트 생성자(Default Constructor)
 //	• 생성자를 정의하지 않았을 경우에만 호출 되어 집니다.
 //	• 생성자가 없어도 인스턴스 생성이 가능한 이유는 자바 컴파일러가 자동으로 아래와 같은 디폴트 생성자를 자동으로 삽입시켜주기 때문입니다.
 //	• 모든 클래스는 자동으로 기본 생성자(디폴트 생성자)가 생성됩니다.
@@ -26,8 +26,10 @@ public class ObjectEx03 {
 		Number myNumber1=new Number(10);
 		//new			: 인스턴스 생성 의미
 		//Number(10)	: 매개변수10을 인자로 전달하여 초기화하는 생성자를 호출
+		
 		Number myNumber2=new Number(20);
 		
+		//TODO : 인자값이 있는 생성자 정의후 default 생성자 호출
 		//ERROR-Number myNumber2=new Number(20);
 		//• 만약 개발자가 직접 생성자를 지정하게되면 기본 생성자는 자동 생성되지 않습니다.
 		//• public Number(){} (자동 생성 안됨)
@@ -76,4 +78,18 @@ class Number{
 		return num;
 	}
 }
+
+
+//출력결과
+//생성자 호출됨!
+//전달된 인자값: 10
+//생성자 호출됨!
+//전달된 인자값: 20
+//myNumber1 의 값: 10
+//myNumber2 의 값: 20
+//myNumber1 의 값: 20
+//myNumber2 의 값: 20
+//myNumber1 의 값: 20
+//myNumber2 의 값: 30
+
 */

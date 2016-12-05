@@ -43,6 +43,7 @@ class Person{
 		personID=0;
 		personAge=age;
 	}
+	
 	public void showInfo()
 	{
 		System.out.println(personName + "님 안녕하세요!!!");
@@ -56,3 +57,15 @@ class Person{
 		}
 	}
 }
+
+
+//출력결과
+//일지매님 안녕하세요!!!
+//당신의 ID: 880102
+//입장하세요
+//
+//홍길동님 안녕하세요!!!
+//당신의 나이는: 18
+//미성년자 입니다 
+
+

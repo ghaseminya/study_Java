@@ -36,7 +36,7 @@ eclipse를 사용하면 클래스 생성시 지정한 패키지이름으로 자�
 	• 패키지문은 반드시 한번만 사용가능
 	• 클래스 선언보다 먼저 선언
 	• 패키지명은 계층 구조를 가지고 있습니다.
-	• 중복되면 안되며 패키지명은 도메인 형식으로 지정하는 것이 일반적입니다.
+	• 중복되면 안되며 패키지명은 도메인 형식으로 지정하는 것이 일반적입니다.(중복을  피하기 위해)
 	• 서로 다른 패키지로 만든 클래스들끼리는 서로 접근할 수 없습니다.
 	• JDK에서 제공하는 API도 패키지로 제공됩니다.
 	• 패키지로 만든 클래스 파일은 일반 컴파일이 아닌 패키지 컴파일을 해야 합니다.
@@ -45,7 +45,8 @@ eclipse를 사용하면 클래스 생성시 지정한 패키지이름으로 자�
 패키지 사용 방법
 	• 패키지에 있는 특정한 클래스를 사용하려면 import문을 추가해야 합니다.
 	• import는 '수입하다'란 뜻이므로 현재 객체에서 원하는 다른 객체를 가져다 사용할 때 사용하는 예약어 입니다.
-	• 자바 인터프리터는 import하는 패키지 경로의 클래스들을 환결설정시 등록한 CLASSPATH환경변수에 지정된 경로를 우선적으로 검색합니다.
+	• 자바 인터프리터는 import하는 패키지 경로의 클래스들을 환결설정시 
+	 등록한 CLASSPATH환경변수에 지정된 경로를 우선적으로 검색합니다.
 
 
 import 선언 형식 (패키지 사용 형식)
@@ -103,12 +104,11 @@ public class PackageEx {
 		//TODO : 다른 패키지의 클래스 호출
 		//다른 패키지의 클래스를 호출할 때는 패키지명 전체를 명시해야 합니다.
 //		PackOneIcecreamsandwich p1i = new PackOneIcecreamsandwich(); //ERROR-PackOneIcecreamsandwich cannot be resolved to a type
-		//com.package1.PackOneIcecreamsandwich p1i = new com.package1.PackOneIcecreamsandwich();
+		com.package1.PackOneIcecreamsandwich p1i = new com.package1.PackOneIcecreamsandwich();
 
 		//다른 패키지의 인스턴스 변수를 직접 호출할 수 없음 (public으로 선언하거나 getter메소드 사용하면 호출가능)
 //		System.out.println( p1i.str ); //ERROR-p1i cannot be resolved to a variable
 		
-		com.package1.PackOneIcecreamsandwich p1i = new com.package1.PackOneIcecreamsandwich();
 		System.out.println(p1i.getStr()); //getter메소드 사용하여 호출 (강추)
 
 		System.out.println( p1i.msg ); //public으로 선언된 인스턴스 변수 직접 호출 (비추)
@@ -119,3 +119,12 @@ public class PackageEx {
 		System.out.println(p1j.getStr());
 	}
 }
+
+
+//출력결과
+//Package2 - KitKat
+//Package2 - Lollipop
+//Package1 - Icecreamsandwich
+//Package1
+//Package1 - Jellybeans
+

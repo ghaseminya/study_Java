@@ -39,6 +39,7 @@ public class ObjectEx02 {
 		Number myNumber1=new Number();
 		//new		: 인스턴스 생성 의미
 		//Number()	: 매개변수가 없는 Default생성자를 호출
+		
 		Number myNumber2=new Number();
 		
 
@@ -81,5 +82,17 @@ class Number{
 		return num;
 	}
 }
+
+
+//출력결과
+//생성자 호출됨!
+//생성자 호출됨!
+//myNumber1 메소드 호출 전 값: 30
+//myNumber2 메소드 호출 전 값: 30
+//myNumber1 메소드 호출 후 값: 40
+//myNumber2 메소드 호출 후 값: 30
+//myNumber1 메소드 호출 후 값: 40
+//myNumber2 메소드 호출 후 값: 40
+
 
 */

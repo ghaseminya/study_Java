@@ -6,7 +6,9 @@
 //AppleMarket02.java에서 매번 인스턴스 변수를 초기화 주어야 하는 문제 해결
 
 //특강시 
-//this 개념도 강의
+//this 개념 강의
+//http://codedragon.tistory.com/2478
+//TODO : this로 멤버변수 초기화하기
 
 public class AppleMarket03 {
 	public static void main(String[] args) {
@@ -85,5 +87,18 @@ class AppleBuyer{
 		System.out.println("사과 개수: " + numOfApple);		
 	}
 }
+
+
+//출력결과
+//사과 판매자1의 현재 상태
+//보유 사과: 18
+//판매 수익: 5000
+//사과 판매자2의 현재 상태
+//보유 사과: 45
+//판매 수익: 5000
+//사과 구매자의 현재 상태
+//보유 금액: 0
+//사과 개수: 7
+
 
 */

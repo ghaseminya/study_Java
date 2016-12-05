@@ -44,6 +44,7 @@ public class Student {
 //		instance.
 		
 		//TODO 4: com.korea의 getMessage가 public로 되어 있어 다른 패키지에서는 접근할 수 있습니다.
+		//getMessage()를 public으로 지정로 지정한 후 호출
 		instance.getMessage();
 	}
 	
@@ -57,3 +58,9 @@ public class Student {
 		student.interact();
 	}
 }
+
+
+//출력결과
+//Korean Student
+
+
