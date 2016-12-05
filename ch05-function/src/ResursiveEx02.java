@@ -1,3 +1,4 @@
+
 //잘못된 재귀 메소드 정의
 //	• 종료조건이 만족되지 않으면 무한 루프에 빠질 수 있습니다.
 //	• 종료조건 및 종료조건의 검사위치를 로직 상에서 점검 해야 합니다. 
@@ -11,6 +12,7 @@ public class ResursiveEx02 {
 	}
 	
 	//TODO 1: 잘못된 재귀 메소드 정의
+	//확인 후 주석처리
 //	public static void showJava(int cnt){
 //
 //		System.out.println("JAVA ");
