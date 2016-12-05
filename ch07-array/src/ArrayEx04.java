@@ -29,6 +29,11 @@ public class ArrayEx04 {
 		System.out.println();
 		System.out.println("총점 : " + sum); //총점 : 466
 		System.out.println("평균 : " + average2); //평균 : 93.2
+		
+		System.out.println(score.length); //5
+//		System.out.println(score[score.length]);
+		//배열의  index요소를 넘어서 접근하려고 하기 때문에 예외가 발생합니다. score[5]
+		//Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
 	}
 }
 

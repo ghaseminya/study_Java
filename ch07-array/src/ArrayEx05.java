@@ -18,7 +18,7 @@ public class ArrayEx05 {
 		String[] subname = {"국어","영어","수학","과학"};
 		
 		//배열의 마지막에 총점을 입력하기 위해 +1
-		int[]	score = new int[subname.length + 1];
+		int[] score = new int[subname.length + 1];
 		float average = 0.0F; // 평균
 			
 		
