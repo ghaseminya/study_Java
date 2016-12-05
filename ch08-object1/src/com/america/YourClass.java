@@ -2,9 +2,9 @@
 //private 제한자
 
 //FileInfo
-//package com.america;	YourClass.class	main부
-//package com.america;	MyClass.class	private 멤버 변수 정의
-
+//package com.america;	YourClass.class		main부
+//package com.america;	MyClass.class		데이터 클래스 정의
+//											private 멤버 변수 정의
 //----------------------------------------------
 private	< default	< protected < public
 클래스 내부	< 동일 패키지	< 상속 클래스	< 이외의 영역 
@@ -23,7 +23,8 @@ public class YourClass {
 	public void accessClass(MyClass myClass){
 		
 		//MyClass의 number멤버변수는 private으로 선언되어 있어 클래스 내부(메소드)에서만 접근 가능합니다
-//		myClass.number=10;		//ERROR - The field MyClass.number is not visible
+//		myClass.number=10;
+		//ERROR - The field MyClass.number is not visible
 		
 		//클래스 내부(메소드)를 통해 private으로 선언된 멤버 변수에 접근
 		myClass.setNumber(12);
@@ -41,3 +42,8 @@ public class YourClass {
 		
 	}
 }
+
+
+//출력결과
+//12
+

@@ -3,7 +3,7 @@
 
 File Info
 MyClassMain.java	main부
-MyClass.java		은닉화 구현 클래스
+MyClass.java		은닉화 구현 클래스, 멤버필드 은닉화
 
 */
 public class MyClass {

@@ -2,9 +2,10 @@
 //private 제한자
 
 FileInfo
-package com.america;	YourClass.class	main부
-package com.america;	MyClass.class	private 멤버 변수 정의
-
+package com.america;	YourClass.class		main부
+package com.america;	MyClass.class		데이터 클래스 정의
+											private 멤버 변수 정의
+											
 
 [데이터 객체(데이터 클래스)]
  • 데이터를 담고 있는 클래스
@@ -28,5 +29,4 @@ public class MyClass {
 	public int getNumber(){
 		return number;
 	}
-
 }

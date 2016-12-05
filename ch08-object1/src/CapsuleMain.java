@@ -102,3 +102,12 @@ public class CapsuleMain {
 		System.out.println( csu.getA() ); //100
 	}
 }
+
+
+//출력결과
+//10
+//-10
+//100
+//음수는 허용되지 않습니다.
+//100
+

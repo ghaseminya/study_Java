@@ -65,3 +65,8 @@ public class School {
 	}
 }
 
+
+//출력결과
+//27
+
+

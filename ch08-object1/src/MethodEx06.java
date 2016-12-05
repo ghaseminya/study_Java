@@ -3,7 +3,8 @@
 //문제는 setMoney(int money)라는 메서드(멤버함수)에 있으며 자바에서는 특정 영역의 우선권은 멤버변수가 아닌 지역변수가 가지게 되어 있습니다. 
 
 //메모리 도식도
-
+//http://codedragon.tistory.com/2618
+//http://cfile1.uf.tistory.com/image/2231A63855CE71B834E35A
 
 public class MethodEx06 {
 
@@ -16,7 +17,8 @@ public class MethodEx06 {
 		//여기서는 멤버변수에 값 대입이 아닌 지역변수 자신에게 자신의 값을 대입한 것이 됩니다.
 		money = money;	//WARNING-The assignment to variable money has no effect
 						// -> 0으로 잘못된 결과 출력
-							
+		
+		//TODO : 멤버변수에 저장하도록 변경
 //		this.money = money; //지역변수 우선순위를 제어한 구문, 5580으로 정상 출력
 		//this 역할
 		//• 객체 내부에서 객체 자신을 칭하고 싶을 때 사용
@@ -35,4 +37,8 @@ public class MethodEx06 {
 		System.out.println("money: " + mm.getMoney());
 	}
 }
+
+//출력결과
+//money: 0
+
 
