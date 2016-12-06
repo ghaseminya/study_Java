@@ -35,6 +35,7 @@ public class Student2 {
 //		student.sum = student.korean + student.math + student.english;
 //		student.avg = student.sum / 3;
 		
+		//위와 동일한 결과가 나오는 코드
 		//TODO : 멤버메소드 호출하여 처리하기 (총점, 평균)
 		student.sum = student.sum(student.korean, student.math, student.english);
 		student.avg = student.avg(student.sum);
@@ -55,3 +56,9 @@ public class Student2 {
 				student.avg);
 	}
 }
+
+
+//출력결과
+//이름	국어	수학	영어	총점	평균
+//김연아	100	90	80	270	90.0
+

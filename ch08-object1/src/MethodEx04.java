@@ -27,8 +27,6 @@ Varargs 형식
 [지정자] [리턴타입] [메소드명](데이터형 ... 변수명){}
 
 
-
-
 //--------------------------------
 //TODO 1: 전달되는 인자의 갯수와 타입 모두 일치
 //TODO 2: 전달되는 인자의 갯수 불일치 하는 경우의 결과 확인
@@ -44,10 +42,10 @@ public class MethodEx04 {
 	}
 	
 	//가변인자 : Variable Arguements
-	//JDK v5.0이상부터 사용가능	
+	//JDK v5.0 이상부터 사용가능	
 	//타입은 일지하고 인자의 갯수가 가변적인 형태
 	public void argsTest(int ... n){
-		//인자전달하면 배열을 만든후 배열에 저장하고 그 주소값을 n으로 입력받는다.
+		//인자전달하면 배열을 만든후 배열에 저장하고 그 배열에 접근할 수 있는 주소값을 n에 입력하게 됩니다.
 		
 		for(int i=0; i<n.length; i++){
 			System.out.println("n[" + i+ "] :" + n[i]);			
@@ -68,7 +66,8 @@ public class MethodEx04 {
 		
 		//TODO 3: 전달되는 인자의 타입이 불일치
 //		m.getNum(5.6);	//ERROR: The method getNum(int) in the type MethodTest04 is not applicable for the arguments (double)
-		m.getNum( (int)5.6); System.out.println();
+		m.getNum( (int)5.6); 
+		System.out.println();
 		
 		
 		//TODO 4: 가변인자를 사용하는 메서드 호출
@@ -79,3 +78,30 @@ public class MethodEx04 {
 		m.argsTest();
 	}
 }
+
+
+/*//출력결과
+전달된 숫자 = 50
+전달된 숫자 = 5
+
+n[0] :50
+n[1] :60
+n[2] :70
+=========================
+n[0] :22
+n[1] :33
+=========================
+n[0] :11
+=========================
+n[0] :100
+n[1] :200
+n[2] :300
+n[3] :400
+n[4] :500
+n[5] :600
+=========================
+=========================
+*/
+
+
+

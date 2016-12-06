@@ -12,6 +12,7 @@ public class ThisEx02 {
 	String name;
 	int age;
 	
+	//TODO 1:
 	//멤버변수명과 지역변수명이 동일할 경우 지역변수가 우선
 	//멤버변수와 지역변수를 구분하기 위해   this를 사용
 //	public ThisTest2(String name, int age){
@@ -19,6 +20,7 @@ public class ThisEx02 {
 //		age = age;		
 //	}
 	
+	//TODO 2:
 	public ThisEx02(String name, int age){
 		//멤버변수	= 지역변수
 		this.name 	= name;
@@ -31,3 +33,7 @@ public class ThisEx02 {
 		System.out.println( tt1.name + " / " + tt1.age );
 	}
 }
+
+
+//출력결과
+//마징가 / 25

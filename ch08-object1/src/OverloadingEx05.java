@@ -7,8 +7,10 @@
 형식				의미
 this			• 객체 자신
 				• 파라미터 값으로 객체 자신의 참조값을 넘겨줄때에도 this 사용
+				
 this.멤버변수		• 매개변수와 객체 자신이 가지고 있는 변수(멤버변수)의 이름이 같은 경우 이를 구분하기 위해 자신의 멤버변수에 this를 사용
-this(매개변수);	• 생성자내에서 다른 생성자를 호출
+
+this(매개변수);		• 생성자내에서 다른 생성자를 호출
 
 
 */
@@ -24,8 +26,7 @@ public class OverloadingEx05 {
 	}
 }
 
-class Human
-{
+class Human{
 	private String name;	//이름
 	private int personID;	//개인식별번호
 	private int age;		//나이
@@ -71,8 +72,7 @@ class Human
 //	}
 	
 	
-	public void showInfo()
-	{
+	public void showInfo() {
 		System.out.println(name + "님 안녕하세요!!!");
 		if(personID!=0){
 			System.out.println("당신의 ID: "+ personID);

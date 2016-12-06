@@ -13,7 +13,6 @@ this()
 */
 public class ThisEx03 {
 	
-	
 	public ThisEx03(){
 
 		//초기화 작업 전에 수행문이 있으면 ERROR:Constructor call must be the first statement in a constructor
@@ -34,7 +33,7 @@ public class ThisEx03 {
 					//int -> String
 		//String	s = String.valueOf(a);
 		//System.out.println(s);
-		this(String.valueOf(a));	//생성자내에서 또 다른 생성자를 호출하는 것도 초기화 작업 임	
+		this(String.valueOf(a)); //생성자내에서 또 다른 생성자를 호출하는 것도 초기화 작업 임	
 	}	
 
 	public static void main(String[] args) {

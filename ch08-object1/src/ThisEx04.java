@@ -52,7 +52,6 @@ class People
 		//this()
 		this(name, age, 1, job);
 	}
-
 	
 	//4인자값을 가진 생성자
 	public People(String name, int age, int sex, String job)
@@ -77,3 +76,15 @@ class People
 				job);
 	}
 }
+
+
+/*
+//출력결과
+null	0	1	null
+null	18	1	null
+Hiro	27	1	null
+Claire	23	1	Student
+Niki	32	0	Secretary
+*/
+
+

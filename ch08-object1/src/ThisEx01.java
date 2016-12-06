@@ -7,7 +7,7 @@ public class ThisEx01 {
 	public ThisEx01(){
 		// this: 참조 변수
 		// this 참조변수: 객체 내에서 나의 객체 참조
-		System.out.println("객체 생성: " + this);
+		System.out.println("객체 생성: " + this); //객체 생성: ThisEx01@15db9742
 	}	
 	
 	public static void main(String[] args) {
@@ -16,6 +16,12 @@ public class ThisEx01 {
 		ThisEx01 tt1 = new ThisEx01();
 		
 		// 객체 생성 후 
-		System.out.println("객체 생성 후: " + tt1);
+		System.out.println("객체 생성 후: " + tt1); //객체 생성 후: ThisEx01@15db9742
 	}
 }
+
+/*//출력결과
+객체 생성: ThisEx01@15db9742
+객체 생성 후: ThisEx01@15db9742
+
+*/
