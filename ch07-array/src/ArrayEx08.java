@@ -30,14 +30,14 @@ public class ArrayEx08 {
 				{50,70,80}
 		};
 		
+		int sum=0; //총점 저장
+		
 		//제목 출력
 		System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
 		System.out.println("===========================================");
 		
 		//배열 출력 (성적처리 결과 출력)
 		for(int i=0; i < score.length; i++){
-			
-			int sum=0;
 			
 			System.out.print( (i+1) + "번\t");
 			for(int j=0; j <score[i].length; j++){
