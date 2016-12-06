@@ -8,6 +8,8 @@
 
 
 //참조 도식도
+http://codedragon.tistory.com/4616
+http://cfile2.uf.tistory.com/image/216E904658460CAB143C76
 
 //--------------------------------------------------------
 값 호출(Call by Value)에서는 값(value)을 복사하여 전달하였으므로 호출 시의 실인자는 별도의 값으로 인식되어 영향을 받지 않으며
@@ -19,11 +21,12 @@
 public class MethodEx03 {
 	
 	//인자 전달 방식: 참조 호출(call by reference)
-	public void increase(int[] n){ // n에 인자로 주소가 입력됩니다.
+	public void increase(int[] n){ // n에 인자로 주소(참조값=reference)가 입력됩니다.
 		for(int i=0; i<n.length; i++){
 			n[i]++;
 		}		
-	}	
+	}
+	
 	public static void main(String[] args) {
 
 		int[] ref = {100, 200, 300};
@@ -37,10 +40,21 @@ public class MethodEx03 {
 		MethodEx03 m = new MethodEx03();
 		
 		//메서드를 호출 시 주소를 인자로 전달하는 방식
-		m.increase(ref); //주소를 인자로전달
+		m.increase(ref); //주소(참조값=reference)를 인자로전달
 		
 		for(int i=0; i<ref.length; i++){
 			System.out.println(ref[i]);
 		}
 	}
 }
+
+
+//출력결과
+//100
+//200
+//300
+//
+//===============================
+//101
+//201
+//301

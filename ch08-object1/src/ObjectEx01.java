@@ -1,4 +1,4 @@
-/*
+
 //확인 후 전체 주석
 //참조변수와 참조 메소드의 관계 확인
 
@@ -40,7 +40,7 @@ public class ObjectEx01 {
 		
 		System.out.println("메소드 호출 전 값: " + myNumber.getNum());	//0
 		
-		//인스턴스 참조값을 메소드의 매개변수로 전달
+		//TODO : 인스턴스 참조값을 메소드의 매개변수로 전달
 //		instMethod(myNumber);
 		myNumber.addNum(10);
 		
@@ -69,4 +69,3 @@ class Number{ //클래스의 구성요소: 멤버필드, 생성자, 멤버메소
 	}
 }
 
-*/
