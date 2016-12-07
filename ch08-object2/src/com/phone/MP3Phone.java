@@ -23,5 +23,4 @@ public class MP3Phone extends CellPhone{
 	public String getColor(){
 		return color;
 	}
-
 }

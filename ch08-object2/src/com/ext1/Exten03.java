@@ -1,6 +1,11 @@
 /*
 //상속관계 속에서의 클래스 관계
 
+문법적 측면에서의 상속
+	• 상속은 기존에 정의된 클래스에 메소드와 변수를 추가하여 새로운 클래스를 정의하는 것
+	• extends 예약어를 사용
+
+
 상속에서 인스턴스 생성
 	• 하위 클래스의 생성자는 상위 클래스의 인스턴스 변수를 초기화할 데이터까지 모두 인자로 전달받아야 합니다.
 	• 상위클래스의 생성자 호출(super())은 하위클래스의 멤버변수 초기화 보다 먼저 수행해야 합니다.
@@ -40,6 +45,7 @@ public class Exten03 {
 class Person
 {
 	String name;
+	
 	public Person(String name){
 		this.name=name;
 	}
@@ -54,6 +60,7 @@ class Employee extends Person
 {
 	String company; 	// 회사명
 	String position;	// 직급
+	
 	public Employee(String name, String company, String position){
 		//name을 인자로 전달받는 상위 클래스의 생성자를 호출
 		//상위클래스의 생성자 호출(super())은 하위클래스의 멤버변수 초기화 보다 먼저 수행해야 합니다.
@@ -63,6 +70,10 @@ class Employee extends Person
 		// this: 참조 변수, 객체 내에서 나의 객체 참조
 		this.company=company;
 		this.position=position;
+		
+		//TODO : 호출문이 첫문장에 있지 않으면 컴파일 에러발생
+		//ERROR-Constructor call must be the first statement in a constructor
+//		super(name);	//상위 클래스의 생성자 호출
 	}
 	
 	public void showInfo(){
@@ -71,3 +82,18 @@ class Employee extends Person
 		System.out.println("My position is " + position);
 	}
 } //class Employee
+
+
+//출력결과
+//First info..........
+//My name is 김코딩
+//My name is 김코딩
+//My company is Google
+//My position is 고급 개발자
+//
+//Second info..........
+//My name is 장보리
+//My company is Facebook
+//My position is 수석 엔지니어
+
+
