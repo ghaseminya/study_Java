@@ -29,7 +29,7 @@ public class ObjectEx03 {
 		
 		Number myNumber2=new Number(20);
 		
-		//TODO : 인자값이 있는 생성자 정의후 default 생성자 호출
+		//TODO 1: 인자값이 있는 생성자 정의후 default 생성자 호출
 		//ERROR-Number myNumber2=new Number(20);
 		//• 만약 개발자가 직접 생성자를 지정하게되면 기본 생성자는 자동 생성되지 않습니다.
 		//• public Number(){} (자동 생성 안됨)

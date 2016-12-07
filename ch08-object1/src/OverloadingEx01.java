@@ -100,7 +100,7 @@ public class OverloadingEx01 {
 		oe.getLength(3.14F);	//3.14F		->	"3.14"
 		oe.getLength("대한민국");	//"대한민국"	->	"대한민국"
 		oe.getLength(1000, 3.14F);
-		oe.getLength(3.14F, 1000);
+		oe.getLength(3.14F, 10000);
 		oe.getLength("대한민국", 3.14F);
 		oe.getLength(3.14F, "대한민국");
 		oe.getLength(1000, 3.14F, "대한민국");
