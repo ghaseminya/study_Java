@@ -43,8 +43,8 @@ class B extends A{
 	//이영역은 선언하는 영역임
 	//super.a 호출해서 부모클래스 값을 확인하는 것이여서
 	//super.a와 500이 따로따로 존재하게 된다.
-//	super.a = 500; // ERROR-super.a에 500 값이 저장되는 것이 아니라 따로 존재하는 것임
-				   //Syntax error, insert "}" to complete Block
+//	super.a = 500; // ERROR-super.a에 500 값이 저장되는 것이 아니라 따로 존재합니다.
+				   // Syntax error, insert "}" to complete Block
 	
 	//TODO 1: 생성자를 이용한 부모클래스의 메소드 호출 (1)
 	public B(){

@@ -47,7 +47,7 @@ class SaveAccount extends Bank
 		System.out.print("누적 금액: ");
 		System.out.println(getBalance());
 		
-		//private변수에 직접 접근시 에러, 같이 상속된 다른 메소드를 통한 간접 접근만 가능
+		//TODO : private변수에 직접 접근시 에러, 같이 상속된 다른 메소드를 통한 간접 접근만 가능
 		//ERROR - The field Bank.balance is not visible
 //		System.out.println(balance);
 
@@ -65,3 +65,7 @@ public class Exten05 {
 		sa.showMoney(); //누적 금액: 30000
 	}
 }
+
+
+//출려결과
+//누적 금액: 30000

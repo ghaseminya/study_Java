@@ -35,6 +35,7 @@ class Child extends Parent{
 	public void make(){
 		System.out.println("자식 클래스");
 	}
+	//참조변수의 자료형에 상관없이 오버라이딩 된 메소드는 외부로부터 가려지므로, 마지막으로 오버라이딩한 메소드가 호출됩니다.
 	
 	
 	//TODO : 재정의가 문법에 맞게 적용되었는지 검증하는 구문

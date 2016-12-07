@@ -1,5 +1,5 @@
 //super() 연습 - 처리 전 
-//super()를 통해 초기화하기
+//super()를 통해 초기화하기 (처리 전)
 
 //File Info
 //SuperEx04_Before.java	자식클래스의 생성자를 통해 초기화
@@ -10,10 +10,8 @@ package com.ext2;
 
 //부모 클래스
 class Point{
-	
 	int x;
 	int y;
-	
 	
 	public Point(){		
 	}	
@@ -55,8 +53,9 @@ public class SuperEx04_Before {
 	public static void main(String[] args) {
 		//객체 생성
 		Point3D p3d = new Point3D(1, 2, 3);
+		
 		//재정의한 메소드 호출
 		System.out.println(p3d.getLocation());
-
+		//x: 1, y: 2, z: 3
 	}
 }
