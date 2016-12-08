@@ -14,26 +14,34 @@ instanceof 연산자
 형변환 불가						false
 
 box instanceof GoldPaperBox
-box라는 참조변수가 GoldPaperBox로 형변환 가능하면 true 불가능하면 false를 반환
+box라는 참조변수가 GoldPaperBox로 	형변환 가능하면 true 반환
+							불가능하면 false를 반환
 
 */
 package com.ext2;
 
-class Box{
-	public void simpleWrap(){System.out.println("simple wrap");}
+class Box {
+	public void simpleWrap() {
+		System.out.println("simple wrap");
+	}
 }
 
-class PaperBox extends Box{
-	public void paperWrap() {System.out.println("paper wrap");}
+class PaperBox extends Box {
+	public void paperWrap() {
+		System.out.println("paper wrap");
+	}
 }
 
-class GoldPaperBox extends PaperBox{
-	public void goldWrap() {System.out.println("gold wrap");}
+class GoldPaperBox extends PaperBox {
+	public void goldWrap() {
+		System.out.println("gold wrap");
+	}
 }
 
-public class InstanceOfEx {
+public class InstanceOfEx01 {
 
-	public static void wrapBox(Box box){
+	public static void wrapBox(Box box){ //Box타입(부모클래스)타입으로 인자를 받고 있습니다.
+										 //자식클래스타입 -> 부모클래스타입(자동형변환)
 		if(box instanceof GoldPaperBox) //box가 GoldPaperBox로 형변환 가능하다면
 			((GoldPaperBox)box).goldWrap();
 		else if(box instanceof PaperBox) //box가 PaperBox로 형변환 가능하다면

@@ -23,9 +23,8 @@ public class Lab {
 		int total = 0;
 		
 		for (int i = 1; i <= 100; i++) {
-			total += i; // total = total + i;
+			total += i; // total = total + i; //프레이크 포인트 설정 라인
 			System.out.println("1부터 " + i + " 까지의 합은 " + total + " 입니다");
 		}
 	}
-
 }
