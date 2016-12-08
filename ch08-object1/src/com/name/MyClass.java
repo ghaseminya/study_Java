@@ -14,14 +14,15 @@ public class MyClass {
 	public MyClass(String n){
 		name = n;
 	}
-	public MyClass(int a, String n){
-		age = a;
-		name = n;
-	}
 	public MyClass(String n, int a){
 		name = n;
 		age = a;
 	}
+	public MyClass(int a, String n){
+		age = a;
+		name = n;
+	}
+	
 	
 	//멤버 메소드
 	public String getName(){

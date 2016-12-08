@@ -6,6 +6,7 @@
 
 
 //참조 도식도
+//http://codedragon.tistory.com/2568
 //http://cfile4.uf.tistory.com/image/246ECD4455C5A550033B0D
 
 package com.name;
@@ -16,8 +17,9 @@ public class MyClassCreate {
 		//인스턴스 생성
 		MyClass mc1 = new MyClass();
 		MyClass mc2 = new MyClass("강아지");
-		MyClass mc3 = new MyClass(24,"코알라");
 		MyClass mc4 = new MyClass("고양이", 35);
+		MyClass mc3 = new MyClass(24,"코알라");
+		
 		
 		System.out.println(mc1.getName() + ","+	mc1.getAge()); //codedragon,0
 		System.out.println(mc2.getName() + ","+	mc2.getAge()); //강아지,0

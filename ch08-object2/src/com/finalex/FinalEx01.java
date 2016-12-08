@@ -61,7 +61,9 @@ public class FinalEx01 {
 		
 		//STATIC상수 호출
 		System.out.println("STATIC상수(VAR3) 호출: ");
+		//같은 클래스안에 있으므로 바로 접근가능
 		System.out.println(VAR3); //400
+		//클래스명을 통해 접근
 		System.out.println(FinalEx01.VAR3); //400
 		
 		

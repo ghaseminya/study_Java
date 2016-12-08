@@ -5,7 +5,10 @@
 다형성(Polymorphism)
 	• 서로 다른 객체를 동일한 방식으로 명령을 내릴 수 있게 하는 것
 	• 이 때 서로 다른 객체들은 같은 명령을 받지만 제각기 다른 방식으로 명령을 수행하게 됩니다.
+	• 다형성은 객체 지향 기법에서 하나의 코드로 다양한 타입의 객체를 처리 하는 기술
 
+
+//-------------------------------------------
 
 [클래스 설계]
 Product		부모 클래스
@@ -68,10 +71,10 @@ class Buyer{
 	int money = 1000;	//보유 금액
 	int bonusPoint = 0;	//보유 보너스 포인트
 	
-	//특정 제품타입을 명시한 경우
-	//public void buy(Tv p){
+	//TODO 1: 특정 제품타입을 명시한 경우 -> 컴파일 에러 확인하기
+//	public void buy(Tv p){
 	
-	//부모클래스 타입으로 명시
+	//TODO 3:부모클래스 타입으로 명시
 	public void buy(Product p){
 		if(money < p.price){
 			System.out.println("잔액이 부족하여 물건을 살 수 없습니다.");
@@ -98,19 +101,23 @@ public class PolyArgumentEx01 {
 		
 		System.out.println("보유 금액은 " + buyer1.money + "만원입니다");
 		
+		
 		System.out.println("\n티브이 구매: " + tv1.price + "만원");
 		//TV 구매
 		buyer1.buy(tv1); // Tv -> Product 타입으로 자동적으로 형변환
 		System.out.println("현재 남은 돈은 " + buyer1.money + "만원입니다");
 		System.out.println("현재 보너스 포인트는 " + buyer1.bonusPoint + "점입니다");
+		//TODO 2:특정 제품타입을 명시한 경우 -> 컴파일 에러 확인하기
 		//buy(Tv v) -> buy(Product p)로 바꿔야 모든 제품을 구입할 수 있습니다.
-		//b1.buy(c1);	//ERROR: The method buy(Tv) in the type Buyer is not applicable for the arguments (Computer)
-				
+//		buyer1.buy(computer1);	//ERROR: The method buy(Tv) in the type Buyer is not applicable for the arguments (Computer)
+
+		
 		//COMPUTER구매
 		System.out.println("\n컴퓨터 구매: " + computer1.price + "만원");
 		buyer1.buy(computer1); // Computer -> Product 타입으로 자동적으로 형변환
 		System.out.println("현재 남은 돈은 " + buyer1.money + "만원입니다");
 		System.out.println("현재 보너스 포인트는 " + buyer1.bonusPoint + "점입니다");
+
 		
 		//AUDIO구매
 		System.out.println("\n오디오 구매: " + audio1.price + "만원");
