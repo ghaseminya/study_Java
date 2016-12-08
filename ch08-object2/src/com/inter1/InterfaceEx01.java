@@ -2,10 +2,7 @@
 //인터페이스 - 인터페이스의 상수 호출
 
 인터페이스의 상수
-	• 인터페이스 내에 선언된 변수는 무조건 public static final로 선언(상수)이 되므로,
-	• 아래의 두 코드는 완전히 동일한 의미를 가집니다.
-
-
+인터페이스 내에 선언된 변수는 무조건 public static final로 선언(상수)이 되므로 인터페이스명으로 접근이 가능합니다. 
 
 */
 package com.inter1;
@@ -25,8 +22,7 @@ public class InterfaceEx01 {
 		//TODO : 인터페이스 객체생성 불가
 //		A1 a1 = new A1();	//ERROR: Cannot instantiate the type A1
 		
-		//TODO : public하고 static한 상수이므로
-		//인터페이스명에 dot연산자를 통해 직접호출가능
+		//TODO : public하고 static한 상수이므로 인터페이스명에 dot연산자를 통해 직접호출가능
 		System.out.println("W = " + A1.W); //W = 10
 		System.out.println("X = " + A1.X); //X = 20
 		System.out.println("Y = " + A1.Y); //Y = 30

@@ -2,10 +2,10 @@
 //인터페이스 - 추상 메소드 구체화
 
 //인터페이스 정의 및 사용 단계
-	• 인터페이스 정의
-	• class에 implements구현하고 인터페이스 추상 메소드 구체화
-	• class의 객체 생성
-	• 객체를 통해 메소드 호출
+	• TODO 1: 인터페이스 정의
+	• TODO 2: class에 implements구현하고 인터페이스 추상 메소드 구체화
+	• TODO 3: class의 객체 생성
+	• TODO 4: 객체를 통해 메소드 호출
 
 
 인터페이스의 특징
@@ -19,13 +19,16 @@
 
 package com.inter1;
 
-//인터페이스 정의
+//TODO 1: 인터페이스 정의
 interface A2{
-	//추상 메소드
-	public abstract void getB(); //추상 메소드 선언, 생략없이 원형으로 추상메소드 선언한 것
-	void getC();				 //추상 메소드 선언, public abstract생략된 것
+	//추상 메소드 선언, 생략없이 원형으로 추상메소드 선언한 형태
+	public abstract void getB();
+	
+	//추상 메소드 선언, public abstract생략한 형태
+	void getC();
 }
 
+//TODO 2: class에 implements구현하고 인터페이스 추상 메소드 구체화
 //A2인터페이스를 B2클래스에 구현
 class B2 implements A2{
 	//추상 메소드 재정의
@@ -43,7 +46,10 @@ class B2 implements A2{
 public class InterfaceEx02 {
 
 	public static void main(String[] args) {
+		//TODO 3: class의 객체 생성
 		B2 b2b2 = new B2();
+		
+		//TODO 4: 객체를 통해 메소드 호출
 		b2b2.getB(); //getB 메소드
 		b2b2.getC(); //getC 메소드
 	}

@@ -2,10 +2,11 @@
 //클래스에 final 적용
 
 [JAVA API에서 final적용 예]
-	• JAVA의 기본클래스는 상속 안 시키게 하였습니다. 
-	• 왜냐하면. 원형 그대로 사용하게 하기 위해서 입니다. (기본적인 처리)
-	• public final class String
-	• public final class System
+	• JAVA의 기본클래스는 상속 안 되도록 final로 정의 되어 있습니다. 
+	• 왜냐하면. 원형 그대로 사용하게 하기 위해서 입니다.(기본적인 처리를 위해)
+	• API문서에셔 확인하기
+	• public final class String{}
+	• public final class System{}
   
 */
 package com.finalex;

@@ -27,9 +27,10 @@ class NamePrinter{
 		String str=obj.toString();
 		if(obj instanceof UpperCasePrintable){
 			//instanceof 연산자를 통해서 클래스의 특성을 파악하여 특성에 맞게 수행
-			//UpperCasePrintable인스턴스이거나 UpperCasePrintable상속 하는 클래스의 인스턴스인 경우
-			str=str.toUpperCase();
+			//UpperCasePrintable인스턴스이거나 UpperCasePrintable상속 하는 클래스의 인스턴스인 경우 true
+			str=str.toUpperCase(); //문자열을 대문자로 변경
 		}
+		//UpperCasePrintable로 마킹되어 있지 않으면 그냥 문자열 출력
 		System.out.println(str);
 	}
 }

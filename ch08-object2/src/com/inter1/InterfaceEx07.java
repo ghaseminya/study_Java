@@ -12,15 +12,19 @@
 日요일: 해처럼 찬란하게. 안식하는 날=逸(편안할 일)
 
 //---------------------------------------
+인터페이스의 상수 활용
+	• 인터페이스 내에 선언된 변수는 무조건 public static final로 선언(상수)이 되므로, 
+	• 아래의 두 코드는 완전히 동일한 의미를 가집니다.
+
 //클래스의 상수
-public class Week{
+class Week{
 	public static final int MON=1;
-	public static final int TUE=2, 
-	public static final int WED=3,
-	public static final int THU=4,
-	public static final int FRI=5,
-	public static final int SAT=6,
-	public static final int SUN=7
+	public static final int TUE=2;
+	public static final int WED=3;
+	public static final int THU=4;
+	public static final int FRI=5;
+	public static final int SAT=6;
+	public static final int SUN=7;
 }
 
 //인터페이스의 상수
@@ -34,15 +38,27 @@ package com.inter1;
 
 import java.util.Scanner;
 
-interface Week{
-	//인터페이스 상수 정의
-	int MON=1, TUE=2, WED=3, THU=4, FRI=5, SAT=6, SUN=7;
+//TODO 1: 클래스 상수
+class Week{
+	public static final int MON=1;
+	public static final int TUE=2;
+	public static final int WED=3;
+	public static final int THU=4;
+	public static final int FRI=5;
+	public static final int SAT=6;
+	public static final int SUN=7;
 }
+
+//TODO 2: 인터페이스 상수
+//interface Week{
+//	//인터페이스 상수 정의
+//	//인터페이스 상수 정의시 public static final생략가능
+//	int MON=1, TUE=2, WED=3, THU=4, FRI=5, SAT=6, SUN=7;
+//}
 
 public class InterfaceEx07 {
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args){
 		System.out.println("좋아하는 요일의 숫자를 선택하세요... ");
 		System.out.println("1.월요일, 2.화요일, 3.수요일");
 		System.out.println("4.목요일, 5.금요일, 6.토요일, 7.일요일");
@@ -50,9 +66,8 @@ public class InterfaceEx07 {
 
 		Scanner scanner=new Scanner(System.in);
 		int select=scanner.nextInt();
-
-		switch(select)
-		{
+		
+		switch(select){
 		case Week.MON:
 			System.out.println("달처럼 차분하게. 한계를 극복하는 날.");
 			break;
@@ -80,3 +95,14 @@ public class InterfaceEx07 {
 		scanner.close();
 	}
 }
+
+
+//출력결과
+//좋아하는 요일의 숫자를 선택하세요... 
+//1.월요일, 2.화요일, 3.수요일
+//4.목요일, 5.금요일, 6.토요일, 7.일요일
+//당신의 선택은 > 7
+//해처럼 찬란하게. 안식하는 날
+//오늘도 활기차고 빛나는 하루 되세요!
+
+
