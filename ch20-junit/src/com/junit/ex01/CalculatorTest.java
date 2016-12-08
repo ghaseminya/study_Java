@@ -4,6 +4,23 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/*
+
+단정(assert) 메소드
+JUnit에서 가장 많이 이용되는 단정(assert) 메소드
+
+메소드	설명
+assertEquals(x, y)				x와 y가 같으면 테스트 통과
+assertFalse(b)					b가 false이면 테스트 통과
+assertTrue(b)					b가 true이면 테스트 통과
+assertTrue(message, condition)	condition이  true이면 message표시
+assertNull(o)					객체o가 null이면 테스트 통과
+assertNotNull(o)				객체o가 null이 아니면 테스트 통과
+assertSame(ox, oy)				ox와 oy가 같은 객체를 참조하고 있으면 테스트 통과
+assertNotSame(ox, oy)			ox와 oy가 같은 객체를 참조하고 있지 않으면 통과
+assertfail()					테스트를 바로 실패처리
+
+*/
 public class CalculatorTest {
 
 	@Test
