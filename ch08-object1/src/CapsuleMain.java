@@ -91,15 +91,13 @@ public class CapsuleMain {
 
 		//메소드(method)를 통해서 접근(3)
 		//메소드(method)를 통해서만 접근가능
-		Capsule csu = new Capsule();
-		
-		csu.setA(100);		
-		System.out.println( csu.getA() ); //100
+		cs.setA(100);		
+		System.out.println( cs.getA() ); //100
 		
 		//데이터 저장시 유효한 값인지 체크 후 저장
 		//"음수는 허용되지 않습니다."라는 메시지가 출력됩니다.
-		csu.setA(-200);		
-		System.out.println( csu.getA() ); //100
+		cs.setA(-200);		
+		System.out.println( cs.getA() ); //100
 	}
 }
 

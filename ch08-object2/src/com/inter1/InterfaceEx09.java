@@ -45,8 +45,8 @@ class SmartPhone extends DMB implements Mp3
 	}
 	
 	public void powerOn(){
-		onMp3();
 		onDMB();
+		onMp3();
 	}
 }
 
@@ -72,8 +72,8 @@ public class InterfaceEx09 {
 
 
 /*//출력결과
-MP3 재생
 DMB 출력
+MP3 재생
 DMB 출력
 MP3 재생
 */

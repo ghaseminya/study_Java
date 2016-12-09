@@ -37,10 +37,11 @@ abstract class A{
 	int a=100;	//변수
 	
 	//추상 메소드:
-	public abstract void number();	//미구현된 메소드
-									//반드시 자식 클래스에서 일반 메소드로 구현해 줘야 합니다.
-									//abstract라는 예약어를 통해 현재 메서드가 추상 메서드임을 표시
-									//추상 메서드는 몸체(body, {})가 없이 세미콜론(;)으로 문장이 끝납니다.
+	//미구현된 메소드
+	//반드시 자식 클래스에서 일반 메소드로 구현해 줘야 합니다.
+	//abstract라는 예약어를 통해 현재 메서드가 추상 메서드임을 표시합니다.
+	//추상 메서드는 몸체(body, {})가 없이 세미콜론(;)으로 문장이 끝납니다.
+	public abstract void number();
 	
 	//일반 메소드
 	public void setA(int a){
@@ -49,10 +50,12 @@ abstract class A{
 }
 
 class B extends A{
+	
 	int b = 200;
 	
 	//추상 메소드 -> 일반 메소드로 구현
 	//A클래스의 추상 메서드 number()를 일반메소드 number()로 구현
+	//메서드의 몸체(body, {}) 생성
 	@Override
 	public void number(){
 		System.out.println("number 메서드");

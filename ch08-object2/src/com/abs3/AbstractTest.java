@@ -59,3 +59,10 @@ public class AbstractTest extends AbsEx2{
 		System.out.println(ab.getMsg()); //추상화
 	}
 }
+
+
+//출력결과
+//100
+//200
+//300
+//추상화

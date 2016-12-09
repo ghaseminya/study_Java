@@ -7,22 +7,22 @@
 
 
 [클래스 설계]
-Unit.java		부모클래스 정의 (추상 클래스, 부모역할만)
+Unit.java		• 부모클래스 정의 (추상 클래스, 부모역할만)
 
-Protoss.java	자식 클래스 정의
-				Unit 추상 클래스를 상속받고 추상 메소드 구현하기
-				에너지 -1 감소/에너지 +1증가 
+StarCraft.java	• main부
+				• 추상 클래스/추상 메소드구현한 클래스의 객체 생성
+				
+Protoss.java	• 자식 클래스 정의
+				• Unit 추상 클래스를 상속받고 추상 메소드 구현하기
+				• 에너지 -1 감소/에너지 +1증가 
 
-Terran.java		자식 클래스 정의
-				Unit 추상 클래스를 상속받고 추상 메소드 구현하기
-				에너지 -2 감소/에너지 +2증가
+Terran.java		• 자식 클래스 정의
+				• Unit 추상 클래스를 상속받고 추상 메소드 구현하기
+				• 에너지 -2 감소/에너지 +2증가
 
-Zerg.java		자식 클래스 정의
-				Unit 추상 클래스를 상속받고 추상 메소드 구현하기
-				에너지 -4 감소/에너지 +4증가
-
-StarCraft.java	main부
-				추상 클래스/추상 메소드구현한 클래스의 객체 생성
+Zerg.java		• 자식 클래스 정의
+				• Unit 추상 클래스를 상속받고 추상 메소드 구현하기
+				• 에너지 -4 감소/에너지 +4증가
 
 */
 package com.abs2;
@@ -34,29 +34,29 @@ public class StarCraft {
 		Terran terran = new Terran("테란", 100, false);
 		Zerg zerg = new Zerg("저그", 100, true);
 		
-		System.out.println("Protoss 에너지 보유량 :\t" + protoss.getEnergy());
-		System.out.println("Terran 에너지 보유량 :\t" + terran.getEnergy());
-		System.out.println("Zerg 에너지 보유량 :\t" + zerg.getEnergy());
+		System.out.println("Protoss 에너지 보유량 : " + protoss.getEnergy());
+		System.out.println("Terran 에너지 보유량 : " + terran.getEnergy());
+		System.out.println("Zerg 에너지 보유량 : " + zerg.getEnergy());
 		
 		//에너지 감소 후
 		protoss.decEnergy();
-		System.out.println("Protoss 에너지 보유량 :\t" + protoss.getEnergy());		
+		System.out.println("Protoss 에너지 보유량 : " + protoss.getEnergy());		
 		
 		terran.decEnergy();
-		System.out.println("Terran 에너지 보유량 :\t" + terran.getEnergy());
+		System.out.println("Terran 에너지 보유량 : " + terran.getEnergy());
 		
 		zerg.decEnergy();
-		System.out.println("Zerg 에너지 보유량 :\t" + zerg.getEnergy());
+		System.out.println("Zerg 에너지 보유량 : " + zerg.getEnergy());
 		
 	}
 }
 
 
 /*//출력결과
-Protoss 에너지 보유량 :	100
-Terran 에너지 보유량 :	100
-Zerg 에너지 보유량 :	100
-Protoss 에너지 보유량 :	99
-Terran 에너지 보유량 :	98
-Zerg 에너지 보유량 :	96
+Protoss 에너지 보유량 : 100
+Terran 에너지 보유량 : 100
+Zerg 에너지 보유량 : 100
+Protoss 에너지 보유량 : 99
+Terran 에너지 보유량 : 98
+Zerg 에너지 보유량 : 96
 */

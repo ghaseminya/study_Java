@@ -34,7 +34,7 @@ abstract class AbsEx2 extends AbsEx1{
 	public abstract String getStr();
 } 
 
-//TODO 2-1: CASE 2
+//TODO 2-1: CASE 2 (확인 후 주석처리)
 //abstract class AbsEx2 extends AbsEx1{
 //
 //	public void getStrTwo(){
@@ -67,3 +67,8 @@ public class AbstractEx02 extends AbsEx2{
 		System.out.println("ae.getStr():"+ae.getStr());
 	}
 }
+
+
+//출력결과 - TODO 1, TODO 2 결과는 동일
+//ae.getA():2016
+//ae.getStr():abstract test

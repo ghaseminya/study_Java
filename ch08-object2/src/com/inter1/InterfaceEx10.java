@@ -5,10 +5,10 @@
 
 
 //인터페이스를 통한 표준화 단계
-//TODO 1: 인터페이스 생성		interface I
-//TODO 2: 클래스1, 2 생성		class B, class C	
+//TODO 1: 인터페이스 생성					interface I
+//TODO 2: 클래스1, 2 생성				class B, class C	
 //TODO 3: 클래스1, 2 에서 인터페이스 구현		class B implements I, class C implements I
-//TODO 4: 클래스3 생성			class Z
+//TODO 4: 클래스3 생성							class Z
 //TODO 5: 클래스3에서 인터페이스 자료형으로 메소드 처리		public void autoPlay(I i){}
 //TODO 6: 클래스3 객체 생성 후 메소드 호출				Z zp = new Z(); zp.autoPlay(new B());
 
