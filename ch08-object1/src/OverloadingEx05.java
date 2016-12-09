@@ -53,6 +53,9 @@ class Human{
 		//생성자 내에서 다른 생성자를 다시 호출 가능, 메소드에서 다른 생성자의 호출을 얘기하는 것 아님!
 		//5개의 인자값을 가진 다른 생성자를 다시 호출
 		this(name, 0, age, sex, position);
+		
+		//this생성자 말고 생성할 수는 없습니다. Human()는 외부에서 객체를 생성할때 호출하는 것이므로
+//		Human(name, 0, age, sex, position); //ERROR-The method Human(String, int, int, int, String) is undefined for the type Human
 	}
 	
 
