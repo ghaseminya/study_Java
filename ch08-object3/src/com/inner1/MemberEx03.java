@@ -30,8 +30,9 @@ class OuterClass{
 	//멤버 내부 클래스
 	class InnerClass{
 		//생성자
+		//Inner 클래스의 인스턴스는 Outer 클래스의 인스턴스에 종속적입니다
 		InnerClass(){
-			//Inner 클래스의 인스턴스는 Outer 클래스의 인스턴스에 종속적입니다
+			//Inner클래스내에서는 Outer클래스의 멤버에 직접 접근이 가능합니다.
 			whatYourName();
 		}
 	}
@@ -58,14 +59,14 @@ class MemberEx03{
 
 /*
 //출력결과
-My Name is Alice : OuterClass : 1
-My Name is Steve : OuterClass : 1
+My Name is Alice : OuterClass : 1 //out1
+My Name is Steve : OuterClass : 1 //out2
 
-My Name is Alice : OuterClass : 2
-My Name is Steve : OuterClass : 2
-My Name is Alice : OuterClass : 3
-My Name is Alice : OuterClass : 4
-My Name is Steve : OuterClass : 3
-My Name is Steve : OuterClass : 4
+My Name is Alice : OuterClass : 2 //out1
+My Name is Steve : OuterClass : 2 //out2
+My Name is Alice : OuterClass : 3 //out1
+My Name is Alice : OuterClass : 4 //out1
+My Name is Steve : OuterClass : 3 //out2
+My Name is Steve : OuterClass : 4 //out2
 
 */
