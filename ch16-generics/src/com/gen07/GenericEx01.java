@@ -31,17 +31,22 @@ double		Double
 
 
 */
-class EmployeeInfo{
-  public int position;
-  EmployeeInfo(int position){ this.position = position; }
+class EmployeeInfo {
+	public int position;
+
+	EmployeeInfo(int position) {
+		this.position = position;
+	}
 }
-class Person<T, S>{
-  public T info;
-  public S id;
-  Person(T info, S id){ 
-      this.info = info;
-      this.id = id;
-  }
+
+class Person<T, S> {
+	public T info;
+	public S id;
+
+	Person(T info, S id) {
+		this.info = info;
+		this.id = id;
+	}
 }
 public class GenericEx01 {
   public static void main(String[] args) {

@@ -10,7 +10,7 @@ com.gen07.GenericsEx01.java		기본자료형을 제네릭에서 사용시 발생
 //--------------------------------
 
 
-복수의 제네릭:
+복수의 제네릭
 클래스 내에서 여러개의 제네릭을 필요로 하는 경우
 
 
@@ -19,17 +19,35 @@ com.gen07.GenericsEx01.java		기본자료형을 제네릭에서 사용시 발생
 	• 제네릭 명칭은 고정된 것은 없으나 중복되지 않게 지정
 	• 관습적으로 T이후의 대문자로 지정하고 있습니다
 
+
+
+<1글자로 된 영문대문자>
+	• API에서는 전달되는 객체가 현 객체 내에서 자료형(Type)으로 쓰일 때 <T>로 유도를 하고 있으며 
+	• 만약 전달되는 객체가 현 객체 내에서 하나의 요소(Element)로 자리를 잡을 때는 <E>로
+	• 전달되는 객체가 현 객체 내에서 Key값으로 사용될 때는 <K>로, 
+	• 만약 전달되는 객체가 현 객체 내에서 Value값으로 사용될 때는 <V>로 표현하고 있습니다. 
+
+구분		설명
+<T>		자료형(Type)
+<E>		요소(Element)
+<K>		Key값
+<V>		Value값
+
 */
 
-class EmployeeInfo{
-    public int position;
-    EmployeeInfo(int position){ this.position = position; }
+class EmployeeInfo {
+	public int position;
+
+	EmployeeInfo(int position) {
+		this.position = position;
+	}
 }
 
 class Person<T, S>{
     //두개의 제네릭 사용 T, S
     public T info;
     public S id;
+    
     Person(T info, S id){ 
         this.info = info; 
         this.id = id;

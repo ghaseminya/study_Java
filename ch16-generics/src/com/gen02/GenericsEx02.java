@@ -25,7 +25,8 @@ T s; 또는 T[] arr; -> String s; 또는 String[] arr;
 
 
 ★ Generics 자료형 도식형
-
+http://codedragon.tistory.com/4646
+http://cfile26.uf.tistory.com/image/24638F4F584DBE542E00B9
 //---------------------------------
 TODO 1: 자료형 타입 미지정하여 객체 생성(좋은 방법 아닙니다)
 TODO 2: 표준 사용방법
@@ -47,7 +48,7 @@ class GenericsEx<T>{
 	}
 }
 
-//TODO 2: 표준 사용방법
+//TODO 2: 표준 사용방법 (권장)
 //public class GenericsEx02 {
 //
 //	public static void main(String[] args){
@@ -64,18 +65,18 @@ class GenericsEx<T>{
 
 
 //TODO 1: 자료형 타입 미지정하여 객체 생성(좋은 방법 아닙니다)
-//public class GenericsEx02 {
-//
-//	public static void main(String[] args){
-//
-//		//자료형 타입 미지정하여 객체 생성
-//		GenericsEx t = new GenericsEx();
-//		
-//		String[] aStr ={"가", "나", "다", "라", "마", "바", "사"};
-//		t.set(aStr);
-//		t.print();
-//	}
-//}
+public class GenericsEx02 {
+
+	public static void main(String[] args){
+
+		//자료형 타입 미지정하여 객체 생성
+		GenericsEx t = new GenericsEx();
+		
+		String[] aStr ={"가", "나", "다", "라", "마", "바", "사"};
+		t.set(aStr);
+		t.print();
+	}
+}
 
 
 /*
