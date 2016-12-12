@@ -5,11 +5,15 @@
 //부모클래스의 display() 재 정의후 출력
 //----------------------------------------------
 File Info
-inner4.AnnoymousEx01.java	Annonymous 내부 클래스로 변경 전
-*inner4.AnonymousEx02.java	익명내부클래스 구현
-inner4.AnonymousEx03.java	축약형태
-
-
+inner4.AnnoymousEx01.java	• Annonymous 내부 클래스로 변경 전
+							• 부모 클래스를 상속받아서 내부클래스를 정의부와 구현부로 구현
+							• 정의부 + 구현부
+							
+->inner4.AnonymousEx02.java	• 익명내부클래스 구현
+							• 구현부
+							
+inner4.AnonymousEx03.java	• 축약형태
+							• 정의부 + 구현부 (축약)
 //-----------------------------------------------
 정의부 + 구현부: Anonymous 내부 클래스 구현 형태
 new InnerParent2() //객체 생성
@@ -32,11 +36,13 @@ public class AnonymousEx02 {
 	
 	public void innerTest(){
 		
-		// 이름이 없는 내부 클래스 생성하는데 부모이름을 쓰거나 인터페이스명을 쓴다.
-		// 반드시 객체생성을 바로 해주어야 한다.
-		//익명 내부 클래스
+		//익명 내부 클래스 (구현부) - 정의부를 따로 정의하지 않고 구현부만 존재하며 구현부안의 정의부에 있던 내용이 포함되어 집니다.
+		//이름이 없는 내부 클래스 생성하는데 부모이름을 쓰거나 인터페이스명을 씁니다. 
+		//반드시 객체생성을 바로 해주어야 합니다.
+		//class Inner해서 클래스이름을 지정했던 것을 이름 없이 InnerParent2를 상속받은 클래스의 객체 생성
 		InnerParent2 i = new InnerParent2(){ //객체 생성
-			//부모클래스의 메소드 재정의
+			//TODO : 부모클래스의 메소드 재정의
+			//먼저 재정의하지 않고 구현후 결과확인 후 재정의하여 다시 결과확인
 			@Override
 			public void display(){
 				System.out.println("익명 내부클래스의 display");				

@@ -1,32 +1,48 @@
-/* Object Class의 내부 메소드
-
-toString(): 참조값 확인
-	• 객체(인스턴스의 실제 값)를 문자열로 변경시키는 메소드
-	
-getClass(): 클래스 정보 확인
-
-hashCode(): 객체를 식별할 수 있는 unique한 값
-
+/* Object Class - 객체 비교 정리
+TODO : 객체 비교1 - 참조값을 통한 비교
+TODO : 객체 비교2 - 비교 연산자를 통한 비교(가장 많이 사용함)
+TODO : 객체 비교3 - Object.equals를 통한 비교
 */
 
 package com.object1;
 
 public class ObjectClassEx04 {
+	public static void main(String[] args){
+		ObjectClassEx05 ob1 = new ObjectClassEx05();
+		
+		//TODO : 객체 비교 - 참조값을 통한
+		//주소값 출력
+		System.out.println("ob1: " + ob1); //ob1: com.object1.ObjectClassEx05@6d06d69c
+		
+		ObjectClassEx05 ob2 = new ObjectClassEx05();
+		//주소값 출력
+		System.out.println("ob2: " + ob2); //ob2: com.object1.ObjectClassEx05@7852e922
+		
 
-	public static void main(String[] args) {		
+		//TODO : 객체 비교 - 연산자를 통한 비교 (가장 많이 사용함)
+		if(ob1 == ob2){
+			System.out.println("같은 객체");
+		}else{
+			System.out.println("다른 객체");
+		}
+		//다른 객체
 		
-		ObjectClassEx04 ob = new ObjectClassEx04();
 		
-		//ob호출 시 자동으로 toString 호출해서 참조값 출력
-		System.out.println("ob: " + ob); //ob: com.object2.ObjectEx01@2a139a55
-		
-		//클래스 정보 확인
-		System.out.println("getClass(): " + ob.getClass()); //getClass(): class com.object2.ObjectEx01
-		
-		//해쉬코드 확인: 객체를 식별할 수 있는 unique한 값
-		System.out.println("hashCode(): " + ob.hashCode()); //hashCode(): 705927765
-		
-		//참조값 확인: 클래스명@16진수해쉬값
-		System.out.println("toString(): " + ob.toString()); //toString(): com.object2.ObjectEx01@2a139a55
+		//TODO : 객체 비교 - Object.equals를 통한 비교
+		if(ob1.equals(ob2)){
+			System.out.println("같은 객체");
+		}else{
+			System.out.println("다른 객체");
+		}
+		//다른 객체
 	}
 }
+
+
+/*//출력결과
+ob1: com.object1.ObjectClassEx05@6d06d69c
+ob2: com.object1.ObjectClassEx05@7852e922
+다른 객체
+다른 객체
+
+*/

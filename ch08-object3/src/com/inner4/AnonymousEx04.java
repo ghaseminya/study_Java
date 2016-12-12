@@ -1,9 +1,12 @@
-//Annonymous 내부 클래스 - 익명내부클래스 구현
+//Annonymous 내부 클래스 - 익명내부클래스 구현 (구현부)
+//익명내부클래스 구현 (구현부) 연습
 
 package com.inner4;
 
+//부모클래스
 abstract class TestAbst{
 	int data = 1234567;
+	
 	//추상메서드
 	public abstract void printData(); 
 }

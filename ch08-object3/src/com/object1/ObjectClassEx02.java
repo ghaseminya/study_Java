@@ -7,10 +7,16 @@ package com.object1;
 
 
 File Info
-*object1.ObjectClassEx02	인스턴스간 내용비교를 위한 내용비교 메소드 정의 (==연산자 사용)
+->object1.ObjectClassEx02	인스턴스간 내용비교를 위한 내용비교 메소드 정의 (==연산자 사용)
 object1.ObjectClassEx03		Object클래스의 equals()메소드를 재정의하여 내용비교
 
 //-----------------------------------------
+
+Object Class(오브젝트 클래스) 정의
+	• 모든 클래스의 최상위 클래스
+	• 명시적으로 extends하지 않아도 자동으로 상속합니다.
+	• 즉, 프로그래머가 명시적으로 extends 하는 클래스가 없으면 자동으로 자바 컴파일러가   Object 클래스를 상속받도록 처리합니다.
+
 
 
 */
@@ -21,7 +27,7 @@ class IntNumber {
 		this.num=num;
 	}
 	
-	//TODO 3: 인스턴스간 내용비교를 위한 내용비교 메소드 정의
+	//TODO 3: 인스턴스간 내용비교를 위한 내용 비교 메소드 정의
 	public boolean isEquals(IntNumber numObj) {
 		if(this.num==numObj.num)
 			return true;
@@ -41,7 +47,11 @@ public class ObjectClassEx02 {
 			System.out.println("num1 == num2");
 		}else if(num1 == num3){
 			System.out.println("num1 == num3");
+		}else{
+			System.out.println("no match");
 		}
+		//no match
+		
 		
 		//TODO 2: 객체의 참조값 확인
 		System.out.println(num1);
@@ -66,6 +76,7 @@ public class ObjectClassEx02 {
 }
 
 /*//출력결과
+no match
 com.object1.IntNumber@2a139a55
 com.object1.IntNumber@15db9742
 com.object1.IntNumber@6d06d69c

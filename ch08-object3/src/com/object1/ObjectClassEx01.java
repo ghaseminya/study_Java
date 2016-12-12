@@ -4,13 +4,9 @@ package com.object1;
 
 Object Class(오브젝트 클래스) 정의
 	• 모든 클래스의 최상위 클래스
-	• 명시적으로 extends하지 않아도 자동으로 상속
+	• 명시적으로 extends하지 않아도 자동으로 상속합니다.
+	• 즉, 프로그래머가 명시적으로 extends 하는 클래스가 없으면 자동으로 자바 컴파일러가   Object 클래스를 상속받도록 처리합니다.
 
-
-Object클래스의 주요 메소드
-	• equals() 메소드
-	• toString() 메소드
-	• finalize() 메소드
 
 
 finalize() 메소드
@@ -68,10 +64,10 @@ public class ObjectClassEx01 {
 //		System.gc();	
 //		System.runFinalization();	
 		
-		/*System.gc();으로 Garbage Collection을 동작시키는 메소드입니다. 
-		하지만 heap영역의 가비지컬렉션 대상을 바로 소멸시키지 않고 JVM이 상황에 따라 나중에 소멸시킬 수도 있기 때문에
-		바로 finalize()되지 않을 수 있습니다.
-		System.runFinalization(); 호출로 추가적으로 인스턴스의 완전 소멸을 명령해 주어야 합니다.*/
+		//System.gc();으로 Garbage Collection을 동작시키는 메소드입니다. 
+		//하지만 heap영역의 가비지컬렉션 대상을 바로 소멸시키지 않고 JVM이 상황에 따라 나중에 소멸시킬 수도 있기 때문에
+		//바로 finalize()되지 않을 수 있습니다.
+		//System.runFinalization(); 호출로 추가적으로 인스턴스의 완전 소멸을 명령해 주어야 합니다.
 	}
 }
 

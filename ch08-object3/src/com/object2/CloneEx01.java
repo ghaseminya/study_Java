@@ -1,8 +1,6 @@
-package com.object2;
-/*
 //확인 후 주석 처리
+package com.object2;
 
-package com.object1;
 ////얇은 복사(Shallow Copy)
 //	• Object 클래스의 clone 메소드는 인스턴스를 통째로 복사는 하지만, 
 //	• 인스턴스가 참조하고 있는 또 다른 인스턴스까지 복사하지는 않습니다. 단순히 참조 값만을 복사합니다.
@@ -19,6 +17,8 @@ package com.object1;
 //
 //
 //★ 얇은 복사(Shallow Copy) 도식도
+//
+//
 ////------------------------
 ////결과적으로 얇은 복사가 이루어져 동일한 결과가 나오게 됩니다.
 ////출력결과
@@ -91,4 +91,3 @@ class CloneEx01 {
 		}
 	}
 }
-*/

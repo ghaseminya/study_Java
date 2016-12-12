@@ -4,9 +4,16 @@
 //부모클래스의 display() 재 정의 후 출력
 //---------------------------------------
 File Info
-*inner4.AnnoymousEx01.java	Annonymous 내부 클래스로 변경 전
-inner4.AnonymousEx02.java	익명내부클래스 구현
-inner4.AnonymousEx03.java	축약형태
+->inner4.AnnoymousEx01.java	• Annonymous 내부 클래스로 변경 전
+							• 부모 클래스를 상속받아서 내부클래스를 정의부와 구현부로 구현
+							• 정의부 + 구현부
+							
+inner4.AnonymousEx02.java	• 익명내부클래스 구현
+							• 구현부
+							
+inner4.AnonymousEx03.java	• 축약형태
+							• 정의부 + 구현부 (축약)
+
 //---------------------------------------
 
 Anonymous 내부 클래스(익명 내부 클래스)
@@ -55,14 +62,14 @@ class InnerParent1{
 }
 
 public class AnonymousEx01 {
-
 	
 	public void innerTest(){
 		//Inner클래스는 부모 클래스를 상속받아서 내부클래스를 정의부와 구현부로 구현
 		
 		//정의부	class Inner extends InnerParent1{}
 		class Inner extends InnerParent1{ //클래스 생성(클래스상속 및 메소드 재정의)
-			//display 재정의, 
+			
+			//TODO : display 재정의, 
 			//먼저 재정의하지 않고 구현후 결과확인 후 재정의하여 다시 결과확인
 			@Override
 			public void display(){
