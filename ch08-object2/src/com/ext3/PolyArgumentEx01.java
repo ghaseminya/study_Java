@@ -18,7 +18,7 @@ Audio		자식 클래스, 	부모 클래스의 함수를 오버라이딩
 Buyer		일반 클래스
 
 */
-package com.ext4;
+package com.ext3;
 
 class Product{
 	int price;		//제품 가격

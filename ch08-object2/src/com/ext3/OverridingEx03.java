@@ -12,7 +12,7 @@
 
 */
 
-package com.ext4;
+package com.ext3;
 
 class Parent{
 	String msg = "Parent 클래스";
@@ -38,6 +38,7 @@ public class OverridingEx03 {
 		//TODO 1: 참조변수의 자료형을 자식클래스로 지정
 		Child child = new Child();
 		System.out.println("child : " + child.getMessage()); //child : Child 클래스
+//		System.out.println("child : " + child.msg); //child : Child 클래스
 		
 		//TODO 2: 참조변수의 자료형을 부모클래스로 지정
 		Parent parent = new Child();

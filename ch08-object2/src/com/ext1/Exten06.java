@@ -57,7 +57,8 @@ public class Exten06 {
 		SaveMoney.balance+=500;		
 		saveMoney.showMoney();
 		
-		Money.balance+=22;		//직접접근
+		//직접접근
+		Money.balance+=22;
 		saveMoney.showMoney();
 
 		//아래도 가능

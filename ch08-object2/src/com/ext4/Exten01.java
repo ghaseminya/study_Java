@@ -24,7 +24,7 @@
 부모 클래스 타입지정시	부모클래스
 
 */
-package com.ext3;
+package com.ext4;
 
 //부모 클래스
 class Parent{

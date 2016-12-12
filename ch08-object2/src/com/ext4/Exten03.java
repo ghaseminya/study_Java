@@ -1,7 +1,7 @@
 //상속후 오버라이딩 / 업 케스팅
 //(문법 규칙) 상속시 메소드 오버라이딩 되어 있으면 확장되어 있는 것이 호출됩니다.
 
-package com.ext3;
+package com.ext4;
 
 //부모클래스
 class Parent3{

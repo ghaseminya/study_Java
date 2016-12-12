@@ -1,6 +1,6 @@
 /*
 //Overriding
-//	• 부모클래스 상속받은 자식 클래스에서  부모클래스의 멤버메소드를 재정의합니다.
+//	• 부모클래스를 상속받은 자식 클래스에서  부모클래스의 멤버메소드를 재정의합니다.
 
 오버라이딩(Overriding)
 	• 오버라이딩은 메서드 재정의라고도 불리며 이는 서로 상속관계로 이루어진 객체들간의 관계에서 비롯됩니다.
@@ -29,8 +29,8 @@ class Parent{
 //자식 클래스
 class Child extends Parent{
 	
-	//TODO : 메서드 오버라이딩(메소드 재정의)
-	//@Override: JDK 5.0이상부터 사용 가능
+	//TODO 2: 메서드 오버라이딩(메소드 재정의)
+	//TODO 4: @Override: JDK 5.0이상부터 사용 가능
 	@Override
 	public void make(){
 		System.out.println("자식 클래스");
@@ -38,7 +38,7 @@ class Child extends Parent{
 	//참조변수의 자료형에 상관없이 오버라이딩 된 메소드는 외부로부터 가려지므로, 마지막으로 오버라이딩한 메소드가 호출됩니다.
 	
 	
-	//TODO : 재정의가 문법에 맞게 적용되었는지 검증하는 구문
+	//TODO 3: 재정의가 문법에 맞게 적용되었는지 검증하는 구문
 //	@Override
 //	public void meke(){	//메소드명이 달라 재정의 문법에 맞지않는다고 에러가 표시됩니다.
 //		System.out.println("자식 클래스");
@@ -49,6 +49,7 @@ class Child extends Parent{
 public class OverridingEx01 {
 	
 	public static void main(String[] args){
+		//TODO 1
 		Child ch = new Child();
 		ch.make();
 	}

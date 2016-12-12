@@ -9,6 +9,7 @@ private < default 	< protected < public
 */
 package com.ext1;
 
+//통장 클래스
 class Bank
 {
 	//private멤버변수, 같은 클래스에서만 접근 가능
@@ -29,20 +30,23 @@ class Bank
 	}
 }
 
-class SaveAccount extends Bank 
-{
+class SaveAccount extends Bank {
+	
+	//통장 개설
 	public SaveAccount(int initDeposit){
 		//super(): super클래스의 생성자를 의미, 
 		//인자가 있다면 인자의 형태와 일치하는 생성자를 의미
 		super(initDeposit); // 통장개설 시 첫 입금액
 	}
 	
+	//통장에 금액 누적
 	public void saveMoney(int money){
 		accumulate(money);	//accumulate: 축척하다, 모으다
 		//private 멤버변수(balance)도 상속이 됩니다.(은닉화)
 		//하지만 함께 상속된 다른 메소드인 accumulate()를 통한 간접 접근만 가능합니다.
 	}
 	
+	//통장 잔액 확인
 	public void showMoney(){
 		System.out.print("누적 금액: ");
 		System.out.println(getBalance());
