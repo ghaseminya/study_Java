@@ -12,7 +12,7 @@
 
 */
 
-package com.ext3;
+package com.ext4;
 
 class Parent{
 	String msg = "Parent 클래스";
