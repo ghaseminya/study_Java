@@ -35,7 +35,7 @@ public class LocalEx02 {
 	public void innerTest(){
 		//지역 변수
 		int b = 200;
-//		final int b = 200;
+//		final int b = 200; //TODO 2: 상수화 하면 호출가능
 		
 		//로컬 내부 클래스
 		class Inner{
@@ -46,12 +46,18 @@ public class LocalEx02 {
 				
 				System.out.println("a = " + a);
 				
+				//TODO 1: 로컬내부 클래스가 위치한 메소드가 위치한 지역변수 호출
 				//로컬 내부 클래스는 로컬내부 클래스가 위치한 메소드에서 지역변수 호출 불가능
 				//ERROR:Cannot refer to a non-final variable b inside an inner class defined in a different method
 //				System.out.println("b = " + b);
-				//메소드의 변수 선언시 final int b = 200; 선언하면 접근 가능하게 됩니다.
 				
+				//TODO 3: 메소드의 변수 선언시 final int b = 200; 선언하면 접근 가능하게 됩니다.
+//				System.out.println("b = " + b);
+				
+				
+				//내부 클래스의 멤버
 				System.out.println("c = " + c);
+				//내부 클래스의 상수
 				System.out.println("NUM = " + NUM);
 			}
 		}
