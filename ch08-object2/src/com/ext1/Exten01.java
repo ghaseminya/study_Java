@@ -2,7 +2,7 @@
 // 상속 - 멤버변수 
 
 [Inheritance(상속)]
-	• 객체의 특성을 그대로 물려받는 또 다른 객체를 만들 수 있는 것
+	• 객체의 특성을 그대로 물려받는 또 다른 객체를 만드는 것
 	• 특정 클래스(super class)가 가지는 일부 속성과 기능을 
 	     다른 새로운 클래스(sub class)에게 제공하기 위해 맺는 클래스들간의 관계
 	• extends 예약어를 사용
@@ -88,7 +88,7 @@ class Parent{
 //class [sub클래스명] extends [super클래스명] {}
 //자식 클래스, 하위 클래스, 유도 클래스
 class Child extends Parent{
-	
+	//int a = 100; //물려받은 속성
 	int b = 200;
 
 	//TODO 2: 상위클래스의 a값 변경한 후 다시 결과 확인
@@ -103,7 +103,7 @@ public class Exten01 {
 		//서브클래스의 멤버변수 출력
 		System.out.println(ch.b);
 		
-		//상위클랫의 멤버변수 출력
+		//상위클래스의 멤버변수 출력
 		//Parent클래스를 상속했기 때문에 a 호출가능
 		System.out.println(ch.a);
 	}
