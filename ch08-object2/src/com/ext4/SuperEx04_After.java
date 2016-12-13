@@ -2,11 +2,11 @@
 //super()를 통해 초기화하기
 
 //File Info
-//SuperEx04_Before.java	자식클래스의 생성자를 통해 초기화
-//SuperEx04_After.java	super()를 통해 초기화
+//SuperEx04_Before.java		자식클래스의 생성자를 통해 초기화
+//SuperEx04_After.java		super()를 통해 초기화
 
 
-package com.ext2;
+package com.ext4;
 
 //부모 클래스
 class Point_{
@@ -27,6 +27,8 @@ class Point_{
 //자식 클래스
 class Point3D_ extends Point_{		
 	
+	int z;
+	
 	Point3D_(int x, int y, int z){		
 		//TODO 1: 초기화 순서가 있으므로 순서를 정확히 해줘야 한다.
 //		this.z = z;
@@ -38,8 +40,6 @@ class Point3D_ extends Point_{
 		this.z = z;  //그다음 자식
 		
 	}
-	
-	int z;
 	
 	@Override	//메소드 재정의
 	public String getLocation(){

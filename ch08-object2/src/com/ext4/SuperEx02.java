@@ -7,7 +7,7 @@
 //디폴트 생성자가 암묵적으로 삽입되는 것 코드로 확인
 
 
-package com.ext2;
+package com.ext4;
 
 //부모 클래스
 class Parent2{

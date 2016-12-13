@@ -3,7 +3,7 @@
 //상속
 //인자 있는 생성자만 있는 경우
 
-package com.ext2;
+package com.ext4;
 
 //부모 클래스
 class A3{	

@@ -9,16 +9,16 @@ instanceof 연산자
 [참조변수]가  [클래스명]의 클래스자료형으로 형변환 가능유무에 따라 true, false값 반환
 [참조변수] instanceof [클래스명]
 
-[참조변수] instanceof [클래스명]	반환값
-형변환 가능						true
-형변환 불가						false
+[참조변수] instanceof [클래스명]		반환값
+형변환 가능							true
+형변환 불가							false
 
 box instanceof GoldPaperBox
 box라는 참조변수가 GoldPaperBox로 	형변환 가능하면 true 반환
 							불가능하면 false를 반환
 
 */
-package com.ext2;
+package com.ext5;
 
 class Box {
 	public void simpleWrap() {

@@ -17,7 +17,7 @@ super()	• super클래스의 생성자를 의미
 
 */
 
-package com.ext2;
+package com.ext4;
 
 //부모 클래스
 class A{
@@ -73,6 +73,10 @@ public class SuperEx01 {
 		System.out.println("생성자를 통한 부모 메소드 호출:");
 		B bb = new B(); //부모 클래스의 play
 						//super.a: 100
+		//재정의전 호출
+		bb.play();
+		
+		//재정의후 호출
 		bb.play(); //자식 클래스의 play
 		System.out.println();
 		

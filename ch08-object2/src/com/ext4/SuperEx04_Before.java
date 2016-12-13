@@ -2,11 +2,11 @@
 //super()를 통해 초기화하기 (처리 전)
 
 //File Info
-//SuperEx04_Before.java	자식클래스의 생성자를 통해 초기화
-//SuperEx04_After.java	super()를 통해 초기화
+//SuperEx04_Before.java		자식클래스의 생성자를 통해 초기화
+//SuperEx04_After.java		super()를 통해 초기화
 
 
-package com.ext2;
+package com.ext4;
 
 //부모 클래스
 class Point{
@@ -23,7 +23,7 @@ class Point{
 	}
 	
 	public String getLocation(){
-		return "x : " + x + ", y" + y;
+		return "x : " + x + ", y: " + y;
 	}
 }
 
