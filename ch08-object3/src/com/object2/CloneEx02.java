@@ -1,5 +1,6 @@
-/*
+
 //확인 후 주석 처리
+
 package com.object2;
 //깊은 복사(Deep Copy)
 //참조변수의 인스턴스값을 카피하고 이 인스턴스가 참조하고 있는 인스턴스의 값까지 복사하게 되어
@@ -8,18 +9,9 @@ package com.object2;
 //얇은 복사후 참조하고 있는 인스턴스의 클론메소드 호출하게 됩니다.
 
 //★ 깊은 복사(Deep Copy) 도식도
-//
-//
+//http://codedragon.tistory.com/4658
+//http://cfile6.uf.tistory.com/image/266F61435850679C0BAFC5
 //-----------------------------
-//출력결과
-//이름, 나이 정보
-//한국: [김프로, 32]
-//미국: [Bill, 37]
-//
-//이름, 나이 정보
-//한국: [홍길동, 27]
-//미국: [Sara, 18]
-
 
 class InfoPerson implements Cloneable {
 	private String strName;
@@ -29,6 +21,7 @@ class InfoPerson implements Cloneable {
 		strName=x;
 		intAge=y;
 	}
+	
 	public void showPosition() {
 		System.out.printf("[%s, %d]", strName, intAge);
 	}
@@ -48,6 +41,7 @@ class Nation implements Cloneable {
 		infoKorean=new InfoPerson(x1, y1);
 		infoAmerican=new InfoPerson(x2, y2);
 	}
+	
 	public void showPosition() {
 		System.out.println("이름, 나이 정보");
 		System.out.print("한국: ");
@@ -62,6 +56,7 @@ class Nation implements Cloneable {
 		infoAmerican.changePos(x2, y2);
 	}
 	public Object clone() throws CloneNotSupportedException	{
+		
 		//얇은 복사
 		Nation copy=(Nation)super.clone();
 		//다시 얇은 복사
@@ -72,22 +67,49 @@ class Nation implements Cloneable {
 	}
 }
 
-class CloneEx02
-{	
+class CloneEx02 {
 	public static void main(String[] args) {
-		Nation orgin=new Nation("홍길동", 27, "Sara", 18);
+		Nation orgin = new Nation("홍길동", 27, "Sara", 18);
 		Nation copy;
 		
-		try	{
-			copy=(Nation)orgin.clone();
+		orgin.showPosition();
+
+		try {
+			copy = (Nation) orgin.clone();
+			orgin.showPosition();
+			copy.showPosition();
+			
 			orgin.changePos("김프로", 32, "Bill", 37);
 			orgin.showPosition();
 			copy.showPosition();
-		}
-		catch(CloneNotSupportedException e)	{
+		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
 	}
 }
 
-*/
+
+
+//출력결과
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
+//
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
+//
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
+
+// 깊은 복사 수행
+
+//이름, 나이 정보
+//한국: [김프로, 32]
+//미국: [Bill, 37]
+//
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
+

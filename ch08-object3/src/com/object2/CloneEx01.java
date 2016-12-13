@@ -1,3 +1,4 @@
+/*
 //확인 후 주석 처리
 package com.object2;
 
@@ -17,18 +18,9 @@ package com.object2;
 //
 //
 //★ 얇은 복사(Shallow Copy) 도식도
-//
-//
-////------------------------
-////결과적으로 얇은 복사가 이루어져 동일한 결과가 나오게 됩니다.
-////출력결과
-//이름, 나이 정보
-//한국: [김프로, 32]
-//미국: [Bill, 37]
-//
-//이름, 나이 정보
-//한국: [김프로, 32]
-//미국: [Bill, 37]
+//http://codedragon.tistory.com/4657
+//http://cfile1.uf.tistory.com/image/220634505850626E27A3D8
+//------------------------
 
 class InfoPerson implements Cloneable {
 	private String strName;
@@ -38,6 +30,7 @@ class InfoPerson implements Cloneable {
 		strName=x;
 		intAge=y;
 	}
+	
 	public void showPosition() {
 		System.out.printf("[%s, %d]", strName, intAge);
 	}
@@ -57,6 +50,7 @@ class Nation implements Cloneable {
 		infoKorean=new InfoPerson(x1, y1);
 		infoAmerican=new InfoPerson(x2, y2);
 	}
+	
 	public void showPosition() {
 		System.out.println("이름, 나이 정보");
 		System.out.print("한국: ");
@@ -77,11 +71,23 @@ class Nation implements Cloneable {
 
 class CloneEx01 {	
 	public static void main(String[] args) {
-		Nation orgin=new Nation("홍길동", 27, "Sara", 18);
+		Nation orgin = new Nation("홍길동", 27, "Sara", 18);
 		Nation copy;
 		
+		orgin.showPosition();
+		
+		//선언만 되어져 있으므로 컴파일 ERROR(The local variable copy may not have been initialized)
+//		copy.showPosition();
+		
 		try	{
+			// 인스턴스가 참조하고 있는 또 다른 인스턴스까지 복사하지는 않습니다. 단순히 참조 값만을 복사합니다.
+			//origin과 copy는 동일한 참조값을 가지고 있습니다.
 			copy=(Nation)orgin.clone();
+//			System.out.println(orgin); //com.object2.Nation@28d93b30
+//			System.out.println(copy); //com.object2.Nation@1b6d3586
+			copy.showPosition();
+			
+			//결과적으로 얇은 복사가 이루어져 동일한 결과가 나오게 됩니다.
 			orgin.changePos("김프로", 32, "Bill", 37);
 			orgin.showPosition();
 			copy.showPosition();
@@ -91,3 +97,26 @@ class CloneEx01 {
 		}
 	}
 }
+
+
+//결과적으로 얇은 복사가 이루어져 동일한 결과가 나오게 됩니다.
+//출력결과
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
+//
+//이름, 나이 정보
+//한국: [홍길동, 27]
+//미국: [Sara, 18]
+
+// 앏은 복사 수행
+
+//이름, 나이 정보
+//한국: [김프로, 32]
+//미국: [Bill, 37]
+//
+//이름, 나이 정보
+//한국: [김프로, 32]
+//미국: [Bill, 37]
+
+*/
