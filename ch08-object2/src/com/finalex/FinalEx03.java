@@ -11,7 +11,7 @@
 */
 package com.finalex;
 
-//TODO 1: 클래스에 final을 명시하면 상속되지 않습니다.
+//TODO 1: final클래스 정의 - 클래스에 final을 명시하면 상속되지 않습니다.
 //TODO 3-1: 주석처리
 //final class Parent{
 //	int a = 100;

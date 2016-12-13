@@ -12,6 +12,7 @@ class Me{
 
 public class FinalEx02 extends Me{
 
+	//TODO2:
 	//상속받은 메소드 재정의 시 ERROR - Cannot override the final method from Me
 //	@Override
 //	public void play(){
@@ -20,6 +21,7 @@ public class FinalEx02 extends Me{
 	
 	public static void main(String[] args) {
 		FinalEx02 f = new FinalEx02();
+		//TODO 1:
 		f.play();
 	}
 }

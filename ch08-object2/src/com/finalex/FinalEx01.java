@@ -52,11 +52,14 @@ public class FinalEx01 {
 		System.out.println(f1.var1); //200	
 		
 		
-		//상수는 변경불가
-		//ERROR:The final field FinalEx01.var2 cannot be assigned
-//		f1.var2 = 300;	
+			
+		
 		System.out.println("final 상수(f1.var2) 호출: ");
 		System.out.println(f1.var2); //300
+		
+		//상수는 변경불가
+		//ERROR:The final field FinalEx01.var2 cannot be assigned
+//		f1.var2 = 300;
 		
 		
 		//STATIC상수 호출
@@ -76,7 +79,7 @@ public class FinalEx01 {
 		
 		//상수 변경 불가
 		//ERROR-The final local variable NUM cannot be assigned. It must be blank and not using a compound assignment
-//		NUM = 300;	
+//		NUM = 600;	
 	}
 }
 
