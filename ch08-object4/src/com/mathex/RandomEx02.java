@@ -1,8 +1,12 @@
+/*
 //무작위 숫자 추출 - java.util.Random 클래스
 
-//.nextInt()
-//0부터 인자로 전달된 값의 전까지를 범위로 난수발생
+nextInt(int n)
+• 0부터 인자로 전달된 값의 전까지를 범위로 난수발생
+• 0이상 n미만의 범위 내에 있는 int형 난수 반환
+• 0~n-1 까지의 범위에서 랜덤값을 추출
 
+*/
 package com.mathex;
 
 import java.util.Random;
