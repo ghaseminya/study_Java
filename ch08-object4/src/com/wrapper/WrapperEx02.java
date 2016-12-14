@@ -63,10 +63,9 @@ public class WrapperEx02 {
 		Integer obj3 = 15;
 		Integer obj4 = 20;
 		
-		//Auto boxing/unboxing
-		//산술연산의 과정에서 자동으로 이루어집니다. 
+		//Auto boxing/unboxing은 산술연산의 과정에서 자동으로 이루어집니다. 
 		//산술연산을 위해 unboxing이 일어난후 =연산자로 저장하기 위해 다시 boxing이 일어나고 
-		//출력을 위해 다시 unboxing이 일어납니다.)
+		//출력을 위해 다시 unboxing이 일어납니다.
 		Integer result2 = obj3 + obj4;
 		System.out.println("result2 = " + result2); //result2 = 35
 	}

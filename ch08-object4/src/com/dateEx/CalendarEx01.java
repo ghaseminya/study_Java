@@ -1,34 +1,42 @@
+/*
 //Calendar클래스 - Date관련 메소드
-//달력이나 시계 작성시 주로 사용
-//---------------------------
-//import java.util.Calendar;
-//Calendar 객체 생성
-//객체 출력
-//년, 월, 일 출력
-//요일 출력하기
-//오전/오후 표시, 시분초 표시
 
+학습내용
+	• import java.util.Calendar;
+	• Calendar객체 출력
+	• 년, 월, 일 출력
+	• 요일 출력하기
+	• 오전/오후 표시, 시분초 표시
+
+//---------------------------
+Calendar클래스
+달력이나 시계 작성시 주로 사용
+
+
+*/
 package com.dateEx;
 
 import java.util.Calendar;
 
-public class CalendarEx1 {
+public class CalendarEx01 {
 
 	public static void main(String[] args) {
 		
 		Calendar today = Calendar.getInstance();
 		System.out.println(today); //객체 출력
 		
-		//년, 월, 일 저장
+		//TODO : 년, 월, 일 저장
 		int year = today.get(Calendar.YEAR);
 		
-//		int month = today.get(Calendar.MONTH)+1;
+		
 		int month = today.get(Calendar.MONTH);
+//		int month = today.get(Calendar.MONTH)+1;
 		
 		int date = today.get(Calendar.DATE);
 		
 		
-		//년, 월, 일 출력
+		
+		//TODO : 년, 월, 일 출력
 		System.out.println(year +"년" + month + "월"+ date + "일"); //2015년7월16일
 		
 		//Calendar MONTH는 0~11을 리턴합니다. 그래서 정상적인 월을 출력할려면 +1해줘야 합니다.
@@ -36,7 +44,8 @@ public class CalendarEx1 {
 		System.out.println(year +"년" + month + "월"+ date + "일"); //2015년8월16일
 		
 		
-		//요일 출력하기
+		
+		//TODO : 요일 출력하기
 		//Calendar.DAY_OF_WEEK: 요일을 1(일) ~ 7(토)까지 숫자로 반환
 		int day = today.get(Calendar.DAY_OF_WEEK);
 		String nday = "";	//빈문자열 초기화		
@@ -54,7 +63,8 @@ public class CalendarEx1 {
 		System.out.println(nday + "요일"); //일요일
 		
 		
-		//오전/오후 표시, 시분초 표시
+		
+		//TODO : 오전/오후 표시, 시분초 표시
 							//오전:0, 오후:1
 		int amPm = today.get(Calendar.AM_PM);
 		String msg_amPm = (amPm == Calendar.AM) ? "오전" : "오후";

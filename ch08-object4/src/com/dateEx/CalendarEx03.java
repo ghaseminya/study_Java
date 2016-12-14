@@ -1,12 +1,14 @@
 //달력 만들기
 //스페이스로 문자열 정렬하여 달력 만들기
-
+//File Info
+//package com.dateEx;	CalendarEx02.java	탭으로 정렬하여 달력만들기
+//->package com.dateEx;	CalendarEx03.java	스페이스로 문자열 정렬하여 달력 만들기
 
 package com.dateEx;
 
 import java.util.Calendar;
 
-public class CalendarEx3 {
+public class CalendarEx03 {
 
 	public static void main(String[] args) {
 		java.util.Scanner input = new java.util.Scanner(System.in);
@@ -22,8 +24,9 @@ public class CalendarEx3 {
 		System.out.println("\n[" + year + "년" + month + "월]");
 		System.out.println("     일      월     화     수     목     금     토");
 		
-		//Calendar MONTH는 0~11을 리턴함 
-		//희망연, 월, 일 선택
+		
+		//희망연, 월, 일 설정
+		//Calendar MONTH는 0~11로 설정(1월이 0 12월이 11로 설정해야 합니다. 그래서 month-1로 처리)
 		cal.set(year, month-1, 1);
 		
 		//월의 마지막 날짜
@@ -40,7 +43,9 @@ public class CalendarEx3 {
 		
 		//날짜 출력
 		for(int i=1; i <= lastofDate; i++){
+			//한자리 날짜와 두자리수 날짜 정렬하기
 			System.out.print( (i<10) ? "   "+i : "  "+i );
+			
 			//매주 줄바꿈하기
 			if( week%7 ==0)
 				System.out.println();

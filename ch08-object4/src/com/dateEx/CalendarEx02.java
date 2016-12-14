@@ -1,12 +1,15 @@
 //달력 만들기
 //탭으로 정렬하여 달력만들기
+//File Info
+//->package com.dateEx;	CalendarEx02.java	탭으로 정렬하여 달력만들기
+//package com.dateEx;	CalendarEx03.java	스페이스로 문자열 정렬하여 달력 만들기
 
 
 package com.dateEx;
 
 import java.util.Calendar;
 
-public class CalendarEx2 {
+public class CalendarEx02 {
 
 	public static void main(String[] args) {
 		//숫자 입력받기 위해 Scanner의 인스턴스 생성
@@ -27,7 +30,7 @@ public class CalendarEx2 {
 		System.out.println("일\t월\t화\t수\t목\t금\t토");
 				 
 		//희망연, 월, 일 설정
-		//Calendar MONTH는 0~11을 리턴함
+		//Calendar MONTH는 0~11로 설정(1월이 0 12월이 11로 설정해야 합니다. 그래서 month-1로 처리)
 		calendar.set(year, month-1, 1);
 		
 		//월의 마지막 날짜 구하기

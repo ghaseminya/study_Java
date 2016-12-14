@@ -35,6 +35,7 @@ class WrapperEx03 {
 	public static void main(String[] args) {
 		//개발자가 정의한  Wrapper클래스 사용
 		IntWrapper intInstance=new IntWrapper(3);
+		
 		//자바에서 제공하는 Wrapper클래스 사용
 		Integer basicIntInstance = new Integer(10);
 		
@@ -53,3 +54,14 @@ class WrapperEx03 {
 		
 	}
 }
+
+
+/* 출력결과
+3
+10
+7
+num1: 300
+num1+num2: 500
+*/
+
+
