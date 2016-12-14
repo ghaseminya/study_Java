@@ -39,22 +39,22 @@ package com.inter1;
 import java.util.Scanner;
 
 //TODO 1: 클래스 상수
-class Week{
-	public static final int MON=1;
-	public static final int TUE=2;
-	public static final int WED=3;
-	public static final int THU=4;
-	public static final int FRI=5;
-	public static final int SAT=6;
-	public static final int SUN=7;
-}
+//class Week{
+//	public static final int MON=1;
+//	public static final int TUE=2;
+//	public static final int WED=3;
+//	public static final int THU=4;
+//	public static final int FRI=5;
+//	public static final int SAT=6;
+//	public static final int SUN=7;
+//}
 
 //TODO 2: 인터페이스 상수
-//interface Week{
-//	//인터페이스 상수 정의
-//	//인터페이스 상수 정의시 public static final생략가능
-//	int MON=1, TUE=2, WED=3, THU=4, FRI=5, SAT=6, SUN=7;
-//}
+interface Week{
+	//인터페이스 상수 정의
+	//인터페이스 상수 정의시 public static final생략가능
+	int MON=1, TUE=2, WED=3, THU=4, FRI=5, SAT=6, SUN=7;
+}
 
 public class InterfaceEx07 {
 

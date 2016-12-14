@@ -31,6 +31,8 @@ abstract class AbsEx2 extends AbsEx1{
 		return a;
 	}
 	
+	//상속받은 그 클래스를 추상메소드로 정의하면
+	//부모클래스에서 정의한 일반 메소드가 다시 가려지고  또 다시 추상메소드를 구현해야 사용할 수 있습니다.
 	public abstract String getStr();
 } 
 
