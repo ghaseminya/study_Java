@@ -15,8 +15,10 @@ public class StringEx02 {
 			System.out.println("str1과 str2는 동일 인스턴스 참조");
 		else{
 			System.out.println("str1과 str2는 다른  인스턴스 참조");
-//			System.out.println(str1);
-//			System.out.println(str2);
 		}
 	}
 }
+
+/* 출력결과
+str1과 str2는 다른  인스턴스 참조
+*/

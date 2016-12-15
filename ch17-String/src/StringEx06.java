@@ -1,94 +1,62 @@
-//String 클래스 - 암시적 객체 생성/명시적 객체 생성
 
-//<암시적 객체 생성>: 스트링 객체 생성-리터럴을 이용하여 문자열 생성
-//	• 객체 비교 
-//	• 객체의 내용(문자열) 비교
+//문자열 덧셈
+//• + 연사자를 통한 문자열 덧셈
+//• += 연사자를 통한 문자열 덧셈
 
-//<명시적 객체 생성>: 명시적 객체 생성- new연산자를 이용하여 문자열 생성
-//	• 객체 비교- 동일위치를 참조하는지 조건 검사
-//	• 객체의 내용(문자열) 비교
-//-----------------------------------------------------
-//명시적으로 객체 생성시 다른 객체이며 hashCode() 값이 동일하게 나와도 다른 객체입니다. 그래서 객체 비교를 해보면 객체가 다름을 확인 할 수 있습니다.
-//이는 내부적으로 String을 다르게 처리해 주고 있기 때문입니다. 
-//(중요) 문자열 비교시 equals()로 비교해야 합니다.
+//concat("문자열"); //문자열 연결 함수
 
+//두개의 문자열 +연결
+//문자열 + 문자
+//문자열 + 숫자
+//숫자 + 문자열 + 숫자
+//+=연산자를 통한 문자열 덧
 
 public class StringEx06 {
 
 	public static void main(String[] args) {
-		System.out.println("암시적 객체 생성 ==============");
-		//암시적 객체 생성
-		String str1 ="Hello";
-		String str2 ="Hello";
 
-		//객체 비교 
-		if( str1 == str2){
-			System.out.println("str1과 str2는 같은 객체"); //출력
-		}else{
-			System.out.println("str1과 str2는 다른 객체");
-		}
-				
-		//객체의 내용(문자열)비교
-		if(str1.equals(str2)){
-			System.out.println("str1과 str2의 내용이 같습니다"); //출력
-		}else{
-			System.out.println("str1과 str2의 내용이 다릅니다");
-		}
-		System.out.println(str1.getClass()); //class java.lang.String
-		System.out.println(str2.getClass()); //class java.lang.String
-		System.out.println(str1.hashCode()); //69609650
-		System.out.println(str2.hashCode()); //69609650
-		System.out.println(str1); //Hello
-		System.out.println(str2); //Hello
-		
-		
-		System.out.println("명시적 객체 생성 ==============");
-		//명시적 객체 생성
-		String msg1 = new String("World");
-		String msg2 = new String("World");
-		
-		//객체 비교- 동일위치를 참조하는지 조건 검사
-		if( msg1 == msg2){	
-			System.out.println("msg1과 msg2는 같은 객체");
-			//동일한 World문자열이지만 매번 새롭게 생성되기 때문에 위치값이 서로 다르게 됩니다.
-		}else{
-			System.out.println("msg1과 msg2는 다른 객체"); //출력
-		}
-		
-		//객체의 내용 비교
-		if(msg1.equals(msg2)){
-			System.out.println("msg1과 msg2의 내용이 같습니다"); //출력
-		}else{
-			System.out.println("msg1과 msg2의 내용이 다릅니다");
-		}
-		
-		System.out.println(msg1.getClass()); //class java.lang.String
-		System.out.println(msg2.getClass()); //class java.lang.String
-		System.out.println(msg1.hashCode()); //83766130
-		System.out.println(msg2.hashCode()); //83766130
-		System.out.println(msg1); //World
-		System.out.println(msg2); //World
+		// 두개의 문자열 +연결
+		String str1 = "Java" + "love";
+		// "Java".concat("love");
+		// -> Java의 스트링 인스턴스가 만들어지고 그 스트링인스턴스를 대상으로 concat()메소드를 호출하면서 인자를
+		// 전달하게되면서
+		// "Java"와 "love"가 합쳐지면서 새로운 스트링인스턴스를 만들어서 그 참조값을 str1에 저장하게 됩니다.
+		// 자동으로 concat()호출로 바꿔주기 때문에 두문자열을 +연산자로 덧셈을 할수 있게 됩니다.
+
+		// 문자열 + 문자
+		String str2 = "Java" + 'A';
+		// "Java".concat(String.valueOf('A'));
+		// -> String.valueOf()에 의해 'A'가 문자열로 전환되고 해당 문자열의 인스턴스를 반환합니다.
+
+		// 문자열 + 숫자
+		String str3 = "Java" + 3;
+		// "Java".concat(String.valueOf('3'));
+		// -> String.valueOf()에 의해 '3'가 문자열로 전환되고 해당 문자열의 인스턴스를 반환합니다.
+
+		// 숫자 + 문자열 + 숫자
+		String str4 = 3 + "Java" + 7;
+		// String.valueOf('3').concat("Java").concat(String.valueOf('7'))
+		// 이럴경우 문자열 인스턴스가 많이 생성되는 것을 방지하기 위해서
+		// StringBuilder클래스를 사용하여 두개의 인스턴스만 생성됩니다.
+		// StringBuilderEx03.java에서 추가설명
+
+		System.out.println(str1); // Javalove
+		System.out.println(str2); // JavaA
+		System.out.println(str3); // Java3
+		System.out.println(str4); // 3Java7
+
+		// +=연산자를 통한 문자열 덧셈
+		str4 += '!';
+		System.out.println(str4); // 3Java7!
 	}
 }
 
 
 /*//출력결과
-암시적 객체 생성 ==============
-str1과 str2는 같은 객체
-str1과 str2의 내용이 같습니다
-class java.lang.String
-class java.lang.String
-69609650
-69609650
-Hello
-Hello
-명시적 객체 생성 ==============
-msg1과 msg2는 다른 객체
-msg1과 msg2의 내용이 같습니다
-class java.lang.String
-class java.lang.String
-83766130
-83766130
-World
-World
+Javalove
+JavaA
+Java3
+3Java7
+3Java7!
+
 */
