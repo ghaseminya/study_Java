@@ -4,19 +4,19 @@
 package com.inner4;
 
 //부모클래스
-abstract class TestAbst{
+abstract class TestAbst {
 	int data = 1234567;
-	
-	//추상메서드
-	public abstract void printData(); 
+
+	// 추상메서드
+	public abstract void printData();
 }
 
 public class AnonymousEx04 {
 
-	//구현부
-	TestAbst inn = new TestAbst (){
+	// 구현부
+	TestAbst inn = new TestAbst() {
 		@Override
-		public void printData(){ //미완성된 것을 완성
+		public void printData() { // 미완성된 것을 완성
 
 			System.out.println("data: " + data);
 		}
