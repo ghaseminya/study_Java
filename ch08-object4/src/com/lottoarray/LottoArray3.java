@@ -1,7 +1,7 @@
 //정렬하기
-
-//java.util.Arrays.sort()
-
+//	• 난수 추출하여 배열에 저장하기
+//	• 배열에 저장된 난수를 정렬하기
+//	• java.util.Arrays.sort()
 
 package com.lottoarray;
 

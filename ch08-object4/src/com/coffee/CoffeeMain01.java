@@ -41,7 +41,7 @@ import java.io.IOException;
 
 public class CoffeeMain01 {
 	
-	//상수 ( 커피 구매시 차감되는 양)
+	//상수 ( 커피 구매시 차감되는 데이터)
 	public static final int PRICE = 300;
 	public static final int CONTENT_COFFEE = 5;
 	public static final int CONTENT_CREAM = 3;
@@ -101,7 +101,7 @@ public class CoffeeMain01 {
 
 			}else if(str.equals("2")){
 				//관리자 모드
-				System.out.print("관리자 모드입니다");
+				System.out.println("관리자 모드입니다");
 				//break;
 				
 			}else if(str.equals("3")){
@@ -116,7 +116,7 @@ public class CoffeeMain01 {
 	}
 	
 	
-	//커피 주문가히 메소드(커피 주문시 연산/주문갯수 파악->커피,프림,설탕 차감/입금금액에서 주문금액 차악후 거스름돈 계산)
+	//커피 주문하기 메소드(커피 주문시 연산/주문갯수 파악->커피,프림,설탕 차감/입금금액에서 주문금액 차악후 거스름돈 계산)
 	public void processCoffee(){
 		//커피 주문시 연산
 		

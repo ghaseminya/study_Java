@@ -14,8 +14,11 @@ public class LottoArray4 {
 		
 		for(int i=0; i<6; i++)
 		{	
-			//HashSet에 난수 삽입
-			if( hs.add(  (int)(Math.random()*10+1) ) ){
+			//HashSet에 난수 삽입하기
+			//난수 발생 (1~45)
+			//0~44난수 발생하므로 +1
+			if( hs.add( (int)(Math.random()*45+1) ) ){
+//			if( hs.add(  (int)(Math.random()*10+1) ) ){ //난수 발생 (1~10)
 					
 			}
 			else{
