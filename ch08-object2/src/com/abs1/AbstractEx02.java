@@ -43,9 +43,9 @@ abstract class AbsEx2 extends AbsEx1{
 //	}
 //} 
 //• AbsEx2 클래스도 abstract 로 선언되어야 에러 발생 않습니다.
-//• 위의 경우AbsEx2  클래스는 AbsEx1 클래스의 abstract 메소드를 상속하고 있습니다.
-//• 그런데 getA() 메소드를 오버라이딩 하지 않았으므로, abstract 상태 그대로 포함하고 있는 것이 되기 때문에 
-//결국 AbsEx2  클래스는 하나 이상의 abstract 메소드를 포함하게되는 것이 되어, 
+//• 위의 경우AbsEx2 클래스는 AbsEx1 클래스의 abstract 메소드를 상속하고 있습니다.
+//• 그런데 getA()메소드를 오버라이딩 하지 않았으므로, abstract 상태 그대로 포함하고 있는 것이 되기 때문에 
+//결국 AbsEx2 클래스는 하나 이상의 abstract 메소드를 포함하게되는 것이 되어, 
 //abstract로 선언되어야 하며, 인스턴스의 생성도 불가능하게 됩니다.
 
 

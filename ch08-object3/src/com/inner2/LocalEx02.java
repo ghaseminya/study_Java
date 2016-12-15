@@ -60,7 +60,7 @@ public class LocalEx02 {
 				//내부 클래스의 상수
 				System.out.println("NUM = " + NUM);
 			}
-		}
+		} //Inner
 		
 		//객체 생성
 		new Inner().getData();
