@@ -23,7 +23,7 @@ public class ObjectClassEx05 {
 		System.out.println("ob: " + ob); //ob: com.object2.ObjectEx01@2a139a55
 		
 		//참조값 확인: 클래스명@16진수해쉬값
-				System.out.println("toString(): " + ob.toString()); //toString(): com.object2.ObjectEx01@2a139a55
+		System.out.println("toString(): " + ob.toString()); //toString(): com.object2.ObjectEx01@2a139a55
 		
 		//클래스 정보 확인
 		System.out.println("getClass(): " + ob.getClass()); //getClass(): class com.object2.ObjectEx01

@@ -36,13 +36,13 @@ class IntNumber3 {
 	
 	//TODO : Object클래스의 equals()메소드 재정의
 	// equals()메소드 재정의 전후 결과 확인하기
-//	@Override
-//	public boolean equals(Object obj) {
-//		if(this.num==((IntNumber3)obj).num)
-//			return true;
-//		else
-//			return false;
-//	}
+	@Override
+	public boolean equals(Object obj) {
+		if(this.num==((IntNumber3)obj).num) //다운캐스팅 후 내용비교
+			return true;
+		else
+			return false;
+	}
 }
 
 public class ObjectClassEx03 {

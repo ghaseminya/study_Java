@@ -18,6 +18,10 @@ public class MathEx03 {
 		
 		double a = 100.123456;
 		
+		double d = Math.round(a);
+		System.out.println(d);
+		//100.0
+		
 		//TODO : 소수 둘째자리에서 반올림하기
 		double b = Math.round(a*100d)/100d;
 				

@@ -1,7 +1,5 @@
 package com.mathex;
 
-import java.util.Random;
-
 /*
 
 int nextInt( )
@@ -20,6 +18,9 @@ int nextInt(int n)
 nextInt()에서 시작 범위를 변경하고 싶다면 그 수만큼 더해주면 됩니다.
 
 */
+
+import java.util.Random;
+
 public class RandomEx06 {
 
 	public static void main(String[] args) {
@@ -80,6 +81,19 @@ public class RandomEx06 {
 		System.out.println("from 1 to 6: " + num1);  
 	}
 }
+/*
+//== 6단 == 
+//6X1 = 6	6X0.1 = 0.6
+//6X2 = 12	6X0.2 = 1.2
+//6X3 = 18	6X0.3 = 1.8
+//6X4 = 24	6X0.4 = 2.4
+//6X5 = 35	6X0.5 = 3.5
+//6X6 = 36	6X0.6 = 3.6
+//6X7 = 42	6X0.7 = 4.2
+//6X8 = 48	6X0.8 = 4.8
+//6X9 = 54	6X0.9 = 5.4
+
+*/
 
 /*
 //출력결과

@@ -1,14 +1,21 @@
 package com.object1;
 /*
+File Info
+->object1.ObjectClassEx02	인스턴스간 내용비교를 위한 내용비교 메소드 정의 (==연산자 사용)
+object1.ObjectClassEx03		Object클래스의 equals()메소드를 재정의하여 내용비교
+
+//-----------------------------------------
 인스턴스간 내용비교를 위한 내용비교 메소드 정의
 	• == 연산자는 참조 값(주소값) 비교를 합니다. 
 	• 따라서 인스턴스간 내용비교를 위해서는 내용비교 기능의 메소드가 필요
 	• (개선)ObjectClassEx03에서 equals()메소드를 재정의하여 수행될 수 있도록 변경
 
 
-File Info
-->object1.ObjectClassEx02	인스턴스간 내용비교를 위한 내용비교 메소드 정의 (==연산자 사용)
-object1.ObjectClassEx03		Object클래스의 equals()메소드를 재정의하여 내용비교
+Object 클래스의 equals()
+public boolean equals(Object obj) {
+        return (this == obj);
+}
+
 
 //-----------------------------------------
 
@@ -16,8 +23,6 @@ Object Class(오브젝트 클래스) 정의
 	• 모든 클래스의 최상위 클래스
 	• 명시적으로 extends하지 않아도 자동으로 상속합니다.
 	• 즉, 프로그래머가 명시적으로 extends 하는 클래스가 없으면 자동으로 자바 컴파일러가   Object 클래스를 상속받도록 처리합니다.
-
-
 
 */
 class IntNumber {
