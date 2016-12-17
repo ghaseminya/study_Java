@@ -16,7 +16,7 @@ public class StringEx08 {
 		// 앞뒤에 각각 두개의 공백있는 문자열 생성
 		String str = "  aaaaabbAAABB  ";
 		
-		//null: null은 객체가 생성이 아직 안되어있음
+		//null: null은 객체가 생성이 아직 안되어있음을 의미
 		//에러가 안나게 할 목적으로 null 사용 
 		String msg1 = null;
 		
@@ -25,23 +25,28 @@ public class StringEx08 {
 		//데이터가 없는 객체가 생성
 		String msg2 = "";
 		
-		//문자열 대체
+		
+		//TODO : 문자열 대체
 		msg2 = str.replace("aa", "b");
 		System.out.println("msg2: " + msg2); //msg2:   bbabbAAABB  
 		
-		//영문자를 대문자로
+		
+		//TODO : 영문자를 대문자로
 		msg1 = str.toUpperCase();
 		System.out.println("msg1: " + msg1); //msg1:   AAAAABBAAABB  
 		
-		//영문자를 소문자로
+		
+		//TODO : 영문자를 소문자로
 		msg1 = msg1.toLowerCase();
 		System.out.println("msg1: " + msg1); //msg1:   aaaaabbaaabb 
 		
-		//공백 제거
+		
+		//TODO : 공백 제거
 		msg2 = str.trim();
 		System.out.println("msg2: " + msg2); //msg2: aaaaabbAAABB
 		
-		//특정 문자열 포함 여부 검색
+		
+		//TODO : 특정 문자열 포함 여부 검색
 		boolean check = str.contains("aa");
 		System.out.println("check: " + check); //check: true
 	}
