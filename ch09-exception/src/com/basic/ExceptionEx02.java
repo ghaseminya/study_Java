@@ -6,14 +6,22 @@ package com.basic;
 
 //------------------------------
 학습내용
-	• 에러를 추적하여 표시
+	• 에러를 추적하여 표시 (TODO 1)
 		○ printStackTrace(): 예외가 발생되기까지의 모든 과정과 예외코드 라인번호를 출력
-	• 에러 문구 간단 표시
+	• 에러 문구 간단 표시 (TODO 2)
 		○ getMessage(): 간략하게 예외정보 출력
-	• 사용자가 정의한 에러문구 출력하기
-	
-//------------------------------
+	• 사용자가 정의한 에러문구 출력하기 (TODO 3)
+		○ System.out.println("없는 인덱스를 호출했습니다.");
 
+
+File Info
+ExceptionEx01	• 예외발생 확인
+				• 배열의 인덱스 범위를 넘어가서 예외가 발생합니다.
+				
+->ExceptionEx02	• 예외처리 - try~catch
+				• ExceptionEx01의 예외발생 예외처리
+
+//------------------------------
 예외(Exception)
 	• 내가 예상하는 일외에 뜻하지 않은 일들이 생길 수 있습니다. 이렇게 예상하지 못한 일들을 ‘예외’라고 하고
 	• 예외를 대비하고 준비하는 것이 ‘예외처리’입니다.
@@ -57,14 +65,16 @@ public class ExceptionEx02 {
 				
 				//TODO 1: 에러를 추적하여 표시
 				//printStackTrace(): 예외가 발생되기까지의 모든 과정과 예외코드 라인번호를 출력
-//				e.printStackTrace();
+				e.printStackTrace();
+				
 				
 				//TODO 2: 에러 문구 간단 표시
 				//getMessage(): 간략하게 예외정보 출력
 //				System.out.println(e.toString());
 				
+				
 				//TODO 3: 사용자가 정의한 에러문구 출력하기
-				System.out.println("없는 인덱스를 호출했습니다.");
+//				System.out.println("없는 인덱스를 호출했습니다.");
 			}	
 		}
 		System.out.println("프로그램 끝!!");
@@ -72,7 +82,27 @@ public class ExceptionEx02 {
 }
 
 
-/*//사용자가 정의한 에러문구 출력하기
+/*
+//TODO 1: 에러를 추적하여 표시
+var[0]: 10
+var[1]: 20
+var[2]: 30
+java.lang.ArrayIndexOutOfBoundsException: 3
+프로그램 끝!!
+	at com.basic.ExceptionEx02.main(ExceptionEx02.java:55)
+
+
+
+//TODO 2: 에러 문구 간단 표시
+var[0]: 10
+var[1]: 20
+var[2]: 30
+java.lang.ArrayIndexOutOfBoundsException: 3
+프로그램 끝!!
+
+
+
+//TODO 3: 사용자가 정의한 에러문구 출력하기
 var[0]: 10
 var[1]: 20
 var[2]: 30
