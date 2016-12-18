@@ -1,6 +1,8 @@
+package com.stringbuilderex;
+/*
 //참조값을 반환하는 메소드
 
-
+*/
 public class StringBuilderEx02 {
 
 	public static void main(String[] args) {
@@ -26,6 +28,11 @@ class Adder{
 	}
 	
 	public void showResult(){
-		System.out.println("Result: " + num); //Result: 11
+		System.out.println("Result: " + num);
 	}
 }
+
+/*
+출력결과
+Result: 11
+*/

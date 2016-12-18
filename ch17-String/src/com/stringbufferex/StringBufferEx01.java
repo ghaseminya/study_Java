@@ -1,9 +1,19 @@
+package com.stringbufferex;
+/*
 //StringBuffer클래스를 통한 문자열 추가
 //	• 문자열 버퍼 객체
 //	• 문자열 추가 변경 가능
 //	• append() 메서드를 이용하여 문자(열) 추가
 
+//--------------------
+StringBuffer 클래스
+	• 문자열 버퍼 객체
+	• 문자열 추가 변경 가능
+	• append() 메서드를 이용하여 문자(열) 추가
+	
+str.append("일지매");
 
+*/
 public class StringBufferEx01 {
 
 	public static void main(String[] args) {
@@ -23,6 +33,7 @@ public class StringBufferEx01 {
 		
 		System.out.println(str); 		   //sb1와 sb2는 서로 같습니다.
 		
+		//StringBuffer 객체의 내용을 String으로 변환합니다. 
 		str = sb1.toString();
 		System.out.println("sb1: " + str); //sb1: Code Dragon
 		

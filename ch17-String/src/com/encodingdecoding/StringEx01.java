@@ -57,3 +57,27 @@ public class StringEx01 {
 	}
 
 }
+
+
+/*//출력결과
+원본 글자 : 한글
+기본 Charset: UTF-8
+----------------------------------------
+encode with UTF-8 : %ED%95%9C%EA%B8%80
+decode with UTF-8 : 한글
+decode with EUC-KR : ��湲�
+decode with ISO-8859-1 : íê¸
+----------------------------------------
+encode with EUC-KR : %C7%D1%B1%DB
+decode with UTF-8 : �ѱ�
+decode with EUC-KR : 한글
+decode with ISO-8859-1 : ÇÑ±Û
+----------------------------------------
+encode with ISO-8859-1 : %3F%3F
+decode with UTF-8 : ??
+decode with EUC-KR : ??
+decode with ISO-8859-1 : ??
+----------------------------------------
+
+*/
+
