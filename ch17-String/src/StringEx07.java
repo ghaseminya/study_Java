@@ -51,7 +51,6 @@ int lastindexOf(String str)
 		index = name.lastIndexOf('n');
 		System.out.println("마지막 문자 n의 위치: " + index); System.out.println();
 		
-		
 	
 /*		
 char charAt(int index)
@@ -66,7 +65,8 @@ String substring(int begin)
 
 String substring(int begin, int end)
 • 시작위치(begin)부터 끝 위치(end) 범위에 포함된 문자열을 반환합니다.
-• 문자열에서 각 문자의 위치를 뜻하는 index가 0부터 시작한다는 것과 start부터 end의 범위 중 end위치에 있는 문자는 결과에 포함되지 않는다는 것이다. (start <= index < end)
+• 문자열에서 각 문자의 위치를 뜻하는 index가 0부터 시작한다는 것과 start부터 end의 범위 중 
+end위치에 있는 문자는 결과에 포함되지 않는다는 것이다. (start <= index < end)
 • end에서 start값을 빼면 substring에 의해 추출될 글자의 수가   됩니다.
 
 		

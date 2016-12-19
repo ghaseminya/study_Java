@@ -40,7 +40,7 @@ String replace(CharSequence old, CharSequence nw)
 		
 		
 /*
-String toLoweCase()
+String toLowerCase()
 • 문자열을 소문자로
 • String 인스턴스에 저장되어있는 모든 문자열을 소문자로 변환하여 반환합니다.
 
