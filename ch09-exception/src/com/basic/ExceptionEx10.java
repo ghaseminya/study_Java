@@ -6,7 +6,7 @@ ExceptionEx09 예외 처리하지 않은 코드를 try~catch~finally로 처리
 
 File Info
 ExceptionEx09	매개변수없이,  정수가 아닌 문자 입력 시 예외 발생
-*ExceptionEx10	try~catch~finally로 예외처리
+->ExceptionEx10	try~catch~finally로 예외처리
 
 
 */
@@ -28,3 +28,14 @@ public class ExceptionEx10 {
 		}
 	}
 }
+
+/*
+//인자를 넣지 않거나 'a'문자를 입력한 경우 모두 예외처리되며 모두 .finally가 수행됩니다.
+매개변수가 잘못 입력되었습니다.
+프로그램을 종료합니다.
+
+//인자로 정수 10을 입력한 경우 정상 출력됩니다.
+인자값은 : 10
+프로그램을 종료합니다.
+
+*/

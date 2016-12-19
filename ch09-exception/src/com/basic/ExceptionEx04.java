@@ -12,7 +12,8 @@ package com.basic;
 //-----------------------------
 throws예약어
 	• try~catch 문으로 예외를 받는다는 것은 어디선가는 예외를 던진다는 것입니다.
-	• 현재 메서드에서 예외처리를 하기가 조금 어려운 상태일 때 현재 영역을 호출해준 곳으로 발생한 예외 객체를 대신 처리해 달라며 양도 하는 것입니다. 
+	• 현재 메서드에서 예외처리를 하기가 조금 어려운 상태일 때 현재 영역을 호출해준 곳으로 
+	발생한 예외 객체를 대신 처리해 달라며 양도 하는 것입니다. 
 
 
 throws 사용법
@@ -43,7 +44,19 @@ public class ExceptionEx04 {
 	//같은 클래스 내에서만 호출가능 메소든
 	//throws문 삽입 -> main()에서 try~catch문에 삽입
 	private void printData() throws IOException, NumberFormatException{
+		
+		//InputStreamReader 클래스는 바이트를 읽어 문자로 변환
+		//바이트 스트림과 문자 스트림을 연결시켜주는 다리 역할을 하는 클래스
+		
+		//BufferedReader 클래스 - 문자열의 입력 
+		//readLine()
+		//• 한 줄 단위로 읽는 메서드
+		//• 한 줄의 끝을 '\r','\n' 중의 하나가 올 경우 또는 '\r\n'이 오는 경우를 한 줄의 끝으로 간주합니다.
+		//• 다만 행의 종단 문자는 포함하지 않는다. 
+		//• Stream의 EOF 이르면  null 을 반환합니다.
+
 		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
+		
 		System.out.print("단 입력> ");
 		//String -> int 
 		int dan = Integer.parseInt(br.readLine());
@@ -59,10 +72,12 @@ public class ExceptionEx04 {
 		//객체 생성
 		ExceptionEx04 ex = new ExceptionEx04();
 		
+		//TODO : throws정의한 메소드호출 후 예외처리 하지 않은 경우 
 		//ERROR -Unhandled exception type IOException
 //		ex.printData(); //반드시 예외처리해야 됨을 컴파일러가 알려줍니다.(붉은 밑줄)
 		
-		// throws정의한 메소드에서 예외발생시 예외처리 
+		
+		//TODO : throws정의한 메소드에서 예외발생시 예외처리 
 		try{
 			ex.printData();
 			
