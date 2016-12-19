@@ -50,6 +50,7 @@ class WrapperEx03 {
 		Integer num1 = new Integer("300");
 		Integer num2 = new Integer("200");
 		System.out.println("num1: " + num1); //num1: 300
+		System.out.println("num1+num2 :" + num1+num2); //num1+num2 :300200
 		System.out.println("num1+num2: " + (num1+num2) ); //num1+num2: 500
 		
 	}

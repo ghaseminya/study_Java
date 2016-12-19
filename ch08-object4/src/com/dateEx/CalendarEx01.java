@@ -65,7 +65,7 @@ public class CalendarEx01 {
 		
 		
 		//TODO : 오전/오후 표시, 시분초 표시
-							//오전:0, 오후:1
+							//오전:0, 오후:1 (Calendar.AM: 0, Calendar.PM:1)
 		int amPm = today.get(Calendar.AM_PM);
 		String msg_amPm = (amPm == Calendar.AM) ? "오전" : "오후";
 		int hour = today.get(Calendar.HOUR);	//시
