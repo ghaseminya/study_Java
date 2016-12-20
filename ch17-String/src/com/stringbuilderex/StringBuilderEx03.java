@@ -26,15 +26,15 @@ public class StringBuilderEx03 {
 		
 		
 		//Case 2 : String 클래스 사용
-//		String str2 = String.valueOf('3').concat("Java").concat(String.valueOf('7'))
+		String str2 = String.valueOf(3).concat("Java").concat(String.valueOf(7));
 		//이럴경우 문자열 인스턴스가 많이 생성되는 것(5개)을 방지하기 위해서 StringBuilder클래스를 사용
 		//총 5개의 인스턴스가 발생
 		//1	str1, 
-		//2		String.valueOf('3'), 
+		//2		String.valueOf(3), 
 		//3						.concat("Java"), 
-		//4									String.valueOf('7'), 
-		//5	String.valueOf('3').concat("Java").concat(String.valueOf('7'))
-		System.out.println(str1);
+		//4									String.valueOf(7), 
+		//5	String.valueOf(3).concat("Java").concat(String.valueOf(7))
+		System.out.println(str2);
 		
 		
 		//Case 3 : StringBuilder클래스 사용

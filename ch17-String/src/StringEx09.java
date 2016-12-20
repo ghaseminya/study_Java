@@ -61,7 +61,9 @@ String toString()
 		String s4 = "Everythings gonna be alright."; //괜찮아 질 거야, 모든 것이 잘 될 것이다.
 		//String 인스턴스에 저장되어 있는 문자열을 반환합니다.
 		String s5 = s4.toString();
-		System.out.println("result: " + s5); //result: false
+		System.out.println("result: " + s5);
+		//내부적으로 toString()호출한 결과를 반환해 줍니다.
+		System.out.println(s4); 
 
 		
 	

@@ -4,7 +4,7 @@ package com.stringbuilderex;
 
 
 StringBuilder 클래스
-	• StringBuilder는 문자열의 저장 및 변경을 위한 메모리 공간을 지니는 클래스(문자열을 조합하는 클래스)
+	• StringBuilder는 문자열의 저장 및 변경을 위한 메모리 공간을 가지고 있는 클래스(문자열을 조합하는 클래스)
 	• StringBuilder는 담겨진 데이터를 이용해서 문자열을 만들어주는 클래스
 	• 문자열 데이터의 추가를 위한 append( )메소드와 삽입을 위한 insert( )메소드 제공
 
@@ -44,6 +44,7 @@ public class StringBuilderEx01 {
 		//연속해서 함수호출이 가능한 이유는 append 메소드가 stringBuilder의 참조 값을 반환하기 때문입니다.
 		
 		
+		//Orange27J (9) 1부터
 		stringBuilder.insert(9, "ava");
 		System.out.println(stringBuilder);
 		//buffer: Orange27Javatrue

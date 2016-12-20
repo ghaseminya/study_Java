@@ -78,9 +78,11 @@ boolean contains(charSequence s)
 		
 */
 		//TODO : 특정 문자열 포함 여부 검색
-		boolean check = str.contains("aa");
-		System.out.println("check: " + check); //check: true
+		boolean check1 = str.contains("aa");
+		System.out.println("check: " + check1); //check: true
 		
+		boolean check2 = str.contains("xxx");
+		System.out.println("check: " + check2); //check: true
 
 		
 /*		

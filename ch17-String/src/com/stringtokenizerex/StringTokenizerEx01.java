@@ -4,6 +4,9 @@ package com.stringtokenizerex;
 //String객체 생성
 //StringTokenizer사용을 위해 import
 
+//StringTokenizer 클래스
+//• 문자열 분리 객체
+//• nextToken() 메서드를 이용하여 문자(열) 분리
 
 import java.util.StringTokenizer;
 

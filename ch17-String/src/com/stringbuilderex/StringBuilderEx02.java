@@ -2,15 +2,8 @@ package com.stringbuilderex;
 /*
 //참조값을 반환하는 메소드
 
+StringBuilder 메소드 체이닝 이해
 */
-public class StringBuilderEx02 {
-
-	public static void main(String[] args) {
-		Adder adder = new Adder();
-		adder.add(1).add(3).add(7).showResult();
-		//호출된 add()메소드는 adder의 참조값을 반환합니다.
-	}
-}
 
 
 class Adder{
@@ -20,6 +13,7 @@ class Adder{
 		num=0;
 	}
 	
+	//참조값을 반환하는 메소드
 	public Adder add(int num){
 		this.num += num;
 		return this;
@@ -31,6 +25,16 @@ class Adder{
 		System.out.println("Result: " + num);
 	}
 }
+
+public class StringBuilderEx02 {
+
+	public static void main(String[] args) {
+		Adder adder = new Adder();
+		adder.add(1).add(3).add(7).showResult();
+		//호출된 add()메소드는 adder의 참조값을 반환합니다.
+	}
+}
+
 
 /*
 출력결과
