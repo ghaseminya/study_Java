@@ -2,8 +2,8 @@ package com.gen02;
 /* 
 제네릭 객체 생성 방법 확인
 
-제네릭 :
-클래스를 정의 할 때는 v의 데이터 타입을 확정하지 않고 
+제네릭(Generics) :
+클래스를 정의 할 때는 s의 데이터 타입을 확정하지 않고 
 인스턴스를 생성할 때 데이터 타입을 지정하는 기능 
 
 
@@ -64,7 +64,8 @@ class GenericsEx<T>{
 //}
 
 
-//TODO 1: 자료형 타입 미지정하여 객체 생성(좋은 방법 아닙니다)
+//TODO 1: 자료형 타입 미지정하여 객체 생성(좋은 방법 아닙니다), 경고메시지 발생
+//Warnning -GenericsEx is a raw type. References to generic type GenericsEx<T> should be parameterized
 public class GenericsEx02 {
 
 	public static void main(String[] args){

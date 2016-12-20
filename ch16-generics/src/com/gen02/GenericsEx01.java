@@ -33,6 +33,7 @@ GenericClass명<적용할GenericType> 변수명;
 //템플릿 클래스를 문자 <T>를 이용하여 선언
 //<T>는 어떤 데이터 타입도 대응할 수 있다는 뜻
 class MyGeneric<T>{
+	
 	//TODO 2: 템플릿 형태의 자료형클래스에 필요한 속성과 메서드 정의
 	private T element;
 	
@@ -57,9 +58,12 @@ public class GenericsEx01 {
 		System.out.println(mg1.getElement()); //안드로이드
 		
 		//Integer 정수형을 저장
-		//주의할 점은 기본 데이터형은 저장할 수 없으며 객체만 저장할 수 있습니다. 
+		//주의할 점은 기본 데이터형은 저장할 수 없으며 객체만 저장할 수 있습니다. 컴파일 에러 
 		//그래서 <int> 가 아니고 <Integer>로 선언한 것입니다. (Wrapper클래스 사용)
+		//ERROR - Syntax error, insert "Dimensions" to complete ReferenceType
+//		MyGeneric<int> mg2 = new MyGeneric<int>();
 		MyGeneric<Integer> mg2 = new MyGeneric<Integer>();
+		
 		mg2.setElement(2007); // 2007년 11월 안드로이드 1.0 버전
 		System.out.println(mg2.getElement()); //2007
 	}

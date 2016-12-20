@@ -56,6 +56,11 @@ long longValue() 		객체의 값을 long 값으로 변환하여 반환 
 short shortValue()		객체의 값을 short 값으로 변환하여 반환 
 
 
+
+Wrapper클래스 활용
+• 기본 자료형을 참조자료형으로 변환할 때(객체로 사용할 때) 사용하는 클래스입니다.
+• 대표적으로 제네릭 클래스의 객체 생성시 활용됩니다.
+
 */
 
 public class WrapperEx01 {

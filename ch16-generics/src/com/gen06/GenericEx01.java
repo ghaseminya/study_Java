@@ -5,7 +5,7 @@ package com.gen06;
 
 //--------------------------------
 File Info
-*com.gen06.GenericsEx01.java	기본자료형을 제네릭에서 사용시 컴파일 에러 발생
+->com.gen06.GenericsEx01.java	기본자료형을 제네릭에서 사용시 컴파일 에러 발생
 com.gen07.GenericsEx01.java		기본자료형을 제네릭에서 사용시 발생한 컴파일 에러 해결
 //--------------------------------
 
@@ -52,13 +52,24 @@ class Person<T, S>{
         this.info = info; 
         this.id = id;
     }
+    
+    
 }
 
 public class GenericEx01 {
     public static void main(String[] args) {
-        //제네릭에는 참조 데이터 타입만 올수 있습니다.
+    	//제네릭에는 참조 데이터 타입만 올수 있습니다.
     	//기본 자료형(int, char, double등)를 사용할 수 없어 컴파일 타임에서 에러 발생
     	//ERROR-Syntax error, insert "Dimensions" to complete ReferenceType
 //        Person<EmployeeInfo, int> p1 = new Person<EmployeeInfo, int>(new EmployeeInfo(10), 10);
+        
+    	//참고코드
+    	//제네릭에는 참조 데이터 타입만 올수 있습니다.
+//        Person<EmployeeInfo, Integer> p1 = 
+//        		new Person<EmployeeInfo, Integer>(new EmployeeInfo(10), 20);
+//        
+//        System.out.println("position: " + p1.info.position + ", id: " + p1.id);
+    	//position: 10, id: 20
     }
 }
+
