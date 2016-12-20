@@ -9,15 +9,16 @@ System.out.println(arr[i]);
 
 
 
+
 제네릭에 배열 사용
 	• 다음과 같이 매개변수를 선언하면, 매개변수에 전달되는 참조 값을 배열 인스턴스의 참조 값으로 제한할 수 있습니다.
 	• 그리고 이렇게 되면 참조 값은 배열 인스턴스의 참조 값임을 100% 보장하게 되므로 [ ] 연산을 허용하게 됩니다.
 
-T[ ] arr
+T[] arr
 
 */
 public class GenericEx01 {
-	//[ ] 연산이 필요하다면 매개변수의 선언을 통해서 전달 되는 참조 값을 배열 의 참조 값으로 제한해야 합니다.
+	//[] 연산이 필요하다면 매개변수의 선언을 통해서 전달 되는 참조 값을 배열 의 참조 값으로 설정해야 합니다.(제한해야 합니다.)
 	public static <T> void showArrayData(T[] arr) {
 		for(int i=0; i<arr.length; i++)
 			System.out.println(arr[i]);

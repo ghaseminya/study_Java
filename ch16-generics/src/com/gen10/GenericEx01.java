@@ -36,22 +36,28 @@ class EmployeeInfo extends Info{
 //Person의 T는 Info 클래스나 그 자식 외에는 올 수 없습니다.
 //extends는 상속(extends)뿐 아니라 구현(implements)의 관계에서도 사용할 수 있습니다.
 //Info클래스의 자식클래스들 만이 T로 올수 있습니다.
-class Person<T extends Info>{
+class Person<T extends Info> {
 	public T info;
-	Person(T info){ this.info = info; }
+
+	Person(T info) {
+		this.info = info;
+	}
 }
 public class GenericEx01 {
 	public static void main(String[] args) {
 		
 		//TODO 1: 위의 코드(제네릭 타입을 생략)를  명시적으로 정의한 코드
 		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(10));
+		System.out.println(p1.info.getInfo()); //10
+		
+		
 		
 		//TODO 2: 제네릭 타입을 생략한 형태 
 		//Info의 자식인 타입을 지정
-//		Person p1 = new Person(new EmployeeInfo(1));
+//		Person p2 = new Person(new EmployeeInfo(1));
+//		System.out.println(p2.info.getInfo()); //1
 		
 		
-		System.out.println(p1.info.getInfo()); //10
 
 		//TODO 3: Info의 자식이 아닌 타입을 지정
 		//ERROR-Bound mismatch: The type String is not a valid substitute for the bounded parameter <T extends Info> of the type Person<T>

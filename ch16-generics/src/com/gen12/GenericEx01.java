@@ -28,6 +28,7 @@ class EmployeeInfo extends Info{
 	}
 }
 
+//제네릭 제한 생략 (제네릭의 자료형을 특정하지 않은 경우)
 class Person<T>{
 	public T info;
 	

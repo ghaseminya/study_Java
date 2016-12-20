@@ -4,7 +4,11 @@ package com.gen14;
 ?와 제네릭 변수 선언
 
 <? extends Info> 
-<? extends Info>가 의미하는 바는 “Info을 상속하는 모든 클래스”를 지칭합니다
+<? extends Info>가 의미하는 바는 "Info을 상속하는 모든 클래스"를 지칭합니다
+
+class Info
+class StudentInfo extends Info
+class EmplyeeInfo extends Info
 
 Person<? extends Info> person1 = new Person<StudentInfo>();
 Person<? extends Info> person2 = new Person<EmplyeeInfo>();
@@ -48,7 +52,7 @@ class FruitBox<T>{
 }
 
 public class GenericEx01 {
-	//Fruit를 상속하는 클래스의 인스턴스라면 무엇이든지 참조 가능한 참조변수 box선언
+	//Fruit클래스를 상속하는 클래스의 인스턴스라면 무엇이든지 참조 가능한 참조변수 box선언
 	public static void openAndShowFruitBox(FruitBox<? extends Fruit> box){
 		Fruit fruit=box.pullOut();
 		fruit.showYou();
@@ -58,6 +62,7 @@ public class GenericEx01 {
 		FruitBox<Fruit> box1=new FruitBox<Fruit>();
 		box1.store(new Fruit());
 
+		//Fruit를 상속받고 있는 Apple클래스를 제네릭 타입으로 지정
 		FruitBox<Apple> box2=new FruitBox<Apple>();
 		box2.store(new Apple());
 
@@ -65,7 +70,6 @@ public class GenericEx01 {
 		openAndShowFruitBox(box2);
 	}
 }
-
 
 /*
 //출력결과
