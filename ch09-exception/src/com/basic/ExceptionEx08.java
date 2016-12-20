@@ -54,7 +54,9 @@ public class ExceptionEx08 {
 		//int var = 50;
 		
 		try{
-			//예외가 발생할 가능성이 있는 코드								
+			//예외가 발생할 가능성이 있는 코드	
+			//args[0]에 프로그램의 옵션값이 배열로 저장됩니다. a값
+			//Ex10.class a
 			int data = Integer.parseInt(args[0]);	//String -> int
 
 			System.out.println(var/data);

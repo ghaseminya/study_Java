@@ -55,7 +55,8 @@ public class ExceptionEx04 {
 		//• 다만 행의 종단 문자는 포함하지 않는다. 
 		//• Stream의 EOF 이르면  null 을 반환합니다.
 
-		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
+		BufferedReader br = 
+				new BufferedReader( new InputStreamReader(System.in));
 		
 		System.out.print("단 입력> ");
 		//String -> int 
