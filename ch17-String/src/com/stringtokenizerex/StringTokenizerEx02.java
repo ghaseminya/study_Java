@@ -9,6 +9,7 @@ public class StringTokenizerEx02 {
 	public static void main(String[] args) {
 		//문자열의 구분자가 여러개 인 경우		
 		String source = "2020-03-12 16:24:50";
+//		String source ="2017-002-09 18:50:59";
 		
 		//구분자 여러개를 한꺼번에 지정
 		StringTokenizer st = new StringTokenizer(source, "-: ");

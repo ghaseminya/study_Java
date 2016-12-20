@@ -46,6 +46,7 @@ finally블럭:
 	• finally블럭에서 IO와 DB등을 사용한 후 관계를 끊는 용도로 사용합니다.(자원 닫기, 자원해제)
 
 */
+
 public class ExceptionEx06 {
 	
 	public static void main(String[] args) {

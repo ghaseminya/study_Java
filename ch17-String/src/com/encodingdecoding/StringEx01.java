@@ -46,7 +46,8 @@ public class StringEx01 {
 			encode_result = URLEncoder.encode(testValue, type);
 			System.out.println("encode with " + type +" : "+ URLEncoder.encode(testValue, type));
 				for(String type2 : types){
-					System.out.println("decode with " + type2 +" : "+ URLDecoder.decode(encode_result, type2));		
+					System.out.println("decode with " + type2 +" : "
+							+ URLDecoder.decode(encode_result, type2));		
 				}
 				System.out.println("----------------------------------------");		
 			}	
