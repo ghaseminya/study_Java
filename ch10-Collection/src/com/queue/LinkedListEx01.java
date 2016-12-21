@@ -11,7 +11,7 @@ package com.queue;
 
 import java.util.LinkedList;
 
-public class LinkedListEx {
+public class LinkedListEx01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,3 +35,17 @@ public class LinkedListEx {
 		System.out.println(stk);
 	}
 }
+
+/*
+[장비, 나팔꽃, 무궁화, 백합, 목련, 개나리, 할미꽃]
+장비
+나팔꽃
+무궁화
+백합
+목련
+개나리
+할미꽃
+=====================
+[]
+
+*/
