@@ -13,20 +13,26 @@ com.gen03.GenericsEx01.java		코드 중복
 com.gen05.GenericsEx01.java		중복제거 후 타입이 안전하지 않은 문제점을 제네릭화하여 해결
 
 //------------------------------------
-코드 중복은 제거되었지만 타입이 안전하지 않음(Type Safety)문제 발생
+코드 중복은 제거되었지만 타입이 안전하지 않은(Type Safety)문제 발생
 코드 중복 제거후 발행한 타입이 안전하지 않은 문제점 해결
 -> com.gen05.GenericsEx01.java
 
 */
 
-class StudentInfo{
-    public int grade;
-    StudentInfo(int grade){ this.grade = grade; }
+class StudentInfo {
+	public int grade;
+
+	StudentInfo(int grade) {
+		this.grade = grade;
+	}
 }
 
-class EmployeeInfo{
-    public int position;
-    EmployeeInfo(int position){ this.position = position; }
+class EmployeeInfo {
+	public int position;
+
+	EmployeeInfo(int position) {
+		this.position = position;
+	}
 }
 
 
@@ -43,12 +49,33 @@ class Person {
 
 public class GenericsEx01 {
     public static void main(String[] args) {
+		
+    	//TODO : 정확안 타입 지정하여 사용
+		Person ep = new Person(new EmployeeInfo(20));
+		EmployeeInfo ei = (EmployeeInfo)ep.info;
+		System.out.println(ei.position);  // 성공
+    	
+		
+		
+    	//TODO : 타입이 안전하지 않은(Type Safety)문제 발생 확인하기
 
         Person p1 = new Person("사장");
         //p1.info는 Object타입인데 형변환하여 EmployeeInfo로 변경
         //런타임시 java.lang.ClassCastException 발생
-        EmployeeInfo ei = (EmployeeInfo)p1.info;
-        System.out.println(ei.position);
+//        EmployeeInfo ei = (EmployeeInfo)p1.info;
+//        System.out.println(ei.position);
+    
+        
+		//컴파일 에러
+//		String ei2 =(String)p1.info;
+//		System.out.println(ei2.position);
+        
+        
+        //컴파일 에러
+//        Object ei1 =(Object)p1.info;
+//		System.out.println(ei1.position);
+		
+
     }
 }
 

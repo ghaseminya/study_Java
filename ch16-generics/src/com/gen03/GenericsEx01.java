@@ -57,7 +57,10 @@ public class GenericsEx01 {
 		StudentPerson sp = new StudentPerson(si);
 		System.out.println(sp.info.grade);
 
+		
+		
 		EmployeeInfo ei = new EmployeeInfo(20);
+		
 		EmployeePerson ep = new EmployeePerson(ei);
 		System.out.println(ep.info.position);
 	}

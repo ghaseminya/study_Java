@@ -17,7 +17,7 @@ com.gen07.GenericsEx01.java		기본자료형을 제네릭에서 사용시 발생
 복수의 제네릭 사용시 명명 규칙
 	• ,로 구분
 	• 제네릭 명칭은 고정된 것은 없으나 중복되지 않게 지정
-	• 관습적으로 T이후의 대문자로 지정하고 있습니다
+	• 관습적으로 T이후의 대문자로 지정하고 있습니다, 소문자도 됩
 
 
 
@@ -61,15 +61,26 @@ public class GenericEx01 {
     	//제네릭에는 참조 데이터 타입만 올수 있습니다.
     	//기본 자료형(int, char, double등)를 사용할 수 없어 컴파일 타임에서 에러 발생
     	//ERROR-Syntax error, insert "Dimensions" to complete ReferenceType
-//        Person<EmployeeInfo, int> p1 = new Person<EmployeeInfo, int>(new EmployeeInfo(10), 10);
+//        Person<EmployeeInfo, int> p1 = new Person<EmployeeInfo, int>(
+//        		new EmployeeInfo(10), 10);
         
+    	
+    	
+    	//------------------------------------------------------
     	//참고코드
     	//제네릭에는 참조 데이터 타입만 올수 있습니다.
-//        Person<EmployeeInfo, Integer> p1 = 
-//        		new Person<EmployeeInfo, Integer>(new EmployeeInfo(10), 20);
-//        
-//        System.out.println("position: " + p1.info.position + ", id: " + p1.id);
+        Person<EmployeeInfo, Integer> p1 = 
+        		new Person<EmployeeInfo, Integer>(new EmployeeInfo(10), 20);
+        
+        System.out.println("position: " + p1.info.position + ", id: " + p1.id);
     	//position: 10, id: 20
+        
+        
+        //참고코드
+        //레퍼클래스가 담고 있는 원래의 숫자를 기본테이터 타입으로 돌려줍니다.
+	    System.out.println(p1.info.position);
+	    System.out.println(p1.id.intValue());
+        
     }
 }
 
