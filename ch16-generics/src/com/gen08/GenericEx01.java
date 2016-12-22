@@ -25,7 +25,8 @@ public class GenericEx01 {
 		EmployeeInfo ei = new EmployeeInfo(10);
 		Integer id = new Integer(20);
 		
-		Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(ei, id);
+		Person<EmployeeInfo, Integer> p1 = 
+				new Person<EmployeeInfo, Integer>(ei, id);
 		
 		System.out.println(p1.info.position); //10
 		System.out.println(p1.id.intValue()); //20
@@ -38,6 +39,12 @@ public class GenericEx01 {
 		Person<EmployeeInfo, Integer> p2 = new Person(ei, id);
 		System.out.println(p2.info.position); //10
 		System.out.println(p2.id.intValue()); //20
+		
+		//컴파일 에러
+//		Person  p2 =
+//				new Person<EmployeeInfo, Integer>(ei, id);
+//		System.out.println(p2.info.position);
+//		System.out.println(p2.id.intValue());
 	}
 }
 

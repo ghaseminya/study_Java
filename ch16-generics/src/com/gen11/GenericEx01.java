@@ -6,7 +6,7 @@ package com.gen11;
 
 //인터페이스 정의
 interface Info{
-	int getInfo();
+	public int getInfo();
 }
 
 //인터페이스 구현 클래스

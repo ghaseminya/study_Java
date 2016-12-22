@@ -8,7 +8,6 @@ Auto Boxing과 Auto Unboxing의 도움으로 정수 단위의 데이터 입출�
 	• Integer형 ArrayList객체 생성
 	• add()메소드 통한 데이터 삽입
 	• int -> Integer (Auto boxing)
-	
  
  */
 
@@ -30,7 +29,6 @@ public class ArrayListEx05 {
 		al.add(40);		//int -> Integer (Auto boxing)
 		al.add(50);		//int -> Integer (Auto boxing)
 		//Auto Boxing과 Auto Unboxing의 도움으로 정수 단위의 데이터 입출력이 매우 자연스럽게 이뤄질 수 있습니다.
-
 		
 		//확장 for문
 		for(Integer num : al){

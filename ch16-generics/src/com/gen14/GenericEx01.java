@@ -2,13 +2,17 @@ package com.gen14;
 
 /*
 ?와 제네릭 변수 선언
+제네릭클래스의 참조변수 선언시 ?와 함께 사용
+
 
 <? extends Info> 
 <? extends Info>가 의미하는 바는 "Info을 상속하는 모든 클래스"를 지칭합니다
 
+
 class Info
 class StudentInfo extends Info
 class EmplyeeInfo extends Info
+
 
 Person<? extends Info> person1 = new Person<StudentInfo>();
 Person<? extends Info> person2 = new Person<EmplyeeInfo>();
@@ -34,9 +38,10 @@ class Fruit{
 }
 
 class Apple extends Fruit{
+	@Override
 	public void showYou(){
 		super.showYou();
-		System.out.println("나는 빨간 과일입니다.");
+		System.out.println("나는 빨간 사과입니다.");
 	}	
 }
 
@@ -53,6 +58,8 @@ class FruitBox<T>{
 
 public class GenericEx01 {
 	//Fruit클래스를 상속하는 클래스의 인스턴스라면 무엇이든지 참조 가능한 참조변수 box선언
+	//그래서 FruitBox<Fruit> 와 FruitBox<Apple>로 생성된 제네릭 클래스의 인스턴스를 저장할 수 있습니다.
+	//Fruit와 Apple은 Fruit클래스이거나 Fruit를 상속하는 클래스의 인스턴스이므로 box에 저장됩니다.
 	public static void openAndShowFruitBox(FruitBox<? extends Fruit> box){
 		Fruit fruit=box.pullOut();
 		fruit.showYou();
