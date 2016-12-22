@@ -15,7 +15,7 @@ public class ArrayListLotto {
 	public static void main(String[] args) {
 		
 		//ArrayList 객체 생성
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> lotto = new ArrayList<Integer>();
 		
 		//Random 객체 생성
 		Random random = new Random();		
@@ -25,21 +25,21 @@ public class ArrayListLotto {
 		
 		
 		//조건 체크		
-		while(list.size() < 6){
+		while(lotto.size() < 6){
 			//난수 생성후 Integer 타입으로 저장
 			it = new  Integer(random.nextInt(45)+1);	// 1~45
 			
 			//contains()메소드를 이용해서 중복체크
-			if(!list.contains(it)){ //포함되어 있지 않으면 list에 추가
-				list.add(it);
+			if(!lotto.contains(it)){ //포함되어 있지 않으면 list에 추가
+				lotto.add(it);
 			}
 		}
 		
 		//Colloections.sort() 메소드를 이용해서 정렬
-		Collections.sort(list);;
+		Collections.sort(lotto);;
 		
 		//출력
-		for(Integer i : list){
+		for(Integer i : lotto){
 			System.out.println(i);
 		}
 	}
