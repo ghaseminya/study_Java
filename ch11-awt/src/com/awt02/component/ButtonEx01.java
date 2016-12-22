@@ -33,13 +33,14 @@ public class ButtonEx01 extends Frame{
 	//생성자 생성
 	public ButtonEx01(){ //생성자
 		//프레임의 레이아웃관리자 지정, 컴포넌트 객체를 배치하기 위해 setLayout() 메소드 호출 
-		//이 메소드는 컴포넌트의 위치 지정을 하지 않더라도 적당히 윈도우 내에 위치시킬 수 있도록 레이아웃 메니저를 통해 표시합니다.
+		//setLayout() 메소드는 컴포넌트의 위치 지정을 하지 않더라도 적당히 윈도우 내에 위치시킬 수 있도록 레이아웃 메니저를 통해 표시합니다.
+		//FlowLayout : 컴포넌트들을 수평(왼쪽에서 오른쪽)으로 순서대로 배치
 		setLayout(new FlowLayout());
 		
-		//각각 btn1버튼과 btn2버튼 객체를 생성하고 있다. 
-		//생성자를 각기  다른 방법으로 사용했다
-		button1 = new Button("버튼1");
-		button2 = new Button();
+		//각각 btn1버튼과 btn2버튼 객체를 생성 
+		//서로 다른 생성자호출을 통해 버튼을 생성합니다.
+		button1 = new Button("버튼1"); //Button(String label): label을 지정하여 버튼 객체를 생성합니다.
+		button2 = new Button(); //Button() : 레이블이 비어 있는 버튼 객체를 생성합니다.
 		
 		//버튼에 레이블 지정
 		button2.setLabel("Button2");
@@ -53,8 +54,10 @@ public class ButtonEx01 extends Frame{
 	public static void main(String[] args) {
 		//클래스 인스턴스 생성
 		ButtonEx01 be = new ButtonEx01();
+		
 		//프레임 가로, 세로 크기 설정
 		be.setSize(300, 100);
+		
 		//프레임 나타내기
         be.setVisible(true);  
 	}

@@ -82,7 +82,7 @@ import java.awt.Frame;
 public class FrameEx01 {
 	
 	public static void main(String args[]) {
-		//객체 생성
+		//Frame 객체 생성
         Frame frame = new Frame("Frame Test");
         
         //프레임 사이즈 설정(가로px, 세로px)

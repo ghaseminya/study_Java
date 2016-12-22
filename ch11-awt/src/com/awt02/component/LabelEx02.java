@@ -2,6 +2,10 @@ package com.awt02.component;
 /*
 //레이블 생성방법 3가지
 //레이블 정렬
+상수				상수값	정렬상태
+Label.LEFT		0		왼쪽 정렬 (기본값)
+Label.CENTER	1		중앙 정렬
+Label.RIGHT		2		가운데 정렬
 
 */
 
@@ -25,14 +29,16 @@ public class LabelEx02 extends Frame{
 		}
 	}
 	public static void main(String args[]) {
+		//Frame 객체 생성
 		LabelEx02 lt = new LabelEx02();
 		lt.setTitle("Label Test Window");
 		lt.setLayout(new GridLayout(3, 1));
 
 		//TODO 1
 		Label label1 = new Label();
-		//레이블에 지정한 text를 가지고 왼쪽 정렬이 된 상태로 생성합니다.
+		//레이블에 지정한 text를 가지고 왼쪽 정렬이 된 상태로 생성합니다. (기본값)
 		label1.setText("Label 1");
+//		label1.setAlignment(Label.LEFT); //(기본값)
 		lt.add(label1);
 
 		//TODO 2

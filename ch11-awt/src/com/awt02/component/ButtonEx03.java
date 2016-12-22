@@ -5,14 +5,12 @@ import
 Frame 상속
 생성자 설정
 객체 생성
-
 Button 추가
 layout미사용지정	//setLayout(null)
-
 button의 좌표지정(x, y 위치 지정)
 
 --------------------------------------
-layout 미사용시 컴포넌트를 많이 쓸 경우 일일이 사이즈와 좌표 지정해야 되는 문제 발생
+layout 미사용시 컴포넌트를 많이 사용할 경우 일일이 사이즈와 좌표 지정해야 되는 문제 발생
 
 */
 
@@ -33,9 +31,9 @@ public class ButtonEx03 extends Frame {
 		//Button 추가하기
 		Button b = new Button("확인");
 		
-		//layout미사용지정: layout 사용안하고 setSize()사용하도록 명시적으로 지정
+		//setLayout미사용지정: setLayout 사용안하고 setSize()사용하도록 명시적으로 지정
 		setLayout(null);
-		b.setSize(100,  50);	//widht, height
+		b.setSize(100,  50); //widht, height
 		b.setLocation(100, 50);	//x, y 위치 지정
 		
 		//Button을 Frame에 등록
