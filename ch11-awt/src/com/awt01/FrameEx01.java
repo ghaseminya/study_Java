@@ -24,7 +24,8 @@ AWT의 기본 개념
 
 
 JFC (Java Foundation Classe)
-	• JFC는 클래스 라이브러리 형태로 자바 프로그래밍 언어를 사용해 미리 작성해 놓은 코드 모음 (GUI 프로그래밍에 필요한 각종 툴킷을 모아놓은 것)
+	• JFC는 클래스 라이브러리 형태로 자바 프로그래밍 언어를 사용해 미리 작성해 놓은 코드 모음 
+	(GUI 프로그래밍에 필요한 각종 툴킷을 모아놓은 것)
 	• GUI의 기능들을 구현할 수 있는 AWT, 스윙(Swing), 2D, Accessibiliy(접근성), Drag&Drop 등을 지원합니다.
 
 
@@ -61,6 +62,17 @@ Frame
 	• 대부분의 윈도우 Application 에서 사용되며 윈도우 화면을 나타내는 클래스
 	• setSize(),  setBounds()메서드 등을 이용해서 Window의 크기를 설정한 후 setVisible(), 
 	show()메서드를 통해서 화면에 출력시킬 수 있습니다.
+
+
+
+컨테이너와 컴포넌트 관계  
+http://cfile24.uf.tistory.com/image/2501C93E585B903B2B2B15
+
+
+컨테이너 종류 및 상속관계
+http://cfile26.uf.tistory.com/image/22300D3C585B903B13F180
+
+http://codedragon.tistory.com/4691
 
 */
 

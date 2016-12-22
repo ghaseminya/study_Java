@@ -6,7 +6,7 @@ package com.awt01;
 LayoutManager (배치관리자)
 	• 컨테이너는 자기 자신에 컴포넌트를 붙일 때 어디에, 어떤방식으로 배치하여 붙일것인가를 이미 결정하고 있습니다. 
 	• 즉, 컨테이너들은 미리 정해진 레이아웃에 따라 컴포넌트들을 자동으로 배치하는 기능을 가지고 있는 객체
-	• 서로 다른 운영체제에서도 레이아웃이 적절하게 이루어지도록 컴포넌트의 위치 및 크기를 관리해 주는 클래스 입니다.
+	• 배치관리자는 서로 다른 운영체제에서도 레이아웃이 적절하게 이루어지도록 컴포넌트의 위치 및 크기를 관리해 주는 클래스 입니다.
 
 
 레이아웃(Layout)
@@ -30,8 +30,8 @@ Applet	FlowLayout
 
 
 레이아웃 관리자 사용 방법
-	• setLayout() 메소드를 이용하여 레이아웃 관리자를 생성한다
-	• setLayout() 메소드의 인자는 레이아웃 관리자의 인스턴스를 필요로 한다.
+	• setLayout() 메소드를 이용하여 레이아웃 관리자를 생성합니다
+	• setLayout() 메소드의 인자는 레이아웃 관리자의 인스턴스를 필요로 합니다..
 
 setLayout(new FlowLayout());
 setLayout(new BorderLayout());
@@ -54,8 +54,9 @@ public class LayoutEx01 extends Frame{
 	
 	public LayoutEx01(){
 		
-		//setLayout() 메소드의 인자가 null, null로 설정함으로써 레이아웃 관리자를 사용하지 않게 됩니다.
+		//setLayout() 메소드의 인자가 null, null로 설정하게되면 레이아웃 관리자를 사용하지 않게 됩니다.
 		setLayout(null);
+		
 		//제목 설정
 		setTitle("Layout Test");
 		
@@ -74,9 +75,12 @@ public class LayoutEx01 extends Frame{
 	}
 	
 	public static void main(String[] args) {
+		//프레임 생성
 		LayoutEx01 le = new LayoutEx01();
+		
 		//프레임 크기를 지정
 		le.setSize(300, 200);
+		
 		//프레임을 화면에 나타내는 메소드 호출
 		le.setVisible(true);
 	}
