@@ -77,7 +77,7 @@ public class ListEx01 extends Frame{
 		System.out.println("=== Slected items ===");
 		for(int i=0; i<selitems.length; i++)
 			System.out.println("List["+i+"] = "+selitems[i]);
-
+		//boolean isMultipleMode(): 다중 선택 모드인지 확인
 		System.out.println("mutiple mode : "+ lst.isMultipleMode());
 
 		

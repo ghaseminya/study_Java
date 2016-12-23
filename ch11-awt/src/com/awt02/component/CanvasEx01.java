@@ -17,7 +17,7 @@ import java.awt.Graphics;
 //Canvas클래스를 상속받아 사용자 정의 켄버스 클래스 정의
 class DrawingCanvas extends Canvas {
 	
-	//void paint(Graphics g): 캔버스를 업데이트할 때 사용
+	//void paint(Graphics g): 캔버스를 업데이트할 때 사용(다시 paint할 때 사용)
 	@Override
 	public void paint(Graphics g) {
 		g.setColor(Color.red);
