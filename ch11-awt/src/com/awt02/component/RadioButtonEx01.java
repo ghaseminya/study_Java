@@ -2,8 +2,8 @@ package com.awt02.component;
 /*//Checkbox-라이오버튼
 //Checkbox를 그룹으로 묶어 RadioButton 형태로 활용
 
-Checkbox 
-	• Checkbox 컴포넌트는 여러 개의 체크박스를 묶어 하나의 그룹으로 만들면 
+RadioButton
+	• Checkbox 컴포넌트를 여러 개의 체크박스를 묶어 하나의 그룹으로 만들면 
 	그룹내에서는 하나의 선택 값만 유지할 수 있는 라디오 버튼 형태로도 사용할 수 있습니다.
 	• 그룹으로 묶을 때는 CheckboxGroup 클래스를 사용
 */

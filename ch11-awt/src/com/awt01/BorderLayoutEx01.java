@@ -16,10 +16,10 @@ BorderLayout
 
 값					설명			영역
 BorderLayout.NORTH	북(North)	높이
-BorderLayout.WEST	서(West)		폭
+BorderLayout.WEST	서(West)		높이
 BorderLayout.CENTER	중앙(Center)	기본값
 BorderLayout.EAST	동(East)		폭
-BorderLayout.SOUTH	남(South)	높이
+BorderLayout.SOUTH	남(South)	폭
 
 
 BorderLayout  배치 기준

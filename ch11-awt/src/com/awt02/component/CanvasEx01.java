@@ -14,8 +14,10 @@ import java.awt.Color;
 import java.awt.Frame;
 import java.awt.Graphics;
 
+//Canvas클래스를 상속받아 사용자 정의 켄버스 클래스 정의
 class DrawingCanvas extends Canvas {
 	
+	//void paint(Graphics g): 캔버스를 업데이트할 때 사용
 	@Override
 	public void paint(Graphics g) {
 		g.setColor(Color.red);
@@ -28,15 +30,19 @@ public class CanvasEx01 extends Frame{
 	public CanvasEx01() { //생성자
 		super("Canvas Test");
 
+		//도화지 역할을 하는 캔버스 객체 생성
 		DrawingCanvas dc = new DrawingCanvas();
 		//캔버스 가로, 세로 크기 설정
 		dc.setSize(200, 100);
 		//캔버스 바탕색 지정
 		dc.setBackground(Color.yellow);
 
+		//프레임에 추가
 		add(dc);
 
+		//프레임 크기 지정
 		setSize(300, 200);
+		//프레임을 화면에 표시하기
 		setVisible(true);       
 	}
 

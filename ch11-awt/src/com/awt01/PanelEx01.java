@@ -10,6 +10,13 @@ Panel 클래스
 	• Frame에 컴포넌트를 직접 붙이지 않고 Panel에 그룹별로 붙이고, 다시 Panel을 Frame에 붙이는 경우가 일반적입니다.
 	• 다른 Panel을 생성하여 자신에게 붙일 수 있어 윈도우 프로그램을 만들때는 여러 개의 Panel을 사용하여 만들게 됩니다.
 
+
+
+프레임(Frame) vs 패널(Panel)
+프레임		윈도우의 형태를 표현하는 데 사용
+패널		다른 컴포넌트를 포함하여 배치시키는 데 사용
+http://codedragon.tistory.com/4690
+
 */
 
 import java.awt.Button;
@@ -22,10 +29,10 @@ import java.awt.Panel;
 public class PanelEx01 extends Frame{
 	
 	public PanelEx01(){
-		//setLayout() : 컴포넌트 레이아웃 변경하는 메소드
+		//setLayout() : 컴포넌트 레이아웃 방식을 변경하는 메소드
 		setLayout(new FlowLayout());
 		
-		//제목 설정
+		//Frame 제목 설정
 		setTitle("Panel Test");
 		//프레임 크기를 설정
 		setSize(300, 300);
