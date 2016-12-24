@@ -37,7 +37,6 @@ public class GraphicEx02 extends Frame{
 		//읽어온 이미지를 이미지 객체에 저장하기
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		img = tk.getImage("bird.jpg");	//300x200
-				
 		
 		//Frame 설정
 		setBounds(100, 100, 400, 400);
@@ -48,7 +47,8 @@ public class GraphicEx02 extends Frame{
 	public void paint(Graphics g){
 		
 		//이미지가 null경우 
-		if(img == null) return;
+		if(img == null) 
+			return;
 		
 		//drawImage(Image 객체, x, y, width, height, ImageObserver객체)
 		//g.drawImage(img, 300, 200,  this);
@@ -66,5 +66,4 @@ public class GraphicEx02 extends Frame{
 		// TODO Auto-generated method stub
 		new GraphicEx02();
 	}
-
 }

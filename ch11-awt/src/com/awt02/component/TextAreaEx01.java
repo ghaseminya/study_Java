@@ -51,7 +51,7 @@ public class TextAreaEx01 extends Frame{
 		TextArea ta3 = new TextArea("TextArea 3", 10, 4);
 		tae.add(ta3);
 
-		//("label", 행수, 열수, 스크롤바 표시방식)
+		//TextArea("label", 행수, 열수, 스크롤바 표시방식)
 		TextArea ta4 = new TextArea("TextArea 4", 10, 4,
 				TextArea.SCROLLBARS_NONE); //스크롤바 미표시
 		tae.add(ta4);
@@ -78,9 +78,9 @@ public class TextAreaEx01 extends Frame{
 		System.out.println("TextArea 1 행 수 : "+
 				ta1.getRows()+".");
 		System.out.println("Visilbility of TextArea 2 :"+
-				+ta2.getScrollbarVisibility());
+				ta2.getScrollbarVisibility());
 		System.out.println("Visilbility of TextArea 4 :"+
-				+ta4.getScrollbarVisibility());
+				ta4.getScrollbarVisibility());
 		
 		
 		//해당 인덱스에 문자열 추가하기
@@ -89,7 +89,9 @@ public class TextAreaEx01 extends Frame{
 		//기존 문자열 변경하기
 		ta3.replaceRange(" replace ", 1, 10);
 
+		// pack() : 프레임이 포함하고 있는 모든 컴포넌트들을 표시할 수 있도록 프레임의 크기를 자동으로 맞춰주는 메소드
 		tae.pack();
+		// Frame 화면 노출 여부 지정
 		tae.setVisible(true);       
 	}
 }
