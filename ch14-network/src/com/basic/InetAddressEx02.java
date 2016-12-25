@@ -32,12 +32,14 @@ public class InetAddressEx02{
 		InetAddress[] addresses;		
 		
 		try{
+			//InputStreamReader: 바이트를 읽어서 지정된 문자 인코딩에 따라 문자로 변환하는데 사용하며 한문자씩 읽어 들입니다.
+			//BufferedReader는 입출력 스트림으로부터 버퍼를 사용하여 미리 버퍼에 데이터를 갖다 놓기 때문에 보다 효율적으로 입출력 작업을 할 수 있습니다.
 			br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.print("웹사이트 주소 입력 > "); //codedragon.tistory.com
-			url = br.readLine();
+			url = br.readLine(); //한 줄 단위로 읽는 메서드
 			
 			//해당 도메인과 매핑되어 있는 모든 주소 구하기, Static한 메소드로 되어 있어 직접 호출 가능
-			//getAllByName(): 매개변수 host에 대응되는 InetAddress배열을 반환
+			//getAllByName(): 매개변수 url에 대응되는 InetAddress배열을 반환
 			addresses = InetAddress.getAllByName(url);			
 			
 			//도메인 주소 출력
@@ -49,7 +51,7 @@ public class InetAddressEx02{
 			System.out.println("Local computer's IP: ");
 			System.out.println(InetAddress.getLocalHost()); 
 			//로컬컴퓨터 이름/로컬컴퓨터 IP주소 (InetAddress.getHostName()/InetAddress.getHostAddress()
-			//CODEDRAGON/169.254.80.80
+			//CODEDRAGON/xxx.xxx.xxx.xxx
 			
 		}catch(UnknownHostException e){
 			e.printStackTrace();

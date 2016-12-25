@@ -18,13 +18,18 @@ public class HTTPEx01 {
 		//하지만 스트링 객체 생성시 UTF-8로 인코딩을 변경해 주어야 합니다.
 		//import java.net.URLEncoder; 운영체제마다  문자를 인식하는 방법이 달라 이를 해결하기 위한 클래스
 		//encode(): 데이터를 웹 서버에서 요구하는 데이터 형식으로 바꾸는 기능하는 메소드
-		String str = URLEncoder.encode("한글", "UTF-8");
+//		String str = URLEncoder.encode("한글", "UTF-8");
+//		String str = URLEncoder.encode("한글", "EUC-KR");
+		
+		
 		
 		//import java.net.URL;
 		//로컬에 톰켓 설치한 후 톰켓의 기본 페이지를 통해 테스트
 //		URL url = new URL("http://localhost:8080/index.jsp");
 		//Public 웹 서버를 통해 테스트
-		URL url = new URL("http://www.hrd.go.kr/jsp/HRDP/main/index.jsp");
+//		URL url = new URL("http://www.hrd.go.kr/jsp/HRDP/main/index.jsp"); //보류(인코딩문제 발생)
+		URL url = new URL("http://www.daum.net/");
+		
 
 		//HttpURLConnection 객체 생성
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -36,25 +41,29 @@ public class HTTPEx01 {
 		//Timeout설정, 20분후 타입아웃되도록 설정
 		conn.setReadTimeout(20000); //20,000 밀리세컨드초(ms) = 20분
 		//요청을 POST방식으로 처리
-		conn.setRequestMethod("POST");
+		conn.setRequestMethod("POST"); 
 //		conn.setRequestMethod("GET");
 		
+		//참고코드(확인요)
 		//POST(GET)요청에 대해 Request로 받아 데이터를 쓰기 위해
 		//출력을 하기위한 출력 스트림 객체 생성
-		OutputStream out = conn.getOutputStream();
-		OutputStreamWriter writer = new OutputStreamWriter(out);
+//		OutputStream out = conn.getOutputStream();
+//		OutputStreamWriter writer = new OutputStreamWriter(out);
+//		
+//		writer.write("title: " + str);
+//		writer.write("&subTitle: " + str + "2");
+//		
+//		writer.close();
+//		out.close();
+//---------------------------------------------------------------	
 		
-		writer.write("title: " + str);
-		writer.write("&subTitle: " + str + "2");
-		
-		writer.close();
-		out.close();
-		
-		
-		//서버에에서 응답을 받는 부분
-		
+		//서버에서 응답 받는 부분 처리
 		StringBuffer stringBuffer = new StringBuffer();
 		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		//인코딩 방식 지정
+//		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "EUC-KR"));
+//		BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+		
 		//BufferedReader로 라인을 읽어 들였을 때 그 라인에 null값이 있을 때 빠져나가도록 구현
 		for(;;){
 			//한라인씩 읽어서 저장

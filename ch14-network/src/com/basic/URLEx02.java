@@ -4,17 +4,17 @@ package com.basic;
 //URL 클래스와 스트림 클래스를 사용하여 해당 URL의 내용을 읽어오는 프로그램
 
 TODO 1: URL을 통해 해당 서버 접근
-* Openstream호출해서 InputStream형태로 저장후
-* InputStreamReader에 넘길때 인코딩 방식 지정안하고 
-* readline()을 통해 출력
+Openstream호출해서 InputStream형태로 저장후
+InputStreamReader에 넘길때 인코딩 방식 지정안하고 
+readline()을 통해 출력
 
 TODO 2: InputStreamReader에 넘길때 인코딩 방식 지정후
-* readline()을 통해 출력
+readline()을 통해 출력
 
 TODO 1후 결과 확인한 것과 TODO 2후 결과확인한 결과는 동일
 //---------------------------------------------------------------------
-* 인코딩 방식이 맞지 않으면 데이터가 깨질수 있습니다. 
-* 그러므로, 방식이 다른 경우 명시적으로 지정해 줘야 합니다.
+인코딩 방식이 맞지 않으면 데이터가 깨질수 있습니다. 
+그러므로, 방식이 다른 경우 명시적으로 지정해 줘야 합니다.
 */
 
 

@@ -54,8 +54,8 @@ public class URLEx01 {
 		
 		try{
 			//URL객체 생성
-//			URL url = new URL("http://java.sun.com/index.jap?name=hongjildong#content");	
-			URL url = new URL("http://java.sun.com:80/index.jap?name=kim#content");
+			URL url = new URL("http://java.sun.com/index.jap?name=hongjildong#content"); //포트번호 지정하지 않은 경우
+//			URL url = new URL("http://java.sun.com:80/index.jap?name=kim#content"); //포트번호 지정한 경우
 			//형식이 안맞는 경우 ERROR 그러므로 try~catch()해 줘야 합니다. 
 			//MalformedURLException import해주고 try~catch 감싸줍니다.
 			//ERROR:Unhandled exception type MalformedURLException
@@ -77,7 +77,36 @@ public class URLEx01 {
 			// 앵커포인트 = 레퍼런스 = 섹션번호
 			System.out.println("레퍼런스: " + url.getRef());
 			
-			
-		}catch(MalformedURLException e){ e.printStackTrace(); }
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
 	}
 }
+
+/*
+출력결과 - 포트번호 지정하지 않은 경우
+http://java.sun.com/index.jap?name=hongjildong#content
+프로토콜: http
+호스트명: java.sun.com
+포트번호: -1
+default포트번호: 80
+패스: /index.jap
+요청한 파일자원 정보: /index.jap?name=hongjildong
+쿼리: name=hongjildong
+레퍼런스: content
+
+
+
+출력결과 - 포트번호 지정한 경우
+http://java.sun.com:80/index.jap?name=kim#content
+프로토콜: http
+호스트명: java.sun.com
+포트번호: 80
+default포트번호: 80
+패스: /index.jap
+요청한 파일자원 정보: /index.jap?name=kim
+쿼리: name=kim
+레퍼런스: content
+
+
+*/
