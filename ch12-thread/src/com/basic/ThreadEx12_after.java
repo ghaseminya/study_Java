@@ -5,7 +5,7 @@ Thread - 동기화 후 (synchronized 동기화 블럭 이용)
 //----------------------------------------
 동기화 방법
 	• 메서드의 동기화 방법(synchronized기반 동기화 메소드)
-*	• 특정 블록의 동기화 방법(synchronized기반 동기화 블록)
+->	• 특정 블록의 동기화 방법(synchronized기반 동기화 블록)
 
 
 File Info
@@ -61,7 +61,7 @@ class ATM implements Runnable{
 	@Override
 	public void run(){
 		
-		//synchronized(this)에서 this는 동기화의 대상을 알리는 용도 로 사용이 되었다.
+		//synchronized(this)에서 this는 동기화의 대상을 알리는 용도로 사용이 되었다.
 		//즉, 메소드가 호출된 인스턴스 자신을 대상으로 동기화를 진행하는 문장.
 		synchronized (this) {
 			for( int i=0; i<5; i++){
@@ -79,7 +79,7 @@ class ATM implements Runnable{
 	} //run
 } //ATM
 
-public class ThreadEx06_after {
+public class ThreadEx12_after {
 	
 	public static void main(String[] args){
 		ATM atm = new ATM();

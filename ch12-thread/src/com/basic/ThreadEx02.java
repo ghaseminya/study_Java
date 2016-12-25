@@ -1,77 +1,71 @@
 package com.basic;
-/* 
-Runnable 구현 클래스를 통한 Thread생성
+/*
+//2개의 쓰레드 생성하기 - Thread 클래스를 상속 받아 run()메소드를 오버라이드하는 방법
+출력 순서는 자바가상머신에 의해 결정되어 집니다. 
+두 개의 스레드가 번갈아가며 동시에 실행되고 있으며 2개의 스레드가 번갈아 가며 작업시간을 할당 받고 있습니다.
 
 
-스레드의 생성 방법
-	• Thread 클래스를 상속 받아 run()메소드를 오버라이드하는 방법
-*	• Runnable 인터페이스를 구현하는 방법
 
+try – catch 구문
+자바 프로그램이 실행 중에 예외가 발생될 경우 대책 없이 정지되는 것을 방지하기 위한 구문
+예외는 프로그램 실행 중에 발생되는 에러로서 파일 입출력 시에 파일 읽기 오류 등이 이에 해당됩니다.
 
-//--------------------------------------------
-스래드(Runnable구현) 생성방법
-	TODO 1: implements Runnable
-	TODO 2: @Override public void run(){ }
-	TODO 3: Runnable이 구현된 클래스의 객체생성
-	TODO 4: 스래드 생성시 스레드 생성자에 run()있는 클래스의 객체를 등록
-	TODO 5: start();호출
+try{
+	예외가 발생될 가능성이 있는 문장;
+}catch(){
+	예외 가 발생되었을 때 처리할 문장;
+}
 
-//--------------------------------------------
-Thread를 상속시킨것과 동일한 효과 확인하기
-스레드 생성, 
-스레드에 run()있는 클래스(Runnable이 구현된 객체)를 등록
- 
 */
 
 
-//TODO 1: implements Runnable
-public class ThreadEx02 implements Runnable{	
+//Thread 클래스를 상속
+public class ThreadEx02 extends Thread{
+	//멤버 변수인 tname을 문자열 타입으로 선언
+	String tname;
 	
-	//TODO 2: @Override public void run(){ }
-	@Override
-	public void run(){
-		for(int i=0; i<10; i++){
+	public ThreadEx02(String name){
+		//생성자에 의해 넘어온 문자열을 멤버변수에 저장
+		tname = name;
+	}
 
+	// 스레드의 run()를 재정의
+	@Override
+	public void run() {
+		super.run();
+		
+		//무한반복
+		while(true){
 			try{
-				//Static 메소드므로 객체생성없이 바로 호출가능
-				//지정된 시간(밀리세컨드)만큼 수행을 멈춤
-				Thread.sleep(1000);	//1초
-			}catch(InterruptedException e){
+				//sleep() 메소드는 현재 실행중인 스레드를 지정된 시간 동안 쉬게 합니다.
+				//단위는 1/1000 초이며 1000 일 경우 1초
+				sleep(1000);
+				
+			}catch(Exception e){
 				//오류메시지 출력: 오류내용, 오류난 줄수 표시
 				e.printStackTrace();
 			}
-			//Static 메소드므로 객체생성없이 바로 호출가능
-			System.out.print("스레드 이름: " + Thread.currentThread().getName() + "\t");	//현재 스레드의 객체 반환후 이름만 반환
-			System.out.println("temp value: "+ i);
-		}		
+			System.out.println(tname);
+		}
 	}
 
-	public static void main(String[] args) {
-		//TODO 3: Runnable이 구현된 클래스의 객체생성
-		ThreadEx02 td = new ThreadEx02();
-		
-		//TODO 4: 스래드 생성시 스레드 생성자에 run()있는 클래스의 객체를 등록
-		//Runnable이 구현된 객체를 인자로 하여 Thread객체를 생성해서 등록
-		Thread t = new Thread(td, "두번째"); //Thread이름 지정하여 생성
-//		Thread t = new Thread(td);	//Thread이름 미설정시 시스템에서 자동 부여됨
-		
-		//TODO 5: start();호출
-		//start() -> run() 병렬 수행할수 있도록 호출
-		t.start();			
+
+	public static void main(String[] args) {		
+		//스레드 객체 생성
+		ThreadEx02 td1 = new ThreadEx02("Thread1");
+		ThreadEx02 td2 = new ThreadEx02("Thread2");
+
+		//start(); 호출
+		td1.start(); //start()메소드가 호출되면 쓰레드  생성되고, 생성된 쓰레드는 run() 메소드를 호출하게 됩니다.
+		td2.start();
 	}
 }
 
 /*//출력결과
-//Thread이름 지정하여 생성한 결과
-스레드 이름: 두번째	temp value: 0
-스레드 이름: 두번째	temp value: 1
-스레드 이름: 두번째	temp value: 2
-스레드 이름: 두번째	temp value: 3
+Thread2
+Thread1
+Thread2
+Thread1
+Thread2
 
-//Thread이름 미설정시 시스템에서 자동 부여된 결과
-스레드 이름: Thread-0	temp value: 0
-스레드 이름: Thread-0	temp value: 1
-스레드 이름: Thread-0	temp value: 2
-스레드 이름: Thread-0	temp value: 3
-스레드 이름: Thread-0	temp value: 4
 */

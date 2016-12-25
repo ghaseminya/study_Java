@@ -1,70 +1,108 @@
-package com.basic;
 /*
-//2개의 쓰레드 생성하기 - Thread 클래스를 상속 받아 run()메소드를 오버라이드하는 방법
-출력 순서는 자바가상머신에 의해 결정되어 집니다. 
-두 개의 스레드가 번갈아가며 동시에 실행되고 있으며 2개의 스레드가 번갈아 가며 작업시간을 할당 받고 있습니다.
+//확인 후 주석처리
+//실행순서 동기화
+//
+//File Info
+//package com.basic;
+//ThreadEx14.java	• 실행순서 동기화 구현 전
+//					• 스레드 접근순서의 동기화 필요성
+//					• 실행순서를 보장하지 못합니다
+
+//ThreadEx15.java	• 실행순서 동기화 구현
+
+//--------------------------------------
+//wait과 notifyAll 메소드에 의한 동기화가 진행될때, 
+//ThreadEx13에서 달라지는 부분은 쓰레드 클래스 가 아닌 쓰레드에 의해 접근이 이뤄지는 MemoPaper 클래스라는 사실에 주목하기 바란다
+
+//★ Object의 wait(),notify(), notifyAll()의 흐름도
+
+package com.basic;
 
 
-
-try – catch 구문
-자바 프로그램이 실행 중에 예외가 발생될 경우 대책 없이 정지되는 것을 방지하기 위한 구문
-예외는 프로그램 실행 중에 발생되는 에러로서 파일 입출력 시에 파일 읽기 오류 등이 이에 해당됩니다.
-
-try{
-	예외가 발생될 가능성이 있는 문장;
-}catch(){
-	예외 가 발생되었을 때 처리할 문장;
-}
-
-*/
-
-
-//Thread 클래스를 상속
-public class ThreadEx15 extends Thread{
-	//멤버 변수인 tname을 문자열 타입으로 선언
-	String tname;
+class MemoPaper{
+	String strMemo;
+	boolean isTodayNews=false;
 	
-	public ThreadEx15(String name){
-		//생성자에 의해 넘어온 문자열을 멤버변수에 저장
-		tname = name;
-	}
-
-	@Override
-	public void run() {
-		super.run();
+	public void setMemo(String memo) {
+		strMemo=memo;
+		isTodayNews=true;
 		
-		while(true){
-			
-			try{
-				//sleep() 메소드는 현재 실행중인 스레드를 지정된 시간 동안 쉬게 합니다.
-				//단위는 1/1000 초이며 1000 일 경우 1초
-				sleep(1000);
-				
-			}catch(Exception e){
-				//오류메시지 출력: 오류내용, 오류난 줄수 표시
-				e.printStackTrace();
-			}
-			System.out.println(tname);
+		//TODO : Synchronized 블록이 아닌 경우에 사용할 경우 java.lang.IllegalMonitorStateException이 발생
+		//Runtime ERROR - Exception in thread "Thread-2" java.lang.IllegalMonitorStateException
+//		notifyAll();
+		
+		synchronized(this) {
+			notifyAll();	//Thread를 깨움
 		}
 	}
-
-
-	public static void main(String[] args) {		
-		//스레드 객체 생성
-		ThreadEx15 td1 = new ThreadEx15("Thread1");
-		ThreadEx15 td2 = new ThreadEx15("Thread2");
-
-		//start(); 호출
-		td1.start(); //start()메소드가 호출되면 쓰레드  생성되고, 생성된 쓰레드는 run 메소드를 호출
-		td2.start();
+	
+	public String getMemo() {
+		if(isTodayNews==false) {
+			try {
+				synchronized(this) {
+					wait();	//Thread를 블로킹 상태로
+				}
+			}
+			catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return strMemo;
 	}
 }
 
-/*//출력결과
-Thread2
-Thread1
-Thread2
-Thread1
-Thread2
+class MemoWriter extends Thread {
+	MemoPaper paper;
+	
+	public MemoWriter(MemoPaper paper) {
+		this.paper=paper;
+	}
+	
+	public void run() {
+		paper.setMemo("오늘도 자바 열공중...");
+	}
+}
+
+class MemoReader extends Thread {
+	MemoPaper paper;
+	
+	public MemoReader(MemoPaper paper) {
+		this.paper=paper;
+	}
+	
+	public void run() {
+		System.out.println("Memo 내용: "+paper.getMemo());
+	}
+}
+
+public class ThreadEx15 {
+	public static void main(String[] args) {
+		MemoPaper paper=new MemoPaper();
+		MemoReader reader1=new MemoReader(paper);
+		MemoReader reader2=new MemoReader(paper);
+		MemoWriter writer=new MemoWriter(paper);
+
+		try {
+			reader1.start();
+//			reader2.start();
+			
+			Thread.sleep(1000);			
+			writer.start();
+	
+			reader1.join();
+//			reader2.join();
+			writer.join();
+		}
+		catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+
+//출력결과
+//Memo 내용: 오늘도 자바 열공중...
+//Memo 내용: 오늘도 자바 열공중...
 
 */

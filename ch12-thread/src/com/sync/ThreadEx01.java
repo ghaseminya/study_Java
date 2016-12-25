@@ -1,4 +1,4 @@
-package com.thread.sync;
+package com.sync;
 /*
 //동기화 메소드를 가진 클래스
 //synchronized 로 동기화하기
@@ -10,6 +10,7 @@ TODO : 실행 결과 확인
 
 File Info
 *ThreadEx01.java	• 동기화 메소드를 가진 클래스
+					• main 부
 ThreadEx02.java		• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
 					• ThreadEx01클래스의 plus()메소드 호출
 ThreadEx03.java		• 동기화 메소드에 접근하기 위해 만든 스레드 클래스
@@ -26,14 +27,14 @@ public class ThreadEx01 {
 	public synchronized void plus(String tname){
 		System.out.print(tname + " : " + money);
 		money++;
-		System.out.println(" >> 잔액 " + money + "증가");
+		System.out.println(" >> 잔액 " + money + " 증가");
 	}
 	
 	//동기화 메소드로서 num 변수를 1 감소시키고 화면에 출력하는 역할
 	public synchronized void minus(String tname){
 		System.out.print(tname + " : " + money);
 		money--;
-		System.out.println(" >> 잔액" + money + "감소");
+		System.out.println(" >> 잔액" + money + " 감소");
 	}
 	
 	

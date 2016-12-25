@@ -1,21 +1,34 @@
+
 package com.basic;
-/*
-Thread - 여러개의 Thread 생성
+/* 
+Runnable 구현 클래스를 통한 Thread생성
 
-[Step by Step]
-TODO 1: Runnable 구현한 클래스 객체 생성
-TODO 2: 스레드 생성하면서 run()있는 클래스 객체 등록
-TODO 3: start()
 
------------------------------------------------------
-실행될 때마다 순서가 바뀌어서 실행되고 있음
-실행될 때마다 시스템마다 순서가 다릅니다 
-스케줄러가 매 순간 실행순서를 결정해주고 관리해 주고 있습니다.
+스레드의 생성 방법
+	• Thread 클래스를 상속 받아 run()메소드를 오버라이드하는 방법
+->	• Runnable 인터페이스를 구현하는 방법
 
+
+//--------------------------------------------
+스래드(Runnable구현) 생성방법
+	TODO 1: implements Runnable
+	TODO 2: @Override public void run(){ }
+	TODO 3: Runnable이 구현된 클래스의 객체생성
+	TODO 4: 스래드 생성시 스레드 생성자에 run()있는 클래스의 객체를 등록
+	TODO 5: start();호출
+
+//--------------------------------------------
+Thread를 상속시킨것과 동일한 효과 확인하기
+스레드 생성, 
+스레드에 run()있는 클래스(Runnable이 구현된 객체)를 등록
+ 
 */
 
-public class ThreadEx03 implements Runnable{
 
+//TODO 1: implements Runnable
+public class ThreadEx03 implements Runnable{	
+	
+	//TODO 2: @Override public void run(){ }
 	@Override
 	public void run(){
 		for(int i=0; i<10; i++){
@@ -28,39 +41,43 @@ public class ThreadEx03 implements Runnable{
 				//오류메시지 출력: 오류내용, 오류난 줄수 표시
 				e.printStackTrace();
 			}
-			
-			//현재 스레드의 객체 반환후 이름만 반환
-			//Thread.currentThread(): Static 메소드므로 객체생성없이 바로 호출가능
-			//getName(): 스레드의 이름을 반환
-			System.out.println("스레드 이름: " + Thread.currentThread().getName() + "\t");			
-		}
+			//Static 메소드므로 객체생성없이 바로 호출가능
+			System.out.print("스레드 이름: " + Thread.currentThread().getName() + "\t");	//현재 스레드의 객체 반환후 이름만 반환
+			System.out.println("temp value: "+ i);
+		}		
 	}
-	
-	public static void main(String[] args){
-		//TODO 1: Runnable 구현한 클래스 객체 생성
+
+	public static void main(String[] args) {
+		//TODO 3: Runnable이 구현된 클래스의 객체생성
 		ThreadEx03 td = new ThreadEx03();
 		
-		//여러개의 Thread 생성
-		//TODO 2: 스레드 생성하면서 run()있는 클래스 객체 등록
-		Thread t1 = new Thread(td, "첫번째 1111111");
 		
-		//TODO 3: start()
-		t1.start();	//start() -> run() 병렬 수행할수 있도록 호출
-		//스레드 생성하면서 run()있는 클래스 객체 등록
-		Thread t2 = new Thread(td, "두번째 2222222");
-		t2.start();
-		//스레드 생성하면서 run()있는 클래스 객체 등록
-		Thread t3 = new Thread(td, "세번째 3333333");
-		t3.start();
-		//스레드 생성하면서 run()있는 클래스 객체 등록
-		Thread t4 = new Thread(td, "네번째 4444444");
-		t4.start();
-	}	
+		//TODO 4: 스래드 생성시 스레드 생성자에 run()있는 클래스의 객체를 등록
+		//Runnable이 구현된 객체를 인자로 하여 Thread객체를 생성해서 등록
+		//TODO: Thread이름 지정하여 생성
+//		Thread t = new Thread(td, "두번째"); 
+		//TODO : Thread이름 미설정시 시스템에서 자동 부여됨
+		Thread t = new Thread(td);
+		
+		
+		//TODO 5: start();호출
+		//start() -> run() 병렬 수행할수 있도록 호출
+		t.start();			
+	}
 }
 
 /*//출력결과
-스레드 이름: 세번째 3333333	
-스레드 이름: 첫번째 1111111	
-스레드 이름: 두번째 2222222	
-스레드 이름: 네번째 4444444	
+//Thread이름 지정하여 생성한 결과 - TODO: Thread이름 지정하여 생성
+스레드 이름: 두번째	temp value: 0
+스레드 이름: 두번째	temp value: 1
+스레드 이름: 두번째	temp value: 2
+스레드 이름: 두번째	temp value: 3
+
+
+//Thread이름 미설정시 시스템에서 자동 부여된 결과 - TODO : Thread이름 미설정시 시스템에서 자동 부여됨
+스레드 이름: Thread-0	temp value: 0
+스레드 이름: Thread-0	temp value: 1
+스레드 이름: Thread-0	temp value: 2
+스레드 이름: Thread-0	temp value: 3
+스레드 이름: Thread-0	temp value: 4
 */

@@ -44,7 +44,7 @@ class ATM_1 implements Runnable{
 	}
 } //ATM_1
 
-public class ThreadEx06_before {
+public class ThreadEx12_before {
 	
 	public static void main(String[] args){
 		ATM_1 atm = new ATM_1();

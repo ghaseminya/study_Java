@@ -5,6 +5,7 @@ synchronized 기반 동기화 메소드
 synchronized 선언으로 인해서 
 up(), down() 메소드는 스레드에 안전한 함수가 됩니다.
 
+
 Step by Step
 TODO 1: up(), down() 메소드 
 TODO 2: up(), down() 메소드에 synchronized 선언하기 
@@ -12,8 +13,11 @@ TODO 2: up(), down() 메소드에 synchronized 선언하기
 //----------------------------------------
 
 동기화 방법
-*	• 메서드의 동기화 방법(synchronized기반 동기화 메소드)
+->	• 메서드의 동기화 방법(synchronized기반 동기화 메소드)
 	• 특정 블록의 동기화 방법(synchronized기반 동기화 블록)
+
+/ch12-thread/src/com/basic/ThreadEx11.java			메서드의 동기화 방법(synchronized기반 동기화 메소드)
+/ch12-thread/src/com/basic/ThreadEx06_after.java	특정 블록의 동기화 방법(synchronized기반 동기화 블록)
 
 //----------------------------------------
 
@@ -41,7 +45,7 @@ class SharedData{
 		System.out.println( "를 "+ data +"로 증가시킴");
 	}
 	
-	//동기화 메소드의 선언 (동기화 메소드의 선언 전/후 결과 확인)
+	//TODO : 동기화 메소드의 선언 (동기화 메소드의 선언 전/후 결과 확인)
 	public void down (String name){
 //	public synchronized void down (String name){
 		System.out.print( name +": "+ data );
@@ -110,24 +114,31 @@ public class ThreadEx11 {
 	}
 }
 
+/*
+//public void up (String name){ 로 임계영역에 접근한 경우 
+-> 데이터 외곡 발생
+Down Thread: 0를 -1로 감소시킴
+UP Thread: 0를 0로 증가시킴
+Down Thread: 0를 -1로 감소시킴
+UP Thread: 0를 0로 증가시킴
+Down Thread: 0를 -1로 감소시킴
+UP Thread: 0를 0로 증가시킴
+Down Thread: 0를 -1로 감소시킴
+UP Thread: 0를 0로 증가시킴
 
-//public void up (String name){ 로 임계영역에 접근한 경우
-//Down Thread: 0를 -1로 감소시킴
-//UP Thread: 0를 0로 증가시킴
-//Down Thread: 0를 -1로 감소시킴
-//UP Thread: 0를 0로 증가시킴
-//Down Thread: 0를 -1로 감소시킴
-//UP Thread: 0를 0로 증가시킴
-//Down Thread: 0를 -1로 감소시킴
-//UP Thread: 0를 0로 증가시킴
+잘못된 데이터 외곡이 일어나는 이유는 한 스레드에서 up작업을 수행하려는 순간 다른 스레드에게 제어권이 넘어가면서
+다른 스레드에서 down작업을 수행해버려 이전 스레드로 제어권이 넘어오면서 up작업이 일어나기 때문입니다.
 
 
 //public synchronized void down (String name){ 로 안전하게 임계영역에 접근한 경우
-//UP Thread: 0를 1로 증가시킴
-//Down Thread: 1를 0로 감소시킴
-//UP Thread: 0를 1로 증가시킴
-//Down Thread: 1를 0로 감소시킴
-//UP Thread: 0를 1로 증가시킴
-//Down Thread: 1를 0로 감소시킴
-//UP Thread: 0를 1로 증가시킴
-//Down Thread: 1를 0로 감소시킴
+UP Thread: 0를 1로 증가시킴
+Down Thread: 1를 0로 감소시킴
+UP Thread: 0를 1로 증가시킴
+Down Thread: 1를 0로 감소시킴
+UP Thread: 0를 1로 증가시킴
+Down Thread: 1를 0로 감소시킴
+UP Thread: 0를 1로 증가시킴
+Down Thread: 1를 0로 감소시킴
+
+
+*/
