@@ -4,7 +4,7 @@
 //Socket응용 - Server/Client 접속 프로그램
 File Info
 com.chat1.socket
-*ServerEx.java	• 서버의 역할
+->ServerEx.java	• 서버의 역할
 				• 서버소켓을 사용하여 5000번 포트를 열어 놓고 대기하다가 
 				클라이언트의 접속 요청이 있을 때 새로운 소켓 클래스를 생성하는 역할
 				
@@ -39,6 +39,7 @@ public class ServerEx {
 				//accept() : 서버소켓에서 클라이언트의 소켓이 접속되기를 기다리는 메소드
 				//accept() 메소드는 서버소켓이 대기중인 상태로 만들게 되며 접속이 이루어지면 소켓이 생성됩니다.
 				socket = server.accept();
+				//클라이언트 소켓 생성
 				client = new SocketEx(this, socket);
 				client.start();
 			}

@@ -9,7 +9,7 @@ com.chat1.socket
 ServerEx.java	• 서버의 역할
 				• 서버소켓을 사용하여 5000번 포트를 열어 놓고 대기하다가 클라이언트의 접속 요청이 있을 때 새로운 소켓 클래스를 생성하는 역할
 				
-*SocketEx.java	• 서버 프로그램의 일부로서 클라이언트의 접속이 있을 때마다 객체가 생성되며 스레드로 구성
+->SocketEx.java	• 서버 프로그램의 일부로서 클라이언트의 접속이 있을 때마다 객체가 생성되며 스레드로 구성
 				• 클라이언트에 1:1로 대응하기 위한 클래스로써 스레드로 구현
 				• 하나의 클라이언트에 대해서 하나의 스레드를 만들게 됩니다.
 				• 클라이언트와 서버 스레드는 1:1로 대응
@@ -28,10 +28,13 @@ public class SocketEx extends Thread{
 	//ServerEx 클래스를 사용하겠다고 선언한다
 	ServerEx server;
 	Socket socket;
+	
 	//클라이언트에서 전송하는 데이터를 수신하기 위한 클래스
 	DataInputStream dataInputStream;
+	
 	//클라이언트로 데이터를 전송하기 위한 클래스
 	DataOutputStream dataOutputStream;
+	
 	//IP주소를 저장하기 위한 변수
 	String ipAddress;
 	

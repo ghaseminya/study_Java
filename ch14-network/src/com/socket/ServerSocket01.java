@@ -2,6 +2,13 @@
 telnet를 활용하여 TCP를 이용한 네트워크에서 읽고 쓰기가 가능한 프로그램
 ServerSocket01는 네트워크를 이용해서 읽고 쓰기를 하려고 할 때 서버의 역할을 합니다.
 
+
+출력결과 확인 방법
+서버 실행 후 클라이언트에서 연결 요청 후 서버와 클라이언트간 연결을 맺은 후 서버연결 끊기
+
+클라이언트 연결 요청(cmd)
+telnet localhost 8989
+
 */
 package com.socket;
 
@@ -20,6 +27,9 @@ public class ServerSocket01 {
 		Socket socket = null;
 		
 		//출력을 위해 스트림 객체 생성
+		//OutputStream : • OutputStream은 바이트 출력을 수행하는 데 필요한 메서드를 정의한 추상 클래스
+		// 				 • 출력 스트림을 다루는 모든 클래스의 슈퍼 클래스
+		//PrintStream : PrintStream은 모든 자료형을 출력할 수 있는 print(), println() 메서드가 오버로딩 되어 있습니다.
 		OutputStream  outputStream = null;
 		PrintStream printStream = null;
 		
