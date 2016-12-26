@@ -62,7 +62,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 	//카드 레이아웃 관련 객체 선언
 	// import java.awt.Container;
 	private Container tab;
-	private CardLayout clayout;
+	private CardLayout cardlayout;
 	private Thread thread;
 
 	//상태 플래그
@@ -120,8 +120,8 @@ public class MultiChatClient implements ActionListener, Runnable {
 
 		//로그인/로그아웃 패널 선택을 위한 카드 레이아웃(CardLayout) 패널
 		tab = new JPanel();
-		clayout = new CardLayout();
-		tab.setLayout(clayout);
+		cardlayout = new CardLayout();
+		tab.setLayout(cardlayout);
 		tab.add(loginPanel, "login");
 		tab.add(logoutPanel, "logout");
 
@@ -142,7 +142,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 		jframe.add(msgPanel, BorderLayout.SOUTH);
 		
 		//로그인 패널을 우선 표시
-		clayout.show(tab, "login");
+		cardlayout.show(tab, "login");
 		//프레임 크기 자동 설정
 		jframe.pack();
 		//프레임 크기를 조정 불가능하도록 설정
@@ -191,7 +191,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 		} else if (obj == loginButton) { //로그인 버튼
 			id = idInput.getText();
 			label2.setText("대화명: " + id);
-			clayout.show(tab, "logout");
+			cardlayout.show(tab, "logout");
 			connectServer();
 		} else if (obj == logoutButton) { //로그아웃 버튼
 			//로그아웃 메시지 전송
@@ -200,7 +200,7 @@ public class MultiChatClient implements ActionListener, Runnable {
 			msgOut.setText(" ");
 			
 			//로그인 패널로 전환
-			clayout.show(tab, "login");
+			cardlayout.show(tab, "login");
 			outMsg.close();
 			try {
 				inMsg.close();

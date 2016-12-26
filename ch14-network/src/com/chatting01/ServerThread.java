@@ -58,7 +58,8 @@ public class ServerThread extends Thread {
 			sock = socket;
 			
 			//입출력 스트림 생성
-			//DataInputStream: 입력 스트림으로 부터 기본 자료형 데이터을 읽을 수 있는 각종 메서드와 문자를 읽을 수 있는 메서드를 정의 
+			//DataInputStream: 입력 스트림으로 부터 기본 자료형 데이터을 읽을 수 있는 각종 메서드와 문자를 읽을 수 있는 메서드
+			//getInputStream(): 소켓 객체로 부터 입력할 수 있는 InputStream 객체를 반환합니다.
 			din = new DataInputStream(sock.getInputStream());
 			dout = new DataOutputStream(sock.getOutputStream());
 			

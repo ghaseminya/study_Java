@@ -75,7 +75,8 @@ public class EchoClient {
 		//입력 스트림 ( 서버에서 클라이언트로 전송된 데이터 처리)
 		InputStream is_socket =  tcpSocket.getInputStream();
 		
-		//바이트스트림 -> 문자스트림
+		//OutputStreamWriter: 바이트스트림 -> 문자스트림
+		//BufferedWriter: 문자 출력 스트림의 효율적인 버퍼링 기능을 제공
 		BufferedWriter bufferW = new BufferedWriter(new OutputStreamWriter(os_socket));		
 		BufferedReader bufferR = new BufferedReader(new InputStreamReader(is_socket));
 		//TODO : 인코딩 해결 (한글 깨짐현상 해결, 도스창)
@@ -126,8 +127,8 @@ public class EchoClient {
 	public static void main(String[] args){
 		
 		try{
-			new EchoClient("192.168.0.2", 3000);
-//			new EchoClient("192.168.0.113", 3000);
+//			new EchoClient("192.168.0.2", 3000);
+			new EchoClient("192.168.123.30", 3000);
 		}
 		catch(IOException e){
 			e.printStackTrace();			

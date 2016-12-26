@@ -32,11 +32,11 @@ public class EchoServer {
 	private BufferedWriter bufferW;
 	private InputStream is;
 	private OutputStream os;
-	private ServerSocket serverS;
+	private ServerSocket serverSocket;
 
 	public EchoServer(int port){
 		try{
-			serverS = new ServerSocket(port);
+			serverSocket = new ServerSocket(port);
 
 		}catch(IOException e){
 			e.printStackTrace();
@@ -49,12 +49,12 @@ public class EchoServer {
 				System.out.println("클라이언트의 요청을 기다리는 중!");
 
 				//소켓 생성, 청취
-				Socket tcpSocket = serverS.accept();
+				Socket tcpSocket = serverSocket.accept();
 
 				//Client IP주소 구하기
 				System.out.println("클라이언트의 IP주소: " + tcpSocket.getInetAddress().getHostAddress());
 
-				//입력 스트림 생성 client에서 전송된 데이터 처리)
+				//입력 스트림 생성 (Client에서 전송된 데이터 처리)
 				is = tcpSocket.getInputStream();
 				//byte스트림 -> char스트림 형변환				
 //				bufferR = new BufferedReader(new InputStreamReader(is));
@@ -84,15 +84,15 @@ public class EchoServer {
 			}catch(IOException e){
 				e.printStackTrace();
 			}finally{
-				if(bufferW!=null){ try{ bufferW.close();}catch(IOException e){e.printStackTrace();} }
-				if(os!=null){ try{ os.close();}catch(IOException e){e.printStackTrace();} }
-				if(bufferR!=null){ try{ bufferR.close();}catch(IOException e){e.printStackTrace();} }
-				if(is!=null){ try{ is.close();}catch(IOException e){e.printStackTrace();} }
+				if(bufferW!=null){ try{ bufferW.close(); }catch(IOException e){ e.printStackTrace();} }
+				if(os!=null){ try{ os.close(); }catch(IOException e){ e.printStackTrace();} }
+				if(bufferR!=null){ try{ bufferR.close(); }catch(IOException e){ e.printStackTrace();} }
+				if(is!=null){ try{ is.close(); }catch(IOException e){ e.printStackTrace();} }
 			}
-		}
-	}
+		} //while
+	} //EchoServer()
 
 	public static void main(String[] args){
 		new EchoServer(3000);
 	}
-}
+} //class EchoServer
