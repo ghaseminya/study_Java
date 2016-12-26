@@ -2,7 +2,7 @@ package com.awt02.component;
 /*
 //레이블 생성방법 3가지
 //레이블 정렬
-상수				상수값	정렬상태
+상수				상수값		정렬상태
 Label.LEFT		0		왼쪽 정렬 (기본값)
 Label.CENTER	1		중앙 정렬
 Label.RIGHT		2		가운데 정렬

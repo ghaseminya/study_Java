@@ -40,7 +40,7 @@ public class TextAreaEx01 extends Frame{
 		ta1.setRows(4); //행의 개수 설정
 		tae.add(ta1);
 
-		
+		//문자열을 설정하여 생성
 		TextArea ta2 = new TextArea("TextArea 2");
 		ta2.setColumns(10); //열의 개수 설정
 		ta2.setRows(4); //행의 개수 설정
@@ -77,9 +77,9 @@ public class TextAreaEx01 extends Frame{
 				ta1.getColumns()+".");
 		System.out.println("TextArea 1 행 수 : "+
 				ta1.getRows()+".");
-		System.out.println("Visilbility of TextArea 2 :"+
+		System.out.println("Visibility of TextArea 2 :"+
 				ta2.getScrollbarVisibility());
-		System.out.println("Visilbility of TextArea 4 :"+
+		System.out.println("Visibility of TextArea 4 :"+
 				ta4.getScrollbarVisibility());
 		
 		

@@ -61,8 +61,9 @@ public class ListEx01 extends Frame{
 		lst.select(3); //List[3] = Mars 선택
 
 		//해당 인덱스의 항목이 선택되었는지 확인하기
-		System.out.println("2th item is seelcted : "+ lst.isIndexSelected(1));
-		System.out.println("3th item is seelcted : "+ lst.isIndexSelected(2));
+		System.out.println("2th item is selected : "+ lst.isIndexSelected(1));
+		System.out.println("3th item is selected : "+ lst.isIndexSelected(2));
+		System.out.println("3th item is selected : "+ lst.isIndexSelected(3));
 
 		//텍스트 영역의 행수 얻기
 		//리스트 객체 생성시 설정항 항목 개수대로 나옵니다. 실제 항목 갯수가 나오는 것이 아닙니다.(참고)

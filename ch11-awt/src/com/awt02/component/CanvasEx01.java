@@ -21,6 +21,7 @@ class DrawingCanvas extends Canvas {
 	@Override
 	public void paint(Graphics g) {
 		g.setColor(Color.red);
+		//x, y, width, height
 		g.drawRect(30, 30, 230, 100);
 	}
 }
@@ -33,7 +34,7 @@ public class CanvasEx01 extends Frame{
 		//도화지 역할을 하는 캔버스 객체 생성
 		DrawingCanvas dc = new DrawingCanvas();
 		//캔버스 가로, 세로 크기 설정
-		dc.setSize(200, 100);
+		dc.setSize(200, 100); //setLayout()설정으로 실제로는 Frame의 크기만큼 커져서 표시됩니다.
 		//캔버스 바탕색 지정
 		dc.setBackground(Color.yellow);
 
