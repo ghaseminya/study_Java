@@ -32,11 +32,7 @@ FocusEvent				FocusListener			FocusAdapter
 KeyEvent				KeyListener				KeyAdapter
 MouseEvent				MouseListener			MouseAdapter
 MouseMotionEvent		MousMotionListener		MouseMotionAdapter
-
-
-
-
-
+WindowEvent				WindowListener			WindowAdapter
 */
 
 
@@ -55,13 +51,14 @@ public class AdapterEx01 extends Frame{
 		//FlowLayout 을 지정
 		setLayout(new FlowLayout());
 		
-		//버튼 객체를 button 변수로 생성
+		//버튼 객체를 button 변수로 생성 (표시 역할)
 		button = new Button("Click to Exit icon");
 		
 		//프레임에 버튼을 부착한다
 		add(button);
 		
-		//이벤트 소스인 btn 과 이벤트 핸들러 클래스인 11행의 BtnHandler 클래스를 연결한다. 인라인 인스턴스 생성 기법을 사용했다
+		//이벤트 소스인 btn 과 이벤트 핸들러 클래스인 11행의 BtnHandler 클래스를 연결한다. 
+		//인라인 인스턴스 생성 기법을 사용했다
 		this.addWindowListener(new ButtonHandler());
 	}
 	

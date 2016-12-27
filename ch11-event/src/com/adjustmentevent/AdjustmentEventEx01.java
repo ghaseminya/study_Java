@@ -26,12 +26,13 @@ public class AdjustmentEventEx01 extends Frame{
 	TextField tf;
 	
 	public AdjustmentEventEx01(){
+		setTitle("AdjustmentEvent Test");
 		//레이아웃 관리자를 BorderLayout 으로 설정
 		setLayout(new BorderLayout());
-		setTitle("AdjustmentEvent Test");
+		
 		
 		//스크롤바 생성
-		//Scrollbar(스크롤바표현방식,현재값,막대가로길이,최소값,최대값)
+		//Scrollbar(스크롤바표현방식,현재값,컨트롤러 두께,최소값,최대값)
 		sb = new Scrollbar(Scrollbar.HORIZONTAL, 0, 20, 0, 255);
 		tf = new TextField();
 		

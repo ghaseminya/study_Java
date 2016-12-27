@@ -53,9 +53,11 @@ public class KeyEventEx01 extends Frame implements KeyListener{
 	// 추상 메소드 구현 (키가 눌렸을 때)
 	@Override
 	public void keyPressed(KeyEvent e){
-		if(e.getKeyChar() == KeyEvent.VK_DOWN){
-			ta.append("DOWN Key \n");			
-		}else if( e.getKeyCode() == KeyEvent.VK_UP){
+		//getKeyChar()로는 이벤트 비교안되며 KeyCode로 가져와서 비교
+//		if(e.getKeyChar() == KeyEvent.VK_DOWN){ 
+//			ta.append("DOWN Key \n");			
+//		} 
+		if( e.getKeyCode() == KeyEvent.VK_UP){
 			ta.append("UP Key \n");
 		}else if(e.getKeyCode() == KeyEvent.VK_DOWN){
 			ta.append("DOWN Key \n");

@@ -85,7 +85,7 @@ public class MousEventEx02 extends Frame implements ActionListener, MouseMotionL
 		//저장된 마우스 x,y좌표를 Label의 x,y좌표에 넣어줍니다.
 		move.setLocation(p);		
 	}
-	
+	@Override
 	public void mouseDragged(MouseEvent e){		
 	}	
 

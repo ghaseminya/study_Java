@@ -22,6 +22,7 @@ import java.awt.event.WindowListener;
 
 
 public class WindowEventEx01 extends Frame implements WindowListener{
+	
 	Label lb;
 	
 	public WindowEventEx01(){
@@ -37,8 +38,8 @@ public class WindowEventEx01 extends Frame implements WindowListener{
 		//Label을 Frame에 등록
 		add(lb);
 		
-		//Frame의 위치, 넓이, 높이 설정
-		setBounds(300, 300, 300, 300);
+		//Frame의 위치(x, y), 넓이, 높이 설정
+		setBounds(100, 100, 300, 300);
 		//Frame 노출여부 설정
 		setVisible(true);
 	}
