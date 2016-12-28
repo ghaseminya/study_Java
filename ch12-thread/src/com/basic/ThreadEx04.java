@@ -54,7 +54,7 @@ public class ThreadEx04 extends Frame implements Runnable{
 				//sleep() 메소드의 인자는 1000을 1초로 계산한다. (100은 0.1초)
 				Thread.sleep(100);
 			}catch(Exception e){
-				
+				e.printStackTrace();
 			}
 		}
 	}

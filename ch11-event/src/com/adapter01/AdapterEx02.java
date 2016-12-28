@@ -104,7 +104,7 @@ public class AdapterEx02 extends Frame implements ActionListener{
 		add(p3, BorderLayout.SOUTH);
 		
 		//Frame의 위치, 넓이, 높이 설정
-		setBounds(300,  200,  300,  300);
+		setBounds(100,  100,  300,  300);
 		//Frame 노출여부 설정
 		setVisible(true);
 		
@@ -125,9 +125,10 @@ public class AdapterEx02 extends Frame implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		String str = e.getActionCommand();
 		if( str.equals("Clear") ){
-			//텍스트 영역의 초기화는 " " 또는 ""로 가능
-			//ta.setText(" ");
-			//tf.setText(" ");
+			//텍스트 영역의 초기화는 " " 한 후  ""로 해주어서 빈 문자열을 없애서 완전히 초기화 해 줍니다.
+			// ""로만 해서 setText해주면 초기화되지 않습니다.
+			ta.setText(" ");
+			tf.setText(" ");
 			ta.setText("");
 			tf.setText("");
 			//삭제후 포커스 이동
