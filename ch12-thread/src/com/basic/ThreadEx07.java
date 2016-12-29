@@ -71,6 +71,10 @@ public class ThreadEx07 {
 //		th1.setPriority(7);
 //		th2.setPriority(7);
 		
+		//TODO 3: Thread 우선순위 7로 높이기, 1~10까지 설정가능
+//		th1.setPriority(5);
+//		th2.setPriority(7);
+		
 		//TODO 1: Thread 우선순위 확인, 
 		//getPriority()의 반환값을 통해서 쓰레드의 우선순위를 확인 
 		System.out.println("th1 (-): " + th1.getPriority());

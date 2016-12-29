@@ -1,6 +1,6 @@
 package com.basic;
 /*
-멤버변수를 통한 Thread의 우선순위 지정
+멤버변수를 통한 Thread의 우선순위 지정 -우선순위 양보
 쓰레드가 CPU의 할당을 필요로 하지 않을 경우, CPU를 다른 쓰레드에게 양보하기(우선순위 양보)
 --------------------------------------------------------------------------
 실행결과에서 보이듯이 쓰레드의 실행시간은 우선순위의 비율대로 나뉘어져 실행되지 않습니다. 
@@ -16,20 +16,27 @@ class ThreadPriority9 extends Thread {
 		setPriority(priority);
 	}
 	public void run() {
-		for(int i=0; i<10; i++)
-		//for(int i=0; i<10000; i++)
+		for(int i=0; i<10; i++){
+		//for(int i=0; i<10000; i++){
 			System.out.println(message+"("+getPriority()+")");
 		
-		try
-		{
-			sleep(1);	//CPU 양보
-			//쓰레드가 CPU의 할당을 필요로 하지 않을 경우, CPU를 다른 쓰레드에게 양보하게 됩니다
-
+			//TODO : try~catch()가 반복문 안에 있을 때와 밖에 있을 때의 차이 확인하기
+			try	{
+				sleep(1);	//CPU 양보
+				//쓰레드가 CPU의 할당을 필요로 하지 않을 경우, CPU를 다른 쓰레드에게 양보하게 됩니다
+	
+			}catch (InterruptedException e)	{
+				e.printStackTrace();
+			}
 		}
-		catch (InterruptedException e)
-		{
-			e.printStackTrace();
-		}
+		
+//		try	{
+//			sleep(1);	//CPU 양보
+//			//쓰레드가 CPU의 할당을 필요로 하지 않을 경우, CPU를 다른 쓰레드에게 양보하게 됩니다
+//
+//		}catch (InterruptedException e)	{
+//			e.printStackTrace();
+//		}
 	}
 }
 

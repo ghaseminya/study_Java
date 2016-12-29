@@ -106,10 +106,10 @@ public class ThreadEx11 {
 	public static void main(String[] args) {
 
 		SharedData data = new SharedData();
-		UpThread t = new UpThread(data, "UP Thread");
+		UpThread t1 = new UpThread(data, "UP Thread");
 		DownThread t2 = new DownThread(data, "Down Thread");
 
-		t.start();
+		t2.start();
 		t2.start();
 	}
 }

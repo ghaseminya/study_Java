@@ -4,9 +4,16 @@ package com.basic;
 
 
 InetAddress 클래스
-	• InetAddress 클래스는 IP 주소를 표현한 클래스(모델링한 클래스)
-	• 자바에서는 모든 IP 주소를 InetAddress 클래스를 사용하여 표현할 수 있습니다.
+	• 자바에서 인터넷 주소에 관한 정보를 다루는 클래스
+	• InetAddress 클래스는 IP 주소를 표현하고 제어하는 기능을 제공하는 클래스(모델링한 클래스)
+	• 자바에서는 모든 IP 주소를 InetAddress 클래스를 사용하여 표현할 수 있습니다. 
+	즉 주소와 관련된 다양한 메소드를 제공하고 있습니다.
+	• InetAddress클래스는 내부적으로 
+	컴퓨터에 설정된 Host Name서버 자체를 가지고  주소를 표현해 그에 관련된 기능을 제공합니다.
 
+
+호스트명(Host Name)
+codedragon.tistory.com과 같이 인터넷 상에서 특정 컴퓨터를 가리키는 명칭
 
 //--------------------
 try{
@@ -43,7 +50,8 @@ public class InetAddressEx01 {
 	public static void main(String[] args) {
 
 		//입력받기위해 객체 생성
-		//BufferedReader: 문자 입력 스트림으로부터 문자를 읽어 들이거나 문자 출력 스트림으로 문자를 내보낼 때 버퍼링을 함으로써
+		//BufferedReader: 문자 입력 스트림으로부터 
+		//문자를 읽어 들이거나 문자 출력 스트림으로 문자를 내보낼 때 버퍼링을 함으로써
 		//문자, 문자 배열, 문자열 라인 등을 보다 효율적으로 처리합니다.
 		BufferedReader br = null;
 		
@@ -55,7 +63,8 @@ public class InetAddressEx01 {
 
 		//반드시 예외 처리 해야 합니다.
 		try{
-			//InputStreamReader: 바이트를 읽어서 지정된 문자 인코딩에 따라 문자로 변환하는데 사용하며 한문자씩 읽어 들입니다.
+			//InputStreamReader: 바이트를 읽어서 지정된 문자 인코딩에 따라 문자로 변환하는데 사용하며
+			//					한문자씩 읽어 들입니다.
 			//BufferedReader는 입출력 스트림으로부터 버퍼를 사용하여 미리 버퍼에 데이터를 갖다 놓기 때문에 보다 효율적으로 입출력 작업을 할 수 있습니다.
 			br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.print("웹사이트 주소 입력 > "); //codedragon.tistory.com
