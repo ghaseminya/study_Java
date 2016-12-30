@@ -28,14 +28,18 @@ public class HTTPEx01 {
 //		URL url = new URL("http://localhost:8080/index.jsp");
 		//Public 웹 서버를 통해 테스트
 //		URL url = new URL("http://www.hrd.go.kr/jsp/HRDP/main/index.jsp"); //보류(인코딩문제 발생)
-		URL url = new URL("http://www.daum.net/");
+//		URL url = new URL("http://www.daum.net/");
+		URL url = new URL("http://www.naver.com/");
 		
 
 		//HttpURLConnection 객체 생성
+		//HttpURLConnection: HTTP로 간단하게 데이터를 송수신할 수 있는 클래스
+		//해당 주소의 페이지로 접속을 하고, 단일 HTTP 접속을 하기위해 HttpURLConnection로 캐스팅한 객체 생성
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		//입력스트림과 출력 스트림사용유무 설정
+		//입력스트림과 출력 스트림 사용유무 설정
 		conn.setDoInput(true); //입력상태 설정
 		conn.setDoOutput(true); //출력상태 설정
+		
 		//캐시 사용유무 설정
 		conn.setUseCaches(false);
 		//Timeout설정, 20분후 타입아웃되도록 설정
@@ -79,7 +83,7 @@ public class HTTPEx01 {
 		br.close();
 		conn.disconnect();
 		
-		String getXml = stringBuffer.toString();
+//		String getXml = stringBuffer.toString();
 		System.out.println(stringBuffer.toString());
 	} //main
 

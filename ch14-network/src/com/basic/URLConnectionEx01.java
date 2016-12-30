@@ -1,7 +1,15 @@
 package com.basic;
-
+/*
 //URLConnection객체 생성 및 정보 추출하는 프로그램
 
+URLConnection 클래스
+	• URL이 가리키는 리소스에 대해 활성화된 연결을 나타내는 추상클래스
+	• URLConnection 클래스는 원격 자원에 접근하는 데 필요한 정보를 가지고 있습니다.
+	• 필요한 정보란 원격 서버의 헤더 정보, 해당 자원의 길이와 타입 정보, 언어 등의 정보입니다.
+	• URL 클래스는 원격 서버 자원의 결과만을 가져 오지만, 
+	URLConnection 클래스는 원격 서버 자원의 결과와 원격 서버의 헤더 정보를 가져 올 수 있습니다.
+
+*/
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -26,6 +34,7 @@ public class URLConnectionEx01 {
 		try{
 			//URL객체의 openConnection()를 통해 URLConnection 객체 생성
 			uc = url.openConnection();
+			
 			uc.connect();
 		}catch(IOException e){
 			e.printStackTrace();
@@ -33,6 +42,7 @@ public class URLConnectionEx01 {
 		
 		//서버에 접속한 후 연결정보
 		System.out.println("uc: " + uc.toString());
+		
 		//사용자와의 응답 설정
 		System.out.println("Interaction: " + uc.getAllowUserInteraction());
 		
@@ -42,6 +52,7 @@ public class URLConnectionEx01 {
 		}catch(IOException e){
 			e.printStackTrace();
 		}
+		
 		//인코딩되는 형식 확인
 		System.out.println("encoding: " + uc.getContentEncoding());
 		

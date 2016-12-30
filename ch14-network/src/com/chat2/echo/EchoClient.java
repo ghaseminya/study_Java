@@ -9,11 +9,11 @@ EchoClient 생성자에서 정보 받고
 //---------------------------------------------------
 File Info
 com.chat2.echo
-*EchoServer.java	• EchoServer
+EchoServer.java	• EchoServer
 					• 포트번호 넘겨주면서 서버 소켓 생성
 					• while에서 accept()에서 클라이언트가 들어오면 tcp소켓 생성(클라이언트 소켓 생성)
 	
-EchoClient.java		• EchoClient
+->EchoClient.java		• EchoClient
 					• 생성자에서 정보 받고
 					• 소켓 생성 getsocket() 호출
 					• 입출력 스트림(바이트스트림) -> 문자스트림
@@ -57,7 +57,7 @@ public class EchoClient {
 	//서버 포트 저장 변수
 	private int port;
 	
-	private String str;
+	private String str; //읽어온 데이터 임시 저장
 	BufferedReader br_file;
 	
 	//TODO 2:
@@ -91,8 +91,11 @@ public class EchoClient {
 		str = br_file.readLine();
 		//현재 OS의 줄바꿈 문자 반환
 		str += System.getProperty("line.separator"); //EOF
+		
 		//데이터를 버퍼에 저장
 		bufferW.write(str);
+		
+		
 		//데이터를 서버에 전송
 		bufferW.flush();
 		//서버에서 전송된 데이터 처리

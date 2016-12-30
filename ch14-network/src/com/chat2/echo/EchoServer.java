@@ -5,11 +5,11 @@ package com.chat2.echo;
 //---------------------------------------------------
 File Info
 com.chat2.echo
-EchoServer.java		• EchoServer
+->EchoServer.java		• EchoServer
 					• 포트번호 넘겨주면서 서버 소켓 생성
 					• while에서 accept()에서 클라이언트가 들어오면 tcp소켓 생성(클라이언트 소켓 생성)
 	
-*EchoClient.java	• EchoClient
+EchoClient.java	• EchoClient
 					• 생성자에서 정보 받고
 					• 소켓 생성 getsocket()
 					• 입출력 스트림(바이트스트림) -> 문자스트림
@@ -28,11 +28,12 @@ import java.net.Socket;
 
 
 public class EchoServer {
+	private ServerSocket serverSocket;
 	private BufferedReader bufferR;
 	private BufferedWriter bufferW;
 	private InputStream is;
 	private OutputStream os;
-	private ServerSocket serverSocket;
+	
 
 	public EchoServer(int port){
 		try{
@@ -52,7 +53,8 @@ public class EchoServer {
 				Socket tcpSocket = serverSocket.accept();
 
 				//Client IP주소 구하기
-				System.out.println("클라이언트의 IP주소: " + tcpSocket.getInetAddress().getHostAddress());
+				System.out.println("클라이언트의 IP주소: " 
+						+ tcpSocket.getInetAddress().getHostAddress());
 
 				//입력 스트림 생성 (Client에서 전송된 데이터 처리)
 				is = tcpSocket.getInputStream();

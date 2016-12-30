@@ -16,6 +16,15 @@ ServerEx.java	• 서버의 역할
 
 ClientEx.java	• 클라이언트용 프로그램
 				• 서버측 5000번 포트로 접속을 요청합니다.
+
+
+//------------------------------------------------------
+DataInputStream
+	• DataInputStream 클래스는 입력 스트림으로 부터 
+	기본 자료형 데이터을 읽을 수 있는 각종 메서드와 문자를 읽을 수 있는 메서드를 정의 하고 있습니다.
+	• DataInputStream 클래스의 생성자는 한 개로 구성되어 있으며, 어떠한 예외 처리도 되어 있지 않습니다.
+	• 문자열도 바이너리 형태로 입력합니다.
+
 */
 
 
@@ -30,6 +39,7 @@ public class SocketEx extends Thread{
 	Socket socket;
 	
 	//클라이언트에서 전송하는 데이터를 수신하기 위한 클래스
+	//바이트 스트림으로 부터 기본 자료형 데이터을 읽을 수 있는 클래스
 	DataInputStream dataInputStream;
 	
 	//클라이언트로 데이터를 전송하기 위한 클래스
