@@ -16,6 +16,7 @@ Client.java			• 클라이언트 프로그램
 					• 보통 채팅 프로그램들은 텍스트 상자와 다중 텍스트 상자로 구현됩니다.
 					• 클라이언트간 입력되는 내용을 다른 클라이언트에도 모두 뿌려주기
 					• 데이터를 보낼 때는 writeUTF() 메소드를 사용하고 데이터를 받을 때는 readUTF() 메소드를 사용합니다.
+
 제한사항				• Vector 클래스를 사용해보기
 					• Vector 클래스를 사용하여 접속자의 소켓을 저장하기
 
@@ -56,7 +57,7 @@ public class Server {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
-	}
+	} //Server()
 	
 	//TODO 4:접속한 모든 클라이언트에서 메시지 전송하기
 	void sendAll(String msg) {

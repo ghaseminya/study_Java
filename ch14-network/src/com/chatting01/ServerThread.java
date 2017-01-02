@@ -48,7 +48,7 @@ public class ServerThread extends Thread {
 	Socket sock;
 	DataInputStream din;
 	DataOutputStream dout;
-	String ipAddr;
+	String ipAddr; //클라이언트 ip정보
 	
 	//TODO 1: 생성자
 	public ServerThread(Server server, Socket socket) {
@@ -69,7 +69,7 @@ public class ServerThread extends Thread {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
-	}
+	} //ServerThread
 	
 	//TODO 2: 서버 -> 클라이언트로 메시지 전송 함수
 	public void sendMsg(String msg) {
@@ -82,10 +82,11 @@ public class ServerThread extends Thread {
 	}
 	
 	//TODO 5:
+	@Override
 	public void run() {
 		System.out.println("##ChatThread start...");
 		
-		String str;
+		String str; //읽어온 데이터 임시저장
 		try {
 			while (true) {
 				//UTF-8 인코딩 값을 얻어 문자열로 반환
