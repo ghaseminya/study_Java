@@ -46,6 +46,8 @@ public class VectorEx02 {
 		System.out.println("=== After setSize(7) ===");
 		print(v);
 		
+		
+		// v.clear(): v의 모든 요소를 삭제합니다.
 		v.clear();
 		System.out.println("=== After clear() ===");
 		print(v);
